@@ -1,2 +1,2 @@
 # intern16-practice
-Repo bài tập của nhóm Internship khoá 15 - 10/2019
+Repo bài tập của nhóm Internship khoá 16 - 6/2020
