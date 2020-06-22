@@ -3,8 +3,8 @@ Repo bài tập của nhóm Internship khoá 16 - 6/2020
 
 **Thông tin chung:**
 
-- GitHub Team: <https://github.com/orgs/blkbrds/teams/intern15>
-- Repo: <https://github.com/blkbrds/intern15-practice>
+- GitHub Team: <https://github.com/orgs/blkbrds/teams/intern16>
+- Repo: <https://github.com/blkbrds/intern16-practice>
 - Điểm danh: (updating)
 - Bài tập: <https://drive.google.com/drive/folders/0BxWOSUJTvrjAN1ItMm1SdE44TUE>
 - Lý thuyết: <https://drive.google.com/drive/folders/0BxWOSUJTvrjAWTZfbXBIdnlUV2c>
