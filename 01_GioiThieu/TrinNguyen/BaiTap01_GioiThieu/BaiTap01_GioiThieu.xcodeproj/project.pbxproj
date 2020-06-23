@@ -10,9 +10,7 @@
 		70BE5BEA24A2057200C23F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5BE924A2057200C23F66 /* AppDelegate.swift */; };
 		70BE5BEC24A2057200C23F66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5BEB24A2057200C23F66 /* SceneDelegate.swift */; };
 		70BE5BEE24A2057200C23F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5BED24A2057200C23F66 /* ViewController.swift */; };
-		70BE5BF124A2057200C23F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE5BEF24A2057200C23F66 /* Main.storyboard */; };
 		70BE5BF324A2057400C23F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BE5BF224A2057400C23F66 /* Assets.xcassets */; };
-		70BE5BF624A2057400C23F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE5BF424A2057400C23F66 /* LaunchScreen.storyboard */; };
 		70BE5C0124A2057400C23F66 /* BaiTap01_GioiThieuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5C0024A2057400C23F66 /* BaiTap01_GioiThieuTests.swift */; };
 		70BE5C0C24A2057400C23F66 /* BaiTap01_GioiThieuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5C0B24A2057400C23F66 /* BaiTap01_GioiThieuUITests.swift */; };
 /* End PBXBuildFile section */
@@ -39,9 +37,7 @@
 		70BE5BE924A2057200C23F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BE5BEB24A2057200C23F66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		70BE5BED24A2057200C23F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		70BE5BF024A2057200C23F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70BE5BF224A2057400C23F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70BE5BF524A2057400C23F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70BE5BF724A2057400C23F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BE5BFC24A2057400C23F66 /* BaiTap01_GioiThieuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap01_GioiThieuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BE5C0024A2057400C23F66 /* BaiTap01_GioiThieuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01_GioiThieuTests.swift; sourceTree = "<group>"; };
@@ -102,9 +98,7 @@
 				70BE5BE924A2057200C23F66 /* AppDelegate.swift */,
 				70BE5BEB24A2057200C23F66 /* SceneDelegate.swift */,
 				70BE5BED24A2057200C23F66 /* ViewController.swift */,
-				70BE5BEF24A2057200C23F66 /* Main.storyboard */,
 				70BE5BF224A2057400C23F66 /* Assets.xcassets */,
-				70BE5BF424A2057400C23F66 /* LaunchScreen.storyboard */,
 				70BE5BF724A2057400C23F66 /* Info.plist */,
 			);
 			path = BaiTap01_GioiThieu;
@@ -232,9 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70BE5BF624A2057400C23F66 /* LaunchScreen.storyboard in Resources */,
 				70BE5BF324A2057400C23F66 /* Assets.xcassets in Resources */,
-				70BE5BF124A2057200C23F66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +287,6 @@
 			targetProxy = 70BE5C0824A2057400C23F66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		70BE5BEF24A2057200C23F66 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70BE5BF024A2057200C23F66 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		70BE5BF424A2057400C23F66 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70BE5BF524A2057400C23F66 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		70BE5C0E24A2057400C23F66 /* Debug */ = {
