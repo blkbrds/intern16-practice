@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController" customModule="BaiTap1" customModuleProvider="target">
             <connections>
-                <outlet property="changeColorButton" destination="woF-9p-wlC" id="GZB-N1-Xqj"/>
+                <outlet property="changeColorButton" destination="woF-9p-wlC" id="fn4-Vc-5hf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
