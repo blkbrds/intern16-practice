@@ -15,12 +15,14 @@ class ViewController: UIViewController {
         view.backgroundColor = random()
         
         //nut tap
-        let button = UIButton(frame: CGRect(x: 140, y: 300, width: 100, height: 50))
+        let frame = CGRect(x: 140, y: 300, width: 100, height: 50)
+        let button: UIButton = UIButton(frame: frame)
+        //button.frame = frame
         button.backgroundColor = .white
         button.setTitle("Tap", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.addTarget(self,action: #selector(RandomColor), for: .touchUpInside)
-        self.view.addSubview(button)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(RandomColor), for: .touchUpInside)
+        view.addSubview(button)
     }
     
     func random() -> UIColor {
