@@ -17,8 +17,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxn-m2-ahI">
-                    <rect key="frame" x="148" y="422" width="118" height="53"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxn-m2-ahI">
+                    <rect key="frame" x="158.5" y="421.5" width="97" height="53"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="34"/>
                     <state key="normal" title="Button">
@@ -31,9 +31,8 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sxn-m2-ahI" secondAttribute="trailing" id="4TS-fS-1Vy"/>
-                <constraint firstItem="Sxn-m2-ahI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hb0-0l-GHZ"/>
-                <constraint firstItem="Sxn-m2-ahI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lmc-z6-dk4"/>
+                <constraint firstItem="Sxn-m2-ahI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZP7-CC-hMJ"/>
+                <constraint firstItem="Sxn-m2-ahI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rpl-aJ-z4D"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="130.58035714285714"/>

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		222C997524A2EB7E0003EBF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C997424A2EB7E0003EBF4 /* AppDelegate.swift */; };
 		222C997724A2EB7E0003EBF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C997624A2EB7E0003EBF4 /* SceneDelegate.swift */; };
-		222C997924A2EB7E0003EBF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C997824A2EB7E0003EBF4 /* ContentView.swift */; };
 		222C997B24A2EB820003EBF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222C997A24A2EB820003EBF4 /* Assets.xcassets */; };
 		222C997E24A2EB820003EBF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222C997D24A2EB820003EBF4 /* Preview Assets.xcassets */; };
 		222C998124A2EB820003EBF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222C997F24A2EB820003EBF4 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		222C997124A2EB7E0003EBF4 /* Baitap01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitap01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C997424A2EB7E0003EBF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		222C997624A2EB7E0003EBF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		222C997824A2EB7E0003EBF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		222C997A24A2EB820003EBF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222C997D24A2EB820003EBF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		222C998024A2EB820003EBF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,8 +42,6 @@
 		222C996824A2EB7E0003EBF4 = {
 			isa = PBXGroup;
 			children = (
-				222C998824A2EC7D0003EBF4 /* MyViewController.swift */,
-				222C998924A2EC7D0003EBF4 /* MyViewController.xib */,
 				222C997324A2EB7E0003EBF4 /* Baitap01 */,
 				222C997224A2EB7E0003EBF4 /* Products */,
 			);
@@ -62,9 +58,10 @@
 		222C997324A2EB7E0003EBF4 /* Baitap01 */ = {
 			isa = PBXGroup;
 			children = (
+				222C998824A2EC7D0003EBF4 /* MyViewController.swift */,
+				222C998924A2EC7D0003EBF4 /* MyViewController.xib */,
 				222C997424A2EB7E0003EBF4 /* AppDelegate.swift */,
 				222C997624A2EB7E0003EBF4 /* SceneDelegate.swift */,
-				222C997824A2EB7E0003EBF4 /* ContentView.swift */,
 				222C997A24A2EB820003EBF4 /* Assets.xcassets */,
 				222C997F24A2EB820003EBF4 /* LaunchScreen.storyboard */,
 				222C998224A2EB820003EBF4 /* Info.plist */,
@@ -156,7 +153,6 @@
 				222C997524A2EB7E0003EBF4 /* AppDelegate.swift in Sources */,
 				222C997724A2EB7E0003EBF4 /* SceneDelegate.swift in Sources */,
 				222C998A24A2EC7D0003EBF4 /* MyViewController.swift in Sources */,
-				222C997924A2EB7E0003EBF4 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
