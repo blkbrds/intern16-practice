@@ -40,6 +40,6 @@ switch ketqua{
         print("vo nghiem")
     case Nghiem.nghiemkep(x: let ketqua):
         print("pt co nghiem kep: \(ketqua)")
-    case Nghiem.hainghiem(x: let ketqua):
+    case Nghiem.hainghiem(ketqua: let ketqua):
         print("pt co nghiem kep: \(ketqua.x1) va \(ketqua.x2)")
 }
