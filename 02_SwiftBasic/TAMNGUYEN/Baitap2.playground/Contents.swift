@@ -19,7 +19,7 @@ if del == 0 {
 }
 if del > 0 {
     print("Phuong trinh co 2 nghiem : \(tinhNghiem(a: 1,b: 2,c: -3))")}
-
+	
 
 
 
