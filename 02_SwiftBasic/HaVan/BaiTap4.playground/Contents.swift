@@ -8,13 +8,13 @@ func fiboN(to n: Int) -> Int {
         return fiboN(to: n - 2) + fiboN(to: n - 1)
     }
 }
+
 func tong(to n: Int) -> Int {
     var s = 0
     for i in 0...n {
         s += fiboN(to: i)
     }
     return s
-    
 }
 
 func listFibonaciNumber(lowerThan n: Int) -> [Int] {
@@ -26,26 +26,27 @@ func listFibonaciNumber(lowerThan n: Int) -> [Int] {
 }
 
 //MARK: Sinx + Cosx
-func F(with x: Float, limit n: Int) -> Float{
+func sumNumbersTaylor(withRadian x: Float, limitNumber n: Int) -> Float {
     var temp:Float = 1.0
-    for i in 1...2*n+1{
-    temp = temp * x/Float(i)
+    for i in 1...2 * n + 1 {
+        temp = temp * x / Float(i)
     }
     if n % 2 == 0 {
-    return temp
+        return temp
     }
     return temp * -1
 }
+
 func tinhSin(with x: Float) -> Float {
-    var n:Int = 0
-    var sin:Float = 0.0
-    while fabs(F(with: x, limit: n)) > 0.00001 {
-        sin += F(with: x, limit: n)
+    var n: Int = 0
+    var sin: Float = 0.0
+    while abs(sumNumbersTaylor(withRadian: x, limitNumber: n)) > 0.00001 {
+        sin += sumNumbersTaylor(withRadian: x, limitNumber: n)
         n += 1
     }
     return sin
-
 }
+
 func tinhCos(with x: Float) -> Float {
     return sqrt(1 - powf(tinhSin(with: x), 2))
 }
@@ -61,44 +62,43 @@ func kiemTraChuSo(with num:Int) -> Int {
     count += 1
     return count
 }
+
 //Kiểm tra 1 số có là số hạnh phúc hay không
 func isHappy(with num:Int) -> Bool {
-    var soChuSo = kiemTraChuSo(with: num)
+    let soChuSo = kiemTraChuSo(with: num)
     var sum1 = 0
     var sum2 = 0
     var temp = num
     // nếu số chữ số của số đó % 2 != 0, thì false
-    if soChuSo % 2 == 1{
-    return false
-    }
-    else {
-    // cộng 1/2 số chữ số đầu của số đó
-    for _ in 1...soChuSo/2 {
-           sum1 += temp % 10
-           temp = temp / 10
-       }
-  // cộng 1/2 số chữ số sau của số đó
-        for _ in soChuSo/2 + 1...soChuSo{
+    if soChuSo % 2 == 1 {
+        return false
+    } else {
+        // cộng 1/2 số chữ số đầu của số đó
+        for _ in 1...soChuSo / 2 {
+            sum1 += temp % 10
+            temp = temp / 10
+        }
+        // cộng 1/2 số chữ số sau của số đó
+        for _ in soChuSo / 2 + 1...soChuSo {
             sum2 += temp % 10
             temp = temp / 10
         }
     }
     if sum1 == sum2 {
         return true
-    }
-   else {
+    } else {
         return false
     }
 }
+
 func listHappyNumbers() -> [Int] {
     var listNums = [Int]()
-    for i in 0...10000{
+    for i in 0...10000 {
         if isHappy(with: i) {
             listNums.append(i)
         }
     }
     return listNums
-
 }
 
 //MARK: kết quả của bài tập
