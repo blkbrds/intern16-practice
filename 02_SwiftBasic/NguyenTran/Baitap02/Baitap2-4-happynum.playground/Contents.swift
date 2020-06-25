@@ -4,7 +4,6 @@ import Foundation
 //Bai tap liet ke so hanh phuc nho hon 10000
 //Số hạnh phúc là số n có 2k chữ số
 //* mà tổng k chữ số đầu = tổng k chữ số cuối đồng thời
-//* n phải là số nguyên tố .
 //* Nếu n có 2k-1 chữ số thì ngầm hiểu là có thêm số 0 ở đầu chữ số
 func len(n:Int) -> Int {
     var temp = n
@@ -53,7 +52,7 @@ func happyNum(x: Int) -> Bool {
 
 print("List nhung so hanh phuc nho hon 10000")
 
-for index in 1...1000 {
+for index in 1...10000 {
     if happyNum(x: index) == true {
         print("\(index)")
     }
