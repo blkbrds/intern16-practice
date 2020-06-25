@@ -46,29 +46,43 @@ print ("Sin(45) = \(tinhSin(s: 45))")
 print ("Cos(45) = \(tinhCos(c: 45))")
 // so hanh phuc
 
-func numberHappy() {
+//func numberHappy() {
+//    var j: Int = 0
+//    var sum: Int = 0
+//    var index : Int = 45
+//    while sum != 1 && sum != 4 {
+//        sum = 0
+//        while index > 0 {
+//            j = index % 10
+//            sum += (j * j)
+//            index = index / 10
+//        }
+//        index = sum
+//    }
+//    if sum == 1 {
+//        print("happy number")
+//    } else {
+//        print(" not happy number")
+//    }
+//
+//}
+//
+//
+//numberHappy()
+func check(num: inout Int) -> Bool {
     var j: Int = 0
     var sum: Int = 0
-    var index : Int = 45
     while sum != 1 && sum != 4 {
         sum = 0
-        while index > 0 {
-            j = index % 10
+        while num > 0 {
+            j = num % 10
             sum += (j * j)
-            index = index / 10
+            num = num / 10
         }
-        index = sum
-    }
-    if sum == 1 {
-        print("happy number")
-    } else {
-        print(" not happy number")
+        num = sum
     }
     
 }
-
-
-numberHappy()
 
 
 
