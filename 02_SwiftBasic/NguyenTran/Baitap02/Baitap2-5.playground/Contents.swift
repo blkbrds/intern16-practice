@@ -2,9 +2,8 @@ import UIKit
 import Foundation
 
 func countsub(st:String, subst:String) -> Int {
-    let a = (str.count - substr.count)+1
     var count:Int = 0
-    for _ in 1...a {
+    for _ in 1...(str.count - substr.count)+1 {
         let slice = str[str.startIndex..<str.index(str.startIndex, offsetBy: substr.count)]
         if slice == substr {
             count += 1
@@ -13,9 +12,6 @@ func countsub(st:String, subst:String) -> Int {
     }
     return count
 }
-
-print("Day la chuong trinh tinh so lan xuat hien chuoi ",substr," trong chuoi ",str," ")
-print("Ket qua:\n\n")
 
 var str = "abaaaabbbabababbaaabababa"
 

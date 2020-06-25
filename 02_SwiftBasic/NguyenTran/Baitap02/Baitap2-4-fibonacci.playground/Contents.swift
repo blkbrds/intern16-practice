@@ -17,16 +17,9 @@ for index in 1...10 {
 }
 
 print("Tong cua 10 so Fibonacci dau tien la \(sum)")
-
-print("10 so Fibonacci dau tien la")
+print("\n10 so Fibonacci dau tien la")
 
 for index in 1...10 {
-    print("\(fib(n: index))")
+    print(fib(n: index))
 }
-
-
-
-
-
-
 

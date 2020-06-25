@@ -23,7 +23,7 @@ func rad(y:Float) -> Float {
 }
 
 //Nhap gia tri do cua goc muon tinh sin, cos
-let a:Float = 90
+let a:Float = 60
 
 var n:Int = 0
 var sin:Float = 0

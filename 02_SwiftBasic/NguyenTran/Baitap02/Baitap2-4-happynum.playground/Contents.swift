@@ -5,7 +5,8 @@ import Foundation
 //Số hạnh phúc là số n có 2k chữ số
 //* mà tổng k chữ số đầu = tổng k chữ số cuối đồng thời
 //* Nếu n có 2k-1 chữ số thì ngầm hiểu là có thêm số 0 ở đầu chữ số
-func len(n:Int) -> Int {
+
+func length(n:Int) -> Int {
     var temp = n
     var count: Int = 0
     while temp >= 1 {
@@ -15,10 +16,10 @@ func len(n:Int) -> Int {
     return count
 }
 
-func luythua(x:Int, y: Int) -> Int {
+func luythua10(x:Int) -> Int {
     var luythua:Int = 1
-    for _ in 1...y {
-        luythua = luythua * x
+    for _ in 1...x {
+        luythua = luythua * 10
     }
     return luythua
 }
@@ -36,34 +37,25 @@ func sumNum(i:Int) -> Int {
 
 func happyNum(x: Int) -> Bool {
     var a:Int = 0
-    if len(n: x)%2 == 0 {
-        a = luythua(x:10, y:len(n: x)/2)
+    if length(n: x)%2 == 0 {
+        a = luythua10(x:length(n: x)/2)
     }
     else {
-        a = luythua(x:10, y:(len(n: x)/2)+1)
+        a = luythua10(x:(length(n: x)/2)+1)
     }
-    let p1:Int = x/a
-    let p2:Int = x%a
-    if sumNum(i: p1) == sumNum(i: p2) {
+    let part1:Int = x/a
+    let part2:Int = x%a
+    if sumNum(i: part1) == sumNum(i: part2) {
         return true
     }
     else {return false}
 }
 
-print("List nhung so hanh phuc nho hon 10000")
+let a = 1000
+print("List nhung so hanh phuc nho hon \(a)")
 
-for index in 1...10000 {
-    if happyNum(x: index) == true {
+for index in 1..<a {
+    if (happyNum(x: index)) {
         print("\(index)")
     }
 }
-
-//let a = 532
-//
-//if happyNum(x:a) == true {
-//    print("a la so hanh phuc.")
-//}
-//else {
-//    print("a khong phai la so hanh phuc")
-//}
-
