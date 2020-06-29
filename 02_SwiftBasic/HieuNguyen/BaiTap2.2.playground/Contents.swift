@@ -1,45 +1,46 @@
-import UIKit
 import Foundation
 
 enum Nghiem {
-    case vonghiem
-    case nghiemkep(x: Float)
-    case hainghiem(x1: Float, x2: Float)
-    case vosonghiem
+    case voNghiem
+    case nghiemKep(x: Float)
+    case haiNghiem(x1: Float, x2: Float)
+    case voSoNghiem
 }
 
-func ptb2(hesoA a: Float,hesoB b: Float,hesoC c: Float) -> Nghiem{
+func giaiPtb2(hesoA a: Float, hesoB b: Float, hesoC c: Float) -> Nghiem {
     if a == 0 {
         if b == 0 {
             if c == 0 {
-                return Nghiem.vosonghiem
+                return .voSoNghiem
             } else {
-                return Nghiem.vonghiem
+                return .voNghiem
             }
         } else {
-            return Nghiem.nghiemkep(x: -c / b)
+            return .nghiemKep(x: -c / b)
         }
     } else {
         let delta = b * b - 4 * a * c
         if delta > 0 {
-            let x1 = (-b+sqrt(delta))/(2*a)
-            let x2 = (-b-sqrt(delta))/(2*a)
-            return Nghiem.hainghiem(x1: x1, x2: x2)
+            let x1 = (-b + sqrt(delta)) / (2 * a)
+            let x2 = (-b - sqrt(delta)) / (2 * a)
+            return .haiNghiem(x1: x1, x2: x2)
         } else if delta == 0 {
-            return Nghiem.nghiemkep(x: -b / (2 * a))
+            return .nghiemKep(x: -b / (2 * a))
         } else {
-            return Nghiem.vonghiem
+            return .voNghiem
         }
     }
 }
-var ketqua = ptb2(hesoA: 1, hesoB: 5, hesoC: 2)
-switch ketqua{
-    case Nghiem.vosonghiem:
+
+var ketqua = giaiPtb2(hesoA: 1, hesoB: 5, hesoC: 2)
+
+switch ketqua {
+    case .voSoNghiem:
         print("vo so nghiem")
-    case Nghiem.vonghiem:
+    case .voNghiem:
         print("vo nghiem")
-    case Nghiem.nghiemkep(x: let ketqua):
+    case .nghiemKep(let ketqua):
         print("pt co nghiem kep: \(ketqua)")
-    case Nghiem.hainghiem(ketqua: let ketqua):
+case .haiNghiem(ketqua: let ketqua):
         print("pt co nghiem kep: \(ketqua.x1) va \(ketqua.x2)")
 }
