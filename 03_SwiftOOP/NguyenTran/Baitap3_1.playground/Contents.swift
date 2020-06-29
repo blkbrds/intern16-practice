@@ -7,10 +7,10 @@ class PhanSo {
     var MauSo: Int
 
     init(TuSo: Int, MauSo: Int) {
-           self.TuSo = TuSo
-           self.MauSo = MauSo
+        self.TuSo = TuSo
+        self.MauSo = MauSo
     }
-    
+
     func cong (ps2: PhanSo) -> PhanSo {
         let pTuSo = self.TuSo * ps2.MauSo + ps2.TuSo * self.MauSo
         let pMauSo = self.MauSo * ps2.MauSo
@@ -34,16 +34,16 @@ class PhanSo {
         let pMauSo = MauSo * ps2.TuSo
         return PhanSo(TuSo: pTuSo, MauSo: pMauSo)
     }
-    
+
     func rutgon() -> PhanSo {
-        func UCLN (a:Int, b:Int) -> Int {
+        func UCLN (a: Int, b: Int) -> Int {
             var x = abs(a)
             var y = abs(b)
             if x == 0 || y == 0 {
                 return x + y
             }
             while x != y {
-                if x>y {
+                if x > y {
                     x = x - y
                 } else {
                     y = y - x
@@ -59,10 +59,10 @@ class PhanSo {
             self.TuSo = -self.TuSo
             self.MauSo = -self.MauSo
         }
-        let i = UCLN(a:self.TuSo, b:self.MauSo)
-        return PhanSo(TuSo: self.TuSo/i, MauSo: self.MauSo/i)
-        }
-    
+        let i = UCLN(a: self.TuSo, b: self.MauSo)
+        return PhanSo(TuSo: self.TuSo / i, MauSo: self.MauSo / i)
+    }
+
     func xuat() -> String {
         let ps_rutgon = self.rutgon()
         if ps_rutgon.MauSo == 1 {
@@ -72,7 +72,7 @@ class PhanSo {
             return "\(ps_rutgon.TuSo)/\(ps_rutgon.MauSo)"
         }
     }
-    
+
     func check() -> Bool {
         if self.MauSo == 0 {
             return false
