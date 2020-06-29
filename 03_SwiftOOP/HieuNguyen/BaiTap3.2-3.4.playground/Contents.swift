@@ -1,8 +1,8 @@
-import UIKit
 import Foundation
 
 print("Bai tap 2")
-class DaGiac {
+
+class DaGiac{
     var SoCanh: Int?
     var KichThuoc: [Float]?
 

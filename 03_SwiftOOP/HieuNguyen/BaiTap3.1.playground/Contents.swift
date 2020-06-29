@@ -1,4 +1,3 @@
-import UIKit
 import Foundation
 
 class PhanSo {
@@ -9,25 +8,29 @@ class PhanSo {
         self.tuSo = tuSo
         self.mauSo = mauSo
     }
-    func xuat () -> String{
+    
+    func xuat() -> String {
         return "\(tuSo) / \(mauSo)"
     }
-    func cong (ps: PhanSo) -> PhanSo{
+    func cong(ps: PhanSo) -> PhanSo {
         let tuSo = self.tuSo * ps.mauSo + self.mauSo * ps.tuSo
         let mauSo = self.mauSo * ps.mauSo
         return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
     }
-    func tru (ps: PhanSo) -> PhanSo{
+    
+    func tru(ps: PhanSo) -> PhanSo {
         let tuSo = self.tuSo * ps.mauSo - self.mauSo * ps.tuSo
         let mauSo = self.mauSo * ps.mauSo
         return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
     }
-    func nhan (ps: PhanSo) -> PhanSo{
+    
+    func nhan(ps: PhanSo) -> PhanSo {
         let tuSo = self.tuSo * ps.tuSo
         let mauSo = self.mauSo * ps.mauSo
         return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
     }
-    func chia (ps: PhanSo) -> PhanSo{
+    
+    func chia(ps: PhanSo) -> PhanSo {
         let tuSo = self.tuSo * ps.mauSo
         let mauSo = self.mauSo * ps.tuSo
         return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
