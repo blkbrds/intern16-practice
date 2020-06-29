@@ -2,15 +2,16 @@ import UIKit
 import Foundation
 var pi = Float.pi
 class HinhVe {
-    
+    var chuVi: Float?
+    var dienTich: Float?
 }
 
 class HaiChieu: HinhVe {
-    
+
 }
 
 class BaChieu: HinhVe {
-
+    var theTich: Float?
 }
 
 class Tron: HaiChieu {
@@ -18,14 +19,9 @@ class Tron: HaiChieu {
 
     init(bk: Float) {
         banKinh = bk
-    }
-
-    func dienTich() -> Float {
-        return pi * banKinh * banKinh
-    }
-    
-    func chuVi() -> Float {
-        return 2 * pi * banKinh
+        super.init()
+        self.chuVi = 2 * pi * banKinh
+        self.dienTich = 2 * pi * banKinh
     }
 }
 
@@ -34,14 +30,9 @@ class Vuong: HaiChieu {
 
     init(c: Float) {
         canh = c
-    }
-
-    func dienTich() -> Float {
-        return canh * canh
-    }
-    
-    func chuVi() -> Float {
-        return 4 * canh
+        super.init()
+        self.chuVi = 4 * canh
+        self.dienTich = canh * canh
     }
 }
 
@@ -52,48 +43,31 @@ class TamGiac: HaiChieu {
         self.a = a
         self.b = b
         self.c = c
-    }
-
-    func dienTich() -> Float {
-        let nuaChuVi = self.chuVi() / 2
-        return sqrt(nuaChuVi * (nuaChuVi - a) * (nuaChuVi - b) * (nuaChuVi - c))
-    }
-    
-    func chuVi() -> Float {
-        return a + b + c
+        super.init()
+        self.chuVi = a + b + c
+        let nuaChuVi = chuVi! / 2
+        self.dienTich = sqrt(nuaChuVi * (nuaChuVi - a) * (nuaChuVi - b) * (nuaChuVi - c))
     }
 }
 
 class Cau: BaChieu {
     var banKinh: Float
-    
+
     init(bk: Float) {
         banKinh = bk
+        super.init()
+        self.dienTich = 4 * pi * banKinh * banKinh
+        self.theTich = 4 / 3 * pi * pow(banKinh, 3)
     }
-    
-    // dien tich hinh cau: S = 4 x π x r2 = π x d2
-    func dienTich() -> Float {
-        return 4 * pi * banKinh * banKinh
-    }
-    // the tich hinh cau: 4/3 x π x r3
-    func theTich() -> Float {
-        return 4 / 3 * pi * pow(banKinh, 3)
-    }
-    
 }
 
 class LapPhuong: BaChieu {
     var canh: Float
-    
+
     init(canh: Float) {
         self.canh = canh
-    }
-    
-    func theTich() -> Float {
-        return pow(canh, 3)
-    }
-    
-    func dienTich() -> Float {
-        return 6 * pow(canh, 2)
+        super.init()
+        self.dienTich = 6 * pow(canh, 2)
+        self.theTich = pow(canh, 3)
     }
 }
