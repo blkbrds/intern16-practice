@@ -2,11 +2,11 @@ import UIKit
 
 class Mang1c {
     var phanTu: [Int]
-    
+
     init(mang: [Int]) {
         phanTu = mang
     }
-    
+
     func inMang() {
         print(phanTu)
     }

@@ -4,7 +4,7 @@ import Foundation
 class PhanSo {
     var tuSo: Int
     var mauSo: Int
-    
+
     init(tuSo: Int,mauSo: Int) {
         self.tuSo = tuSo
         self.mauSo = mauSo

@@ -10,7 +10,7 @@ class hocSinh {
         self.namSinh = namsinh
         self.tongDiem = tongdiem
     }
-    
+
 }
 
 func sapxep(mangHocSinh: [hocSinh]) -> [hocSinh]{

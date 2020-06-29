@@ -5,7 +5,7 @@ print("Bai tap 2")
 class DaGiac {
     var SoCanh: Int?
     var KichThuoc: [Float]?
-    
+
     init?(soCanh: Int,kichThuoc: [Float]) {
         if soCanh == kichThuoc.count {
             self.SoCanh = soCanh
@@ -14,7 +14,7 @@ class DaGiac {
             return nil
         }
     }
-    
+
     func chuVi() -> Float {
         var chuVi:Float = 0
         for canh in self.KichThuoc! {
@@ -22,7 +22,7 @@ class DaGiac {
         }
         return chuVi
     }
-    
+
     func inGiaTri() -> String {
         var giaTri:String = ""
         for canh in self.KichThuoc! {

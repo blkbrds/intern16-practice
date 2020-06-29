@@ -15,14 +15,14 @@ class CStack {
     func isFull() -> Bool {
         return stack.count == phanTu
     }
-    
+
     func add(pt: Int) -> [Int] {
         if stack.count < phanTu {
             stack.append(pt)
         }
         return stack
     }
-    
+
     func removeLast() -> [Int] {
         if !stack.isEmpty {
             stack.remove(at: stack.count-1)
