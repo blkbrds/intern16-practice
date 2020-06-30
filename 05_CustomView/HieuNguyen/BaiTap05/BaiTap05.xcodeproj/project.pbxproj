@@ -13,6 +13,7 @@
 		7D7EF0E624AB2584000E890C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF0E424AB2584000E890C /* LaunchScreen.storyboard */; };
 		7D7EF0F024AB25E9000E890C /* BaiTap01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0EE24AB25E9000E890C /* BaiTap01VC.swift */; };
 		7D7EF0F124AB25E9000E890C /* BaiTap01VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */; };
+		7D7EF0F824AB440B000E890C /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0F724AB440B000E890C /* PersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7D7EF0E724AB2584000E890C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7EF0EE24AB25E9000E890C /* BaiTap01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01VC.swift; sourceTree = "<group>"; };
 		7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap01VC.xib; sourceTree = "<group>"; };
+		7D7EF0F724AB440B000E890C /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7D7EF0D824AB2582000E890C /* BaiTap05 */ = {
 			isa = PBXGroup;
 			children = (
+				7D7EF0F624AB43E1000E890C /* View */,
 				7D7EF0ED24AB25CC000E890C /* ViewController */,
 				7D7EF0D924AB2582000E890C /* AppDelegate.swift */,
 				7D7EF0DB24AB2582000E890C /* SceneDelegate.swift */,
@@ -73,6 +76,14 @@
 				7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7D7EF0F624AB43E1000E890C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF0F724AB440B000E890C /* PersonView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D7EF0F024AB25E9000E890C /* BaiTap01VC.swift in Sources */,
+				7D7EF0F824AB440B000E890C /* PersonView.swift in Sources */,
 				7D7EF0DA24AB2582000E890C /* AppDelegate.swift in Sources */,
 				7D7EF0DC24AB2582000E890C /* SceneDelegate.swift in Sources */,
 			);
