@@ -71,13 +71,13 @@ class TamGiac: DaGiac {
             self.KichThuoc = []
         }
     }
-    
+
     override func ChuVi() -> Int {
         return self.KichThuoc[0] + self.KichThuoc[1] + self.KichThuoc[2]
     }
-    
+
     func DienTich() -> Float {
-        let p = Float(ChuVi())/Float(2)
+        let p = Float(ChuVi()) / Float(2)
         var DT = p
         for i in self.KichThuoc {
             DT = DT * (p - Float(i))
@@ -86,11 +86,11 @@ class TamGiac: DaGiac {
     }
 }
 
-let tg = TamGiac(KT_tamgiac: [1,2,2])
+let tg = TamGiac(KT_tamgiac: [1, 2, 2])
 
 if(tg.KichThuoc == []) {
     print("Không thể tính toán chu vi và diện tích.")
 } else {
-print("Chu vi tam giác là \(tg.ChuVi())")
-print("Diện tích tam giác là \(tg.DienTich())")
+    print("Chu vi tam giác là \(tg.ChuVi())")
+    print("Diện tích tam giác là \(tg.DienTich())")
 }

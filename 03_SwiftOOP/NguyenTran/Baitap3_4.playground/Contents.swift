@@ -29,7 +29,7 @@ class tamGiacPytago {
             }
             if countkt != 0 {
                 return .saiSoCanh
-            } else if  count0 != 0 {
+            } else if count0 != 0 {
                 return .nhohonbang0
             } else {
                 return .valid(arr)
@@ -53,14 +53,6 @@ class tamGiacPytago {
         }
     }
 
-//    func check_tamgiac(a: Int, b: Int, c: Int) -> Bool {
-//        if (a >= b + c || b >= a + c || c >= a + b) {
-//            return false
-//        } else {
-//            return true
-//        }
-//    }
-
     func check_pytago() {
         if self.Canh == [[]] {
             print("Không thể thực hiện chương trình, hãy nhập lại mảng thoả mãn các điều kiện sau:\n- Không phải mảng rỗng\n- Không có phần tử nhỏ hơn hoặc bằng 0\n- Mảng con có số phần từ khác 3")
@@ -75,7 +67,7 @@ class tamGiacPytago {
     }
 }
 
-let arrCanh = tamGiacPytago(Canh: [[3, 4, 5], [0,0,0], [1,3,2]])
+let arrCanh = tamGiacPytago(Canh: [[3, 4, 5], [0, 0, 0], [1, 3, 2]])
 
 arrCanh.check_pytago()
 

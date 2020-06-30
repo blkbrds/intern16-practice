@@ -54,7 +54,7 @@ class DaGiac {
     }
 }
 
-let dg = DaGiac(SoCanh: 5, KichThuoc: [2,5,8,6,16])
+let dg = DaGiac(SoCanh: 5, KichThuoc: [2, 5, 8, 6, 16])
 
 print("Chu vi của đa giác là: \(dg.ChuVi())")
 dg.InCanh()
