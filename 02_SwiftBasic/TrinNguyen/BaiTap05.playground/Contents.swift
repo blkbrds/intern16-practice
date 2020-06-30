@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 func timChuoiCon() {
     let chuoiCha: String = "abacababababass"
@@ -8,4 +8,5 @@ func timChuoiCon() {
     //dem so lan xuat hien bang cach lay chuoi cha tru cho cac chuoi con lai
     print(chuoiConCoTrongCha.count - 1)
 }
+
 timChuoiCon()

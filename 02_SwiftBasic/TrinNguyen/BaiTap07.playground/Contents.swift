@@ -1,6 +1,7 @@
-import UIKit
+import Foundation
 
-var arrayTemp = [1, 2, 1, 3, 1]
+var arrayTemp: [Int] = [1, 2, 1, 3, 1]
+
 for index in 0..<arrayTemp.count {
     if arrayTemp[index] == 1 {
         arrayTemp[index] = 2
@@ -8,4 +9,5 @@ for index in 0..<arrayTemp.count {
         continue
     }
 }
+
 print(arrayTemp)
