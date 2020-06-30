@@ -1,6 +1,5 @@
 import Foundation
 
-
 func hoanVi (in array: [Int]) -> [Int] {
     var newArr = array
     for i in 0...newArr.count - 1 {
@@ -11,5 +10,5 @@ func hoanVi (in array: [Int]) -> [Int] {
     }
     return newArr
 }
-print("Hoán vị mảng : \(hoanVi(in: [1,2,3,4,5]))")
 
+print("Hoán vị mảng : \(hoanVi(in: [1,2,3,4,5]))")
