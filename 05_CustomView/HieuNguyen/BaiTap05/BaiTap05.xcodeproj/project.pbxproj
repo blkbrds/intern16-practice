@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D7EF0DA24AB2582000E890C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0D924AB2582000E890C /* AppDelegate.swift */; };
+		7D7EF0DC24AB2582000E890C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0DB24AB2582000E890C /* SceneDelegate.swift */; };
+		7D7EF0E324AB2584000E890C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF0E224AB2584000E890C /* Assets.xcassets */; };
+		7D7EF0E624AB2584000E890C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF0E424AB2584000E890C /* LaunchScreen.storyboard */; };
+		7D7EF0F024AB25E9000E890C /* BaiTap01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0EE24AB25E9000E890C /* BaiTap01VC.swift */; };
+		7D7EF0F124AB25E9000E890C /* BaiTap01VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D7EF0D624AB2582000E890C /* BaiTap05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap05.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7EF0D924AB2582000E890C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D7EF0DB24AB2582000E890C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D7EF0E224AB2584000E890C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D7EF0E524AB2584000E890C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D7EF0E724AB2584000E890C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D7EF0EE24AB25E9000E890C /* BaiTap01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01VC.swift; sourceTree = "<group>"; };
+		7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap01VC.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D7EF0D324AB2582000E890C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D7EF0CD24AB2582000E890C = {
+			isa = PBXGroup;
+			children = (
+				7D7EF0D824AB2582000E890C /* BaiTap05 */,
+				7D7EF0D724AB2582000E890C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D7EF0D724AB2582000E890C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF0D624AB2582000E890C /* BaiTap05.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D7EF0D824AB2582000E890C /* BaiTap05 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF0ED24AB25CC000E890C /* ViewController */,
+				7D7EF0D924AB2582000E890C /* AppDelegate.swift */,
+				7D7EF0DB24AB2582000E890C /* SceneDelegate.swift */,
+				7D7EF0E224AB2584000E890C /* Assets.xcassets */,
+				7D7EF0E424AB2584000E890C /* LaunchScreen.storyboard */,
+				7D7EF0E724AB2584000E890C /* Info.plist */,
+			);
+			path = BaiTap05;
+			sourceTree = "<group>";
+		};
+		7D7EF0ED24AB25CC000E890C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF0EE24AB25E9000E890C /* BaiTap01VC.swift */,
+				7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D7EF0D524AB2582000E890C /* BaiTap05 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D7EF0EA24AB2585000E890C /* Build configuration list for PBXNativeTarget "BaiTap05" */;
+			buildPhases = (
+				7D7EF0D224AB2582000E890C /* Sources */,
+				7D7EF0D324AB2582000E890C /* Frameworks */,
+				7D7EF0D424AB2582000E890C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiTap05;
+			productName = BaiTap05;
+			productReference = 7D7EF0D624AB2582000E890C /* BaiTap05.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D7EF0CE24AB2582000E890C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = hieu.ngq;
+				TargetAttributes = {
+					7D7EF0D524AB2582000E890C = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 7D7EF0D124AB2582000E890C /* Build configuration list for PBXProject "BaiTap05" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D7EF0CD24AB2582000E890C;
+			productRefGroup = 7D7EF0D724AB2582000E890C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D7EF0D524AB2582000E890C /* BaiTap05 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D7EF0D424AB2582000E890C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7EF0E624AB2584000E890C /* LaunchScreen.storyboard in Resources */,
+				7D7EF0F124AB25E9000E890C /* BaiTap01VC.xib in Resources */,
+				7D7EF0E324AB2584000E890C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D7EF0D224AB2582000E890C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7EF0F024AB25E9000E890C /* BaiTap01VC.swift in Sources */,
+				7D7EF0DA24AB2582000E890C /* AppDelegate.swift in Sources */,
+				7D7EF0DC24AB2582000E890C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D7EF0E424AB2584000E890C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D7EF0E524AB2584000E890C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D7EF0E824AB2584000E890C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D7EF0E924AB2584000E890C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D7EF0EB24AB2585000E890C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaiTap05/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hieu.ngq.BaiTap05;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D7EF0EC24AB2585000E890C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaiTap05/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hieu.ngq.BaiTap05;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D7EF0D124AB2582000E890C /* Build configuration list for PBXProject "BaiTap05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D7EF0E824AB2584000E890C /* Debug */,
+				7D7EF0E924AB2584000E890C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D7EF0EA24AB2585000E890C /* Build configuration list for PBXNativeTarget "BaiTap05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D7EF0EB24AB2585000E890C /* Debug */,
+				7D7EF0EC24AB2585000E890C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D7EF0CE24AB2582000E890C /* Project object */;
+}
