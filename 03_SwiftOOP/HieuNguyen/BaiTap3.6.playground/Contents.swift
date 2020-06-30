@@ -22,7 +22,7 @@ class Tron: HaiChieu {
         banKinh = bk
         super.init()
         self.chuVi = 2 * pi * banKinh
-        self.dienTich = 2 * pi * banKinh
+        self.dienTich = pi * pow(banKinh, 2)
     }
 }
 
@@ -72,3 +72,18 @@ class LapPhuong: BaChieu {
         self.theTich = pow(canh, 3)
     }
 }
+
+print(Tron.init(bk: 15).dienTich)
+print(Tron.init(bk: 15).chuVi)
+
+print(Vuong.init(c: 10).chuVi)
+print(Vuong.init(c: 10).dienTich)
+
+print(TamGiac.init(a: 5, b: 3, c: 4).chuVi)
+print(TamGiac.init(a: 5, b: 3, c: 4).dienTich)
+
+print(Cau.init(bk: 10).dienTich)
+print(Cau.init(bk: 10).theTich)
+
+print(LapPhuong.init(canh: 10).dienTich)
+print(LapPhuong.init(canh: 10).theTich)
