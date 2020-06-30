@@ -4,50 +4,60 @@ class PhanSo {
     var tuSo: Int
     var mauSo: Int
 
-    init(tuSo: Int,mauSo: Int) {
-        self.tuSo = tuSo
-        self.mauSo = mauSo
+    init?(tuSo: Int,mauSo: Int) {
+        if mauSo != 0 {
+            self.tuSo = tuSo
+            self.mauSo = mauSo
+        } else {
+            return nil
+        }
     }
     
-    func xuat() -> String {
-        return "\(tuSo) / \(mauSo)"
+    func xuat() {
+        if mauSo != 0 {
+            print("KQ: \(tuSo) / \(mauSo)")
+        } else {
+            print("Mau so phai khac 0")
+        }
     }
-    func cong(ps: PhanSo) -> PhanSo {
+    func cong(ps: PhanSo) -> PhanSo? {
         let tuSo = self.tuSo * ps.mauSo + self.mauSo * ps.tuSo
         let mauSo = self.mauSo * ps.mauSo
-        return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
+        return PhanSo(tuSo: tuSo, mauSo: mauSo)
     }
-    
-    func tru(ps: PhanSo) -> PhanSo {
+
+    func tru(ps: PhanSo) -> PhanSo? {
         let tuSo = self.tuSo * ps.mauSo - self.mauSo * ps.tuSo
         let mauSo = self.mauSo * ps.mauSo
-        return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
+        return PhanSo(tuSo: tuSo, mauSo: mauSo)
     }
-    
-    func nhan(ps: PhanSo) -> PhanSo {
+
+    func nhan(ps: PhanSo) -> PhanSo? {
         let tuSo = self.tuSo * ps.tuSo
         let mauSo = self.mauSo * ps.mauSo
-        return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
+        return PhanSo(tuSo: tuSo, mauSo: mauSo)
     }
-    
-    func chia(ps: PhanSo) -> PhanSo {
+
+    func chia(ps: PhanSo) -> PhanSo? {
         let tuSo = self.tuSo * ps.mauSo
         let mauSo = self.mauSo * ps.tuSo
-        return PhanSo.init(tuSo: tuSo, mauSo: mauSo)
+        return PhanSo(tuSo: tuSo, mauSo: mauSo)
     }
 }
-var phanSo1 = PhanSo.init(tuSo: 3, mauSo: 5)
-var phanSo2 = PhanSo.init(tuSo: 5, mauSo: 8)
 
-print("Phan so 1: \(phanSo1.xuat())")
-print("Phan so 2: \(phanSo2.xuat())")
-
-var kqCong = phanSo1.cong(ps: phanSo2)
-var kqTru  = phanSo1.tru(ps: phanSo2)
-var kqNhan = phanSo1.nhan(ps: phanSo2)
-var kqChia = phanSo1.chia(ps: phanSo2)
-
-print("KQ phep cong : \(kqCong.xuat())")
-print("KQ phep tru  : \(kqTru.xuat())")
-print("KQ phep nhan : \(kqNhan.xuat())")
-print("KQ phep chia : \(kqChia.xuat())")
+if let phanSo1 = PhanSo(tuSo: 3, mauSo: 8), let phanSo2 = PhanSo(tuSo: 3, mauSo: 8) {
+    if let kqCong = phanSo1.cong(ps: phanSo2) {
+        kqCong.xuat()
+    }
+    if let kqTru = phanSo1.tru(ps: phanSo2) {
+        kqTru.xuat()
+    }
+    if let kqNhan = phanSo1.nhan(ps: phanSo2) {
+        kqNhan.xuat()
+    }
+    if let kqChia = phanSo1.chia(ps: phanSo2) {
+        kqChia.xuat()
+    }
+} else {
+    print("Mau so phai khac 0")
+}

@@ -30,6 +30,7 @@ class CStack {
         return stack
     }
 }
+
 var temps = CStack.init(phanTu: 4)
 temps.add(pt: 1)
 temps.add(pt: 2)
