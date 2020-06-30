@@ -1,6 +1,6 @@
 import UIKit
 
-class hocSinh {
+class HocSinh {
     var hoTen: String
     var namSinh: String
     var tongDiem: Float
@@ -13,9 +13,9 @@ class hocSinh {
 
 }
 
-func sapxep(mangHocSinh: [hocSinh]) -> [hocSinh]{
-    let mangHocSinh: [hocSinh] = mangHocSinh
-    var result: [hocSinh] = mangHocSinh.sorted { (hs0: hocSinh , hs1: hocSinh) -> Bool in
+func sapxep(mangHocSinh: [HocSinh]) -> [HocSinh] {
+    let mangHocSinh: [HocSinh] = mangHocSinh
+    let result: [HocSinh] = mangHocSinh.sorted { (hs0: HocSinh , hs1: HocSinh) -> Bool in
         if hs0.tongDiem > hs1.tongDiem {
             return true
         }
@@ -31,10 +31,10 @@ extension StringProtocol {
     var firstUppercased: String { return prefix(1).uppercased() + dropFirst() }
 }
 
-var hs1 = hocSinh(hoten: "Nguyen Quang hieu", namsinh: "1994", tongdiem: 5)
-var hs2 = hocSinh(hoten: "Phan Ngoc khanh", namsinh: "1997", tongdiem: 7)
-var hs3 = hocSinh(hoten: "Tran T K Anh", namsinh: "1995", tongdiem: 10)
-var hs4 = hocSinh(hoten: "Tran T K Oanh", namsinh: "1996", tongdiem: 7)
+var hs1 = HocSinh(hoten: "Nguyen Quang hieu", namsinh: "1994", tongdiem: 5)
+var hs2 = HocSinh(hoten: "Phan Ngoc khanh", namsinh: "1997", tongdiem: 7)
+var hs3 = HocSinh(hoten: "Tran T K Anh", namsinh: "1995", tongdiem: 10)
+var hs4 = HocSinh(hoten: "Tran T K Oanh", namsinh: "1996", tongdiem: 7)
 
 var dsHs = sapxep(mangHocSinh: [hs1,hs4,hs3,hs2])
 
