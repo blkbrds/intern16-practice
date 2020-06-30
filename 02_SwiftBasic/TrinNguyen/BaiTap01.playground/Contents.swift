@@ -2,8 +2,8 @@ import UIKit
 
 func tinhDienTichVaTheTich (r: Float) -> (s: Float,v: Float) {
     let pi = Float.pi
-    let s = 4 * pi * r * r
-    let v = (4 / 3) * pi * r * r * r
+    let s = 4 * pi * pow(r, 2)
+    let v = (4 / 3) * pi * pow(r, 2)
     return (s, v)
 }
 

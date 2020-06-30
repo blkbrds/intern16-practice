@@ -1,14 +1,12 @@
 import Foundation
 
-let epsilon: Float = 0.000001
-
 func sin(x: Float) -> Float {
     var s: Float = 0
     let x1: Float = x * Float.pi / 180
     var a: Float = x1
     var i: Float = 3
 
-    while abs(a) >= epsilon {
+    while abs(a) >= Float.ulpOfOne {
         s += a
         a = a * (-(x1 * x1 / (i * (i - 1))))
         i = i + 2
