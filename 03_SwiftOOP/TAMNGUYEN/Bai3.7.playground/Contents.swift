@@ -1,28 +1,30 @@
 import UIKit
+
 class HocSinh {
-    var hoTen: String
-    var namSinh: Int
-    var tongDiem: Float
+    var hoTen: String = ""
+    var namSinh: Int = 0
+    var tongDiem: Float = 0.0
     init(hoTen: String, namSinh: Int, tongDiem: Float) {
         self.hoTen = hoTen
         self.namSinh = namSinh
         self.tongDiem = tongDiem
     }
 }
-    func sapXep(manghs: [HocSinh]) -> [HocSinh] {
-        let manghs: [HocSinh] = manghs
-        var ketqua: [HocSinh] = manghs.sorted { (hs0: HocSinh, hs1: HocSinh) -> Bool in
-            if hs0.tongDiem > hs1.tongDiem {
-                return true
-            }
-            if hs0.namSinh == hs1.namSinh {
-                hs0.namSinh > hs1.namSinh
-            }
-            return false
+
+func sapXep(manghs: [HocSinh]) -> [HocSinh] {
+    let manghs: [HocSinh] = manghs
+    var ketqua: [HocSinh] = manghs.sorted { (hs0: HocSinh, hs1: HocSinh) -> Bool in
+        if hs0.tongDiem > hs1.tongDiem {
+            return true
         }
-        return ketqua
+        if hs0.namSinh == hs1.namSinh {
+            hs0.namSinh > hs1.namSinh
+        }
+        return false
     }
-    
+    return ketqua
+}
+
 
 var hs1 = HocSinh(hoTen: "Tam", namSinh: 97, tongDiem: 10)
 var hs2 = HocSinh(hoTen: "An", namSinh: 96, tongDiem: 7)

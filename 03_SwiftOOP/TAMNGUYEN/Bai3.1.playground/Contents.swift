@@ -1,32 +1,32 @@
 
 class PhanSo {
-
-    var tu: Int
-    var mau: Int
-
+    
+    var tu: Int = 0
+    var mau: Int = 0
+    
     init(tu: Int, mau: Int) {
         self.tu = tu
         self.mau = mau
     }
-
+    
     func cong(ps2: PhanSo) -> PhanSo {
         let tux: Int = tu * ps2.mau + ps2.tu * mau
         let maux: Int = mau * ps2.mau
         return PhanSo(tu: tux, mau: maux)
     }
-
+    
     func tru(ps2: PhanSo) -> PhanSo {
         let tux: Int = tu * ps2.mau - ps2.tu * mau
         let maux: Int = mau * ps2.mau
         return PhanSo(tu: tux, mau: maux)
-        }
-
+    }
+    
     func nhan(ps2: PhanSo) -> PhanSo {
         let tux: Int = tu * ps2.tu
         let maux: Int = mau * ps2.mau
         return PhanSo(tu: tux, mau: maux)
     }
-
+    
     func chia(ps2: PhanSo) -> PhanSo {
         let tux: Int = tu * ps2.mau
         let maux: Int = mau * ps2.tu

@@ -1,7 +1,8 @@
 import UIKit
 import Foundation
+
 class A {
-    var n: Int
+    var n: Int = 0
     init(n: Int) {
         self.n = n
     }

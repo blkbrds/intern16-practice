@@ -2,8 +2,8 @@ import UIKit
 import Foundation
 
 class DaGiac {
-    var soCanh: Int
-    var sizeCanh: [Float]
+    var soCanh: Int = 0
+    var sizeCanh: [Float] = []
     
     
     init(soCanh: Int, sizeCanh: [Float]) {
@@ -28,6 +28,7 @@ class DaGiac {
 }
 var  dagiac = DaGiac(soCanh: 5, sizeCanh: [1,2,3,4,5])
 dagiac.tinhChuVi()
+
 class TamGiac: DaGiac {
     override func tinhChuVi() -> Float {
         var chuVi: Float = 0

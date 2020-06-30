@@ -1,6 +1,8 @@
 import UIKit
 import Foundation
+
 var pi = Float.pi
+
 class HinhVe {
     
 }
@@ -60,5 +62,5 @@ class Cau:BaChieu {
     // something
 }
 class LapPhuong:BaChieu {
-// something
+    // something
 }
