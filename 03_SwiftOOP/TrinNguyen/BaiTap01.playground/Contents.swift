@@ -9,27 +9,32 @@ import UIKit
             self.tu = tu
             self.mau = mau
         }
+        
         func inPhanSo() -> String {
             return "\(tu)/\(mau)"
         }
+        
         //cong phan so
         func congPS(ps2: PhanSo) -> (PhanSo) {
             let tuMoi = tu * ps2.mau + mau * ps2.tu
             let mauMoi = mau * ps2.mau
             return PhanSo(tu: tuMoi, mau: mauMoi)
         }
+        
         //tru phan so
         func truPS(ps2: PhanSo) -> (PhanSo) {
             let tuMoi = tu * ps2.mau - mau * ps2.tu
             let mauMoi = mau * ps2.mau
             return PhanSo(tu: tuMoi, mau: mauMoi)
         }
+        
         //nhan phan so
         func nhanPS(ps2: PhanSo) -> (PhanSo) {
             let tuMoi = tu * ps2.tu
             let mauMoi = mau * ps2.mau
             return PhanSo(tu: tuMoi, mau: mauMoi)
         }
+        
         //chia phan so
         func chiaPS(ps2: PhanSo) -> (PhanSo) {
             let tuMoi = tu * ps2.mau
@@ -37,6 +42,7 @@ import UIKit
             return PhanSo(tu: tuMoi, mau: mauMoi)
         }
     }
+
     //khoi tao
     let ps1 = PhanSo(tu: 1, mau: 2)
     let ps2 = PhanSo(tu: 2, mau: 3)
