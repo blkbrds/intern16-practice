@@ -50,6 +50,7 @@ final class BaiTap02VC: UIViewController {
     func avatarView(frame : CGRect,person: Person, index: Int) -> UIView {
         let profileView = UIView()
         profileView.frame = frame
+        
         let avatarImage = UIImageView(image: person.image)
         avatarImage.contentMode = .scaleAspectFit
         avatarImage.frame = CGRect(x: 0, y: 0, width: 100, height: 100)

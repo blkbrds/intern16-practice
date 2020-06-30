@@ -15,6 +15,14 @@
 		C46074CD24A7392400F74694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46074CB24A7392400F74694 /* LaunchScreen.storyboard */; };
 		C46074D624A73C6600F74694 /* BaiTap01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46074D524A73C6600F74694 /* BaiTap01VC.swift */; };
 		C46074D924A7485000F74694 /* BaiTap02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46074D824A7485000F74694 /* BaiTap02VC.swift */; };
+		C4D3F35D24AA1AE2002A661A /* BaiTap04VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3F35B24AA1AE2002A661A /* BaiTap04VC.swift */; };
+		C4D3F35E24AA1AE2002A661A /* BaiTap04VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D3F35C24AA1AE2002A661A /* BaiTap04VC.xib */; };
+		C4D3F36124AA2322002A661A /* BaiTap05VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3F35F24AA2322002A661A /* BaiTap05VC.swift */; };
+		C4D3F36224AA2322002A661A /* BaiTap05VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D3F36024AA2322002A661A /* BaiTap05VC.xib */; };
+		C4D3F36524AA40A9002A661A /* BaiTap06VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3F36324AA40A9002A661A /* BaiTap06VC.swift */; };
+		C4D3F36624AA40A9002A661A /* BaiTap06VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D3F36424AA40A9002A661A /* BaiTap06VC.xib */; };
+		C4D3F36924AA4D45002A661A /* BaiTap07VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3F36724AA4D45002A661A /* BaiTap07VC.swift */; };
+		C4D3F36A24AA4D45002A661A /* BaiTap07VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D3F36824AA4D45002A661A /* BaiTap07VC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		C46074CE24A7392400F74694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46074D524A73C6600F74694 /* BaiTap01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01VC.swift; sourceTree = "<group>"; };
 		C46074D824A7485000F74694 /* BaiTap02VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02VC.swift; sourceTree = "<group>"; };
+		C4D3F35B24AA1AE2002A661A /* BaiTap04VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04VC.swift; sourceTree = "<group>"; };
+		C4D3F35C24AA1AE2002A661A /* BaiTap04VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04VC.xib; sourceTree = "<group>"; };
+		C4D3F35F24AA2322002A661A /* BaiTap05VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap05VC.swift; sourceTree = "<group>"; };
+		C4D3F36024AA2322002A661A /* BaiTap05VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap05VC.xib; sourceTree = "<group>"; };
+		C4D3F36324AA40A9002A661A /* BaiTap06VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap06VC.swift; sourceTree = "<group>"; };
+		C4D3F36424AA40A9002A661A /* BaiTap06VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap06VC.xib; sourceTree = "<group>"; };
+		C4D3F36724AA4D45002A661A /* BaiTap07VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap07VC.swift; sourceTree = "<group>"; };
+		C4D3F36824AA4D45002A661A /* BaiTap07VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap07VC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,14 @@
 				C46074D824A7485000F74694 /* BaiTap02VC.swift */,
 				7D39548724A9EEE400268C6D /* BaiTap03VC.swift */,
 				7D39548824A9EEE400268C6D /* BaiTap03VC.xib */,
+				C4D3F35B24AA1AE2002A661A /* BaiTap04VC.swift */,
+				C4D3F35C24AA1AE2002A661A /* BaiTap04VC.xib */,
+				C4D3F35F24AA2322002A661A /* BaiTap05VC.swift */,
+				C4D3F36024AA2322002A661A /* BaiTap05VC.xib */,
+				C4D3F36324AA40A9002A661A /* BaiTap06VC.swift */,
+				C4D3F36424AA40A9002A661A /* BaiTap06VC.xib */,
+				C4D3F36724AA4D45002A661A /* BaiTap07VC.swift */,
+				C4D3F36824AA4D45002A661A /* BaiTap07VC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,7 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46074CD24A7392400F74694 /* LaunchScreen.storyboard in Resources */,
+				C4D3F36624AA40A9002A661A /* BaiTap06VC.xib in Resources */,
 				7D39548A24A9EEE400268C6D /* BaiTap03VC.xib in Resources */,
+				C4D3F35E24AA1AE2002A661A /* BaiTap04VC.xib in Resources */,
+				C4D3F36224AA2322002A661A /* BaiTap05VC.xib in Resources */,
+				C4D3F36A24AA4D45002A661A /* BaiTap07VC.xib in Resources */,
 				C46074CA24A7392400F74694 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,9 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46074D624A73C6600F74694 /* BaiTap01VC.swift in Sources */,
+				C4D3F36124AA2322002A661A /* BaiTap05VC.swift in Sources */,
+				C4D3F36924AA4D45002A661A /* BaiTap07VC.swift in Sources */,
 				C46074C124A7392200F74694 /* AppDelegate.swift in Sources */,
+				C4D3F36524AA40A9002A661A /* BaiTap06VC.swift in Sources */,
 				C46074C324A7392200F74694 /* SceneDelegate.swift in Sources */,
 				7D39548924A9EEE400268C6D /* BaiTap03VC.swift in Sources */,
+				C4D3F35D24AA1AE2002A661A /* BaiTap04VC.swift in Sources */,
 				C46074D924A7485000F74694 /* BaiTap02VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

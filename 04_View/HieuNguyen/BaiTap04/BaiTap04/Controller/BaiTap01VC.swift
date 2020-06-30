@@ -19,7 +19,7 @@ class BaiTap01VC: UIViewController {
     let imageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "defaultProfileImage")
-//        image.translatesAutoresizingMaskIntoConstraints = false
+        image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
         image.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return image
@@ -43,8 +43,7 @@ class BaiTap01VC: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3 ).isActive = true
-        
+        imageView.widthAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3 ).isActive = true        
         view.addSubview(nameLbl)
         nameLbl.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive = true
         nameLbl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
