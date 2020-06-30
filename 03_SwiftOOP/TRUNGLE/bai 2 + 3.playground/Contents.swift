@@ -49,6 +49,7 @@ class TamGiac : DaGiac {
     override func tinhtoan() -> Double {
         if soCanh != kichthuoc.count {
             print("nhap sai so canh cua tam giac, hay nhap 3 canh")
+            return chuVi
         } else  if  soCanh != 3  {
             print(" hay nhap lai 3 canh cua tam giac")
         } else {
@@ -66,11 +67,7 @@ class TamGiac : DaGiac {
         if soCanh != kichthuoc.count  || soCanh != 3  || kichthuoc[0]  + kichthuoc[1] < kichthuoc[2]  || kichthuoc[0] + kichthuoc[2] < kichthuoc[1] || kichthuoc[1] + kichthuoc[2] < kichthuoc[0] {
             print("nhap sai so canh cua tam giac, hay nhap 3 canh")
         }
-          //   else  if  soCanh != 3  {
-//            print(" hay nhap lai 3 canh cua tam giac")
-//        } else if kichthuoc[0]  + kichthuoc[1] < kichthuoc[2]  || kichthuoc[0] + kichthuoc[2] < kichthuoc[1] || kichthuoc[1] + kichthuoc[2] < kichthuoc[0] {
-//            print(" nhap sai kich thuoc tam giac")
-//        }
+         
         else {
           dtTamGiac = sqrt(p * (p - kichthuoc[0]) * (p - kichthuoc[1]) * (p - kichthuoc[2]))
         }
