@@ -64,3 +64,4 @@ class Cau:BaChieu {
 class LapPhuong:BaChieu {
     // something
 }
+

@@ -38,4 +38,5 @@ class CStack {
 let kq = CStack(capa: 4,array: [1,2,3])
 kq.checkFull()
 kq.add(them: 2)
+
  
