@@ -1,66 +1,88 @@
-import UIKit
 import Foundation
 class PhanSo {
-    var tuSo: Double
-    var mauSo:  Double
-    init(tuSo: Double, mauSo: Double) {
+     var tuSo: Double
+     var mauSo: Double
+    
+    init?(tuSo: Double, mauSo: Double) {
         self.tuSo = tuSo
         if mauSo == 0 {
-            print("mau so phai khac 0")
-            
+            print("Phan So Mau Phai Khac 0")
+            return nil
         }
         self.mauSo = mauSo
     }
-    func UCLN ( no1 : Double, no2 : Double ) -> Double {
-        var a = abs(no1)
-        var b = abs(no2)
+    
+    
+    func UCLN( num1: Double,  num2: Double) -> Double {
+        var a = abs(num1)
+        var b = abs(num2)
         if a == 0 && b == 0 {
             return 0
         } else {
             while a != b {
                 if a > b {
-                 a -= b
+                    a -= b
                 } else {
-                   b -= a
+                    b -= a
                 }
             }
         }
         return a
     }
-    func congPhanSo (a : PhanSo) -> PhanSo {
-        let tuSo = self.tuSo * a.mauSo + self.mauSo * a.tuSo
-        let mauSo = self.mauSo * a.mauSo
-        return PhanSo ( tuSo: tuSo, mauSo: mauSo)
+    
+    func cong( b: PhanSo?) -> PhanSo? {
+        guard let b = b else { return nil }
+        return PhanSo(tuSo: tuSo * b.mauSo + b.tuSo * mauSo, mauSo: mauSo * b.mauSo)
     }
-    func truPhanSo ( a: PhanSo) -> PhanSo {
-        let tuSo = self.tuSo * a.mauSo - self.mauSo * a.tuSo
-        let mauSo = self.mauSo * a.mauSo
-        return PhanSo (tuSo: tuSo, mauSo: mauSo)
+    
+    func tru( b: PhanSo?) -> PhanSo? {
+        guard let b = b else { return nil }
+        return PhanSo(tuSo: tuSo * b.mauSo - b.tuSo * mauSo, mauSo: mauSo * b.mauSo)
     }
-    func nhanPhanSo ( a: PhanSo) -> PhanSo {
-        let tuSo = self.tuSo * a.tuSo
-        let mauSo = self.mauSo * a.mauSo
-        return PhanSo ( tuSo: tuSo, mauSo: mauSo)
+    
+    func nhan( b: PhanSo?) -> PhanSo? {
+        guard let b = b else { return nil }
+        return PhanSo(tuSo: tuSo * b.tuSo, mauSo: mauSo * b.mauSo)
     }
-    func chiaPhanSo ( a: PhanSo) -> PhanSo {
-        let tuSo = self.tuSo * a.mauSo
-        let mauSo = self.mauSo * a.tuSo
-        return PhanSo ( tuSo: tuSo, mauSo: mauSo)
+    
+    func chia(b: PhanSo?) -> PhanSo? {
+        guard let b = b else { return nil }
+        return PhanSo(tuSo: tuSo * b.mauSo, mauSo: mauSo * b.tuSo)
     }
-    func inPS(){
-        print("\(tuSo / UCLN(no1: tuSo, no2: mauSo ))/\(mauSo / UCLN(no1: tuSo, no2: mauSo))")
-        
+    
+    func InPhanSo() -> String {
+        return "Phan so: \(tuSo / UCLN(num1: tuSo, num2: mauSo)) / \(mauSo / UCLN(num1: tuSo, num2: mauSo))"
     }
 }
-var ps1 = PhanSo(tuSo: 1, mauSo: 2)
-var ps2 = PhanSo(tuSo: 1, mauSo: 0)
-var kqCong = ps1.congPhanSo(a: ps2)
-var kqTru  = ps1.truPhanSo(a:ps2)
-var kqNhan = ps1.nhanPhanSo(a:ps2)
-var kqChia = ps1.chiaPhanSo(a:ps2)
-kqCong.inPS()
-//kqTru.inPS()
-//kqNhan.inPS()
-//kqChia.inPS()
 
+var a = PhanSo(tuSo: 1, mauSo: 2)
+var b = PhanSo(tuSo: 3, mauSo: 0)
+
+print("Cong phan so ")
+if let ps1 = a, let ps2 = b {
+    if let cong = ps1.cong(b: ps2) {
+        print(cong.InPhanSo())
+    }
+}
+
+print("Tru phan so ")
+if let ps1 = a, let ps2 = b {
+    if let tru = ps1.tru(b: ps2) {
+        print(tru.InPhanSo())
+    }
+}
+
+print("Nhan phan so")
+if let ps1 = a, let ps2 = b {
+    if let nhan = ps1.nhan(b: ps2) {
+        print(nhan.InPhanSo())
+    }
+}
+
+print("Chia phan so")
+if let ps1 = a, let ps2 = b {
+    if let chia = ps1.chia(b: ps2) {
+        print(chia.InPhanSo())
+    }
+}
 
