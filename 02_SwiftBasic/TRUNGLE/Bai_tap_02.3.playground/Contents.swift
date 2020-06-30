@@ -1,6 +1,6 @@
 import UIKit
 
-enum kq {
+enum KetQua {
     case voSoNghiem
     case voNghiem
     case haiNghiem( Double, Double)
@@ -8,13 +8,13 @@ enum kq {
 
 
 //
-func giaiPtBacNhat2An ( a1: Double, b1: Double, c1: Double, a2: Double, b2: Double, c2:Double) -> kq {
+func giaiPtBacNhat2An ( a1: Double, b1: Double, c1: Double, a2: Double, b2: Double, c2:Double) -> KetQua {
     let D = a1 * b2 - a2 * b1
     let DX = c1 * b2 - c2 * b1
     let DY = a1 * c2 - a2 * c1
     if D == 0 {
         if DX + DY == 0 {
-            return kq.voSoNghiem
+            return .voSoNghiem
         }
         else {
             return .voNghiem
@@ -25,7 +25,7 @@ func giaiPtBacNhat2An ( a1: Double, b1: Double, c1: Double, a2: Double, b2: Doub
         let x = DX / D
         let y = DY / D
         
-        return kq.haiNghiem(x, y)
+        return .haiNghiem(x, y)
     }
 }
 let a1 : Double = 8
@@ -35,9 +35,9 @@ let a2 : Double = 7
 let b2 : Double = 6
 let c2 : Double = 46
 
-let result = giaiPtBacNhat2An(a1: a1, b1: b1, c1: c1, a2: a2, b2: b2, c2: c2)
+let pt1 = giaiPtBacNhat2An(a1: a1, b1: b1, c1: c1, a2: a2, b2: b2, c2: c2)
 
-switch result {
+switch pt1 {
 case .voNghiem:
     print("phuong trinh co vo nghiem")
 

@@ -30,27 +30,28 @@ print("tong fb la: \(tongFb)")
 
  // B - Liet ke 20 so fibo dau tien
 
-func listOfFibonacci(n: Int) -> (Int) {
+func danhSachFibo(n: Int) -> [Int] {
+    var arr = [Int]()
     var f0: Int = 0, f1: Int = 1, fn: Int = 0
     for i in 1...n {
         if i == 1 {
-            print(f0)
+            arr.append(f0)
             continue
         }
         if i == 2 {
-            print(f1)
+           arr.append(f1)
             continue
         }
         fn = f0 + f1
         f0 = f1
         f1 = fn
 
-        print(fn)
+         arr.append(fn)
     }
-    return fn
+    return arr
 }
-let listOfFb = listOfFibonacci(n: 20)
-print(listOfFb)
+let ds = danhSachFibo(n: 20)
+print(ds)
  
  // C -  Tinh sin x , cos x bang cong thuc chuoi Taylor
 
