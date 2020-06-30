@@ -17,19 +17,18 @@ class BaiTap07VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         monkeyImage.isUserInteractionEnabled = true
-        let taptapGesture = UITapGestureRecognizer(target: self, action: #selector(oneTap))
-        monkeyImage.addGestureRecognizer(taptapGesture)
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(oneTapGesture))
+        singleTapGesture.numberOfTouchesRequired = 1
+        monkeyImage.addGestureRecognizer(singleTapGesture)
         
-        let doubleTapTap = UITapGestureRecognizer(target: self, action: #selector(doubleTap))
-        doubleTapTap.numberOfTapsRequired = 2
-//        doubleTapTap.tim
-        monkeyImage.addGestureRecognizer(doubleTapTap)
-
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(twoTapGesture))
+        doubleTapGesture.numberOfTapsRequired = 2
+        monkeyImage.addGestureRecognizer(doubleTapGesture)
+        
+        singleTapGesture.require(toFail: doubleTapGesture)
     }
     
-    @objc func oneTap(recognizer: UITapGestureRecognizer) {
-        print(" 1 tap ")
-        print(viewMessage.frame)
+    @objc func oneTapGesture(recognizer: UITapGestureRecognizer) {
         self.viewMessage.alpha = 1
         self.viewMessage.isHidden = false
         monkeyLabel.text = "Tôi là khỉ"
@@ -39,8 +38,9 @@ class BaiTap07VC: UIViewController {
             self.viewMessage.isHidden = true
         })
     }
-    @objc func doubleTap(recognizer: UITapGestureRecognizer){
-        print("2 tap")
+    
+    @objc func twoTapGesture(recognizer: UITapGestureRecognizer) {
+        self.viewMessage.alpha = 1
         self.viewMessage.isHidden = false
         monkeyLabel.text = "Khỉ là tôi"
         UIView.animate(withDuration: 2, delay: 2, options: UIView.AnimationOptions.transitionFlipFromTop, animations: {
@@ -49,6 +49,4 @@ class BaiTap07VC: UIViewController {
             self.viewMessage.isHidden = true
         })
     }
-
-
-    }
+}
