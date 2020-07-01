@@ -48,7 +48,7 @@ class TamGiac: DaGiac {
             tamGiac.a * tamGiac.a + tamGiac.c * tamGiac.c == tamGiac.b * tamGiac.b)
     }
     
-    func dsTamGiac(_ mangTG: [TamGiac]) {
+    func danhSachTamGiac(_ mangTG: [TamGiac]) {
         for tamGiac in mangTG where dlPitago(tamGiac: tamGiac) {
             print("\(tamGiac.a) \(tamGiac.b) \(tamGiac.c)")
         }
