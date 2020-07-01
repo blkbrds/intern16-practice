@@ -1,33 +1,36 @@
 import UIKit
 
-class Date{
-    var ngay:Int
-    var thang:Int
-    var nam:Int
+class Date {
+    var ngay: Int
+    var thang: Int
+    var nam: Int
+    
     init(ngay: Int, thang: Int, nam: Int) {
         self.ngay = ngay
         self.thang = thang
         self.nam = nam
     }
     
-    func isCheck(nam:Int) -> Bool {
+    func kiemTraNamNhuan(nam: Int) -> Bool {
         if nam % 4 == 0 && nam % 100 != 0 || nam % 400 == 0{
             return true
         }
         return false
     }
-    func hamtruycap()-> String{
+    
+    func hamtruycap() -> String {
         return "Ngay: \(ngay) , Thang: \(thang), Nam: \(nam)"
     }
+    
     // Tra ve so ngay trong thang
-    func dayIn() -> Int{
+    func dayIn() -> Int {
         switch thang {
         case 1 , 3 , 5 , 7 , 8 , 10 , 12:
             return 31
         case 4 , 6 , 9 , 11:
             return 30
         case 2:
-            if isCheck(nam: nam) == true{
+            if kiemTraNamNhuan(nam: nam) == true{
                 return 29
             }
             return 28
@@ -35,16 +38,11 @@ class Date{
             return -1
         }
     }
+    
     // Chuan hoa ngay thang nam
     func normalize()-> Bool {
         var result: Bool = true
-        if nam < 0 && nam < thang{
-            result = false
-        }
-        if thang <= 1 && thang >= 12{
-            result = false
-        }
-        if ngay <= 1 && ngay > dayIn(){
+        if nam < 0 && nam < thang && thang <= 1 && thang >= 12 && ngay <= 1 && ngay > dayIn() {
             result = false
         }
         return result

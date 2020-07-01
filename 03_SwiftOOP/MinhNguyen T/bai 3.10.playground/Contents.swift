@@ -1,7 +1,7 @@
-import UIKit
+import Foundation
 
 class A{
-    static func Sum(n:Int){
+    func Sum(n:Int){
         var sum:Int = 0
         for i in 0...n{
             sum += i
@@ -9,5 +9,5 @@ class A{
         print ("tong :\(sum)")
     }
 }
-A.Sum(n: 5)
-
+var a = A()
+a.Sum(n: 6)

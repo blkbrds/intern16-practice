@@ -1,9 +1,6 @@
-import UIKit
-
-
-class mang1C{
+class Mang1C {
     
-    var arr:[Int] = []
+    var arr: [Int]
     
     init(arr: [Int]) {
         self.arr = arr
@@ -14,7 +11,6 @@ class mang1C{
     }
     
     func maxArr()-> Int{
-        
         var max = arr[0]
         for i in 1...arr.count - 1{
             if arr[i] > max{
@@ -23,8 +19,8 @@ class mang1C{
         }
         return max
     }
-    func minArr()-> Int{
-           
+    
+    func minArr() -> Int {
            var min = arr[0]
            for i in 1...arr.count - 1{
                if arr[i] < min{
@@ -35,7 +31,7 @@ class mang1C{
        }
 }
 
-var arr1 = mang1C(arr: [4,6,8,2,6,3])
+var arr1 = Mang1C(arr: [4,6,8,2,6,3])
 arr1.inMang()
 arr1.minArr()
 arr1.maxArr()
