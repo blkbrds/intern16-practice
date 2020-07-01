@@ -14,14 +14,12 @@ class DaGiac {
     func tinhtoan () -> Double {
         var chuVi : Double = 0.0
         guard soCanh <= 2 || kichthuoc.contains(0) || soCanh == kichthuoc.count  else {
-            print(" khong phai da giac" )
-            return chuVi
+            return 0
         }
             for i in kichthuoc {
                 if i == 0
                 {
                     chuVi = 0.0
-                    print("khong the co canh = 0")
                     break
                 }
                 else {
@@ -48,10 +46,9 @@ class TamGiac : DaGiac {
     
     override func tinhtoan() -> Double {
         if soCanh != kichthuoc.count {
-            print("nhap sai so canh cua tam giac, hay nhap 3 canh")
             return chuVi
         } else  if  soCanh != 3  {
-            print(" hay nhap lai 3 canh cua tam giac")
+           return 0
         } else {
             for i in kichthuoc {
                 chuVi += i
@@ -65,9 +62,8 @@ class TamGiac : DaGiac {
         var dtTamGiac: Double = 0.0
      let p: Double = Double((kichthuoc[0] + kichthuoc[1] + kichthuoc[2]) / 2)
         if soCanh != kichthuoc.count  || soCanh != 3  || kichthuoc[0]  + kichthuoc[1] < kichthuoc[2]  || kichthuoc[0] + kichthuoc[2] < kichthuoc[1] || kichthuoc[1] + kichthuoc[2] < kichthuoc[0] {
-            print("nhap sai so canh cua tam giac, hay nhap 3 canh")
+           return 0
         }
-         
         else {
           dtTamGiac = sqrt(p * (p - kichthuoc[0]) * (p - kichthuoc[1]) * (p - kichthuoc[2]))
         }

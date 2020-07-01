@@ -6,7 +6,6 @@ class PhanSo {
     init?(tuSo: Double, mauSo: Double) {
         self.tuSo = tuSo
         if mauSo == 0 {
-            print("Phan So Mau Phai Khac 0")
             return nil
         }
         self.mauSo = mauSo
