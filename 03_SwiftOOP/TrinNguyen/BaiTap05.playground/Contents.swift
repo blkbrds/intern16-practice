@@ -3,10 +3,12 @@ import Foundation
 class Stack{
     var capacity: Int
     var arr = [Int]()
+    
     init(capacity: Int, arr: [Int]) {
         self.capacity = capacity
         self.arr = arr
   }
+    
   func checkEmpty() -> Bool{
       if arr.count == 0 {
           return true
@@ -15,6 +17,7 @@ class Stack{
           return false
       }
   }
+    
   func checkFull() -> Bool{
       if arr.count == capacity{
           return true
@@ -23,6 +26,7 @@ class Stack{
           return false
       }
   }
+    
   func addArray(temp: Int) -> Array<Int> {
       if checkFull() == true{
           print("Stack is full !!!")
@@ -31,6 +35,7 @@ class Stack{
       }
       return arr
   }
+    
   func remove() -> Array<Int?> {
       arr.popLast()
       return arr

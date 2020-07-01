@@ -1,30 +1,21 @@
-import UIKit
+import Foundation
 
 class HinhVe {
     var chuVi = 0.0
     var dienTich = 0.0
-//    var canh: Int
-//    var arrayCanh = [Int]()
-//
-//    init(canh: Int,arrayCanh: [Int]) {
-//        self.canh = canh
-//        self.arrayCanh = arrayCanh
-//    }
+    
     func tinhChuVi() -> Float {
-////        for canh in 0..<arrayCanh.count{
-////            chuVi += arrayCanh[canh]
-////        }
         return Float(chuVi)
     }
+    
     func tinhDienTich() -> Float {
-//        for canh in 0..<arrayCanh.count{
-//            dienTich *= arrayCanh[canh]
-//        }
         return Float(dienTich)
     }
+    
     //class 2 chieu
     class HaiChieu: HinhVe {
     }
+    
     //class 3 chieu
     class BaChieu: HinhVe {
         var theTich = 0.0
@@ -32,6 +23,7 @@ class HinhVe {
             return Float(theTich)
         }
     }
+    
     //class hinh tron
     class HinhTron: HaiChieu {
         var banKinh: Float
@@ -47,6 +39,7 @@ class HinhVe {
             return Float(dienTich)
         }
     }
+    
     class HinhVuong: HaiChieu {
         var canh: Int
         init(canh: Int) {
@@ -61,6 +54,7 @@ class HinhVe {
             return Float(dienTich)
         }
     }
+    
     class HinhCN: HaiChieu {
         var dai: Int
         var rong: Int
@@ -77,6 +71,7 @@ class HinhVe {
             return Float(dienTich)
         }
     }
+    
     class HinhCau: BaChieu {
         var banKinh: Float
         init(banKinh: Float) {
@@ -91,6 +86,7 @@ class HinhVe {
             return Float(theTich)
         }
     }
+    
     class HinhLapPhuong: BaChieu {
         var canh: Float
         init(canh: Float) {

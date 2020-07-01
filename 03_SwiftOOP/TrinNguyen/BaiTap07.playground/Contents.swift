@@ -10,8 +10,6 @@ class HocSinh {
         self.namSinh = namSinh
         self.diem = diem
     }
-    
-    
 }
 class DSHocSinh {
     var dSHocSinh = [HocSinh]()
