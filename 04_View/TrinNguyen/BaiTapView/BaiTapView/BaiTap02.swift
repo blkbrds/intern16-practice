@@ -4,13 +4,13 @@ class BaiTap02: UIViewController {
 
     var x: CGFloat = 30
     var y: CGFloat = 80
-    
+
     struct User {
         var name: String
         var image: UIImageView
     }
 
-    let datas: [User] = [
+    let users: [User] = [
         User(name: "a", image: UIImageView(image: UIImage(named: "img_avatar_01"))),
         User(name: "b", image: UIImageView(image: UIImage(named: "img_avatar_01"))),
         User(name: "c", image: UIImageView(image: UIImage(named: "img_avatar_01"))),
@@ -24,25 +24,24 @@ class BaiTap02: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        for index in 1...datas.count {
+
+        for index in 1...users.count {
             let frame = CGRect(x: x, y: y, width: 100, height: 100)
-            //tao doi tuong view
-            let userAvatar = datas[index-1].image
-            //gan gia tri cho thuoc tinh view
+            // Tao doi tuong view
+            let userAvatar = users[index - 1].image
+            // Gan gia tri cho thuoc tinh view
             userAvatar.frame = frame
             userAvatar.contentMode = .scaleToFill
-            //add view vao superview
+            // Add view vao superview
             view.addSubview(userAvatar)
             // Add user name
-            let userName = UILabel(frame: CGRect(x: x, y: y+100, width: 100, height: 50))
-            userName.text = datas[index-1].name
+            let userName = UILabel(frame: CGRect(x: x, y: y + 100, width: 100, height: 50))
+            userName.text = users[index - 1].name
             userName.backgroundColor = .lightGray
             userName.textColor = .blue
             userName.textAlignment = .center
             view.addSubview(userName)
-            //add button
+            // Add button
             let button = UIButton(frame: CGRect(x: x, y: y, width: 100, height: 250))
             button.backgroundColor = .clear
             button.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
@@ -53,11 +52,9 @@ class BaiTap02: UIViewController {
                 x = 30
             }
         }
-        
     }
-    
-    @objc func buttonDidClick() {
+
+    @objc private func buttonDidClick() {
         print("Button is locked!!!")
     }
 }
-

@@ -6,33 +6,31 @@ class BaiTap01: UIViewController {
         super.viewDidLoad()
 
         // Add user avatar
-        //xd view con trong view cha
+        // Xd view con trong view cha
         let frame = CGRect(x: 50, y: 100, width: 100, height: 100)
-        //tao doi tuong view
-        let userAvatar = UIImageView(image: UIImage(named: "img_avatar_01"))
-        //gan gia tri cho thuoc tinh view
-        userAvatar.frame = frame
-        userAvatar.contentMode = .scaleToFill
+        // Tao doi tuong view
+        let userAvatarImageView = UIImageView(image: UIImage(named: "img_avatar_01"))
+        // Gan gia tri cho thuoc tinh view
+        userAvatarImageView.frame = frame
+        userAvatarImageView.contentMode = .scaleToFill
         //add view vao superview
-        view.addSubview(userAvatar)
+        view.addSubview(userAvatarImageView)
 
         // Add user name
-        let userName = UILabel(frame: CGRect(x: 50, y: 200, width: 100, height: 50))
-        userName.text = "User Name"
-        userName.backgroundColor = .lightGray
-        userName.textColor = .blue
-        view.addSubview(userName)
+        let userNameLabel = UILabel(frame: CGRect(x: 50, y: 200, width: 100, height: 50))
+        userNameLabel.text = "User Name"
+        userNameLabel.backgroundColor = .lightGray
+        userNameLabel.textColor = .blue
+        view.addSubview(userNameLabel)
 
-        //add button
-        let button = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 250))
-        button.backgroundColor = .clear
-        button.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
-        view.addSubview(button)
+        // Add button
+        let clickButton = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 250))
+        clickButton.backgroundColor = .clear
+        clickButton.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
+        view.addSubview(clickButton)
     }
 
-    @objc func buttonDidClick() {
+    @objc private func buttonDidClick() {
         print("Button is locked!!!")
     }
-
 }
-
