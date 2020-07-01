@@ -1,22 +1,25 @@
-import UIKit
+import Foundation
 
 class PhanSo {
     var tuSo: Int
     var mauSo: Int
     
-    init(tuSo: Int, mauSo: Int) {
-        self.tuSo = tuSo
-        self.mauSo = mauSo
+    init?(tuSo: Int, mauSo: Int) {
+        if mauSo == 0 {
+            return nil
+        } else {
+            self.tuSo = tuSo
+            self.mauSo = mauSo
+        }
     }
     
-    func inManHinh() -> String {
-        return "\(self.tuSo)/\(self.mauSo)"
-    }
+    //    func inManHinh() -> String {
+    //        return "\(self.tuSo)/\(self.mauSo)"
+    //    }
     
-    func tinhCong(a: PhanSo!) -> PhanSo? {
+    func tinhCong(a: PhanSo) -> PhanSo? {
         let tuMoi: Int
         let mauMoi: Int
-        if self.mauSo == 0 || a.mauSo == 0 { return nil }
         if self.mauSo == a.mauSo {
             tuMoi = self.tuSo + a.tuSo
             mauMoi = self.mauSo
@@ -27,11 +30,10 @@ class PhanSo {
         return PhanSo(tuSo: tuMoi, mauSo: mauMoi)
     }
     
-    func tinhTru(a: PhanSo!) -> PhanSo? {
+    func tinhTru(a: PhanSo) -> PhanSo? {
         let tuMoi: Int
         let mauMoi: Int
         
-        if self.mauSo == 0 || a.mauSo == 0 { return nil }
         if self.mauSo == a.mauSo {
             tuMoi = self.tuSo - a.tuSo
             mauMoi = self.mauSo
@@ -42,27 +44,24 @@ class PhanSo {
         return PhanSo(tuSo: tuMoi, mauSo: mauMoi)
     }
     
-    func tinhNhan(a: PhanSo!) -> PhanSo? {
-        if self.mauSo == 0 || a.mauSo == 0 { return nil }
+    func tinhNhan(a: PhanSo) -> PhanSo? {
         let tuMoi: Int = self.tuSo * a.tuSo
         let mauMoi: Int = self.mauSo * a.mauSo
         return PhanSo(tuSo: tuMoi, mauSo: mauMoi)
     }
     
-    func tinhChia(a: PhanSo!) -> PhanSo? {
-        if self.mauSo == 0 || a.mauSo == 0 { return nil }
+    func tinhChia(a: PhanSo) -> PhanSo? {
         let tuMoi: Int = self.tuSo * a.mauSo
         let mauMoi: Int = self.mauSo * a.tuSo
         return PhanSo(tuSo: tuMoi, mauSo: mauMoi)
     }
 }
 
-let a: PhanSo = PhanSo(tuSo: 2, mauSo: 2)
-let b: PhanSo! = a.tinhCong(a: PhanSo(tuSo: 1, mauSo: 2))
-let c: PhanSo! = a.tinhTru(a: PhanSo(tuSo: 2, mauSo: 3))
-let d: PhanSo! = a.tinhNhan(a: PhanSo(tuSo: 2, mauSo: 4))
-let e: PhanSo! = a.tinhChia(a: PhanSo(tuSo: 6, mauSo: 5))
-print(b.inManHinh())
-print(c.inManHinh())
-print(d.inManHinh())
-print(e.inManHinh())
+if let phanso1 = PhanSo(tuSo: 1, mauSo: 2), let phanso2 = PhanSo(tuSo: 1, mauSo: 4), let tong = phanso1.tinhCong(a: phanso2), let hieu = phanso1.tinhTru(a: phanso2), let tich = phanso1.tinhNhan(a: phanso2), let thuong = phanso1.tinhChia(a: phanso2) {
+    print("Tong: \(tong.tuSo) / \(tong.mauSo)")
+    print("Hieu: \(hieu.tuSo) / \(hieu.mauSo)")
+    print("Tich: \(tich.tuSo) / \(tich.mauSo)")
+    print("Thuong: \(thuong.tuSo) / \(thuong.mauSo)")
+} else {
+    print("mau so = 0")
+}
