@@ -15,56 +15,38 @@ class BaiTap01VC: UIViewController {
         var name: String
     }
 
-    private var data: [Person] = [
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Hieu Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Ngoc Khanh"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Kim Oanh"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Hoa Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Huyen Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Minh Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Tam Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Trin Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Ha Van"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Hieu Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Ngoc Khanh"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Kim Oanh"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Hoa Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Huyen Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Minh Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Tam Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Trin Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Ha Van"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Hieu Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Ngoc Khanh"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Kim Oanh"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Hoa Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Huyen Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Minh Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Tam Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Trin Nguyen"),
-        Person(image: UIImage(named: "defaultProfileImage")!, name: "Ha Van")
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
-        // Do any additional setup after loading the view.
+        setupImageView()
+        
     }
-    
-    func setupImageView() {
-           var x = 32
-           var y = 64
-           for i in 0..<self.data.count {
-               if i % 3 == 0 && i != 0 {
-                   y += 146
-                   x = 32
-               } else if i != 0 {
-                   x += 116
-               }
-               userScrollView.addSubview(avatarView(frame: CGRect(x: x, y: y, width: 100, height: 130), person: self.data[i], index: i))
-           }
-       }
 
+    private func setupImageView() {
+        let screensize: CGRect = UIScreen.main.bounds
+        let screenWidth = screensize.width
+        let screenHeight = screensize.height
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
 
+        var x: Int = 32
+        var y: Int = 32
+        for i in 0..<30{
+            if i % 3 == 0 && i != 0 {
+                y += 146
+                x = 32
+            } else if i != 0 {
+                x += 116
+            }
+            let userView = MyAvatar(frame: CGRect(x: x, y: y, width: 100, height: 130), index: i)
+            userView.delegate = self
+            scrollView.addSubview(userView)
+        }
+        scrollView.contentSize = CGSize(width: screenWidth, height: 130 * 12)
+        view.addSubview(scrollView)
+    }
+}
 
+extension BaiTap01VC: MyAvatarDelegate {
+    func setData(_ personView: MyAvatar, _ index: String) {
+        print(index)
+    }
 }
