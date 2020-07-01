@@ -2,7 +2,7 @@ import UIKit
 
 
 // Ramdom mang dung hàm shuffled()
-func inMang(mang :[Int]){
+func inMang(mang : [Int]){
     var a = mang
     a = a.shuffled()
     print (a)
