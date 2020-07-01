@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class Date {
     var ngay: Int
@@ -14,7 +14,7 @@ class Date {
         if ngay < 0 || ngay > daysln(month: thang) {
             return nil
         }
-        if thang < 12 {
+        if thang > 12 {
             return nil
         }
         if nam < 1 {
@@ -48,4 +48,5 @@ class Date {
 }
 var day = Date(ngay: 5, thang: 4, nam: 1988).normalize()
 var bonus = Date(ngay: 4, thang: 4, nam: 2020).advance(y: 2020, m: 4, d: 5)
+
 

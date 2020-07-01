@@ -26,7 +26,7 @@ class DaGiac {
     }
     
 }
-var  dagiac = DaGiac(soCanh: 5, sizeCanh: [1,2,3,4,5])
+var dagiac = DaGiac(soCanh: 5, sizeCanh: [1,2,3,4,5])
 dagiac.tinhChuVi()
 
 class TamGiac: DaGiac {
@@ -48,6 +48,7 @@ class TamGiac: DaGiac {
     }
 }
 var tamgiac = TamGiac(soCanh: 3,sizeCanh: [2,1,3] )
+
 tamgiac.dienTich()
 tamgiac.tinhChuVi()
 print("Dien tich cua tam giac la : \(tamgiac.dienTich())")
