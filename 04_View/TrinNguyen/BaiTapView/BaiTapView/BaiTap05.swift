@@ -16,15 +16,20 @@ final class BaiTap05: UIViewController {
     @IBOutlet private weak var blueView: UIView!
     @IBOutlet private weak var orangeView: UIView!
     @IBOutlet private weak var numberLabel: UILabel!
+      
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configTextField()
+    }
+    
+    // MARK: - Private Methods
+    private func configTextField() {
         blueView.backgroundColor = .blue
         orangeView.backgroundColor = .orange
         whiteView.backgroundColor = .gray
-//        numberLabel.backgroundColor = .black
-        
     }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: outsideView)
@@ -35,9 +40,5 @@ final class BaiTap05: UIViewController {
                 numberLabel.text = "\(Int(blueView.frame.height / whiteView.frame.height * 100))"
             }
         }
-
     }
-    
-
-
 }
