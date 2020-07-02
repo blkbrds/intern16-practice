@@ -12,35 +12,48 @@ class BaiTap01VC: UIViewController {
 
     @IBOutlet weak var viewGrid: UIView!
     var data:[Int] = [98, 95, 103, 102, 99, 97, 98]
-    var gridY:[Int] = [90, 95, 100, 105]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        drawLine(color: .red, view: viewGrid, value: 95, pointX0: 0)
+        setupView()
     }
     
     func drawLine(color: UIColor, view: UIView, value: Int, pointX0: Int) {
         let pointX0: Int = pointX0
         let pointY0: Int = Int(view.frame.size.height)
-        
+        let width: Int = 25
         let height = pointY0 - Int(pointY0) / 15 * (value - 90)
         print(pointX0)
         print(pointY0)
         //design the path
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: pointY0))
-        path.addLine(to: CGPoint(x: 0, y: height))
+        path.move(to: CGPoint(x: pointX0, y: pointY0))
         path.addLine(to: CGPoint(x: pointX0, y: height))
-        path.addLine(to: CGPoint(x: pointX0, y: pointY0))
+        path.addLine(to: CGPoint(x: pointX0 + width, y: height))
+        path.addLine(to: CGPoint(x: pointX0 + width, y: pointY0))
         
         //design path in layer
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
-        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.fillColor = color.cgColor
         shapeLayer.lineWidth = 1.0
 
         view.layer.addSublayer(shapeLayer)
     }
-
+    func setupView() {
+        var pointX0 = 0
+        var colorView:UIColor?
+        for i in 0..<data.count {
+            if data[i] > 100 {
+                colorView = .red
+            } else if data[i] > 95 && data[i] < 100 {
+                colorView = .green
+            } else {
+                colorView = .orange
+            }
+            drawLine(color: colorView!, view: viewGrid, value: data[i], pointX0: pointX0)
+            pointX0 = pointX0 + 45
+        }
+    }
 }
