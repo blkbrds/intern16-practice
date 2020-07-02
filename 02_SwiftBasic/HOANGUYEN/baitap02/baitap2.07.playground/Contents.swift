@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 //Thay thế các phần tử của mảng bằng có giá trị = element =  1 giá trị khác
 func replaceToSub ( arr: inout Array<Int>, element: Int, sub: Int) -> Array<Int> {
