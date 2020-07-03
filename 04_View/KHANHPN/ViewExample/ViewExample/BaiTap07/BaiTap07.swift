@@ -39,7 +39,7 @@ final class BaiTap07: UIViewController {
     @objc private func singleTapGesture(recognizer: UITapGestureRecognizer) {
         speechLabel.text = "Tôi là khỉ"
         speechView.isHidden = false
-        
+        self.speechView.alpha = 1
         UIView.animate(withDuration: 2, delay: 2, options: .curveEaseIn, animations: {
             self.speechView.alpha = 0
         }, completion: { finished in
@@ -51,7 +51,7 @@ final class BaiTap07: UIViewController {
         print("double tap")
         speechLabel.text = "Khỉ là tôi"
         speechView.isHidden = false
-        
+        self.speechView.alpha = 1
         UIView.animate(withDuration: 2, delay: 2, options: .curveEaseIn, animations: {
             self.speechView.alpha = 0
         }, completion: { finished in
