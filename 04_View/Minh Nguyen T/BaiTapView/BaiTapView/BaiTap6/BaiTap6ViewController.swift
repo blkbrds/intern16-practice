@@ -7,18 +7,20 @@
 //
 
 import UIKit
+
 final class BaiTap6ViewController: UIViewController {
+
     //MARK: - IBOulets
     @IBOutlet weak private var thongbaoLabel: UILabel!
     @IBOutlet weak private var thongbaoImage: UIImageView!
-    @IBOutlet private var rotationGesture: UIRotationGestureRecognizer!
+    @IBOutlet weak private var rotationGesture: UIRotationGestureRecognizer!
     @IBOutlet weak private var image: UIImageView!
     @IBOutlet weak private var pinchImage: UIPinchGestureRecognizer!
     
     //MARK: - Propeties
-    let minScale: Float = 0.5
-    let maxScale: Float = 2.0
-    var recognizerScale: CGFloat = 1.0
+    private let minScale: Float = 0.5
+    private let maxScale: Float = 2.0
+    private var recognizerScale: CGFloat = 1.0
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -30,6 +32,7 @@ final class BaiTap6ViewController: UIViewController {
         image.isUserInteractionEnabled = true
         tapGesture()
     }
+    
     //MARK: - Private Funtion
     private func tapGesture(){
         let singleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(singleTapGesture(_:)))
@@ -40,6 +43,7 @@ final class BaiTap6ViewController: UIViewController {
         image.addGestureRecognizer(doubleTap)
         singleTap.require(toFail: doubleTap)
     }
+    
     // MARK: - IBActions
     @IBAction private func longGesTure(_ sender: Any) {
         let long = sender as! UILongPressGestureRecognizer
@@ -55,7 +59,7 @@ final class BaiTap6ViewController: UIViewController {
         rotation.view?.transform = (rotation.view?.transform.rotated(by: rotation.rotation))!
         rotation.rotation = 0
     }
-    
+
     @IBAction private func pinchGesture(_ sender: Any) {
         let pinch: UIPinchGestureRecognizer = sender as! UIPinchGestureRecognizer
         guard pinch.view != nil  else { return }
@@ -72,7 +76,7 @@ final class BaiTap6ViewController: UIViewController {
             }
         }
     }
-    
+
     //MARK: - Objc Funtions
     @objc private func singleTapGesture(_ sender: UITapGestureRecognizer) {
         thongbaoImage.isHidden = false
@@ -93,7 +97,7 @@ final class BaiTap6ViewController: UIViewController {
             }
         }
     }
-    
+
     @objc private func doubleTapGesture(_ sender: UITapGestureRecognizer){
         thongbaoImage.isHidden = false
         thongbaoLabel.isHidden = false

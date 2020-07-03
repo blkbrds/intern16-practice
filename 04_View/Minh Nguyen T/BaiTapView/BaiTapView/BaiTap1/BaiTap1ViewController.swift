@@ -6,12 +6,15 @@
 //  Copyright © 2020 asiantech. All rights reserved.
 //
 import UIKit
+
 final class BaiTap1ViewController: UIViewController {
+
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
     }
+
     // MARK: - Private Funtions
     private func configView() {
         let frame = CGRect(x: 50, y: 100, width: 100, height: 100)
@@ -33,6 +36,7 @@ final class BaiTap1ViewController: UIViewController {
         button.addTarget(self, action: #selector(clickButton), for: .touchUpInside)
         view.addSubview(button)
     }
+
     //MARK: - Objc Funtion
     @objc private func clickButton(){
         print("click")

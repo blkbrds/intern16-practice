@@ -9,6 +9,7 @@
 import UIKit
 
 final class BaiTap2ViewController: UIViewController {
+
     // MARK: - Private Properties
     private var names: [String] = ["Name1","Name2","Name3", "Name4","Name5","Name6","Name7", "Name8","Name9"]
     private var images: [String] = ["avartar","avartar","avartar","avartar","avartar","avartar","avartar","avartar","avartar"]
@@ -17,6 +18,11 @@ final class BaiTap2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+       createUserView()
+    }
+
+    //MARK: - Private Functions
+    private func createUserView() {
         // TODO: khoang trống giữa tưng userview
         let space: CGFloat = 10
         // TODO: lấy chiều rộng màn hinh chinh
@@ -29,7 +35,7 @@ final class BaiTap2ViewController: UIViewController {
         var xView: CGFloat = space
         for index in 0..<names.count {
             let frame = CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView)
-            let userView = createUserView(frame: frame, index: index)
+            let userView = configUserView(frame: frame, index: index)
             view.addSubview(userView)
             // Tinh frame
             if xView + widthUserView > widthScreen - xView {
@@ -40,9 +46,8 @@ final class BaiTap2ViewController: UIViewController {
             }
         }
     }
-    
-    //MARK: - Private Functions
-    private func createUserView(frame: CGRect, index: Int) -> UIView {
+
+    private func configUserView(frame: CGRect, index: Int) -> UIView {
         let userView = UIView(frame: frame)
         //print(userView.bounds.width, userView.bounds.height)
         // Add avatar
@@ -69,6 +74,7 @@ final class BaiTap2ViewController: UIViewController {
         userView.addSubview(button)
         return userView
     }
+
     //MARK: - Objc Funtion
     @objc private func buttonDidClick(_ sender: UITapGestureRecognizer) {
         let userName = sender.name

@@ -17,33 +17,37 @@ final class BaiTap3ViewController: UIViewController {
         case nhapsai = "-> sai password/mat khau"
     }
     
-    // MARK: - IBOutlets
+    // MARK: - IBOutlets Properties
     @IBOutlet weak private var usernameTextField: UITextField!
     @IBOutlet weak private var thongbaoLabel: UILabel!
     @IBOutlet weak private var loginButton: UIButton!
     @IBOutlet weak private var clearButton: UIButton!
     @IBOutlet weak private var passwordTextField: UITextField!
-    
+
+    //MARK: - Private Properties
     private let username: String = "admin"
     private let password: String = "admin123"
+
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        cofigUIextField()
+        configureTapGesture()
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+
+    //MARK: - Private Funtions
+    private func cofigUIextField(){
         usernameTextField.layer.borderWidth = 1.5
         usernameTextField.layer.cornerRadius = 7
         passwordTextField.layer.borderWidth = 1.5
         passwordTextField.layer.cornerRadius = 7
         loginButton.layer.cornerRadius = 7
         clearButton.layer.cornerRadius = 7
-        //TODO: lây sự kiện nhân vào màn hinh để ẩn ban phim
-        configureTapGesture()
-        //TODO:
-        usernameTextField.delegate = self
-        passwordTextField.delegate = self
     }
     
-    //MARK: - Private Funtions
-    private func Login() {
+    private func login() {
         if usernameTextField.text == "" && passwordTextField.text == "" {
             thongbaoLabel.text =  Suit.khongnhap.rawValue
         } else if usernameTextField.text == "" || passwordTextField.text == "" {
@@ -67,6 +71,7 @@ final class BaiTap3ViewController: UIViewController {
         //            thongbaoLabel.text = Suit.nhapsai.rawValue
         //        }
     }
+    
     private func configureTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
@@ -80,8 +85,9 @@ final class BaiTap3ViewController: UIViewController {
     //MARK: - IBAction Funtion
     // Sự kiện khi nhấn vào "login"
     @IBAction private func Login(_ sender: Any) {
-        Login()
+        login()
     }
+
     // Sự kiên cho "clear"
     @IBAction private func Clear(_ sender: Any) {
         thongbaoLabel.text = ""
@@ -96,12 +102,13 @@ extension BaiTap3ViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField === usernameTextField {
             passwordTextField.becomeFirstResponder()
         }
         if textField === passwordTextField {
-            Login()
+            login()
         }
     }
 }
