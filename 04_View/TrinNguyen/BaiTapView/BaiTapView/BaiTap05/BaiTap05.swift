@@ -34,9 +34,10 @@ final class BaiTap05: UIViewController {
         if let touch = touches.first {
             let position = touch.location(in: outsideView)
             if position.y <= whiteView.frame.maxY && position.y >= whiteView.frame.minY {
+                let newFrame: CGRect = CGRect(x: blueView.frame.origin.x, y: blueView.frame.origin.y, width: blueView.frame.width, height:
+                position.y - whiteView.frame.origin.y)
                 orangeView.center = CGPoint(x: whiteView.center.x, y: position.y)
-                blueView.frame = CGRect(x: blueView.frame.origin.x, y: blueView.frame.origin.y, width: blueView.frame.width, height:
-                    position.y - whiteView.frame.origin.y)
+                blueView.frame = newFrame
                 numberLabel.text = "\(Int(blueView.frame.height / whiteView.frame.height * 100))"
             }
         }
