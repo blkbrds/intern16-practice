@@ -1,6 +1,6 @@
 import UIKit
 
-class Dagiac{
+class Dagiac {
     var socanh: Int
     var kichthuoc: [Int]
     
@@ -8,13 +8,14 @@ class Dagiac{
         self.socanh = socanh
         self.kichthuoc = kichthuoc
     }
-    func chuvi()-> (String,Int) {
+    
+    func chuvi()-> (Int) {
         var chuvi = 0
         for i in 0..<socanh {
             chuvi = chuvi + kichthuoc[i]
             //print("kich thuoc canh \(i+1): \(kichthuoc[i])")
         }
-        return ("Chuvi: ",chuvi)
+        return chuvi
     }
 }
 
@@ -31,24 +32,24 @@ class TamGiac: Dagiac {
     }
     
     func kiemtraTamgiac() -> Bool {
-        if (a + b > c) || (a + c > b) || (b + c > a){
+        if (a + b > c) && (a + c > b) && (b + c > a){
             return true
         }
         return false
     }
-    override func chuvi() -> (String,Int) {
+    override func chuvi() -> (Int) {
         if kiemtraTamgiac() == true {
-            return ("Chu vi: ",(a + b + c))
+            return (a + b + c)
         }
-        return ("gia tri k hop le:",0)
+        return 0
     }
     
-    func tinhDienTich() -> (String,Double) {
+    func tinhDienTich() -> (Double) {
         if kiemtraTamgiac() == true {
             let BinhPhuong = (a + b + c) * (a + b - c) * (b + c - a) * (c + a - b)
-            return ("Dien tich:",((sqrt(Double(BinhPhuong))) / 4))
+            return sqrt(Double(BinhPhuong)) / 4
         }
-        return ("gia tri k hop le:", 0)
+        return 0
     }
 }
 

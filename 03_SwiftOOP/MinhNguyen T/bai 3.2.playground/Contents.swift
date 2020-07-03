@@ -6,9 +6,13 @@ class Dagiac {
     var socanh: Int
     var kichthuoc: [Int]
     
-    init(socanh: Int, kichthuoc: [Int]) {
-        self.socanh = socanh
-        self.kichthuoc = kichthuoc
+    init?(socanh: Int, kichthuoc: [Int]) {
+        if socanh == kichthuoc.count {
+            self.socanh = socanh
+            self.kichthuoc = kichthuoc
+        } else {
+            return nil
+        }
     }
     
     func chuvi() -> Int {
@@ -21,5 +25,8 @@ class Dagiac {
     }
 }
 
-var dagiac = Dagiac(socanh: 5, kichthuoc: [1,2,3,4,5])
-dagiac.chuvi()
+if let dagiac = Dagiac(socanh: 5, kichthuoc: [1,2,3,4,5]) {
+    dagiac.chuvi()
+} else {
+    print("khong dung so canh")
+}
