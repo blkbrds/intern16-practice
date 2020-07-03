@@ -10,11 +10,11 @@ class DaGiac {
     }
 
     func tinhChuVi() -> Int {
-        var chuvi = 0
+        var chuVi = 0
         for canh in 0..<arrayCanh.count {
-            chuvi += arrayCanh[canh]
+            chuVi += arrayCanh[canh]
         }
-        return chuvi
+        return chuVi
     }
 
     func inCanh() -> Int {
@@ -27,10 +27,11 @@ class DaGiac {
 
 // Bai3
 class TamGiac: DaGiac {
+    // Override lai de tinh dien tich
     override func tinhChuVi() -> Int {
-        var dientich = 0
-        dientich = (arrayCanh[0] + arrayCanh[1]) / 2
-        return dientich
+        var dienTich = 0
+        dienTich = (arrayCanh[0] + arrayCanh[1]) / 2
+        return dienTich
     }
 }
 

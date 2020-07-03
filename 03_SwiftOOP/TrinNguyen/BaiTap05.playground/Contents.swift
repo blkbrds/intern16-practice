@@ -2,42 +2,37 @@ import Foundation
 
 class Stack {
     var capacity: Int
-    var arr = [Int]()
+    var array = [Int]()
 
-    init(capacity: Int, arr: [Int]) {
+    init(capacity: Int, array: [Int]) {
         self.capacity = capacity
-        self.arr = arr
+        self.array = array
     }
 
     func checkEmpty() -> Bool {
-        if arr.count == 0 {
-            return true
-        }
-        else {
-            return false
-        }
+        array.isEmpty
     }
 
     func checkFull() -> Bool {
-        return arr.count == capacity
+        return array.count == capacity
     }
 
     func addArray(temp: Int) -> Array<Int> {
         if checkFull() == true {
             print("Stack is full !!!")
         } else {
-            arr.append(temp)
+            array.append(temp)
         }
-        return arr
+        return array
     }
 
     func remove() -> Array<Int?> {
-        arr.popLast()
-        return arr
+        array.popLast()
+        return array
     }
 }
 
-let test = Stack(capacity: 2, arr: [1, 2])
+let test = Stack(capacity: 2, array: [1, 2])
     if test.checkEmpty() == true {
         print("Stack is empty!!!")
     }

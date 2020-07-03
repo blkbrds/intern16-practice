@@ -15,46 +15,46 @@ class PhanSo {
     }
 
     // Cong phan so
-    func congPhanSo(ps2: PhanSo) -> PhanSo {
-        let tuMoi = tu * ps2.mau + mau * ps2.tu
-        let mauMoi = mau * ps2.mau
+    func congPhanSo(phanSo2: PhanSo) -> PhanSo {
+        let tuMoi = tu * phanSo2.mau + mau * phanSo2.tu
+        let mauMoi = mau * phanSo2.mau
         return PhanSo(tu: tuMoi, mau: mauMoi)
     }
 
     // Tru phan so
-    func truPhanSo(ps2: PhanSo) -> PhanSo {
-        let tuMoi = tu * ps2.mau - mau * ps2.tu
-        let mauMoi = mau * ps2.mau
+    func truPhanSo(phanSo2: PhanSo) -> PhanSo {
+        let tuMoi = tu * phanSo2.mau - mau * phanSo2.tu
+        let mauMoi = mau * phanSo2.mau
         return PhanSo(tu: tuMoi, mau: mauMoi)
     }
 
     // Nhan phan so
-    func nhanPhanSo(ps2: PhanSo) -> PhanSo {
-        let tuMoi = tu * ps2.tu
-        let mauMoi = mau * ps2.mau
+    func nhanPhanSo(phanSo2: PhanSo) -> PhanSo {
+        let tuMoi = tu * phanSo2.tu
+        let mauMoi = mau * phanSo2.mau
         return PhanSo(tu: tuMoi, mau: mauMoi)
     }
 
     // Chia phan so
-    func chiaPhanSo(ps2: PhanSo) -> PhanSo {
-        let tuMoi = tu * ps2.mau
-        let mauMoi = mau * ps2.tu
+    func chiaPhanSo(phanSo2: PhanSo) -> PhanSo {
+        let tuMoi = tu * phanSo2.mau
+        let mauMoi = mau * phanSo2.tu
         return PhanSo(tu: tuMoi, mau: mauMoi)
     }
 }
 
 // Khoi tao
-let ps1 = PhanSo(tu: 1, mau: 2)
-let ps2 = PhanSo(tu: 2, mau: 3)
-print("Phan so 1 la: \(ps1.inPhanSo())")
-print("Phan so 2 la: \(ps2.inPhanSo())")
+let phanSo1 = PhanSo(tu: 1, mau: 2)
+let phanSo2 = PhanSo(tu: 2, mau: 3)
+print("Phan so 1 la: \(phanSo1.inPhanSo())")
+print("Phan so 2 la: \(phanSo2.inPhanSo())")
 // Thuc hien phep tinh
-let tongPS = ps1.congPhanSo(ps2: ps2)
-let hieuPS = ps1.truPhanSo(ps2: ps2)
-let tichPS = ps1.nhanPhanSo(ps2: ps2)
-let thuongPS = ps1.chiaPhanSo(ps2: ps2)
+let tongPhanSo = phanSo1.congPhanSo(phanSo2: phanSo2)
+let hieuPhanSo = phanSo1.truPhanSo(phanSo2: phanSo2)
+let tichPhanSo = phanSo1.nhanPhanSo(phanSo2: phanSo2)
+let thuongPhanSo = phanSo1.chiaPhanSo(phanSo2: phanSo2)
 // In ra
-print("Tong 2 phan so la: \(tongPS.inPhanSo())")
-print("Hieu 2 phan so la: \(hieuPS.inPhanSo())")
-print("Tich 2 phan so la: \(tichPS.inPhanSo())")
-print("Thuong 2 phan so la: \(thuongPS.inPhanSo())")
+print("Tong 2 phan so la: \(tongPhanSo.inPhanSo())")
+print("Hieu 2 phan so la: \(hieuPhanSo.inPhanSo())")
+print("Tich 2 phan so la: \(tichPhanSo.inPhanSo())")
+print("Thuong 2 phan so la: \(thuongPhanSo.inPhanSo())")

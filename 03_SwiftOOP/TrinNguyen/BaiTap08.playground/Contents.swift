@@ -19,8 +19,6 @@ class Date {
     func daySln() -> Int {
         if month >= 1 && month <= 12 {
             switch month {
-            case 0:
-                return 0
             case 1, 3, 5, 7, 8, 10, 12:
                 return 31
             case 4, 6, 9, 11:
