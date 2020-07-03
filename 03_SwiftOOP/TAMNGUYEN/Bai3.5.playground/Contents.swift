@@ -9,11 +9,7 @@ class CStack {
     }
     
     func checkEmpty() -> Bool {
-        if array.count == 0 {
-            return true
-        } else {
-            return false
-        }
+        return array.count == 0
     }
     
     func checkFull() -> Bool {
@@ -27,8 +23,7 @@ class CStack {
     func add(them: Int) -> [Int] {
         if checkFull() == true {
             print("Full")
-        }
-        if checkFull() == false {
+        } else {
             array.append(them)
         }
         return array
@@ -40,4 +35,6 @@ let kq = CStack(capa: 4,array: [1,2,3])
 kq.checkFull()
 kq.add(them: 2)
 
- 
+
+
+

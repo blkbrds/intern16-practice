@@ -1,6 +1,7 @@
 import Foundation
 
 class Mang1c {
+    
     var array: [Int] = []
     init(array: [Int]) {
         self.array = array
@@ -44,5 +45,6 @@ let ar = Mang1c(array: [1,2,3])
 
 ar.inMax(array: [1,2,3])
 ar.inMin(array: [2,1,4,6,0])
+
 
 
