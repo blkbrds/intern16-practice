@@ -3,6 +3,7 @@ import Foundation
 class CStack {
     var capa: Int = 0
     var array: [Int] = []
+    
     init(capa: Int, array: [Int]) {
         self.capa = capa
         self.array = array
@@ -34,6 +35,7 @@ let kq = CStack(capa: 4,array: [1,2,3])
 
 kq.checkFull()
 kq.add(them: 2)
+
 
 
 

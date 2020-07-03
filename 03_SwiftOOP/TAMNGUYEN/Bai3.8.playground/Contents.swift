@@ -4,6 +4,7 @@ class Date {
     var ngay: Int
     var thang: Int
     var nam: Int
+    
     init(ngay: Int, thang: Int, nam: Int) {
         self.ngay = ngay
         self.thang = thang
@@ -48,5 +49,6 @@ class Date {
 }
 var day = Date(ngay: 5, thang: 4, nam: 1988).normalize()
 var bonus = Date(ngay: 4, thang: 4, nam: 2020).advance(y: 2020, m: 4, d: 5)
+
 
 

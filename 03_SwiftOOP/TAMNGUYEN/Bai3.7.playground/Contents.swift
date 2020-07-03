@@ -4,6 +4,7 @@ class HocSinh {
     var hoTen: String = ""
     var namSinh: Int = 0
     var tongDiem: Float = 0.0
+    
     init(hoTen: String, namSinh: Int, tongDiem: Float) {
         self.hoTen = hoTen
         self.namSinh = namSinh
@@ -33,5 +34,6 @@ var hs4 = HocSinh(hoTen: "Ha", namSinh: 80, tongDiem: 1)
 var hs5 = HocSinh(hoTen: "Yen", namSinh: 96, tongDiem: 7)
 
 let danhsach = sapXep(manghs: [hs1, hs2, hs3, hs4, hs5])
+
 
 

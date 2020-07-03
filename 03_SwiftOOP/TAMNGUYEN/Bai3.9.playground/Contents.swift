@@ -3,6 +3,7 @@ import Foundation
 class Mang1c {
     
     var array: [Int] = []
+    
     init(array: [Int]) {
         self.array = array
     }

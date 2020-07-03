@@ -10,6 +10,7 @@ class BaChieu: HinhVe { }
 
 class Tron: HaiChieu {
     var bankinh: Float
+    
     init(r: Float) {
         bankinh = r
     }
@@ -25,6 +26,7 @@ class Tron: HaiChieu {
 
 class Vuong: HaiChieu {
     var canh: Float
+    
     init(c: Float) {
         canh = c
     }
@@ -42,6 +44,7 @@ class TamGiac: HaiChieu {
     var a: Float
     var b: Float
     var c: Float
+    
     init(a: Float, b: Float, c: Float) {
         self.a = a
         self.b = b
@@ -65,5 +68,6 @@ class Cau: BaChieu {
 class LapPhuong: BaChieu {
     // something
 }
+
 
 
