@@ -13,6 +13,8 @@
 		7D7EF12424ADD452000E890C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF12224ADD452000E890C /* LaunchScreen.storyboard */; };
 		7D7EF12F24ADD99C000E890C /* BaiTap01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF12D24ADD99C000E890C /* BaiTap01VC.swift */; };
 		7D7EF13024ADD99C000E890C /* BaiTap01VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF12E24ADD99C000E890C /* BaiTap01VC.xib */; };
+		7D7EF13324AEC50D000E890C /* BaiTap02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */; };
+		7D7EF13424AEC50D000E890C /* BaiTap02VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7D7EF12524ADD452000E890C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7EF12D24ADD99C000E890C /* BaiTap01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01VC.swift; sourceTree = "<group>"; };
 		7D7EF12E24ADD99C000E890C /* BaiTap01VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap01VC.xib; sourceTree = "<group>"; };
+		7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02VC.swift; sourceTree = "<group>"; };
+		7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02VC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				7D7EF11924ADD450000E890C /* SceneDelegate.swift */,
 				7D7EF12D24ADD99C000E890C /* BaiTap01VC.swift */,
 				7D7EF12E24ADD99C000E890C /* BaiTap01VC.xib */,
+				7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */,
+				7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */,
 				7D7EF12024ADD452000E890C /* Assets.xcassets */,
 				7D7EF12224ADD452000E890C /* LaunchScreen.storyboard */,
 				7D7EF12524ADD452000E890C /* Info.plist */,
@@ -128,6 +134,7 @@
 				7D7EF12424ADD452000E890C /* LaunchScreen.storyboard in Resources */,
 				7D7EF13024ADD99C000E890C /* BaiTap01VC.xib in Resources */,
 				7D7EF12124ADD452000E890C /* Assets.xcassets in Resources */,
+				7D7EF13424AEC50D000E890C /* BaiTap02VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				7D7EF12F24ADD99C000E890C /* BaiTap01VC.swift in Sources */,
 				7D7EF11824ADD450000E890C /* AppDelegate.swift in Sources */,
 				7D7EF11A24ADD450000E890C /* SceneDelegate.swift in Sources */,
+				7D7EF13324AEC50D000E890C /* BaiTap02VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
