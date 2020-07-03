@@ -7,15 +7,13 @@
 //
 
 import UIKit
-
-class BaiTap4ViewController: UIViewController {
-
+final class BaiTap4ViewController: UIViewController {
     //MARK: - IBOutlets
-    @IBOutlet weak var hienthiLabel: UILabel!
-    @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak private var hienthiLabel: UILabel!
+    @IBOutlet weak private var colorView: UIView!
+    @IBOutlet weak private var redSlider: UISlider!
+    @IBOutlet weak private var blueSlider: UISlider!
+    @IBOutlet weak private var greenSlider: UISlider!
     
     //MARK: - life cycle
     override func viewDidLoad() {

@@ -8,14 +8,13 @@
 
 import UIKit
 
-class BaiTap5ViewController: UIViewController {
-
+final class BaiTap5ViewController: UIViewController {
     // MARK: - IBOutlets
-     @IBOutlet weak var conternerView: UIView!
-     @IBOutlet weak var greenView: UIView!
-     @IBOutlet weak var blueView: UIView!
-     @IBOutlet weak var thumbView: UIView!
-     @IBOutlet weak var thumbLabel: UILabel!
+     @IBOutlet weak private var conternerView: UIView!
+     @IBOutlet weak private var greenView: UIView!
+     @IBOutlet weak private var blueView: UIView!
+     @IBOutlet weak private var thumbView: UIView!
+     @IBOutlet weak private var thumbLabel: UILabel!
      
      // MARK: - Life cycle
      override func viewDidLoad() {
@@ -23,12 +22,10 @@ class BaiTap5ViewController: UIViewController {
          cusTomThumbView()
          // Do any additional setup after loading the view.
      }
-     
      // MARK: - Private Functions
      private func cusTomThumbView(){
          thumbView.layer.cornerRadius = thumbView.frame.width / 2
      }
-     
      // MARK: - Function
      override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
          //super.touchesMoved(touches, with: event)
