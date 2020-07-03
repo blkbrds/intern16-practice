@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		310FB95024AED37E00680C64 /* Baitap5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310FB94E24AED37E00680C64 /* Baitap5.swift */; };
+		310FB95124AED37E00680C64 /* Baitap5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310FB94F24AED37E00680C64 /* Baitap5.xib */; };
+		31390E9024AD796F00930674 /* Bai3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31390E8E24AD796F00930674 /* Bai3.swift */; };
+		31390E9124AD796F00930674 /* Bai3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31390E8F24AD796F00930674 /* Bai3.xib */; };
+		31390E9424AD79A100930674 /* Bai4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31390E9224AD79A100930674 /* Bai4.swift */; };
+		31390E9524AD79A100930674 /* Bai4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31390E9324AD79A100930674 /* Bai4.xib */; };
+		31390EA724ADC9F400930674 /* monkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31390EA624ADC9F400930674 /* monkey@2x.png */; };
+		31390EA924ADCA4A00930674 /* monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 31390EA824ADCA4A00930674 /* monkey.png */; };
+		31390EB124ADCB2100930674 /* B6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31390EAF24ADCB2100930674 /* B6.swift */; };
+		31390EB224ADCB2100930674 /* B6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31390EB024ADCB2100930674 /* B6.xib */; };
+		31390EB624ADEE1200930674 /* Baitap7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31390EB424ADEE1200930674 /* Baitap7.swift */; };
+		31390EB724ADEE1200930674 /* Baitap7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31390EB524ADEE1200930674 /* Baitap7.xib */; };
+		314D682C24AC72550091DB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314D682B24AC72550091DB09 /* AppDelegate.swift */; };
+		314D682E24AC72550091DB09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314D682D24AC72550091DB09 /* SceneDelegate.swift */; };
+		314D683024AC72550091DB09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314D682F24AC72550091DB09 /* ViewController.swift */; };
+		314D683524AC72560091DB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314D683424AC72560091DB09 /* Assets.xcassets */; };
+		314D683824AC72560091DB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314D683624AC72560091DB09 /* LaunchScreen.storyboard */; };
+		314D684924ACA1A10091DB09 /* Bai2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314D684724ACA1A10091DB09 /* Bai2.swift */; };
+		314D684A24ACA1A10091DB09 /* Bai2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314D684824ACA1A10091DB09 /* Bai2.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		310FB94E24AED37E00680C64 /* Baitap5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Baitap5.swift; path = TamNguyen/Baitap5/Baitap5.swift; sourceTree = SOURCE_ROOT; };
+		310FB94F24AED37E00680C64 /* Baitap5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Baitap5.xib; path = TamNguyen/Baitap5/Baitap5.xib; sourceTree = SOURCE_ROOT; };
+		31390E8E24AD796F00930674 /* Bai3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai3.swift; path = TamNguyen/Bai3.swift; sourceTree = SOURCE_ROOT; };
+		31390E8F24AD796F00930674 /* Bai3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai3.xib; path = TamNguyen/Bai3.xib; sourceTree = SOURCE_ROOT; };
+		31390E9224AD79A100930674 /* Bai4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai4.swift; path = TamNguyen/BaiTap4/Bai4.swift; sourceTree = SOURCE_ROOT; };
+		31390E9324AD79A100930674 /* Bai4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai4.xib; path = TamNguyen/BaiTap4/Bai4.xib; sourceTree = SOURCE_ROOT; };
+		31390EA624ADC9F400930674 /* monkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "monkey@2x.png"; path = "../../../../Downloads/Starter Project/MonkeyPinch/MonkeyPinch/Assets.xcassets/monkey.imageset/monkey@2x.png"; sourceTree = "<group>"; };
+		31390EA824ADCA4A00930674 /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = monkey.png; path = "../../../../Downloads/Starter Project/MonkeyPinch/MonkeyPinch/Assets.xcassets/monkey.imageset/monkey.png"; sourceTree = "<group>"; };
+		31390EAF24ADCB2100930674 /* B6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = B6.swift; path = TamNguyen/Baitap6/B6.swift; sourceTree = SOURCE_ROOT; };
+		31390EB024ADCB2100930674 /* B6.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = B6.xib; path = TamNguyen/Baitap6/B6.xib; sourceTree = SOURCE_ROOT; };
+		31390EB424ADEE1200930674 /* Baitap7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Baitap7.swift; path = TamNguyen/Baitap7/Baitap7.swift; sourceTree = SOURCE_ROOT; };
+		31390EB524ADEE1200930674 /* Baitap7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Baitap7.xib; path = TamNguyen/Baitap7/Baitap7.xib; sourceTree = SOURCE_ROOT; };
+		314D682824AC72550091DB09 /* TAMNGUYEN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAMNGUYEN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		314D682B24AC72550091DB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		314D682D24AC72550091DB09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		314D682F24AC72550091DB09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		314D683424AC72560091DB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		314D683724AC72560091DB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		314D683924AC72560091DB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		314D684724ACA1A10091DB09 /* Bai2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2.swift; sourceTree = "<group>"; };
+		314D684824ACA1A10091DB09 /* Bai2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		314D682524AC72550091DB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		310FB94D24AED36200680C64 /* Baitap5 */ = {
+			isa = PBXGroup;
+			children = (
+				310FB94E24AED37E00680C64 /* Baitap5.swift */,
+				310FB94F24AED37E00680C64 /* Baitap5.xib */,
+			);
+			path = Baitap5;
+			sourceTree = "<group>";
+		};
+		31390E8A24AD790E00930674 /* BaiTap4 */ = {
+			isa = PBXGroup;
+			children = (
+				31390E9224AD79A100930674 /* Bai4.swift */,
+				31390E9324AD79A100930674 /* Bai4.xib */,
+			);
+			path = BaiTap4;
+			sourceTree = "<group>";
+		};
+		31390E8B24AD791800930674 /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+				31390E8E24AD796F00930674 /* Bai3.swift */,
+				31390E8F24AD796F00930674 /* Bai3.xib */,
+			);
+			path = BaiTap3;
+			sourceTree = "<group>";
+		};
+		31390E8C24AD792100930674 /* Baitap2 */ = {
+			isa = PBXGroup;
+			children = (
+				314D684724ACA1A10091DB09 /* Bai2.swift */,
+				314D684824ACA1A10091DB09 /* Bai2.xib */,
+			);
+			path = Baitap2;
+			sourceTree = "<group>";
+		};
+		31390E9924AD85BD00930674 /* Baitap6 */ = {
+			isa = PBXGroup;
+			children = (
+				31390EAF24ADCB2100930674 /* B6.swift */,
+				31390EB024ADCB2100930674 /* B6.xib */,
+			);
+			path = Baitap6;
+			sourceTree = "<group>";
+		};
+		31390EB324ADEDF900930674 /* Baitap7 */ = {
+			isa = PBXGroup;
+			children = (
+				31390EB424ADEE1200930674 /* Baitap7.swift */,
+				31390EB524ADEE1200930674 /* Baitap7.xib */,
+			);
+			path = Baitap7;
+			sourceTree = "<group>";
+		};
+		314D681F24AC72540091DB09 = {
+			isa = PBXGroup;
+			children = (
+				314D682A24AC72550091DB09 /* TAMNGUYEN */,
+				314D682924AC72550091DB09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		314D682924AC72550091DB09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				314D682824AC72550091DB09 /* TAMNGUYEN.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		314D682A24AC72550091DB09 /* TAMNGUYEN */ = {
+			isa = PBXGroup;
+			children = (
+				310FB94D24AED36200680C64 /* Baitap5 */,
+				31390EB324ADEDF900930674 /* Baitap7 */,
+				31390E9924AD85BD00930674 /* Baitap6 */,
+				31390E8C24AD792100930674 /* Baitap2 */,
+				31390E8B24AD791800930674 /* BaiTap3 */,
+				31390E8A24AD790E00930674 /* BaiTap4 */,
+				314D682B24AC72550091DB09 /* AppDelegate.swift */,
+				31390EA824ADCA4A00930674 /* monkey.png */,
+				314D682D24AC72550091DB09 /* SceneDelegate.swift */,
+				31390EA624ADC9F400930674 /* monkey@2x.png */,
+				314D682F24AC72550091DB09 /* ViewController.swift */,
+				314D683424AC72560091DB09 /* Assets.xcassets */,
+				314D683624AC72560091DB09 /* LaunchScreen.storyboard */,
+				314D683924AC72560091DB09 /* Info.plist */,
+			);
+			path = TAMNGUYEN;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		314D682724AC72550091DB09 /* TAMNGUYEN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 314D683C24AC72560091DB09 /* Build configuration list for PBXNativeTarget "TAMNGUYEN" */;
+			buildPhases = (
+				314D682424AC72550091DB09 /* Sources */,
+				314D682524AC72550091DB09 /* Frameworks */,
+				314D682624AC72550091DB09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TAMNGUYEN;
+			productName = TAMNGUYEN;
+			productReference = 314D682824AC72550091DB09 /* TAMNGUYEN.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		314D682024AC72540091DB09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = PCI0001;
+				TargetAttributes = {
+					314D682724AC72550091DB09 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 314D682324AC72540091DB09 /* Build configuration list for PBXProject "TAMNGUYEN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 314D681F24AC72540091DB09;
+			productRefGroup = 314D682924AC72550091DB09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				314D682724AC72550091DB09 /* TAMNGUYEN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		314D682624AC72550091DB09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31390EA924ADCA4A00930674 /* monkey.png in Resources */,
+				31390EA724ADC9F400930674 /* monkey@2x.png in Resources */,
+				314D684A24ACA1A10091DB09 /* Bai2.xib in Resources */,
+				31390E9524AD79A100930674 /* Bai4.xib in Resources */,
+				31390EB724ADEE1200930674 /* Baitap7.xib in Resources */,
+				314D683824AC72560091DB09 /* LaunchScreen.storyboard in Resources */,
+				31390E9124AD796F00930674 /* Bai3.xib in Resources */,
+				314D683524AC72560091DB09 /* Assets.xcassets in Resources */,
+				310FB95124AED37E00680C64 /* Baitap5.xib in Resources */,
+				31390EB224ADCB2100930674 /* B6.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		314D682424AC72550091DB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31390EB624ADEE1200930674 /* Baitap7.swift in Sources */,
+				314D683024AC72550091DB09 /* ViewController.swift in Sources */,
+				310FB95024AED37E00680C64 /* Baitap5.swift in Sources */,
+				31390E9424AD79A100930674 /* Bai4.swift in Sources */,
+				314D684924ACA1A10091DB09 /* Bai2.swift in Sources */,
+				31390E9024AD796F00930674 /* Bai3.swift in Sources */,
+				31390EB124ADCB2100930674 /* B6.swift in Sources */,
+				314D682C24AC72550091DB09 /* AppDelegate.swift in Sources */,
+				314D682E24AC72550091DB09 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		314D683624AC72560091DB09 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314D683724AC72560091DB09 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		314D683A24AC72560091DB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		314D683B24AC72560091DB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		314D683D24AC72560091DB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TAMNGUYEN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = intern.TAMNGUYEN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		314D683E24AC72560091DB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TAMNGUYEN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = intern.TAMNGUYEN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		314D682324AC72540091DB09 /* Build configuration list for PBXProject "TAMNGUYEN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314D683A24AC72560091DB09 /* Debug */,
+				314D683B24AC72560091DB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		314D683C24AC72560091DB09 /* Build configuration list for PBXNativeTarget "TAMNGUYEN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314D683D24AC72560091DB09 /* Debug */,
+				314D683E24AC72560091DB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 314D682024AC72540091DB09 /* Project object */;
+}
