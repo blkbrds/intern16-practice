@@ -12,7 +12,7 @@ class PhanSo {
     }
     
     
-    func UCLN( num1: Double,  num2: Double) -> Double {
+    func ucln( num1: Double,  num2: Double) -> Double {
         var a = abs(num1)
         var b = abs(num2)
         if a == 0 && b == 0 {
@@ -50,7 +50,7 @@ class PhanSo {
     }
     
     func InPhanSo() -> String {
-        return "Phan so: \(tuSo / UCLN(num1: tuSo, num2: mauSo)) / \(mauSo / UCLN(num1: tuSo, num2: mauSo))"
+        return "Phan so: \(tuSo / ucln(num1: tuSo, num2: mauSo)) / \(mauSo / ucln(num1: tuSo, num2: mauSo))"
     }
 }
 

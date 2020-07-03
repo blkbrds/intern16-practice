@@ -29,7 +29,7 @@ class DaGiac {
         
         return chuVi
     }
-    func InCanhDaGiac () {
+    func inCanhDaGiac () {
         for i in kichthuoc {
             print("Canh cua da giac: \(i)")
         }

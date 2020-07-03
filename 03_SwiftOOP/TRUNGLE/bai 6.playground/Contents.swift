@@ -9,7 +9,7 @@ class HinhVe {
         self.a = a
         self.b = b
     }
-    func HinhDang() {
+    func hinhDang() {
         print("Hinh ve sai")
     }
 }
@@ -31,7 +31,7 @@ class HinhTron : HaiChieu {
            self.r = r
            super.init(a: a, b: b)
        }
-    override func HinhDang() {
+    override func hinhDang() {
         print("day la hinh tron")
     }
     override func chuVi() -> Double {
@@ -46,7 +46,7 @@ class HinhVuong : HaiChieu {
     override init(a: Double, b: Double) {
         super.init(a: a, b: b)
     }
-    override func HinhDang() {
+    override func hinhDang() {
         print("day la Hinh vuong")
     }
     override func chuVi() -> Double {
@@ -65,7 +65,7 @@ class TamGiac : HaiChieu {
         self.c = c
         super.init(a: a, b: b)
     }
-    override func HinhDang() {
+    override func hinhDang() {
         print("day la Tam Giac")
     }
     override func chuVi() -> Double {
@@ -84,10 +84,10 @@ class BaChieu : HinhVe {
         self.c = c
         super.init(a: a, b: b)
     }
-    func DienTich()  -> Double{
+    func dienTich()  -> Double{
         return a * b * c
     }
-    func TheTich() -> Double {
+    func theTich() -> Double {
         return pow(a, 2 ) * pow(b, 2)  * pow(c, 2)
     }
 }
@@ -98,13 +98,13 @@ class HinhCau : BaChieu {
         self.r = r
         super.init(c: c, a: a, b: b)
     }
-    override func HinhDang() {
+    override func hinhDang() {
         print("Day La Hinh Cau")
     }
-    override func DienTich() -> Double {
+    override func dienTich() -> Double {
         return 4 * pi * pow(r, 2)
     }
-    override func TheTich() -> Double {
+    override func theTich() -> Double {
        return 4/3 * pi * pow(r, 3)
     }
 }
@@ -114,16 +114,16 @@ class LapPhuong: BaChieu {
     override init(c: Double, a: Double, b: Double) {
         super.init(c: c, a: a, b: b)
     }
-    override func HinhDang() {
+    override func hinhDang() {
         print("Day La Hinh Lap Phuong")
     }
-    override func DienTich() -> Double {
+    override func dienTich() -> Double {
         return 6  * pow(a, 2)
     }
-    override func TheTich() -> Double {
+    override func theTich() -> Double {
         return pow(a, 3)
     }
-    func DienTichXungQuanh() -> Double {
+    func dienTichXungQuanh() -> Double {
         return 4 * pow(a, 2)
     }
 }
@@ -141,10 +141,10 @@ print("chu vi hinh tron: \(tron.chuVi())")
 print("dien tich hinh tron: \(tron.dienTich())")
 
 var hinhCau = HinhCau(r: 5, c:0, a: 0, b: 0)
-print("dien tich hinh cau: \(hinhCau.DienTich())")
-print("the tich hinh cau: \(hinhCau.TheTich())")
+print("dien tich hinh cau: \(hinhCau.dienTich())")
+print("the tich hinh cau: \(hinhCau.theTich())")
 
 var lapPhuong = LapPhuong(c: 5, a: 5, b: 5)
-print("dien tich toan phan hinh lap phuong: \(lapPhuong.DienTich())")
-print("the tich hinh lap phuong: \(lapPhuong.TheTich())")
-print("dien tich xung quanh hinh lap Phuong : \(lapPhuong.DienTichXungQuanh())")
+print("dien tich toan phan hinh lap phuong: \(lapPhuong.dienTich())")
+print("the tich hinh lap phuong: \(lapPhuong.theTich())")
+print("dien tich xung quanh hinh lap Phuong : \(lapPhuong.dienTichXungQuanh())")

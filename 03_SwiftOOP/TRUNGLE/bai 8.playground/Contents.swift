@@ -108,7 +108,7 @@ class Date {
         print("Next Date: \(d) - \(m) - \(y)")
     }
     
-     func InNgayThangNam() {
+     func inNgayThangNam() {
         if defineMonth() {
             print("Date: \(day) - \(month) - \(year)")
         }
@@ -117,6 +117,6 @@ class Date {
 
 var date1 = Date(day: 10, month: 04, year: 1997)
 var dayPrint = date1.checkDay(month: 4)
-date1.InNgayThangNam()
+date1.inNgayThangNam()
 print("Number of day in month \(date1.mark) of \(date1.year) is : \(dayPrint)")
 date1.upgrade()

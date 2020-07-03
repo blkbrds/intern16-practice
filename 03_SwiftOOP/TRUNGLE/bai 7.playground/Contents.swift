@@ -4,7 +4,7 @@ class Student {
     var name: String
     var yearOfBirth: Int
     var scores: Float
-
+    
     init(name: String, yearOfBirth: Int, scores: Float) {
         self.name = name
         self.yearOfBirth = yearOfBirth
@@ -19,9 +19,9 @@ class ListStudents {
         self.list = list
     }
     
-    func Sort() -> [Student] {
+    func sort() -> [Student] {
         list.sort { (st1: Student, st2: Student) -> Bool in
-             if st1.scores > st2.scores {
+            if st1.scores > st2.scores {
                 return true
             } else if st1.scores == st2.scores {
                 return st1.yearOfBirth > st2.yearOfBirth
@@ -36,7 +36,7 @@ class ListStudents {
         return list
     }
     
-    func PrintList(ls : [Student]) -> String {
+    func printList(ls : [Student]) -> String {
         var result = ""
         for st in list {
             result += "\(st.name) - \(st.yearOfBirth) - \(st.scores) ; "
@@ -55,4 +55,4 @@ var st2 = Student(name: "luu van c", yearOfBirth: 2000, scores: 9)
 var st3 = Student(name: "vu van d", yearOfBirth: 1999, scores: 10)
 
 var list = ListStudents(list: [st,st1,st2,st3])
-print("danh sách học sinh sắp xếp theo điểm: \(list.PrintList(ls: list.Sort()))")
+print("danh sách học sinh sắp xếp theo điểm: \(list.printList(ls: list.sort()))")
