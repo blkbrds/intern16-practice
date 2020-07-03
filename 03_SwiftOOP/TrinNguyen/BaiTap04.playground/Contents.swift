@@ -10,13 +10,11 @@ class DaGiac {
     }
 
     func checkTamGiacVuong() -> Int {
-        var ketqua: Int = 0
+        var ketQua: Int = 0
         if (arrayCanh[0] * arrayCanh[0]) + (arrayCanh[1] * arrayCanh[1]) == (arrayCanh[2] * arrayCanh[2]) {
-            ketqua = 1
-        } else {
-            ketqua = 0
+            ketQua = 1
         }
-        return ketqua
+        return ketQua
     }
 
     func inCanh() -> Int {
@@ -28,8 +26,8 @@ class DaGiac {
 }
 
 let daGiac = DaGiac(canh: 3, arrayCanh: [3, 4, 5])
-    if daGiac.checkTamGiacVuong() == 1 {
-        daGiac.inCanh()
-    } else {
-        print("Tam giac ban vua nhap khong phai tam giac vuong")
-    }
+if daGiac.checkTamGiacVuong() == 1 {
+    daGiac.inCanh()
+} else {
+    print("Tam giac ban vua nhap khong phai tam giac vuong")
+}

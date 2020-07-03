@@ -25,7 +25,7 @@ class DaGiac {
     }
 }
 
-//bai3
+// Bai3
 class TamGiac: DaGiac {
     override func tinhChuVi() -> Int {
         var dientich = 0

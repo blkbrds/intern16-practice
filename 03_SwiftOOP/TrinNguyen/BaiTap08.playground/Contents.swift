@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class Date {
 
@@ -66,4 +66,3 @@ var date = Date(day: 32, month: 2, year: 1998)
 date.daySln()
 date.normalize()
 date.getAdvanceDay(d: 12, m: 8, y: 8)
-
