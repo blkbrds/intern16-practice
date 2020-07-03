@@ -9,11 +9,7 @@ class DaGiac {
     }
     //Kiểm tra có phải là đa giác hay không
     func kiemTra() -> Bool {
-        if soCanh != doDaiCacCanh.count {
-            return false
-        } else {
-            return true
-        }
+        return soCanh == doDaiCacCanh.count
     }
     
     func tinhChuVi() -> Int {
@@ -41,12 +37,8 @@ class DaGiac {
 class TamGiac : DaGiac {
     // kiểm tra có phải là tam giác hay không
     override func kiemTra() -> Bool {
-        if super.doDaiCacCanh[0] + super.doDaiCacCanh[1] > super.doDaiCacCanh[2] &&
-            super.doDaiCacCanh[1] + super.doDaiCacCanh[2] > super.doDaiCacCanh[0] && super.doDaiCacCanh[0] + super.doDaiCacCanh[2] > super.doDaiCacCanh[1] && super.kiemTra() && super.soCanh == 3 {
-            return true
-        } else {
-            return false
-        }
+        return super.doDaiCacCanh[0] + super.doDaiCacCanh[1] > super.doDaiCacCanh[2] &&
+        super.doDaiCacCanh[1] + super.doDaiCacCanh[2] > super.doDaiCacCanh[0] && super.doDaiCacCanh[0] + super.doDaiCacCanh[2] > super.doDaiCacCanh[1] && super.kiemTra() && super.soCanh == 3
     }
     
     override func tinhChuVi() -> Int {

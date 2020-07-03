@@ -15,7 +15,7 @@ class MangMotChieu {
         return doDai
     }
     
-    func inMinMax() -> (Int, Int) {
+    func inMinMax() -> (min: Int,max: Int) {
         var min = mang[0]
         var max = mang[0]
         for so in mang {
@@ -33,6 +33,6 @@ class MangMotChieu {
 //MARK: kiểm tra kết quả
 var mang = MangMotChieu(mang: [1,2,7,9,10,0])
 print("In mảng: \(mang.inMang())")
-print("Số lớn nhất: \(mang.inMinMax().1)")
-print("Số bé nhất: \(mang.inMinMax().0)")
+print("Số lớn nhất: \(mang.inMinMax().min)")
+print("Số bé nhất: \(mang.inMinMax().max)")
 

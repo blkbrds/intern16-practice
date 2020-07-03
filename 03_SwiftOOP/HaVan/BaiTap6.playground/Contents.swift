@@ -50,7 +50,6 @@ class HaiChieu : HinhVe {
               return .khongPhaiHinh
           }
       }
-    
 }
 
 class Tron : HaiChieu {
