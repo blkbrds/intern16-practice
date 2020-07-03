@@ -13,10 +13,6 @@ class PhanSo {
         }
     }
     
-    //    func inManHinh() -> String {
-    //        return "\(self.tuSo)/\(self.mauSo)"
-    //    }
-    
     func tinhCong(a: PhanSo) -> PhanSo? {
         let tuMoi: Int
         let mauMoi: Int
