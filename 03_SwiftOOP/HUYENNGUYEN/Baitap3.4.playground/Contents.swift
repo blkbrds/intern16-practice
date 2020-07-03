@@ -42,14 +42,14 @@ class TamGiac: DaGiac {
         return sqrt(Double(binhPhuong))
     }
     
-    func isPitago(tamGiac: TamGiac) -> Bool {
+    func kiemTraTamGiac(tamGiac: TamGiac) -> Bool {
         return (tamGiac.a * tamGiac.a + tamGiac.b * tamGiac.b == tamGiac.c * tamGiac.c ||
             tamGiac.b * tamGiac.b + tamGiac.c * tamGiac.c == tamGiac.a * tamGiac.a ||
             tamGiac.a * tamGiac.a + tamGiac.c * tamGiac.c == tamGiac.b * tamGiac.b)
     }
     
     func danhSachTamGiac(_ mangTamGiac: [TamGiac]) {
-        for tamGiac in mangTamGiac where isPitago(tamGiac: tamGiac) {
+        for tamGiac in mangTamGiac where kiemTraTamGiac(tamGiac: tamGiac) {
             print("\(tamGiac.a) \(tamGiac.b) \(tamGiac.c)")
         }
     }
