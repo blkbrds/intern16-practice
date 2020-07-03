@@ -4,7 +4,7 @@ class PhanSo {
     var tuSo: Int
     var mauSo: Int
 
-    init?(tuSo: Int,mauSo: Int) {
+    init?(tuSo: Int, mauSo: Int) {
         if mauSo != 0 {
             self.tuSo = tuSo
             self.mauSo = mauSo
@@ -20,28 +20,29 @@ class PhanSo {
             print("Mau so phai khac 0")
         }
     }
+    
     func cong(ps: PhanSo) -> PhanSo? {
-        let tuSo = self.tuSo * ps.mauSo + self.mauSo * ps.tuSo
-        let mauSo = self.mauSo * ps.mauSo
-        return PhanSo(tuSo: tuSo, mauSo: mauSo)
+        let tuSoKq = tuSo * ps.mauSo + mauSo * ps.tuSo
+        let mauSoKq = mauSo * ps.mauSo
+        return PhanSo(tuSo: tuSoKq, mauSo: mauSoKq)
     }
 
     func tru(ps: PhanSo) -> PhanSo? {
-        let tuSo = self.tuSo * ps.mauSo - self.mauSo * ps.tuSo
-        let mauSo = self.mauSo * ps.mauSo
-        return PhanSo(tuSo: tuSo, mauSo: mauSo)
+        let tuSoKq = tuSo * ps.mauSo - mauSo * ps.tuSo
+        let mauSoKq = mauSo * ps.mauSo
+        return PhanSo(tuSo: tuSoKq, mauSo: mauSoKq)
     }
 
     func nhan(ps: PhanSo) -> PhanSo? {
-        let tuSo = self.tuSo * ps.tuSo
-        let mauSo = self.mauSo * ps.mauSo
-        return PhanSo(tuSo: tuSo, mauSo: mauSo)
+        let tuSoKq = tuSo * ps.tuSo
+        let mauSoKq = mauSo * ps.mauSo
+        return PhanSo(tuSo: tuSoKq, mauSo: mauSoKq)
     }
 
     func chia(ps: PhanSo) -> PhanSo? {
-        let tuSo = self.tuSo * ps.mauSo
-        let mauSo = self.mauSo * ps.tuSo
-        return PhanSo(tuSo: tuSo, mauSo: mauSo)
+        let tuSoKq = tuSo * ps.mauSo
+        let mauSoKq = mauSo * ps.tuSo
+        return PhanSo(tuSo: tuSoKq, mauSo: mauSoKq)
     }
 }
 

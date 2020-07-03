@@ -21,8 +21,8 @@ class Tron: HaiChieu {
     init(bk: Float) {
         banKinh = bk
         super.init()
-        self.chuVi = 2 * pi * banKinh
-        self.dienTich = pi * pow(banKinh, 2)
+        chuVi = 2 * pi * banKinh
+        dienTich = pi * pow(banKinh, 2)
     }
 }
 
@@ -32,8 +32,8 @@ class Vuong: HaiChieu {
     init(c: Float) {
         canh = c
         super.init()
-        self.chuVi = 4 * canh
-        self.dienTich = canh * canh
+        chuVi = 4 * canh
+        dienTich = canh * canh
     }
 }
 
@@ -45,9 +45,11 @@ class TamGiac: HaiChieu {
         self.b = b
         self.c = c
         super.init()
-        self.chuVi = a + b + c
-        let nuaChuVi = chuVi! / 2
-        self.dienTich = sqrt(nuaChuVi * (nuaChuVi - a) * (nuaChuVi - b) * (nuaChuVi - c))
+        chuVi = a + b + c
+        if let chuVi = chuVi {
+            let nuaChuVi = chuVi / 2
+            dienTich = sqrt(nuaChuVi * (nuaChuVi - a) * (nuaChuVi - b) * (nuaChuVi - c))
+        }
     }
 }
 
@@ -57,8 +59,8 @@ class Cau: BaChieu {
     init(bk: Float) {
         banKinh = bk
         super.init()
-        self.dienTich = 4 * pi * banKinh * banKinh
-        self.theTich = 4 / 3 * pi * pow(banKinh, 3)
+        dienTich = 4 * pi * banKinh * banKinh
+        theTich = 4 / 3 * pi * pow(banKinh, 3)
     }
 }
 
@@ -68,8 +70,8 @@ class LapPhuong: BaChieu {
     init(canh: Float) {
         self.canh = canh
         super.init()
-        self.dienTich = 6 * pow(canh, 2)
-        self.theTich = pow(canh, 3)
+        dienTich = 6 * pow(canh, 2)
+        theTich = pow(canh, 3)
     }
 }
 

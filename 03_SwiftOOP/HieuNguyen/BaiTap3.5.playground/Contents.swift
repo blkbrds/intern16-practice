@@ -2,32 +2,32 @@ import UIKit
 
 class CStack {
     var phanTu: Int
-    var stack: [Int] = []
+    var stacks: [Int] = []
 
     init(phanTu: Int) {
         self.phanTu = phanTu
     }
 
     func isEmpty() -> Bool {
-        return stack.count == 0
+        return stacks.isEmpty
     }
 
     func isFull() -> Bool {
-        return stack.count == phanTu
+        return stacks.count == phanTu
     }
 
     func add(pt: Int) -> [Int] {
-        if stack.count < phanTu {
-            stack.append(pt)
+        if stacks.count < phanTu {
+            stacks.append(pt)
         }
-        return stack
+        return stacks
     }
 
     func removeLast() -> [Int] {
-        if !stack.isEmpty {
-            stack.remove(at: stack.count-1)
+        if !stacks.isEmpty {
+            stacks.remove(at: stacks.count-1)
         }
-        return stack
+        return stacks
     }
 }
 
