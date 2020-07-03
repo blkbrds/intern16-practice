@@ -38,14 +38,14 @@ var input: [TamGiac] = [TamGiac(canhA: 1, canhB: 2, canhC: 3),
 
 
 class CheckTamGiac {
-    var tamGiacs: [TamGiac]
+    var tamgiac: [TamGiac]
     
-    init(tamGiacs: [TamGiac]) {
-        self.tamGiacs = tamGiacs
+    init(tamgiac: [TamGiac]) {
+        self.tamgiac = tamgiac
     }
     
     func checkPyTaGo(tg: [TamGiac]) -> Void {
-        tamGiacs.forEach { (tg) in
+        tamgiac.forEach { (tg) in
             let check = tg.PyTaGo()
             if check.result {
                 print(check.outPut)
@@ -54,7 +54,7 @@ class CheckTamGiac {
     }
 }
 
-let checkTamGiac = CheckTamGiac(tamGiacs: input)
+let checkTamGiac = CheckTamGiac(tamgiac: input)
 
 checkTamGiac.checkPyTaGo(tg: input)
 

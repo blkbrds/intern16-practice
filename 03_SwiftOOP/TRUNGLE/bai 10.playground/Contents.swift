@@ -1,6 +1,6 @@
 import UIKit
 
-var str = "Hello, playground"
+
 class A {
      var a: Int
     init(a: Int) {
