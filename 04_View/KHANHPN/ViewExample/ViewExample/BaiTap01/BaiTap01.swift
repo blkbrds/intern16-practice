@@ -16,6 +16,7 @@ final class BaiTap01: UIViewController {
         configView()
     }
     
+    // MARK: - Private Functions
     private func configView() {
         // Add user avatar
         let frame = CGRect(x: 30, y: 100, width: 100, height: 100)

@@ -11,14 +11,11 @@ import UIKit
 final class BaiTap04: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var colorText: UILabel!
-    
-    @IBOutlet weak var slideRed: UISlider!
-    
-    @IBOutlet weak var slideGreen: UISlider!
-    
-    @IBOutlet weak var slideBlue: UISlider!
+    @IBOutlet private weak var colorView: UIView!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var redSlider: UISlider!
+    @IBOutlet private weak var greenSlider: UISlider!
+    @IBOutlet private weak var blueSlider: UISlider!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -26,18 +23,17 @@ final class BaiTap04: UIViewController {
     }
     
     // MARK: - Action
-    @IBAction func redSlider(_ sender: UISlider) {
-        let redValue = Int(slideRed.value)
-        let greenValue = Int(slideGreen.value)
-        let blueValue = Int(slideBlue.value)
+    @IBAction private func changeValueSliderTouchUpInside(_ sender: UISlider) {
+        let redValue = Int(redSlider.value)
+        let greenValue = Int(greenSlider.value)
+        let blueValue = Int(blueSlider.value)
         let backgroundColor = UIColor(
             red: CGFloat(redValue) / 255,
             green: CGFloat(greenValue)  / 255,
             blue: CGFloat(blueValue ) / 255,
             alpha: 1.0
-        ) // lấy giá tị bảng màu từ 0-1
+        )
         colorView.backgroundColor = backgroundColor
-        colorText.text = "Color (Red: \(redValue), Green: \(greenValue), Blue: \(blueValue))"
+        textLabel.text = "Color (Red: \(redValue), Green: \(greenValue), Blue: \(blueValue))"
     }
-    
 }

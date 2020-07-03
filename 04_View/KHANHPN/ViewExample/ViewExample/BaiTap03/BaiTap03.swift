@@ -10,11 +10,9 @@ import UIKit
 
 final class BaiTap03: UIViewController {
     // MARK: - Outlets
-    @IBOutlet weak var usernameTextField: UITextField!
-
-    @IBOutlet weak var passwordField: UITextField!
-
-    @IBOutlet weak var loginNotice: UILabel!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var loginNoticeLabel: UILabel!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -24,28 +22,24 @@ final class BaiTap03: UIViewController {
     }
 
     // MARK: - Actions
-
-    @objc func dismissKeyboard() {
+    @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
 
-    @IBAction func login(_ sender: Any) {
-
+    @IBAction private func loginTouchUpInside(_ sender: Any) {
         if usernameTextField.text == "" && passwordField.text == "" {
-            loginNotice.text = "Input username/password"
+            loginNoticeLabel.text = "Input username/password"
         } else if usernameTextField.text != "admin" && passwordField.text != "123" {
-            loginNotice.text = "Wrong username/password"
+            loginNoticeLabel.text = "Wrong username/password"
         } else if usernameTextField.text == "" || passwordField.text == "" {
-            loginNotice.text = "Missing username/password"
+            loginNoticeLabel.text = "Missing username/password"
         } else if usernameTextField.text == "admin" && passwordField.text == "123" {
-            loginNotice.text = ""
+            loginNoticeLabel.text = ""
         }
     }
 
-    @IBAction func clear(_ sender: UITextField) {
+    @IBAction private func clearTouchUpInside(_ sender: UITextField) {
         usernameTextField.text = ""
         passwordField.text = ""
     }
-    
 }
-

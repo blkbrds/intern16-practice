@@ -11,11 +11,12 @@
 		F044402224AC285B00483A5C /* BaiTap03.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044402024AC285B00483A5C /* BaiTap03.xib */; };
 		F044FC4624AB1835003E8E88 /* BaiTap02.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044FC4424AB1835003E8E88 /* BaiTap02.swift */; };
 		F044FC4724AB1835003E8E88 /* BaiTap02.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044FC4524AB1835003E8E88 /* BaiTap02.xib */; };
+		F046682624AECF6500A19075 /* BaiTap07.swift in Sources */ = {isa = PBXBuildFile; fileRef = F046682424AECF6500A19075 /* BaiTap07.swift */; };
+		F046682724AECF6500A19075 /* BaiTap07.xib in Resources */ = {isa = PBXBuildFile; fileRef = F046682524AECF6500A19075 /* BaiTap07.xib */; };
 		F052D0E324ADC57000C9886D /* BaiTap06.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052D0E124ADC57000C9886D /* BaiTap06.swift */; };
 		F052D0E424ADC57000C9886D /* BaiTap06.xib in Resources */ = {isa = PBXBuildFile; fileRef = F052D0E224ADC57000C9886D /* BaiTap06.xib */; };
 		F089A55324A9F2C700962D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089A55224A9F2C700962D43 /* AppDelegate.swift */; };
 		F089A55524A9F2C700962D43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089A55424A9F2C700962D43 /* SceneDelegate.swift */; };
-		F089A55724A9F2C800962D43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089A55624A9F2C800962D43 /* ViewController.swift */; };
 		F089A55C24A9F2CB00962D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F089A55B24A9F2CB00962D43 /* Assets.xcassets */; };
 		F089A56724A9F61A00962D43 /* BaiTap01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089A56624A9F61A00962D43 /* BaiTap01.swift */; };
 		F0BD354224AC815A0096C7C8 /* BaiTap04.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD354024AC815A0096C7C8 /* BaiTap04.swift */; };
@@ -29,12 +30,13 @@
 		F044402024AC285B00483A5C /* BaiTap03.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03.xib; sourceTree = "<group>"; };
 		F044FC4424AB1835003E8E88 /* BaiTap02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02.swift; sourceTree = "<group>"; };
 		F044FC4524AB1835003E8E88 /* BaiTap02.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02.xib; sourceTree = "<group>"; };
+		F046682424AECF6500A19075 /* BaiTap07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap07.swift; sourceTree = "<group>"; };
+		F046682524AECF6500A19075 /* BaiTap07.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap07.xib; sourceTree = "<group>"; };
 		F052D0E124ADC57000C9886D /* BaiTap06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap06.swift; sourceTree = "<group>"; };
 		F052D0E224ADC57000C9886D /* BaiTap06.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap06.xib; sourceTree = "<group>"; };
 		F089A54F24A9F2C700962D43 /* ViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F089A55224A9F2C700962D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F089A55424A9F2C700962D43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F089A55624A9F2C800962D43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F089A55B24A9F2CB00962D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F089A56024A9F2CB00962D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F089A56624A9F61A00962D43 /* BaiTap01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01.swift; sourceTree = "<group>"; };
@@ -81,6 +83,15 @@
 			path = BaiTap03;
 			sourceTree = "<group>";
 		};
+		F046682824AECF6C00A19075 /* BaiTap07 */ = {
+			isa = PBXGroup;
+			children = (
+				F046682424AECF6500A19075 /* BaiTap07.swift */,
+				F046682524AECF6500A19075 /* BaiTap07.xib */,
+			);
+			path = BaiTap07;
+			sourceTree = "<group>";
+		};
 		F052D0E024ADC55C00C9886D /* BaiTap06 */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +120,7 @@
 		F089A55124A9F2C700962D43 /* ViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				F046682824AECF6C00A19075 /* BaiTap07 */,
 				F052D0E024ADC55C00C9886D /* BaiTap06 */,
 				F0BD354424AC94100096C7C8 /* BaiTap05 */,
 				F0BD353F24AC81470096C7C8 /* BaiTap04 */,
@@ -117,7 +129,6 @@
 				F044401C24AC27EA00483A5C /* BaiTap02 */,
 				F089A55224A9F2C700962D43 /* AppDelegate.swift */,
 				F089A55424A9F2C700962D43 /* SceneDelegate.swift */,
-				F089A55624A9F2C800962D43 /* ViewController.swift */,
 				F089A55B24A9F2CB00962D43 /* Assets.xcassets */,
 				F089A56024A9F2CB00962D43 /* Info.plist */,
 			);
@@ -205,6 +216,7 @@
 				F044FC4724AB1835003E8E88 /* BaiTap02.xib in Resources */,
 				F0BD354324AC815A0096C7C8 /* BaiTap04.xib in Resources */,
 				F0BD354824AC942A0096C7C8 /* BaiTap05.xib in Resources */,
+				F046682724AECF6500A19075 /* BaiTap07.xib in Resources */,
 				F089A55C24A9F2CB00962D43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,8 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F089A55724A9F2C800962D43 /* ViewController.swift in Sources */,
 				F052D0E324ADC57000C9886D /* BaiTap06.swift in Sources */,
+				F046682624AECF6500A19075 /* BaiTap07.swift in Sources */,
 				F044402124AC285B00483A5C /* BaiTap03.swift in Sources */,
 				F089A55324A9F2C700962D43 /* AppDelegate.swift in Sources */,
 				F089A55524A9F2C700962D43 /* SceneDelegate.swift in Sources */,

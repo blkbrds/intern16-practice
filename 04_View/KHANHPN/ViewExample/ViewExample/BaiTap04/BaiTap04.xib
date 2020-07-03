@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap04" customModule="ViewExample" customModuleProvider="target">
             <connections>
-                <outlet property="colorText" destination="A4a-MJ-668" id="qCB-Xk-efU"/>
+                <outlet property="blueSlider" destination="jhg-l8-NBT" id="CqK-UL-y8E"/>
                 <outlet property="colorView" destination="NxJ-W0-Zf4" id="1wX-gk-Nn8"/>
-                <outlet property="slideBlue" destination="jhg-l8-NBT" id="CqK-UL-y8E"/>
-                <outlet property="slideGreen" destination="TAW-5z-Kag" id="aFi-YI-MeS"/>
-                <outlet property="slideRed" destination="ReT-us-hgS" id="9h6-01-bEu"/>
+                <outlet property="greenSlider" destination="TAW-5z-Kag" id="aFi-YI-MeS"/>
+                <outlet property="redSlider" destination="ReT-us-hgS" id="9h6-01-bEu"/>
+                <outlet property="textLabel" destination="A4a-MJ-668" id="qCB-Xk-efU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,7 +32,7 @@
                     <rect key="frame" x="124" y="611" width="248" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
-                        <action selector="redSlider:" destination="-1" eventType="valueChanged" id="2yw-Kp-TPg"/>
+                        <action selector="changeValueSliderTouchUpInside:" destination="-1" eventType="valueChanged" id="2yw-Kp-TPg"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc0-EI-Fk6">
@@ -61,7 +60,7 @@
                     <rect key="frame" x="124" y="672" width="248" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
-                        <action selector="redSlider:" destination="-1" eventType="valueChanged" id="M5a-Qo-0K7"/>
+                        <action selector="changeValueSliderTouchUpInside:" destination="-1" eventType="valueChanged" id="M5a-Qo-0K7"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40W-p0-Yw0">
@@ -89,7 +88,7 @@
                     <rect key="frame" x="124" y="729" width="248" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
-                        <action selector="redSlider:" destination="-1" eventType="valueChanged" id="XeI-7i-Rjc"/>
+                        <action selector="changeValueSliderTouchUpInside:" destination="-1" eventType="valueChanged" id="XeI-7i-Rjc"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNN-04-rQg">
@@ -114,7 +113,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-MJ-668">
-                    <rect key="frame" x="10" y="108" width="394" height="21"/>
+                    <rect key="frame" x="10" y="64" width="394" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

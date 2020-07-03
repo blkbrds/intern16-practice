@@ -15,7 +15,8 @@ final class BaiTap02: UIViewController {
         var name: String
         var avatar: UIImageView
     }
-
+    
+    // MARK: - Properties
     private let data: [User] = [
         User(name: "2", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
         User(name: "3", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
@@ -31,14 +32,14 @@ final class BaiTap02: UIViewController {
         User(name: "K", avatar: UIImageView(image: UIImage(named: "img-avatar.png")))
     ]
 
-    // MARK: - Lide cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupView()
     }
 
-    // MARK: - Functions
-    func userView(frame: CGRect, person: User) -> UIView {
+    // MARK: - Private Functions
+    private func userView(frame: CGRect, person: User) -> UIView {
         let frameView = UIView()
         frameView.frame = frame
 
@@ -58,7 +59,7 @@ final class BaiTap02: UIViewController {
         return frameView
     }
 
-    func setup() {
+    private func setupView() {
         var alignLeading = 32
         var alignTop = 64
         for i in 0..<data.count {
