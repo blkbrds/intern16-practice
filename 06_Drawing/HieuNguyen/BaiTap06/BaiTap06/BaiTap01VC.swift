@@ -26,14 +26,12 @@ class BaiTap01VC: UIViewController {
         let height = pointY0 - Int(pointY0) / 15 * (value - 90)
         print(pointX0)
         print(pointY0)
-        //design the path
         let path = UIBezierPath()
         path.move(to: CGPoint(x: pointX0, y: pointY0))
         path.addLine(to: CGPoint(x: pointX0, y: height))
         path.addLine(to: CGPoint(x: pointX0 + width, y: height))
         path.addLine(to: CGPoint(x: pointX0 + width, y: pointY0))
         
-        //design path in layer
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = color.cgColor
@@ -41,6 +39,7 @@ class BaiTap01VC: UIViewController {
 
         view.layer.addSublayer(shapeLayer)
     }
+    
     func setupView() {
         var pointX0 = 0
         var colorView:UIColor?

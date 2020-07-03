@@ -12,26 +12,19 @@ class BaiTap02VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        drawCircle(startAngle: CGFloat(Double.pi * 3 / 2), endAngle: CGFloat(Double.pi / 4), color: .red)
+        drawCircle(startAngle: CGFloat(Double.pi / 4), endAngle: CGFloat(2 * Double.pi / 3), color: .yellow)
+        drawCircle(startAngle: CGFloat(2 * Double.pi / 3), endAngle: CGFloat(Double.pi * 3 / 2), color: .blue)
+    }
 
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100, y: 200), radius: CGFloat(100), startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2 ), clockwise: true)
-            
+    func drawCircle(startAngle: CGFloat, endAngle: CGFloat, color: UIColor) {
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 2), radius: CGFloat(100), startAngle: startAngle, endAngle: endAngle, clockwise: true)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 3.0
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.lineWidth = 50
         view.layer.addSublayer(shapeLayer)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
