@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap14VC" customModule="BaiTap07" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulo-Rc-YWz">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGc-Ek-eq7">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1371.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Rte-U6-DDD">
+                                    <rect key="frame" x="16" y="32" width="145" height="145"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Rte-U6-DDD" secondAttribute="height" multiplier="1:1" id="fj7-P1-h7d"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9pM-uf-O1G">
+                                    <rect key="frame" x="193" y="32" width="205" height="145"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hieu Nguyen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3h-PF-pao">
+                                            <rect key="frame" x="0.0" y="0.0" width="205" height="67.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/07/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-n0-D1M">
+                                            <rect key="frame" x="0.0" y="77.5" width="205" height="67.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYD-42-Ypt">
+                                    <rect key="frame" x="16" y="193" width="382" height="406"/>
+                                    <mutableString key="text">Đặc điểm nổi bật là bộ lông có sọc vằn, đó là những đường vân có nhiều màu sắc khác nhau, tông màu chủ đạo là màu đen.
+
+Điểm dễ nhận biết là màu lông trên trán có chữ M đặc trưng và bộ lông ngắn.
+
+Thân hình nhỏ nhắn, đáng yêu.
+Khuôn mặt nhỏ, đôi tai vểnh cao.
+Đuôi dài.
+Thích tắm nắng, liếm lông, chải chuốt cơ thể.
+Mèo này nhảy rất cao, năng động, nghịch ngợm nhưng rất thông minh.
+Không kén ăn nhưng lại năng động bắt chuột giỏi, thích ăn vụng và ngủ rất nhiều.
+Leo trèo rất giỏi.
+Mèo mướp rất phù hợp nếu bạn muốn chọn một chú mèo tinh ranh, nghịch ngợm và thông minh.
+
+Mèo mướp hiện có giá từ 150k - 200k khi mua.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo-ald" translatesAutoresizingMaskIntoConstraints="NO" id="Rl2-wz-b7Q">
+                                    <rect key="frame" x="16" y="631" width="382" height="231"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="231" id="urH-HZ-8h5"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="l9T-BF-hRH">
+                                    <rect key="frame" x="16" y="878" width="382" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-ZD-AWc">
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <state key="normal" title="Follow">
+                                                <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrE-xy-yg3">
+                                            <rect key="frame" x="199" y="0.0" width="183" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <state key="normal" title="Report">
+                                                <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="agc-iO-mPg"/>
+                                    </constraints>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvU-BR-6DS">
+                                    <rect key="frame" x="16" y="944" width="57" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="57" id="CCY-tl-CVq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="gnW-mb-9Ry">
+                                    <rect key="frame" x="16" y="985.5" width="382" height="110"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo-tai-cup-scotland" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-sD-Xq4">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_anh_long_dai" translatesAutoresizingMaskIntoConstraints="NO" id="kWZ-36-Ovr">
+                                            <rect key="frame" x="136" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_anh_long_ngan" translatesAutoresizingMaskIntoConstraints="NO" id="IYG-3G-ikA">
+                                            <rect key="frame" x="272" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="3j2-w6-j0E"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-wc-3n3">
+                                    <rect key="frame" x="16" y="1111.5" width="382" height="110"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_ba_tu" translatesAutoresizingMaskIntoConstraints="NO" id="7tA-mD-Gis">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_muop" translatesAutoresizingMaskIntoConstraints="NO" id="2h3-Dq-FPd">
+                                            <rect key="frame" x="136" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_my_long_dai" translatesAutoresizingMaskIntoConstraints="NO" id="e7K-BR-aNA">
+                                            <rect key="frame" x="272" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="huk-h0-JOy"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="otp-bT-9Hp"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="kAv-AZ-YWY">
+                                    <rect key="frame" x="16" y="1229.5" width="382" height="110"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_tho_nhi_ky" translatesAutoresizingMaskIntoConstraints="NO" id="nPL-aP-kqW">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_vang" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-Le-mYE">
+                                            <rect key="frame" x="136" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meo_xiem" translatesAutoresizingMaskIntoConstraints="NO" id="6Av-ac-1dI">
+                                            <rect key="frame" x="272" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="9F7-KA-5Zh"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="LTr-py-bZX"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="jh9-Sd-u8r"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="EvU-BR-6DS" firstAttribute="top" secondItem="l9T-BF-hRH" secondAttribute="bottom" constant="16" id="1D0-Im-SXq"/>
+                                <constraint firstItem="kAv-AZ-YWY" firstAttribute="top" secondItem="1AA-wc-3n3" secondAttribute="bottom" constant="8" id="4V0-Md-POP"/>
+                                <constraint firstItem="kAv-AZ-YWY" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="5Or-ji-6iE"/>
+                                <constraint firstAttribute="trailing" secondItem="gnW-mb-9Ry" secondAttribute="trailing" constant="16" id="7y6-Mf-MFP"/>
+                                <constraint firstAttribute="trailing" secondItem="MYD-42-Ypt" secondAttribute="trailing" constant="16" id="Af1-L2-EVQ"/>
+                                <constraint firstAttribute="trailing" secondItem="l9T-BF-hRH" secondAttribute="trailing" constant="16" id="CjA-Wx-hFl"/>
+                                <constraint firstItem="MYD-42-Ypt" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="H4n-8n-qw9"/>
+                                <constraint firstItem="Rte-U6-DDD" firstAttribute="width" secondItem="OGc-Ek-eq7" secondAttribute="width" multiplier="0.35" id="Hnb-95-9JW"/>
+                                <constraint firstAttribute="bottom" secondItem="kAv-AZ-YWY" secondAttribute="bottom" constant="32" id="LQE-kF-GAs"/>
+                                <constraint firstItem="Rl2-wz-b7Q" firstAttribute="top" secondItem="MYD-42-Ypt" secondAttribute="bottom" constant="32" id="Ley-bu-nsL"/>
+                                <constraint firstItem="1AA-wc-3n3" firstAttribute="top" secondItem="gnW-mb-9Ry" secondAttribute="bottom" constant="16" id="M8C-rG-l4X"/>
+                                <constraint firstAttribute="trailing" secondItem="9pM-uf-O1G" secondAttribute="trailing" constant="16" id="Mfw-Jp-b8r"/>
+                                <constraint firstItem="Rte-U6-DDD" firstAttribute="top" secondItem="OGc-Ek-eq7" secondAttribute="top" constant="32" id="UOe-C3-D3T"/>
+                                <constraint firstItem="Rl2-wz-b7Q" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="YfS-Bg-z08"/>
+                                <constraint firstItem="MYD-42-Ypt" firstAttribute="top" secondItem="Rte-U6-DDD" secondAttribute="bottom" constant="16" id="ZKM-li-uak"/>
+                                <constraint firstItem="gnW-mb-9Ry" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="bgT-pK-NOk"/>
+                                <constraint firstAttribute="trailing" secondItem="Rl2-wz-b7Q" secondAttribute="trailing" constant="16" id="cp0-Kp-wZM"/>
+                                <constraint firstItem="9pM-uf-O1G" firstAttribute="height" secondItem="Rte-U6-DDD" secondAttribute="height" id="jHZ-ut-usH"/>
+                                <constraint firstItem="9pM-uf-O1G" firstAttribute="centerY" secondItem="Rte-U6-DDD" secondAttribute="centerY" id="kry-Dm-vOI"/>
+                                <constraint firstItem="EvU-BR-6DS" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="ldD-UF-SVc"/>
+                                <constraint firstItem="l9T-BF-hRH" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="mnM-wu-bS0"/>
+                                <constraint firstItem="9pM-uf-O1G" firstAttribute="leading" secondItem="Rte-U6-DDD" secondAttribute="trailing" constant="32" id="nru-n7-Mhk"/>
+                                <constraint firstItem="gnW-mb-9Ry" firstAttribute="top" secondItem="EvU-BR-6DS" secondAttribute="bottom" constant="21.5" id="ovs-Xu-tVB"/>
+                                <constraint firstItem="l9T-BF-hRH" firstAttribute="top" secondItem="Rl2-wz-b7Q" secondAttribute="bottom" constant="16" id="pcw-3n-FNK"/>
+                                <constraint firstItem="Rte-U6-DDD" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="r1c-DC-Eqe"/>
+                                <constraint firstItem="1AA-wc-3n3" firstAttribute="leading" secondItem="OGc-Ek-eq7" secondAttribute="leading" constant="16" id="tV5-1p-cdF"/>
+                                <constraint firstAttribute="trailing" secondItem="1AA-wc-3n3" secondAttribute="trailing" constant="16" id="vBX-Ry-gkp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="OGc-Ek-eq7" firstAttribute="width" secondItem="ulo-Rc-YWz" secondAttribute="width" id="BA5-3L-21D"/>
+                        <constraint firstItem="OGc-Ek-eq7" firstAttribute="leading" secondItem="ulo-Rc-YWz" secondAttribute="leading" id="Cus-cp-09y"/>
+                        <constraint firstItem="OGc-Ek-eq7" firstAttribute="top" secondItem="ulo-Rc-YWz" secondAttribute="top" id="OhR-ks-N4G"/>
+                        <constraint firstAttribute="trailing" secondItem="kAv-AZ-YWY" secondAttribute="trailing" constant="16" id="efL-a8-L2R"/>
+                        <constraint firstAttribute="trailing" secondItem="OGc-Ek-eq7" secondAttribute="trailing" id="f7f-ki-XpQ"/>
+                        <constraint firstAttribute="bottom" secondItem="OGc-Ek-eq7" secondAttribute="bottom" id="nAL-8y-OxW"/>
+                        <constraint firstItem="OGc-Ek-eq7" firstAttribute="height" secondItem="ulo-Rc-YWz" secondAttribute="height" priority="250" id="wf8-ec-LkN"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ulo-Rc-YWz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9kr-qp-SKh"/>
+                <constraint firstItem="ulo-Rc-YWz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="FU3-p5-PKB"/>
+                <constraint firstItem="ulo-Rc-YWz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fXk-X8-hMi"/>
+                <constraint firstItem="ulo-Rc-YWz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zGX-wG-hvJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="690" y="214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="meo-ald" width="640" height="335"/>
+        <image name="meo-tai-cup-scotland" width="640" height="360"/>
+        <image name="meo_anh_long_dai" width="640" height="360"/>
+        <image name="meo_anh_long_ngan" width="640" height="360"/>
+        <image name="meo_ba_tu" width="640" height="360"/>
+        <image name="meo_muop" width="640" height="360"/>
+        <image name="meo_my_long_dai" width="640" height="360"/>
+        <image name="meo_tho_nhi_ky" width="640" height="360"/>
+        <image name="meo_vang" width="640" height="360"/>
+        <image name="meo_xiem" width="640" height="360"/>
+        <image name="profileImage" width="1024" height="1024"/>
+    </resources>
+</document>
