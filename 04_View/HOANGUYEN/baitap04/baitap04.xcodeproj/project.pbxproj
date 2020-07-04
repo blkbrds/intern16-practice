@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F387FDB724AACE9900353355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDB624AACE9900353355 /* AppDelegate.swift */; };
+		F387FDB924AACE9900353355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDB824AACE9900353355 /* SceneDelegate.swift */; };
+		F387FDBB24AACE9900353355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDBA24AACE9900353355 /* ViewController.swift */; };
+		F387FDC024AACE9A00353355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F387FDBF24AACE9A00353355 /* Assets.xcassets */; };
+		F387FDC324AACE9A00353355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F387FDC124AACE9A00353355 /* LaunchScreen.storyboard */; };
+		F387FDCC24AAD12800353355 /* baitap01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDCA24AAD12800353355 /* baitap01ViewController.swift */; };
+		F387FDD024AAD1E000353355 /* baitap02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDCE24AAD1E000353355 /* baitap02ViewController.swift */; };
+		F387FDD524AAEAD900353355 /* baitap03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDD324AAEAD900353355 /* baitap03ViewController.swift */; };
+		F387FDD624AAEAD900353355 /* baitap03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F387FDD424AAEAD900353355 /* baitap03ViewController.xib */; };
+		F387FDD924AB41E100353355 /* baitap04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDD724AB41E100353355 /* baitap04ViewController.swift */; };
+		F387FDDA24AB41E100353355 /* baitap04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F387FDD824AB41E100353355 /* baitap04ViewController.xib */; };
+		F387FDDD24AB87A900353355 /* baitap0607ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDDB24AB87A900353355 /* baitap0607ViewController.swift */; };
+		F387FDDE24AB87A900353355 /* baitap06ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F387FDDC24AB87A900353355 /* baitap06ViewController.xib */; };
+		F387FDE124AC943300353355 /* baitap05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FDDF24AC943300353355 /* baitap05ViewController.swift */; };
+		F387FDE224AC943300353355 /* baitap05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F387FDE024AC943300353355 /* baitap05ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F387FDB324AACE9900353355 /* baitap04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baitap04.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F387FDB624AACE9900353355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F387FDB824AACE9900353355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F387FDBA24AACE9900353355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F387FDBF24AACE9A00353355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F387FDC224AACE9A00353355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F387FDC424AACE9A00353355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F387FDCA24AAD12800353355 /* baitap01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baitap01ViewController.swift; sourceTree = "<group>"; };
+		F387FDCE24AAD1E000353355 /* baitap02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baitap02ViewController.swift; sourceTree = "<group>"; };
+		F387FDD324AAEAD900353355 /* baitap03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baitap03ViewController.swift; sourceTree = "<group>"; };
+		F387FDD424AAEAD900353355 /* baitap03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = baitap03ViewController.xib; sourceTree = "<group>"; };
+		F387FDD724AB41E100353355 /* baitap04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baitap04ViewController.swift; sourceTree = "<group>"; };
+		F387FDD824AB41E100353355 /* baitap04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = baitap04ViewController.xib; sourceTree = "<group>"; };
+		F387FDDB24AB87A900353355 /* baitap0607ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baitap0607ViewController.swift; sourceTree = "<group>"; };
+		F387FDDC24AB87A900353355 /* baitap06ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = baitap06ViewController.xib; sourceTree = "<group>"; };
+		F387FDDF24AC943300353355 /* baitap05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baitap05ViewController.swift; sourceTree = "<group>"; };
+		F387FDE024AC943300353355 /* baitap05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = baitap05ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F387FDB024AACE9900353355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F387FDAA24AACE9900353355 = {
+			isa = PBXGroup;
+			children = (
+				F387FDB524AACE9900353355 /* baitap04 */,
+				F387FDB424AACE9900353355 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F387FDB424AACE9900353355 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F387FDB324AACE9900353355 /* baitap04.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F387FDB524AACE9900353355 /* baitap04 */ = {
+			isa = PBXGroup;
+			children = (
+				F387FDB624AACE9900353355 /* AppDelegate.swift */,
+				F387FDB824AACE9900353355 /* SceneDelegate.swift */,
+				F387FDBA24AACE9900353355 /* ViewController.swift */,
+				F387FDBF24AACE9A00353355 /* Assets.xcassets */,
+				F387FDC124AACE9A00353355 /* LaunchScreen.storyboard */,
+				F387FDC424AACE9A00353355 /* Info.plist */,
+				F387FDCA24AAD12800353355 /* baitap01ViewController.swift */,
+				F387FDCE24AAD1E000353355 /* baitap02ViewController.swift */,
+				F387FDD324AAEAD900353355 /* baitap03ViewController.swift */,
+				F387FDD424AAEAD900353355 /* baitap03ViewController.xib */,
+				F387FDD724AB41E100353355 /* baitap04ViewController.swift */,
+				F387FDD824AB41E100353355 /* baitap04ViewController.xib */,
+				F387FDDB24AB87A900353355 /* baitap0607ViewController.swift */,
+				F387FDDC24AB87A900353355 /* baitap06ViewController.xib */,
+				F387FDDF24AC943300353355 /* baitap05ViewController.swift */,
+				F387FDE024AC943300353355 /* baitap05ViewController.xib */,
+			);
+			path = baitap04;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F387FDB224AACE9900353355 /* baitap04 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F387FDC724AACE9A00353355 /* Build configuration list for PBXNativeTarget "baitap04" */;
+			buildPhases = (
+				F387FDAF24AACE9900353355 /* Sources */,
+				F387FDB024AACE9900353355 /* Frameworks */,
+				F387FDB124AACE9900353355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = baitap04;
+			productName = baitap04;
+			productReference = F387FDB324AACE9900353355 /* baitap04.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F387FDAB24AACE9900353355 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = NXH;
+				TargetAttributes = {
+					F387FDB224AACE9900353355 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = F387FDAE24AACE9900353355 /* Build configuration list for PBXProject "baitap04" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F387FDAA24AACE9900353355;
+			productRefGroup = F387FDB424AACE9900353355 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F387FDB224AACE9900353355 /* baitap04 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F387FDB124AACE9900353355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F387FDE224AC943300353355 /* baitap05ViewController.xib in Resources */,
+				F387FDDE24AB87A900353355 /* baitap06ViewController.xib in Resources */,
+				F387FDC324AACE9A00353355 /* LaunchScreen.storyboard in Resources */,
+				F387FDC024AACE9A00353355 /* Assets.xcassets in Resources */,
+				F387FDD624AAEAD900353355 /* baitap03ViewController.xib in Resources */,
+				F387FDDA24AB41E100353355 /* baitap04ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F387FDAF24AACE9900353355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F387FDD924AB41E100353355 /* baitap04ViewController.swift in Sources */,
+				F387FDD524AAEAD900353355 /* baitap03ViewController.swift in Sources */,
+				F387FDCC24AAD12800353355 /* baitap01ViewController.swift in Sources */,
+				F387FDBB24AACE9900353355 /* ViewController.swift in Sources */,
+				F387FDB724AACE9900353355 /* AppDelegate.swift in Sources */,
+				F387FDE124AC943300353355 /* baitap05ViewController.swift in Sources */,
+				F387FDDD24AB87A900353355 /* baitap0607ViewController.swift in Sources */,
+				F387FDB924AACE9900353355 /* SceneDelegate.swift in Sources */,
+				F387FDD024AAD1E000353355 /* baitap02ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F387FDC124AACE9A00353355 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F387FDC224AACE9A00353355 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F387FDC524AACE9A00353355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F387FDC624AACE9A00353355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F387FDC824AACE9A00353355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = baitap04/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nxh.baitap04;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F387FDC924AACE9A00353355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = baitap04/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nxh.baitap04;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F387FDAE24AACE9900353355 /* Build configuration list for PBXProject "baitap04" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F387FDC524AACE9A00353355 /* Debug */,
+				F387FDC624AACE9A00353355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F387FDC724AACE9A00353355 /* Build configuration list for PBXNativeTarget "baitap04" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F387FDC824AACE9A00353355 /* Debug */,
+				F387FDC924AACE9A00353355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F387FDAB24AACE9900353355 /* Project object */;
+}
