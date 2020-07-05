@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D7EF14224AED699000E890C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF14124AED698000E890C /* AppDelegate.swift */; };
+		7D7EF14424AED699000E890C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF14324AED699000E890C /* SceneDelegate.swift */; };
+		7D7EF14624AED699000E890C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF14524AED699000E890C /* ViewController.swift */; };
+		7D7EF14924AED699000E890C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF14724AED699000E890C /* Main.storyboard */; };
+		7D7EF14B24AED69A000E890C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF14A24AED69A000E890C /* Assets.xcassets */; };
+		7D7EF14E24AED69A000E890C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF14C24AED69A000E890C /* LaunchScreen.storyboard */; };
+		7D7EF15824AED708000E890C /* BaiTap03bVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF15624AED708000E890C /* BaiTap03bVC.swift */; };
+		7D7EF15924AED708000E890C /* BaiTap03bVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF15724AED708000E890C /* BaiTap03bVC.xib */; };
+		7D7EF15C24AEDB7A000E890C /* BaiTap03aVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF15A24AEDB7A000E890C /* BaiTap03aVC.swift */; };
+		7D7EF15D24AEDB7A000E890C /* BaiTap03aVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF15B24AEDB7A000E890C /* BaiTap03aVC.xib */; };
+		7D7EF16024AF0AEF000E890C /* BaiTap03cVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF15E24AF0AEF000E890C /* BaiTap03cVC.swift */; };
+		7D7EF16124AF0AEF000E890C /* BaiTap03cVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF15F24AF0AEF000E890C /* BaiTap03cVC.xib */; };
+		7D7EF16424AF10B1000E890C /* BaiTap04aVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF16224AF10B1000E890C /* BaiTap04aVC.swift */; };
+		7D7EF16524AF10B1000E890C /* BaiTap04aVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF16324AF10B1000E890C /* BaiTap04aVC.xib */; };
+		7D7EF16824AF17CA000E890C /* BaiTap04bVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF16624AF17CA000E890C /* BaiTap04bVC.swift */; };
+		7D7EF16924AF17CA000E890C /* BaiTap04bVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF16724AF17CA000E890C /* BaiTap04bVC.xib */; };
+		7D7EF16C24AF1959000E890C /* BaiTap04cVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF16A24AF1959000E890C /* BaiTap04cVC.swift */; };
+		7D7EF16D24AF1959000E890C /* BaiTap04cVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF16B24AF1959000E890C /* BaiTap04cVC.xib */; };
+		7D7EF17024AF1CE7000E890C /* BaiTap04dVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF16E24AF1CE7000E890C /* BaiTap04dVC.swift */; };
+		7D7EF17124AF1CE7000E890C /* BaiTap04dVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF16F24AF1CE7000E890C /* BaiTap04dVC.xib */; };
+		7D7EF17624AF1ECF000E890C /* BaiTap04eVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF17424AF1ECF000E890C /* BaiTap04eVC.swift */; };
+		7D7EF17724AF1ECF000E890C /* BaiTap04eVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF17524AF1ECF000E890C /* BaiTap04eVC.xib */; };
+		7D7EF18324AF24C3000E890C /* 5a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF18124AF24C3000E890C /* 5a.swift */; };
+		7D7EF18424AF24C3000E890C /* 5a.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF18224AF24C3000E890C /* 5a.xib */; };
+		7D7EF18724AF2981000E890C /* 5b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF18524AF2981000E890C /* 5b.swift */; };
+		7D7EF18824AF2981000E890C /* 5b.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF18624AF2981000E890C /* 5b.xib */; };
+		7D7EF18B24AF30E1000E890C /* 5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF18924AF30E1000E890C /* 5c.swift */; };
+		7D7EF18C24AF30E1000E890C /* 5c.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF18A24AF30E1000E890C /* 5c.xib */; };
+		7D7EF18F24AF31FF000E890C /* 5d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF18D24AF31FF000E890C /* 5d.swift */; };
+		7D7EF19024AF31FF000E890C /* 5d.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF18E24AF31FF000E890C /* 5d.xib */; };
+		7D7EF19324AF335B000E890C /* 5e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF19124AF335B000E890C /* 5e.swift */; };
+		7D7EF19424AF335B000E890C /* 5e.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF19224AF335B000E890C /* 5e.xib */; };
+		7D7EF1A124AF3A09000E890C /* Bai6a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF19F24AF3A09000E890C /* Bai6a.swift */; };
+		7D7EF1A224AF3A09000E890C /* Bai6a.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF1A024AF3A09000E890C /* Bai6a.xib */; };
+		7D7EF1A524AF3D23000E890C /* Bai6b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF1A324AF3D23000E890C /* Bai6b.swift */; };
+		7D7EF1A624AF3D23000E890C /* Bai6b.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF1A424AF3D23000E890C /* Bai6b.xib */; };
+		C42F6BF724B0172500A2184E /* BaiTap11VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F6BF524B0172500A2184E /* BaiTap11VC.swift */; };
+		C42F6BF824B0172500A2184E /* BaiTap11VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42F6BF624B0172500A2184E /* BaiTap11VC.xib */; };
+		C42F6BFC24B019D600A2184E /* BaiTap12VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F6BFA24B019D600A2184E /* BaiTap12VC.swift */; };
+		C42F6BFD24B019D600A2184E /* BaiTap12VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42F6BFB24B019D600A2184E /* BaiTap12VC.xib */; };
+		C42F6C0124B02A9400A2184E /* BaiTap13VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F6BFF24B02A9400A2184E /* BaiTap13VC.swift */; };
+		C42F6C0224B02A9400A2184E /* BaiTap13VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42F6C0024B02A9400A2184E /* BaiTap13VC.xib */; };
+		C4AC2B8124AF6A85009A724D /* BaiTap09VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC2B7F24AF6A85009A724D /* BaiTap09VC.swift */; };
+		C4AC2B8224AF6A85009A724D /* BaiTap09VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC2B8024AF6A85009A724D /* BaiTap09VC.xib */; };
+		C4AC2B8624AF79D1009A724D /* BaiTap10VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC2B8424AF79D1009A724D /* BaiTap10VC.swift */; };
+		C4AC2B8724AF79D1009A724D /* BaiTap10VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC2B8524AF79D1009A724D /* BaiTap10VC.xib */; };
+		C4FB353F24B03278006555D3 /* BaiTap14VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB353D24B03278006555D3 /* BaiTap14VC.swift */; };
+		C4FB354024B03278006555D3 /* BaiTap14VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4FB353E24B03278006555D3 /* BaiTap14VC.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D7EF13E24AED698000E890C /* BaiTap07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap07.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7EF14124AED698000E890C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D7EF14324AED699000E890C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D7EF14524AED699000E890C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D7EF14824AED699000E890C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D7EF14A24AED69A000E890C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D7EF14D24AED69A000E890C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D7EF14F24AED69A000E890C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D7EF15624AED708000E890C /* BaiTap03bVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03bVC.swift; sourceTree = "<group>"; };
+		7D7EF15724AED708000E890C /* BaiTap03bVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03bVC.xib; sourceTree = "<group>"; };
+		7D7EF15A24AEDB7A000E890C /* BaiTap03aVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03aVC.swift; sourceTree = "<group>"; };
+		7D7EF15B24AEDB7A000E890C /* BaiTap03aVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03aVC.xib; sourceTree = "<group>"; };
+		7D7EF15E24AF0AEF000E890C /* BaiTap03cVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03cVC.swift; sourceTree = "<group>"; };
+		7D7EF15F24AF0AEF000E890C /* BaiTap03cVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03cVC.xib; sourceTree = "<group>"; };
+		7D7EF16224AF10B1000E890C /* BaiTap04aVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04aVC.swift; sourceTree = "<group>"; };
+		7D7EF16324AF10B1000E890C /* BaiTap04aVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04aVC.xib; sourceTree = "<group>"; };
+		7D7EF16624AF17CA000E890C /* BaiTap04bVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04bVC.swift; sourceTree = "<group>"; };
+		7D7EF16724AF17CA000E890C /* BaiTap04bVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04bVC.xib; sourceTree = "<group>"; };
+		7D7EF16A24AF1959000E890C /* BaiTap04cVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04cVC.swift; sourceTree = "<group>"; };
+		7D7EF16B24AF1959000E890C /* BaiTap04cVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04cVC.xib; sourceTree = "<group>"; };
+		7D7EF16E24AF1CE7000E890C /* BaiTap04dVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04dVC.swift; sourceTree = "<group>"; };
+		7D7EF16F24AF1CE7000E890C /* BaiTap04dVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04dVC.xib; sourceTree = "<group>"; };
+		7D7EF17424AF1ECF000E890C /* BaiTap04eVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04eVC.swift; sourceTree = "<group>"; };
+		7D7EF17524AF1ECF000E890C /* BaiTap04eVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04eVC.xib; sourceTree = "<group>"; };
+		7D7EF18124AF24C3000E890C /* 5a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5a.swift; sourceTree = "<group>"; };
+		7D7EF18224AF24C3000E890C /* 5a.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 5a.xib; sourceTree = "<group>"; };
+		7D7EF18524AF2981000E890C /* 5b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5b.swift; sourceTree = "<group>"; };
+		7D7EF18624AF2981000E890C /* 5b.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 5b.xib; sourceTree = "<group>"; };
+		7D7EF18924AF30E1000E890C /* 5c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5c.swift; sourceTree = "<group>"; };
+		7D7EF18A24AF30E1000E890C /* 5c.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 5c.xib; sourceTree = "<group>"; };
+		7D7EF18D24AF31FF000E890C /* 5d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5d.swift; sourceTree = "<group>"; };
+		7D7EF18E24AF31FF000E890C /* 5d.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 5d.xib; sourceTree = "<group>"; };
+		7D7EF19124AF335B000E890C /* 5e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5e.swift; sourceTree = "<group>"; };
+		7D7EF19224AF335B000E890C /* 5e.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 5e.xib; sourceTree = "<group>"; };
+		7D7EF19F24AF3A09000E890C /* Bai6a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6a.swift; sourceTree = "<group>"; };
+		7D7EF1A024AF3A09000E890C /* Bai6a.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6a.xib; sourceTree = "<group>"; };
+		7D7EF1A324AF3D23000E890C /* Bai6b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6b.swift; sourceTree = "<group>"; };
+		7D7EF1A424AF3D23000E890C /* Bai6b.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6b.xib; sourceTree = "<group>"; };
+		C42F6BF524B0172500A2184E /* BaiTap11VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap11VC.swift; sourceTree = "<group>"; };
+		C42F6BF624B0172500A2184E /* BaiTap11VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap11VC.xib; sourceTree = "<group>"; };
+		C42F6BFA24B019D600A2184E /* BaiTap12VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap12VC.swift; sourceTree = "<group>"; };
+		C42F6BFB24B019D600A2184E /* BaiTap12VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap12VC.xib; sourceTree = "<group>"; };
+		C42F6BFF24B02A9400A2184E /* BaiTap13VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap13VC.swift; sourceTree = "<group>"; };
+		C42F6C0024B02A9400A2184E /* BaiTap13VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap13VC.xib; sourceTree = "<group>"; };
+		C4AC2B7F24AF6A85009A724D /* BaiTap09VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap09VC.swift; sourceTree = "<group>"; };
+		C4AC2B8024AF6A85009A724D /* BaiTap09VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap09VC.xib; sourceTree = "<group>"; };
+		C4AC2B8424AF79D1009A724D /* BaiTap10VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap10VC.swift; sourceTree = "<group>"; };
+		C4AC2B8524AF79D1009A724D /* BaiTap10VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap10VC.xib; sourceTree = "<group>"; };
+		C4FB353D24B03278006555D3 /* BaiTap14VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap14VC.swift; sourceTree = "<group>"; };
+		C4FB353E24B03278006555D3 /* BaiTap14VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap14VC.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D7EF13B24AED698000E890C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D7EF13524AED698000E890C = {
+			isa = PBXGroup;
+			children = (
+				7D7EF14024AED698000E890C /* BaiTap07 */,
+				7D7EF13F24AED698000E890C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D7EF13F24AED698000E890C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF13E24AED698000E890C /* BaiTap07.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D7EF14024AED698000E890C /* BaiTap07 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF15524AED6E3000E890C /* Controller */,
+				7D7EF14124AED698000E890C /* AppDelegate.swift */,
+				7D7EF14324AED699000E890C /* SceneDelegate.swift */,
+				7D7EF14524AED699000E890C /* ViewController.swift */,
+				7D7EF14724AED699000E890C /* Main.storyboard */,
+				7D7EF14A24AED69A000E890C /* Assets.xcassets */,
+				7D7EF14C24AED69A000E890C /* LaunchScreen.storyboard */,
+				7D7EF14F24AED69A000E890C /* Info.plist */,
+			);
+			path = BaiTap07;
+			sourceTree = "<group>";
+		};
+		7D7EF15524AED6E3000E890C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB353C24B03265006555D3 /* BaiTap14 */,
+				C42F6BFE24B02A7900A2184E /* BaiTap13 */,
+				C42F6BF924B019C400A2184E /* BaiTap12 */,
+				C42F6BF424B0170600A2184E /* BaiTap11 */,
+				C4AC2B8324AF79B6009A724D /* BaiTap10 */,
+				7D7EF18024AF232B000E890C /* BaiTap03 */,
+				7D7EF17C24AF2152000E890C /* BaiTap04 */,
+				7D7EF17D24AF2171000E890C /* BaiTap05 */,
+				7D7EF19624AF3958000E890C /* BaiTap06 */,
+				C4AC2B7E24AF6A32009A724D /* BaiTap09 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D7EF17C24AF2152000E890C /* BaiTap04 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF16224AF10B1000E890C /* BaiTap04aVC.swift */,
+				7D7EF16324AF10B1000E890C /* BaiTap04aVC.xib */,
+				7D7EF16624AF17CA000E890C /* BaiTap04bVC.swift */,
+				7D7EF16724AF17CA000E890C /* BaiTap04bVC.xib */,
+				7D7EF16A24AF1959000E890C /* BaiTap04cVC.swift */,
+				7D7EF16B24AF1959000E890C /* BaiTap04cVC.xib */,
+				7D7EF16E24AF1CE7000E890C /* BaiTap04dVC.swift */,
+				7D7EF16F24AF1CE7000E890C /* BaiTap04dVC.xib */,
+				7D7EF17424AF1ECF000E890C /* BaiTap04eVC.swift */,
+				7D7EF17524AF1ECF000E890C /* BaiTap04eVC.xib */,
+			);
+			path = BaiTap04;
+			sourceTree = "<group>";
+		};
+		7D7EF17D24AF2171000E890C /* BaiTap05 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF18124AF24C3000E890C /* 5a.swift */,
+				7D7EF18224AF24C3000E890C /* 5a.xib */,
+				7D7EF18524AF2981000E890C /* 5b.swift */,
+				7D7EF18624AF2981000E890C /* 5b.xib */,
+				7D7EF18924AF30E1000E890C /* 5c.swift */,
+				7D7EF18A24AF30E1000E890C /* 5c.xib */,
+				7D7EF18D24AF31FF000E890C /* 5d.swift */,
+				7D7EF18E24AF31FF000E890C /* 5d.xib */,
+				7D7EF19124AF335B000E890C /* 5e.swift */,
+				7D7EF19224AF335B000E890C /* 5e.xib */,
+			);
+			path = BaiTap05;
+			sourceTree = "<group>";
+		};
+		7D7EF18024AF232B000E890C /* BaiTap03 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF15A24AEDB7A000E890C /* BaiTap03aVC.swift */,
+				7D7EF15B24AEDB7A000E890C /* BaiTap03aVC.xib */,
+				7D7EF15624AED708000E890C /* BaiTap03bVC.swift */,
+				7D7EF15724AED708000E890C /* BaiTap03bVC.xib */,
+				7D7EF15E24AF0AEF000E890C /* BaiTap03cVC.swift */,
+				7D7EF15F24AF0AEF000E890C /* BaiTap03cVC.xib */,
+			);
+			path = BaiTap03;
+			sourceTree = "<group>";
+		};
+		7D7EF19624AF3958000E890C /* BaiTap06 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF19F24AF3A09000E890C /* Bai6a.swift */,
+				7D7EF1A024AF3A09000E890C /* Bai6a.xib */,
+				7D7EF1A324AF3D23000E890C /* Bai6b.swift */,
+				7D7EF1A424AF3D23000E890C /* Bai6b.xib */,
+			);
+			path = BaiTap06;
+			sourceTree = "<group>";
+		};
+		C42F6BF424B0170600A2184E /* BaiTap11 */ = {
+			isa = PBXGroup;
+			children = (
+				C42F6BF524B0172500A2184E /* BaiTap11VC.swift */,
+				C42F6BF624B0172500A2184E /* BaiTap11VC.xib */,
+			);
+			path = BaiTap11;
+			sourceTree = "<group>";
+		};
+		C42F6BF924B019C400A2184E /* BaiTap12 */ = {
+			isa = PBXGroup;
+			children = (
+				C42F6BFA24B019D600A2184E /* BaiTap12VC.swift */,
+				C42F6BFB24B019D600A2184E /* BaiTap12VC.xib */,
+			);
+			path = BaiTap12;
+			sourceTree = "<group>";
+		};
+		C42F6BFE24B02A7900A2184E /* BaiTap13 */ = {
+			isa = PBXGroup;
+			children = (
+				C42F6BFF24B02A9400A2184E /* BaiTap13VC.swift */,
+				C42F6C0024B02A9400A2184E /* BaiTap13VC.xib */,
+			);
+			path = BaiTap13;
+			sourceTree = "<group>";
+		};
+		C4AC2B7E24AF6A32009A724D /* BaiTap09 */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC2B7F24AF6A85009A724D /* BaiTap09VC.swift */,
+				C4AC2B8024AF6A85009A724D /* BaiTap09VC.xib */,
+			);
+			path = BaiTap09;
+			sourceTree = "<group>";
+		};
+		C4AC2B8324AF79B6009A724D /* BaiTap10 */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC2B8424AF79D1009A724D /* BaiTap10VC.swift */,
+				C4AC2B8524AF79D1009A724D /* BaiTap10VC.xib */,
+			);
+			path = BaiTap10;
+			sourceTree = "<group>";
+		};
+		C4FB353C24B03265006555D3 /* BaiTap14 */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB353D24B03278006555D3 /* BaiTap14VC.swift */,
+				C4FB353E24B03278006555D3 /* BaiTap14VC.xib */,
+			);
+			path = BaiTap14;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D7EF13D24AED698000E890C /* BaiTap07 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D7EF15224AED69A000E890C /* Build configuration list for PBXNativeTarget "BaiTap07" */;
+			buildPhases = (
+				7D7EF13A24AED698000E890C /* Sources */,
+				7D7EF13B24AED698000E890C /* Frameworks */,
+				7D7EF13C24AED698000E890C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiTap07;
+			productName = BaiTap07;
+			productReference = 7D7EF13E24AED698000E890C /* BaiTap07.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D7EF13624AED698000E890C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = hieu.ngq;
+				TargetAttributes = {
+					7D7EF13D24AED698000E890C = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 7D7EF13924AED698000E890C /* Build configuration list for PBXProject "BaiTap07" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D7EF13524AED698000E890C;
+			productRefGroup = 7D7EF13F24AED698000E890C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D7EF13D24AED698000E890C /* BaiTap07 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D7EF13C24AED698000E890C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7EF19024AF31FF000E890C /* 5d.xib in Resources */,
+				7D7EF19424AF335B000E890C /* 5e.xib in Resources */,
+				7D7EF18824AF2981000E890C /* 5b.xib in Resources */,
+				C4AC2B8724AF79D1009A724D /* BaiTap10VC.xib in Resources */,
+				7D7EF16924AF17CA000E890C /* BaiTap04bVC.xib in Resources */,
+				7D7EF15924AED708000E890C /* BaiTap03bVC.xib in Resources */,
+				C4FB354024B03278006555D3 /* BaiTap14VC.xib in Resources */,
+				7D7EF14E24AED69A000E890C /* LaunchScreen.storyboard in Resources */,
+				7D7EF14B24AED69A000E890C /* Assets.xcassets in Resources */,
+				7D7EF17724AF1ECF000E890C /* BaiTap04eVC.xib in Resources */,
+				7D7EF1A224AF3A09000E890C /* Bai6a.xib in Resources */,
+				7D7EF15D24AEDB7A000E890C /* BaiTap03aVC.xib in Resources */,
+				7D7EF16124AF0AEF000E890C /* BaiTap03cVC.xib in Resources */,
+				C42F6BFD24B019D600A2184E /* BaiTap12VC.xib in Resources */,
+				7D7EF16524AF10B1000E890C /* BaiTap04aVC.xib in Resources */,
+				C42F6C0224B02A9400A2184E /* BaiTap13VC.xib in Resources */,
+				7D7EF18C24AF30E1000E890C /* 5c.xib in Resources */,
+				7D7EF14924AED699000E890C /* Main.storyboard in Resources */,
+				C42F6BF824B0172500A2184E /* BaiTap11VC.xib in Resources */,
+				7D7EF18424AF24C3000E890C /* 5a.xib in Resources */,
+				7D7EF17124AF1CE7000E890C /* BaiTap04dVC.xib in Resources */,
+				C4AC2B8224AF6A85009A724D /* BaiTap09VC.xib in Resources */,
+				7D7EF1A624AF3D23000E890C /* Bai6b.xib in Resources */,
+				7D7EF16D24AF1959000E890C /* BaiTap04cVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D7EF13A24AED698000E890C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7EF17024AF1CE7000E890C /* BaiTap04dVC.swift in Sources */,
+				C42F6BF724B0172500A2184E /* BaiTap11VC.swift in Sources */,
+				7D7EF15824AED708000E890C /* BaiTap03bVC.swift in Sources */,
+				7D7EF14624AED699000E890C /* ViewController.swift in Sources */,
+				C4AC2B8624AF79D1009A724D /* BaiTap10VC.swift in Sources */,
+				7D7EF17624AF1ECF000E890C /* BaiTap04eVC.swift in Sources */,
+				7D7EF16024AF0AEF000E890C /* BaiTap03cVC.swift in Sources */,
+				7D7EF18324AF24C3000E890C /* 5a.swift in Sources */,
+				7D7EF1A524AF3D23000E890C /* Bai6b.swift in Sources */,
+				7D7EF14224AED699000E890C /* AppDelegate.swift in Sources */,
+				7D7EF18724AF2981000E890C /* 5b.swift in Sources */,
+				7D7EF18F24AF31FF000E890C /* 5d.swift in Sources */,
+				7D7EF16824AF17CA000E890C /* BaiTap04bVC.swift in Sources */,
+				7D7EF16424AF10B1000E890C /* BaiTap04aVC.swift in Sources */,
+				C42F6BFC24B019D600A2184E /* BaiTap12VC.swift in Sources */,
+				7D7EF1A124AF3A09000E890C /* Bai6a.swift in Sources */,
+				7D7EF16C24AF1959000E890C /* BaiTap04cVC.swift in Sources */,
+				7D7EF15C24AEDB7A000E890C /* BaiTap03aVC.swift in Sources */,
+				C4FB353F24B03278006555D3 /* BaiTap14VC.swift in Sources */,
+				7D7EF19324AF335B000E890C /* 5e.swift in Sources */,
+				7D7EF14424AED699000E890C /* SceneDelegate.swift in Sources */,
+				7D7EF18B24AF30E1000E890C /* 5c.swift in Sources */,
+				C4AC2B8124AF6A85009A724D /* BaiTap09VC.swift in Sources */,
+				C42F6C0124B02A9400A2184E /* BaiTap13VC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D7EF14724AED699000E890C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D7EF14824AED699000E890C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D7EF14C24AED69A000E890C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D7EF14D24AED69A000E890C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D7EF15024AED69A000E890C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D7EF15124AED69A000E890C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D7EF15324AED69A000E890C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaiTap07/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hieu.ngq.BaiTap07;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D7EF15424AED69A000E890C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaiTap07/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hieu.ngq.BaiTap07;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D7EF13924AED698000E890C /* Build configuration list for PBXProject "BaiTap07" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D7EF15024AED69A000E890C /* Debug */,
+				7D7EF15124AED69A000E890C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D7EF15224AED69A000E890C /* Build configuration list for PBXNativeTarget "BaiTap07" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D7EF15324AED69A000E890C /* Debug */,
+				7D7EF15424AED69A000E890C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D7EF13624AED698000E890C /* Project object */;
+}
