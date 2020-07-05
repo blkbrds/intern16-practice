@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai03ViewController" customModule="BaiTap04" customModuleProvider="target">
             <connections>
-                <outlet property="btnClear" destination="RnI-f6-ykU" id="nrp-9Z-MTM"/>
-                <outlet property="btnLogin" destination="GQT-2J-7gN" id="6AL-VP-Ia3"/>
-                <outlet property="lbError" destination="vHn-j9-Fa9" id="TGJ-sL-fP8"/>
-                <outlet property="txtPassword" destination="7i2-EQ-EKd" id="DRw-DY-5mC"/>
-                <outlet property="txtUserName" destination="fOl-WJ-idI" id="tK3-oz-cFB"/>
+                <outlet property="clearButton" destination="RnI-f6-ykU" id="ZCF-ye-AcX"/>
+                <outlet property="errorLabel" destination="vHn-j9-Fa9" id="TGJ-sL-fP8"/>
+                <outlet property="loginButton" destination="GQT-2J-7gN" id="Zn0-8v-ivH"/>
+                <outlet property="passwordTextField" destination="7i2-EQ-EKd" id="DRw-DY-5mC"/>
+                <outlet property="usernameTextField" destination="fOl-WJ-idI" id="tK3-oz-cFB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +29,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập sai username và password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vHn-j9-Fa9">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập sai username và password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vHn-j9-Fa9">
                     <rect key="frame" x="61" y="274" width="247" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -46,7 +46,7 @@
                         <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="Nwi-gJ-wlQ"/>
+                        <action selector="loginActionTouch:" destination="-1" eventType="touchUpInside" id="r0G-vD-B8t"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnI-f6-ykU">
@@ -59,7 +59,8 @@
                         <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="btnClear:" destination="-1" eventType="touchUpInside" id="9k8-nX-o85"/>
+                        <action selector="clearActionTouch:" destination="-1" eventType="touchUpInside" id="6YK-Da-n7N"/>
+                        <action selector="loginActionTouch:" destination="-1" eventType="touchUpInside" id="fNn-EK-fGP"/>
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fOl-WJ-idI">
@@ -69,17 +70,20 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rhs-PH-oD4" userLabel="LOGIN">
-                    <rect key="frame" x="143" y="87" width="88" height="36"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <color key="textColor" red="0.14059004981322609" green="0.19264588389992032" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <gestureRecognizers/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Zcz-WM-QuZ" appends="YES" id="MZg-Dd-XRX"/>
+            </connections>
             <point key="canvasLocation" x="136.80000000000001" y="149.77511244377811"/>
         </view>
+        <tapGestureRecognizer id="Zcz-WM-QuZ">
+            <connections>
+                <action selector="tapScreen:" destination="-1" id="c0f-Ag-3ln"/>
+                <outlet property="delegate" destination="i5M-Pr-FkT" id="H8Y-3W-Xxq"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

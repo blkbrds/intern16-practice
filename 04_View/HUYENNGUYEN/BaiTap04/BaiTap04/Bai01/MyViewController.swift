@@ -22,6 +22,5 @@ class MyViewController: UIViewController {
         userName.layer.shadowOpacity = 2
         userName.layer.shadowRadius = 5
         view.addSubview(userName)
-        
     }
 }

@@ -13,6 +13,16 @@
 		8326DD9924AB3A960042C398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8326DD9724AB3A960042C398 /* LaunchScreen.storyboard */; };
 		8326DDA224AB3D170042C398 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326DDA024AB3D170042C398 /* MyViewController.swift */; };
 		8326DDA324AB3D170042C398 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8326DDA124AB3D170042C398 /* MyViewController.xib */; };
+		8327B76324AF1EA6003129A1 /* Bai6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327B76124AF1EA6003129A1 /* Bai6ViewController.swift */; };
+		8327B76424AF1EA6003129A1 /* Bai6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8327B76224AF1EA6003129A1 /* Bai6ViewController.xib */; };
+		832A207524AF36D6005888FF /* Bai07ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A207324AF36D6005888FF /* Bai07ViewController.swift */; };
+		832A207624AF36D6005888FF /* Bai07ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832A207424AF36D6005888FF /* Bai07ViewController.xib */; };
+		832B23CC24AD80F100D0966B /* Bai04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B23CA24AD80F100D0966B /* Bai04ViewController.swift */; };
+		832B23CD24AD80F100D0966B /* Bai04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B23CB24AD80F100D0966B /* Bai04ViewController.xib */; };
+		832B23D024AD90AC00D0966B /* Bai05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B23CE24AD90AC00D0966B /* Bai05ViewController.swift */; };
+		832B23D124AD90AC00D0966B /* Bai05ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B23CF24AD90AC00D0966B /* Bai05ViewController.xib */; };
+		832D58C924AC8E9500679761 /* Bai03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D58C724AC8E9500679761 /* Bai03ViewController.swift */; };
+		832D58CA24AC8E9500679761 /* Bai03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832D58C824AC8E9500679761 /* Bai03ViewController.xib */; };
 		832D806824ABA6B200CA05B8 /* Bai2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D806624ABA6B200CA05B8 /* Bai2ViewController.swift */; };
 		832D806924ABA6B200CA05B8 /* Bai2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832D806724ABA6B200CA05B8 /* Bai2ViewController.xib */; };
 /* End PBXBuildFile section */
@@ -26,6 +36,16 @@
 		8326DD9A24AB3A960042C398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8326DDA024AB3D170042C398 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		8326DDA124AB3D170042C398 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		8327B76124AF1EA6003129A1 /* Bai6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6ViewController.swift; sourceTree = "<group>"; };
+		8327B76224AF1EA6003129A1 /* Bai6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6ViewController.xib; sourceTree = "<group>"; };
+		832A207324AF36D6005888FF /* Bai07ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai07ViewController.swift; sourceTree = "<group>"; };
+		832A207424AF36D6005888FF /* Bai07ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai07ViewController.xib; sourceTree = "<group>"; };
+		832B23CA24AD80F100D0966B /* Bai04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai04ViewController.swift; sourceTree = "<group>"; };
+		832B23CB24AD80F100D0966B /* Bai04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai04ViewController.xib; sourceTree = "<group>"; };
+		832B23CE24AD90AC00D0966B /* Bai05ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai05ViewController.swift; sourceTree = "<group>"; };
+		832B23CF24AD90AC00D0966B /* Bai05ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai05ViewController.xib; sourceTree = "<group>"; };
+		832D58C724AC8E9500679761 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03ViewController.swift; sourceTree = "<group>"; };
+		832D58C824AC8E9500679761 /* Bai03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai03ViewController.xib; sourceTree = "<group>"; };
 		832D806624ABA6B200CA05B8 /* Bai2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2ViewController.swift; sourceTree = "<group>"; };
 		832D806724ABA6B200CA05B8 /* Bai2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,17 +80,83 @@
 		8326DD8B24AB3A950042C398 /* BaiTap04 */ = {
 			isa = PBXGroup;
 			children = (
+				832A207024AF367F005888FF /* Bai07 */,
+				8327B76024AF1E91003129A1 /* Bai6 */,
+				832B23D624ADB9DB00D0966B /* Bai05 */,
+				832B23D524ADB9CD00D0966B /* Bai04 */,
+				832B23D424ADB9BF00D0966B /* Bai03 */,
+				832B23D324ADB99D00D0966B /* Bai02 */,
+				832B23D224ADB98700D0966B /* Bai01 */,
 				8326DD8C24AB3A950042C398 /* AppDelegate.swift */,
 				8326DD8E24AB3A950042C398 /* SceneDelegate.swift */,
 				8326DD9524AB3A960042C398 /* Assets.xcassets */,
 				8326DD9724AB3A960042C398 /* LaunchScreen.storyboard */,
 				8326DD9A24AB3A960042C398 /* Info.plist */,
+			);
+			path = BaiTap04;
+			sourceTree = "<group>";
+		};
+		8327B76024AF1E91003129A1 /* Bai6 */ = {
+			isa = PBXGroup;
+			children = (
+				8327B76124AF1EA6003129A1 /* Bai6ViewController.swift */,
+				8327B76224AF1EA6003129A1 /* Bai6ViewController.xib */,
+			);
+			path = Bai6;
+			sourceTree = "<group>";
+		};
+		832A207024AF367F005888FF /* Bai07 */ = {
+			isa = PBXGroup;
+			children = (
+				832A207324AF36D6005888FF /* Bai07ViewController.swift */,
+				832A207424AF36D6005888FF /* Bai07ViewController.xib */,
+			);
+			path = Bai07;
+			sourceTree = "<group>";
+		};
+		832B23D224ADB98700D0966B /* Bai01 */ = {
+			isa = PBXGroup;
+			children = (
 				8326DDA024AB3D170042C398 /* MyViewController.swift */,
 				8326DDA124AB3D170042C398 /* MyViewController.xib */,
+			);
+			path = Bai01;
+			sourceTree = "<group>";
+		};
+		832B23D324ADB99D00D0966B /* Bai02 */ = {
+			isa = PBXGroup;
+			children = (
 				832D806624ABA6B200CA05B8 /* Bai2ViewController.swift */,
 				832D806724ABA6B200CA05B8 /* Bai2ViewController.xib */,
 			);
-			path = BaiTap04;
+			path = Bai02;
+			sourceTree = "<group>";
+		};
+		832B23D424ADB9BF00D0966B /* Bai03 */ = {
+			isa = PBXGroup;
+			children = (
+				832D58C724AC8E9500679761 /* Bai03ViewController.swift */,
+				832D58C824AC8E9500679761 /* Bai03ViewController.xib */,
+			);
+			path = Bai03;
+			sourceTree = "<group>";
+		};
+		832B23D524ADB9CD00D0966B /* Bai04 */ = {
+			isa = PBXGroup;
+			children = (
+				832B23CA24AD80F100D0966B /* Bai04ViewController.swift */,
+				832B23CB24AD80F100D0966B /* Bai04ViewController.xib */,
+			);
+			path = Bai04;
+			sourceTree = "<group>";
+		};
+		832B23D624ADB9DB00D0966B /* Bai05 */ = {
+			isa = PBXGroup;
+			children = (
+				832B23CE24AD90AC00D0966B /* Bai05ViewController.swift */,
+				832B23CF24AD90AC00D0966B /* Bai05ViewController.xib */,
+			);
+			path = Bai05;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +217,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8327B76424AF1EA6003129A1 /* Bai6ViewController.xib in Resources */,
 				832D806924ABA6B200CA05B8 /* Bai2ViewController.xib in Resources */,
+				832B23CD24AD80F100D0966B /* Bai04ViewController.xib in Resources */,
 				8326DD9924AB3A960042C398 /* LaunchScreen.storyboard in Resources */,
+				832D58CA24AC8E9500679761 /* Bai03ViewController.xib in Resources */,
+				832B23D124AD90AC00D0966B /* Bai05ViewController.xib in Resources */,
+				832A207624AF36D6005888FF /* Bai07ViewController.xib in Resources */,
 				8326DD9624AB3A960042C398 /* Assets.xcassets in Resources */,
 				8326DDA324AB3D170042C398 /* MyViewController.xib in Resources */,
 			);
@@ -145,8 +236,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832D58C924AC8E9500679761 /* Bai03ViewController.swift in Sources */,
+				832A207524AF36D6005888FF /* Bai07ViewController.swift in Sources */,
 				832D806824ABA6B200CA05B8 /* Bai2ViewController.swift in Sources */,
 				8326DD8D24AB3A950042C398 /* AppDelegate.swift in Sources */,
+				832B23D024AD90AC00D0966B /* Bai05ViewController.swift in Sources */,
+				8327B76324AF1EA6003129A1 /* Bai6ViewController.swift in Sources */,
+				832B23CC24AD80F100D0966B /* Bai04ViewController.swift in Sources */,
 				8326DDA224AB3D170042C398 /* MyViewController.swift in Sources */,
 				8326DD8F24AB3A950042C398 /* SceneDelegate.swift in Sources */,
 			);

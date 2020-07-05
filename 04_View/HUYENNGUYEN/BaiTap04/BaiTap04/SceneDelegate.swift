@@ -9,7 +9,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = Bai2ViewController()
+        
+//        window.rootViewController = MyViewController()
+        
+//        window.rootViewController = Bai2ViewController()
+        
+//        window.rootViewController = Bai03ViewController()
+        
+//        window.rootViewController = Bai04ViewController()
+        
+//        window.rootViewController = Bai05ViewController()
+        
+        window.rootViewController = Bai6ViewController()
+        
+      //  window.rootViewController = Bai07ViewController()
+
+        
         self.window = window
         window.makeKeyAndVisible()
     }
