@@ -19,6 +19,8 @@
 		7D7EF10324AC9213000E890C /* BaiTap04VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF10124AC9213000E890C /* BaiTap04VC.swift */; };
 		7D7EF10424AC9213000E890C /* BaiTap04VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF10224AC9213000E890C /* BaiTap04VC.xib */; };
 		7D7EF10624AC958A000E890C /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF10524AC958A000E890C /* DatePickerView.swift */; };
+		C47A5A1724B1B55F00423027 /* BaiTap03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47A5A1524B1B55F00423027 /* BaiTap03VC.swift */; };
+		C47A5A1824B1B55F00423027 /* BaiTap03VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47A5A1624B1B55F00423027 /* BaiTap03VC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		7D7EF10124AC9213000E890C /* BaiTap04VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04VC.swift; sourceTree = "<group>"; };
 		7D7EF10224AC9213000E890C /* BaiTap04VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04VC.xib; sourceTree = "<group>"; };
 		7D7EF10524AC958A000E890C /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		C47A5A1524B1B55F00423027 /* BaiTap03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03VC.swift; sourceTree = "<group>"; };
+		C47A5A1624B1B55F00423027 /* BaiTap03VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03VC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				7D7EF0EF24AB25E9000E890C /* BaiTap01VC.xib */,
 				7D7EF0FD24AC821C000E890C /* BaiTap02VC.swift */,
 				7D7EF0FE24AC821C000E890C /* BaiTap02VC.xib */,
+				C47A5A1524B1B55F00423027 /* BaiTap03VC.swift */,
+				C47A5A1624B1B55F00423027 /* BaiTap03VC.xib */,
 				7D7EF10124AC9213000E890C /* BaiTap04VC.swift */,
 				7D7EF10224AC9213000E890C /* BaiTap04VC.xib */,
 			);
@@ -163,6 +169,7 @@
 				7D7EF0F124AB25E9000E890C /* BaiTap01VC.xib in Resources */,
 				7D7EF0E324AB2584000E890C /* Assets.xcassets in Resources */,
 				7D7EF10024AC821C000E890C /* BaiTap02VC.xib in Resources */,
+				C47A5A1824B1B55F00423027 /* BaiTap03VC.xib in Resources */,
 				7D7EF10424AC9213000E890C /* BaiTap04VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47A5A1724B1B55F00423027 /* BaiTap03VC.swift in Sources */,
 				7D7EF0F024AB25E9000E890C /* BaiTap01VC.swift in Sources */,
 				7D7EF0F824AB440B000E890C /* PersonView.swift in Sources */,
 				7D7EF0DA24AB2582000E890C /* AppDelegate.swift in Sources */,
