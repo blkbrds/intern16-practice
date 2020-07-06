@@ -4,9 +4,13 @@ class DaGiac {
     var canh: Int
     var arrayCanh = [Int]()
 
-    init(canh: Int, arrayCanh: [Int]) {
-        self.canh = canh
-        self.arrayCanh = arrayCanh
+    init?(canh: Int, arrayCanh: [Int]) {
+        if canh == arrayCanh.count {
+            self.canh = canh
+            self.arrayCanh = arrayCanh
+        } else {
+            return nil
+        }
     }
 
     func tinhChuVi() -> Int {
@@ -25,19 +29,37 @@ class DaGiac {
     }
 }
 
+if let daGiac = DaGiac(canh: 3, arrayCanh: [8, 6, 12]) {
+    print("Chu vi cua da giac la: \(daGiac.tinhChuVi())")
+    daGiac.inCanh()
+} else {
+    print("Nhap sai vui long nhap lai")
+}
+
 // Bai3
 class TamGiac: DaGiac {
     // Override lai de tinh dien tich
-    override func tinhChuVi() -> Int {
-        var dienTich = 0
-        dienTich = (arrayCanh[0] + arrayCanh[1]) / 2
+    override init?(canh: Int, arrayCanh: [Int]) {
+        if canh == arrayCanh.count && arrayCanh[0] + arrayCanh[1] > arrayCanh[2] && arrayCanh[1] + arrayCanh [2] > 0 && arrayCanh[0] + arrayCanh [2] > arrayCanh[1] {
+            super.init(canh: canh, arrayCanh: arrayCanh)
+        } else {
+            return nil
+        }
+    }
+    func tinhChuVi() -> Float {
+        Float(super.tinhChuVi())
+    }
+    func tinhDienTich() -> Float {
+        var dienTich: Float = 0.0
+        let p: Float = self.tinhChuVi() / 2
+        let temp: Float = p * (p - Float(arrayCanh[0])) * (p - Float(arrayCanh[1])) * (p - Float(arrayCanh[2]))
+        dienTich = sqrt(temp)
         return dienTich
     }
 }
 
-let tamGiac = TamGiac(canh: 2, arrayCanh: [2, 2])
-print("Dien tich cua tam giac la: \(tamGiac.tinhChuVi())")
-
-let daGiac = DaGiac(canh: 3, arrayCanh: [1, 2, 3])
-print("Chu vi cua da giac la: \(daGiac.tinhChuVi())")
-daGiac.inCanh()
+if let tamGiac = TamGiac(canh: 3, arrayCanh: [8, 4, 11]) {
+    print("Dien tich cua tam giac la: \(tamGiac.tinhDienTich())")
+} else {
+    print("Nhap sai vui long nhap lai")
+}
