@@ -1,7 +1,8 @@
 import UIKit
 
-class BaiTap02: UIViewController {
+final class BaiTap02: UIViewController {
 
+    // MARK: - Propeties
     var x: CGFloat = 30
     var y: CGFloat = 80
 
@@ -21,10 +22,13 @@ class BaiTap02: UIViewController {
         User(name: "h", image: UIImageView(image: UIImage(named: "img_avatar_01"))),
         User(name: "j", image: UIImageView(image: UIImage(named: "img_avatar_01")))
     ]
-
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configSreen()
+    }
+    // MARK: - Private Methods
+    private func configSreen() {
         for index in 1...users.count {
             let frame = CGRect(x: x, y: y, width: 100, height: 100)
             // Tao doi tuong view

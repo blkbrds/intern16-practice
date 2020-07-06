@@ -34,7 +34,7 @@ final class BaiTap03: UIViewController {
         returnKeyType()
     }
     
-    // MARK: - Private
+    // MARK: - Private Methods
     private func returnKeyType() {
         userNameTextField.returnKeyType = .next
         passWordTextField.returnKeyType = .done

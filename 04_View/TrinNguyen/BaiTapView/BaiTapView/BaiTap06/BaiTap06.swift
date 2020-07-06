@@ -12,17 +12,15 @@ final class BaiTap06: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var monkeyImageView: UIImageView!
+    
+    // MARK: - Propeties
+    let scaleMax: CGFloat = 2.0
+    let scaleMin: CGFloat = 0.5
+    var imageScale: CGFloat = 1.0
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    // MARK: - Private Methods
-    private func configTextField() {
-        let scaleMax: CGFloat = 2.0
-        let scaleMin: CGFloat = 0.5
-        var imageScale: CGFloat = 1.0
     }
 
     // MARK: - IBActions
@@ -40,14 +38,13 @@ final class BaiTap06: UIViewController {
             view.transform = view.transform.rotated(by: recognizer.rotation)
             recognizer.rotation = 0
         }
-
     }
 
     @IBAction private func handlePan(recognizer: UIPanGestureRecognizer) {
-        let translation = recognizer.translation(in: view)// gan view vao translation
+        let translation = recognizer.translation(in: view) // gan view vao translation
         if let view = recognizer.view {
             view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
-        }// if view bang cai recognizer thi gan diem view bang diem o giua cong voi diem point
+        } // if view bang cai recognizer thi gan diem view bang diem o giua cong voi diem point
         recognizer.setTranslation(CGPoint.zero, in: view)
         // gan recognizer lai bang 0
     }
