@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D435F3B24B30CBE00DCC0A1 /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F3A24B30CBE00DCC0A1 /* BadgeButton.swift */; };
 		7D7EF0DA24AB2582000E890C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0D924AB2582000E890C /* AppDelegate.swift */; };
 		7D7EF0DC24AB2582000E890C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF0DB24AB2582000E890C /* SceneDelegate.swift */; };
 		7D7EF0E324AB2584000E890C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF0E224AB2584000E890C /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D435F3A24B30CBE00DCC0A1 /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 		7D7EF0D624AB2582000E890C /* BaiTap05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7EF0D924AB2582000E890C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D7EF0DB24AB2582000E890C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				7D7EF0F724AB440B000E890C /* PersonView.swift */,
 				C47A5A1924B1B75E00423027 /* SliderView.swift */,
+				7D435F3A24B30CBE00DCC0A1 /* BadgeButton.swift */,
 				7D7EF10524AC958A000E890C /* DatePickerView.swift */,
 			);
 			path = View;
@@ -191,6 +194,7 @@
 				7D7EF0DA24AB2582000E890C /* AppDelegate.swift in Sources */,
 				7D7EF0DC24AB2582000E890C /* SceneDelegate.swift in Sources */,
 				7D7EF10624AC958A000E890C /* DatePickerView.swift in Sources */,
+				7D435F3B24B30CBE00DCC0A1 /* BadgeButton.swift in Sources */,
 				7D7EF0FF24AC821C000E890C /* BaiTap02VC.swift in Sources */,
 				7D7EF10324AC9213000E890C /* BaiTap04VC.swift in Sources */,
 			);

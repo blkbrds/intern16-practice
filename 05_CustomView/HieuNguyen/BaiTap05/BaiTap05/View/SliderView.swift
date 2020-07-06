@@ -14,14 +14,15 @@ class SliderView: UIView {
     let valueSlider = UIImageView()
     let thumbSlider = UIView()
     let backgroundSlider = UIImageView()
-    
+    let numberLabel = UILabel()
+    var numberValue: CGFloat = 50
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
 
     convenience init(frame: CGRect, value: Int) {
         self.init(frame: frame)
-        setupSlider(value: value)
+        setupSlider(value: Int(numberValue))
     }
 
     required init?(coder: NSCoder) {
@@ -29,16 +30,17 @@ class SliderView: UIView {
     }
 
     func setupSlider(value: Int) {
+        print(bounds)
         backgroundSlider.image = UIImage(named: "backgroundSlider")
-        self.addSubview(backgroundSlider)
+        backgroundSlider.contentMode = .top
         backgroundSlider.frame = bounds
+        self.addSubview(backgroundSlider)
 
         valueSlider.image = UIImage(named: "valueSlider")
         valueSlider.frame = bounds
-//        valueSlider.contentMode = .bottom
+        valueSlider.contentMode = .top
         valueSlider.clipsToBounds = true
-//        valueSlider.frame.origin.y = thumbSlider.frame.origin.y
-//        valueSlider.frame.size.height = heightValue
+        valueSlider.frame.size.height = bounds.size.height / 2
         self.addSubview(valueSlider)
         
         thumbSlider.frame.size = CGSize(width: 150, height: 50)
@@ -48,12 +50,19 @@ class SliderView: UIView {
         thumbSlider.isUserInteractionEnabled = true
         thumbSlider.addGestureRecognizer(panGesture)
         self.addSubview(thumbSlider)
+        
+        numberLabel.text = "\(value)"
+        numberLabel.textColor = .white
+        numberLabel.frame = thumbSlider.bounds
+        numberLabel.textAlignment = .center
+        thumbSlider.addSubview(numberLabel)
+        
         print(value)
     }
     @objc func handleSlider(_ tapGesture: UIPanGestureRecognizer) {
         let sliderY = self.bounds.origin.y
         let sliderHeight = self.bounds.height
-        let heightValue = sliderHeight - tapGesture.view!.center.y
+        let heightValue = tapGesture.view!.center.y
         print("\(sliderY) \(sliderHeight) \(heightValue)")
         if tapGesture.state == .began || tapGesture.state == .changed {
             let translation = tapGesture.translation(in: self)
@@ -61,15 +70,13 @@ class SliderView: UIView {
             if gestureY > sliderY && gestureY < (sliderY + sliderHeight) {
                 tapGesture.view!.center = CGPoint(x: tapGesture.view!.center.x, y: tapGesture.view!.center.y + translation.y)
                 tapGesture.setTranslation(CGPoint.zero, in: self)
-                valueSlider.frame.origin.y = thumbSlider.frame.origin.y
                 valueSlider.frame.size.height = heightValue
+                numberValue = ((sliderHeight - heightValue) / sliderHeight) * 100
+                numberValue = CGFloat(round(numberValue))
+                numberLabel.text = "\(Int(numberValue))"
+                delegate?.sendValue(self, Int(numberValue))
             }
-        } else {
-//            let value = ((sliderHeight - heightValue) / sliderHeight) * 100
-//            let realValue = Double(round(value))
-//            valueLabel.text = " \(Int(realValue))"
-//            print(realValue)
-        }
+        } 
     }
 }
 protocol SliderViewDelegate: class {
