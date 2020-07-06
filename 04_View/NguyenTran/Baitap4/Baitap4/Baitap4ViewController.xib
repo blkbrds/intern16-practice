@@ -10,10 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap4ViewController" customModule="Baitap4" customModuleProvider="target">
             <connections>
                 <outlet property="blueColorSlider" destination="ewc-ML-5a9" id="2dT-g6-D3g"/>
-                <outlet property="colorDisplayView" destination="QCE-iI-fbw" id="6bd-z6-n8p"/>
+                <outlet property="colorDisplayView" destination="jq5-Go-gN4" id="vJb-30-yYi"/>
                 <outlet property="colorValueLabel" destination="fEx-7h-Tf8" id="Mpa-gg-adr"/>
                 <outlet property="greenColorSlider" destination="5i2-kB-p43" id="Q8g-8i-psP"/>
-                <outlet property="redColorSlider" destination="xhc-Dt-ATP" id="qdn-x4-aDd"/>
+                <outlet property="redColorSlider" destination="4H6-Wy-m3Q" id="MNp-XO-wEA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,12 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="xhc-Dt-ATP">
-                    <rect key="frame" x="95" y="407" width="272" height="30"/>
-                    <connections>
-                        <action selector="redColorSliderValueChanged:" destination="-1" eventType="valueChanged" id="gUj-WX-ykX"/>
-                    </connections>
-                </slider>
                 <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="5i2-kB-p43">
                     <rect key="frame" x="97" y="492" width="270" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -112,20 +106,20 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCE-iI-fbw">
-                    <rect key="frame" x="47" y="137" width="318" height="198"/>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="4H6-Wy-m3Q">
+                    <rect key="frame" x="97" y="406" width="270" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="greenColorSliderValueChanged:" destination="-1" eventType="valueChanged" id="dsQ-vU-I9S"/>
+                    </connections>
+                </slider>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jq5-Go-gN4">
+                    <rect key="frame" x="48" y="133" width="318" height="198"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <constraints>
-                <constraint firstItem="xhc-Dt-ATP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0Yx-Db-4kA"/>
-                <constraint firstItem="QCE-iI-fbw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FNC-60-o4u"/>
-                <constraint firstItem="QCE-iI-fbw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MQu-9m-zlu"/>
-                <constraint firstItem="xhc-Dt-ATP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qMd-jT-chy"/>
-                <constraint firstItem="xhc-Dt-ATP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uYp-Fq-Ucu"/>
-                <constraint firstItem="xhc-Dt-ATP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wGd-2A-G9k"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </view>

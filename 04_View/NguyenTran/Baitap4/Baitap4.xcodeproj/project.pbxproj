@@ -10,6 +10,11 @@
 		223B4F6824B0F7C30002B251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B4F6724B0F7C30002B251 /* AppDelegate.swift */; };
 		223BAF7224B1BAE80074C172 /* Baitap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223BAF7024B1BAE80074C172 /* Baitap4ViewController.swift */; };
 		223BAF7324B1BAE80074C172 /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223BAF7124B1BAE80074C172 /* Baitap4ViewController.xib */; };
+		2251F0A324B20DF600DCE1C2 /* Baitap5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251F0A124B20DF600DCE1C2 /* Baitap5ViewController.swift */; };
+		2251F0A424B20DF600DCE1C2 /* Baitap5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2251F0A224B20DF600DCE1C2 /* Baitap5ViewController.xib */; };
+		2251F0A724B2441300DCE1C2 /* Baitap6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251F0A524B2441300DCE1C2 /* Baitap6ViewController.swift */; };
+		2251F0A824B2441300DCE1C2 /* Baitap6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2251F0A624B2441300DCE1C2 /* Baitap6ViewController.xib */; };
+		2251F0AA24B2443000DCE1C2 /* monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 2251F0A924B2443000DCE1C2 /* monkey.png */; };
 		228067C324ACD6B50027FDD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228067C224ACD6B50027FDD4 /* SceneDelegate.swift */; };
 		228067CA24ACD6B60027FDD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228067C924ACD6B60027FDD4 /* Assets.xcassets */; };
 		228067CD24ACD6B60027FDD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228067CB24ACD6B60027FDD4 /* LaunchScreen.storyboard */; };
@@ -25,6 +30,11 @@
 		223B4F6724B0F7C30002B251 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223BAF7024B1BAE80074C172 /* Baitap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4ViewController.swift; sourceTree = "<group>"; };
 		223BAF7124B1BAE80074C172 /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
+		2251F0A124B20DF600DCE1C2 /* Baitap5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap5ViewController.swift; sourceTree = "<group>"; };
+		2251F0A224B20DF600DCE1C2 /* Baitap5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap5ViewController.xib; sourceTree = "<group>"; };
+		2251F0A524B2441300DCE1C2 /* Baitap6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap6ViewController.swift; sourceTree = "<group>"; };
+		2251F0A624B2441300DCE1C2 /* Baitap6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap6ViewController.xib; sourceTree = "<group>"; };
+		2251F0A924B2443000DCE1C2 /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
 		228067BD24ACD6B50027FDD4 /* Baitap4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitap4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228067C224ACD6B50027FDD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		228067C924ACD6B60027FDD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +93,10 @@
 				22B692A324B043C700C5C2AD /* Baitap3ViewController.xib */,
 				223BAF7024B1BAE80074C172 /* Baitap4ViewController.swift */,
 				223BAF7124B1BAE80074C172 /* Baitap4ViewController.xib */,
+				2251F0A124B20DF600DCE1C2 /* Baitap5ViewController.swift */,
+				2251F0A224B20DF600DCE1C2 /* Baitap5ViewController.xib */,
+				2251F0A524B2441300DCE1C2 /* Baitap6ViewController.swift */,
+				2251F0A624B2441300DCE1C2 /* Baitap6ViewController.xib */,
 			);
 			path = Baitap4;
 			sourceTree = "<group>";
@@ -90,6 +104,7 @@
 		228067D824ACDBC40027FDD4 /* Supporting file */ = {
 			isa = PBXGroup;
 			children = (
+				2251F0A924B2443000DCE1C2 /* monkey.png */,
 				228067DB24ACE0C50027FDD4 /* avatar.png */,
 			);
 			path = "Supporting file";
@@ -153,10 +168,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2251F0A824B2441300DCE1C2 /* Baitap6ViewController.xib in Resources */,
 				223BAF7324B1BAE80074C172 /* Baitap4ViewController.xib in Resources */,
 				22B692A524B043C700C5C2AD /* Baitap3ViewController.xib in Resources */,
 				228067DC24ACE0C50027FDD4 /* avatar.png in Resources */,
+				2251F0A424B20DF600DCE1C2 /* Baitap5ViewController.xib in Resources */,
 				228067CD24ACD6B60027FDD4 /* LaunchScreen.storyboard in Resources */,
+				2251F0AA24B2443000DCE1C2 /* monkey.png in Resources */,
 				228067CA24ACD6B60027FDD4 /* Assets.xcassets in Resources */,
 				228067D724ACD7610027FDD4 /* Baitap1ViewController.xib in Resources */,
 			);
@@ -173,8 +191,10 @@
 				228067DF24ACE9900027FDD4 /* Baitap2ViewController.swift in Sources */,
 				223BAF7224B1BAE80074C172 /* Baitap4ViewController.swift in Sources */,
 				22B692A424B043C700C5C2AD /* Baitap3ViewController.swift in Sources */,
+				2251F0A724B2441300DCE1C2 /* Baitap6ViewController.swift in Sources */,
 				228067D624ACD7610027FDD4 /* Baitap1ViewController.swift in Sources */,
 				228067C324ACD6B50027FDD4 /* SceneDelegate.swift in Sources */,
+				2251F0A324B20DF600DCE1C2 /* Baitap5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -296,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -310,7 +330,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2PP8U449W;
 				INFOPLIST_FILE = Baitap4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -318,6 +340,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nguyentran.Baitap4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

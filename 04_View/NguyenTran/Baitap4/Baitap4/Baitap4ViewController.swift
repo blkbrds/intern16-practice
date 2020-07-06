@@ -14,7 +14,7 @@ class Baitap4ViewController: UIViewController {
     @IBOutlet weak var colorDisplayView: UIView!
 
     @IBOutlet weak var redColorSlider: UISlider!
-
+    
     @IBOutlet weak var greenColorSlider: UISlider!
 
     @IBOutlet weak var blueColorSlider: UISlider!
