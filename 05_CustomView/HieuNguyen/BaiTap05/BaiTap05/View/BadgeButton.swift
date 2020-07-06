@@ -9,9 +9,6 @@
 import UIKit
 
 class BadgeButton: UIButton {
-
-
-    
     enum PositionBadge {
         case topLeft
         case topRight
@@ -22,21 +19,27 @@ class BadgeButton: UIButton {
         case bottomRight
         case bottomCenter
 
-        var badgeViewPoint: CGPoint {
+        func calBadgeViewPoint(sizeButton: CGSize) -> CGPoint {
             switch self {
-                case .topLeft: return CGPoint(x: 0, y: 0)
-                case .topRight: return CGPoint(x: 200, y: 0)
-                case .topCenter: return CGPoint(x: 100, y: 0)
-                case .centerLeft: return CGPoint(x: 0, y: 25)
-                case .centerRight: return CGPoint(x: 200, y: 50)
-                case .bottomLeft: return CGPoint(x: 0, y: 100)
-                case .bottomRight: return CGPoint(x: 200, y: 100)
-                case .bottomCenter: return CGPoint(x: 100, y: 100)
+            case .topLeft: return CGPoint(x: 0, y: 0)
+            case .topRight: return CGPoint(x: sizeButton.width, y: 0)
+            case .topCenter: return CGPoint(x: sizeButton.width / 2, y: 0)
+            case .centerLeft: return CGPoint(x: 0, y: sizeButton.height / 2)
+            case .centerRight: return CGPoint(x: sizeButton.width, y: sizeButton.height / 2)
+            case .bottomLeft: return CGPoint(x: 0, y: sizeButton.height)
+            case .bottomRight: return CGPoint(x: sizeButton.width, y: sizeButton.height)
+            case .bottomCenter: return CGPoint(x: sizeButton.width / 2, y: sizeButton.height)
             }
         }
 
-        var badgeViewSize: CGSize {
-            return CGSize(width: 48, height: 32)
+        func badgeViewSize(number: Int) -> CGSize {
+            if number < 10 {
+                return CGSize(width: 24, height: 32)
+            } else if number < 99 {
+                return CGSize(width: 32, height: 32)
+            } else {
+                return CGSize(width: 48, height: 32)
+            }
         }
     }
 
@@ -46,7 +49,7 @@ class BadgeButton: UIButton {
 
     convenience init(frame: CGRect, pointNumber: Int, name: String, colorBtn: UIColor, position: PositionBadge) {
         self.init(frame: frame)
-//        heightButton = frame.size.height
+        //heightButton = frame.size.height
 //        widthButton = frame.size.width
         self.layer.cornerRadius = 15
         self.setTitle(name, for: .normal)
@@ -57,21 +60,28 @@ class BadgeButton: UIButton {
     }
 
     func setupBadgeView(position: PositionBadge, number: Int) {
+        if number == 0 { return }
+        let sizeButton: CGSize = self.frame.size
+
         let badgeView = UIView()
         self.addSubview(badgeView)
-        badgeView.frame.size = position.badgeViewSize
-        badgeView.center = position.badgeViewPoint
+        badgeView.frame.size = position.badgeViewSize(number: number)
+        badgeView.center = position.calBadgeViewPoint(sizeButton: sizeButton)
         badgeView.layer.cornerRadius = 12
         badgeView.layer.masksToBounds = true
         badgeView.backgroundColor = #colorLiteral(red: 0.9995597005, green: 0, blue: 0, alpha: 1)
 
         let numberLabel = UILabel()
-        numberLabel.frame = bounds
-        numberLabel.text = String(number)
+        if number > 99 {
+            numberLabel.text = "99+"
+        } else {
+            numberLabel.text = String(number)
+        }
         numberLabel.textColor = .black
         numberLabel.textAlignment = .center
-        numberLabel.font = UIFont(name: "Menlo", size: 16)
+        numberLabel.font = UIFont.systemFont(ofSize: 17)
         badgeView.addSubview(numberLabel)
+        numberLabel.frame = badgeView.bounds
     }
 
     required init?(coder: NSCoder) {
