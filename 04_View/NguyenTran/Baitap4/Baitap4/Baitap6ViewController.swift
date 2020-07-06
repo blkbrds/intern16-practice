@@ -27,7 +27,7 @@ class Baitap6ViewController: UIViewController {
         monkeyImage.addGestureRecognizer(rotationGesture)
         
         let longPressGesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressMonkey))
-        longPressGesture.minimumPressDuration = 1
+        longPressGesture.minimumPressDuration = 5
         monkeyImage.addGestureRecognizer(longPressGesture)
         
         monkeyImage.isUserInteractionEnabled = true

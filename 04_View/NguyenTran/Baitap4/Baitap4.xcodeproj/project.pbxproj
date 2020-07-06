@@ -22,6 +22,8 @@
 		228067D724ACD7610027FDD4 /* Baitap1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228067D524ACD7610027FDD4 /* Baitap1ViewController.xib */; };
 		228067DC24ACE0C50027FDD4 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 228067DB24ACE0C50027FDD4 /* avatar.png */; };
 		228067DF24ACE9900027FDD4 /* Baitap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228067DE24ACE9900027FDD4 /* Baitap2ViewController.swift */; };
+		22870CCC24B33361008D4E86 /* Baitap7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22870CCA24B33361008D4E86 /* Baitap7ViewController.swift */; };
+		22870CCD24B33361008D4E86 /* Baitap7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22870CCB24B33361008D4E86 /* Baitap7ViewController.xib */; };
 		22B692A424B043C700C5C2AD /* Baitap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B692A224B043C700C5C2AD /* Baitap3ViewController.swift */; };
 		22B692A524B043C700C5C2AD /* Baitap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B692A324B043C700C5C2AD /* Baitap3ViewController.xib */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		228067DB24ACE0C50027FDD4 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		228067DD24ACE9900027FDD4 /* Baitap2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Baitap2ViewController.xib; path = "/Users/mba0245p/intern16-practice/04_View/NguyenTran/Baitap4/Baitap4/Baitap2ViewController.xib"; sourceTree = "<absolute>"; };
 		228067DE24ACE9900027FDD4 /* Baitap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Baitap2ViewController.swift; path = "/Users/mba0245p/intern16-practice/04_View/NguyenTran/Baitap4/Baitap4/Baitap2ViewController.swift"; sourceTree = "<absolute>"; };
+		22870CCA24B33361008D4E86 /* Baitap7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap7ViewController.swift; sourceTree = "<group>"; };
+		22870CCB24B33361008D4E86 /* Baitap7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap7ViewController.xib; sourceTree = "<group>"; };
 		22B692A224B043C700C5C2AD /* Baitap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap3ViewController.swift; sourceTree = "<group>"; };
 		22B692A324B043C700C5C2AD /* Baitap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap3ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 				2251F0A224B20DF600DCE1C2 /* Baitap5ViewController.xib */,
 				2251F0A524B2441300DCE1C2 /* Baitap6ViewController.swift */,
 				2251F0A624B2441300DCE1C2 /* Baitap6ViewController.xib */,
+				22870CCA24B33361008D4E86 /* Baitap7ViewController.swift */,
+				22870CCB24B33361008D4E86 /* Baitap7ViewController.xib */,
 			);
 			path = Baitap4;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 				2251F0A424B20DF600DCE1C2 /* Baitap5ViewController.xib in Resources */,
 				228067CD24ACD6B60027FDD4 /* LaunchScreen.storyboard in Resources */,
 				2251F0AA24B2443000DCE1C2 /* monkey.png in Resources */,
+				22870CCD24B33361008D4E86 /* Baitap7ViewController.xib in Resources */,
 				228067CA24ACD6B60027FDD4 /* Assets.xcassets in Resources */,
 				228067D724ACD7610027FDD4 /* Baitap1ViewController.xib in Resources */,
 			);
@@ -192,6 +199,7 @@
 				223BAF7224B1BAE80074C172 /* Baitap4ViewController.swift in Sources */,
 				22B692A424B043C700C5C2AD /* Baitap3ViewController.swift in Sources */,
 				2251F0A724B2441300DCE1C2 /* Baitap6ViewController.swift in Sources */,
+				22870CCC24B33361008D4E86 /* Baitap7ViewController.swift in Sources */,
 				228067D624ACD7610027FDD4 /* Baitap1ViewController.swift in Sources */,
 				228067C324ACD6B50027FDD4 /* SceneDelegate.swift in Sources */,
 				2251F0A324B20DF600DCE1C2 /* Baitap5ViewController.swift in Sources */,
