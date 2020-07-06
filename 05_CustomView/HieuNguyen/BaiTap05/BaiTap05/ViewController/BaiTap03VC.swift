@@ -10,21 +10,23 @@ import UIKit
 
 class BaiTap03VC: UIViewController {
 
+    @IBOutlet weak var valueTextfield: UITextField!
+    var valueSlider:Int!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        valueTextfield.text = "50"
+        valueSlider = Int(valueTextfield.text!)
+        let sliderView = SliderView(frame: CGRect(x: 150, y: 250, width: 50, height: 500), value: valueSlider)
+        sliderView.delegate = self
+        view.addSubview(sliderView)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+}
+extension BaiTap03VC: SliderViewDelegate {
+    func sendValue(_ view: UIView, _ value: Int) {
+        valueTextfield.text = String(value)
     }
-    */
-
+    
+    
 }
