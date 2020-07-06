@@ -1,10 +1,10 @@
-import UIKit
+import Foundation
 
-    // hàm tìm substring trong string
+// hàm tìm substring trong string
 func findSub(_ parents: String, _ child: String) -> Int {
     var results: Int = 0
-    var dem = 0
-    var i = 0
+    var dem: Int = 0
+    var i: Int = 0
     var checkSub: String = ""
     let count: Int = child.count
     // generic type
@@ -30,8 +30,3 @@ func findSub(_ parents: String, _ child: String) -> Int {
 }
 
 findSub("uiuiuahsfkauiuidfhdfh", "uiu")
-
-
-
-
-

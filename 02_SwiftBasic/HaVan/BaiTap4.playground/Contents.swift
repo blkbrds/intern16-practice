@@ -1,6 +1,6 @@
-
 import Foundation
 //MARK: fibonacci
+
 func fiboN(to n: Int) -> Int {
     if n == 0 || n == 1 {
         return n
@@ -50,9 +50,10 @@ func tinhSin(with x: Float) -> Float {
 func tinhCos(with x: Float) -> Float {
     return sqrt(1 - powf(tinhSin(with: x), 2))
 }
+
 //MARK: số hạnh phúc
 //Kiểm tra số chữ số có trong 1 số
-func kiemTraChuSo(with num:Int) -> Int {
+func kiemTraChuSo(with num: Int) -> Int {
     var temp = num
     var count = 0
     while temp >= 10 {
@@ -64,7 +65,7 @@ func kiemTraChuSo(with num:Int) -> Int {
 }
 
 //Kiểm tra 1 số có là số hạnh phúc hay không
-func isHappy(with num:Int) -> Bool {
+func isHappy(with num: Int) -> Bool {
     let soChuSo = kiemTraChuSo(with: num)
     var sum1 = 0
     var sum2 = 0
@@ -92,7 +93,7 @@ func isHappy(with num:Int) -> Bool {
 }
 
 func listHappyNumbers() -> [Int] {
-    var listNums = [Int]()
+    var listNums: [Int] = []
     for i in 0...10000 {
         if isHappy(with: i) {
             listNums.append(i)
@@ -107,4 +108,3 @@ print("liet ke 10 số fibo đầu tiên \(listFibonaciNumber(lowerThan: 10)) ")
 print("sin(0) = \(tinhSin(with: 0))")
 print("cos(0) \(tinhCos(with: 0))")
 print("Số hạnh phúc bé hơn 10000 là : \(listHappyNumbers())")
-
