@@ -1,22 +1,16 @@
-//
-//  UserView.swift
-//  BaiTapCustomView1
-//
-//  Created by MacBook Pro on 7/5/20.
-//  Copyright © 2020 asiantech. All rights reserved.
-//
-
 import UIKit
-
+// MARK: - Protocol
 protocol UserviewDelegate : class {
     func userview(user : String?)
 }
 
 class UserView: UIView {
+    // MARK: - Properties
     var userAvartar: UIImageView?
     var username: UILabel?
     weak var delegate: UserviewDelegate?
     
+    // MARK: - Lift Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -41,13 +35,13 @@ class UserView: UIView {
         //button.addTarget(self, action: #selector(clickButton), for: .touchUpInside)
         addSubview(button)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Objc Funtion
-    @objc func clickButton(){
+    @objc func clickButton() {
         delegate?.userview(user: username?.text)
-        //print(self.username?.text ?? "noname")
     }
 }

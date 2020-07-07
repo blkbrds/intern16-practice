@@ -1,13 +1,4 @@
-//
-//  BagdeNumberButton.swift
-//  BaiTapCustomView1
-//
-//  Created by MacBook Pro on 7/6/20.
-//  Copyright © 2020 asiantech. All rights reserved.
-//
-
 import UIKit
-
 class BagdeNumberButton: UIButton {
     
     enum PositionBadge {

@@ -1,31 +1,24 @@
 //
-//  MySliderView.swift
-//  BaiTapCustomView1
-//
-//  Created by MacBook Pro on 7/5/20.
-//  Copyright © 2020 asiantech. All rights reserved.
-//
-
 import UIKit
-
-
+// MARK: - Protocol
 protocol SliderViewDelegate: class {
     func changeValue(value: Int)
 }
 
 class MySliderView: UIView {
-    
+    // MARK: - IBOutlet Properties
     @IBOutlet weak var blueImageView: UIImageView!
     @IBOutlet weak var whiteImageView: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var thumbView: UIView!
     weak var delegate: SliderViewDelegate?
-    var value:Int?
+    var value: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    // MARK: - Overide Funtion
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: whiteImageView)
@@ -42,6 +35,7 @@ class MySliderView: UIView {
         delegate?.changeValue(value: number)
     }
     
+    // MARK: - Public Funtion
     func setView() {
         guard let num = value else { return }
         let newHeight = (whiteImageView.bounds.height * CGFloat(num)) / 100
