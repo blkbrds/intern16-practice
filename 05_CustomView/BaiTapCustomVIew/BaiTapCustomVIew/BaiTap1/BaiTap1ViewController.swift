@@ -53,6 +53,7 @@ final class BaiTap1ViewController: UIViewController {
     }
     
 }
+
 //MARK: - Extention
 extension BaiTap1ViewController: MyAvatarDelegate {
     func userView(_ person: MyClass, nameLabel name: String) {

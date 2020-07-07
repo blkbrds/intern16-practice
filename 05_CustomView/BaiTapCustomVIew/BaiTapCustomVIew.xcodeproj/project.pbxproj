@@ -12,6 +12,10 @@
 		5211604424B179CC0099C687 /* BaiTap2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5211604224B179CC0099C687 /* BaiTap2ViewController.xib */; };
 		5211604624B17E5F0099C687 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211604524B17E5F0099C687 /* MySliderView.swift */; };
 		5211604824B17E930099C687 /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5211604724B17E920099C687 /* MySliderView.xib */; };
+		5211605624B367EE0099C687 /* BaiTap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211605424B367EE0099C687 /* BaiTap3ViewController.swift */; };
+		5211605724B367EE0099C687 /* BaiTap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5211605524B367EE0099C687 /* BaiTap3ViewController.xib */; };
+		5211605924B369160099C687 /* MyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211605824B369160099C687 /* MyButtonView.swift */; };
+		5211605F24B450620099C687 /* NotificationNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211605E24B450620099C687 /* NotificationNumber.swift */; };
 		52AE0CCD24AF14F50009BC2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE0CCC24AF14F50009BC2D /* AppDelegate.swift */; };
 		52AE0CCF24AF14F50009BC2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE0CCE24AF14F50009BC2D /* SceneDelegate.swift */; };
 		52AE0CD624AF14F70009BC2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AE0CD524AF14F70009BC2D /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 		5211604224B179CC0099C687 /* BaiTap2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap2ViewController.xib; sourceTree = "<group>"; };
 		5211604524B17E5F0099C687 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
 		5211604724B17E920099C687 /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
+		5211605424B367EE0099C687 /* BaiTap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3ViewController.swift; sourceTree = "<group>"; };
+		5211605524B367EE0099C687 /* BaiTap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3ViewController.xib; sourceTree = "<group>"; };
+		5211605824B369160099C687 /* MyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonView.swift; sourceTree = "<group>"; };
+		5211605E24B450620099C687 /* NotificationNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNumber.swift; sourceTree = "<group>"; };
 		52AE0CC924AF14F50009BC2D /* BaiTapCustomVIew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapCustomVIew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AE0CCC24AF14F50009BC2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AE0CCE24AF14F50009BC2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +68,17 @@
 			path = BaiTap2;
 			sourceTree = "<group>";
 		};
+		5211604F24B361790099C687 /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+				5211605424B367EE0099C687 /* BaiTap3ViewController.swift */,
+				5211605524B367EE0099C687 /* BaiTap3ViewController.xib */,
+				5211605824B369160099C687 /* MyButtonView.swift */,
+				5211605E24B450620099C687 /* NotificationNumber.swift */,
+			);
+			path = BaiTap3;
+			sourceTree = "<group>";
+		};
 		52AE0CC024AF14F50009BC2D = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +98,7 @@
 		52AE0CCB24AF14F50009BC2D /* BaiTapCustomVIew */ = {
 			isa = PBXGroup;
 			children = (
+				5211604F24B361790099C687 /* BaiTap3 */,
 				5211604024B1796A0099C687 /* BaiTap2 */,
 				52AE0CE424AF17640009BC2D /* BaiTap1 */,
 				52AE0CCC24AF14F50009BC2D /* AppDelegate.swift */,
@@ -159,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5211605724B367EE0099C687 /* BaiTap3ViewController.xib in Resources */,
 				5211604424B179CC0099C687 /* BaiTap2ViewController.xib in Resources */,
 				52AE0CD924AF14F70009BC2D /* LaunchScreen.storyboard in Resources */,
 				52AE0CE324AF15BD0009BC2D /* BaiTap1ViewController.xib in Resources */,
@@ -177,8 +198,11 @@
 				52AE0CE624AF179A0009BC2D /* MyClass.swift in Sources */,
 				52AE0CCD24AF14F50009BC2D /* AppDelegate.swift in Sources */,
 				52AE0CCF24AF14F50009BC2D /* SceneDelegate.swift in Sources */,
+				5211605F24B450620099C687 /* NotificationNumber.swift in Sources */,
 				5211603F24B0760F0099C687 /* People.swift in Sources */,
+				5211605924B369160099C687 /* MyButtonView.swift in Sources */,
 				5211604324B179CC0099C687 /* BaiTap2ViewController.swift in Sources */,
+				5211605624B367EE0099C687 /* BaiTap3ViewController.swift in Sources */,
 				52AE0CE224AF15BD0009BC2D /* BaiTap1ViewController.swift in Sources */,
 				5211604624B17E5F0099C687 /* MySliderView.swift in Sources */,
 			);

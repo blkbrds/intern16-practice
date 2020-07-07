@@ -27,7 +27,6 @@ final class MySliderView: UIView {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     // MARK: - Private functions
@@ -40,8 +39,6 @@ final class MySliderView: UIView {
         let number =  ( processView.frame.height / whiteView.frame.height) * 100
         processValue.text = String(format: "%.0f", number)
         delegate?.sendValue(with: Float(number) )
-        
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -72,6 +69,7 @@ final class MySliderView: UIView {
         print(whiteView.bounds.minY)
         changeProcessView(with: thumpView.center.y)
     }
+    
     //MARK: -Public functions
     func setViewAndProcess() {
         guard let num = processNum else { return }
@@ -81,7 +79,4 @@ final class MySliderView: UIView {
         thumpView.center.y = newY
         processValue.text = String(format: "%.0f", num)
     }
-    
-    
-    
 }
