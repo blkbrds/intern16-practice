@@ -48,14 +48,11 @@ class TamGiac: DaGiac {
     }
 
     func checkTamGiac(canh: Int, arrayCanh: [Int]) -> Bool {
-        if canh == arrayCanh.count && arrayCanh[0] + arrayCanh[1] > arrayCanh[2] && arrayCanh[1] + arrayCanh [2] > arrayCanh[0] && arrayCanh[0] + arrayCanh [2] > arrayCanh[1] {
-            return true
-        }
-        return false
+        return canh == arrayCanh.count && arrayCanh[0] + arrayCanh[1] > arrayCanh[2] && arrayCanh[1] + arrayCanh [2] > arrayCanh[0] && arrayCanh[0] + arrayCanh [2] > arrayCanh[1]
     }
 
     func tinhChuVi() -> Float {
-        Float(super.tinhChuVi())
+        return Float(super.tinhChuVi())
     }
 
     func tinhDienTich() -> Float {
@@ -67,7 +64,7 @@ class TamGiac: DaGiac {
     }
 }
 
-if let tamGiac = TamGiac(canh: 3, arrayCanh: [8, 4, 13]) {
+if let tamGiac = TamGiac(canh: 2, arrayCanh: [8, 4, 13]) {
     print("Dien tich cua tam giac la: \(tamGiac.tinhDienTich())")
 } else {
     print("Nhap sai vui long nhap lai")
