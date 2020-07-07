@@ -63,7 +63,7 @@
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="PER-OO-rcQ"/>
             </view>
-            <point key="canvasLocation" x="32.799999999999997" y="47.290640394088669"/>
+            <point key="canvasLocation" x="-260" y="-138"/>
         </viewController>
     </objects>
 </document>

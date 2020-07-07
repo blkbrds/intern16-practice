@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D435F4024B415FF00DCC0A1 /* Bai6c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F3E24B415FF00DCC0A1 /* Bai6c.swift */; };
+		7D435F4124B415FF00DCC0A1 /* Bai6c.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F3F24B415FF00DCC0A1 /* Bai6c.xib */; };
+		7D435F4424B41B3000DCC0A1 /* Bai6d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F4224B41B3000DCC0A1 /* Bai6d.swift */; };
+		7D435F4524B41B3000DCC0A1 /* Bai6d.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F4324B41B3000DCC0A1 /* Bai6d.xib */; };
+		7D435F4824B41C8500DCC0A1 /* Bai6e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F4624B41C8500DCC0A1 /* Bai6e.swift */; };
+		7D435F4924B41C8500DCC0A1 /* Bai6e.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F4724B41C8500DCC0A1 /* Bai6e.xib */; };
 		7D7EF14224AED699000E890C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF14124AED698000E890C /* AppDelegate.swift */; };
 		7D7EF14424AED699000E890C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF14324AED699000E890C /* SceneDelegate.swift */; };
 		7D7EF14624AED699000E890C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF14524AED699000E890C /* ViewController.swift */; };
@@ -58,6 +64,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D435F3E24B415FF00DCC0A1 /* Bai6c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6c.swift; sourceTree = "<group>"; };
+		7D435F3F24B415FF00DCC0A1 /* Bai6c.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6c.xib; sourceTree = "<group>"; };
+		7D435F4224B41B3000DCC0A1 /* Bai6d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6d.swift; sourceTree = "<group>"; };
+		7D435F4324B41B3000DCC0A1 /* Bai6d.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6d.xib; sourceTree = "<group>"; };
+		7D435F4624B41C8500DCC0A1 /* Bai6e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6e.swift; sourceTree = "<group>"; };
+		7D435F4724B41C8500DCC0A1 /* Bai6e.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6e.xib; sourceTree = "<group>"; };
 		7D7EF13E24AED698000E890C /* BaiTap07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap07.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7EF14124AED698000E890C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D7EF14324AED699000E890C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +235,12 @@
 				7D7EF1A024AF3A09000E890C /* Bai6a.xib */,
 				7D7EF1A324AF3D23000E890C /* Bai6b.swift */,
 				7D7EF1A424AF3D23000E890C /* Bai6b.xib */,
+				7D435F3E24B415FF00DCC0A1 /* Bai6c.swift */,
+				7D435F3F24B415FF00DCC0A1 /* Bai6c.xib */,
+				7D435F4224B41B3000DCC0A1 /* Bai6d.swift */,
+				7D435F4324B41B3000DCC0A1 /* Bai6d.xib */,
+				7D435F4624B41C8500DCC0A1 /* Bai6e.swift */,
+				7D435F4724B41C8500DCC0A1 /* Bai6e.xib */,
 			);
 			path = BaiTap06;
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D435F4524B41B3000DCC0A1 /* Bai6d.xib in Resources */,
 				7D7EF19024AF31FF000E890C /* 5d.xib in Resources */,
 				7D7EF19424AF335B000E890C /* 5e.xib in Resources */,
 				7D7EF18824AF2981000E890C /* 5b.xib in Resources */,
@@ -358,10 +377,12 @@
 				7D7EF18C24AF30E1000E890C /* 5c.xib in Resources */,
 				7D7EF14924AED699000E890C /* Main.storyboard in Resources */,
 				C42F6BF824B0172500A2184E /* BaiTap11VC.xib in Resources */,
+				7D435F4124B415FF00DCC0A1 /* Bai6c.xib in Resources */,
 				7D7EF18424AF24C3000E890C /* 5a.xib in Resources */,
 				7D7EF17124AF1CE7000E890C /* BaiTap04dVC.xib in Resources */,
 				C4AC2B8224AF6A85009A724D /* BaiTap09VC.xib in Resources */,
 				7D7EF1A624AF3D23000E890C /* Bai6b.xib in Resources */,
+				7D435F4924B41C8500DCC0A1 /* Bai6e.xib in Resources */,
 				7D7EF16D24AF1959000E890C /* BaiTap04cVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,11 +411,14 @@
 				C42F6BFC24B019D600A2184E /* BaiTap12VC.swift in Sources */,
 				7D7EF1A124AF3A09000E890C /* Bai6a.swift in Sources */,
 				7D7EF16C24AF1959000E890C /* BaiTap04cVC.swift in Sources */,
+				7D435F4024B415FF00DCC0A1 /* Bai6c.swift in Sources */,
 				7D7EF15C24AEDB7A000E890C /* BaiTap03aVC.swift in Sources */,
 				C4FB353F24B03278006555D3 /* BaiTap14VC.swift in Sources */,
 				7D7EF19324AF335B000E890C /* 5e.swift in Sources */,
 				7D7EF14424AED699000E890C /* SceneDelegate.swift in Sources */,
+				7D435F4424B41B3000DCC0A1 /* Bai6d.swift in Sources */,
 				7D7EF18B24AF30E1000E890C /* 5c.swift in Sources */,
+				7D435F4824B41C8500DCC0A1 /* Bai6e.swift in Sources */,
 				C4AC2B8124AF6A85009A724D /* BaiTap09VC.swift in Sources */,
 				C42F6C0124B02A9400A2184E /* BaiTap13VC.swift in Sources */,
 			);

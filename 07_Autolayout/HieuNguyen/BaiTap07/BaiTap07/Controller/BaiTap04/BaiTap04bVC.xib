@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,25 +14,25 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq0-xG-shN">
-                    <rect key="frame" x="134.5" y="454.5" width="115" height="115"/>
+                    <rect key="frame" x="72.5" y="417" width="62" height="62"/>
                     <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Lq0-xG-shN" secondAttribute="height" multiplier="1:1" id="Mgi-VN-nz4"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WP0-gT-u5f">
-                    <rect key="frame" x="518.5" y="454.5" width="115" height="115"/>
+                    <rect key="frame" x="279.5" y="417" width="62" height="62"/>
                     <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="WP0-gT-u5f" secondAttribute="height" multiplier="1:1" id="6lm-tz-8Hk"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCj-fE-U4l">
-                    <rect key="frame" x="326.5" y="454.5" width="115" height="115"/>
+                    <rect key="frame" x="176" y="417" width="62" height="62"/>
                     <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="DCj-fE-U4l" secondAttribute="height" multiplier="1:1" id="nd8-EF-gIj"/>
@@ -52,7 +52,7 @@
                 <constraint firstItem="DCj-fE-U4l" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pED-ZA-Vhd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="-103" y="119"/>
         </view>
     </objects>
 </document>
