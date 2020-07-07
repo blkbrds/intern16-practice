@@ -8,11 +8,12 @@
 
 import UIKit
 
+// MARK: Protocol
 protocol MySliderViewDelegate: class {
     func sliderView(_ sliderView: MySliderView, didSelcect: Int)
 }
 
-class MySliderView: UIView {
+final class MySliderView: UIView {
 
     // MARK: IBOutlets
     @IBOutlet private weak var grayImageView: UIImageView!
@@ -20,13 +21,11 @@ class MySliderView: UIView {
     @IBOutlet private weak var sliderView: UIView!
     @IBOutlet private weak var valueLabel: UILabel!
 
+    // MARK: Propeties
     weak var delegate: MySliderViewDelegate?
     var value: Int?
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-    
+
+    // MARK: Private Methods
     func changeView(y: CGFloat) {
         blueImageView.frame = CGRect(x: blueImageView.frame.origin.x, y: y, width: blueImageView.frame.width, height: grayImageView.frame.height - y)
     }
@@ -49,7 +48,7 @@ class MySliderView: UIView {
             delegate?.sliderView(self, didSelcect: Int(temp)!)
         }
     }
-    
+
     func setView() {
         // Kiem tra neu khong co value thi return
         guard let temp = value else { return }
@@ -60,4 +59,3 @@ class MySliderView: UIView {
         valueLabel.text = String(temp)
     }
 }
-

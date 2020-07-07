@@ -15,7 +15,7 @@ protocol MyAvatarDelegate: class {
 final class MyAvatar: UIView {
 
     //MARK: Propeties
-    var x: CGFloat = 30
+    var x: CGFloat = 40
     var y: CGFloat = 80
     weak var delegate: MyAvatarDelegate?
 
@@ -77,10 +77,10 @@ final class MyAvatar: UIView {
             clickButton.backgroundColor = .clear
             clickButton.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
             addSubview(clickButton)
-            x += 110
+            x += 120
             if index % 3 == 0 {
                 y += 160
-                x = 30
+                x = 40
             }
         }
     }

@@ -10,6 +10,7 @@
 		703BE12924B40FFE007C4CFB /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE12824B40FFE007C4CFB /* MySliderView.xib */; };
 		703BE13224B412F8007C4CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE13024B412F8007C4CFB /* ViewController.swift */; };
 		703BE13324B412F8007C4CFB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE13124B412F8007C4CFB /* ViewController.xib */; };
+		703BE13524B47AEB007C4CFB /* BaiTap03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE13424B47AEB007C4CFB /* BaiTap03.swift */; };
 		704112D924B2D75C00F3D8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704112D824B2D75C00F3D8DE /* AppDelegate.swift */; };
 		704112DB24B2D75C00F3D8DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704112DA24B2D75C00F3D8DE /* SceneDelegate.swift */; };
 		704112E224B2D75F00F3D8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704112E124B2D75F00F3D8DE /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		703BE12824B40FFE007C4CFB /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
 		703BE13024B412F8007C4CFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		703BE13124B412F8007C4CFB /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		703BE13424B47AEB007C4CFB /* BaiTap03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaiTap03.swift; path = ../BaiTap03.swift; sourceTree = "<group>"; };
 		704112D524B2D75C00F3D8DE /* BaiTapCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704112D824B2D75C00F3D8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		704112DA24B2D75C00F3D8DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		703BE13624B47AEF007C4CFB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				703BE13424B47AEB007C4CFB /* BaiTap03.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		704112CC24B2D75C00F3D8DE = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		704112D724B2D75C00F3D8DE /* BaiTapCustomView */ = {
 			isa = PBXGroup;
 			children = (
+				703BE13624B47AEF007C4CFB /* New Group */,
 				704112F124B30A8500F3D8DE /* BaiTap02 */,
 				704112F024B30A7200F3D8DE /* BaiTap01 */,
 				704112D824B2D75C00F3D8DE /* AppDelegate.swift */,
@@ -171,6 +182,7 @@
 				704112D924B2D75C00F3D8DE /* AppDelegate.swift in Sources */,
 				704112ED24B2D89D00F3D8DE /* MyAvatar.swift in Sources */,
 				704112F524B30B4F00F3D8DE /* MySliderView.swift in Sources */,
+				703BE13524B47AEB007C4CFB /* BaiTap03.swift in Sources */,
 				704112DB24B2D75C00F3D8DE /* SceneDelegate.swift in Sources */,
 				704112EF24B2DCF900F3D8DE /* BaiTap01.swift in Sources */,
 			);

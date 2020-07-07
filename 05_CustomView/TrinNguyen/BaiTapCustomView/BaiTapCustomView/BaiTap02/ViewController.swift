@@ -8,34 +8,43 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    // MARK: IBOutlets
     @IBOutlet private weak var valueLabel: UILabel!
     @IBOutlet private weak var valueTextField: UITextField!
-    var num: Int?
 
+    // MARK: Propeties
+    var num: Int?
     var slider = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?[0] as? MySliderView
 
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configScreen()
+    }
 
-        slider?.frame = CGRect(x: 140, y: 200, width: 76, height: 480)
+    // MARK: Private Methods
+    private func configScreen() {
+        slider?.frame = CGRect(x: 170, y: 240, width: 76, height: 480)
         view.addSubview(slider!)
         slider?.delegate = self
         valueTextField.delegate = self
     }
 
-    func change(num: String) {
+    private func change(num: String) {
         slider?.value = Int(num)
         slider?.setView()
     }
-
 }
+
+// MARK: - MySliderViewDelegate
 extension ViewController: MySliderViewDelegate {
     func sliderView(_ sliderView: MySliderView, didSelcect: Int) {
         valueTextField.text = String(didSelcect)
     } }
 
+// MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
@@ -43,4 +52,3 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-
