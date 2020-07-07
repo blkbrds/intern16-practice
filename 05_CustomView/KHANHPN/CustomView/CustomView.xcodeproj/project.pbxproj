@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F040899F24B2CE7200290593 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040899E24B2CE7200290593 /* SliderView.swift */; };
+		F04089A124B2CE8100290593 /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04089A024B2CE8100290593 /* SliderView.xib */; };
+		F04089A924B301D000290593 /* BaiTap03.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04089A724B301D000290593 /* BaiTap03.swift */; };
+		F04089AA24B301D000290593 /* BaiTap03.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04089A824B301D000290593 /* BaiTap03.xib */; };
+		F04089B024B308FA00290593 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04089AF24B308FA00290593 /* CustomButton.swift */; };
+		F04CF24524B2B7BD00E74AD1 /* BaiTap02.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04CF24324B2B7BD00E74AD1 /* BaiTap02.swift */; };
+		F04CF24624B2B7BD00E74AD1 /* BaiTap02.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04CF24424B2B7BD00E74AD1 /* BaiTap02.xib */; };
 		F0D7B29524AF178E00348C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B29424AF178E00348C70 /* AppDelegate.swift */; };
 		F0D7B29724AF178E00348C70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B29624AF178E00348C70 /* SceneDelegate.swift */; };
 		F0D7B29924AF178E00348C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B29824AF178E00348C70 /* ViewController.swift */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F040899E24B2CE7200290593 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		F04089A024B2CE8100290593 /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
+		F04089A724B301D000290593 /* BaiTap03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03.swift; sourceTree = "<group>"; };
+		F04089A824B301D000290593 /* BaiTap03.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03.xib; sourceTree = "<group>"; };
+		F04089AF24B308FA00290593 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F04CF24324B2B7BD00E74AD1 /* BaiTap02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02.swift; sourceTree = "<group>"; };
+		F04CF24424B2B7BD00E74AD1 /* BaiTap02.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02.xib; sourceTree = "<group>"; };
 		F0D7B29124AF178E00348C70 /* CustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D7B29424AF178E00348C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0D7B29624AF178E00348C70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F04089A624B301B700290593 /* BaiTap03 */ = {
+			isa = PBXGroup;
+			children = (
+				F04089A724B301D000290593 /* BaiTap03.swift */,
+				F04089A824B301D000290593 /* BaiTap03.xib */,
+				F04089AF24B308FA00290593 /* CustomButton.swift */,
+			);
+			path = BaiTap03;
+			sourceTree = "<group>";
+		};
+		F04CF24224B2B7A900E74AD1 /* BaiTap02 */ = {
+			isa = PBXGroup;
+			children = (
+				F04CF24324B2B7BD00E74AD1 /* BaiTap02.swift */,
+				F04CF24424B2B7BD00E74AD1 /* BaiTap02.xib */,
+				F040899E24B2CE7200290593 /* SliderView.swift */,
+				F04089A024B2CE8100290593 /* SliderView.xib */,
+			);
+			path = BaiTap02;
+			sourceTree = "<group>";
+		};
 		F0D7B28824AF178E00348C70 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +93,8 @@
 		F0D7B29324AF178E00348C70 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				F04089A624B301B700290593 /* BaiTap03 */,
+				F04CF24224B2B7A900E74AD1 /* BaiTap02 */,
 				F0D7B2A824AF185000348C70 /* BaiTap01 */,
 				F0D7B29424AF178E00348C70 /* AppDelegate.swift */,
 				F0D7B29624AF178E00348C70 /* SceneDelegate.swift */,
@@ -71,8 +108,8 @@
 		F0D7B2A824AF185000348C70 /* BaiTap01 */ = {
 			isa = PBXGroup;
 			children = (
-				F0D7B2A924AF187300348C70 /* BaiTap01.swift */,
 				F0D7B2AA24AF187300348C70 /* BaiTap01.xib */,
+				F0D7B2A924AF187300348C70 /* BaiTap01.swift */,
 				F0D7B2AD24AF2C5900348C70 /* AvatarView.swift */,
 			);
 			path = BaiTap01;
@@ -136,7 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04CF24624B2B7BD00E74AD1 /* BaiTap02.xib in Resources */,
+				F04089A124B2CE8100290593 /* SliderView.xib in Resources */,
 				F0D7B29E24AF179200348C70 /* Assets.xcassets in Resources */,
+				F04089AA24B301D000290593 /* BaiTap03.xib in Resources */,
 				F0D7B2AC24AF187300348C70 /* BaiTap01.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,8 +190,12 @@
 			files = (
 				F0D7B29924AF178E00348C70 /* ViewController.swift in Sources */,
 				F0D7B29524AF178E00348C70 /* AppDelegate.swift in Sources */,
+				F04089B024B308FA00290593 /* CustomButton.swift in Sources */,
 				F0D7B29724AF178E00348C70 /* SceneDelegate.swift in Sources */,
+				F040899F24B2CE7200290593 /* SliderView.swift in Sources */,
 				F0D7B2AE24AF2C5900348C70 /* AvatarView.swift in Sources */,
+				F04089A924B301D000290593 /* BaiTap03.swift in Sources */,
+				F04CF24524B2B7BD00E74AD1 /* BaiTap02.swift in Sources */,
 				F0D7B2AB24AF187300348C70 /* BaiTap01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        let baiTap = BaiTap01()
+        let baiTap = BaiTap03()
         window?.rootViewController = baiTap
     }
 

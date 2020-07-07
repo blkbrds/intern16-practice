@@ -10,12 +10,13 @@ import UIKit
 
 class BaiTap01: UIViewController {
 
+
     // MARK: - Data
     struct User {
         var name: String
         var avatar: UIImageView
     }
-    
+
     // MARK: - Properties
     private let data: [User] = [
         User(name: "2", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
@@ -34,21 +35,33 @@ class BaiTap01: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+//        setupView()
     }
-    
+
     // MARK: - Private Functions
-    private func setupView() {
-        var alignLeading = 32
-        var alignTop = 64
-        for i in 0..<data.count {
-            if i % 3 == 0 && i != 0 {
-                alignTop += 160
-                alignLeading = 32
-            } else if i != 0 {
-                alignLeading += 130
-            }
-            view.addSubview(AvatarView(frame: CGRect(x: alignLeading, y: alignTop, width: 100, height: 130)))
-        }
-    }
+//    private func setupView() {
+//      
+//        UIScrollView()
+//
+//        for i in 0..<data.count {
+//            let User = AvatarView(frame: CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView))
+//
+//
+//            scrollView.addSubview(User)
+//            // Tinh frame
+//            if xView + widthUserView > widthScreen - xView {
+//                yView += heightUserView + space
+//                xView = space
+//            } else {
+//                xView += widthUserView + space
+//            }
+//        }
+//    }
+//}
+//
+//extension BaiTap01: AvatarViewDelegate {
+//    func userView(_ userView: AvatarView, didSelect index: Int) {
+//        print("kimochiii")
+//    }
+//}
 }
