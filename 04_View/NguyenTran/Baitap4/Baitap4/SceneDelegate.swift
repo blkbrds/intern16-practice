@@ -21,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = Baitap2ViewController()
 //        window.rootViewController = Baitap3ViewController()
 //        window.rootViewController = Baitap4ViewController()
-//        window.rootViewController = Baitap5ViewController()
+        window.rootViewController = Baitap5ViewController()
 //        window.rootViewController = Baitap6ViewController()
-        window.rootViewController = Baitap7ViewController()
+//        window.rootViewController = Baitap7ViewController()
         self.window = window
         window.makeKeyAndVisible()
         
