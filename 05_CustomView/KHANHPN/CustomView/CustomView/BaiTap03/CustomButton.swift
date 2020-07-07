@@ -26,7 +26,7 @@ class CustomButton: UIButton {
             case .topLeft:
                 return CGPoint(x: 0, y: 0)
             case .topCenter:
-                return CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+                return CGPoint(x: frame.size.width / 2, y: 0)
             case .topRight:
                 return CGPoint(x: frame.size.width, y: 0)
             case .bottomLeft:
@@ -50,24 +50,32 @@ class CustomButton: UIButton {
 
     }
     
-    convenience init(frame: CGRect, number: Int, colorButon: UIColor, position: badgePosition) {
+    convenience init(frame: CGRect, number: Int, colorButon: UIColor, position: badgePosition, name: String) {
         self.init(frame: frame)
         backgroundColor = colorButon
-        setTitle("Email", for: .normal)
+        setTitle(name, for: .normal)
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont(name: "", size: 30)
-
-       
+        layer.cornerRadius = 15
+        
+        if number > 0 {
+            showBadge(position: position, number: number)
+        }
     }
     
-    private func showBadge(position: badgePosition) {
+    private func showBadge(position: badgePosition, number: Int) {
         let badge = UIView()
         badge.frame.size = CGSize(width: 30, height: 30)
         badge.center = position.customBadge(with: frame)
-        print(frame)
-        badge.layer.cornerRadius = 15
+        badge.layer.cornerRadius = badge.bounds.height / 2
         badge.backgroundColor = .red
         addSubview(badge)
+        // number:
+        let num = UILabel()
+        num.frame.size = CGSize(width: badge.bounds.height, height: badge.bounds.height)
+        num.text = String(number)
+        num.center = position.customBadge(with: frame)
+        num.textColor = .white
+        badge.addSubview(num)
     }
 
     required init?(coder: NSCoder) {
