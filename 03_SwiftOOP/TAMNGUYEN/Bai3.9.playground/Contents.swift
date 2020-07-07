@@ -46,6 +46,3 @@ let ar = Mang1c(array: [1,2,3])
 
 ar.inMax(array: [1,2,3])
 ar.inMin(array: [2,1,4,6,0])
-
-
-

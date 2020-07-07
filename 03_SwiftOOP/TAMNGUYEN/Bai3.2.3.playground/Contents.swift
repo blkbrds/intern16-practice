@@ -11,6 +11,10 @@ class DaGiac {
         self.sizeCanh = sizeCanh
     }
     
+    func kiemTraTamGiac(soCanh: Int, sizeCanh: [Float]) -> Bool {
+        return soCanh == sizeCanh.count && sizeCanh[0] > sizeCanh[1] + sizeCanh[2] && sizeCanh[1] > sizeCanh[0] + sizeCanh[2] && sizeCanh[2] > sizeCanh[0] + sizeCanh[1]
+    }
+    
     func tinhChuVi() -> Float {
         var chuVi: Float = 0
         for index in 0..<sizeCanh.count {
@@ -49,10 +53,7 @@ class TamGiac: DaGiac {
 }
 var tamgiac = TamGiac(soCanh: 3,sizeCanh: [2,1,3] )
 
+tamgiac.kiemTraTamGiac(soCanh: 3, sizeCanh: [2,3,1])
 tamgiac.dienTich()
 tamgiac.tinhChuVi()
 print("Dien tich cua tam giac la : \(tamgiac.dienTich())")
-
-
-
-

@@ -34,6 +34,3 @@ var hs4 = HocSinh(hoTen: "Ha", namSinh: 80, tongDiem: 1)
 var hs5 = HocSinh(hoTen: "Yen", namSinh: 96, tongDiem: 7)
 
 let danhsach = sapXep(manghs: [hs1, hs2, hs3, hs4, hs5])
-
-
-

@@ -49,6 +49,3 @@ class Date {
 }
 var day = Date(ngay: 5, thang: 4, nam: 1988).normalize()
 var bonus = Date(ngay: 4, thang: 4, nam: 2020).advance(y: 2020, m: 4, d: 5)
-
-
-

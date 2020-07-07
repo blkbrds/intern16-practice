@@ -17,5 +17,3 @@ class A {
 let a = A(n: 5)
 
 a.sumN(n: 5)
-
-

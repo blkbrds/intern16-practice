@@ -10,6 +10,13 @@ class PhanSo {
         self.mau = mau
     }
     
+    func kiemTraPhanSo(phanso2: PhanSo) -> Bool {
+        if mau == 0 {
+            return false
+        }
+        return true
+    }
+    
     func cong(phanso2: PhanSo) -> PhanSo {
         let tux: Int = tu * phanso2.mau + phanso2.tu * mau
         let maux: Int = mau * phanso2.mau
@@ -39,6 +46,3 @@ let phanso1 = PhanSo(tu: 1, mau: 2)
 let phanso2 = PhanSo(tu: 2, mau: 3)
 
 phanso1.cong(phanso2: phanso2)
-
-
-
