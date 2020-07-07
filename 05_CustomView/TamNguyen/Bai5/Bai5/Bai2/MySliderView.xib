@@ -38,6 +38,12 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="blueImageView" destination="zfd-Ah-QYI" id="rCy-Wq-0sR"/>
+                <outlet property="grayImageView" destination="WDt-sq-U3p" id="Ro0-73-55i"/>
+                <outlet property="sliderView" destination="g0j-ve-uFf" id="wXO-jg-rL7"/>
+                <outlet property="valueLabel" destination="xHj-TO-ZoG" id="d93-8L-vl1"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>

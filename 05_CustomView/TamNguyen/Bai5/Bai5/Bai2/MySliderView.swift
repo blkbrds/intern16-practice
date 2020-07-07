@@ -10,6 +10,9 @@ import UIKit
 
 class MySliderView: UIView {
 
+    @IBOutlet weak var grayImageView: UIImageView!
     
-
+    @IBOutlet weak var blueImageView: UIImageView!
+    @IBOutlet weak var sliderView: UIView!
+@IBOutlet weak var valueLabel: UILabel!
 }
