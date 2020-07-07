@@ -12,26 +12,20 @@ class Date {
     }
     
     func normalize() -> Date? {
-        if ngay < 0 || ngay > daysln(month: thang) {
-            return nil
-        }
-        if thang > 12 {
-            return nil
-        }
-        if nam < 1 {
+        if ngay < 0 || ngay > daysln(month: thang) && thang > 12 && nam < 1 {
             return nil
         }
         return self
     }
     
-    func advance(y: Int, m: Int, d: Int) -> Date {
-        if d + 5 > daysln(month: m) {
-            return Date(ngay: 1, thang: m + 1, nam: y)
+    func advance(year: Int, month: Int, day: Int) -> Date {
+        if day + 5 > daysln(month: month) {
+            return Date(ngay: 1, thang: month + 1, nam: year)
         }
-        if d + 5 > daysln(month: m) && y == 12 {
-            return Date(ngay: 1, thang: 1, nam: y + 1)
+        if day + 5 > daysln(month: month) && year == 12 {
+            return Date(ngay: 1, thang: 1, nam: year + 1)
         }
-        return Date(ngay: d + 5, thang: m, nam: y)
+        return Date(ngay: day + 5, thang: month, nam: year)
     }
     
     func daysln(month: Int) -> Int {
@@ -48,4 +42,4 @@ class Date {
     }
 }
 var day = Date(ngay: 5, thang: 4, nam: 1988).normalize()
-var bonus = Date(ngay: 4, thang: 4, nam: 2020).advance(y: 2020, m: 4, d: 5)
+var bonus = Date(ngay: 4, thang: 4, nam: 2020).advance(year: 2020, month: 4, day: 5)

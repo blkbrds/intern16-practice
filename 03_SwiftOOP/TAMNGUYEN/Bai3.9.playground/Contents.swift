@@ -8,24 +8,12 @@ class Mang1c {
         self.array = array
     }
     
-    func khoiTao(array: [Int]) {
-        //Khoi tao
-        var array: [Int]
-        // print(array)
-    }
-    
-    func inMang(array: [Int]) {
-        var array: [Int]
-        print("Mang dc in ra:")
-    }
-    
     func inMax(array: [Int]) -> Int {
         var max = array[0]
         for index in 0..<array.count {
             if array[index] > max {
                 max = array[index]
             }
-            
         }
         print("Gia tri lon nhat trong mang : \(max)")
         return max

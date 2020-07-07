@@ -44,11 +44,8 @@ class TamGiac: DaGiac {
     }
     
     func dienTich() -> Float {
-        let nuaChuVi = self.tinhChuVi() / 2
-        var a = nuaChuVi - self.sizeCanh[0]
-        var b = nuaChuVi - self.sizeCanh[1]
-        var c = nuaChuVi - self.sizeCanh[2]
-        return sqrt(nuaChuVi * a * b * c )
+        let nuaChuVi = tinhChuVi() / 2
+        return sqrt(nuaChuVi * nuaChuVi - sizeCanh[0] * nuaChuVi - sizeCanh[1] * nuaChuVi - sizeCanh[2])
     }
 }
 var tamgiac = TamGiac(soCanh: 3,sizeCanh: [2,1,3] )
