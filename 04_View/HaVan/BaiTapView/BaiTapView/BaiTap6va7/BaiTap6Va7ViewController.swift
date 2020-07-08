@@ -32,19 +32,21 @@ final class BaiTap6Va7ViewController: UIViewController {
     
     // MARK: - Private functions
     @objc private func addPinchGesture(pinchGesture: UIPinchGestureRecognizer) {
-        guard let viewPinch = pinchGesture.view else { return }
-        var minValue: CGFloat = 0
-        var maxValue: CGFloat = 0
-        minValue = max(pinchGesture.scale,  0.5)
-        maxValue = min(pinchGesture.scale, 2.0)
-        // limit the value for viewPinch.transform
-        if minValue >= maxValue {
-            viewPinch.transform = viewPinch.transform.scaledBy(x: maxValue, y: maxValue)
-        } else {
-            viewPinch.transform = viewPinch.transform.scaledBy(x: minValue, y: minValue)
-        }
-        pinchGesture.scale = 1.0
-        print(pinchGesture.scale)
+        guard let pinchView = pinchGesture.view else {
+return }
+        if pinchGesture.state == .began || pinchGesture.state == .changed {
+            let currentScale: CGFloat = pinchView.layer.value(forKeyPath: "transform.scale.x") as! CGFloat
+            let minScale: CGFloat = 0.5
+            let maxScale: CGFloat = 2.0
+            let zoomSpeed: CGFloat = 0.5
+            var deltaScale = pinchGesture.scale
+            deltaScale = ((deltaScale - 1) * zoomSpeed) + 1
+            deltaScale = min(deltaScale, maxScale / currentScale)
+            deltaScale = max(deltaScale, minScale / currentScale)
+            let zoomTransform = pinchView.transform.scaledBy(x: deltaScale, y: deltaScale)
+            pinchGesture.view?.transform = zoomTransform
+            pinchGesture.scale = 1
+          }
     }
     
     @objc private func addRotationGesture(rotationGesture: UIRotationGestureRecognizer) {
