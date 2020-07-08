@@ -1,14 +1,15 @@
+
 import UIKit
 
 final class BaiTap01: UIViewController {
 
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configScreen()
     }
-    
-    // MARK: Private Methods
+
+    // MARK: - Private Methods
     private func configScreen() {
         // Add user avatar
         // Xd view con trong view cha

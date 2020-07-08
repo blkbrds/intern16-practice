@@ -16,38 +16,35 @@ final class BaiTap03: UIViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var passWordTextField: UITextField!
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextField()
     }
-    
+
     // MARK: - Private Methods
     private func configTextField() {
         errorLabel.text = ""
         userNameTextField.delegate = self
         passWordTextField.delegate = self
+        userNameTextField.returnKeyType = .next
+        passWordTextField.returnKeyType = .done
 
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
-        returnKeyType()
     }
-    
+
     // MARK: - Private Methods
-    private func returnKeyType() {
-        userNameTextField.returnKeyType = .next
-        passWordTextField.returnKeyType = .done
-    }
-    
     private func processLogin() {
         if userNameTextField.text == "Admin" && passWordTextField.text == "Admin123" {
             errorLabel.isHidden = true
         } else if userNameTextField.text == "" || passWordTextField.text == "" {
+            errorLabel.isHidden = false
             errorLabel.text = "Nhập sai Username và Password"
         }
     }
-    
+
     // MARK: - IBActions
     @IBAction private func clearValueButton(_ sender: UIButton) {
         userNameTextField.text = ""
@@ -61,7 +58,7 @@ final class BaiTap03: UIViewController {
 }
 
 // MARK: - UITextFieldDelegate
-extension BaiTap03 : UITextFieldDelegate {
+extension BaiTap03: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField {
             userNameTextField.resignFirstResponder()

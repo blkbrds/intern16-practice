@@ -1,3 +1,11 @@
+//
+//  BaiTap02.swift
+//  BaiTapView
+//
+//  Created by PCI0004 on 7/1/20.
+//  Copyright © 2020 PCI0004. All rights reserved.
+//
+
 import UIKit
 
 final class BaiTap02: UIViewController {
