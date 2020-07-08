@@ -21,6 +21,8 @@
 		C46E3E1F24B6224900BB84E9 /* ViewControllerD.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46E3E1D24B6224900BB84E9 /* ViewControllerD.xib */; };
 		C46E3E2224B6226000BB84E9 /* ViewControllerE.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3E2024B6226000BB84E9 /* ViewControllerE.swift */; };
 		C46E3E2324B6226000BB84E9 /* ViewControllerE.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46E3E2124B6226000BB84E9 /* ViewControllerE.xib */; };
+		C46E3E2824B62A6800BB84E9 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3E2624B62A6800BB84E9 /* loginViewController.swift */; };
+		C46E3E2924B62A6800BB84E9 /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46E3E2724B62A6800BB84E9 /* loginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		C46E3E1D24B6224900BB84E9 /* ViewControllerD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerD.xib; sourceTree = "<group>"; };
 		C46E3E2024B6226000BB84E9 /* ViewControllerE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerE.swift; sourceTree = "<group>"; };
 		C46E3E2124B6226000BB84E9 /* ViewControllerE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerE.xib; sourceTree = "<group>"; };
+		C46E3E2624B62A6800BB84E9 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		C46E3E2724B62A6800BB84E9 /* loginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +76,18 @@
 		C46E3DF524B60D3E00BB84E9 /* BaiTap09 */ = {
 			isa = PBXGroup;
 			children = (
-				C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */,
-				C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */,
-				C46E3E0F24B6140C00BB84E9 /* Controller */,
-				C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */,
+				C46E3E0F24B6140C00BB84E9 /* BaiTap01 */,
+				C46E3E2524B62A0100BB84E9 /* BaiTap02 */,
 				C46E3E0124B60D4000BB84E9 /* LaunchScreen.storyboard */,
 				C46E3E0424B60D4000BB84E9 /* Info.plist */,
+				C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */,
+				C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */,
+				C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */,
 			);
 			path = BaiTap09;
 			sourceTree = "<group>";
 		};
-		C46E3E0F24B6140C00BB84E9 /* Controller */ = {
+		C46E3E0F24B6140C00BB84E9 /* BaiTap01 */ = {
 			isa = PBXGroup;
 			children = (
 				C46E3E1024B6141900BB84E9 /* ViewControllerA.swift */,
@@ -96,7 +101,16 @@
 				C46E3E2024B6226000BB84E9 /* ViewControllerE.swift */,
 				C46E3E2124B6226000BB84E9 /* ViewControllerE.xib */,
 			);
-			path = Controller;
+			path = BaiTap01;
+			sourceTree = "<group>";
+		};
+		C46E3E2524B62A0100BB84E9 /* BaiTap02 */ = {
+			isa = PBXGroup;
+			children = (
+				C46E3E2624B62A6800BB84E9 /* loginViewController.swift */,
+				C46E3E2724B62A6800BB84E9 /* loginViewController.xib */,
+			);
+			path = BaiTap02;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46E3E2924B62A6800BB84E9 /* loginViewController.xib in Resources */,
 				C46E3E1324B6141900BB84E9 /* ViewControllerA.xib in Resources */,
 				C46E3E2324B6226000BB84E9 /* ViewControllerE.xib in Resources */,
 				C46E3E1724B61F5900BB84E9 /* ViewControllerB.xib in Resources */,
@@ -178,6 +193,7 @@
 				C46E3DF724B60D3E00BB84E9 /* AppDelegate.swift in Sources */,
 				C46E3E1624B61F5900BB84E9 /* ViewControllerB.swift in Sources */,
 				C46E3E1A24B6223A00BB84E9 /* ViewControllerC.swift in Sources */,
+				C46E3E2824B62A6800BB84E9 /* loginViewController.swift in Sources */,
 				C46E3E1224B6141900BB84E9 /* ViewControllerA.swift in Sources */,
 				C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */,
 				C46E3E1E24B6224900BB84E9 /* ViewControllerD.swift in Sources */,
