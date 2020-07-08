@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomButton: UIButton {
+final class CustomButton: UIButton {
 
     // MARK: - Badge Position
     enum badgePosition {
@@ -71,7 +71,7 @@ class CustomButton: UIButton {
         addSubview(badge)
         // number:
         let num = UILabel()
-        num.frame = badge.bounds // nhét vào thằng frame cha
+        num.frame = badge.bounds // nhét vào thằng frame cha, là thằng badge view
         num.text = String(number)
         num.textAlignment = .center
         num.textColor = .white

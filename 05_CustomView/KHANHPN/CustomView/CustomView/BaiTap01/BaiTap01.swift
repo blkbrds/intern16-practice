@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap01: UIViewController {
+final class BaiTap01: UIViewController {
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -17,7 +17,7 @@ class BaiTap01: UIViewController {
     }
     
     // MARK: - Functions
-    func setupAvavtarView() {
+    private func setupAvavtarView() {
         var scrollHeigh: CGFloat = 180
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
         var x = 32

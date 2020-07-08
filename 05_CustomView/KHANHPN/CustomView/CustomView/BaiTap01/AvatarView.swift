@@ -12,7 +12,7 @@ protocol AvatarViewDelegate: class {
     func avatarView(_ avatarView: UIView, getName index: String)
 }
 
-class AvatarView: UIView {
+final class AvatarView: UIView {
     
     weak var delegate: AvatarViewDelegate?
     
@@ -31,8 +31,9 @@ class AvatarView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     // MARK: - Functions
-    func userView(index: String) {
+    private func userView(index: String) {
         // Add avatar
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         let userAvatar = UIImageView(image: UIImage(named: "img-avatar"))
