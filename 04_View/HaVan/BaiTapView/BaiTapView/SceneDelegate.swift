@@ -29,7 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = BaiTap3ViewController()
         
         //bài tập 4
-        window.rootViewController = BaiTap4ViewController()
+//        window.rootViewController = BaiTap4ViewController()
+        
+        //bài tập 5
+        window.rootViewController = BaiTap5ViewController()
         self.window = window
         window.backgroundColor = .white
         window.makeKeyAndVisible()

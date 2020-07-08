@@ -34,6 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bt4VC = BaiTap4ViewController()
         window?.rootViewController = bt4VC
         
+        //bài tập 5
+        let bt5VC = BaiTap5ViewController()
+        window?.rootViewController = bt5VC
         return true
     }
 
