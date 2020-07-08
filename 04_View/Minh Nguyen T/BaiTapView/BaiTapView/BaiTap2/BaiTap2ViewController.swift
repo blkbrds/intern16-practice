@@ -13,12 +13,12 @@ final class BaiTap2ViewController: UIViewController {
     // MARK: - Private Properties
     private var names: [String] = ["Name1","Name2","Name3", "Name4","Name5","Name6","Name7", "Name8","Name9"]
     private var images: [String] = ["avartar","avartar","avartar","avartar","avartar","avartar","avartar","avartar","avartar"]
-    
+
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-       createUserView()
+        createUserView()
     }
 
     //MARK: - Private Functions
@@ -27,8 +27,6 @@ final class BaiTap2ViewController: UIViewController {
         let space: CGFloat = 10
         // TODO: lấy chiều rộng màn hinh chinh
         let widthScreen = UIScreen.main.bounds.width
-        //      let h = UIScreen.main.bounds.height
-        //      print(widthScreen, h)
         let widthUserView: CGFloat = 110
         let heightUserView: CGFloat = 165
         var yView: CGFloat = 50
@@ -37,7 +35,6 @@ final class BaiTap2ViewController: UIViewController {
             let frame = CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView)
             let userView = configUserView(frame: frame, index: index)
             view.addSubview(userView)
-            // Tinh frame
             if xView + widthUserView > widthScreen - xView {
                 yView += heightUserView + space
                 xView = space
@@ -49,7 +46,6 @@ final class BaiTap2ViewController: UIViewController {
 
     private func configUserView(frame: CGRect, index: Int) -> UIView {
         let userView = UIView(frame: frame)
-        //print(userView.bounds.width, userView.bounds.height)
         // Add avatar
         let avatar = UIImageView(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height - 25))
         avatar.image = UIImage(named: images[index])
@@ -67,10 +63,9 @@ final class BaiTap2ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height))
         button.backgroundColor = .clear
         //TODO: tạo sự kiện khi tap vào userview
-        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
-        uiTapGestureRecognizer.name = names[index]
-        button.addGestureRecognizer(uiTapGestureRecognizer)
-        //button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+        let didClickButtonGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
+        didClickButtonGestureRecognizer.name = names[index]
+        button.addGestureRecognizer(didClickButtonGestureRecognizer)
         userView.addSubview(button)
         return userView
     }

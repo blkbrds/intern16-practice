@@ -12,10 +12,10 @@ final class BaiTap6ViewController: UIViewController {
 
     //MARK: - IBOulets
     @IBOutlet weak private var thongbaoLabel: UILabel!
-    @IBOutlet weak private var thongbaoImage: UIImageView!
-    @IBOutlet weak private var rotationGesture: UIRotationGestureRecognizer!
-    @IBOutlet weak private var image: UIImageView!
-    @IBOutlet weak private var pinchImage: UIPinchGestureRecognizer!
+    @IBOutlet weak private var thongbaoImageView: UIImageView!
+    @IBOutlet weak private var rotationGestureRecognizer: UIRotationGestureRecognizer!
+    @IBOutlet weak private var imageView: UIImageView!
+    @IBOutlet weak private var pinchImagePinchGestureRecognizer: UIPinchGestureRecognizer!
     
     //MARK: - Propeties
     private let minScale: Float = 0.5
@@ -25,52 +25,49 @@ final class BaiTap6ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //pinchImage.scale = 2
-        // Do any additional setup after loading the view.
-        thongbaoImage.isHidden = true
+        thongbaoImageView.isHidden = true
         thongbaoLabel.isHidden = true
-        image.isUserInteractionEnabled = true
-        tapGesture()
+        imageView.isUserInteractionEnabled = true
+        configTapGesture()
     }
     
     //MARK: - Private Funtion
-    private func tapGesture(){
+    private func configTapGesture() {
         let singleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(singleTapGesture(_:)))
         singleTap.numberOfTapsRequired = 1
-        image.addGestureRecognizer(singleTap)
+        imageView.addGestureRecognizer(singleTap)
         let doubleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapGesture(_:)))
         doubleTap.numberOfTapsRequired = 2
-        image.addGestureRecognizer(doubleTap)
+        imageView.addGestureRecognizer(doubleTap)
         singleTap.require(toFail: doubleTap)
     }
     
     // MARK: - IBActions
     @IBAction private func longGesTure(_ sender: Any) {
-        let long = sender as! UILongPressGestureRecognizer
+        //let long = sender as! UILongPressGestureRecognizer
+        guard let long = sender as? UILongPressGestureRecognizer else { return }
         long.minimumPressDuration = 5.0
-        rotationGesture.view?.transform = CGAffineTransform(rotationAngle: 0)
+        long.view?.transform = CGAffineTransform(rotationAngle: 0)
     }
     
-    @IBAction private func rotationGesture(_ sender: Any) {
-        let rotation: UIRotationGestureRecognizer = sender as! UIRotationGestureRecognizer
-        //TODO: cach 1
-        //image.transform = image.transform.rotated(by: rotation.rotation)
-        //TODO: rotation nam trong view
-        rotation.view?.transform = (rotation.view?.transform.rotated(by: rotation.rotation))!
+    @IBAction private func rotationGesture(_ sender: UIRotationGestureRecognizer) {
+        let rotation: UIRotationGestureRecognizer = sender
+        guard let rotationView = rotation.view else { return }
+        rotationView.transform = rotationView.transform.rotated(by: rotation.rotation)
         rotation.rotation = 0
     }
 
-    @IBAction private func pinchGesture(_ sender: Any) {
-        let pinch: UIPinchGestureRecognizer = sender as! UIPinchGestureRecognizer
+    @IBAction private func pinchGesture(_ sender: UIPinchGestureRecognizer) {
+        let pinch: UIPinchGestureRecognizer = sender
         guard pinch.view != nil  else { return }
         if pinch.state == .began || pinch.state == .changed {
             if recognizerScale < CGFloat(maxScale) && pinch.scale > 1.0 {
-                pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
+                pinch.view?.transform = pinch.view!.transform.scaledBy(x: pinch.scale, y: pinch.scale)
                 recognizerScale *= pinch.scale
                 pinch.scale = 1.0
             }
             if recognizerScale > CGFloat(minScale) && pinch.scale < 1.0 {
-                pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
+                pinch.view?.transform = pinch.view!.transform.scaledBy(x: pinch.scale, y: pinch.scale)
                 recognizerScale *= pinch.scale
                 pinch.scale = 1.0
             }
@@ -79,40 +76,28 @@ final class BaiTap6ViewController: UIViewController {
 
     //MARK: - Objc Funtions
     @objc private func singleTapGesture(_ sender: UITapGestureRecognizer) {
-        thongbaoImage.isHidden = false
+        thongbaoImageView.isHidden = false
         thongbaoLabel.isHidden = false
         thongbaoLabel.text = "Tôi Là Táo"
-        self.thongbaoImage.alpha = 1
-        self.thongbaoLabel.alpha = 1
-        //       Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-        //            UIView.animate(withDuration: 1) {
-        //                self.thongbaoImage.alpha = 0
-        //                self.thongbaoLabel.alpha = 0
-        //            }
-        //        }
+        thongbaoImageView.alpha = 1
+        thongbaoLabel.alpha = 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             UIView.animate(withDuration: 1) {
-                self.thongbaoImage.alpha = 0
+                self.thongbaoImageView.alpha = 0
                 self.thongbaoLabel.alpha = 0
             }
         }
     }
-
-    @objc private func doubleTapGesture(_ sender: UITapGestureRecognizer){
-        thongbaoImage.isHidden = false
+    
+    @objc private func doubleTapGesture(_ sender: UITapGestureRecognizer) {
+        thongbaoImageView.isHidden = false
         thongbaoLabel.isHidden = false
         thongbaoLabel.text = "Táo Là Tôi"
-        self.thongbaoImage.alpha = 1
-        self.thongbaoLabel.alpha = 1
-        //        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-        //            UIView.animate(withDuration: 1) {
-        //                self.thongbaoImage.alpha = 0
-        //                self.thongbaoLabel.alpha = 0
-        //            }
-        //        }
+        thongbaoImageView.alpha = 1
+        thongbaoLabel.alpha = 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             UIView.animate(withDuration: 1) {
-                self.thongbaoImage.alpha = 0
+                self.thongbaoImageView.alpha = 0
                 self.thongbaoLabel.alpha = 0
             }
         }

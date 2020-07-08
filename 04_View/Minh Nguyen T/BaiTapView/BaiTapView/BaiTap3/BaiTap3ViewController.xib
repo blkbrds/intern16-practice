@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap3ViewController" customModule="Bai_4_3" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap3ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
-                <outlet property="clearButton" destination="k1V-pB-EKM" id="Ara-dC-npV"/>
-                <outlet property="loginButton" destination="8Go-tX-Huh" id="kEN-Vk-CaI"/>
+                <outlet property="clearButton" destination="k1V-pB-EKM" id="TGI-hf-3CX"/>
+                <outlet property="loginButton" destination="8Go-tX-Huh" id="Wf6-DF-IFL"/>
                 <outlet property="passwordTextField" destination="zYF-SQ-wkv" id="2W8-SN-d8v"/>
                 <outlet property="thongbaoLabel" destination="j6n-Vk-Dbd" id="Ree-Ne-Qmt"/>
                 <outlet property="usernameTextField" destination="UFo-A9-Bar" id="H7L-JZ-XAQ"/>
@@ -49,7 +49,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="Login:" destination="-1" eventType="touchUpInside" id="Gb4-lN-Laa"/>
+                        <action selector="loginButtonTouchUpInIsde:" destination="-1" eventType="touchUpInside" id="bzw-7V-mfA"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1V-pB-EKM">
@@ -60,7 +60,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="Clear:" destination="-1" eventType="touchUpInside" id="aK0-1G-DJf"/>
+                        <action selector="clearButtonTouchUpInIsde:" destination="-1" eventType="touchUpInside" id="UCG-aL-8S4"/>
                     </connections>
                 </button>
             </subviews>

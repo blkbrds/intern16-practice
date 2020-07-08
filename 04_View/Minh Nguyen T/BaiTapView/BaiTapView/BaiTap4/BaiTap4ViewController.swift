@@ -8,6 +8,7 @@
 import UIKit
 
 final class BaiTap4ViewController: UIViewController {
+
     //MARK: - IBOutlets
     @IBOutlet weak private var hienthiLabel: UILabel!
     @IBOutlet weak private var colorView: UIView!
@@ -22,7 +23,7 @@ final class BaiTap4ViewController: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction private func sliderColor(_ sender: Any) {
+    @IBAction private func sliderColor(_ sender: UISlider) {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value)/255, green: CGFloat(greenSlider.value)/255, blue: CGFloat(blueSlider.value)/255, alpha: 1)
         hienthiLabel.text = "(Color R: \(Int(redSlider.value)) G: \(Int(greenSlider.value)) B: \(Int(blueSlider.value)))"
     }

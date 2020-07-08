@@ -9,10 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap6ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
-                <outlet property="image" destination="j2D-se-SZS" id="lfo-Q2-iUW"/>
-                <outlet property="pinchImage" destination="09g-ll-fVX" id="UOW-mM-ug0"/>
-                <outlet property="rotationGesture" destination="LQ5-f7-22y" id="rCi-xr-s5w"/>
-                <outlet property="thongbaoImage" destination="6kj-dh-Qzd" id="zpU-hK-qkr"/>
+                <outlet property="imageView" destination="j2D-se-SZS" id="IrH-li-Ahh"/>
+                <outlet property="pinchImagePinchGestureRecognizer" destination="09g-ll-fVX" id="VYd-T2-vOQ"/>
+                <outlet property="rotationGestureRecognizer" destination="LQ5-f7-22y" id="W4W-yA-RFp"/>
+                <outlet property="thongbaoImageView" destination="6kj-dh-Qzd" id="FKX-xw-sfi"/>
                 <outlet property="thongbaoLabel" destination="TXc-Qq-tNm" id="Kch-ee-Vmz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,7 +32,7 @@
                         <outletCollection property="gestureRecognizers" destination="Wfj-c3-VcN" appends="YES" id="zTh-ga-rhe"/>
                     </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2020-07-01 at 22.28.24" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-dh-Qzd">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thongbao" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-dh-Qzd">
                     <rect key="frame" x="74" y="101" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -50,22 +50,22 @@
         </view>
         <pinchGestureRecognizer id="09g-ll-fVX">
             <connections>
-                <action selector="pinchGesture:" destination="-1" id="EVb-rH-dsv"/>
+                <action selector="pinchGesture:" destination="-1" id="FTq-9w-AEf"/>
             </connections>
         </pinchGestureRecognizer>
         <rotationGestureRecognizer id="LQ5-f7-22y">
             <connections>
-                <action selector="rotationGesture:" destination="-1" id="4b9-Mf-xU8"/>
+                <action selector="rotationGesture:" destination="-1" id="f6i-wa-wUb"/>
             </connections>
         </rotationGestureRecognizer>
         <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Wfj-c3-VcN">
             <connections>
-                <action selector="longGesTure:" destination="-1" id="V8p-c8-yKk"/>
+                <action selector="longGesTure:" destination="-1" id="czG-pB-4Gt"/>
             </connections>
         </pongPressGestureRecognizer>
     </objects>
     <resources>
-        <image name="Screen Shot 2020-07-01 at 22.28.24" width="124" height="85"/>
         <image name="tao" width="757.5" height="757"/>
+        <image name="thongbao" width="124" height="85"/>
     </resources>
 </document>
