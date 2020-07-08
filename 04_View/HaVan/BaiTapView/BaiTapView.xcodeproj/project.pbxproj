@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5204E10224AA2A2600013680 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204E10124AA2A2600013680 /* DemoViewController.swift */; };
 		5204E10624AB1EB600013680 /* BaiTap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204E10424AB1EB600013680 /* BaiTap3ViewController.swift */; };
 		5204E10724AB1EB600013680 /* BaiTap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5204E10524AB1EB600013680 /* BaiTap3ViewController.xib */; };
 		52156CC024AC225600886BFC /* BaiTap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52156CBE24AC225600886BFC /* BaiTap4ViewController.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5204E10124AA2A2600013680 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		5204E10424AB1EB600013680 /* BaiTap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3ViewController.swift; sourceTree = "<group>"; };
 		5204E10524AB1EB600013680 /* BaiTap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3ViewController.xib; sourceTree = "<group>"; };
 		52156CBE24AC225600886BFC /* BaiTap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4ViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				52F8756224AA20F8004941C8 /* SceneDelegate.swift */,
 				52F8756B24AA20FA004941C8 /* LaunchScreen.storyboard */,
 				52F8756E24AA20FA004941C8 /* Info.plist */,
-				5204E10124AA2A2600013680 /* DemoViewController.swift */,
 			);
 			path = BaiTapView;
 			sourceTree = "<group>";
@@ -217,7 +214,6 @@
 				52156CCF24AD7DEF00886BFC /* BaiTap6Va7ViewController.swift in Sources */,
 				52F8756124AA20F8004941C8 /* AppDelegate.swift in Sources */,
 				5204E10624AB1EB600013680 /* BaiTap3ViewController.swift in Sources */,
-				5204E10224AA2A2600013680 /* DemoViewController.swift in Sources */,
 				52F8756324AA20F8004941C8 /* SceneDelegate.swift in Sources */,
 				52156CCA24AC3B1C00886BFC /* BaiTap5ViewController.swift in Sources */,
 				52F8757E24AA233C004941C8 /* People.swift in Sources */,
@@ -288,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -342,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -359,6 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUB6RGC6PM;
 				INFOPLIST_FILE = BaiTapView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,6 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUB6RGC6PM;
 				INFOPLIST_FILE = BaiTapView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

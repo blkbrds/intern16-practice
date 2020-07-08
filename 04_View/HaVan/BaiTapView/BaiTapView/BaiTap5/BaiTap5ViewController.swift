@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap5ViewController: UIViewController {
+final class BaiTap5ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var thumbLabel: UILabel!
@@ -33,33 +33,28 @@ class BaiTap5ViewController: UIViewController {
     
     // MARK: - Public functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-         let touch = touches.first
-         let location = touch?.location(in: containerView)
-         if location!.y < containerView.bounds.minY {
-              thumbView.center.y = containerView.bounds.minY
-         } else if location!.y > containerView.bounds.maxY {
-             thumbView.center.y = containerView.bounds.maxY
-         } else {
-             thumbView.center.y = location!.y
-         }
-         
-         changeProcessView(with: thumbView.center.y)
-        
-         
-     }
-     
-     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-         let touch = touches.first
-         let location = touch?.location(in: containerView)
-         if location!.y < containerView.bounds.minY {
-                     thumbView.center.y = containerView.bounds.minY
-                } else if location!.y > containerView.bounds.maxY {
-                    thumbView.center.y = containerView.bounds.maxY
-                } else {
-                    thumbView.center.y = location!.y
-                }
-         changeProcessView(with: thumbView.center.y)
-     
-     }
-
+        let touch = touches.first
+        let location = touch?.location(in: containerView)
+        if location!.y < containerView.bounds.minY {
+            thumbView.center.y = containerView.bounds.minY
+        } else if location!.y > containerView.bounds.maxY {
+            thumbView.center.y = containerView.bounds.maxY
+        } else {
+            thumbView.center.y = location!.y
+        }
+        changeProcessView(with: thumbView.center.y)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        let location = touch?.location(in: containerView)
+        if location!.y < containerView.bounds.minY {
+            thumbView.center.y = containerView.bounds.minY
+        } else if location!.y > containerView.bounds.maxY {
+            thumbView.center.y = containerView.bounds.maxY
+        } else {
+            thumbView.center.y = location!.y
+        }
+        changeProcessView(with: thumbView.center.y)
+    }
 }

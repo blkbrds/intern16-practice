@@ -14,6 +14,7 @@ final class BaiTap6Va7ViewController: UIViewController {
     @IBOutlet private weak var image: UIImageView!
     @IBOutlet private weak var tellImage: UIImageView!
     @IBOutlet private weak var tellLabel: UILabel!
+    
     // MARK: - Propeties
     private var pinchGesture = UIPinchGestureRecognizer()
     private var rotationGesture = UIRotationGestureRecognizer()
@@ -30,18 +31,19 @@ final class BaiTap6Va7ViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    @objc  func addPinchGesture(pinchGesture: UIPinchGestureRecognizer) {
+    @objc private func addPinchGesture(pinchGesture: UIPinchGestureRecognizer) {
         guard let viewPinch = pinchGesture.view else { return }
         var minValue: CGFloat = 0
         var maxValue: CGFloat = 0
-        minValue = max(pinchGesture.scale, viewPinch.bounds.height * 0.5)
-        maxValue = min(pinchGesture.scale, viewPinch.bounds.height * 2.0)
+        minValue = max(pinchGesture.scale,  0.5)
+        maxValue = min(pinchGesture.scale, 2.0)
         // limit the value for viewPinch.transform
         if minValue >= maxValue {
             viewPinch.transform = viewPinch.transform.scaledBy(x: maxValue, y: maxValue)
         } else {
             viewPinch.transform = viewPinch.transform.scaledBy(x: minValue, y: minValue)
         }
+        pinchGesture.scale = 1.0
         print(pinchGesture.scale)
     }
     

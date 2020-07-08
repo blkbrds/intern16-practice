@@ -10,10 +10,10 @@ import UIKit
 
 final class BaiTap2ViewController: UIViewController {
     
-    //MARK: - Properties
-    private var people = [People]()
+    // MARK: - Properties
+    private var people: [People] = []
     
-    //MARK: - Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addSmallViewintoView()
@@ -27,7 +27,6 @@ final class BaiTap2ViewController: UIViewController {
         userAvatar.frame = frame
         userAvatar.contentMode = .scaleAspectFill
         userAvatar.clipsToBounds = true
-        //view.addSubview(userAvatar)
         return userAvatar
     }
     
@@ -38,7 +37,6 @@ final class BaiTap2ViewController: UIViewController {
         username.textAlignment = .center
         username.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         username.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        //view.addSubview(username)
         return username
     }
     
@@ -50,20 +48,11 @@ final class BaiTap2ViewController: UIViewController {
         uiView.addGestureRecognizer(tap)
         // permit user interact
         uiView.isUserInteractionEnabled = true
-        //uiView.layer.borderWidth = 1
         uiView.addSubview(addUserAvatar(withImage: imgName))
         uiView.addSubview(addUsername(withName: text))
         return uiView
     }
-    
-    @objc func printInfo(_ gesture: UITapGestureRecognizer) {
-        guard let name = gesture.name,
-            let index = Int(name) else { return }
-        if index < people.count {
-            print(people[index].name)
-        }
-    }
-    
+
     //create an array data
     private func createDataArray() -> [People] {
         let people: [People] = [People(img: "avatar.png","Name 1"),
@@ -94,6 +83,13 @@ final class BaiTap2ViewController: UIViewController {
             view.addSubview(createSmallView(withImage: people[index].nameImage, withName: people[index].name, x: CGFloat(x), y: CGFloat(y), index: index))
         }
     }
+    
+    // MARK: objc funtions
+    @objc func printInfo(_ gesture: UITapGestureRecognizer) {
+        guard let name = gesture.name,
+            let index = Int(name) else { return }
+        if index < people.count {
+            print(people[index].name)
+        }
+    }
 }
-
-

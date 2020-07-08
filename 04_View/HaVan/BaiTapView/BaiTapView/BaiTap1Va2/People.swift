@@ -8,12 +8,12 @@
 
 import Foundation
 
-class People {
+final class People {
     var nameImage: String
     var name: String
     
     init(img image: String, _ name: String) {
-        self.nameImage = name
+        self.nameImage = image
         self.name = name
     }
 }

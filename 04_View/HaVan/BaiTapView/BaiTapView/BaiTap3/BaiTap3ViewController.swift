@@ -8,14 +8,14 @@
 
 import UIKit
 
-class BaiTap3ViewController: UIViewController{
-
+final class BaiTap3ViewController: UIViewController{
+    
     // MARK: - IBOutlets
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var errorName: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var errorName: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -26,9 +26,12 @@ class BaiTap3ViewController: UIViewController{
         setUpForTextField(with: passwordTextField)
         errorName.textColor = UIColor.red
         errorName.isHidden = true
-        usernameTextField.delegate =  self
-        passwordTextField.delegate =  self
-       
+    }
+    
+    // MARK: - Override functions
+    //touch in screen with hidden keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           view.endEditing(true)
     }
     
     // MARK: - Private functions
@@ -37,6 +40,8 @@ class BaiTap3ViewController: UIViewController{
     }
     
     private func setUpForTextField(with textField: UITextField) {
+        usernameTextField.delegate =  self
+        passwordTextField.delegate =  self
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         var placeHolder = "abc"
@@ -48,7 +53,7 @@ class BaiTap3ViewController: UIViewController{
         textField.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.font : UIFont.italicSystemFont(ofSize: 14)])
     }
     
-    private func login(){
+    private func login() {
         errorName.isHidden = false
         if usernameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
             errorName.text = "Congratulation on successful login"
@@ -59,21 +64,15 @@ class BaiTap3ViewController: UIViewController{
         }
     }
     
-    //MARK: - Public functions
-    //touch in screen with hidden keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+    // MARK: - IBActions
+    @IBAction private func loginButtonTouchUpInside(_ sender: UIButton) {
+        login()
     }
     
-    // MARK: - IBActions
-    @IBAction func loginButtonTouchUpInside(_ sender: UIButton) {
-           login()
-       }
-       
-       @IBAction func clearButtonTouchUpInside(_ sender: UIButton) {
-           usernameTextField.text = ""
-           passwordTextField.text = ""
-       }
+    @IBAction private func clearButtonTouchUpInside(_ sender: UIButton) {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+    }
 }
 
 //MARK: - Extension
@@ -84,8 +83,8 @@ extension BaiTap3ViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
             return true
         } else {
-            login()
             view.endEditing(true)
+            login()
             return true
         }
     }
