@@ -15,6 +15,10 @@
 		313C904C24B3835F00969B54 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313C904B24B3835F00969B54 /* CustomView.swift */; };
 		315B10B424B457DB00B21E70 /* img-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 315B10B324B457DB00B21E70 /* img-gray.png */; };
 		315B10B624B457E700B21E70 /* img-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 315B10B524B457E700B21E70 /* img-blue.png */; };
+		315B10BB24B4730200B21E70 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315B10BA24B4730200B21E70 /* DatePickerView.swift */; };
+		315B10BD24B4735100B21E70 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 315B10BC24B4735100B21E70 /* DatePickerView.xib */; };
+		315B10C024B47F5200B21E70 /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315B10BE24B47F5200B21E70 /* Bai4ViewController.swift */; };
+		315B10C124B47F5200B21E70 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 315B10BF24B47F5200B21E70 /* Bai4ViewController.xib */; };
 		3188A0CE24B2AF3C00FCBC91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3188A0CD24B2AF3C00FCBC91 /* AppDelegate.swift */; };
 		3188A0D024B2AF3C00FCBC91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3188A0CF24B2AF3C00FCBC91 /* SceneDelegate.swift */; };
 		3188A0D724B2AF3D00FCBC91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3188A0D624B2AF3D00FCBC91 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		313C904B24B3835F00969B54 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		315B10B324B457DB00B21E70 /* img-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-gray.png"; path = "../../../../../../Downloads/img-gray.png"; sourceTree = "<group>"; };
 		315B10B524B457E700B21E70 /* img-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-blue.png"; path = "../../../../../../Downloads/img-blue.png"; sourceTree = "<group>"; };
+		315B10BA24B4730200B21E70 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		315B10BC24B4735100B21E70 /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		315B10BE24B47F5200B21E70 /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai4ViewController.swift; sourceTree = "<group>"; };
+		315B10BF24B47F5200B21E70 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai4ViewController.xib; sourceTree = "<group>"; };
 		3188A0CA24B2AF3C00FCBC91 /* Bai5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bai5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3188A0CD24B2AF3C00FCBC91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3188A0CF24B2AF3C00FCBC91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,17 @@
 			path = Bai3;
 			sourceTree = "<group>";
 		};
+		315B10B724B4728A00B21E70 /* Bai4 */ = {
+			isa = PBXGroup;
+			children = (
+				315B10BA24B4730200B21E70 /* DatePickerView.swift */,
+				315B10BC24B4735100B21E70 /* DatePickerView.xib */,
+				315B10BE24B47F5200B21E70 /* Bai4ViewController.swift */,
+				315B10BF24B47F5200B21E70 /* Bai4ViewController.xib */,
+			);
+			path = Bai4;
+			sourceTree = "<group>";
+		};
 		3188A0C124B2AF3C00FCBC91 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +115,7 @@
 		3188A0CC24B2AF3C00FCBC91 /* Bai5 */ = {
 			isa = PBXGroup;
 			children = (
+				315B10B724B4728A00B21E70 /* Bai4 */,
 				313C904224B2DE1200969B54 /* Bai3 */,
 				313C903924B2D9E600969B54 /* Bai2 */,
 				3188A0E324B2BC4400FCBC91 /* Bai1 */,
@@ -182,10 +202,12 @@
 				3188A0DA24B2AF3D00FCBC91 /* LaunchScreen.storyboard in Resources */,
 				315B10B624B457E700B21E70 /* img-blue.png in Resources */,
 				313C903D24B2DA0600969B54 /* Bai2ViewController.xib in Resources */,
+				315B10BD24B4735100B21E70 /* DatePickerView.xib in Resources */,
 				3188A0E724B2BC7C00FCBC91 /* Bai1ViewController.xib in Resources */,
 				3188A0D724B2AF3D00FCBC91 /* Assets.xcassets in Resources */,
 				315B10B424B457DB00B21E70 /* img-gray.png in Resources */,
 				3188A0E924B2BEEE00FCBC91 /* download.png in Resources */,
+				315B10C124B47F5200B21E70 /* Bai4ViewController.xib in Resources */,
 				313C904124B2DAC100969B54 /* MySliderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,11 +219,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315B10C024B47F5200B21E70 /* Bai4ViewController.swift in Sources */,
 				3188A0CE24B2AF3C00FCBC91 /* AppDelegate.swift in Sources */,
 				313C904C24B3835F00969B54 /* CustomView.swift in Sources */,
 				313C903C24B2DA0600969B54 /* Bai2ViewController.swift in Sources */,
 				3188A0E224B2B8C800FCBC91 /* MyAvatar.swift in Sources */,
 				313C903F24B2DA5B00969B54 /* MySliderView.swift in Sources */,
+				315B10BB24B4730200B21E70 /* DatePickerView.swift in Sources */,
 				313C904424B2DE2D00969B54 /* Bai3ViewController.swift in Sources */,
 				3188A0D024B2AF3C00FCBC91 /* SceneDelegate.swift in Sources */,
 				3188A0E624B2BC7C00FCBC91 /* Bai1ViewController.swift in Sources */,
