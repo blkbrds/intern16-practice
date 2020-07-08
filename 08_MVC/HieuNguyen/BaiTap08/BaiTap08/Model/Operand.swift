@@ -10,10 +10,10 @@ import Foundation
 
 class Operand {
     
-    var operand: Int
-    var result: Int?
+    var operands: [Int]
+    var result:Int = 0
     
-    init(operand: Int) {
-        self.operand = operand
+    init(operands: [Int]) {
+        self.operands = operands
     }
 }

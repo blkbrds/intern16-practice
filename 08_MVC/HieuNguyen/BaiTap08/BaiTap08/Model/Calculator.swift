@@ -15,7 +15,7 @@ class Calculator {
         return calculator
     }()
     
-    class func used() -> Calculator {
+    class func shared() -> Calculator {
         return usedCalculator
     }
     
@@ -23,19 +23,18 @@ class Calculator {
         
     }
     
-    func plus() {
-        
-    }
-    
-    func minus() {
-        print("-")
-    }
-    
-    func devide() {
-        print("*")
-    }
-    
-    func multiple() {
-        print("/")
+    func operatorCal(a: Int, b: Int, operatorCurrent: Int) -> Int{
+        switch operatorCurrent {
+        case -4:
+            return a + b
+        case -3:
+            return a - b
+        case -2:
+            return a * b
+        case -1:
+            return a / b
+        default:
+            return 0
+        }
     }
 }
