@@ -8,30 +8,20 @@
 
 import UIKit
 
-class BaiTap2ViewController: UIViewController {
-    var people = [People]()
+final class BaiTap2ViewController: UIViewController {
+    
+    //MARK: - Properties
+    private var people = [People]()
+    
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.addSubview()
-        var x = 30
-        var y = 30
-        people = createDataArray()
-        for index in 0...people.count - 1 {
-            if index % 3 == 0 {
-                x = 30
-            } else {
-                x += 110
-            }
-            if x == 30 && index != 0 {
-                y += 150
-            }
-            view.addSubview(createSmallView(withImage: people[index].nameImage, withName: people[index].name, x: CGFloat(x), y: CGFloat(y), index: index))
-        }
-        
+        addSmallViewintoView()
     }
     
+    // MARK: - Private functions
     // create an avatar
-    func addUserAvatar(withImage image: String) -> UIImageView {
+    private func addUserAvatar(withImage image: String) -> UIImageView {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         let userAvatar = UIImageView(image: UIImage(named: "avatar.png"))
         userAvatar.frame = frame
@@ -42,7 +32,7 @@ class BaiTap2ViewController: UIViewController {
     }
     
     // create label
-    func addUsername(withName text : String) -> UILabel {
+    private func addUsername(withName text : String) -> UILabel {
         let username = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
         username.text  = text
         username.textAlignment = .center
@@ -53,7 +43,7 @@ class BaiTap2ViewController: UIViewController {
     }
     
     // create a small view that contain an avatar and a username
-    func createSmallView(withImage imgName: String, withName text: String, x: CGFloat, y: CGFloat, index i : Int) -> UIView {
+    private func createSmallView(withImage imgName: String, withName text: String, x: CGFloat, y: CGFloat, index i : Int) -> UIView {
         let uiView = UIView(frame: CGRect(x: x, y: y, width: 100 , height: 130))
         let tap = UITapGestureRecognizer(target: self, action: #selector(printInfo))
         tap.name = String(i)
@@ -75,7 +65,7 @@ class BaiTap2ViewController: UIViewController {
     }
     
     //create an array data
-    func createDataArray() -> [People] {
+    private func createDataArray() -> [People] {
         let people: [People] = [People(img: "avatar.png","Name 1"),
                                 People(img: "avatar.png","Name 2"),
                                 People(img: "avatar.png","Name 3"),
@@ -88,6 +78,22 @@ class BaiTap2ViewController: UIViewController {
         return people
     }
     
+    private func addSmallViewintoView() {
+        var x = 30
+        var y = 30
+        people = createDataArray()
+        for index in 0...people.count - 1 {
+            if index % 3 == 0 {
+                x = 30
+            } else {
+                x += 110
+            }
+            if x == 30 && index != 0 {
+                y += 150
+            }
+            view.addSubview(createSmallView(withImage: people[index].nameImage, withName: people[index].name, x: CGFloat(x), y: CGFloat(y), index: index))
+        }
+    }
 }
 
 

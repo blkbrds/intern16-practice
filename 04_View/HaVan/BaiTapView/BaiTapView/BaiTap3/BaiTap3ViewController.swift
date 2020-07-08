@@ -8,13 +8,16 @@
 
 import UIKit
 
-class BaiTap3ViewController: UIViewController, UITextFieldDelegate {
+class BaiTap3ViewController: UIViewController{
 
+    // MARK: - IBOutlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorName: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpForButton(with: loginButton)
@@ -28,11 +31,12 @@ class BaiTap3ViewController: UIViewController, UITextFieldDelegate {
        
     }
     
-    func setUpForButton(with button : UIButton) {
+    // MARK: - Private functions
+    private func setUpForButton(with button : UIButton) {
         button.layer.cornerRadius = 5
     }
     
-    func setUpForTextField(with textField: UITextField) {
+    private func setUpForTextField(with textField: UITextField) {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
         var placeHolder = "abc"
@@ -44,12 +48,7 @@ class BaiTap3ViewController: UIViewController, UITextFieldDelegate {
         textField.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.font : UIFont.italicSystemFont(ofSize: 14)])
     }
     
-    //touch in screen with hidden keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-    
-    func login(){
+    private func login(){
         errorName.isHidden = false
         if usernameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
             errorName.text = "Congratulation on successful login"
@@ -60,15 +59,25 @@ class BaiTap3ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func loginButtonTouchUpInside(_ sender: UIButton) {
-        login()
+    //MARK: - Public functions
+    //touch in screen with hidden keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
-    @IBAction func clearButtonTouchUpInside(_ sender: UIButton) {
-        usernameTextField.text = ""
-        passwordTextField.text = ""
-    }
-   
+    // MARK: - IBActions
+    @IBAction func loginButtonTouchUpInside(_ sender: UIButton) {
+           login()
+       }
+       
+       @IBAction func clearButtonTouchUpInside(_ sender: UIButton) {
+           usernameTextField.text = ""
+           passwordTextField.text = ""
+       }
+}
+
+//MARK: - Extension
+extension BaiTap3ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // compare the address of textField and usernameTextField
         if textField === usernameTextField {
@@ -79,7 +88,5 @@ class BaiTap3ViewController: UIViewController, UITextFieldDelegate {
             view.endEditing(true)
             return true
         }
-        
     }
-
 }

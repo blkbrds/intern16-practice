@@ -9,13 +9,17 @@
 import UIKit
 
 class BaiTap4ViewController: UIViewController {
-
-    var redValue: Float = 0.5
-    var greenValue: Float = 0.5
-    var blueValue: Float = 0.5
+    
+    // MARK: - IBOutlets
     @IBOutlet private weak var colorView: UIView!
     @IBOutlet private weak var colorLabel: UILabel!
     
+    // MARK: - Propeties
+    var redValue: Float = 0.5
+    var greenValue: Float = 0.5
+    var blueValue: Float = 0.5
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUIViewColor()
@@ -24,6 +28,21 @@ class BaiTap4ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Private functions
+    //Change color for UIView
+    private func changeUIViewColor(red r: Float, green gr: Float, blue b: Float) {
+        colorView.backgroundColor = UIColor(cgColor: CGColor(srgbRed: CGFloat(r), green: CGFloat(gr), blue: CGFloat(b), alpha: 1))
+    }
+    
+    private func setUpUIViewColor() {
+        colorView.layer.cornerRadius = 20
+    }
+    
+    func setUpColorLabel(red r: Float, green gr: Float, blue b: Float) -> String {
+        return "Color( R: \(Int(r * 225)), G: \(Int(gr * 225)), B: \(Int(b * 225)) )"
+    }
+    
+    // MARK: - IBActions
     @IBAction func redSliderChanged(_ sender: UISlider) {
         redValue = Float(sender.value)
         changeUIViewColor(red: redValue, green: greenValue, blue: blueValue)
@@ -41,21 +60,6 @@ class BaiTap4ViewController: UIViewController {
         colorLabel.text = setUpColorLabel(red: redValue, green: greenValue, blue: blueValue)
     }
     
-    //Change color for UIView
-    func changeUIViewColor(red r: Float, green gr: Float, blue b: Float) {
-        colorView.backgroundColor = UIColor(cgColor: CGColor(srgbRed: CGFloat(r), green: CGFloat(gr), blue: CGFloat(b), alpha: 1))
-    }
     
-    func setUpUIViewColor() {
-        colorView.layer.cornerRadius = 20
-    }
     
-    func setUpColorLabel(red r: Float, green gr: Float, blue b: Float) -> String {
-            return "Color( R: \(Int(r * 225)), G: \(Int(gr * 225)), B: \(Int(b * 225)) )"
-    }
-    
-
-
-    
-
 }
