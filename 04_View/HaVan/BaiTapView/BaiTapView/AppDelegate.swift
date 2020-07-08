@@ -10,9 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -20,40 +20,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         //bài tập 1
-//        let bt1VC = BaiTap1ViewController()
-//        window?.rootViewController = bt1VC
+        //        let bt1VC = BaiTap1ViewController()
+        //        window?.rootViewController = bt1VC
         //bài tập 2
-//        let bt2VC = BaiTap2ViewController()
-//        window?.rootViewController = bt2VC
+        //        let bt2VC = BaiTap2ViewController()
+        //        window?.rootViewController = bt2VC
         
         //bài tập 3
-//        let bt3VC = BaiTap3ViewController()
-//        window?.rootViewController = bt3VC
+        //        let bt3VC = BaiTap3ViewController()
+        //        window?.rootViewController = bt3VC
         
         //bài tập 4
         let bt4VC = BaiTap4ViewController()
         window?.rootViewController = bt4VC
         
         //bài tập 5
-        let bt5VC = BaiTap5ViewController()
-        window?.rootViewController = bt5VC
+//        let bt5VC = BaiTap5ViewController()
+//        window?.rootViewController = bt5VC
+        
+        //bài tập 5
+        let bt6VC = BaiTap6Va7ViewController()
+        window?.rootViewController = bt6VC
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
-
+    
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    
 }
 

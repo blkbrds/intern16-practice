@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = BaiTap4ViewController()
         
         //bài tập 5
-        window.rootViewController = BaiTap5ViewController()
+        window.rootViewController = BaiTap6Va7ViewController()
         self.window = window
         window.backgroundColor = .white
         window.makeKeyAndVisible()
