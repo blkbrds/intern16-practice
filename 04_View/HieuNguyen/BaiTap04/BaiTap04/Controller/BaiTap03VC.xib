@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,8 +10,8 @@
             <connections>
                 <outlet property="errorLabel" destination="cgH-xw-L56" id="R5J-wv-GSF"/>
                 <outlet property="loginButton" destination="XYF-kD-WWk" id="B3C-TZ-FER"/>
-                <outlet property="passwordTF" destination="AZb-SK-e0f" id="4MT-op-ktd"/>
-                <outlet property="userNameTF" destination="ome-io-dJ0" id="Stq-q1-c9m"/>
+                <outlet property="passWordTextField" destination="AZb-SK-e0f" id="4MT-op-ktd"/>
+                <outlet property="userNameTextField" destination="ome-io-dJ0" id="Stq-q1-c9m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ome-io-dJ0">
-                    <rect key="frame" x="16" y="108" width="382" height="48"/>
+                    <rect key="frame" x="16" y="64" width="382" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="aeC-5Z-nuj"/>
                     </constraints>
@@ -30,7 +29,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-SK-e0f">
-                    <rect key="frame" x="16" y="172" width="382" height="48"/>
+                    <rect key="frame" x="16" y="128" width="382" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="IZo-go-MoN"/>
                     </constraints>
@@ -38,13 +37,13 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nhập sai username hoặc password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgH-xw-L56">
-                    <rect key="frame" x="16" y="228" width="382" height="20"/>
+                    <rect key="frame" x="16" y="184" width="382" height="20"/>
                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                     <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="dz6-iw-Esb">
-                    <rect key="frame" x="16" y="264" width="382" height="48"/>
+                    <rect key="frame" x="16" y="220" width="382" height="48"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYF-kD-WWk">
                             <rect key="frame" x="0.0" y="0.0" width="175.5" height="48"/>
@@ -54,7 +53,7 @@
                                 <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="loginBtnWasPressed:" destination="-1" eventType="touchUpInside" id="L7Y-a7-7ap"/>
+                                <action selector="loginButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="L7Y-a7-7ap"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-pf-rQx">

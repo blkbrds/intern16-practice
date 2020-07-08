@@ -43,18 +43,18 @@ final class BaiTap02VC: UIViewController {
             } else if i != 0{
                 x += 116
             }
-            self.view.addSubview(avatarView(frame: CGRect(x: x, y: y, width: 100, height: 130),person: self.data[i], index: i))
+            let avataViewFrame = CGRect(x: x, y: y, width: 100, height: 130)
+            self.view.addSubview(avatarView(frame: avataViewFrame,person: self.data[i], index: i))
         }
     }
     
     func avatarView(frame : CGRect,person: Person, index: Int) -> UIView {
-        let profileView = UIView()
-        profileView.frame = frame
-        
+        let profileButton = UIButton()
+        profileButton.frame = frame
         let avatarImage = UIImageView(image: person.image)
         avatarImage.contentMode = .scaleAspectFit
         avatarImage.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        profileView.addSubview(avatarImage)
+        profileButton.addSubview(avatarImage)
         let nameLabel = UILabel()
         nameLabel.text = person.name
         nameLabel.font = UIFont(name: "Menlo", size: 16)
@@ -64,17 +64,15 @@ final class BaiTap02VC: UIViewController {
         nameLabel.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         nameLabel.textAlignment = .center
         nameLabel.isUserInteractionEnabled = true
-        profileView.addSubview(nameLabel)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(printInfo(_:)))
-        tap.name = String(index)
-        profileView.addGestureRecognizer(tap)
-        profileView.isUserInteractionEnabled = true
-        return profileView
+        profileButton.addSubview(nameLabel)
+        profileButton.tag = index
+        profileButton.addTarget(self, action: #selector(printInfo(_:)), for: .touchUpInside)        
+        return profileButton
     }
     
-    @objc func printInfo(_ gesture: UITapGestureRecognizer) {
+    @objc func printInfo(_ sender: UIButton) {
         for i in 0..<data.count {
-            if gesture.name == String(i) {
+            if sender.tag == i {
                 print(data[i].name)
             }
         }

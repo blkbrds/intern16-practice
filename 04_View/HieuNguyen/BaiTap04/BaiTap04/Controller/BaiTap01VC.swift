@@ -13,7 +13,7 @@ class BaiTap01VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor  = .white
-        setupBai1()
+        setupImageView()
     }
     
     let imageView: UIImageView = {
@@ -25,7 +25,7 @@ class BaiTap01VC: UIViewController {
         return image
     }()
     
-    let nameLbl: UILabel = {
+    let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Menlo", size: 16)
         label.text = "Hieu Nguyen"
@@ -36,23 +36,18 @@ class BaiTap01VC: UIViewController {
         return label
     }()
     
-    func setupBai1() {
+    func setupImageView() {
         view.addSubview(imageView)
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(nextScreen)))
-        imageView.isUserInteractionEnabled = true
         imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3 ).isActive = true        
-        view.addSubview(nameLbl)
-        nameLbl.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive = true
-        nameLbl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
-        nameLbl.widthAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3 ).isActive = true
+        view.addSubview(nameLabel)
+        nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
+        nameLabel.widthAnchor.constraint(equalToConstant: (view.frame.width - 64) / 3 ).isActive = true
     }
     
-    @objc func nextScreen() {
-        let baiTap02 = BaiTap02VC()
-        self.present(baiTap02, animated: true, completion: nil)
-    }
+
     
 }

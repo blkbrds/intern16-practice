@@ -12,24 +12,24 @@ class BaiTap03VC: UIViewController {
     
     
     @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var userNameTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.isHidden = true
-        userNameTF.delegate = self
-        passwordTF.delegate = self
+        userNameTextField.delegate = self
+        passWordTextField.delegate = self
     }
 
-    @IBAction func loginBtnWasPressed(_ sender: Any) {
-        if userNameTF.text == "" || passwordTF.text != ""{
+    @IBAction func loginButtonTouchUpInside(_ sender: Any) {
+        if userNameTextField.text == "" || passWordTextField.text != ""{
             errorLabel.isHidden = false
             errorLabel.text = "Fill all input"
             loginButton.isEnabled = false
         }
-        if userNameTF.text != "Admin" || passwordTF.text != "Admin123" {
+        if userNameTextField.text != "Admin" || passWordTextField.text != "Admin123" {
             errorLabel.isHidden = false
             errorLabel.text = "Login Fail"
         } else {
@@ -43,8 +43,8 @@ class BaiTap03VC: UIViewController {
     }
     
     @IBAction func clearBtnWasPressed(_ sender: Any) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        userNameTextField.text = ""
+        passWordTextField.text = ""
     }
     
 }
@@ -52,20 +52,20 @@ class BaiTap03VC: UIViewController {
 extension BaiTap03VC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if (textField == self.userNameTF) {
-            self.passwordTF.becomeFirstResponder()
+        if (textField == self.userNameTextField) {
+            self.passWordTextField.becomeFirstResponder()
         } else {
-            loginBtnWasPressed(UIButton?.self)
+            loginButtonTouchUpInside(UIButton?.self)
         }
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         loginButton.isEnabled = true
-        if (textField == self.userNameTF) {
-            userNameTF.returnKeyType = UIReturnKeyType.next
+        if (textField == self.userNameTextField) {
+            userNameTextField.returnKeyType = UIReturnKeyType.next
         } else {
-            passwordTF.returnKeyType = UIReturnKeyType.done
+            passWordTextField.returnKeyType = UIReturnKeyType.done
         }
     }
 }
