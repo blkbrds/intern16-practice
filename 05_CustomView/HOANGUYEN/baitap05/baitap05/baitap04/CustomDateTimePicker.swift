@@ -14,8 +14,8 @@ protocol CustomDateTimePickerDelegate: class {
 }
 
 class CustomDateTimePicker: UIView {
-
-// MARK: - IBOutlets
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var dateTimePicker: UIDatePicker!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var containButtonUIView: UIView!
@@ -24,39 +24,24 @@ class CustomDateTimePicker: UIView {
     let dateFormater: DateFormatter = DateFormatter()
     var dateValue: String = ""
     var date: Date = Date()
-//    var dateString: String = ""
     
-// MARK: - Life cycle
+    // MARK: - Life cycle
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
     
-// MARK: - Private functions
-    
-// MARK: - Public functions
-    
-// MARK: - IBActions
+    // MARK: - IBActions
     @IBAction func actionDateTimePicker(_ sender: Any) {
         date = dateTimePicker.date
         dateFormater.dateFormat = "MMM dd, yyyy"
         dateValue = dateFormater.string(from: date)
-        print(dateValue)
-        print(date)
-        delegate?.dateTime(self, date: date)
     }
     
     @IBAction func actionDoneButton(_ sender: Any) {
-        UIView.transition(with: self, duration: 0.5, options: .transitionCurlDown, animations: {
+        UIView.animate(withDuration: 0.5) {
             self.alpha = 0
-        }, completion: nil)
-        
-    }
-}
-
-// MARK: - extension
-extension CustomDateTimePicker: Baitap04ViewControllerDelegate {
-    func textFieldToDatePicker(_ view: Baitap04ViewController, date: String) {
-        let date = dateFormater.date(from: date)!
-        dateTimePicker.setDate(date, animated: true)
+            print(self.date)
+            self.delegate?.dateTime(self, date: self.date)
+        }
     }
 }
