@@ -1,3 +1,11 @@
+//
+//  BaiTap4ViewController.swift
+//  BaiTapCustomView1
+//
+//  Created by MacBook Pro on 7/6/20.
+//  Copyright © 2020 asiantech. All rights reserved.
+//
+
 import UIKit
 class BagdeNumberButton: UIButton {
     
@@ -32,20 +40,19 @@ class BagdeNumberButton: UIButton {
             }
         }
     }
-    // willset lấy gtri thiết lập truok
-    //didset khỏi tạo lại gitri/ mặc định
+    // MARK: - Public Properties
     var isShowBadge: Bool = true {
         didSet {
             showBadge()
         }
     }
-    
+
     var badgeNumber = 0 {
         didSet {
             updateLabel()
         }
     }
-    
+
     lazy private var badgeLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true
@@ -57,7 +64,8 @@ class BagdeNumberButton: UIButton {
         label.numberOfLines = 0
         return label
     }()
-    
+
+    // MARK: - Private Function
     private func showBadge() {
         if isShowBadge {
             addSubview(badgeLabel)
@@ -65,7 +73,7 @@ class BagdeNumberButton: UIButton {
             badgeLabel.isHidden = true
         }
     }
-    
+
     private func updateLabel() {
         if badgeNumber == 0 {
             badgeLabel.isHidden = true
@@ -78,7 +86,8 @@ class BagdeNumberButton: UIButton {
             }
         }
     }
-    
+
+    // MARK: Public Function
     func editPositionBagde(position: PositionBadge) {
         badgeLabel.center = position.position(with: bounds)
     }

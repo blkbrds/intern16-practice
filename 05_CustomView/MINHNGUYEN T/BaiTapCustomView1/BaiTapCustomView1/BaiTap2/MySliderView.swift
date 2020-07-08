@@ -1,19 +1,28 @@
 //
+//  BaiTap4ViewController.swift
+//  BaiTapCustomView1
+//
+//  Created by MacBook Pro on 7/6/20.
+//  Copyright © 2020 asiantech. All rights reserved.
+//
+
 import UIKit
 // MARK: - Protocol
-protocol SliderViewDelegate: class {
+protocol MySliderViewDelegate: class {
     func changeValue(value: Int)
 }
 
 class MySliderView: UIView {
+
     // MARK: - IBOutlet Properties
     @IBOutlet weak var blueImageView: UIImageView!
     @IBOutlet weak var whiteImageView: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var thumbView: UIView!
-    weak var delegate: SliderViewDelegate?
+    weak var delegate: MySliderViewDelegate?
     var value: Int?
-    
+
+    // MARK: - awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
     }

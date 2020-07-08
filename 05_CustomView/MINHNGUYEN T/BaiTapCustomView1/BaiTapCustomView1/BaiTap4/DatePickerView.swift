@@ -8,36 +8,45 @@
 
 import UIKit
 
+// MARK: - CustomDateTimePickerDelegate
 protocol CustomDateTimePickerDelegate: class {
-    func dateTime(_ view: DatePickerView, date: Date)
-    func doneTime(_ view: DatePickerView, date: Date)
+    func doneTime(_ view: DatePickerView,needsPerform action: DatePickerView.Action)
 }
+
 class DatePickerView: UIView {
+
+    // MARK: IBOutlet Properties
     @IBOutlet weak var dateTimePicker: UIDatePicker!
-        @IBOutlet weak var doneButton: UIButton!
-        @IBOutlet weak var containButtonUIView: UIView!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var containButtonUIView: UIView!
+
+    // MARK: - Properties
+    weak var delegate: CustomDateTimePickerDelegate?
+    let dateFormater: DateFormatter = DateFormatter()
+    var dateValue: String = ""
+    var date: Date = Date()
     
-        weak var delegate: CustomDateTimePickerDelegate?
-        let dateFormater: DateFormatter = DateFormatter()
-        var dateValue: String = ""
-        var date: Date = Date()
-        
-        override class func awakeFromNib() {
-            super.awakeFromNib()
-        }
-        
-        @IBAction func actionDateTimePicker(_ sender: Any) {
-            date = dateTimePicker.date
-            dateFormater.dateFormat = "MMM dd, yyyy"
-            dateValue = dateFormater.string(from: date)
-            delegate?.dateTime(self, date: date)
-        }
-        
-        @IBAction func actionDoneButton(_ sender: Any) {
-            date = dateTimePicker.date
-            dateFormater.dateFormat = "MMM dd, yyyy"
-            dateValue = dateFormater.string(from: date)
-            delegate?.doneTime(self, date: date)
-            self.isHidden = true
-        }
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    // MARK: - IBAction 
+
+    @IBAction func actionDateTimePicker(_ sender: Any) {
+        date = dateTimePicker.date
+        dateFormater.dateFormat = "MMM dd, yyyy"
+        dateValue = dateFormater.string(from: date)
+    }
+    
+    @IBAction func actionDoneButton(_ sender: Any) {
+        date = dateTimePicker.date
+        dateFormater.dateFormat = "MMM dd, yyyy"
+        dateValue = dateFormater.string(from: date)
+        delegate?.doneTime(self, needsPerform: .didClickDatePicker(date: date))
+    }
+}
+
+extension DatePickerView {
+    enum Action {
+        case didClickDatePicker(date : Date)
+    }
 }

@@ -8,41 +8,44 @@
 
 import UIKit
 
-
-class BaiTap4ViewController: UIViewController {
+class BaiTap4ViewController: UIViewController, UITextFieldDelegate {
     
-
+    // MARK: - IBOutlet
     @IBOutlet weak var datetimeTextField: UITextField!
-        var datePicker: DatePickerView!
-        let dateFormater: DateFormatter = DateFormatter()
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-              datePicker = Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView
-            view.addSubview(datePicker)
-            //datePicker.frame.origin.y = view.frame.height - datePicker.frame.height
-            datePicker.frame = CGRect(x: 0, y: view.frame.height - datePicker.frame.height, width: view.frame.width, height: view.frame.height)
-            datetimeTextField.delegate = self
-            datePicker.delegate = self
-        }
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            view.endEditing(true)
-        }
+    // MARK: - Private Properties
+    private var datePicker: DatePickerView!
+    private let dateFormater: DateFormatter = DateFormatter()
+    
+    // MARK: - Lyfe Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        datePicker = Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView
+        datePicker.frame = CGRect(x: 0, y: view.frame.height - datePicker.frame.height, width: view.frame.width, height: view.frame.height)
+        datePicker.delegate = self
+        //datetimeTextField.inputView = datePicker
+        view.addSubview(datePicker)
+        datetimeTextField.delegate = self
+        //datePicker.isHidden = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        datePicker.isHidden = true
     }
 
-extension BaiTap4ViewController: UITextFieldDelegate,CustomDateTimePickerDelegate{
-    func dateTime(_ view: DatePickerView, date: Date) {
-        dateFormater.dateFormat = "MMM dd, yyyy"
-        datetimeTextField.text = dateFormater.string(from: date)
-    }
-    
-    func doneTime(_ view: DatePickerView, date: Date){
-        dateFormater.dateFormat = "MMM dd, yyyy"
-        datetimeTextField.text = dateFormater.string(from: date)
-    }
-    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         datePicker.isHidden = false
-        return true
+        return false
+    }
+}
+
+extension BaiTap4ViewController: CustomDateTimePickerDelegate{
+    func doneTime(_ view: DatePickerView, needsPerform action: DatePickerView.Action) {
+        switch action {
+        case .didClickDatePicker(date: let date):
+            dateFormater.dateFormat = "MMM dd, yyyy"
+            datetimeTextField.text = dateFormater.string(from: date)
+            datePicker.isHidden = true
+        }
     }
 }

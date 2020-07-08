@@ -1,14 +1,22 @@
+//
+//  BaiTap4ViewController.swift
+//  BaiTapCustomView1
+//
+//  Created by MacBook Pro on 7/6/20.
+//  Copyright © 2020 asiantech. All rights reserved.
+//
+
 import UIKit
 // MARK: - Protocol
-protocol UserviewDelegate : class {
-    func userview(user : String?)
+protocol UserViewDelegate : class {
+    func view(_ view: UserView, needsPerform action: UserView.Action)
 }
 
 class UserView: UIView {
     // MARK: - Properties
     var userAvartar: UIImageView?
     var username: UILabel?
-    weak var delegate: UserviewDelegate?
+    weak var delegate: UserViewDelegate?
     
     // MARK: - Lift Cycle
     override init(frame: CGRect) {
@@ -42,6 +50,13 @@ class UserView: UIView {
     
     //MARK: - Objc Funtion
     @objc func clickButton() {
-        delegate?.userview(user: username?.text)
+     delegate?.view(self, needsPerform: .didTapImage(nameLabel: username?.text ?? ""))
+    }
+}
+
+//  MARK: - extension UserView
+extension UserView {
+    enum Action {
+        case didTapImage(nameLabel : String)
     }
 }

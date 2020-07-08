@@ -1,13 +1,25 @@
+
+//
+//  BaiTap4ViewController.swift
+//  BaiTapCustomView1
+//
+//  Created by MacBook Pro on 7/6/20.
+//  Copyright © 2020 asiantech. All rights reserved.
+//
 import UIKit
 
 class BaiTap3ViewController: UIViewController {
-    let button = BagdeNumberButton()
-    var button1 = BagdeNumberButton()
     
+    //MARK: - Private Properties
+    private let button = BagdeNumberButton()
+    private let button1 = BagdeNumberButton()
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         setupUI()
     }
-    
+
+    // MARK: - Private Function
     private func setupUI() {
         button1.frame = CGRect(x: 100, y: 150, width: 150, height: 70)
         button1.isShowBadge = true

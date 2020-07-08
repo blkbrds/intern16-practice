@@ -1,3 +1,11 @@
+//
+//  BaiTap4ViewController.swift
+//  BaiTapCustomView1
+//
+//  Created by MacBook Pro on 7/6/20.
+//  Copyright © 2020 asiantech. All rights reserved.
+//
+
 import UIKit
 class BaiTap1ViewController: UIViewController {
     //MARK: - Private Properties
@@ -42,10 +50,14 @@ class BaiTap1ViewController: UIViewController {
         }
     }
 }
+//print("name: \(user ?? "noname")")
 
-// MARK: - Extension
-extension BaiTap1ViewController: UserviewDelegate {
-    func userview(user: String?) {
-        print("name: \(user ?? "noname")")
+// MARK: - UserViewDelegate
+extension BaiTap1ViewController: UserViewDelegate {
+    func view(_ view: UserView, needsPerform action: UserView.Action) {
+        switch action {
+        case .didTapImage(nameLabel: let userName):
+            print(userName)
+        }
     }
 }
