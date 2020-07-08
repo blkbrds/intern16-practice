@@ -1,41 +1,43 @@
-import UIKit
 import Foundation
 
-//Làm sao để chặn không có mẫu số bằng 0???
 class PhanSo {
-    var TuSo: Int
-    var MauSo: Int
+    var tuSo: Int
+    var mauSo: Int
 
-    init(TuSo: Int, MauSo: Int) {
-        self.TuSo = TuSo
-        self.MauSo = MauSo
+    init?(tuSo: Int, mauSo: Int) {
+        if mauSo == 0 {
+            return nil
+        } else {
+            self.tuSo = tuSo
+            self.mauSo = mauSo
+        }
     }
 
-    func cong (ps2: PhanSo) -> PhanSo {
-        let pTuSo = self.TuSo * ps2.MauSo + ps2.TuSo * self.MauSo
-        let pMauSo = self.MauSo * ps2.MauSo
-        return PhanSo(TuSo: pTuSo, MauSo: pMauSo)
+    func cong (ps2: PhanSo) -> PhanSo? {
+        let pTuSo = self.tuSo * ps2.mauSo + ps2.tuSo * self.mauSo
+        let pMauSo = self.mauSo * ps2.mauSo
+        return PhanSo(tuSo: pTuSo, mauSo: pMauSo) ?? nil
     }
 
-    func tru (ps2: PhanSo) -> PhanSo {
-        let pTuSo = TuSo * ps2.MauSo - ps2.TuSo * MauSo
-        let pMauSo = MauSo * ps2.MauSo
-        return PhanSo(TuSo: pTuSo, MauSo: pMauSo)
+    func tru (ps2: PhanSo) -> PhanSo? {
+        let pTuSo = tuSo * ps2.mauSo - ps2.tuSo * mauSo
+        let pMauSo = mauSo * ps2.mauSo
+        return PhanSo(tuSo: pTuSo, mauSo: pMauSo) ?? nil
     }
 
-    func nhan (ps2: PhanSo) -> PhanSo {
-        let pTuSo = TuSo * ps2.TuSo
-        let pMauSo = MauSo * ps2.MauSo
-        return PhanSo(TuSo: pTuSo, MauSo: pMauSo)
+    func nhan (ps2: PhanSo) -> PhanSo? {
+        let pTuSo = tuSo * ps2.tuSo
+        let pMauSo = mauSo * ps2.mauSo
+        return PhanSo(tuSo: pTuSo, mauSo: pMauSo) ?? nil
     }
 
-    func chia (ps2: PhanSo) -> PhanSo {
-        let pTuSo = TuSo * ps2.MauSo
-        let pMauSo = MauSo * ps2.TuSo
-        return PhanSo(TuSo: pTuSo, MauSo: pMauSo)
+    func chia (ps2: PhanSo) -> PhanSo? {
+        let pTuSo = tuSo * ps2.mauSo
+        let pMauSo = mauSo * ps2.tuSo
+        return PhanSo(tuSo: pTuSo, mauSo: pMauSo) ?? nil
     }
 
-    func rutgon() -> PhanSo {
+    func rutgon() -> PhanSo? {
         func UCLN (a: Int, b: Int) -> Int {
             var x = abs(a)
             var y = abs(b)
@@ -52,69 +54,35 @@ class PhanSo {
             return x
         }
 
-        if self.TuSo == 0 {
-            return PhanSo(TuSo: 0, MauSo: 1)
+        if self.tuSo == 0 {
+            return PhanSo(tuSo: 0, mauSo: 1) ?? nil
         }
-        if self.MauSo < 0 {
-            self.TuSo = -self.TuSo
-            self.MauSo = -self.MauSo
+        if self.mauSo < 0 {
+            self.tuSo = -self.tuSo
+            self.mauSo = -self.mauSo
         }
-        let i = UCLN(a: self.TuSo, b: self.MauSo)
-        return PhanSo(TuSo: self.TuSo / i, MauSo: self.MauSo / i)
+        let i = UCLN(a: self.tuSo, b: self.mauSo)
+        return PhanSo(tuSo: self.tuSo / i, mauSo: self.mauSo / i)
     }
 
     func xuat() -> String {
-        let ps_rutgon = self.rutgon()
-        if ps_rutgon.MauSo == 1 {
-            return "\(ps_rutgon.TuSo)"
-        }
-        else {
-            return "\(ps_rutgon.TuSo)/\(ps_rutgon.MauSo)"
-        }
-    }
-
-    func check() -> Bool {
-        if self.MauSo == 0 {
-            return false
+        if let ps_rutgon = self.rutgon() {
+            if ps_rutgon.mauSo == 1 {
+                return "\(ps_rutgon.tuSo)"
+            } else {
+                return "\(String(describing: ps_rutgon.tuSo))/\(String(describing: ps_rutgon.mauSo))"
+            }
         } else {
-            return true
+            return ""
         }
     }
 }
 
-var ps1 = PhanSo(TuSo: 4, MauSo: 0)
-var ps2 = PhanSo(TuSo: 3, MauSo: 5)
-
-//Cong phan so
-if ps1.check() == false || ps2.check() == false {
-    print("Error: Không thể thực hiện phép cộng với phân số có mẫu bằng 0.")
+if let ps1 = PhanSo(tuSo: 2, mauSo: 8), let ps2 = PhanSo(tuSo: 1, mauSo: 4), let resultCong = ps1.cong(ps2: ps2), let resultTru = ps1.tru(ps2: ps2), let resultNhan = ps1.nhan(ps2: ps2), let resultChia = ps1.chia(ps2: ps2) {
+    print("Tổng hai phân số là = \(resultCong.xuat())")
+    print("Hiệu hai phân số là = \(resultTru.xuat())")
+    print("Tích hai phân số là = \(resultNhan.xuat())")
+    print("Thương hai phân số là = \(resultChia.xuat())")
 } else {
-    let resultCong = ps1.cong(ps2: ps2).xuat()
-    print("\(ps1.xuat()) + \(ps2.xuat()) = \(resultCong)")
+    print("Error: Không thể thực hiện chương trình vì phân số có mẫu bằng 0.")
 }
-
-//Tru phan so
-if ps1.check() == false || ps2.check() == false {
-    print("Error: Không thể thực hiện phép trừ với phân số có mẫu bằng 0.")
-} else {
-    let resultTru = ps1.tru(ps2: ps2).xuat()
-    print("\(ps1.xuat()) - \(ps2.xuat()) = \(resultTru)")
-}
-
-//Nhan phan so
-if ps1.check() == false || ps2.check() == false {
-    print("Error: Không thể thực hiện phép nhân với phân số có mẫu bằng 0.")
-} else {
-    let resultNhan = ps1.nhan(ps2: ps2).xuat()
-    print("\(ps1.xuat()) x \(ps2.xuat()) = \(resultNhan)")
-}
-
-//Chia phan so
-if ps1.check() == false || ps2.check() == false {
-    print("Error: Không thể thực hiện phép chia với phân số có mẫu bằng 0.")
-} else {
-    let resultChia = ps1.chia(ps2: ps2).xuat()
-    print("\(ps1.xuat()) / \(ps2.xuat()) = \(resultChia)")
-}
-
-

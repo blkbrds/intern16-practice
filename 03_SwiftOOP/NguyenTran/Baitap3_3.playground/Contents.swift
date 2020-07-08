@@ -1,62 +1,57 @@
-import UIKit
 import Foundation
 
 class DaGiac {
-    var SoCanh: Int = 0
-    var KichThuoc: [Int] = []
+    var soCanh: Int = 0
+    var kichThuoc: [Int] = []
 
-    enum check {
+    enum enumCheckDaGiac {
         case invalid
         case khacnhau
         case bangnhau(Int, [Int])
     }
 
-    func checkDaGiac(SoCanh: Int, KichThuoc: [Int]) -> check {
-        if SoCanh == 0 || KichThuoc == [] {
+    func checkDaGiac(soCanh: Int, kichThuoc: [Int]) -> enumCheckDaGiac {
+        if soCanh == 0 || kichThuoc == [] {
             return .invalid
-        } else if SoCanh != KichThuoc.count {
+        } else if soCanh != kichThuoc.count {
             return .khacnhau
         } else {
-            return .bangnhau(SoCanh, KichThuoc)
+            return .bangnhau(soCanh, kichThuoc)
         }
     }
 
-    init(SoCanh: Int, KichThuoc: [Int]) {
-        let kiemtra = checkDaGiac(SoCanh: SoCanh, KichThuoc: KichThuoc)
+    init?(soCanh: Int, kichThuoc: [Int]) {
+        let kiemtra = checkDaGiac(soCanh: soCanh, kichThuoc: kichThuoc)
         switch kiemtra {
         case .invalid:
-            print("Error: Nhập số cạnh bằng 0 hoặc array rỗng.")
-            self.KichThuoc = []
-            self.SoCanh = 0
+            return nil
         case .khacnhau:
-            print("Error: Nhập số cạnh và array không bằng nhau.")
-            self.KichThuoc = []
-            self.SoCanh = 0
+            return nil
         case .bangnhau(let socanh, let kichthuoc):
-            self.KichThuoc = kichthuoc
-            self.SoCanh = socanh
+            self.kichThuoc = kichthuoc
+            self.soCanh = socanh
         }
     }
 
-    func ChuVi() -> Int {
+    func chuVi() -> Int {
         var CV: Int = 0
-        for i in 0..<self.SoCanh {
-            CV = CV + self.KichThuoc[i]
+        for i in 0..<self.soCanh {
+            CV = CV + self.kichThuoc[i]
         }
         return CV
     }
 
-    func InCanh() {
+    func inCanh() {
         print("\nCác cạnh của đa giác có kích thước là")
-        for i in 0..<self.SoCanh {
-            print(self.KichThuoc[i])
+        for i in 0..<self.soCanh {
+            print(self.kichThuoc[i])
         }
     }
 }
 
 class TamGiac: DaGiac {
 
-    func check_tamgiac(a: Int, b: Int, c: Int) -> Bool {
+    func checkTamGiac(a: Int, b: Int, c: Int) -> Bool {
         if (a >= b + c || b >= a + c || c >= a + b) {
             return false
         } else {
@@ -64,33 +59,31 @@ class TamGiac: DaGiac {
         }
     }
 
-    init(KT_tamgiac: [Int]) {
-        super.init(SoCanh: 3, KichThuoc: KT_tamgiac)
-        if check_tamgiac(a: super.KichThuoc[0], b: super.KichThuoc[1], c: super.KichThuoc[2]) == false {
-            print("Đây không phải là 3 cạnh của tam giác.")
-            self.KichThuoc = []
+    init?(KT_tamgiac: [Int]) {
+        super.init(soCanh: 3, kichThuoc: KT_tamgiac)
+        if checkTamGiac(a: super.kichThuoc[0], b: super.kichThuoc[1], c: super.kichThuoc[2]) == false {
+            return nil
         }
     }
 
-    override func ChuVi() -> Int {
-        return self.KichThuoc[0] + self.KichThuoc[1] + self.KichThuoc[2]
+    override func chuVi() -> Int {
+        return self.kichThuoc[0] + self.kichThuoc[1] + self.kichThuoc[2]
     }
 
-    func DienTich() -> Float {
-        let p = Float(ChuVi()) / Float(2)
+    func dienTich() -> Float {
+        let p = Float(chuVi()) / Float(2)
         var DT = p
-        for i in self.KichThuoc {
+        for i in self.kichThuoc {
             DT = DT * (p - Float(i))
         }
         return sqrt(DT)
     }
 }
 
-let tg = TamGiac(KT_tamgiac: [1, 2, 2])
-
-if(tg.KichThuoc == []) {
-    print("Không thể tính toán chu vi và diện tích.")
+if let tg = TamGiac(KT_tamgiac: [3, 4, 5]) {
+    print("Chu vi tam giác là \(tg.chuVi())")
+    print("Diện tích tam giác là \(tg.dienTich())")
+    tg.inCanh()
 } else {
-    print("Chu vi tam giác là \(tg.ChuVi())")
-    print("Diện tích tam giác là \(tg.DienTich())")
+    print("Thông tin input không chính xác, không thể tính toán chu vi và diện tích.")
 }
