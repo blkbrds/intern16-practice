@@ -48,9 +48,9 @@ final class BaiTap3ViewController: UIViewController {
     }
     
     private func login() {
-        if usernameTextField.text == "" && passwordTextField.text == "" {
+        if usernameTextField.text!.isEmpty && passwordTextField.text!.isEmpty {
             thongbaoLabel.text =  Suit.khongnhap.rawValue
-        } else if usernameTextField.text == "" || passwordTextField.text == "" {
+        } else if (usernameTextField.text)!.isEmpty || (passwordTextField.text)!.isEmpty {
             thongbaoLabel.text = Suit.trong1.rawValue
         } else if usernameTextField.text != "admin" && passwordTextField.text != "admin123" {
             thongbaoLabel.text = Suit.nhapsai.rawValue

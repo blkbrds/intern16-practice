@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap4ViewController" customModule="Bai_4_4" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap4ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
                 <outlet property="blueSlider" destination="jDZ-3o-iNO" id="mSU-Wj-RYL"/>
                 <outlet property="colorView" destination="dRb-Uo-Dxm" id="YY4-xe-Ohe"/>
@@ -34,7 +34,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="thumbTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <action selector="sliderColor:" destination="-1" eventType="valueChanged" id="p2l-Qe-l8k"/>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="Arm-j7-2iN"/>
                     </connections>
                 </slider>
                 <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="wIU-sM-PjB">
@@ -42,7 +42,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="thumbTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <action selector="sliderColor:" destination="-1" eventType="valueChanged" id="0Du-Sw-reI"/>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="Hij-4m-e8Y"/>
                     </connections>
                 </slider>
                 <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="jDZ-3o-iNO">
@@ -50,7 +50,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="thumbTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <action selector="sliderColor:" destination="-1" eventType="valueChanged" id="6nc-fW-qXO"/>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="yeg-TH-dmp"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjw-zv-zFx">
