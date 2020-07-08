@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 class BagdeNumberButton: UIButton {
     
     enum PositionBadge {
@@ -40,6 +41,7 @@ class BagdeNumberButton: UIButton {
             }
         }
     }
+
     // MARK: - Public Properties
     var isShowBadge: Bool = true {
         didSet {
@@ -53,6 +55,7 @@ class BagdeNumberButton: UIButton {
         }
     }
 
+    // MARK: - Lazy Properties
     lazy private var badgeLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true

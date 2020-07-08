@@ -14,34 +14,31 @@ protocol UserViewDelegate : class {
 
 class UserView: UIView {
     // MARK: - Properties
-    var userAvartar: UIImageView?
-    var username: UILabel?
+    var userAvartarImageView: UIImageView?
+    var usernameLabel: UILabel?
     weak var delegate: UserViewDelegate?
     
     // MARK: - Lift Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        userAvartar = UIImageView(image: UIImage(named: "avartar"))
-        userAvartar?.frame = frame
-        userAvartar?.contentMode = .scaleToFill
-        addSubview(userAvartar!)
+        userAvartarImageView = UIImageView(image: UIImage(named: "avartar"))
+        userAvartarImageView?.frame = frame
+        userAvartarImageView?.contentMode = .scaleToFill
+        addSubview(userAvartarImageView!)
         // add name
-        username = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
-        username?.text = "user name"
-        username?.backgroundColor = .lightGray
-        username?.textColor = .blue
-        // ra giua
-        username?.textAlignment = .center
-        addSubview(username!)
+        usernameLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
+        usernameLabel?.backgroundColor = .lightGray
+        usernameLabel?.textColor = .blue
+        usernameLabel?.textAlignment = .center
+        guard let username = usernameLabel else { return }
+        addSubview(username)
         // add button
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 130))
-        button.backgroundColor = .clear
-        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(clickButton))
-        //uiTapGestureRecognizer.name = names[index]
-        button.addGestureRecognizer(uiTapGestureRecognizer)
-        //button.addTarget(self, action: #selector(clickButton), for: .touchUpInside)
-        addSubview(button)
+        let userButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 130))
+        userButton.backgroundColor = .clear
+        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleClickButton))
+        userButton.addGestureRecognizer(uiTapGestureRecognizer)
+        addSubview(userButton)
     }
     
     required init?(coder: NSCoder) {
@@ -49,8 +46,8 @@ class UserView: UIView {
     }
     
     //MARK: - Objc Funtion
-    @objc func clickButton() {
-     delegate?.view(self, needsPerform: .didTapImage(nameLabel: username?.text ?? ""))
+    @objc func handleClickButton() {
+     delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel?.text ?? ""))
     }
 }
 

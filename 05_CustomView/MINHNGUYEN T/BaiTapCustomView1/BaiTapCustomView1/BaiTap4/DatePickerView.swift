@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - CustomDateTimePickerDelegate
-protocol CustomDateTimePickerDelegate: class {
+protocol DatePickerViewDelegate: class {
     func doneTime(_ view: DatePickerView,needsPerform action: DatePickerView.Action)
 }
 
@@ -21,23 +21,23 @@ class DatePickerView: UIView {
     @IBOutlet weak var containButtonUIView: UIView!
 
     // MARK: - Properties
-    weak var delegate: CustomDateTimePickerDelegate?
+    weak var delegate: DatePickerViewDelegate?
     let dateFormater: DateFormatter = DateFormatter()
-    var dateValue: String = ""
+    var dateValue: String!
     var date: Date = Date()
     
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
-    // MARK: - IBAction 
 
-    @IBAction func actionDateTimePicker(_ sender: Any) {
+    // MARK: - IBAction
+    @IBAction func actionDateTimePicker(_ sender: UIDatePicker) {
         date = dateTimePicker.date
         dateFormater.dateFormat = "MMM dd, yyyy"
         dateValue = dateFormater.string(from: date)
     }
     
-    @IBAction func actionDoneButton(_ sender: Any) {
+    @IBAction func actionDoneButton(_ sender: UIButton) {
         date = dateTimePicker.date
         dateFormater.dateFormat = "MMM dd, yyyy"
         dateValue = dateFormater.string(from: date)

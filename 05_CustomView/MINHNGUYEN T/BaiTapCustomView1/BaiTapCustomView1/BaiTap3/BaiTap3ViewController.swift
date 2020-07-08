@@ -16,11 +16,11 @@ class BaiTap3ViewController: UIViewController {
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
-        setupUI()
+        setupUIButton()
     }
 
     // MARK: - Private Function
-    private func setupUI() {
+    private func setupUIButton() {
         button1.frame = CGRect(x: 100, y: 150, width: 150, height: 70)
         button1.isShowBadge = true
         button1.badgeNumber = 100
