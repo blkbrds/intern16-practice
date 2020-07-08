@@ -12,39 +12,42 @@ final class BaiTap6Va7ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var image: UIImageView!
+    @IBOutlet private weak var tellImage: UIImageView!
+    @IBOutlet private weak var tellLabel: UILabel!
     // MARK: - Propeties
     private var pinchGesture = UIPinchGestureRecognizer()
     private var rotationGesture = UIRotationGestureRecognizer()
     private var longPressGesture = UILongPressGestureRecognizer()
+    private var singleTapGesture = UITapGestureRecognizer()
+    private var doubleTapGesture = UITapGestureRecognizer()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tellLabel.isHidden = true
+        tellImage.isHidden = true
         addBundleOfGesture()
     }
     
     // MARK: - Private functions
     @objc  func addPinchGesture(pinchGesture: UIPinchGestureRecognizer) {
         guard let viewPinch = pinchGesture.view else { return }
-        if pinchGesture.scale >= 2 {
-            //            viewPinch.transform = CGAffineTransform(scaleX: 2.0 , y: 2.0)
-            viewPinch.transform = viewPinch.transform.scaledBy(x: 2.0, y: 2.0)
-        } else if pinchGesture.scale <= 0.5 {
-            //            viewPinch.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-            viewPinch.transform = viewPinch.transform.scaledBy(x: 0.5, y: 0.5)
+        var minValue: CGFloat = 0
+        var maxValue: CGFloat = 0
+        minValue = max(pinchGesture.scale, viewPinch.bounds.height * 0.5)
+        maxValue = min(pinchGesture.scale, viewPinch.bounds.height * 2.0)
+        // limit the value for viewPinch.transform
+        if minValue >= maxValue {
+            viewPinch.transform = viewPinch.transform.scaledBy(x: maxValue, y: maxValue)
         } else {
-            //            viewPinch.transform = CGAffineTransform(scaleX: pinchGesture.scale, y: pinchGesture.scale)
-            viewPinch.transform = viewPinch.transform.scaledBy(x: pinchGesture.scale, y: pinchGesture.scale)
+            viewPinch.transform = viewPinch.transform.scaledBy(x: minValue, y: minValue)
         }
-        pinchGesture.scale = 1.0
-        
+        print(pinchGesture.scale)
     }
     
     @objc private func addRotationGesture(rotationGesture: UIRotationGestureRecognizer) {
         guard let viewRotation = rotationGesture.view else { return }
         if rotationGesture.state == .began || rotationGesture.state == .changed {
-            //            viewRotation.transform = CGAffineTransform(rotationAngle: rotationGesture.rotation + rotationState)
-            //            rotationState = rotationGesture.rotation
             viewRotation.transform = viewRotation.transform.rotated(by: rotationGesture.rotation)
             rotationGesture.rotation = 0
         }
@@ -52,31 +55,55 @@ final class BaiTap6Va7ViewController: UIViewController {
     
     @objc private func addLongPressGesture(longPressGesture: UILongPressGestureRecognizer) {
         if let viewLongPress = longPressGesture.view {
-        longPressGesture.minimumPressDuration = 5.0
-                UIView.animate(withDuration: 1.0) {
-                    viewLongPress.transform = CGAffineTransform(rotationAngle: 0.0)
+            longPressGesture.minimumPressDuration = 5.0
+            UIView.animate(withDuration: 1.0) {
+                viewLongPress.transform = CGAffineTransform(rotationAngle: 0.0)
             }
         }
-        
+    }
+    
+    @objc private func addTapGesture(tapGuesture: UITapGestureRecognizer) {
+        guard tapGuesture.view != nil else { return }
+        if tapGuesture.numberOfTapsRequired == 2 {
+            UIView.animate(withDuration: 1.0) {
+                self.tellImage.isHidden = false
+                self.tellLabel.isHidden = false
+                self.tellLabel.text = "tôi là panda"
+            }
+            Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                UIView.animate(withDuration: 1.0) {
+                    self.tellImage.isHidden = true
+                    self.tellLabel.isHidden = true
+                }
+            }
+        } else {
+            UIView.animate(withDuration: 1.0) {
+                self.tellImage.isHidden = false
+                self.tellLabel.isHidden = false
+                self.tellLabel.text = "panda là tôi"
+            }
+            Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                UIView.animate(withDuration: 1.0) {
+                    self.tellImage.isHidden = true
+                    self.tellLabel.isHidden = true
+                }
+            }
+        }
     }
     
     private func addBundleOfGesture() {
         pinchGesture.addTarget(self, action: #selector(addPinchGesture))
         rotationGesture.addTarget(self, action: #selector(addRotationGesture))
         longPressGesture.addTarget(self, action: #selector(addLongPressGesture))
-        
+        singleTapGesture.numberOfTapsRequired = 1
+        singleTapGesture.addTarget(self, action: #selector(addTapGesture))
+        doubleTapGesture.numberOfTapsRequired = 2
+        doubleTapGesture.addTarget(self, action: #selector(addTapGesture))
         image.isUserInteractionEnabled = true
         image.addGestureRecognizer(pinchGesture)
         image.addGestureRecognizer(rotationGesture)
         image.addGestureRecognizer(longPressGesture)
-        
+        image.addGestureRecognizer(singleTapGesture)
+        image.addGestureRecognizer(doubleTapGesture)
     }
-    
-    // MARK: - Public functions
-    // MARK: - IBActions
-    
-}
-
-extension BaiTap6Va7ViewController: UIGestureRecognizerDelegate {
-    
 }
