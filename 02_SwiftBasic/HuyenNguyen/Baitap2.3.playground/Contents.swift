@@ -1,15 +1,30 @@
-import UIKit
+import Foundation
 
-func calculateEquations(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int) -> Float {
-    let d: Int = a1 * b2 - a2 * b1
-    let dx: Int = c1 * b2 - c2 * b1
-    let dy: Int = a1 * c2 - a2 * c1
-    if d == 0 && dx + dy == 0 {
-        print("He phuong trinh co vo so nghiem")
-    } else if d == 0 { print("He phuong trinh vo nghiem") }
-    else {
-        print("He phuong trinh co nghiem x, y = ", dx / d,",", dy / d)
-    }
-    return 0;
+enum Nghiem {
+    case voSoNghiem
+    case voNghiem
+    case haiNghiem(x: Float, y: Float)
 }
-calculateEquations(a1: 1, b1: 2, c1: 3, a2: 4, b2: 5, c2: 6)
+
+func giaiHePhuongTrinh(a1: Float, b1: Float, c1: Float, a2: Float, b2: Float, c2: Float) -> Nghiem {
+    let d: Float = a1 * b2 - a2 * b1
+    let dx: Float = c1 * b2 - c2 * b1
+    let dy: Float = a1 * c2 - a2 * c1
+    if d == 0 && dx + dy == 0 {
+        return .voSoNghiem
+    } else if d == 0 { return .voNghiem }
+    else {
+        return .haiNghiem(x: Float(dx / d), y: Float(dy / d))
+    }
+}
+
+let ketQua: Nghiem = giaiHePhuongTrinh(a1: 0, b1: 0, c1: 1, a2: 0, b2: 0, c2: 0)
+
+switch ketQua {
+case .voNghiem:
+    print("pt vo nghiem")
+case .voSoNghiem:
+    print("pt vo so nghiem")
+case .haiNghiem(ketqua: let ketqua):
+ print("Hệ có nghiệm : x = \(ketqua) và y = \(ketqua)")
+}
