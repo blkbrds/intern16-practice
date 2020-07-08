@@ -9,59 +9,39 @@
 import UIKit
 
 class BaiTap01: UIViewController {
-
-
-    // MARK: - Data
-    struct User {
-        var name: String
-        var avatar: UIImageView
-    }
-
-    // MARK: - Properties
-    private let data: [User] = [
-        User(name: "2", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "3", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "4", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "5", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "6", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "7", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "8", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "9", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "10", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "J", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "Q", avatar: UIImageView(image: UIImage(named: "img-avatar.png"))),
-        User(name: "K", avatar: UIImageView(image: UIImage(named: "img-avatar.png")))
-    ]
-
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupView()
+        setupAvavtarView()
     }
+    
+    // MARK: - Functions
+    func setupAvavtarView() {
+        var scrollHeigh: CGFloat = 180
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        var x = 32
+        var y = 0
+        for i in 0..<100 {
+            if i % 3 == 0 && i != 0 {
+                y += 160
+                x = 32
+                scrollHeigh += 160
+            } else if i % 3 != 0 {
+                x += 130
+            }
+            let avatarView = AvatarView(frame: CGRect(x: x, y: y, width: 100, height: 130), index: i)
+            avatarView.delegate = self
+            scrollView.addSubview(avatarView)
+        }
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: scrollHeigh)
+        view.addSubview(scrollView)
+    }
+}
 
-    // MARK: - Private Functions
-//    private func setupView() {
-//      
-//        UIScrollView()
-//
-//        for i in 0..<data.count {
-//            let User = AvatarView(frame: CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView))
-//
-//
-//            scrollView.addSubview(User)
-//            // Tinh frame
-//            if xView + widthUserView > widthScreen - xView {
-//                yView += heightUserView + space
-//                xView = space
-//            } else {
-//                xView += widthUserView + space
-//            }
-//        }
-//    }
-//}
-//
-//extension BaiTap01: AvatarViewDelegate {
-//    func userView(_ userView: AvatarView, didSelect index: Int) {
-//        print("kimochiii")
-//    }
-//}
+// MARK: - Extension
+extension BaiTap01: AvatarViewDelegate {
+    func avatarView(_ avatarView: UIView, getName index: String) {
+        print("User \(index)")
+    }
 }

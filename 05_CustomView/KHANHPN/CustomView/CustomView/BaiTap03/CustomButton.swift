@@ -71,9 +71,9 @@ class CustomButton: UIButton {
         addSubview(badge)
         // number:
         let num = UILabel()
-        num.frame.size = CGSize(width: badge.bounds.height, height: badge.bounds.height)
+        num.frame = badge.bounds // nhét vào thằng frame cha
         num.text = String(number)
-        num.center = position.customBadge(with: frame)
+        num.textAlignment = .center
         num.textColor = .white
         badge.addSubview(num)
     }
