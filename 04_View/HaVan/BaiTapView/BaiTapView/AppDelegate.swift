@@ -23,9 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let bt1VC = BaiTap1ViewController()
 //        window?.rootViewController = bt1VC
         //bài tập 2
-        let bt2VC = BaiTap2ViewController()
-        window?.rootViewController = bt2VC
+//        let bt2VC = BaiTap2ViewController()
+//        window?.rootViewController = bt2VC
         
+        //bài tập 3
+        let bt3VC = BaiTap3ViewController()
+        window?.rootViewController = bt3VC
         
         return true
     }
