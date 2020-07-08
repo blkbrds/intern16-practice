@@ -1,17 +1,16 @@
-import UIKit
 import Foundation
 
-class tamGiacPytago {
-    var Canh: [[Int]] = [[]]
+class TamGiacPytago {
+    var canh: [[Int]] = [[]]
 
-    enum check {
+    enum enumCheckArray {
         case nhohonbang0
         case rong
         case saiSoCanh
         case valid([[Int]])
     }
 
-    func checkarr(arr: [[Int]]) -> check {
+    func checkArray(arr: [[Int]]) -> enumCheckArray {
         if arr == [[]] {
             return .rong
         } else {
@@ -37,37 +36,37 @@ class tamGiacPytago {
         }
     }
 
-    init (Canh: [[Int]]) {
-        let kiemtra = checkarr(arr: Canh)
+    init (canh: [[Int]]) {
+        let kiemtra = checkArray(arr: canh)
         switch kiemtra {
         case .nhohonbang0:
             print("Error: Trong mảng có giá trị nhỏ hơn hoặc bằng 0.")
         case .rong:
             print("Error: Nhập mảng rỗng.")
-            self.Canh = [[]]
+            self.canh = [[]]
         case .saiSoCanh:
             print("Error: Nhập mảng có số cạnh tam giác khác 3.")
-            self.Canh = [[]]
+            self.canh = [[]]
         case .valid(let arrCanh):
-            self.Canh = arrCanh
+            self.canh = arrCanh
         }
     }
 
-    func check_pytago() {
-        if self.Canh == [[]] {
+    func checkPytago() {
+        if self.canh == [[]] {
             print("Không thể thực hiện chương trình, hãy nhập lại mảng thoả mãn các điều kiện sau:\n- Không phải mảng rỗng\n- Không có phần tử nhỏ hơn hoặc bằng 0\n- Mảng con có số phần từ khác 3")
         } else {
-            for i in 0..<self.Canh.count {
-                self.Canh[i].sort()
-                if self.Canh[i][0] * self.Canh[i][0] + self.Canh[i][1] * self.Canh[i][1] == self.Canh[i][2] * self.Canh[i][2] {
-                    print(self.Canh[i])
+            for i in 0..<self.canh.count {
+                self.canh[i].sort()
+                if self.canh[i][0] * self.canh[i][0] + self.canh[i][1] * self.canh[i][1] == self.canh[i][2] * self.canh[i][2] {
+                    print(self.canh[i])
                 }
             }
         }
     }
 }
 
-let arrCanh = tamGiacPytago(Canh: [[3, 4, 5], [0, 0, 0], [1, 3, 2]])
+let arrCanh = TamGiacPytago(canh: [[3, 4, 5], [0, 0, 0], [1, 3, 2]])
 
-arrCanh.check_pytago()
+arrCanh.checkPytago()
 

@@ -1,15 +1,14 @@
-import UIKit
 import Foundation
 
-protocol hinhVe {
+protocol HinhVe {
     func dienTich() -> Float
 }
 
-protocol haiChieu: hinhVe {
+protocol HaiChieu: HinhVe {
     func chuVi() -> Float
 }
 
-class hinhTron: haiChieu {
+class HinhTron: HaiChieu {
     var banKinh: Float
 
     init(banKinh: Float) {
@@ -30,7 +29,7 @@ class hinhTron: haiChieu {
     }
 }
 
-class hinhVuong: haiChieu {
+class HinhVuong: HaiChieu {
     var canh: Float
 
     init(canh: Float) {
@@ -51,7 +50,7 @@ class hinhVuong: haiChieu {
     }
 }
 
-class hinhTamGiac: haiChieu {
+class HinhTamGiac: HaiChieu {
     var canh1: Float
     var canh2: Float
     var canh3: Float
@@ -79,11 +78,11 @@ class hinhTamGiac: haiChieu {
     }
 }
 
-protocol baChieu: hinhVe {
+protocol BaChieu: HinhVe {
     func theTich() -> Float
 }
 
-class hinhCau: baChieu {
+class HinhCau: BaChieu {
     var banKinh: Float
 
     init(banKinh: Float) {
@@ -104,7 +103,7 @@ class hinhCau: baChieu {
     }
 }
 
-class hinhLapPhuong: baChieu {
+class HinhLapPhuong: BaChieu {
     var canh: Float
 
     init(canh: Float) {
@@ -126,23 +125,23 @@ class hinhLapPhuong: baChieu {
 }
 
 //Hình 2 chiều
-let tron = hinhTron(banKinh: 2)
+let tron = HinhTron(banKinh: 2)
 tron.chuVi()
 tron.dienTich()
 
-let vuong = hinhVuong(canh: 3)
+let vuong = HinhVuong(canh: 3)
 vuong.chuVi()
 vuong.dienTich()
 
-let tamgiac = hinhTamGiac(canh1: 3, canh2: 4, canh3: 5)
+let tamgiac = HinhTamGiac(canh1: 3, canh2: 4, canh3: 5)
 tamgiac.chuVi()
 tamgiac.dienTich()
 
 //Hình 3 chiều
-let cau = hinhCau(banKinh: 2.5)
+let cau = HinhCau(banKinh: 2.5)
 cau.dienTich()
 cau.theTich()
 
-let lapphuong = hinhLapPhuong(canh: 3.5)
+let lapphuong = HinhLapPhuong(canh: 3.5)
 lapphuong.dienTich()
 lapphuong.theTich()

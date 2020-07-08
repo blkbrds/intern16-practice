@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class date {
+class Date {
     var day: Int
     var month: Int
     var year: Int
@@ -38,7 +38,7 @@ class date {
         }
     }
 
-    func advance() -> date {
+    func advance() -> Date {
         if self.normalize() == false {
             print("Không thể thực hiện thao tác do ngày tháng năm không hợp lệ.")
             return self
@@ -55,7 +55,7 @@ class date {
             } else {
                 day = day + 1
             }
-            return date(day: day, month: month, year: year)
+            return Date(day: day, month: month, year: year)
         }
     }
 
@@ -68,6 +68,6 @@ class date {
     }
 }
 
-let a = date(day: 29, month: 2, year: 2008)
+let a = Date(day: 29, month: 2, year: 2008)
 
 print(a.advance().printDate())

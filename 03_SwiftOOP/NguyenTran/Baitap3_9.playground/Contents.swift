@@ -1,7 +1,6 @@
-import UIKit
 import Foundation
 
-class mang1c {
+class Mang1Chieu {
     var arr: Array<Int>
 
     init(arr: Array<Int>) {
@@ -32,7 +31,7 @@ class mang1c {
     }
 }
 
-let a = mang1c(arr: [1,4,6,2,29,45])
+let a = Mang1Chieu(arr: [1,4,6,2,29,45])
 
 a.printArr()
 print("Số lớn nhất trong mảng là \(a.minmax().1)\nSố nhỏ nhất trong mảng là \(a.minmax().0)")
