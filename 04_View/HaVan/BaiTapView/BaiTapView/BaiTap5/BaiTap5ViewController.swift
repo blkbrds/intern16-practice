@@ -22,25 +22,17 @@ final class BaiTap5ViewController: UIViewController {
         thumbView.layer.cornerRadius = 25
     }
     
-    // MARK: - Private functions
-    private func changeProcessView(with y: CGFloat) {
-        let preciousY = processView.frame.origin.y
-        let height = processView.bounds.height
-        processView.frame = CGRect(x: processView.frame.origin.x , y: y, width: 40, height: height + (preciousY - y))
-        let number =  ( processView.frame.height / containerView.frame.height) * 100
-        thumbLabel.text = String(format: "%.0f", number)
-    }
-    
-    // MARK: - Public functions
+    //MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: containerView)
-        if location!.y < containerView.bounds.minY {
+        guard let existLocation = location else { return }
+        if existLocation.y < containerView.bounds.minY {
             thumbView.center.y = containerView.bounds.minY
-        } else if location!.y > containerView.bounds.maxY {
+        } else if existLocation.y > containerView.bounds.maxY {
             thumbView.center.y = containerView.bounds.maxY
         } else {
-            thumbView.center.y = location!.y
+            thumbView.center.y = existLocation.y
         }
         changeProcessView(with: thumbView.center.y)
     }
@@ -48,13 +40,23 @@ final class BaiTap5ViewController: UIViewController {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: containerView)
-        if location!.y < containerView.bounds.minY {
+        guard let existLocation = location else { return }
+        if existLocation.y < containerView.bounds.minY {
             thumbView.center.y = containerView.bounds.minY
-        } else if location!.y > containerView.bounds.maxY {
+        } else if existLocation.y > containerView.bounds.maxY {
             thumbView.center.y = containerView.bounds.maxY
         } else {
-            thumbView.center.y = location!.y
+            thumbView.center.y = existLocation.y
         }
         changeProcessView(with: thumbView.center.y)
+    }
+    
+    // MARK: - Private functions
+    private func changeProcessView(with y: CGFloat) {
+        let preciousY = processView.frame.origin.y
+        let height = processView.bounds.height
+        processView.frame = CGRect(x: processView.frame.origin.x , y: y, width: 40, height: height + (preciousY - y))
+        let number =  ( processView.frame.height / containerView.frame.height) * 100
+        thumbLabel.text = String(format: "%.0f", number)
     }
 }

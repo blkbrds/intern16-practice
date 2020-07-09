@@ -13,7 +13,7 @@ final class BaiTap3ViewController: UIViewController{
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var errorName: UILabel!
+    @IBOutlet private weak var errorNameLabel: UILabel!
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var clearButton: UIButton!
     
@@ -24,14 +24,14 @@ final class BaiTap3ViewController: UIViewController{
         setUpForButton(with: clearButton)
         setUpForTextField(with: usernameTextField)
         setUpForTextField(with: passwordTextField)
-        errorName.textColor = UIColor.red
-        errorName.isHidden = true
+        errorNameLabel.textColor = UIColor.red
+        errorNameLabel.isHidden = true
     }
     
     // MARK: - Override functions
     //touch in screen with hidden keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           view.endEditing(true)
+        view.endEditing(true)
     }
     
     // MARK: - Private functions
@@ -40,27 +40,27 @@ final class BaiTap3ViewController: UIViewController{
     }
     
     private func setUpForTextField(with textField: UITextField) {
-        usernameTextField.delegate =  self
-        passwordTextField.delegate =  self
+        textField.delegate = self
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
-        var placeHolder = "abc"
         if textField === usernameTextField {
-            placeHolder = "username"
+            usernameTextField.placeholder = "username"
         } else {
-            placeHolder = "password"
+            usernameTextField.placeholder = "password"
         }
-        textField.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.font : UIFont.italicSystemFont(ofSize: 14)])
+        textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder ?? "enter something", attributes: [.font : UIFont.italicSystemFont(ofSize: 14)])
     }
     
     private func login() {
-        errorName.isHidden = false
+        guard let username = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        errorNameLabel.isHidden = false
         if usernameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
-            errorName.text = "Congratulation on successful login"
-        } else if usernameTextField.text == "" || passwordTextField.text == "" {
-            errorName.text = "You have to fill all of fields"
+            errorNameLabel.text = "Congratulation on successful login"
+        } else if username.isEmpty || password.isEmpty {
+            errorNameLabel.text = "You have to fill all of fields"
         } else {
-            errorName.text = "You entered the wrong name or password"
+            errorNameLabel.text = "You entered the wrong name or password"
         }
     }
     
@@ -72,6 +72,7 @@ final class BaiTap3ViewController: UIViewController{
     @IBAction private func clearButtonTouchUpInside(_ sender: UIButton) {
         usernameTextField.text = ""
         passwordTextField.text = ""
+        errorNameLabel.isHidden = true
     }
 }
 
@@ -81,11 +82,10 @@ extension BaiTap3ViewController: UITextFieldDelegate {
         // compare the address of textField and usernameTextField
         if textField === usernameTextField {
             passwordTextField.becomeFirstResponder()
-            return true
         } else {
             view.endEditing(true)
             login()
-            return true
         }
+        return true
     }
 }

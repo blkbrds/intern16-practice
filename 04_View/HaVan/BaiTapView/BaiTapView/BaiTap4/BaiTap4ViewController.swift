@@ -42,18 +42,18 @@ final class BaiTap4ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction private func redSliderChanged(_ sender: UISlider) {
+    @IBAction private func redSliderValueChanged(_ sender: UISlider) {
         redValue = Float(sender.value)
         changeUIViewColor(red: redValue, green: greenValue, blue: blueValue)
         colorLabel.text = setUpColorLabel(red: redValue, green: greenValue, blue: blueValue)
     }
     
-    @IBAction private func greenSliderChanged(_ sender: UISlider) {
+    @IBAction private func greenSliderValueChanged(_ sender: UISlider) {
         greenValue = Float(sender.value)
         changeUIViewColor(red: redValue, green: greenValue, blue: blueValue)
         colorLabel.text = setUpColorLabel(red: redValue, green: greenValue, blue: blueValue)
     }
-    @IBAction private func blueSliderChanged(_ sender: UISlider) {
+    @IBAction private func blueSliderValueChanged(_ sender: UISlider) {
         blueValue = Float(sender.value)
         changeUIViewColor(red: redValue, green: greenValue, blue: blueValue)
         colorLabel.text = setUpColorLabel(red: redValue, green: greenValue, blue: blueValue)

@@ -11,8 +11,8 @@ import UIKit
 final class BaiTap6Va7ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var image: UIImageView!
-    @IBOutlet private weak var tellImage: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var tellImageView: UIImageView!
     @IBOutlet private weak var tellLabel: UILabel!
     
     // MARK: - Propeties
@@ -26,16 +26,33 @@ final class BaiTap6Va7ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tellLabel.isHidden = true
-        tellImage.isHidden = true
+        tellImageView.isHidden = true
         addBundleOfGesture()
     }
     
     // MARK: - Private functions
+    private func addBundleOfGesture() {
+        pinchGesture.addTarget(self, action: #selector(addPinchGesture))
+        rotationGesture.addTarget(self, action: #selector(addRotationGesture))
+        longPressGesture.addTarget(self, action: #selector(addLongPressGesture))
+        singleTapGesture.numberOfTapsRequired = 1
+        singleTapGesture.addTarget(self, action: #selector(addTapGesture))
+        doubleTapGesture.numberOfTapsRequired = 2
+        doubleTapGesture.addTarget(self, action: #selector(addTapGesture))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(pinchGesture)
+        imageView.addGestureRecognizer(rotationGesture)
+        imageView.addGestureRecognizer(longPressGesture)
+        imageView.addGestureRecognizer(singleTapGesture)
+        imageView.addGestureRecognizer(doubleTapGesture)
+    }
+    
+    //MARK: -Objc functions
     @objc private func addPinchGesture(pinchGesture: UIPinchGestureRecognizer) {
         guard let pinchView = pinchGesture.view else {
-return }
+            return }
         if pinchGesture.state == .began || pinchGesture.state == .changed {
-            let currentScale: CGFloat = pinchView.layer.value(forKeyPath: "transform.scale.x") as! CGFloat
+            let currentScale: CGFloat = pinchView.layer.value(forKeyPath: "transform.scale.x") as? CGFloat ?? CGFloat(2.0)
             let minScale: CGFloat = 0.5
             let maxScale: CGFloat = 2.0
             let zoomSpeed: CGFloat = 0.5
@@ -46,7 +63,7 @@ return }
             let zoomTransform = pinchView.transform.scaledBy(x: deltaScale, y: deltaScale)
             pinchGesture.view?.transform = zoomTransform
             pinchGesture.scale = 1
-          }
+        }
     }
     
     @objc private func addRotationGesture(rotationGesture: UIRotationGestureRecognizer) {
@@ -70,44 +87,28 @@ return }
         guard tapGuesture.view != nil else { return }
         if tapGuesture.numberOfTapsRequired == 2 {
             UIView.animate(withDuration: 1.0) {
-                self.tellImage.isHidden = false
+                self.tellImageView.isHidden = false
                 self.tellLabel.isHidden = false
                 self.tellLabel.text = "tôi là panda"
             }
             Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
                 UIView.animate(withDuration: 1.0) {
-                    self.tellImage.isHidden = true
+                    self.tellImageView.isHidden = true
                     self.tellLabel.isHidden = true
                 }
             }
         } else {
             UIView.animate(withDuration: 1.0) {
-                self.tellImage.isHidden = false
+                self.tellImageView.isHidden = false
                 self.tellLabel.isHidden = false
                 self.tellLabel.text = "panda là tôi"
             }
             Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
                 UIView.animate(withDuration: 1.0) {
-                    self.tellImage.isHidden = true
+                    self.tellImageView.isHidden = true
                     self.tellLabel.isHidden = true
                 }
             }
         }
-    }
-    
-    private func addBundleOfGesture() {
-        pinchGesture.addTarget(self, action: #selector(addPinchGesture))
-        rotationGesture.addTarget(self, action: #selector(addRotationGesture))
-        longPressGesture.addTarget(self, action: #selector(addLongPressGesture))
-        singleTapGesture.numberOfTapsRequired = 1
-        singleTapGesture.addTarget(self, action: #selector(addTapGesture))
-        doubleTapGesture.numberOfTapsRequired = 2
-        doubleTapGesture.addTarget(self, action: #selector(addTapGesture))
-        image.isUserInteractionEnabled = true
-        image.addGestureRecognizer(pinchGesture)
-        image.addGestureRecognizer(rotationGesture)
-        image.addGestureRecognizer(longPressGesture)
-        image.addGestureRecognizer(singleTapGesture)
-        image.addGestureRecognizer(doubleTapGesture)
     }
 }

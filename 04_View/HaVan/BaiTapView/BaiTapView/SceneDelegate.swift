@@ -19,13 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //window.rootViewController = BaiTap1ViewController()
         
         //bài tập 2
-//        window.rootViewController = BaiTap2ViewController()
+   window.rootViewController = BaiTap2ViewController()
         
         //bài tập 3
 //        window.rootViewController = BaiTap3ViewController()
         
         //bài tập 4
-        window.rootViewController = BaiTap4ViewController()
+//        window.rootViewController = BaiTap4ViewController()
         
         //bài tập 5
 //        window.rootViewController = BaiTap5ViewController()

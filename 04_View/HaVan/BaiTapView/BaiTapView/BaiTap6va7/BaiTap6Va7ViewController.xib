@@ -9,8 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap6Va7ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
-                <outlet property="image" destination="NCF-5h-AcE" id="Adt-W9-PDK"/>
-                <outlet property="tellImage" destination="ztZ-Rx-DuL" id="So7-75-pA3"/>
+                <outlet property="imageView" destination="NCF-5h-AcE" id="Adt-W9-PDK"/>
+                <outlet property="tellImageView" destination="ztZ-Rx-DuL" id="So7-75-pA3"/>
                 <outlet property="tellLabel" destination="F3u-wC-1GQ" id="rfB-XE-Zj3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -68,8 +68,8 @@ final class BaiTap2ViewController: UIViewController {
     }
     
     private func addSmallViewintoView() {
-        var x = 30
-        var y = 30
+        var x: Int = 30
+        var y: Int = 30
         people = createDataArray()
         for index in 0...people.count - 1 {
             if index % 3 == 0 {

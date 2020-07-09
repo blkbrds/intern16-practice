@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap3ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
                 <outlet property="clearButton" destination="0jA-1P-fr0" id="cvX-hf-mvT"/>
-                <outlet property="errorName" destination="KzO-Gp-qS5" id="jhB-ig-2YI"/>
+                <outlet property="errorNameLabel" destination="KzO-Gp-qS5" id="jhB-ig-2YI"/>
                 <outlet property="loginButton" destination="8z4-AD-799" id="KGa-xy-44m"/>
                 <outlet property="passwordTextField" destination="dbq-X8-vhW" id="9RD-Rp-wRD"/>
                 <outlet property="usernameTextField" destination="aLS-v3-s9P" id="dzA-Yi-eKw"/>
