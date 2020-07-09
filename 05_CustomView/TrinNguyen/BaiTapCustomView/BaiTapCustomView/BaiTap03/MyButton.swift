@@ -63,15 +63,22 @@ final class MyButton: UIButton {
     private func showBadge(index: notifyView1, number: Int) {
         // Tao view
         let notifyView = UIView()
-        notifyView.bounds.size = CGSize(width: 30, height: 30)
+        let num = UILabel()
+
+        if number > 99 {
+            notifyView.bounds.size = CGSize(width: 50, height: 30)
+            num.text = "99+"
+        } else {
+            notifyView.bounds.size = CGSize(width: 30, height: 30)
+            num.text = String(number)
+        }
+
         notifyView.center = index.findPoint(bounds: bounds)
         notifyView.backgroundColor = .red
         addSubview(notifyView)
 
         // Tao label
-        let num = UILabel()
         num.frame = notifyView.bounds
-        num.text = String(number)
         num.textAlignment = .center
         num.textColor = .white
         notifyView.addSubview(num)

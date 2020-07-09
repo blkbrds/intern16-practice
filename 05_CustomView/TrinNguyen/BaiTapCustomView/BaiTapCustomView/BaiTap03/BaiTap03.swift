@@ -15,7 +15,7 @@ final class BaiTap03: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        let myButton = MyButton(frame: CGRect(x: 120, y: 150, width: 170, height: 100), index: .topRight, number: 30, name: "Email")
+        let myButton = MyButton(frame: CGRect(x: 120, y: 150, width: 170, height: 100), index: .topRight, number: 100, name: "Email")
         myButton.backgroundColor = .green
         self.view.addSubview(myButton)
 
