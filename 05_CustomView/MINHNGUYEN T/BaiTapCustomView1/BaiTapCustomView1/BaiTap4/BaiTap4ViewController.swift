@@ -25,6 +25,7 @@ class BaiTap4ViewController: UIViewController {
         datePickerView.delegate = self
         view.addSubview(datePickerView)
         datetimeTextField.delegate = self
+        datePickerView.isHidden = true
     }
 
     // MARK: - TouchesBegan
