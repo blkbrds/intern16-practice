@@ -12,7 +12,7 @@ final class BaiTap06: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var monkeyImageView: UIImageView!
-    
+
     // MARK: - Propeties
     let scaleMax: CGFloat = 2.0
     let scaleMin: CGFloat = 0.5

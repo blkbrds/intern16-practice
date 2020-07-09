@@ -16,29 +16,35 @@ final class BaiTap05: UIViewController {
     @IBOutlet private weak var blueView: UIView!
     @IBOutlet private weak var orangeView: UIView!
     @IBOutlet private weak var numberLabel: UILabel!
-      
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextField()
     }
-    
+
     // MARK: - Private Methods
     private func configTextField() {
         blueView.backgroundColor = .blue
         orangeView.backgroundColor = .orange
         whiteView.backgroundColor = .gray
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: outsideView)
             if position.y <= whiteView.frame.maxY && position.y >= whiteView.frame.minY {
-                let newFrame: CGRect = CGRect(x: blueView.frame.origin.x, y: blueView.frame.origin.y, width: blueView.frame.width, height:
-                position.y - whiteView.frame.origin.y)
+
+                let newBluePoint = blueView.frame.origin
+                let newBlueSize = blueView.frame.size
+                let newWhitePoint = whiteView.frame.origin
+                let newWhiteSize = whiteView.frame.size
+                let newFrame: CGRect = CGRect(x: newBluePoint.x, y: newBluePoint.y, width: newBlueSize.width, height:
+                        position.y - newWhitePoint.y)
+
                 orangeView.center = CGPoint(x: whiteView.center.x, y: position.y)
                 blueView.frame = newFrame
-                numberLabel.text = "\(Int(blueView.frame.height / whiteView.frame.height * 100))"
+                numberLabel.text = "\(Int(newBlueSize.height / newWhiteSize.height * 100))"
             }
         }
     }
