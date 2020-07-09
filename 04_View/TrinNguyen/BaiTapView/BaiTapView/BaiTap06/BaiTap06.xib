@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap06" customModule="BaiTapView" customModuleProvider="target">
+            <connections>
+                <outlet property="monkeyImageView" destination="mMq-4w-gcd" id="bet-so-f2K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="img_monkey_01" translatesAutoresizingMaskIntoConstraints="NO" id="mMq-4w-gcd">
+                    <rect key="frame" x="140" y="332" width="135" height="163"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="cyV-0i-OOY" appends="YES" id="aHl-f5-Ipg"/>
+                        <outletCollection property="gestureRecognizers" destination="WOI-jU-KXu" appends="YES" id="4Wo-Z3-hv6"/>
+                        <outletCollection property="gestureRecognizers" destination="02i-R2-bvz" appends="YES" id="CdX-Tp-ZFm"/>
+                        <outletCollection property="gestureRecognizers" destination="T8r-8T-HpL" appends="YES" id="pNy-H8-n9p"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+        <pinchGestureRecognizer id="cyV-0i-OOY">
+            <connections>
+                <action selector="handlePinchWithRecognizer:" destination="-1" id="hGc-vJ-zhV"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="WOI-jU-KXu">
+            <connections>
+                <action selector="longPressGestureHandlerWithRecognizer:" destination="-1" id="ypg-Oz-vWR"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="02i-R2-bvz">
+            <connections>
+                <action selector="handlePanWithRecognizer:" destination="-1" id="O2c-Ue-K2Q"/>
+            </connections>
+        </panGestureRecognizer>
+        <rotationGestureRecognizer id="T8r-8T-HpL">
+            <connections>
+                <action selector="handleRotateWithRecognizer:" destination="-1" id="Aju-dF-1nR"/>
+            </connections>
+        </rotationGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="img_monkey_01" width="135" height="93.5"/>
+    </resources>
+</document>
