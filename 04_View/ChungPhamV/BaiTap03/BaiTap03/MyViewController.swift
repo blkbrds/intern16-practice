@@ -8,13 +8,19 @@
 
 import UIKit
 
-final class MyViewController: UIViewController, UITextFieldDelegate {
+final class MyViewController: UIViewController {
     
     let userName: String = "Admin"
     let password: String = "Admin123"
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    enum LoginValidation: String{
+        case blankPassandUsername = "Please input username and password."
+        case blankUserName = "Please input username."
+        case blankPassword =  "Please input password."
+        case invalid = "Invalid username or password."
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,53 +30,89 @@ final class MyViewController: UIViewController, UITextFieldDelegate {
         
         // Secure password
         passwordTextField.isSecureTextEntry = true
-        
-        // xu ly ban phim
+        // delegate
         userNameTextField.delegate = self
-        userNameTextField.tag = 0
-        userNameTextField.returnKeyType = UIReturnKeyType.next
         passwordTextField.delegate = self
-        passwordTextField.tag = 1
-        
-        passwordTextField.returnKeyType = UIReturnKeyType.done
+        // Hide keyboard when touch outsidde
+        dismissKey()
+        //view.endEditing(true)
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == userNameTextField {
-            textField.resignFirstResponder()
-            passwordTextField.becomeFirstResponder()
-        } else if textField.returnKeyType == UIReturnKeyType.done {
-            if userNameTextField.text == "" && passwordTextField.text == ""{
-                errorLabel.text = "Please input username and password."
-            } else if userNameTextField.text == "" {
-                errorLabel.text = "Please input username."
-            } else if passwordTextField.text == "" {
-                errorLabel.text = "Please input password."
-            } else if userNameTextField.text != userName || passwordTextField.text != password {
-                errorLabel.text = "Invalid username or password."
-            } else {
-                errorLabel.isHidden = true
-            }
-        }
-
-        return false
-    }
-    @IBAction func loginButton(_ sender: Any) {
-        if userNameTextField.text == "" && passwordTextField.text == ""{
-            errorLabel.text = "Please input username and password."
-        } else if userNameTextField.text == "" {
-            errorLabel.text = "Please input username."
+    func checkLogin() -> LoginValidation{
+        if userNameTextField.text == "" && passwordTextField.text == "" {
+            return .blankPassandUsername
+        }else if userNameTextField.text == "" {
+            return .blankUserName
         } else if passwordTextField.text == "" {
-            errorLabel.text = "Please input password."
-        } else if userNameTextField.text != userName || passwordTextField.text != password {
-            errorLabel.text = "Invalid username or password."
+            return .blankPassword
         } else {
-            errorLabel.isHidden = true
+            return .invalid
         }
+    }
+    
+    func login(){
+        if userNameTextField.text == userName && passwordTextField.text == password{
+            errorLabel.isHidden = true
+            userNameTextField.endEditing(true)
+            passwordTextField.endEditing(true)
+        }
+        else {
+            errorLabel.isHidden = false
+            errorLabel.text = checkLogin().rawValue
+            userNameTextField.endEditing(true)
+            passwordTextField.endEditing(true)
+        }
+    }
+    
+    
+    
+    @IBAction func loginButton(_ sender: Any) {
+        login()
     }
     
     @IBAction func clearButton(_ sender: Any) {
         userNameTextField.text = ""
         passwordTextField.text = ""
+        userNameTextField.endEditing(true)
+        view.endEditing(true)
     }
 
 }
+extension UIViewController {
+    func dismissKey(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(UIViewController.dismissKeyboard))
+        //tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+
+    }
+
+    @objc func dismissKeyboard(){
+    view.endEditing(true)
+    }
+
+}
+extension MyViewController : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == userNameTextField {
+            textField.tag = 0
+            textField.returnKeyType = UIReturnKeyType.next
+        } else if textField == passwordTextField{
+            textField.tag = 1
+            textField.returnKeyType = UIReturnKeyType.done
+            
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.tag == 0 {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            login()
+        }
+    }
+}
+
