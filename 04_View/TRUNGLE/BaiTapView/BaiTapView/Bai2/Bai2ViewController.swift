@@ -31,7 +31,6 @@ class Bai2ViewController: UIViewController {
             }
         }
     }
-    
     func createUserView(frame: CGRect, index: Int) -> UIView {
         let userView = UIView(frame: frame)
         // Add avatar
@@ -48,15 +47,12 @@ class Bai2ViewController: UIViewController {
         // Add button
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height))
         button.backgroundColor = .clear
-        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
-        uiTapGestureRecognizer.name = names[index]
-        button.addGestureRecognizer(uiTapGestureRecognizer)
+        button.tag = index
+        button.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
         userView.addSubview(button)
         return userView
     }
-    
-    @objc private func buttonDidClick(sender: UITapGestureRecognizer) {
-        let userName = sender.name
-        print("Name User is \(userName ?? "no name")")
+    @objc private func buttonDidClick(sender: UIButton) {
+        print(names[sender.tag])
     }
 }
