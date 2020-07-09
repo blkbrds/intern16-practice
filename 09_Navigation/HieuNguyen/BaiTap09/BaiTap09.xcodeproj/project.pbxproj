@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D435F7924B6B45100DCC0A1 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F7824B6B45100DCC0A1 /* data.plist */; };
+		7D435F7F24B6C01600DCC0A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F7D24B6C01600DCC0A1 /* HomeViewController.swift */; };
+		7D435F8024B6C01600DCC0A1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F7E24B6C01600DCC0A1 /* HomeViewController.xib */; };
+		7D435F8324B6C67400DCC0A1 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8124B6C67400DCC0A1 /* EditProfileViewController.swift */; };
+		7D435F8424B6C67400DCC0A1 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F8224B6C67400DCC0A1 /* EditProfileViewController.xib */; };
 		C46E3DF724B60D3E00BB84E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */; };
 		C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */; };
 		C46E3E0024B60D4000BB84E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */; };
@@ -26,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D435F7824B6B45100DCC0A1 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		7D435F7D24B6C01600DCC0A1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7D435F7E24B6C01600DCC0A1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		7D435F8124B6C67400DCC0A1 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		7D435F8224B6C67400DCC0A1 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		C46E3DF324B60D3E00BB84E9 /* BaiTap09.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap09.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,9 +90,9 @@
 				C46E3E2524B62A0100BB84E9 /* BaiTap02 */,
 				C46E3E0124B60D4000BB84E9 /* LaunchScreen.storyboard */,
 				C46E3E0424B60D4000BB84E9 /* Info.plist */,
+				C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */,
 				C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */,
 				C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */,
-				C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */,
 			);
 			path = BaiTap09;
 			sourceTree = "<group>";
@@ -107,8 +117,13 @@
 		C46E3E2524B62A0100BB84E9 /* BaiTap02 */ = {
 			isa = PBXGroup;
 			children = (
+				7D435F7824B6B45100DCC0A1 /* data.plist */,
 				C46E3E2624B62A6800BB84E9 /* loginViewController.swift */,
 				C46E3E2724B62A6800BB84E9 /* loginViewController.xib */,
+				7D435F7D24B6C01600DCC0A1 /* HomeViewController.swift */,
+				7D435F7E24B6C01600DCC0A1 /* HomeViewController.xib */,
+				7D435F8124B6C67400DCC0A1 /* EditProfileViewController.swift */,
+				7D435F8224B6C67400DCC0A1 /* EditProfileViewController.xib */,
 			);
 			path = BaiTap02;
 			sourceTree = "<group>";
@@ -176,7 +191,10 @@
 				C46E3E2324B6226000BB84E9 /* ViewControllerE.xib in Resources */,
 				C46E3E1724B61F5900BB84E9 /* ViewControllerB.xib in Resources */,
 				C46E3E0324B60D4000BB84E9 /* LaunchScreen.storyboard in Resources */,
+				7D435F8424B6C67400DCC0A1 /* EditProfileViewController.xib in Resources */,
 				C46E3E1F24B6224900BB84E9 /* ViewControllerD.xib in Resources */,
+				7D435F7924B6B45100DCC0A1 /* data.plist in Resources */,
+				7D435F8024B6C01600DCC0A1 /* HomeViewController.xib in Resources */,
 				C46E3E1B24B6223A00BB84E9 /* ViewControllerC.xib in Resources */,
 				C46E3E0024B60D4000BB84E9 /* Assets.xcassets in Resources */,
 			);
@@ -194,8 +212,10 @@
 				C46E3E1624B61F5900BB84E9 /* ViewControllerB.swift in Sources */,
 				C46E3E1A24B6223A00BB84E9 /* ViewControllerC.swift in Sources */,
 				C46E3E2824B62A6800BB84E9 /* loginViewController.swift in Sources */,
+				7D435F7F24B6C01600DCC0A1 /* HomeViewController.swift in Sources */,
 				C46E3E1224B6141900BB84E9 /* ViewControllerA.swift in Sources */,
 				C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */,
+				7D435F8324B6C67400DCC0A1 /* EditProfileViewController.swift in Sources */,
 				C46E3E1E24B6224900BB84E9 /* ViewControllerD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,11 +26,11 @@ class ViewControllerE: UIViewController {
     }
     @IBAction func bButtonTouchUpInside(_ sender: Any) {
         let viewControllers = navigationController?.viewControllers
-      for vc in viewControllers! {
-          if let viewControllerB = vc as? ViewControllerB {
-              navigationController?.popToViewController(viewControllerB, animated: true)
-          }
-      }
+        for vc in viewControllers! {
+            if let viewControllerB = vc as? ViewControllerB {
+                navigationController?.popToViewController(viewControllerB, animated: true)
+            }
+        }
         
     }
     
