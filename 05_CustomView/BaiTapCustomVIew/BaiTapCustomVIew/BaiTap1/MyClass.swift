@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol MyAvatarDelegate : class {
-    func userView(_ person: MyClass, nameLabel name: String)
+protocol MyClassDelegate : class {
+    func view(_ view: MyClass, needsPerform action: MyClass.Action)
 }
-class MyClass: UIView {
+final class MyClass: UIView {
     
     // MARK: - Propeties
-    var username: UILabel?
-    var image: UIImageView?
-    var tap = UITapGestureRecognizer()
-    var people: People?
-    weak var delegate: MyAvatarDelegate?
+    var usernameLabel: UILabel?
+    var imageView: UIImageView?
+    private var tap = UITapGestureRecognizer()
+    private var people: People?
+    weak var delegate: MyClassDelegate?
     
     // MARK: - Initalize
     override init(frame: CGRect) {
@@ -34,24 +34,30 @@ class MyClass: UIView {
     private func configView(){
         // add avatar
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        image = UIImageView(image: UIImage(named: "abc.png"))
-        image?.frame = frame
-        image?.contentMode = .scaleToFill
-        addSubview(image!)
-        
+        imageView = UIImageView(image: UIImage(named: "abc.png"))
+        imageView?.frame = frame
+        imageView?.contentMode = .scaleToFill
+        addSubview(imageView!)
         //add name
-        username = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
-        username?.backgroundColor = .systemPink
-        username?.textColor = .white
-        username?.textAlignment = .center
+        usernameLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
+        usernameLabel?.backgroundColor = .systemPink
+        usernameLabel?.textColor = .white
+        usernameLabel?.textAlignment = .center
         self.isUserInteractionEnabled = true
         tap = UITapGestureRecognizer(target: self, action: #selector(clickImage))
         self.addGestureRecognizer(tap)
-        addSubview(username!)
-        
-    }
-    @objc func clickImage() {
-        delegate?.userView(self, nameLabel: self.username?.text ?? "no name")
+        addSubview(usernameLabel!)
     }
     
+    //MARK: - Objc functions
+    @objc func clickImage() {
+       delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel?.text ?? "no image"))
+        }
+}
+
+//MARK: -Extension
+extension MyClass {
+    enum Action {
+        case didTapImage(nameLabel: String)
+    }
 }

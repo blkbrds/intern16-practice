@@ -14,7 +14,7 @@ final class BaiTap2ViewController: UIViewController {
     @IBOutlet private weak var valueTextField: UITextField!
     
     // MARK: - Propeties
-    var slider: MySliderView?
+    private var slider: MySliderView?
     
     // MARK: - Life cycle
     override func viewDidLoad() {

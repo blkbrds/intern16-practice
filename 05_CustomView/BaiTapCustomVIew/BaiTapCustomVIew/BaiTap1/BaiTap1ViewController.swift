@@ -43,24 +43,22 @@ final class BaiTap1ViewController: UIViewController {
                 y += 150
             }
             let personView = MyClass(frame: CGRect(x: x, y: y, width: 100, height: 130))
-            personView.username?.text = people[index].username
-            personView.image?.image = UIImage(named: people[index].image)
+            personView.usernameLabel?.text = people[index].username
+            personView.imageView?.image = UIImage(named: people[index].image)
             personView.delegate = self
             scrollView.addSubview(personView)
         }
         scrollView.contentSize = CGSize(width: view.bounds.width, height: (130 + 20) * 10 + 30)
         view.addSubview(scrollView)
     }
-    
 }
 
 //MARK: - Extention
-extension BaiTap1ViewController: MyAvatarDelegate {
-    func userView(_ person: MyClass, nameLabel name: String) {
-        print(name)
+extension BaiTap1ViewController: MyClassDelegate {
+    func view(_ view: MyClass, needsPerform action: MyClass.Action) {
+        switch action {
+        case .didTapImage(nameLabel: let name):
+            print(name)
+        }
     }
-    
-    
-    
-    
 }

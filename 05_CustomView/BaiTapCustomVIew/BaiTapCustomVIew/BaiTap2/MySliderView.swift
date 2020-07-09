@@ -18,13 +18,13 @@ final class MySliderView: UIView {
     @IBOutlet private weak var processView: UIImageView!
     @IBOutlet private weak var thumpView: UIView!
     @IBOutlet private weak var processValue: UILabel!
-    @IBOutlet weak var whiteView: UIImageView!
+    @IBOutlet private weak var whiteView: UIImageView!
     
     // MARK: - Propeties
     var processNum: Float?
     weak var delegate: ProcessValue?
-    // MARK: - Life cycle
     
+    // MARK: - Life cycle
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -41,6 +41,17 @@ final class MySliderView: UIView {
         delegate?.sendValue(with: Float(number) )
     }
     
+    //MARK: -Public functions
+    func setViewAndProcess() {
+        guard let num = processNum else { return }
+        let newHeight = (whiteView.bounds.height * CGFloat(num)) / 100
+        let newY = whiteView.bounds.height - newHeight
+        processView.frame = CGRect(x: processView.frame.origin.x, y: newY, width: processView.frame.width, height: newHeight)
+        thumpView.center.y = newY
+        processValue.text = String(format: "%.0f", num)
+    }
+    
+    //MARK: Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: whiteView)
@@ -70,13 +81,5 @@ final class MySliderView: UIView {
         changeProcessView(with: thumpView.center.y)
     }
     
-    //MARK: -Public functions
-    func setViewAndProcess() {
-        guard let num = processNum else { return }
-        let newHeight = (whiteView.bounds.height * CGFloat(num)) / 100
-        let newY = whiteView.bounds.height - newHeight
-        processView.frame = CGRect(x: processView.frame.origin.x, y: newY, width: processView.frame.width, height: newHeight)
-        thumpView.center.y = newY
-        processValue.text = String(format: "%.0f", num)
-    }
+
 }

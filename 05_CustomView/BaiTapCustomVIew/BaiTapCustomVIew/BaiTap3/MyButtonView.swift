@@ -16,6 +16,7 @@ final class MyButtonView: UIView {
     private var buttonColor: String?
     private var badgeNumber: Int = 0
     
+    // MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -23,9 +24,8 @@ final class MyButtonView: UIView {
     convenience init(frame: CGRect, number: Int, position: NotificationNumber, nameButton: String) {
         self.init(frame: frame)
         configNotification(with: number, position, name: nameButton)
-        
-        
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -33,7 +33,6 @@ final class MyButtonView: UIView {
     // MARK: - Private functions
     func configNotification(with badgeNum: Int,_ position: NotificationNumber, name button: String) {
         featureButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
-        //        featureButton?.frame =
         featureButton?.backgroundColor = UIColor.init(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
         featureButton?.layer.cornerRadius = 5
         featureButton?.setTitle(button, for: .normal)
