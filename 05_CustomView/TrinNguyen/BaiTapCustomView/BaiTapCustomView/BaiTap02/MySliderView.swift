@@ -25,23 +25,31 @@ final class MySliderView: UIView {
     weak var delegate: MySliderViewDelegate?
     var value: Int?
 
+
     // MARK: Private Methods
     func changeView(y: CGFloat) {
-        blueImageView.frame = CGRect(x: blueImageView.frame.origin.x, y: y, width: blueImageView.frame.width, height: grayImageView.frame.height - y)
+        let newBluePoint = blueImageView.frame.origin
+        let newBlueSize = blueImageView.frame.size
+        let newGraySize = grayImageView.frame.size
+        blueImageView.frame = CGRect(x: newBluePoint.x, y: y, width: newBlueSize.width, height: newGraySize.height - y)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: self)
-            if position.y < grayImageView.bounds.minY {
-                sliderView.center.y = grayImageView.bounds.minY
-            } else if position.y > grayImageView.bounds.maxY {
-                sliderView.center.y = grayImageView.bounds.maxY
+
+            let grayBounds = grayImageView.bounds
+            var centerYofSliderView = sliderView.center.y
+
+            if position.y < grayBounds.minY {
+                centerYofSliderView = grayBounds.minY
+            } else if position.y > grayBounds.maxY {
+                centerYofSliderView = grayBounds.maxY
             } else {
-                sliderView.center.y = position.y
+                centerYofSliderView = position.y
             }
             // Thay doi blueView
-            changeView(y: sliderView.center.y)
+            changeView(y: centerYofSliderView)
             let temp = "\(Int(blueImageView.frame.height / grayImageView.frame.height * 100))"
             valueLabel.text = temp
             // Ban so % qua ViewController
@@ -50,11 +58,14 @@ final class MySliderView: UIView {
     }
 
     func setView() {
+        let newBluePoint = blueImageView.frame.origin
+        let newBlueSize = blueImageView.frame.size
+        let newGraySize = grayImageView.frame.size
         // Kiem tra neu khong co value thi return
         guard let temp = value else { return }
-        let newHeight = (grayImageView.frame.height * CGFloat(temp)) / 100
-        let newY = grayImageView.frame.height - newHeight
-        blueImageView.frame = CGRect(x: blueImageView.frame.origin.x, y: newY, width: blueImageView.frame.width, height: newHeight)
+        let newHeight = (newGraySize.height * CGFloat(temp)) / 100
+        let newY = newGraySize.height - newHeight
+        blueImageView.frame = CGRect(x: newBluePoint.x, y: newY, width: newBlueSize.width, height: newHeight)
         sliderView.center.y = newY
         valueLabel.text = String(temp)
     }
