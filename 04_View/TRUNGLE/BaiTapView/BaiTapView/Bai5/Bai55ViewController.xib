@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,9 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai55ViewController" customModule="BaiTapView" customModuleProvider="target">
             <connections>
-                <outlet property="nut" destination="98m-Uc-ouR" id="1w5-D6-jEw"/>
-                <outlet property="thanhNho" destination="H15-wM-BFH" id="Dhr-IX-Qfj"/>
-                <outlet property="thanhTo" destination="Mtp-Kq-TX5" id="U14-5h-gVb"/>
+                <outlet property="bigView" destination="Mtp-Kq-TX5" id="U14-5h-gVb"/>
+                <outlet property="buttonLabel" destination="98m-Uc-ouR" id="1w5-D6-jEw"/>
+                <outlet property="smallView" destination="H15-wM-BFH" id="Dhr-IX-Qfj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

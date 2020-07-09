@@ -7,45 +7,39 @@
 //
 
 import UIKit
-
 class Bai55ViewController: UIViewController {
-    
-    @IBOutlet weak var nut: UILabel!
-    @IBOutlet weak var thanhNho: UIView!
-    @IBOutlet weak var thanhTo: UIView!
+    //MARK: - Outlet
+    @IBOutlet weak var buttonLabel: UILabel!
+    @IBOutlet weak var smallView: UIView!
+    @IBOutlet weak var bigView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNut()
+        setupButton()
     }
-    
-    private func setUpNut() {
-        nut.text = "50%"
-        nut.textColor = UIColor.white
-        nut.textAlignment = .center
-        nut.font = UIFont.systemFont(ofSize: 24.0)
-        nut.layer.cornerRadius = nut.frame.height / 2
-        nut.layer.borderWidth = 3.0
-        nut.layer.masksToBounds = true
-        nut.layer.borderColor = UIColor.orange.cgColor
-        nut.translatesAutoresizingMaskIntoConstraints = false
-        nut.center = CGPoint(x: thanhTo.frame.midX, y: thanhTo.frame.midY)
+    //MARK: - Function
+    private func setupButton() {
+        buttonLabel.text = "50%"
+        buttonLabel.textColor = UIColor.white
+        buttonLabel.textAlignment = .center
+        buttonLabel.font = UIFont.systemFont(ofSize: 24.0)
+        buttonLabel.layer.cornerRadius = buttonLabel.frame.height / 2
+        buttonLabel.layer.borderWidth = 3.0
+        buttonLabel.layer.masksToBounds = true
+        buttonLabel.layer.borderColor = UIColor.orange.cgColor
+        buttonLabel.translatesAutoresizingMaskIntoConstraints = false
+        buttonLabel.center = CGPoint(x: bigView.frame.midX, y: bigView.frame.midY)
     }
-    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         if let touch = touches.first {
             let localtion = touch.location(in: self.view)
-            if   localtion.y >= thanhTo.frame.minY,
-                localtion.y <= thanhTo.frame.maxY {
-                nut.center = CGPoint(x: thanhTo.center.x, y: localtion.y)
-                thanhNho.frame = CGRect(x: thanhTo.frame.origin.x, y: thanhTo.frame.origin.y, width: thanhNho.frame.width, height: localtion.y - thanhTo.frame.origin.y)
-                let phanTram = 100 * (1 - thanhNho.frame.height / thanhTo.frame.height)
-                nut.text = "\(Int(phanTram))%"
+            if   localtion.y >= bigView.frame.minY,
+                localtion.y <= bigView.frame.maxY {
+                buttonLabel.center = CGPoint(x: bigView.center.x, y: localtion.y)
+                smallView.frame = CGRect(x: bigView.frame.origin.x, y: bigView.frame.origin.y, width: smallView.frame.width, height: localtion.y - bigView.frame.origin.y)
+                let percent = 100 * (1 - smallView.frame.height / bigView.frame.height)
+                buttonLabel.text = "\(Int(percent))%"
             }
         }
     }
-    
-    
-    
-    
 }

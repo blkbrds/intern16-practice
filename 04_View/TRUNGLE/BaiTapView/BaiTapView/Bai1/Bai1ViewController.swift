@@ -7,7 +7,6 @@
 //
 
 import UIKit
-var count = 0
 class Bai1ViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -27,22 +26,5 @@ class Bai1ViewController: UIViewController {
         userName.backgroundColor = .lightGray
         userName.textColor = .blue
         view.addSubview(userName)
-        
-        // Add button
-        
-        let button  = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 150))
-        button.backgroundColor = .clear
-        button.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside )
-        view.addSubview(button)
-        
     }
-    @objc func buttonDidClick () {
-        count += 1
-        print("alo alo : \(count)")
-    }
-    
-    
-    
-    
-    
 }

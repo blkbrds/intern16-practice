@@ -7,9 +7,8 @@
 //
 
 import UIKit
-
 class Bai7ViewController: UIViewController {
-    
+    //MARK: - Outlet
     @IBOutlet weak var messegeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
@@ -19,14 +18,12 @@ class Bai7ViewController: UIViewController {
         let singleTap = UITapGestureRecognizer(target: self, action:#selector(singleTapAction(_:)))
         singleTap.numberOfTapsRequired = 1
         imageView.addGestureRecognizer(singleTap)
-        
         let doubleTap = UITapGestureRecognizer(target: self, action:#selector(doubleTapAction(_:)))
         doubleTap.numberOfTapsRequired = 2
         imageView.addGestureRecognizer(doubleTap)
-        
         singleTap.require(toFail: doubleTap)
     }
-    
+    //MARK: - Function
     @objc func singleTapAction(_ sender: UITapGestureRecognizer) {
         messegeLabel.isHidden = false
         messegeLabel.text = "Tôi là khỉ"
@@ -34,7 +31,6 @@ class Bai7ViewController: UIViewController {
             UIView.animate(withDuration: 3) {
             }
         }
-        
     }
     @objc func doubleTapAction (_ sender: UITapGestureRecognizer)  {
         messegeLabel.isHidden = false
@@ -46,6 +42,4 @@ class Bai7ViewController: UIViewController {
             }
         }
     }
-    
-    
 }

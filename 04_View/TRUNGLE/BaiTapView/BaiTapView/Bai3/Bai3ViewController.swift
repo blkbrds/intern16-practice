@@ -9,33 +9,26 @@
 import UIKit
 
 class Bai3ViewController: UIViewController {
+    //MARK: - Outlet
     @IBOutlet weak var userNameTextField: UITextField!
-    
     @IBOutlet weak var lblError: UILabel!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnClear: UIButton!
-    let username = "Admin"
+    //MARK: - Properties
+    let userName = "Admin"
     let admin = "Admin123"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initView()
-        
         userNameTextField.delegate = self
         passWordTextField.delegate = self
-        
         let tapToScreen = UITapGestureRecognizer(target: self, action: #selector(tapToScreen(_:)))
-        
         view.addGestureRecognizer(tapToScreen)
         btnLogin.addTarget(self, action: #selector(LoginPressed), for: .touchUpInside)
         btnClear.addTarget(self, action: #selector(ClearPressed), for: .touchUpInside)
-        
-        
     }
-    
-    
-    
+    //MARK: - Function
     func setUpTextField(textField : UITextField) {
         if textField.tag == 0 {
             textField.returnKeyType = .next
@@ -69,10 +62,9 @@ class Bai3ViewController: UIViewController {
         lblError.isHidden = true
         passWordTextField.isSecureTextEntry = true
     }
-    
+
     func exception(stringData: (String, String)) -> String {
         var errorString = ""
-        
         switch stringData {
         case ("", ""):
             errorString = "Bạn chưa nhập dữ liệu"
@@ -83,19 +75,15 @@ class Bai3ViewController: UIViewController {
         default:
             errorString = "Nhập sai tên username hoặc password"
         }
-        
         return errorString
     }
-    
-    
-    
+
     func login() {
         if let userName = userNameTextField.text, let password = passWordTextField.text {
             let stringData: (String, String) = (userName, password)
-            if stringData == (username, admin) {
+            if stringData == (userName, admin) {
                 lblError.isHidden = true
                 print("Đăng nhập thành công")
-                
             } else {
                 lblError.isHidden = false
                 lblError.text = exception(stringData: stringData)
@@ -104,43 +92,34 @@ class Bai3ViewController: UIViewController {
         }
     }
     
-    
-    
-    
+    //MARK: - Action
     @IBAction func LoginPressed(_ sender: Any) {
         login()
         passWordTextField.endEditing(true)
     }
-    
     @IBAction func ClearPressed(_ sender: Any) {
         userNameTextField.text = nil
         passWordTextField.text = nil
         lblError.isHidden = true
     }
-    
-    
-    
     @objc private func tapToScreen(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
 }
+
+//MARK: - Extension
 extension Bai3ViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 0 {
-            
             passWordTextField.becomeFirstResponder()
         }
         if textField.tag == 1 {
-            
             login()
         }
     }
-    
 }
 

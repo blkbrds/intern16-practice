@@ -12,7 +12,7 @@
                 <outlet property="blueSlider" destination="hq2-d5-jI1" id="4Rh-pB-efd"/>
                 <outlet property="colorView" destination="ogd-yH-e2p" id="aY0-p8-cUy"/>
                 <outlet property="greenSlider" destination="3fC-FS-c2e" id="onw-GH-Cgq"/>
-                <outlet property="inforColor" destination="qUU-Qx-AJY" id="3VP-f9-zK3"/>
+                <outlet property="inforColorLabel" destination="qUU-Qx-AJY" id="3VP-f9-zK3"/>
                 <outlet property="redSlider" destination="7bt-e4-dYH" id="skw-nN-cgO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
