@@ -42,18 +42,21 @@ class UserView: UIView {
         //Add button
         let userButton = UIButton(frame: CGRect(x: userAvatar.frame.origin.x, y: userAvatar.frame.origin.y, width: 100, height: 250))
         userButton.backgroundColor = .clear
-        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
-        uiTapGestureRecognizer.name = userName.text
-        userButton.addGestureRecognizer(uiTapGestureRecognizer)
+//        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
+//        uiTapGestureRecognizer.name = userName.text
+//        userButton.addGestureRecognizer(uiTapGestureRecognizer)
+        userButton.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
+        addSubview(userButton)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func buttonDidClick(_ sender: UITapGestureRecognizer) {
-        let userName = sender.name
-        print("\(userName ?? "no name")")
-        delegate?.userView(self, didSelect: 10)
+    @objc func buttonDidClick() {
+//        let userName = sender.name
+//        print("\(userName ?? "no name")")
+//        delegate?.userView(self, didSelect: 10)
+        print("Button is clicked!")
     }
 }

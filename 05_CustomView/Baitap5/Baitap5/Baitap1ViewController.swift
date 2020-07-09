@@ -8,11 +8,7 @@
 
 import UIKit
 
-class Baitap1ViewController: UIViewController, UserViewDelegate {
-    func userView(_ userView: UserView, didSelect index: Int) {
-        print("Select user view with index \(index).")
-    }
-    
+class Baitap1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +21,8 @@ class Baitap1ViewController: UIViewController, UserViewDelegate {
     }
 }
 
-//extension HomeViewController: UserViewDelegate {
-//    func userView(_ userView: UserView, didSelect index: Int) {
-//        print("Select user view with index \(index).")
-//    }
-//}
+extension Baitap1ViewController: UserViewDelegate {
+    func userView(_ userView: UserView, didSelect index: Int) {
+        print("Select user view with index \(index).")
+    }
+}
