@@ -9,10 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="baitap04ViewController" customModule="baitap04" customModuleProvider="target">
             <connections>
-                <outlet property="backGroundUIView" destination="w7H-t9-RHq" id="p9g-4n-x8O"/>
-                <outlet property="outletBlueSlider" destination="ld1-tE-ojc" id="Obt-0H-4EJ"/>
-                <outlet property="outletGreenSlider" destination="WcS-Ma-FbZ" id="DgP-Dz-Vzb"/>
-                <outlet property="outletRedSlider" destination="UZt-Ka-bUe" id="e4G-CI-oEe"/>
+                <outlet property="backgroundView" destination="w7H-t9-RHq" id="p9g-4n-x8O"/>
+                <outlet property="blueSlider" destination="ld1-tE-ojc" id="Obt-0H-4EJ"/>
+                <outlet property="greenSlider" destination="WcS-Ma-FbZ" id="DgP-Dz-Vzb"/>
+                <outlet property="redSlider" destination="UZt-Ka-bUe" id="e4G-CI-oEe"/>
                 <outlet property="titleLabel" destination="Ryy-Os-BvH" id="mSN-1O-h35"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

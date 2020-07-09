@@ -8,14 +8,14 @@
 
 import UIKit
 
-class baitap03ViewController: UIViewController, UITextFieldDelegate {
+class Baitap03ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var outletLoginButton: UIButton!
     @IBOutlet weak var outletClearButton: UIButton!
     @IBOutlet weak var checkLoginLabel: UILabel!
-
+    
     let userName: String = "Admin"
     let pass: String = "Admin123"
     
@@ -28,7 +28,7 @@ class baitap03ViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
-//    chạm vào màn hình thì gọi hàm này
+    //    chạm vào màn hình thì gọi hàm này
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         view.endEditing(true)
     }
@@ -51,17 +51,17 @@ class baitap03ViewController: UIViewController, UITextFieldDelegate {
     
     func userLogin(){
         if userNameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
-                   checkLoginLabel.text = "Login thành công"
-               }
-               else if userNameTextField.text! == "", passwordTextField.text! == "" {
-                       print("Nhập gì đi chứ sao lại để trống thế kia :((")
-               }
-                   else {
-                       checkLoginLabel.text = "Nhập username và password sai"
-                   }
+            checkLoginLabel.text = "Login thành công"
+        }
+        else if userNameTextField.text! == "", passwordTextField.text! == "" {
+            print("Nhập gì đi chứ sao lại để trống thế kia :((")
+        }
+        else {
+            checkLoginLabel.text = "Nhập username và password sai"
+        }
     }
     
-//    nếu nhấn "return" trên keyboard thì gọi hàm này
+    //    nếu nhấn "return" trên keyboard thì gọi hàm này
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === userNameTextField {
             passwordTextField.becomeFirstResponder()

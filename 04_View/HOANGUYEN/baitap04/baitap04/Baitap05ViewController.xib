@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="baitap05ViewController" customModule="baitap04" customModuleProvider="target">
             <connections>
-                <outlet property="maxTrackSlider" destination="Lw9-um-tev" id="4Gz-H5-JiF"/>
-                <outlet property="minTrackSlider" destination="0bm-WI-r2z" id="gJg-Ce-zH1"/>
-                <outlet property="parentsUIView" destination="dn3-2u-Z8k" id="FsL-R0-HUQ"/>
-                <outlet property="thumpSlider" destination="hWg-23-Dz6" id="CFU-fY-t30"/>
-                <outlet property="thumpValueSlider" destination="Vrn-fM-yvD" id="UIK-Pv-uh6"/>
+                <outlet property="maxTrackSliderView" destination="Lw9-um-tev" id="4Gz-H5-JiF"/>
+                <outlet property="minTrackSliderView" destination="0bm-WI-r2z" id="gJg-Ce-zH1"/>
+                <outlet property="parentsView" destination="dn3-2u-Z8k" id="FsL-R0-HUQ"/>
+                <outlet property="thumpSliderView" destination="hWg-23-Dz6" id="CFU-fY-t30"/>
+                <outlet property="thumpValueSliderView" destination="Vrn-fM-yvD" id="UIK-Pv-uh6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

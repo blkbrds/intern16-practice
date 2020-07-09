@@ -9,10 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="baitap06ViewController" customModule="baitap04" customModuleProvider="target">
             <connections>
-                <outlet property="outletImage" destination="x6p-6k-lQB" id="Rwf-ip-P9c"/>
-                <outlet property="smsImage" destination="pJX-9Y-drU" id="8qK-aF-0ZC"/>
+                <outlet property="mainImageView" destination="x6p-6k-lQB" id="Rwf-ip-P9c"/>
+                <outlet property="smsImageView" destination="pJX-9Y-drU" id="8qK-aF-0ZC"/>
                 <outlet property="smsLabel" destination="hq4-Bd-3Fc" id="6ve-RR-2KJ"/>
-                <outlet property="smsUIView" destination="yO3-Lc-KD0" id="gMQ-ZB-avl"/>
+                <outlet property="smsView" destination="yO3-Lc-KD0" id="gMQ-ZB-avl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

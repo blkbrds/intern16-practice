@@ -8,10 +8,10 @@
 
 import UIKit
 
-class baitap02ViewController: UIViewController {
+class Baitap02ViewController: UIViewController {
     
-    let arrHinh: Array<String> = ["avatar1", "avatar2", "avatar3", "avatar4", "avatar5", "avatar6", "avatar7", "avatar8", "avatar9"]
-    let arrName: Array<String> = ["Name1", "Name2", "Name3", "Name4", "Hà", "Hiếu", "Khánh", "Trin", "Huyền"]
+    let arrHinh: [String] = ["avatar1", "avatar2", "avatar3", "avatar4", "avatar5", "avatar6", "avatar7", "avatar8", "avatar9"]
+    let arrName: [String] = ["Name1", "Name2", "Name3", "Name4", "Hà", "Hiếu", "Khánh", "Trin", "Huyền"]
 
     var createLblName = {() -> UILabel in
         let lbl = UILabel()
@@ -32,7 +32,7 @@ class baitap02ViewController: UIViewController {
         print(gesture.name!)
     }
     
-    func viewForPerson(img: UIImageView, lbl: UILabel) -> UIView{
+    func viewForPerson(img: UIImageView, lbl: UILabel) -> UIView {
         let uiView: UIView = UIView()
         uiView.addSubview(img)
         uiView.addSubview(lbl)
@@ -70,7 +70,6 @@ class baitap02ViewController: UIViewController {
                 view.addSubview(person)
             }
         }
-        
     }
 
 }

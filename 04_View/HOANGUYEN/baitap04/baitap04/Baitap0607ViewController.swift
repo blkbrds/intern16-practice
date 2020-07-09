@@ -8,27 +8,25 @@
 
 import UIKit
 
-class baitap06ViewController: UIViewController {
-    @IBOutlet weak var smsUIView: UIView!
+class Baitap06ViewController: UIViewController {
     
-    @IBOutlet weak var smsLabel: UILabel!
-    @IBOutlet weak var smsImage: UIImageView!
-    @IBOutlet weak var outletImage: UIImageView!
-    let pinchGesture: UIPinchGestureRecognizer = UIPinchGestureRecognizer()
+//    MARK: - IBOutlet
+    @IBOutlet weak private var smsView: UIView!
+    @IBOutlet weak private var smsLabel: UILabel!
+    @IBOutlet weak private var smsImageView: UIImageView!
+    @IBOutlet weak private var mainImageView: UIImageView!
+// MARK: - Properties
     let rotationGesture: UIRotationGestureRecognizer = UIRotationGestureRecognizer()
-    let longGesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
-    let tapGesture1: UITapGestureRecognizer = UITapGestureRecognizer()
-    let tapGesture2: UITapGestureRecognizer = UITapGestureRecognizer()
     var recognizerScale: CGFloat = 1.0
-    
+// MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        smsUIView.alpha = 0
-        outletImage.isUserInteractionEnabled = true
+        smsView.alpha = 0
+        mainImageView.isUserInteractionEnabled = true
         configGesture()
     }
-    
-    @objc func zoomImage(pinch: UIPinchGestureRecognizer) {
+//  MARK: - Private function
+    @objc private func zoomImage(pinch: UIPinchGestureRecognizer) {
         if recognizerScale < 2.0 && pinch.scale > 1.0 {
                pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
                recognizerScale *= pinch.scale
@@ -40,49 +38,52 @@ class baitap06ViewController: UIViewController {
                pinch.scale = 1.0
              }
     }
-    
-//    bug bug bug
-    @objc func rotationImage(rotation: UIRotationGestureRecognizer) {
+
+    @objc private func rotationImage(rotation: UIRotationGestureRecognizer) {
         rotation.view!.transform = rotation.view!.transform.rotated(by: rotation.rotation)
           rotation.rotation = 0
     }
-    @objc func longPressToDefault(longPress: UILongPressGestureRecognizer) {
+    @objc private func longPressToDefault(longPress: UILongPressGestureRecognizer) {
         longPress.minimumPressDuration = 5.0
         rotationGesture.view?.transform = CGAffineTransform(rotationAngle: 0)
     }
     
-    @objc func tapGestureImage(tap: UITapGestureRecognizer) {
+    @objc private func tapGestureImage(tap: UITapGestureRecognizer) {
         if tap.numberOfTapsRequired == 2 {
             smsLabel.text = "Hoá là tôi!"
         }
         else {
             smsLabel.text = "Tôi là Hoá!"
         }
-        if self.smsUIView.alpha == 0 {
+        if self.smsView.alpha == 0 {
             
-            UIView.transition(with: smsUIView, duration: 0.5,
+            UIView.transition(with: smsView, duration: 0.5,
                               options: .transitionCrossDissolve,
                               animations: {
-                                self.smsUIView.alpha = 1
+                                self.smsView.alpha = 1
                                 self.view.layoutIfNeeded()
             })
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                UIView.transition(with: self.smsUIView, duration: 1,
+                UIView.transition(with: self.smsView, duration: 1,
                                   options: .transitionCrossDissolve,
                                   animations: {
-                                    self.smsUIView.alpha = 0
+                                    self.smsView.alpha = 0
                                     self.view.layoutIfNeeded()
                 })
             }
         }
     }
     
-    func configGesture() {
-        outletImage.addGestureRecognizer(tapGesture1)
-        outletImage.addGestureRecognizer(tapGesture2)
-        outletImage.addGestureRecognizer(longGesture)
-        outletImage.addGestureRecognizer(pinchGesture)
-        outletImage.addGestureRecognizer(rotationGesture)
+    private func configGesture() {
+        let pinchGesture: UIPinchGestureRecognizer = UIPinchGestureRecognizer()
+        let longGesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
+        let tapGesture1: UITapGestureRecognizer = UITapGestureRecognizer()
+        let tapGesture2: UITapGestureRecognizer = UITapGestureRecognizer()
+        mainImageView.addGestureRecognizer(tapGesture1)
+        mainImageView.addGestureRecognizer(tapGesture2)
+        mainImageView.addGestureRecognizer(longGesture)
+        mainImageView.addGestureRecognizer(pinchGesture)
+        mainImageView.addGestureRecognizer(rotationGesture)
         tapGesture1.numberOfTapsRequired = 1
         tapGesture1.addTarget(self, action: #selector(tapGestureImage(tap:)))
         tapGesture2.numberOfTapsRequired = 2
@@ -91,5 +92,4 @@ class baitap06ViewController: UIViewController {
         rotationGesture.addTarget(self, action: #selector(rotationImage(rotation:)))
         longGesture.addTarget(self, action: #selector(longPressToDefault(longPress:)))
     }
-    
 }

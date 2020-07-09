@@ -8,7 +8,7 @@
 
 import UIKit
 
-class baitap01ViewController: UIViewController {
+class Baitap01ViewController: UIViewController {
 
      let lblName: UILabel = {
           let lbl = UILabel()
@@ -30,18 +30,5 @@ class baitap01ViewController: UIViewController {
           lblName.leadingAnchor.constraint(equalTo: imgAvatar.leadingAnchor, constant: 0).isActive = true
           lblName.heightAnchor.constraint(equalToConstant: 30).isActive = true
           lblName.widthAnchor.constraint(equalTo: imgAvatar.widthAnchor, constant: 0).isActive = true
-          
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
