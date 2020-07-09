@@ -11,7 +11,7 @@ import UIKit
 class Bai3ViewController: UIViewController {
     //MARK: - Outlet
     @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var lblError: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnClear: UIButton!
@@ -25,8 +25,8 @@ class Bai3ViewController: UIViewController {
         passWordTextField.delegate = self
         let tapToScreen = UITapGestureRecognizer(target: self, action: #selector(tapToScreen(_:)))
         view.addGestureRecognizer(tapToScreen)
-        btnLogin.addTarget(self, action: #selector(LoginPressed), for: .touchUpInside)
-        btnClear.addTarget(self, action: #selector(ClearPressed), for: .touchUpInside)
+        btnLogin.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
+        btnClear.addTarget(self, action: #selector(clearPressed), for: .touchUpInside)
     }
     //MARK: - Function
     func setUpTextField(textField : UITextField) {
@@ -59,7 +59,7 @@ class Bai3ViewController: UIViewController {
         setUpTextField(textField: passWordTextField)
         setUpButton(button: btnLogin)
         setUpButton(button: btnClear)
-        lblError.isHidden = true
+        errorLabel.isHidden = true
         passWordTextField.isSecureTextEntry = true
     }
 
@@ -77,36 +77,33 @@ class Bai3ViewController: UIViewController {
         }
         return errorString
     }
-
     func login() {
         if let userName = userNameTextField.text, let password = passWordTextField.text {
             let stringData: (String, String) = (userName, password)
             if stringData == (userName, admin) {
-                lblError.isHidden = true
+                errorLabel.isHidden = true
                 print("Đăng nhập thành công")
             } else {
-                lblError.isHidden = false
-                lblError.text = exception(stringData: stringData)
-                lblError.textColor = .red
+                errorLabel.isHidden = false
+                errorLabel.text = exception(stringData: stringData)
+                errorLabel.textColor = .red
             }
         }
     }
-    
     //MARK: - Action
-    @IBAction func LoginPressed(_ sender: Any) {
+    @IBAction func loginPressed(_ sender: Any) {
         login()
         passWordTextField.endEditing(true)
     }
-    @IBAction func ClearPressed(_ sender: Any) {
+    @IBAction func clearPressed(_ sender: Any) {
         userNameTextField.text = nil
         passWordTextField.text = nil
-        lblError.isHidden = true
+        errorLabel.isHidden = true
     }
     @objc private func tapToScreen(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
 }
-
 //MARK: - Extension
 extension Bai3ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
