@@ -1,22 +1,26 @@
 //
-//  BaiTap01VC.swift
+//  ChartView.swift
 //  BaiTap06
 //
-//  Created by PCI0020 on 7/2/20.
+//  Created by PCI0020 on 7/9/20.
 //  Copyright © 2020 hieu.ngq. All rights reserved.
 //
 
 import UIKit
 
-class BaiTap01VC: UIViewController {
+class ChartView: UIView {
 
-    @IBOutlet weak var viewGrid: UIView!
-    var data:[Int] = [98, 95, 103, 102, 99, 97, 98]
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        setupView()
+    convenience init(frame: CGRect,color: UIColor, view: UIView, value: Int, pointX0: Int) {
+        self.init(frame: frame)
+        drawLine(color: color, view: view, value: value, pointX0: pointX0)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func drawLine(color: UIColor, view: UIView, value: Int, pointX0: Int) {
@@ -38,21 +42,5 @@ class BaiTap01VC: UIViewController {
         shapeLayer.lineWidth = 1.0
 
         view.layer.addSublayer(shapeLayer)
-    }
-    
-    func setupView() {
-        var pointX0 = 0
-        var colorView:UIColor?
-        for i in 0..<data.count {
-            if data[i] > 100 {
-                colorView = .red
-            } else if data[i] > 95 && data[i] < 100 {
-                colorView = .green
-            } else {
-                colorView = .orange
-            }
-            drawLine(color: colorView!, view: viewGrid, value: data[i], pointX0: pointX0)
-            pointX0 = pointX0 + 45
-        }
     }
 }
