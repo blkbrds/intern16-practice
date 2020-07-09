@@ -24,33 +24,37 @@ final class MySliderView: UIView {
     // MARK: Propeties
     weak var delegate: MySliderViewDelegate?
     var value: Int?
-
+    var newBluePoint: CGPoint {
+        return self.blueImageView.frame.origin
+    }
+    var newBlueSize: CGSize {
+        return self.blueImageView.frame.size
+    }
+    var newGraySize: CGSize {
+        return self.grayImageView.frame.size
+    }
+    var grayBounds: CGRect {
+        return self.grayImageView.bounds
+    }
 
     // MARK: Private Methods
     func changeView(y: CGFloat) {
-        let newBluePoint = blueImageView.frame.origin
-        let newBlueSize = blueImageView.frame.size
-        let newGraySize = grayImageView.frame.size
         blueImageView.frame = CGRect(x: newBluePoint.x, y: y, width: newBlueSize.width, height: newGraySize.height - y)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: self)
-
-            let grayBounds = grayImageView.bounds
-            var centerYofSliderView = sliderView.center.y
-
             if position.y < grayBounds.minY {
-                centerYofSliderView = grayBounds.minY
+                sliderView.center.y = grayBounds.minY
             } else if position.y > grayBounds.maxY {
-                centerYofSliderView = grayBounds.maxY
+                sliderView.center.y = grayBounds.maxY
             } else {
-                centerYofSliderView = position.y
+                sliderView.center.y = position.y
             }
             // Thay doi blueView
-            changeView(y: centerYofSliderView)
-            let temp = "\(Int(blueImageView.frame.height / grayImageView.frame.height * 100))"
+            changeView(y: sliderView.center.y)
+            let temp = "\(Int(newBlueSize.height / newGraySize.height * 100))"
             valueLabel.text = temp
             // Ban so % qua ViewController
             delegate?.sliderView(self, didSelect: Int(temp)!)
@@ -58,9 +62,6 @@ final class MySliderView: UIView {
     }
 
     func setView() {
-        let newBluePoint = blueImageView.frame.origin
-        let newBlueSize = blueImageView.frame.size
-        let newGraySize = grayImageView.frame.size
         // Kiem tra neu khong co value thi return
         guard let temp = value else { return }
         let newHeight = (newGraySize.height * CGFloat(temp)) / 100
