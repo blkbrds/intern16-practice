@@ -46,7 +46,7 @@ final class BaiTap3ViewController: UIViewController{
         if textField === usernameTextField {
             usernameTextField.placeholder = "username"
         } else {
-            usernameTextField.placeholder = "password"
+            passwordTextField.placeholder = "password"
         }
         textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder ?? "enter something", attributes: [.font : UIFont.italicSystemFont(ofSize: 14)])
     }
