@@ -13,6 +13,7 @@
 		B010A1F624B7070A00021F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B010A1F424B7070A00021F7C /* Main.storyboard */; };
 		B010A1F824B7070C00021F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B010A1F724B7070C00021F7C /* Assets.xcassets */; };
 		B010A1FB24B7070C00021F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B010A1F924B7070C00021F7C /* LaunchScreen.storyboard */; };
+		B010A20B24B71A8100021F7C /* Autolayout in Resources */ = {isa = PBXBuildFile; fileRef = B010A20A24B71A8100021F7C /* Autolayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B010A1F724B7070C00021F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B010A1FA24B7070C00021F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B010A1FC24B7070C00021F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B010A20A24B71A8100021F7C /* Autolayout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Autolayout; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		B010A1ED24B7070A00021F7C /* Autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				B010A20A24B71A8100021F7C /* Autolayout */,
 				B010A1EE24B7070A00021F7C /* AppDelegate.swift */,
 				B010A1F024B7070A00021F7C /* SceneDelegate.swift */,
 				B010A1F224B7070A00021F7C /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B010A1FB24B7070C00021F7C /* LaunchScreen.storyboard in Resources */,
+				B010A20B24B71A8100021F7C /* Autolayout in Resources */,
 				B010A1F824B7070C00021F7C /* Assets.xcassets in Resources */,
 				B010A1F624B7070A00021F7C /* Main.storyboard in Resources */,
 			);
