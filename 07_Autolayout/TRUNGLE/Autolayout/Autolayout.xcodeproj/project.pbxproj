@@ -7,29 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B010A1EF24B7070A00021F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B010A1EE24B7070A00021F7C /* AppDelegate.swift */; };
-		B010A1F124B7070A00021F7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B010A1F024B7070A00021F7C /* SceneDelegate.swift */; };
-		B010A1F324B7070A00021F7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B010A1F224B7070A00021F7C /* ViewController.swift */; };
-		B010A1F624B7070A00021F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B010A1F424B7070A00021F7C /* Main.storyboard */; };
-		B010A1F824B7070C00021F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B010A1F724B7070C00021F7C /* Assets.xcassets */; };
-		B010A1FB24B7070C00021F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B010A1F924B7070C00021F7C /* LaunchScreen.storyboard */; };
-		B010A20B24B71A8100021F7C /* Autolayout in Resources */ = {isa = PBXBuildFile; fileRef = B010A20A24B71A8100021F7C /* Autolayout */; };
+		B0E6918024B71ED200F895F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6917F24B71ED200F895F3 /* AppDelegate.swift */; };
+		B0E6918224B71ED200F895F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6918124B71ED200F895F3 /* SceneDelegate.swift */; };
+		B0E6918424B71ED200F895F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6918324B71ED200F895F3 /* ViewController.swift */; };
+		B0E6918724B71ED200F895F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E6918524B71ED200F895F3 /* Main.storyboard */; };
+		B0E6918924B71ED300F895F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E6918824B71ED300F895F3 /* Assets.xcassets */; };
+		B0E6918C24B71ED300F895F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E6918A24B71ED300F895F3 /* LaunchScreen.storyboard */; };
+		B0E6919624B71EED00F895F3 /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6919424B71EED00F895F3 /* Bai1ViewController.swift */; };
+		B0E6919724B71EED00F895F3 /* Bai1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E6919524B71EED00F895F3 /* Bai1ViewController.xib */; };
+		B0E6919A24B71F3E00F895F3 /* bai1-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6919824B71F3E00F895F3 /* bai1-1ViewController.swift */; };
+		B0E6919B24B71F3E00F895F3 /* bai1-1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E6919924B71F3E00F895F3 /* bai1-1ViewController.xib */; };
+		B0E6919F24B71F9900F895F3 /* Bai2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */; };
+		B0E691A024B71F9900F895F3 /* Bai2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */; };
+		B0E691A324B71FCA00F895F3 /* Bai2-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */; };
+		B0E691A424B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E691A224B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib */; };
+		B0E691A824B722CA00F895F3 /* Bai3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E691A624B722CA00F895F3 /* Bai3ViewController.swift */; };
+		B0E691A924B722CA00F895F3 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E691A724B722CA00F895F3 /* Bai3ViewController.xib */; };
+		B0E691AC24B7245000F895F3 /* Bai3-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E691AA24B7245000F895F3 /* Bai3-2ViewController.swift */; };
+		B0E691AD24B7245000F895F3 /* Bai3-2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E691AB24B7245000F895F3 /* Bai3-2ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B010A1EB24B7070A00021F7C /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B010A1EE24B7070A00021F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B010A1F024B7070A00021F7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B010A1F224B7070A00021F7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B010A1F524B7070A00021F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B010A1F724B7070C00021F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B010A1FA24B7070C00021F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B010A1FC24B7070C00021F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B010A20A24B71A8100021F7C /* Autolayout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Autolayout; sourceTree = "<group>"; };
+		B0E6917C24B71ED100F895F3 /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E6917F24B71ED200F895F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0E6918124B71ED200F895F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B0E6918324B71ED200F895F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0E6918624B71ED200F895F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0E6918824B71ED300F895F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0E6918B24B71ED300F895F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0E6918D24B71ED300F895F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E6919424B71EED00F895F3 /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai1ViewController.swift; sourceTree = "<group>"; };
+		B0E6919524B71EED00F895F3 /* Bai1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai1ViewController.xib; sourceTree = "<group>"; };
+		B0E6919824B71F3E00F895F3 /* bai1-1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "bai1-1ViewController.swift"; sourceTree = "<group>"; };
+		B0E6919924B71F3E00F895F3 /* bai1-1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "bai1-1ViewController.xib"; sourceTree = "<group>"; };
+		B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2ViewController.swift; sourceTree = "<group>"; };
+		B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2ViewController.xib; sourceTree = "<group>"; };
+		B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bai2-2ViewController.swift"; sourceTree = "<group>"; };
+		B0E691A224B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Bai2-2ViewController(chua xong).xib"; sourceTree = "<group>"; };
+		B0E691A624B722CA00F895F3 /* Bai3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai3ViewController.swift; sourceTree = "<group>"; };
+		B0E691A724B722CA00F895F3 /* Bai3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3ViewController.xib; sourceTree = "<group>"; };
+		B0E691AA24B7245000F895F3 /* Bai3-2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bai3-2ViewController.swift"; sourceTree = "<group>"; };
+		B0E691AB24B7245000F895F3 /* Bai3-2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Bai3-2ViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B010A1E824B7070A00021F7C /* Frameworks */ = {
+		B0E6917924B71ED100F895F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,47 +61,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B010A1E224B7070A00021F7C = {
+		B0E6917324B71ED100F895F3 = {
 			isa = PBXGroup;
 			children = (
-				B010A1ED24B7070A00021F7C /* Autolayout */,
-				B010A1EC24B7070A00021F7C /* Products */,
+				B0E6917E24B71ED200F895F3 /* Autolayout */,
+				B0E6917D24B71ED100F895F3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B010A1EC24B7070A00021F7C /* Products */ = {
+		B0E6917D24B71ED100F895F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B010A1EB24B7070A00021F7C /* Autolayout.app */,
+				B0E6917C24B71ED100F895F3 /* Autolayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B010A1ED24B7070A00021F7C /* Autolayout */ = {
+		B0E6917E24B71ED200F895F3 /* Autolayout */ = {
 			isa = PBXGroup;
 			children = (
-				B010A20A24B71A8100021F7C /* Autolayout */,
-				B010A1EE24B7070A00021F7C /* AppDelegate.swift */,
-				B010A1F024B7070A00021F7C /* SceneDelegate.swift */,
-				B010A1F224B7070A00021F7C /* ViewController.swift */,
-				B010A1F424B7070A00021F7C /* Main.storyboard */,
-				B010A1F724B7070C00021F7C /* Assets.xcassets */,
-				B010A1F924B7070C00021F7C /* LaunchScreen.storyboard */,
-				B010A1FC24B7070C00021F7C /* Info.plist */,
+				B0E691A524B722BD00F895F3 /* Bai3 */,
+				B0E6919C24B71F8800F895F3 /* Bai2 */,
+				B0E6919324B71EDC00F895F3 /* Bai1 */,
+				B0E6917F24B71ED200F895F3 /* AppDelegate.swift */,
+				B0E6918124B71ED200F895F3 /* SceneDelegate.swift */,
+				B0E6918324B71ED200F895F3 /* ViewController.swift */,
+				B0E6918524B71ED200F895F3 /* Main.storyboard */,
+				B0E6918824B71ED300F895F3 /* Assets.xcassets */,
+				B0E6918A24B71ED300F895F3 /* LaunchScreen.storyboard */,
+				B0E6918D24B71ED300F895F3 /* Info.plist */,
 			);
 			path = Autolayout;
+			sourceTree = "<group>";
+		};
+		B0E6919324B71EDC00F895F3 /* Bai1 */ = {
+			isa = PBXGroup;
+			children = (
+				B0E6919424B71EED00F895F3 /* Bai1ViewController.swift */,
+				B0E6919524B71EED00F895F3 /* Bai1ViewController.xib */,
+				B0E6919824B71F3E00F895F3 /* bai1-1ViewController.swift */,
+				B0E6919924B71F3E00F895F3 /* bai1-1ViewController.xib */,
+			);
+			path = Bai1;
+			sourceTree = "<group>";
+		};
+		B0E6919C24B71F8800F895F3 /* Bai2 */ = {
+			isa = PBXGroup;
+			children = (
+				B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */,
+				B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */,
+				B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */,
+				B0E691A224B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib */,
+			);
+			path = Bai2;
+			sourceTree = "<group>";
+		};
+		B0E691A524B722BD00F895F3 /* Bai3 */ = {
+			isa = PBXGroup;
+			children = (
+				B0E691A624B722CA00F895F3 /* Bai3ViewController.swift */,
+				B0E691A724B722CA00F895F3 /* Bai3ViewController.xib */,
+				B0E691AA24B7245000F895F3 /* Bai3-2ViewController.swift */,
+				B0E691AB24B7245000F895F3 /* Bai3-2ViewController.xib */,
+			);
+			path = Bai3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B010A1EA24B7070A00021F7C /* Autolayout */ = {
+		B0E6917B24B71ED100F895F3 /* Autolayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B010A1FF24B7070C00021F7C /* Build configuration list for PBXNativeTarget "Autolayout" */;
+			buildConfigurationList = B0E6919024B71ED300F895F3 /* Build configuration list for PBXNativeTarget "Autolayout" */;
 			buildPhases = (
-				B010A1E724B7070A00021F7C /* Sources */,
-				B010A1E824B7070A00021F7C /* Frameworks */,
-				B010A1E924B7070A00021F7C /* Resources */,
+				B0E6917824B71ED100F895F3 /* Sources */,
+				B0E6917924B71ED100F895F3 /* Frameworks */,
+				B0E6917A24B71ED100F895F3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,25 +144,25 @@
 			);
 			name = Autolayout;
 			productName = Autolayout;
-			productReference = B010A1EB24B7070A00021F7C /* Autolayout.app */;
+			productReference = B0E6917C24B71ED100F895F3 /* Autolayout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B010A1E324B7070A00021F7C /* Project object */ = {
+		B0E6917424B71ED100F895F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Trung Le D.";
 				TargetAttributes = {
-					B010A1EA24B7070A00021F7C = {
+					B0E6917B24B71ED100F895F3 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = B010A1E624B7070A00021F7C /* Build configuration list for PBXProject "Autolayout" */;
+			buildConfigurationList = B0E6917724B71ED100F895F3 /* Build configuration list for PBXProject "Autolayout" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +170,67 @@
 				en,
 				Base,
 			);
-			mainGroup = B010A1E224B7070A00021F7C;
-			productRefGroup = B010A1EC24B7070A00021F7C /* Products */;
+			mainGroup = B0E6917324B71ED100F895F3;
+			productRefGroup = B0E6917D24B71ED100F895F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B010A1EA24B7070A00021F7C /* Autolayout */,
+				B0E6917B24B71ED100F895F3 /* Autolayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B010A1E924B7070A00021F7C /* Resources */ = {
+		B0E6917A24B71ED100F895F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B010A1FB24B7070C00021F7C /* LaunchScreen.storyboard in Resources */,
-				B010A20B24B71A8100021F7C /* Autolayout in Resources */,
-				B010A1F824B7070C00021F7C /* Assets.xcassets in Resources */,
-				B010A1F624B7070A00021F7C /* Main.storyboard in Resources */,
+				B0E6918C24B71ED300F895F3 /* LaunchScreen.storyboard in Resources */,
+				B0E691AD24B7245000F895F3 /* Bai3-2ViewController.xib in Resources */,
+				B0E6918924B71ED300F895F3 /* Assets.xcassets in Resources */,
+				B0E6918724B71ED200F895F3 /* Main.storyboard in Resources */,
+				B0E6919B24B71F3E00F895F3 /* bai1-1ViewController.xib in Resources */,
+				B0E691A424B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib in Resources */,
+				B0E691A924B722CA00F895F3 /* Bai3ViewController.xib in Resources */,
+				B0E691A024B71F9900F895F3 /* Bai2ViewController.xib in Resources */,
+				B0E6919724B71EED00F895F3 /* Bai1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B010A1E724B7070A00021F7C /* Sources */ = {
+		B0E6917824B71ED100F895F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B010A1F324B7070A00021F7C /* ViewController.swift in Sources */,
-				B010A1EF24B7070A00021F7C /* AppDelegate.swift in Sources */,
-				B010A1F124B7070A00021F7C /* SceneDelegate.swift in Sources */,
+				B0E6919F24B71F9900F895F3 /* Bai2ViewController.swift in Sources */,
+				B0E691A824B722CA00F895F3 /* Bai3ViewController.swift in Sources */,
+				B0E6918424B71ED200F895F3 /* ViewController.swift in Sources */,
+				B0E6918024B71ED200F895F3 /* AppDelegate.swift in Sources */,
+				B0E691AC24B7245000F895F3 /* Bai3-2ViewController.swift in Sources */,
+				B0E6919A24B71F3E00F895F3 /* bai1-1ViewController.swift in Sources */,
+				B0E6918224B71ED200F895F3 /* SceneDelegate.swift in Sources */,
+				B0E6919624B71EED00F895F3 /* Bai1ViewController.swift in Sources */,
+				B0E691A324B71FCA00F895F3 /* Bai2-2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B010A1F424B7070A00021F7C /* Main.storyboard */ = {
+		B0E6918524B71ED200F895F3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B010A1F524B7070A00021F7C /* Base */,
+				B0E6918624B71ED200F895F3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B010A1F924B7070C00021F7C /* LaunchScreen.storyboard */ = {
+		B0E6918A24B71ED300F895F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B010A1FA24B7070C00021F7C /* Base */,
+				B0E6918B24B71ED300F895F3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +238,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B010A1FD24B7070C00021F7C /* Debug */ = {
+		B0E6918E24B71ED300F895F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +298,7 @@
 			};
 			name = Debug;
 		};
-		B010A1FE24B7070C00021F7C /* Release */ = {
+		B0E6918F24B71ED300F895F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,7 +352,7 @@
 			};
 			name = Release;
 		};
-		B010A20024B7070C00021F7C /* Debug */ = {
+		B0E6919124B71ED300F895F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,7 +369,7 @@
 			};
 			name = Debug;
 		};
-		B010A20124B7070C00021F7C /* Release */ = {
+		B0E6919224B71ED300F895F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -321,25 +389,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B010A1E624B7070A00021F7C /* Build configuration list for PBXProject "Autolayout" */ = {
+		B0E6917724B71ED100F895F3 /* Build configuration list for PBXProject "Autolayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B010A1FD24B7070C00021F7C /* Debug */,
-				B010A1FE24B7070C00021F7C /* Release */,
+				B0E6918E24B71ED300F895F3 /* Debug */,
+				B0E6918F24B71ED300F895F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B010A1FF24B7070C00021F7C /* Build configuration list for PBXNativeTarget "Autolayout" */ = {
+		B0E6919024B71ED300F895F3 /* Build configuration list for PBXNativeTarget "Autolayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B010A20024B7070C00021F7C /* Debug */,
-				B010A20124B7070C00021F7C /* Release */,
+				B0E6919124B71ED300F895F3 /* Debug */,
+				B0E6919224B71ED300F895F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B010A1E324B7070A00021F7C /* Project object */;
+	rootObject = B0E6917424B71ED100F895F3 /* Project object */;
 }

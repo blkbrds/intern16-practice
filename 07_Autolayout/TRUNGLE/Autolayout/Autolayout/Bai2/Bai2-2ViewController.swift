@@ -1,5 +1,5 @@
 //
-//  Bai3_2ViewController.swift
+//  Bai2-2ViewController.swift
 //  Autolayout
 //
 //  Created by Trung Le D. on 7/9/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Bai3_2ViewController: UIViewController {
+class Bai2_2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

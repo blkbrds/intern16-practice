@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai3_2ViewController" customModule="Autolayout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbx-BM-IPD" userLabel="2">
+                    <rect key="frame" x="314" y="328" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="3WG-tt-ngu"/>
+                        <constraint firstAttribute="height" constant="80" id="JAz-0y-1lO"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyI-XP-s3J" userLabel="1">
+                    <rect key="frame" x="20" y="328" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="VGA-fV-1EX"/>
+                        <constraint firstAttribute="height" constant="80" id="uup-ET-6JG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="GyI-XP-s3J" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9Os-76-fj7"/>
+                <constraint firstItem="Lbx-BM-IPD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MPQ-dK-M9R"/>
+                <constraint firstItem="GyI-XP-s3J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="W4d-wc-eg9"/>
+                <constraint firstItem="GyI-XP-s3J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="knD-BT-ms9"/>
+                <constraint firstItem="Lbx-BM-IPD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nfM-wf-3dY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lbx-BM-IPD" secondAttribute="trailing" constant="20" id="qaZ-w1-xVT"/>
+                <constraint firstItem="Lbx-BM-IPD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tKI-dO-baI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+</document>
