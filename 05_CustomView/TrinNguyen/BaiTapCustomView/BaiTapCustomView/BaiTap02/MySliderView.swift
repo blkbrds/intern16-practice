@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Protocol
 protocol MySliderViewDelegate: class {
-    func sliderView(_ sliderView: MySliderView, didSelcect: Int)
+    func sliderView(_ sliderView: MySliderView, didSelect: Int)
 }
 
 final class MySliderView: UIView {
@@ -45,7 +45,7 @@ final class MySliderView: UIView {
             let temp = "\(Int(blueImageView.frame.height / grayImageView.frame.height * 100))"
             valueLabel.text = temp
             // Ban so % qua ViewController
-            delegate?.sliderView(self, didSelcect: Int(temp)!)
+            delegate?.sliderView(self, didSelect: Int(temp)!)
         }
     }
 

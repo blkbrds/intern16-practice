@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class BaiTap02: UIViewController {
 
     // MARK: IBOutlets
     @IBOutlet private weak var valueLabel: UILabel!
@@ -39,13 +39,13 @@ final class ViewController: UIViewController {
 }
 
 // MARK: - MySliderViewDelegate
-extension ViewController: MySliderViewDelegate {
-    func sliderView(_ sliderView: MySliderView, didSelcect: Int) {
-        valueTextField.text = String(didSelcect)
+extension BaiTap02: MySliderViewDelegate {
+    func sliderView(_ sliderView: MySliderView, didSelect: Int) {
+        valueTextField.text = String(didSelect)
     } }
 
 // MARK: - UITextFieldDelegate
-extension ViewController: UITextFieldDelegate {
+extension BaiTap02: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         change(num: valueTextField.text ?? "20")

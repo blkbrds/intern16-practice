@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BaiTapCustomView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap02" customModule="BaiTapCustomView" customModuleProvider="target">
             <connections>
                 <outlet property="valueLabel" destination="VGx-Wc-qZo" id="ayn-sv-cuq"/>
                 <outlet property="valueTextField" destination="EgP-o8-fiz" id="9W6-ID-0ig"/>

@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		703BE12924B40FFE007C4CFB /* MySliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE12824B40FFE007C4CFB /* MySliderView.xib */; };
-		703BE13224B412F8007C4CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE13024B412F8007C4CFB /* ViewController.swift */; };
-		703BE13324B412F8007C4CFB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE13124B412F8007C4CFB /* ViewController.xib */; };
-		703BE13524B47AEB007C4CFB /* BaiTap03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE13424B47AEB007C4CFB /* BaiTap03.swift */; };
+		703BE13224B412F8007C4CFB /* BaiTap02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE13024B412F8007C4CFB /* BaiTap02.swift */; };
+		703BE13324B412F8007C4CFB /* BaiTap02.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE13124B412F8007C4CFB /* BaiTap02.xib */; };
+		703BE14124B48430007C4CFB /* BaiTap03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE14024B48430007C4CFB /* BaiTap03.swift */; };
+		703BE14F24B48522007C4CFB /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE14E24B48522007C4CFB /* MyButton.swift */; };
+		703BE15124B48531007C4CFB /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE15024B48531007C4CFB /* MyButton.xib */; };
+		703BE15924B5B9B0007C4CFB /* MyDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE15824B5B9B0007C4CFB /* MyDatePickerView.swift */; };
+		703BE15B24B5B9C3007C4CFB /* MyDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE15A24B5B9C3007C4CFB /* MyDatePickerView.xib */; };
+		703BE15E24B5C3CF007C4CFB /* BaiTap04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BE15C24B5C3CF007C4CFB /* BaiTap04.swift */; };
+		703BE15F24B5C3CF007C4CFB /* BaiTap04.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703BE15D24B5C3CF007C4CFB /* BaiTap04.xib */; };
 		704112D924B2D75C00F3D8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704112D824B2D75C00F3D8DE /* AppDelegate.swift */; };
 		704112DB24B2D75C00F3D8DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704112DA24B2D75C00F3D8DE /* SceneDelegate.swift */; };
 		704112E224B2D75F00F3D8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704112E124B2D75F00F3D8DE /* Assets.xcassets */; };
@@ -22,9 +28,15 @@
 
 /* Begin PBXFileReference section */
 		703BE12824B40FFE007C4CFB /* MySliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySliderView.xib; sourceTree = "<group>"; };
-		703BE13024B412F8007C4CFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		703BE13124B412F8007C4CFB /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		703BE13424B47AEB007C4CFB /* BaiTap03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaiTap03.swift; path = ../BaiTap03.swift; sourceTree = "<group>"; };
+		703BE13024B412F8007C4CFB /* BaiTap02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02.swift; sourceTree = "<group>"; };
+		703BE13124B412F8007C4CFB /* BaiTap02.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02.xib; sourceTree = "<group>"; };
+		703BE14024B48430007C4CFB /* BaiTap03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03.swift; sourceTree = "<group>"; };
+		703BE14E24B48522007C4CFB /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		703BE15024B48531007C4CFB /* MyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyButton.xib; sourceTree = "<group>"; };
+		703BE15824B5B9B0007C4CFB /* MyDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDatePickerView.swift; sourceTree = "<group>"; };
+		703BE15A24B5B9C3007C4CFB /* MyDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDatePickerView.xib; sourceTree = "<group>"; };
+		703BE15C24B5C3CF007C4CFB /* BaiTap04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04.swift; sourceTree = "<group>"; };
+		703BE15D24B5C3CF007C4CFB /* BaiTap04.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04.xib; sourceTree = "<group>"; };
 		704112D524B2D75C00F3D8DE /* BaiTapCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704112D824B2D75C00F3D8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		704112DA24B2D75C00F3D8DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +59,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		703BE13624B47AEF007C4CFB /* New Group */ = {
+		703BE15224B5B8FB007C4CFB /* BaiTap03 */ = {
 			isa = PBXGroup;
 			children = (
-				703BE13424B47AEB007C4CFB /* BaiTap03.swift */,
+				703BE14024B48430007C4CFB /* BaiTap03.swift */,
+				703BE14E24B48522007C4CFB /* MyButton.swift */,
+				703BE15024B48531007C4CFB /* MyButton.xib */,
 			);
-			path = "New Group";
+			path = BaiTap03;
+			sourceTree = "<group>";
+		};
+		703BE15324B5B90D007C4CFB /* BaiTap04 */ = {
+			isa = PBXGroup;
+			children = (
+				703BE15824B5B9B0007C4CFB /* MyDatePickerView.swift */,
+				703BE15A24B5B9C3007C4CFB /* MyDatePickerView.xib */,
+				703BE15C24B5C3CF007C4CFB /* BaiTap04.swift */,
+				703BE15D24B5C3CF007C4CFB /* BaiTap04.xib */,
+			);
+			path = BaiTap04;
 			sourceTree = "<group>";
 		};
 		704112CC24B2D75C00F3D8DE = {
@@ -74,7 +99,8 @@
 		704112D724B2D75C00F3D8DE /* BaiTapCustomView */ = {
 			isa = PBXGroup;
 			children = (
-				703BE13624B47AEF007C4CFB /* New Group */,
+				703BE15324B5B90D007C4CFB /* BaiTap04 */,
+				703BE15224B5B8FB007C4CFB /* BaiTap03 */,
 				704112F124B30A8500F3D8DE /* BaiTap02 */,
 				704112F024B30A7200F3D8DE /* BaiTap01 */,
 				704112D824B2D75C00F3D8DE /* AppDelegate.swift */,
@@ -100,8 +126,8 @@
 			children = (
 				704112F424B30B4F00F3D8DE /* MySliderView.swift */,
 				703BE12824B40FFE007C4CFB /* MySliderView.xib */,
-				703BE13024B412F8007C4CFB /* ViewController.swift */,
-				703BE13124B412F8007C4CFB /* ViewController.xib */,
+				703BE13024B412F8007C4CFB /* BaiTap02.swift */,
+				703BE13124B412F8007C4CFB /* BaiTap02.xib */,
 			);
 			path = BaiTap02;
 			sourceTree = "<group>";
@@ -165,8 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				703BE12924B40FFE007C4CFB /* MySliderView.xib in Resources */,
+				703BE15124B48531007C4CFB /* MyButton.xib in Resources */,
 				704112E524B2D75F00F3D8DE /* LaunchScreen.storyboard in Resources */,
-				703BE13324B412F8007C4CFB /* ViewController.xib in Resources */,
+				703BE15F24B5C3CF007C4CFB /* BaiTap04.xib in Resources */,
+				703BE13324B412F8007C4CFB /* BaiTap02.xib in Resources */,
+				703BE15B24B5B9C3007C4CFB /* MyDatePickerView.xib in Resources */,
 				704112E224B2D75F00F3D8DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,11 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				703BE13224B412F8007C4CFB /* ViewController.swift in Sources */,
+				703BE13224B412F8007C4CFB /* BaiTap02.swift in Sources */,
 				704112D924B2D75C00F3D8DE /* AppDelegate.swift in Sources */,
 				704112ED24B2D89D00F3D8DE /* MyAvatar.swift in Sources */,
+				703BE14F24B48522007C4CFB /* MyButton.swift in Sources */,
+				703BE15E24B5C3CF007C4CFB /* BaiTap04.swift in Sources */,
 				704112F524B30B4F00F3D8DE /* MySliderView.swift in Sources */,
-				703BE13524B47AEB007C4CFB /* BaiTap03.swift in Sources */,
+				703BE15924B5B9B0007C4CFB /* MyDatePickerView.swift in Sources */,
+				703BE14124B48430007C4CFB /* BaiTap03.swift in Sources */,
 				704112DB24B2D75C00F3D8DE /* SceneDelegate.swift in Sources */,
 				704112EF24B2DCF900F3D8DE /* BaiTap01.swift in Sources */,
 			);
