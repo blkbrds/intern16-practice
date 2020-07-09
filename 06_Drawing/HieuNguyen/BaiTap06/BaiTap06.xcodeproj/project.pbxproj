@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D435F9524B6FFE600DCC0A1 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F9424B6FFE600DCC0A1 /* ChartView.swift */; };
+		7D435F9924B701FC00DCC0A1 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F9724B701FC00DCC0A1 /* ChartViewController.swift */; };
+		7D435F9A24B701FC00DCC0A1 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F9824B701FC00DCC0A1 /* ChartViewController.xib */; };
+		7D435F9F24B71CA000DCC0A1 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F9E24B71CA000DCC0A1 /* CircleView.swift */; };
 		7D7EF11824ADD450000E890C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF11724ADD450000E890C /* AppDelegate.swift */; };
 		7D7EF11A24ADD450000E890C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF11924ADD450000E890C /* SceneDelegate.swift */; };
 		7D7EF12124ADD452000E890C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF12024ADD452000E890C /* Assets.xcassets */; };
 		7D7EF12424ADD452000E890C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF12224ADD452000E890C /* LaunchScreen.storyboard */; };
-		7D7EF12F24ADD99C000E890C /* BaiTap01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF12D24ADD99C000E890C /* BaiTap01VC.swift */; };
-		7D7EF13024ADD99C000E890C /* BaiTap01VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF12E24ADD99C000E890C /* BaiTap01VC.xib */; };
 		7D7EF13324AEC50D000E890C /* BaiTap02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */; };
 		7D7EF13424AEC50D000E890C /* BaiTap02VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D435F9424B6FFE600DCC0A1 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		7D435F9724B701FC00DCC0A1 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		7D435F9824B701FC00DCC0A1 /* ChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
+		7D435F9E24B71CA000DCC0A1 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		7D7EF11424ADD450000E890C /* BaiTap06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7EF11724ADD450000E890C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D7EF11924ADD450000E890C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7D7EF12024ADD452000E890C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D7EF12324ADD452000E890C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D7EF12524ADD452000E890C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D7EF12D24ADD99C000E890C /* BaiTap01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01VC.swift; sourceTree = "<group>"; };
-		7D7EF12E24ADD99C000E890C /* BaiTap01VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap01VC.xib; sourceTree = "<group>"; };
 		7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02VC.swift; sourceTree = "<group>"; };
 		7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02VC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +45,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D435F9624B701D600DCC0A1 /* BaiTap01 */ = {
+			isa = PBXGroup;
+			children = (
+				7D435F9424B6FFE600DCC0A1 /* ChartView.swift */,
+				7D435F9724B701FC00DCC0A1 /* ChartViewController.swift */,
+				7D435F9824B701FC00DCC0A1 /* ChartViewController.xib */,
+			);
+			path = BaiTap01;
+			sourceTree = "<group>";
+		};
+		7D435F9B24B71C6B00DCC0A1 /* BaiTap02 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */,
+				7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */,
+				7D435F9E24B71CA000DCC0A1 /* CircleView.swift */,
+			);
+			path = BaiTap02;
+			sourceTree = "<group>";
+		};
 		7D7EF10B24ADD450000E890C = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +84,10 @@
 		7D7EF11624ADD450000E890C /* BaiTap06 */ = {
 			isa = PBXGroup;
 			children = (
+				7D435F9B24B71C6B00DCC0A1 /* BaiTap02 */,
+				7D435F9624B701D600DCC0A1 /* BaiTap01 */,
 				7D7EF11724ADD450000E890C /* AppDelegate.swift */,
 				7D7EF11924ADD450000E890C /* SceneDelegate.swift */,
-				7D7EF12D24ADD99C000E890C /* BaiTap01VC.swift */,
-				7D7EF12E24ADD99C000E890C /* BaiTap01VC.xib */,
-				7D7EF13124AEC50D000E890C /* BaiTap02VC.swift */,
-				7D7EF13224AEC50D000E890C /* BaiTap02VC.xib */,
 				7D7EF12024ADD452000E890C /* Assets.xcassets */,
 				7D7EF12224ADD452000E890C /* LaunchScreen.storyboard */,
 				7D7EF12524ADD452000E890C /* Info.plist */,
@@ -131,8 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D435F9A24B701FC00DCC0A1 /* ChartViewController.xib in Resources */,
 				7D7EF12424ADD452000E890C /* LaunchScreen.storyboard in Resources */,
-				7D7EF13024ADD99C000E890C /* BaiTap01VC.xib in Resources */,
 				7D7EF12124ADD452000E890C /* Assets.xcassets in Resources */,
 				7D7EF13424AEC50D000E890C /* BaiTap02VC.xib in Resources */,
 			);
@@ -145,10 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D7EF12F24ADD99C000E890C /* BaiTap01VC.swift in Sources */,
+				7D435F9F24B71CA000DCC0A1 /* CircleView.swift in Sources */,
 				7D7EF11824ADD450000E890C /* AppDelegate.swift in Sources */,
 				7D7EF11A24ADD450000E890C /* SceneDelegate.swift in Sources */,
+				7D435F9524B6FFE600DCC0A1 /* ChartView.swift in Sources */,
 				7D7EF13324AEC50D000E890C /* BaiTap02VC.swift in Sources */,
+				7D435F9924B701FC00DCC0A1 /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

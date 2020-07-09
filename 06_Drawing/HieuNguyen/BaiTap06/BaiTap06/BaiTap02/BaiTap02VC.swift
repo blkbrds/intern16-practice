@@ -12,19 +12,8 @@ class BaiTap02VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawCircle(startAngle: CGFloat(Double.pi * 3 / 2), endAngle: CGFloat(Double.pi / 4), color: .red)
-        drawCircle(startAngle: CGFloat(Double.pi / 4), endAngle: CGFloat(2 * Double.pi / 3), color: .yellow)
-        drawCircle(startAngle: CGFloat(2 * Double.pi / 3), endAngle: CGFloat(Double.pi * 3 / 2), color: .blue)
+        let circleViewFrame = CGRect(x: 50, y: 50, width: 200, height: 400)
+        let circleView = CircleView(frame: circleViewFrame)
+        view.addSubview(circleView)
     }
-
-    func drawCircle(startAngle: CGFloat, endAngle: CGFloat, color: UIColor) {
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 2), radius: CGFloat(100), startAngle: startAngle, endAngle: endAngle, clockwise: true)
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = circlePath.cgPath
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = color.cgColor
-        shapeLayer.lineWidth = 50
-        view.layer.addSublayer(shapeLayer)
-    }
-
 }
