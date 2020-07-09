@@ -22,7 +22,8 @@ class BaiTap2View: UIView {
             setNeedsDisplay()
         }
     }
-
+    
+    // MARK: - Override
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -31,7 +32,6 @@ class BaiTap2View: UIView {
         super.init(coder: aDecoder)
     }
 
-    // MARK: - Override
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let radius = min(frame.size.width, frame.size.height) * 0.5

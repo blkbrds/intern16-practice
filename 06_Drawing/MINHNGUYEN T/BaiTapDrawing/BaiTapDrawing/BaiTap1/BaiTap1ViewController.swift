@@ -18,12 +18,12 @@ class BaiTap1ViewController: UIViewController {
     // MARK: - Private Function
     private func drawColumeChart() {
         let columnChartView = ColumnChartView()
-        let frame = CGRect(x: 30, y: 30, width: view.bounds.width - 70, height: view.bounds.height / 2)
+        let frame = CGRect(x: 30, y: 30, width: view.bounds.width - 55, height: view.bounds.height / 2)
         columnChartView.frame = frame
         columnChartView.backgroundColor = .white
         columnChartView.getValue(values: values)
-        columnChartView.addDate()
-       // columnChartView.addValue()
+        columnChartView.addRawDate()
+        columnChartView.addValue()
         view.addSubview(columnChartView)
     }
 }
