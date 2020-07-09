@@ -4,13 +4,13 @@ class DaGiac {
     var soCanh: Int = 0
     var kichThuoc: [Int] = []
 
-    enum enumCheckDaGiac {
+    enum KiemTraDaGiac {
         case invalid
         case khacnhau
         case bangnhau(Int, [Int])
     }
 
-    func checkDaGiac(soCanh: Int, kichThuoc: [Int]) -> enumCheckDaGiac {
+    func checkDaGiac(soCanh: Int, kichThuoc: [Int]) -> KiemTraDaGiac {
         if soCanh == 0 || kichThuoc == [] {
             return .invalid
         } else if soCanh != kichThuoc.count {
@@ -59,8 +59,8 @@ class TamGiac: DaGiac {
         }
     }
 
-    init?(KT_tamgiac: [Int]) {
-        super.init(soCanh: 3, kichThuoc: KT_tamgiac)
+    init?(kichThuocTamGiac: [Int]) {
+        super.init(soCanh: 3, kichThuoc: kichThuocTamGiac)
         if checkTamGiac(a: super.kichThuoc[0], b: super.kichThuoc[1], c: super.kichThuoc[2]) == false {
             return nil
         }
@@ -72,15 +72,15 @@ class TamGiac: DaGiac {
 
     func dienTich() -> Float {
         let p = Float(chuVi()) / Float(2)
-        var DT = p
+        var S = p
         for i in self.kichThuoc {
-            DT = DT * (p - Float(i))
+            S = S * (p - Float(i))
         }
-        return sqrt(DT)
+        return sqrt(S)
     }
 }
 
-if let tg = TamGiac(KT_tamgiac: [3, 4, 5]) {
+if let tg = TamGiac(kichThuocTamGiac: [3, 4, 5]) {
     print("Chu vi tam giác là \(tg.chuVi())")
     print("Diện tích tam giác là \(tg.dienTich())")
     tg.inCanh()

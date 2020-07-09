@@ -6,7 +6,10 @@ class Date {
     var month: Int
     var year: Int
 
-    init(day: Int, month: Int, year: Int) {
+    init?(day: Int, month: Int, year: Int) {
+        if day > 31 || month > 12 || year < 0 {
+            return nil
+        }
         self.day = day
         self.month = month
         self.year = year
@@ -25,23 +28,21 @@ class Date {
                 return 28
             }
         default:
-            print("Tháng không hợp lệ.")
             return 0
         }
     }
 
     func normalize() -> Bool {
-        if day <= self.daysIn() && month <= 12 && year > 0 {
+        if day <= self.daysIn() {
             return true
         } else {
             return false
         }
     }
 
-    func advance() -> Date {
+    func advance() -> Date? {
         if self.normalize() == false {
-            print("Không thể thực hiện thao tác do ngày tháng năm không hợp lệ.")
-            return self
+            return nil
         } else {
             if day == self.daysIn() {
                 if month == 12 {
@@ -55,19 +56,23 @@ class Date {
             } else {
                 day = day + 1
             }
-            return Date(day: day, month: month, year: year)
+            return Date(day: day, month: month, year: year) ?? nil
         }
     }
 
     func printDate() -> String {
-        if self.normalize() == false {
-            return "Không thể thực hiện thao tác do ngày tháng năm không hợp lệ."
-        } else {
-            return "Ngày: \(day) - Tháng: \(month) - Năm: \(year)"
-        }
+        return "Ngày: \(day) - Tháng: \(month) - Năm: \(year)"
     }
 }
 
-let a = Date(day: 29, month: 2, year: 2008)
+if let a = Date(day: 32, month: 13, year: 2008) {
+    if let advance = a.advance() {
+        print(advance.printDate())
+    } else {
+        print("Không thể thực hiện thao tác do ngày tháng năm không hợp lệ.")
+    }
+} else {
+    print("Không thể thực hiện thao tác do ngày tháng năm không hợp lệ.")
+}
 
-print(a.advance().printDate())
+
