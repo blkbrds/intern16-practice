@@ -27,12 +27,12 @@ class EditProfileViewController: UIViewController {
     }
 
     @objc func finishEditProfile() {
-          let viewControllers = navigationController?.viewControllers
-            for vc in viewControllers! {
-                if let homeViewController = vc as? HomeViewController {
-                    homeViewController.userName = userNameTextField.text!
-                    navigationController?.popViewController(animated: true)
-                }
+        let viewControllers = navigationController?.viewControllers
+        for vc in viewControllers! {
+            if let homeViewController = vc as? HomeViewController {
+                homeViewController.userName = userNameTextField.text!
+                navigationController?.popViewController(animated: true)
             }
+        }
     }
 }
