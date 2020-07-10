@@ -34,14 +34,14 @@ class Bai1ViewController: UIViewController {
                 let test: Avatar = Avatar(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
                 test.delegate = self
                 uiScrollView.addSubview(test)
-                test.createName.text = "Name\(i + 1)"
+                test.userName.text = "Name\(i + 1)"
             } else {
                 originX = 20
                 originY += 150
                 let test: Avatar = Avatar(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
                 test.delegate = self
                 uiScrollView.addSubview(test)
-                test.createName.text = "Name\(i + 1)"
+                test.userName.text = "Name\(i + 1)"
             }
         }
     }

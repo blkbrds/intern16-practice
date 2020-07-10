@@ -27,7 +27,6 @@ class Bai4ViewController: UIViewController {
         dateTimePicker.frame.origin.y = view.frame.height - dateTimePicker.frame.height
         dateTextField.delegate = self
         dateTimePicker.delegate = self
-        //self.delegate = d
         // Do any additional setup after loading the view.
     }
     // MARK: - Override function
