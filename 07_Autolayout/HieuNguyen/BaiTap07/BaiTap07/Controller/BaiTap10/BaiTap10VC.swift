@@ -50,25 +50,25 @@ class BaiTap10VC: UIViewController {
         changeSizeSquare(view: biggestSquare, status: false)
         // change value biggest square
         switch tapGesture.name {
-        case "firstSquare":
-            changeSizeSquare(view: firstSquare, status: true)
-            biggestSquare = firstSquare
-            biggestSquare.isUserInteractionEnabled = false
-        case "secondSquare":
-            changeSizeSquare(view: secondSquare, status: true)
-            biggestSquare = secondSquare
-            biggestSquare.isUserInteractionEnabled = false
-        case "thirdSquare":
-            changeSizeSquare(view: thirdSquare, status: true)
-            biggestSquare = thirdSquare
-            biggestSquare.isUserInteractionEnabled = false
-        case "fourthSquare":
-            changeSizeSquare(view: fourthSquare, status: true)
-            biggestSquare = fourthSquare
-            biggestSquare.isUserInteractionEnabled = false
-        case .none, .some(_):
-            return
-        }
+            case "firstSquare":
+                changeSizeSquare(view: firstSquare, status: true)
+                biggestSquare = firstSquare
+                biggestSquare.isUserInteractionEnabled = false
+            case "secondSquare":
+                changeSizeSquare(view: secondSquare, status: true)
+                biggestSquare = secondSquare
+                biggestSquare.isUserInteractionEnabled = false
+            case "thirdSquare":
+                changeSizeSquare(view: thirdSquare, status: true)
+                biggestSquare = thirdSquare
+                biggestSquare.isUserInteractionEnabled = false
+            case "fourthSquare":
+                changeSizeSquare(view: fourthSquare, status: true)
+                biggestSquare = fourthSquare
+                biggestSquare.isUserInteractionEnabled = false
+            case .none, .some(_):
+                return
+            }
     }
 
     // if true -> bigger -- false -> smaller

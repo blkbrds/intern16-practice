@@ -20,6 +20,7 @@ class BaiTap09VC: UIViewController {
         var imageCat: UIImage
         var contentCat: String
     }
+    
     var data:[Cat] = [
         Cat(imageCat: UIImage(named: "meo_anh_long_dai")!, contentCat: "Thân hình chắc khỏe. Đầu to tròn, mắt tròn sáng, tai ngắn.Chân ngắn khỏe, đuôi dài với lông dày.Bộ ngực sâu rộng tưởng kích thước chúng trung bình.Chúng có nhiều loại màu lông phổ biến là xám xanh, các màu khác như đen, trắng, đỏ, kem, xanh, nâu socola, tím hoa cà, nâu vàng hoa quế..."),
         Cat(imageCat: UIImage(named: "meo_ba_tu")!, contentCat: "Mèo này nổi bật lên với đáng yêu, nhỏ nhắn, xinh xắn. Chúng sở hữu bộ lông mượt, dài, khuôn mặt tẹt.Kích thước trung bình.Đầu to, mắt lớn, mũi nhỏ, tai nhỏ hình tam giác, thân hình săn chắc.Chúng có bộ lông dài, dày phủ khắp cơ thể và chân ngắn.        Bộ lông 2 lớp có nhiều màu khác nhau như xám xanh hoặc trắng đen, đỏ nâu...Mèo Ba Tư dễ tính, trầm tính và dịu ngọt, hiền lành chất phác, gần người. Mèo ba tư đẹp cần có yêu cầu là mũi tẹt, bé và mắt to. Mèo Ba Tư cũng không cần phải được thả cho đi chơi nhiều, nhốt chúng một chỗ cũng chẳng phiền hà gì cả (mặc dù nếu bạn thả ra thì chúng vẫn đi đấy, thậm chí đi lạc luôn cơ)."),
@@ -32,6 +33,7 @@ class BaiTap09VC: UIViewController {
         Cat(imageCat: UIImage(named: "meo-ald")!, contentCat: "Lông tuy ngắn nhưng khá dày giúp giữ nhiệt cho cơ thể.Lông màu xám phổ biến ngoài ra còn có một số màu khác như đen, vàng, xám-trắng, xanh dương…        Chiếc đầu to tròn, mũi miệng ngắn, má rộng.Mắt tròn và to màu đồng phổ biến một số khác màu đen, xanh lá cây. Lông đuôi rất dày mà không xù (ngược với ALD)."),
         Cat(imageCat: UIImage(named: "meo-tai-cup-scotland")!, contentCat: "Lông tuy ngắn nhưng khá dày giúp giữ nhiệt cho cơ thể.Lông màu xám phổ biến ngoài ra còn có một số màu khác như đen, vàng, xám-trắng, xanh dương…        Chiếc đầu to tròn, mũi miệng ngắn, má rộng.Mắt tròn và to màu đồng phổ biến một số khác màu đen, xanh lá cây. Lông đuôi rất dày mà không xù (ngược với ALD).")
     ]
+    
     var currentPicture:Int = 0
     
     override func viewDidLoad() {
