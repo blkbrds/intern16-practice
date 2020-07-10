@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class Bai4: UIViewController {
+final class Bai4ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var redSlider: UISlider!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class B6: UIViewController {
+final class Bai6ViewController: UIViewController {
     
     //MARK: - IBOutlet
     @IBOutlet weak var monkeyImage: UIImageView!

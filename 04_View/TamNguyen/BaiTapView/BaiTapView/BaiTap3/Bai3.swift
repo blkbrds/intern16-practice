@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class Bai3: UIViewController {
+final class Bai3ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
@@ -64,7 +64,7 @@ final class Bai3: UIViewController {
 }
 
 //MARK: - UITextFieldDelegate
-extension Bai3 : UITextFieldDelegate {
+extension Bai3ViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {
             usernameTextField.resignFirstResponder()

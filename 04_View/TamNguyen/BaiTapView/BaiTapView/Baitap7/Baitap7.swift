@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class Baitap7: UIViewController {
+final class Bai7ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var monkeyLablel: UITextField!

@@ -80,19 +80,19 @@
 		3141A9A324B85D0E00ADFEAB /* BaiTapView */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9D124B85DBD00ADFEAB /* Baitap6 */,
-				3141A9CC24B85D7800ADFEAB /* Baitap7 */,
-				3141A9C724B85D6E00ADFEAB /* Baitap5 */,
-				3141A9C224B85D6900ADFEAB /* BaiTap4 */,
-				3141A9BD24B85D6300ADFEAB /* Baitap2 */,
-				3141A9B824B85D3D00ADFEAB /* BaiTap3 */,
 				3141A9A424B85D0E00ADFEAB /* AppDelegate.swift */,
 				3141A9A624B85D0E00ADFEAB /* SceneDelegate.swift */,
-				3141A9A824B85D0E00ADFEAB /* ViewController.swift */,
-				3141A9AA24B85D0E00ADFEAB /* Main.storyboard */,
 				3141A9AD24B85D0F00ADFEAB /* Assets.xcassets */,
-				3141A9AF24B85D0F00ADFEAB /* LaunchScreen.storyboard */,
+				3141A9BD24B85D6300ADFEAB /* Baitap2 */,
+				3141A9B824B85D3D00ADFEAB /* BaiTap3 */,
+				3141A9C224B85D6900ADFEAB /* BaiTap4 */,
+				3141A9C724B85D6E00ADFEAB /* Baitap5 */,
+				3141A9D124B85DBD00ADFEAB /* Baitap6 */,
+				3141A9CC24B85D7800ADFEAB /* Baitap7 */,
 				3141A9B224B85D0F00ADFEAB /* Info.plist */,
+				3141A9AF24B85D0F00ADFEAB /* LaunchScreen.storyboard */,
+				3141A9AA24B85D0E00ADFEAB /* Main.storyboard */,
+				3141A9A824B85D0E00ADFEAB /* ViewController.swift */,
 			);
 			path = BaiTapView;
 			sourceTree = "<group>";
@@ -109,8 +109,8 @@
 		3141A9BD24B85D6300ADFEAB /* Baitap2 */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9BE24B85D6300ADFEAB /* Bai2.xib */,
 				3141A9BF24B85D6300ADFEAB /* Bai2.swift */,
+				3141A9BE24B85D6300ADFEAB /* Bai2.xib */,
 			);
 			path = Baitap2;
 			sourceTree = "<group>";

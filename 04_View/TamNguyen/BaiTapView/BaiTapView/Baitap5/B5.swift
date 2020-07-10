@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class B5: UIViewController {
+final class Bai5ViewController: UIViewController {
     
     //MARK: - IBOulet
     @IBOutlet weak var bigView: UIView!
