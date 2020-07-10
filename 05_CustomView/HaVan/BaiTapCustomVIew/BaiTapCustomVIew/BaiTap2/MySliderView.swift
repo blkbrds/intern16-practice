@@ -35,10 +35,9 @@ final class MySliderView: UIView {
         let preciousY = processView.frame.origin.y
         let height = processView.bounds.height
         processView.frame = CGRect(x: processView.frame.origin.x , y: y, width: processView.frame.width, height: height + (preciousY - y))
-        print("height: \(processView.frame.height)")
         let number =  ( processView.frame.height / whiteView.frame.height) * 100
         processValue.text = String(format: "%.0f", number)
-        delegate?.sendValue(with: Float(number) )
+        delegate?.sendValue(with: Float(number))
     }
     
     //MARK: -Public functions
@@ -53,33 +52,28 @@ final class MySliderView: UIView {
     
     //MARK: Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        let location = touch?.location(in: whiteView)
-        
-        if location!.y < whiteView.bounds.minY {
+        guard let touch = touches.first else { return }
+        let existLocation = touch.location(in: whiteView)
+        if existLocation.y < whiteView.bounds.minY {
             thumpView.center.y = whiteView.bounds.minY
-        } else if location!.y > whiteView.bounds.maxY {
+        } else if existLocation.y > whiteView.bounds.maxY {
             thumpView.center.y = whiteView.bounds.maxY
         } else {
-            thumpView.center.y = location!.y
+            thumpView.center.y = existLocation.y
         }
         changeProcessView(with: thumpView.center.y)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        let location = touch?.location(in: whiteView)
-        if location!.y < whiteView.bounds.minY {
+        guard let touch = touches.first else { return }
+        let existLocation = touch.location(in: whiteView)
+        if existLocation.y < whiteView.bounds.minY {
             thumpView.center.y = whiteView.bounds.minY
-        } else if location!.y > whiteView.bounds.maxY {
+        } else if existLocation.y > whiteView.bounds.maxY {
             thumpView.center.y = whiteView.bounds.maxY
         } else {
-            thumpView.center.y = location!.y
+            thumpView.center.y = existLocation.y
         }
-        print(thumpView.center.y)
-        print(whiteView.bounds.minY)
         changeProcessView(with: thumpView.center.y)
     }
-    
-
 }

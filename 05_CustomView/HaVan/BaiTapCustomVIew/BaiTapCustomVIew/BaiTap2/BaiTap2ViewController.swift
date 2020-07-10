@@ -14,7 +14,7 @@ final class BaiTap2ViewController: UIViewController {
     @IBOutlet private weak var valueTextField: UITextField!
     
     // MARK: - Propeties
-    private var slider: MySliderView?
+    private var slider: MySliderView = MySliderView()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,15 +25,18 @@ final class BaiTap2ViewController: UIViewController {
     
     // MARK: - Private functions
     private func configView() {
-        slider = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as? MySliderView
-        slider?.frame = CGRect(x: 150, y: 300, width: 190, height: 200)
-        view.addSubview(slider!)
-        slider?.delegate = self
+        let newslider = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as? MySliderView
+        if newslider != nil {
+            slider = newslider!
+            slider.frame = CGRect(x: 150, y: 300, width: 190, height: 200)
+            view.addSubview(slider)
+            slider.delegate = self
+        }
     }
     
     private func changeSliderState(with num: String) {
-        slider?.processNum = Float(num)
-        slider?.setViewAndProcess()
+        slider.processNum = Float(num)
+        slider.setViewAndProcess()
     }
 }
 
