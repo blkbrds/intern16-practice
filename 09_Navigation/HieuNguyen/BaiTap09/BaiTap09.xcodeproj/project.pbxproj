@@ -18,6 +18,11 @@
 		7D435F8E24B6FA9B00DCC0A1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8D24B6FA9B00DCC0A1 /* Person.swift */; };
 		7D435F9124B6FB9600DCC0A1 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8F24B6FB9600DCC0A1 /* DetailProfileViewController.swift */; };
 		7D435F9224B6FB9600DCC0A1 /* DetailProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F9024B6FB9600DCC0A1 /* DetailProfileViewController.xib */; };
+		7D435FA524B8228D00DCC0A1 /* BaiTap01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FA424B8228D00DCC0A1 /* BaiTap01VC.swift */; };
+		7D435FA724B824AD00DCC0A1 /* BaiTap02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FA624B824AD00DCC0A1 /* BaiTap02VC.swift */; };
+		7D435FA924B82A7C00DCC0A1 /* BaiTap03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FA824B82A7C00DCC0A1 /* BaiTap03VC.swift */; };
+		7D435FAB24B845C400DCC0A1 /* BaiTap04VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FAA24B845C400DCC0A1 /* BaiTap04VC.swift */; };
+		7D435FAD24B858C700DCC0A1 /* BaiTap05VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FAC24B858C700DCC0A1 /* BaiTap05VC.swift */; };
 		C46E3DF724B60D3E00BB84E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */; };
 		C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */; };
 		C46E3E0024B60D4000BB84E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */; };
@@ -48,6 +53,11 @@
 		7D435F8D24B6FA9B00DCC0A1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7D435F8F24B6FB9600DCC0A1 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 		7D435F9024B6FB9600DCC0A1 /* DetailProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProfileViewController.xib; sourceTree = "<group>"; };
+		7D435FA424B8228D00DCC0A1 /* BaiTap01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01VC.swift; sourceTree = "<group>"; };
+		7D435FA624B824AD00DCC0A1 /* BaiTap02VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02VC.swift; sourceTree = "<group>"; };
+		7D435FA824B82A7C00DCC0A1 /* BaiTap03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03VC.swift; sourceTree = "<group>"; };
+		7D435FAA24B845C400DCC0A1 /* BaiTap04VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04VC.swift; sourceTree = "<group>"; };
+		7D435FAC24B858C700DCC0A1 /* BaiTap05VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap05VC.swift; sourceTree = "<group>"; };
 		C46E3DF324B60D3E00BB84E9 /* BaiTap09.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap09.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +102,18 @@
 			path = BaiTap03;
 			sourceTree = "<group>";
 		};
+		7D435FA124B8220700DCC0A1 /* BaiTap04 */ = {
+			isa = PBXGroup;
+			children = (
+				7D435FA424B8228D00DCC0A1 /* BaiTap01VC.swift */,
+				7D435FA624B824AD00DCC0A1 /* BaiTap02VC.swift */,
+				7D435FA824B82A7C00DCC0A1 /* BaiTap03VC.swift */,
+				7D435FAA24B845C400DCC0A1 /* BaiTap04VC.swift */,
+				7D435FAC24B858C700DCC0A1 /* BaiTap05VC.swift */,
+			);
+			path = BaiTap04;
+			sourceTree = "<group>";
+		};
 		C46E3DEA24B60D3E00BB84E9 = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +133,15 @@
 		C46E3DF524B60D3E00BB84E9 /* BaiTap09 */ = {
 			isa = PBXGroup;
 			children = (
+				7D435FA124B8220700DCC0A1 /* BaiTap04 */,
 				7D435F8624B6F51A00DCC0A1 /* BaiTap03 */,
 				C46E3E0F24B6140C00BB84E9 /* BaiTap01 */,
 				C46E3E2524B62A0100BB84E9 /* BaiTap02 */,
 				C46E3E0124B60D4000BB84E9 /* LaunchScreen.storyboard */,
 				C46E3E0424B60D4000BB84E9 /* Info.plist */,
 				C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */,
-				C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */,
 				C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */,
+				C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */,
 			);
 			path = BaiTap09;
 			sourceTree = "<group>";
@@ -235,18 +258,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D435FA524B8228D00DCC0A1 /* BaiTap01VC.swift in Sources */,
 				C46E3E2224B6226000BB84E9 /* ViewControllerE.swift in Sources */,
 				C46E3DF724B60D3E00BB84E9 /* AppDelegate.swift in Sources */,
 				C46E3E1624B61F5900BB84E9 /* ViewControllerB.swift in Sources */,
+				7D435FAD24B858C700DCC0A1 /* BaiTap05VC.swift in Sources */,
 				C46E3E1A24B6223A00BB84E9 /* ViewControllerC.swift in Sources */,
+				7D435FAB24B845C400DCC0A1 /* BaiTap04VC.swift in Sources */,
 				C46E3E2824B62A6800BB84E9 /* LoginViewController.swift in Sources */,
 				7D435F7F24B6C01600DCC0A1 /* HomeViewController.swift in Sources */,
+				7D435FA724B824AD00DCC0A1 /* BaiTap02VC.swift in Sources */,
 				C46E3E1224B6141900BB84E9 /* ViewControllerA.swift in Sources */,
 				7D435F9124B6FB9600DCC0A1 /* DetailProfileViewController.swift in Sources */,
 				7D435F8924B6F56800DCC0A1 /* ProfilesViewController.swift in Sources */,
 				C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */,
 				7D435F8C24B6F5D100DCC0A1 /* PersonView.swift in Sources */,
 				7D435F8E24B6FA9B00DCC0A1 /* Person.swift in Sources */,
+				7D435FA924B82A7C00DCC0A1 /* BaiTap03VC.swift in Sources */,
 				7D435F8324B6C67400DCC0A1 /* EditProfileViewController.swift in Sources */,
 				C46E3E1E24B6224900BB84E9 /* ViewControllerD.swift in Sources */,
 			);
