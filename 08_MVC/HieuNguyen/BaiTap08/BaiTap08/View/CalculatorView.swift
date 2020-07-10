@@ -9,14 +9,14 @@
 import UIKit
 
 class CalculatorView: UIView {
-
-//    var operandCurrent:Int = 0
+    
     var operand: Operand = Operand(operands: [])
     var operatorCurrent: Int?
     var newNumber: Bool = true
     var newOperator: Bool = false
     @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var resultLabel: UILabel!
+    
     @IBAction func operandWasPressed(_ sender: Any) {
         let number: Int = (sender as AnyObject).tag as Int
         if resultLabel.text == "0" || !newNumber {
@@ -73,6 +73,7 @@ class CalculatorView: UIView {
                 return
             }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         resultView.layer.borderWidth = 1
