@@ -35,6 +35,7 @@ class GraphicsDraw: UIView {
         //ADD LAYER
         self.layer.addSublayer(shapeLayer)
     }
+    
     func createRectangle(position: CGPoint, height: Float){
         let path = UIBezierPath(rect: CGRect(x: position.x, y: position.y, width: 30, height: CGFloat(height)))
         let shapeLayer = CAShapeLayer()
