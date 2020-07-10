@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,19 +18,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n88-y4-iGO">
-                    <rect key="frame" x="87" y="62" width="240" height="772"/>
+                    <rect key="frame" x="87" y="109" width="240" height="678"/>
                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="240" id="fns-Gm-pDx"/>
-                        <constraint firstAttribute="height" constant="772" id="hj6-sP-Zp8"/>
-                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DCS-eu-cnV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n88-y4-iGO" secondAttribute="trailing" constant="87" id="QF6-Gp-wUp"/>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="ZoS-rC-7YT"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kkx-vO-km7"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="SWb-hB-AoF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n88-y4-iGO" secondAttribute="trailing" constant="87" id="dxb-zW-Sqm"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.756696" id="iif-Ja-Nry"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.57971" id="opx-ep-TfW"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uIa-4F-geF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>

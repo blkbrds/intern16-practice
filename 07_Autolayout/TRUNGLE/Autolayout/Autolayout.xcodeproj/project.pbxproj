@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0DEF1D824B7F49500F88F98 /* Bai3-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DEF1D624B7F49500F88F98 /* Bai3-1ViewController.swift */; };
+		B0DEF1D924B7F49500F88F98 /* Bai3-1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DEF1D724B7F49500F88F98 /* Bai3-1ViewController.xib */; };
+		B0DEF1DD24B7FFFE00F88F98 /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DEF1DB24B7FFFE00F88F98 /* Bai4ViewController.swift */; };
+		B0DEF1DE24B7FFFE00F88F98 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DEF1DC24B7FFFE00F88F98 /* Bai4ViewController.xib */; };
 		B0E6918024B71ED200F895F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6917F24B71ED200F895F3 /* AppDelegate.swift */; };
 		B0E6918224B71ED200F895F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6918124B71ED200F895F3 /* SceneDelegate.swift */; };
 		B0E6918424B71ED200F895F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6918324B71ED200F895F3 /* ViewController.swift */; };
@@ -20,7 +24,7 @@
 		B0E6919F24B71F9900F895F3 /* Bai2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */; };
 		B0E691A024B71F9900F895F3 /* Bai2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */; };
 		B0E691A324B71FCA00F895F3 /* Bai2-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */; };
-		B0E691A424B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E691A224B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib */; };
+		B0E691A424B71FCA00F895F3 /* Bai2-2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E691A224B71FCA00F895F3 /* Bai2-2ViewController.xib */; };
 		B0E691A824B722CA00F895F3 /* Bai3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E691A624B722CA00F895F3 /* Bai3ViewController.swift */; };
 		B0E691A924B722CA00F895F3 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E691A724B722CA00F895F3 /* Bai3ViewController.xib */; };
 		B0E691AC24B7245000F895F3 /* Bai3-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E691AA24B7245000F895F3 /* Bai3-2ViewController.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0DEF1D624B7F49500F88F98 /* Bai3-1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bai3-1ViewController.swift"; sourceTree = "<group>"; };
+		B0DEF1D724B7F49500F88F98 /* Bai3-1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Bai3-1ViewController.xib"; sourceTree = "<group>"; };
+		B0DEF1DB24B7FFFE00F88F98 /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai4ViewController.swift; sourceTree = "<group>"; };
+		B0DEF1DC24B7FFFE00F88F98 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai4ViewController.xib; sourceTree = "<group>"; };
 		B0E6917C24B71ED100F895F3 /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E6917F24B71ED200F895F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E6918124B71ED200F895F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +51,7 @@
 		B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2ViewController.swift; sourceTree = "<group>"; };
 		B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai2ViewController.xib; sourceTree = "<group>"; };
 		B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bai2-2ViewController.swift"; sourceTree = "<group>"; };
-		B0E691A224B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Bai2-2ViewController(chua xong).xib"; sourceTree = "<group>"; };
+		B0E691A224B71FCA00F895F3 /* Bai2-2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Bai2-2ViewController.xib"; sourceTree = "<group>"; };
 		B0E691A624B722CA00F895F3 /* Bai3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai3ViewController.swift; sourceTree = "<group>"; };
 		B0E691A724B722CA00F895F3 /* Bai3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3ViewController.xib; sourceTree = "<group>"; };
 		B0E691AA24B7245000F895F3 /* Bai3-2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bai3-2ViewController.swift"; sourceTree = "<group>"; };
@@ -61,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0DEF1DA24B7FFEB00F88F98 /* Bai4 */ = {
+			isa = PBXGroup;
+			children = (
+				B0DEF1DB24B7FFFE00F88F98 /* Bai4ViewController.swift */,
+				B0DEF1DC24B7FFFE00F88F98 /* Bai4ViewController.xib */,
+			);
+			path = Bai4;
+			sourceTree = "<group>";
+		};
 		B0E6917324B71ED100F895F3 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +97,7 @@
 		B0E6917E24B71ED200F895F3 /* Autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				B0DEF1DA24B7FFEB00F88F98 /* Bai4 */,
 				B0E691A524B722BD00F895F3 /* Bai3 */,
 				B0E6919C24B71F8800F895F3 /* Bai2 */,
 				B0E6919324B71EDC00F895F3 /* Bai1 */,
@@ -111,7 +129,7 @@
 				B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */,
 				B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */,
 				B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */,
-				B0E691A224B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib */,
+				B0E691A224B71FCA00F895F3 /* Bai2-2ViewController.xib */,
 			);
 			path = Bai2;
 			sourceTree = "<group>";
@@ -123,6 +141,8 @@
 				B0E691A724B722CA00F895F3 /* Bai3ViewController.xib */,
 				B0E691AA24B7245000F895F3 /* Bai3-2ViewController.swift */,
 				B0E691AB24B7245000F895F3 /* Bai3-2ViewController.xib */,
+				B0DEF1D624B7F49500F88F98 /* Bai3-1ViewController.swift */,
+				B0DEF1D724B7F49500F88F98 /* Bai3-1ViewController.xib */,
 			);
 			path = Bai3;
 			sourceTree = "<group>";
@@ -189,11 +209,13 @@
 				B0E691AD24B7245000F895F3 /* Bai3-2ViewController.xib in Resources */,
 				B0E6918924B71ED300F895F3 /* Assets.xcassets in Resources */,
 				B0E6918724B71ED200F895F3 /* Main.storyboard in Resources */,
+				B0DEF1DE24B7FFFE00F88F98 /* Bai4ViewController.xib in Resources */,
 				B0E6919B24B71F3E00F895F3 /* bai1-1ViewController.xib in Resources */,
-				B0E691A424B71FCA00F895F3 /* Bai2-2ViewController(chua xong).xib in Resources */,
+				B0E691A424B71FCA00F895F3 /* Bai2-2ViewController.xib in Resources */,
 				B0E691A924B722CA00F895F3 /* Bai3ViewController.xib in Resources */,
 				B0E691A024B71F9900F895F3 /* Bai2ViewController.xib in Resources */,
 				B0E6919724B71EED00F895F3 /* Bai1ViewController.xib in Resources */,
+				B0DEF1D924B7F49500F88F98 /* Bai3-1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0DEF1DD24B7FFFE00F88F98 /* Bai4ViewController.swift in Sources */,
 				B0E6919F24B71F9900F895F3 /* Bai2ViewController.swift in Sources */,
 				B0E691A824B722CA00F895F3 /* Bai3ViewController.swift in Sources */,
 				B0E6918424B71ED200F895F3 /* ViewController.swift in Sources */,
@@ -211,6 +234,7 @@
 				B0E691AC24B7245000F895F3 /* Bai3-2ViewController.swift in Sources */,
 				B0E6919A24B71F3E00F895F3 /* bai1-1ViewController.swift in Sources */,
 				B0E6918224B71ED200F895F3 /* SceneDelegate.swift in Sources */,
+				B0DEF1D824B7F49500F88F98 /* Bai3-1ViewController.swift in Sources */,
 				B0E6919624B71EED00F895F3 /* Bai1ViewController.swift in Sources */,
 				B0E691A324B71FCA00F895F3 /* Bai2-2ViewController.swift in Sources */,
 			);
