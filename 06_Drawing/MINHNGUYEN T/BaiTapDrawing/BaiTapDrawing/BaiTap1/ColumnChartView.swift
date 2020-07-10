@@ -40,8 +40,6 @@ class ColumnChartView: UIView {
             context.addLine(to: CGPoint(x: bounds.minX + space, y: bounds.maxY - height))
             context.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY - height))
             context.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY))
-            
-            
             let red = CGFloat.random(in: 0...255)
             let green = CGFloat.random(in: 0...255)
             let blue = CGFloat.random(in: 0...255)
@@ -61,7 +59,7 @@ class ColumnChartView: UIView {
     }
     
     // MARK: - Public Function
-    func addValue(){
+    func addValue() {
         let startLabel: UILabel = UILabel()
         startLabel.frame = CGRect(x: bounds.minX - 20, y: bounds.maxY - 13, width: 20, height: 20)
         startLabel.text = "0"

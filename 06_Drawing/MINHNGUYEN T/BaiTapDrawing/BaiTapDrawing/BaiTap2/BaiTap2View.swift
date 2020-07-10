@@ -38,7 +38,6 @@ class BaiTap2View: UIView {
         let viewCenter = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
         let valueCount = segments.reduce(0, {$0 + $1.value})
         var startAngle = -CGFloat.pi / 2
-        
         for segment in segments {
             context?.setFillColor(segment.color.cgColor)
             let endAngle = startAngle + 2 * .pi * (segment.value / valueCount)
