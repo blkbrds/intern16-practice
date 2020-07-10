@@ -8,7 +8,7 @@
 
 import UIKit
 // MARK: - Protocol
-protocol CustomDateTimePickerDelegate: class {
+protocol DatePickerViewDelegate: class {
     func dateTime(_ view: DatePickerView, date: Date)
 }
 
@@ -16,31 +16,32 @@ class DatePickerView: UIView {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var containButtonView: UIView!
-     
-    weak var delegate: CustomDateTimePickerDelegate?
-       let dateFormater: DateFormatter = DateFormatter()
-       var dateValue: String = ""
-       var date: Date = Date()
     
-    // MARK: - Life cycle
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    @IBAction func actionPicker(_ sender: Any) {
-        date = datePicker.date
-        dateFormater.dateFormat = "MMM dd, yyyy"
-        dateValue = dateFormater.string(from: date)
-        print(dateValue)
-        print(date)
-        delegate?.dateTime(self, date: date)
+    // MARK: - Propeties
+        private var selectedDate = String()
+        var delegateDate: DatePickerViewDelegate?
+
+        // MARK: - Life cycle
+        override class func awakeFromNib() {
+            super.awakeFromNib()
         }
-    
-    @IBAction func actionDoneButton(_ sender: Any) {
-        UIView.transition(with: self, duration: 0.5, options: .transitionCurlDown, animations: {
-                self.alpha = 0
-            }, completion: nil)
-    
+
+        // MARK: - IBActions
+        @IBAction func doneButtonPressed(_ sender: UIButton) {
+            delegateDate?.view(self, needsPerform: .didTapButtonDone(getDate: selectedDate))
+        }
+
+        @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+            datePicker.datePickerMode = UIDatePicker.Mode.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMMM dd yyyy"
+            selectedDate = dateFormatter.string(from: datePicker.date)
+        }
+    }
+
+    //MARK: -Extension
+    extension DatePickerView {
+        enum Action {
+            case didTapButtonDone(getDate: String)
         }
 }
