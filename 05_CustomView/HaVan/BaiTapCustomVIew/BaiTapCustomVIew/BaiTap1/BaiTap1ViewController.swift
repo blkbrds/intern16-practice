@@ -11,7 +11,8 @@ import UIKit
 final class BaiTap1ViewController: UIViewController {
     
     // MARK: - Propeties
-    private var scrollView = UIScrollView()
+    private lazy var scrollView = UIScrollView()
+    private var people: [People] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -20,35 +21,55 @@ final class BaiTap1ViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    private func setDataOfPeople() -> [People] {
+    private func setDataOfPeople() {
         var people: [People] = []
-        for i in 0...30 {
+        for i in 0..<29 {
             people.append(People(username: "Name \(i + 1)", image: "avatar.png"))
         }
-        return people
+        self.people = people
+    }
+
+    private func numberOfRows() -> Int {
+        if people.count > 0 {
+            if people.count % 3 == 0 {
+                return people.count / 3
+            } else {
+                return people.count / 3 + 1
+            }
+        }
+        return 0
     }
     
     private func createScrollView() {
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
-        let people: [People] = setDataOfPeople()
-        var x = 30
-        var y = 30
-        for index in 0..<people.count - 1{
+        setDataOfPeople()
+        let screenSize: CGSize = UIScreen.main.bounds.size
+        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+        let personViewWidth: CGFloat = 100
+        let personViewHeight: CGFloat = 130
+        let personViewHorizontalSpacing: CGFloat = 10
+        let personViewVerticalSpacing: CGFloat = 20
+        let positonX: CGFloat = ((screenSize.width - 3 * personViewWidth - 2 * personViewHorizontalSpacing) / 2)
+        var x: CGFloat  = positonX
+        var y: CGFloat = 30
+        guard people.count > 0 else { return }
+        for index in 0..<people.count {
             if index % 3 == 0 {
-                x = 30
+                x = positonX
             } else {
-                x += 110
+                x += personViewHorizontalSpacing + personViewWidth
             }
-            if x == 30 && index != 0 {
-                y += 150
+            if x == positonX && index != 0 {
+                y += personViewVerticalSpacing + personViewHeight
             }
-            let personView = MyClass(frame: CGRect(x: x, y: y, width: 100, height: 130))
-            personView.usernameLabel?.text = people[index].username
-            personView.imageView?.image = UIImage(named: people[index].image)
+            let personView = MyClass(frame: CGRect(x: x, y: y, width: personViewWidth, height: personViewHeight), people: people[index], index: index)
             personView.delegate = self
             scrollView.addSubview(personView)
         }
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: (130 + 20) * 10 + 30)
+        var spacing: CGFloat = 0
+        if numberOfRows() > 1 {
+            spacing += CGFloat(numberOfRows() - 1) * personViewVerticalSpacing
+        }
+        scrollView.contentSize = CGSize(width: screenSize.width, height: personViewHeight * CGFloat(numberOfRows()) + spacing + 40)
         view.addSubview(scrollView)
     }
 }
@@ -57,8 +78,9 @@ final class BaiTap1ViewController: UIViewController {
 extension BaiTap1ViewController: MyClassDelegate {
     func view(_ view: MyClass, needsPerform action: MyClass.Action) {
         switch action {
-        case .didTapImage(nameLabel: let name):
-            print(name)
+        case .didTapImage(let index):
+            let name = people[index].username
+            print("\(name)")
         }
     }
 }
