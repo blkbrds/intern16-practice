@@ -8,12 +8,12 @@
 
 import Foundation
 enum NotificationNumber {
-    case TopLeft
-    case TopRight
-    case TopCenter
-    case CenterLeft
-    case CenterRight
-    case BottomLeft
-    case BottomCenter
-    case BottomRight
+    case topLeft
+    case topRight
+    case topCenter
+    case centerLeft
+    case centerRight
+    case bottomLeft
+    case bottomCenter
+    case bottomRight
 }

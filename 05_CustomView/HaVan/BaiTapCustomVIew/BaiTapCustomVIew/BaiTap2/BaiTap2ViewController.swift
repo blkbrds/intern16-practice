@@ -51,7 +51,6 @@ extension BaiTap2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         changeSliderState(with: textField.text ?? "50")
-        print("return")
         return true
     }
 }

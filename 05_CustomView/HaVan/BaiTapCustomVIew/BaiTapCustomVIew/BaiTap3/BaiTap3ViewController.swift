@@ -18,11 +18,11 @@ final class BaiTap3ViewController: UIViewController {
     
     // MARK: - Private functions
     private func configButton() {
-        let firstButton = MyButtonView(frame: CGRect(x: 100, y: 50, width: 150, height: 60), number: 50, position: .TopLeft, nameButton: "Hello")
+        let firstButton = MyButtonView(frame: CGRect(x: 100, y: 50, width: 150, height: 60), number: 50, position: .topLeft, nameButton: "Hello")
         view.addSubview(firstButton)
-        let secondButton = MyButtonView(frame: CGRect(x: 100, y: 150, width: 150, height: 60), number: 50, position: .CenterRight, nameButton: "hi")
+        let secondButton = MyButtonView(frame: CGRect(x: 100, y: 150, width: 150, height: 60), number: 50, position: .centerRight, nameButton: "hi")
         view.addSubview(secondButton)
-        let thirdButton = MyButtonView(frame: CGRect(x: 100, y: 250, width: 150, height: 60), number: 100, position: .TopCenter, nameButton: "bye")
+        let thirdButton = MyButtonView(frame: CGRect(x: 100, y: 250, width: 150, height: 60), number: 100, position: .topCenter, nameButton: "bye")
         view.addSubview(thirdButton)
     }
 }

@@ -48,7 +48,6 @@ final class MyButtonView: UIView {
         } else {
             configPositionOfBadge(position)
             notificateLabel?.adjustsFontSizeToFitWidth = true
-            //notificateLabel?.layer.cornerRadius = 25
             notificateLabel?.backgroundColor = .red
             notificateLabel?.frame.size.width = CGFloat(labelSize(with: badgeNum))
             notificateLabel?.layer.cornerRadius = 15
@@ -62,31 +61,30 @@ final class MyButtonView: UIView {
         guard let featureWidth = featureButton?.frame.width else {return}
         guard let featureHeight = featureButton?.frame.height else {return}
         switch position {
-        case .TopLeft:
+        case .topLeft:
             notificateLabel?.center.x = 0
             notificateLabel?.center.y = 0
-        case .TopCenter:
+        case .topCenter:
             notificateLabel?.center.x = featureWidth / 2
             notificateLabel?.center.y = 0
-        case .TopRight:
+        case .topRight:
             notificateLabel?.center.x = featureWidth / 2
             notificateLabel?.center.y = 0
-        case .CenterLeft:
+        case .centerLeft:
             notificateLabel?.center.y = featureHeight / 2
             notificateLabel?.center.x = 0
-        case .CenterRight:
+        case .centerRight:
             notificateLabel?.center.x = featureWidth
             notificateLabel?.center.y = featureHeight / 2
-        case .BottomLeft:
+        case .bottomLeft:
             notificateLabel?.center.x = 0
             notificateLabel?.center.y = featureHeight
-        case .BottomRight:
+        case .bottomRight:
             notificateLabel?.center.x = featureWidth
             notificateLabel?.center.y = featureHeight
-        case .BottomCenter:
+        case .bottomCenter:
             notificateLabel?.center.x = featureWidth / 2
             notificateLabel?.center.y = featureHeight
-            
         }
     }
     
