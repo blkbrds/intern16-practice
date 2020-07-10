@@ -49,19 +49,17 @@ class BadgeButton: UIButton {
 
     convenience init(frame: CGRect, pointNumber: Int, name: String, colorBtn: UIColor, position: PositionBadge) {
         self.init(frame: frame)
-        //heightButton = frame.size.height
-//        widthButton = frame.size.width
-        self.layer.cornerRadius = 15
-        self.setTitle(name, for: .normal)
-        self.setTitleColor(.white, for: .normal)
-        self.backgroundColor = colorBtn
+        layer.cornerRadius = 15
+        setTitle(name, for: .normal)
+        setTitleColor(.white, for: .normal)
+        backgroundColor = colorBtn
         clipsToBounds = false
         setupBadgeView(position: position, number: pointNumber)
     }
 
     func setupBadgeView(position: PositionBadge, number: Int) {
         if number == 0 { return }
-        let sizeButton: CGSize = self.frame.size
+        let sizeButton: CGSize = frame.size
 
         let badgeView = UIView()
         self.addSubview(badgeView)

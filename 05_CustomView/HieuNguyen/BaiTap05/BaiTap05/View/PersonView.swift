@@ -50,7 +50,9 @@ class MyAvatar: UIView {
     }
 
     @objc private func printInfo(_ gesture: UITapGestureRecognizer) {
-        delegate?.setData(self, gesture.name!)
+        if let name = gesture.name {
+            delegate?.setData(self, name)
+        }
     }
 }
 
