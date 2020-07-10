@@ -8,34 +8,59 @@
 
 import UIKit
 
-protocol SliderViewDelegate: class {
-    func sliderView(_ sliderView: MySliderView , didSelect index: Int)
+//MARK: - Protocol
+protocol MySliderViewDelegate: class {
+    func view(view: MySliderView, percentAction action: MySliderView.action)
 }
-class MySliderView: UIView {
-    
+
+final class MySliderView: UIView {
+ 
+    //MARK: IBOulet
     @IBOutlet weak var grayImageView: UIImageView!
     @IBOutlet weak var blueImageView: UIImageView!
-    @IBOutlet weak var sliderView: UIView!
-    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var percentLabel: UILabel!
     
-    weak var delegate: SliderViewDelegate?
+    enum action {
+        case updadePercent(percent: Int)
+    }
     
-        override func awakeFromNib() {
+    weak var delegate: MySliderViewDelegate?
+    var value: Int?
+    
+    //MARK: - Life Cycle
+    override func awakeFromNib() {
           super.awakeFromNib()
         }
     
-        // MARK: - Override Functions
-        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-            if let touch = touches.first {
-                let position = touch.location(in: blueImageView)
-                if position.y <= blueImageView.frame.maxY && position.y >= blueImageView.frame.minY {
-                    sliderView.center = CGPoint(x: blueImageView.center.x, y: position.y)
-                    grayImageView.frame = CGRect(x: blueImageView.frame.origin.x, y: blueImageView.frame.origin.y, width: grayImageView.frame.width, height: position.y - blueImageView.frame.origin.y)
-                    let percentage = 100 * (1 - (grayImageView.frame.height / blueImageView.frame.height))
-                    valueLabel.text = "\(Int(percentage))"
-                    delegate?.sliderView(self, didSelect: Int(percentage))
-                }
-            }
+    //MARK: - Override
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        
+        let touch = touches.first
+        guard let location = touch?.location(in: grayImageView) else {
+            return
         }
+        if location.y < grayImageView.bounds.minY {
+            percentLabel.center.y = grayImageView.bounds.minY
+        } else if location.y > grayImageView.bounds.maxY {
+            percentLabel.center.y = grayImageView.bounds.maxY
+        } else {
+            percentLabel.center.y = location.y
+        }
+        blueImageView.frame = CGRect(x: blueImageView.frame.origin.x, y: percentLabel.center.y, width: blueImageView.frame.width, height: grayImageView.frame.height - percentLabel.center.y)
+        
+        let number = Int(blueImageView.frame.height / grayImageView.frame.height) * 100
+        percentLabel.text = String(number)
+        delegate?.view(view: self, percentAction: .updadePercent(percent: number))
     }
     
+    func updatePercent() {
+        guard let temp = value else {
+            return
+        }
+        let newHeight = (grayImageView.frame.height * CGFloat(temp)) / 100
+        let newY = grayImageView.frame.height - newHeight
+        blueImageView.frame = CGRect(x: blueImageView.frame.origin.x, y: newY, width: blueImageView.frame.width, height: newHeight)
+    }
+}
+       
