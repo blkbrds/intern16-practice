@@ -18,7 +18,7 @@ final class MyDatePickerView: UIView {
     @IBOutlet weak var doneButton: UIButton!
     
     // MARK: - Propeties
-    private var selectedDate = String()
+    private var selectedDate = Date()
     var delegateDate: MyDatePickerViewDelegate?
     
     // MARK: - Life cycle
@@ -33,16 +33,14 @@ final class MyDatePickerView: UIView {
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         datePicker.datePickerMode = UIDatePicker.Mode.date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd yyyy"
-        selectedDate = dateFormatter.string(from: datePicker.date)
+        selectedDate = datePicker.date
     }
 }
 
 //MARK: -Extension
 extension MyDatePickerView {
     enum Action {
-        case didTapButtonDone(getDate: String)
+        case didTapButtonDone(getDate: Date)
     }
     
 }

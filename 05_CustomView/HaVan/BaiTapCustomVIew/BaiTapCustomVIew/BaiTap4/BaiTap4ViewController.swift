@@ -44,7 +44,9 @@ extension BaiTap4ViewController: MyDatePickerViewDelegate {
     func view(_ datePickerView: MyDatePickerView, needsPerform action: MyDatePickerView.Action) {
         switch action {
         case .didTapButtonDone(getDate: let newDate):
-            dateTextField.text = newDate
+             let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "MMMM dd yyyy"
+                    dateTextField.text = dateFormatter.string(from: newDate)
             UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
                 self.newDatePicker?.isHidden = true
             }, completion: nil)
