@@ -15,7 +15,6 @@ class Bai03ViewController: UIViewController {
         case chuaNhapUsername = "Bạn chưa nhập username"
         case chuaNhapPassword = "Bạn chưa nhập password"
         case nhapSaiUsernameVaPassword = "Nhập sai tên username hoặc password"
-        case nhapDungUsernameVaPassword = ""
     }
     
     private let validUsername = "Admin"
@@ -29,8 +28,8 @@ class Bai03ViewController: UIViewController {
         usernameTextField.delegate = self
         let tapToScreen = UITapGestureRecognizer(target: self, action: #selector(tapScreen(_:)))
         view.addGestureRecognizer(tapToScreen)
-        loginButton.addTarget(self, action: #selector(loginActionTouch(_:)), for: .touchUpInside)
-        clearButton.addTarget(self, action: #selector(clearActionTouch(_:)), for: .touchUpInside)
+        //        loginButton.addTarget(self, action: #selector(loginActionTouch(_:)), for: .touchUpInside)
+        //        clearButton.addTarget(self, action: #selector(clearActionTouch(_:)), for: .touchUpInside)
         
     }
     
@@ -57,45 +56,48 @@ class Bai03ViewController: UIViewController {
         button.layer.cornerRadius = 10
     }
     
-    private func checkLogin() -> LoginError {
-        if let username = usernameTextField.text, let password = passwordTextField.text {
-            if username.isEmpty && password.isEmpty {
-                return .chuaNhapUsernameVaPassword
-            } else if username.isEmpty {
-                return .chuaNhapUsername
-            } else if password.isEmpty {
-                return .chuaNhapPassword
-            }
-        }
-        return .nhapSaiUsernameVaPassword
-    }
-    
-    private func login() {
-        if let username = usernameTextField.text, let password = passwordTextField.text {
-            if (username, password) == (validUsername, validPassword) {
-                errorLabel.isHidden = true
-                print("Đăng nhập thành công")
-            } else {
-                errorLabel.isHidden = false
-                errorLabel.text = checkLogin().rawValue
-                errorLabel.textColor = .red
-            }
+    private func checkLogin() {
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        let result: (String?, String?) = (username,password)
+        switch result {
+        case ("", ""), (nil, nil):
+            errorLabel.text = LoginError.chuaNhapUsernameVaPassword.rawValue
+        case ("", _):
+            errorLabel.text = LoginError.chuaNhapPassword.rawValue
+        case (_, ""):
+            errorLabel.text = LoginError.chuaNhapUsername.rawValue
+        case (validUsername, validPassword):
+            errorLabel.text = "Đăng nhập thành công"
+        default:
+            errorLabel.text = LoginError.nhapSaiUsernameVaPassword.rawValue
         }
     }
     
-    // MARK: - objc
-    @objc func loginActionTouch(_ sender: Any) {
-        if (usernameTextField.text?.contains("admin"))! && (passwordTextField.text?.contains("admin123"))! {
-            errorLabel.isHidden = false
-        } else { errorLabel.isHidden = true }
-    }
     
-    @objc func clearActionTouch(_ sender: Any) {
+    @IBAction func loginButtonAction(_ sender: UIButton) {
+        checkLogin()
+        errorLabel.isHidden = false
+    }
+    @IBAction func clearButtonAction(_ sender: UIButton) {
         usernameTextField.text = nil
         passwordTextField.text = nil
         errorLabel.isHidden = true
     }
     
+    //// MARK: - objc
+    //@objc func loginActionTouch(_ sender: Any) {
+    //    if (usernameTextField.text?.contains("admin"))! && (passwordTextField.text?.contains("admin123"))! {
+    //        errorLabel.isHidden = false
+    //    } else { errorLabel.isHidden = true }
+    //}
+    //
+    //@objc func clearActionTouch(_ sender: Any) {
+    //    usernameTextField.text = nil
+    //    passwordTextField.text = nil
+    //    errorLabel.isHidden = true
+    //}
+    //
     @objc func tapScreen(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -103,17 +105,12 @@ class Bai03ViewController: UIViewController {
 
 // MARK: -Extension
 extension Bai03ViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.tag == 0 {
+        if textField === usernameTextField {
             passwordTextField.becomeFirstResponder()
-        } else if textField.tag == 1 {
-            login()
+        } else if textField === passwordTextField {
+            checkLogin()
         }
+        return true
     }
 }
