@@ -11,58 +11,50 @@ import UIKit
 final class Bai4ViewController: UIViewController {
     
     //MARK: - IBOulets
-@IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet private weak var dateTextField: UITextField!
     
-    // MARK: - Propeties
-        private var newDatePicker: DatePickerView?
-
-        // MARK: - Life cycle
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            configDatePicker()
-        }
-
-        // MARK: - Private functions
-        private func configDatePicker() {
-            private func configDatePicker() {
-                newDatePicker = Bundle.main.loadNibNamed("DatePickerView", owner: self, options: nil)?.first as? DatePickerView
-                newDatePicker?.frame = CGRect(x: 0, y: 400, width: view.frame.width, height: 300)
-                newDatePicker?.delegateDate = self
-                dateTextField.delegate = self
-                self.newDatePicker?.isHidden = true
-                view.addSubview(newDatePicker!)
-            }
-        }
-
-        // MARK: - Public functions
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
-                self.newDatePicker?.isHidden = true
-            }, completion: nil)
-        }
+    // MARK: - Private Properties
+    private var datePickerView: DatePickerView!
+    private let dateFormater: DateFormatter = DateFormatter()
+    
+    // MARK: - Lyfe Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configPicker()
     }
-
-    //MARK: -Extension
-    extension Bai4ViewController: DatePickerView {
-        func view(_ datePickerView: DatePickerView, needsPerform action: DatePickerView.Action) {
-            switch action {
-            case .didTapButtonDone(getDate: let newDate):
-                dateTextField.text = newDate
-                UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
-                    self.newDatePicker?.isHidden = true
-                }, completion: nil)
-            }
-        }
+    
+    //MARK: - Private methods
+    private func configPicker() {
+        datePickerView = Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView
+        datePickerView.frame = CGRect(x: 0, y: view.frame.height - datePickerView.frame.height, width: view.frame.width, height: datePickerView.frame.height)
+        datePickerView.delegate = self
+        view.addSubview(datePickerView)
+        dateTextField.delegate = self
+        datePickerView.isHidden = true
+        dateTextField.textAlignment = .center    }
+    
+    //MARK: - Override function
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        datePickerView.isHidden = true
     }
-
-    extension Bai4ViewController: UITextFieldDelegate {
-        func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-            UIView.animate(withDuration: 5.0, delay: 0.0, options: .curveEaseIn, animations: {
-                self.newDatePicker?.isHidden = false
-            }, completion: nil)
-            return false
-        }
 }
-    
 
+// MARK: - DatePickerViewDelegate
+extension Bai4ViewController: DatePickerViewDelegate {
+    func doneTime(_ view: DatePickerView, needsPerform action: DatePickerView.Action) {
+        switch action {
+        case .didClickDatePicker(date: let date):
+            dateFormater.dateFormat = "MMM dd, yyyy"
+            dateTextField.text = dateFormater.string(from: date)
+            datePickerView.isHidden = true
+        }
+    }
+}
 
+// MARK: - UITextFieldDelegate
+extension Bai4ViewController : UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        datePickerView.isHidden = false
+        return false
+    }
+}

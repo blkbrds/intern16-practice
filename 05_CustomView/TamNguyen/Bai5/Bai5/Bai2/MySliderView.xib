@@ -18,11 +18,11 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="img-blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-Ah-QYI">
-                    <rect key="frame" x="49" y="181" width="150" height="251"/>
+                    <rect key="frame" x="50" y="181" width="150" height="251"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMk-sq-VMQ">
-                    <rect key="frame" x="103" y="160" width="44" height="22"/>
+                    <rect key="frame" x="108" y="165" width="44" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
@@ -33,9 +33,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="blueImageView" destination="zfd-Ah-QYI" id="rCy-Wq-0sR"/>
-                <outlet property="grayImageView" destination="WDt-sq-U3p" id="Ro0-73-55i"/>
-                <outlet property="percentLabel" destination="SMk-sq-VMQ" id="l1Q-TH-gOO"/>
+                <outlet property="blueViewImage" destination="zfd-Ah-QYI" id="nRE-ih-azD"/>
+                <outlet property="grayViewImage" destination="WDt-sq-U3p" id="ZwW-lP-Oar"/>
+                <outlet property="percentLabel" destination="SMk-sq-VMQ" id="Lj6-eh-vVa"/>
             </connections>
             <point key="canvasLocation" x="-342.02898550724638" y="-988.05803571428567"/>
         </view>

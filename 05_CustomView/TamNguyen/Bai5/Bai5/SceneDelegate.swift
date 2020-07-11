@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = Bai3ViewController()
+        window.rootViewController = Bai4ViewController()
         self.window = window
         window.makeKeyAndVisible()
         
