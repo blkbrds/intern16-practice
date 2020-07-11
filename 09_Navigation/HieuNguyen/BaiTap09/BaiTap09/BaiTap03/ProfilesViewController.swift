@@ -69,7 +69,7 @@ class ProfilesViewController: UIViewController {
             } else if i != 0 {
                 x += 116
             }
-            let userView = MyAvatar(frame: CGRect(x: x, y: y, width: 100, height: 130), person: Data[i])
+            let userView = MyAvatar(frame: CGRect(x: x, y: y, width: 100, height: 130), profileName: Data[i].name)
             userView.delegate = self
             scrollView.addSubview(userView)
         }
@@ -80,6 +80,8 @@ class ProfilesViewController: UIViewController {
 }
 
 extension ProfilesViewController: MyAvatarDelegate {
+
+    
     func pushViewController(_ personView: MyAvatar, _ profile: String) {
         let profileViewController = DetailProfileViewController()
         profileViewController.userName = profile

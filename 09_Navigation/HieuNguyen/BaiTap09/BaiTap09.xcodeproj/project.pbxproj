@@ -14,7 +14,6 @@
 		7D435F8424B6C67400DCC0A1 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F8224B6C67400DCC0A1 /* EditProfileViewController.xib */; };
 		7D435F8924B6F56800DCC0A1 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8724B6F56800DCC0A1 /* ProfilesViewController.swift */; };
 		7D435F8A24B6F56800DCC0A1 /* ProfilesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F8824B6F56800DCC0A1 /* ProfilesViewController.xib */; };
-		7D435F8C24B6F5D100DCC0A1 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8B24B6F5D100DCC0A1 /* PersonView.swift */; };
 		7D435F8E24B6FA9B00DCC0A1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8D24B6FA9B00DCC0A1 /* Person.swift */; };
 		7D435F9124B6FB9600DCC0A1 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435F8F24B6FB9600DCC0A1 /* DetailProfileViewController.swift */; };
 		7D435F9224B6FB9600DCC0A1 /* DetailProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D435F9024B6FB9600DCC0A1 /* DetailProfileViewController.xib */; };
@@ -23,6 +22,7 @@
 		7D435FA924B82A7C00DCC0A1 /* BaiTap03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FA824B82A7C00DCC0A1 /* BaiTap03VC.swift */; };
 		7D435FAB24B845C400DCC0A1 /* BaiTap04VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FAA24B845C400DCC0A1 /* BaiTap04VC.swift */; };
 		7D435FAD24B858C700DCC0A1 /* BaiTap05VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D435FAC24B858C700DCC0A1 /* BaiTap05VC.swift */; };
+		C464F9D424B9624C00457406 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464F9D324B9624C00457406 /* PersonView.swift */; };
 		C46E3DF724B60D3E00BB84E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */; };
 		C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */; };
 		C46E3E0024B60D4000BB84E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46E3DFF24B60D4000BB84E9 /* Assets.xcassets */; };
@@ -49,7 +49,6 @@
 		7D435F8224B6C67400DCC0A1 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		7D435F8724B6F56800DCC0A1 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		7D435F8824B6F56800DCC0A1 /* ProfilesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilesViewController.xib; sourceTree = "<group>"; };
-		7D435F8B24B6F5D100DCC0A1 /* PersonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonView.swift; path = "../../../../../../Desktop/at-hieunguyen3/BaiTap05/BaiTap05/View/PersonView.swift"; sourceTree = "<group>"; };
 		7D435F8D24B6FA9B00DCC0A1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7D435F8F24B6FB9600DCC0A1 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 		7D435F9024B6FB9600DCC0A1 /* DetailProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProfileViewController.xib; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		7D435FA824B82A7C00DCC0A1 /* BaiTap03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03VC.swift; sourceTree = "<group>"; };
 		7D435FAA24B845C400DCC0A1 /* BaiTap04VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04VC.swift; sourceTree = "<group>"; };
 		7D435FAC24B858C700DCC0A1 /* BaiTap05VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap05VC.swift; sourceTree = "<group>"; };
+		C464F9D324B9624C00457406 /* PersonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		C46E3DF324B60D3E00BB84E9 /* BaiTap09.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap09.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E3DF624B60D3E00BB84E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46E3DF824B60D3E00BB84E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				7D435F8D24B6FA9B00DCC0A1 /* Person.swift */,
-				7D435F8B24B6F5D100DCC0A1 /* PersonView.swift */,
 				7D435F8724B6F56800DCC0A1 /* ProfilesViewController.swift */,
+				C464F9D324B9624C00457406 /* PersonView.swift */,
 				7D435F8824B6F56800DCC0A1 /* ProfilesViewController.xib */,
 				7D435F8F24B6FB9600DCC0A1 /* DetailProfileViewController.swift */,
 				7D435F9024B6FB9600DCC0A1 /* DetailProfileViewController.xib */,
@@ -272,11 +272,11 @@
 				7D435F9124B6FB9600DCC0A1 /* DetailProfileViewController.swift in Sources */,
 				7D435F8924B6F56800DCC0A1 /* ProfilesViewController.swift in Sources */,
 				C46E3DF924B60D3E00BB84E9 /* SceneDelegate.swift in Sources */,
-				7D435F8C24B6F5D100DCC0A1 /* PersonView.swift in Sources */,
 				7D435F8E24B6FA9B00DCC0A1 /* Person.swift in Sources */,
 				7D435FA924B82A7C00DCC0A1 /* BaiTap03VC.swift in Sources */,
 				7D435F8324B6C67400DCC0A1 /* EditProfileViewController.swift in Sources */,
 				C46E3E1E24B6224900BB84E9 /* ViewControllerD.swift in Sources */,
+				C464F9D424B9624C00457406 /* PersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
