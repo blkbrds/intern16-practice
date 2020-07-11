@@ -10,10 +10,10 @@ import UIKit
 
 class Baitap01ViewController: UIViewController {
     
-// MARK: - Properties
+    // MARK: - Properties
     private let values: [CGFloat] = [41, 30, 57, 84, 90, 46, 66]
     
-// MARK: - Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let columnChartView = DrawColumnChart()
@@ -22,17 +22,4 @@ class Baitap01ViewController: UIViewController {
         columnChartView.transform(values: values)
         view.addSubview(columnChartView)
     }
-    
- 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

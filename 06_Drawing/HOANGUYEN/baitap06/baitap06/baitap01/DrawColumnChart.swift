@@ -9,20 +9,20 @@
 import UIKit
 
 final class DrawColumnChart: UIView {
-
-// MARK: - Properties
+    
+    // MARK: - Properties
     private var transValue: [CGFloat] = []
-
-//    MARK: - Life cycle
+    
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
     }
-
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-// MARK: - Overrride function
+    // MARK: - Overrride function
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let range: CGFloat = 20
@@ -30,20 +30,20 @@ final class DrawColumnChart: UIView {
         for index in transValue {
             drawColumn(height: index, width: range, space: space)
             space += 50
-        drawFrameChart()
+            drawFrameChart()
         }
     }
-// MARK: - Private function
+    // MARK: - Private function
     private func drawFrameChart(){
-        let arrDateInWeek: [String] = ["Mon", "Tue", "Wes", "Thu", "Fri", "Sat", "Sun"]
+        let dateInWeekList: [String] = ["Mon", "Tue", "Wes", "Thu", "Fri", "Sat", "Sun"]
         let context = UIGraphicsGetCurrentContext()
-        context!.move(to: CGPoint(x: bounds.minX + 30, y: bounds.minY + 10))
-        context!.addLine(to: CGPoint(x: bounds.minX + 30, y: bounds.maxY))
+        context!.move(to: CGPoint(x: bounds.minX + 20, y: bounds.minY + 10))
+        context!.addLine(to: CGPoint(x: bounds.minX + 20, y: bounds.maxY))
         context!.addLine(to: CGPoint(x: bounds.maxX - 5, y: bounds.maxY))
-        context?.setLineWidth(3)
+        context!.setLineWidth(3)
         context!.strokePath()
         let valueLabel: UILabel = UILabel()
-        valueLabel.frame = CGRect(x: bounds.minX, y: bounds.minY, width: 30, height: 20)
+        valueLabel.frame = CGRect(x: bounds.minX - 10, y: bounds.minY, width: 30, height: 20)
         valueLabel.text = "100"
         let zeroLabel: UILabel = UILabel()
         zeroLabel.frame = CGRect(x: bounds.minX, y: bounds.maxY - 15, width: 30, height: 20)
@@ -51,7 +51,7 @@ final class DrawColumnChart: UIView {
         self.addSubview(valueLabel)
         self.addSubview(zeroLabel)
         var currentX: CGFloat = bounds.minX + 30
-        for i in arrDateInWeek {
+        for i in dateInWeekList {
             let dateInWeekLabel: UILabel = UILabel()
             dateInWeekLabel.frame = CGRect(x: currentX, y: bounds.maxY, width: 40, height: 30)
             dateInWeekLabel.text = i
@@ -61,7 +61,7 @@ final class DrawColumnChart: UIView {
     }
     
     private func drawColumn(height: CGFloat, width: CGFloat, space: CGFloat) {
-         let context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()
         context!.move(to: CGPoint(x: bounds.minX + space, y: bounds.maxY))
         context!.addLine(to: CGPoint(x: bounds.minX + space, y: bounds.maxY - height))
         context!.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY - height))
@@ -69,10 +69,11 @@ final class DrawColumnChart: UIView {
         context!.setFillColor(UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1).cgColor)
         context!.fillPath()
     }
-
+    
+    // MARK: - Public Function
     func transform(values: [CGFloat]) {
         for value in values {
-                transValue.append(value * (bounds.height) / 100)
+            transValue.append(value * (bounds.height) / 100)
         }
     }
 }

@@ -10,9 +10,9 @@ import UIKit
 
 class Baitap02ViewController: UIViewController {
 
-// MARK: -Properties
+// MARK: - Properties
     private let values: [CGFloat] = [40, 30, 15, 10, 5]
-    
+// MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let pieChart = DrawPieChart()
@@ -21,16 +21,4 @@ class Baitap02ViewController: UIViewController {
         pieChart.transform(values: values)
         view.addSubview(pieChart)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

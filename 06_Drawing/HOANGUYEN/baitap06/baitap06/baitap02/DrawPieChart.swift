@@ -9,20 +9,20 @@
 import UIKit
 
 class DrawPieChart: UIView {
-
-// MARK: - Properties
+    
+    // MARK: - Properties
     private var transValue: [CGFloat] = []
-
-// MARK: - Life cycle
+    
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-// MARK: - Override function
+    // MARK: - Override function
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         if transValue.isEmpty { return }
@@ -35,7 +35,7 @@ class DrawPieChart: UIView {
         }
         drawPieWhite()
     }
-//  MARK: - Function
+    // MARK: - Public Function
     func transform(values: [CGFloat]) {
         for value in values {
             transValue.append(value * 2 * .pi / 100)
@@ -52,7 +52,7 @@ class DrawPieChart: UIView {
         pathBig.close()
         pathBig.fill()
     }
-
+    
     private func drawPieWhite() {
         let center: CGPoint = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
         let pathInside = UIBezierPath()
