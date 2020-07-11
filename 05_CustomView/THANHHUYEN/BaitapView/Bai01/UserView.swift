@@ -34,7 +34,7 @@ class UserView: UIView {
         userNameLabel.textAlignment = .center
         userNameLabel.backgroundColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
         userNameLabel.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        userNameLabel.text = "Username 1"
+        userNameLabel.text = " 1"
         userNameLabel.font = UIFont.boldSystemFont(ofSize: 20)
         addSubview(userNameLabel)
 

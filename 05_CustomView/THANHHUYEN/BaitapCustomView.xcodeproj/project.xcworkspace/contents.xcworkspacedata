@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BaitapView.xcodeproj">
+      location = "self:/Volumes/D/IOS/05_CustomView/THANHHUYEN/BaitapCustomView.xcodeproj">
    </FileRef>
 </Workspace>

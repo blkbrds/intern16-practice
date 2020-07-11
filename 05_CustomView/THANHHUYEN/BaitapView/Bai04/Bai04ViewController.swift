@@ -5,7 +5,7 @@ class Bai04ViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var dateTextField: UITextField!
     
-    // MARK: - Properties
+    // MARK: - Properties todo
     let datePicker = UIDatePicker()
     
     // MARK: - LifeCycle
