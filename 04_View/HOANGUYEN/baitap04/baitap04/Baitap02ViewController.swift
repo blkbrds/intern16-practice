@@ -10,10 +10,10 @@ import UIKit
 
 class Baitap02ViewController: UIViewController {
     
-    let arrHinh: [String] = ["avatar1", "avatar2", "avatar3", "avatar4", "avatar5", "avatar6", "avatar7", "avatar8", "avatar9"]
-    let arrName: [String] = ["Name1", "Name2", "Name3", "Name4", "Hà", "Hiếu", "Khánh", "Trin", "Huyền"]
+    let avatarList: [String] = ["avatar1", "avatar2", "avatar3", "avatar4", "avatar5", "avatar6", "avatar7", "avatar8", "avatar9"]
+    let nameList: [String] = ["Name1", "Name2", "Name3", "Name4", "Hà", "Hiếu", "Khánh", "Trin", "Huyền"]
 
-    var createLblName = {() -> UILabel in
+    var createNameLabel = {() -> UILabel in
         let lbl = UILabel()
         lbl.text = "Name"
         lbl.textAlignment = .center
@@ -21,7 +21,7 @@ class Baitap02ViewController: UIViewController {
         return lbl
     }
     
-    var createImgAvater = {() -> UIImageView in
+    var createAvatarImage = {() -> UIImageView in
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
         img.layer.masksToBounds = true
@@ -46,15 +46,15 @@ class Baitap02ViewController: UIViewController {
         var originX: Double = -100
         var originY: Double = 30
         for i in 0..<9 {
-            let imgAvatar: UIImageView = createImgAvater()
-            let lblName: UILabel = createLblName()
+            let imgAvatar: UIImageView = createAvatarImage()
+            let lblName: UILabel = createNameLabel()
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(printName))
             let person: UIView = viewForPerson(img: imgAvatar, lbl: lblName)
             person.isUserInteractionEnabled = true
-            tapGestureRecognizer.name = arrName[i]
+            tapGestureRecognizer.name = nameList[i]
             person.addGestureRecognizer(tapGestureRecognizer)
             imgAvatar.image = UIImage(named: "avatar\(i+1)")
-            lblName.text = arrName[i]
+            lblName.text = nameList[i]
             person.layer.borderWidth = 1
             person.layer.borderColor = UIColor.blue.cgColor
             person.layer.masksToBounds = true

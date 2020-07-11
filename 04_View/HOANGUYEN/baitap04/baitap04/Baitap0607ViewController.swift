@@ -10,38 +10,38 @@ import UIKit
 
 class Baitap06ViewController: UIViewController {
     
-//    MARK: - IBOutlet
+    // MARK: - IBOutlet
     @IBOutlet weak private var smsView: UIView!
     @IBOutlet weak private var smsLabel: UILabel!
     @IBOutlet weak private var smsImageView: UIImageView!
     @IBOutlet weak private var mainImageView: UIImageView!
-// MARK: - Properties
+    // MARK: - Properties
     let rotationGesture: UIRotationGestureRecognizer = UIRotationGestureRecognizer()
     var recognizerScale: CGFloat = 1.0
-// MARK: - Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         smsView.alpha = 0
         mainImageView.isUserInteractionEnabled = true
         configGesture()
     }
-//  MARK: - Private function
+    // MARK: - Private function
     @objc private func zoomImage(pinch: UIPinchGestureRecognizer) {
         if recognizerScale < 2.0 && pinch.scale > 1.0 {
-               pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
-               recognizerScale *= pinch.scale
-               pinch.scale = 1.0
-             }
+            pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
+            recognizerScale *= pinch.scale
+            pinch.scale = 1.0
+        }
         if recognizerScale > 0.5 && pinch.scale < 1.0 {
-               pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
-               recognizerScale *= pinch.scale
-               pinch.scale = 1.0
-             }
+            pinch.view?.transform = (pinch.view?.transform.scaledBy(x: pinch.scale, y: pinch.scale))!
+            recognizerScale *= pinch.scale
+            pinch.scale = 1.0
+        }
     }
-
+    
     @objc private func rotationImage(rotation: UIRotationGestureRecognizer) {
         rotation.view!.transform = rotation.view!.transform.rotated(by: rotation.rotation)
-          rotation.rotation = 0
+        rotation.rotation = 0
     }
     @objc private func longPressToDefault(longPress: UILongPressGestureRecognizer) {
         longPress.minimumPressDuration = 5.0

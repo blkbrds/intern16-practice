@@ -21,8 +21,8 @@ class Baitap03ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customBtn(btn: outletLoginButton)
-        customBtn(btn: outletClearButton)
+        configButton(btn: outletLoginButton)
+        configButton(btn: outletClearButton)
         passwordTextField.isSecureTextEntry = true
         userNameTextField.delegate = self
         passwordTextField.delegate = self
@@ -42,11 +42,10 @@ class Baitap03ViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.text = ""
     }
     
-    func customBtn(btn: UIButton) -> UIButton {
+    func configButton(btn: UIButton) {
         btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
         btn.layer.borderColor = UIColor.black.cgColor
-        return btn
     }
     
     func userLogin(){
