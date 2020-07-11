@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Protocol
 protocol CustomDateTimePickerDelegate: class {
-    func dateTime(_ view: CustomDateTimePicker, date: Date)
+    func dateTime(_ view: CustomDateTimePicker, needsPerform action: CustomDateTimePicker.Action)
 }
 
 class CustomDateTimePicker: UIView {
@@ -21,8 +21,6 @@ class CustomDateTimePicker: UIView {
     @IBOutlet weak var containButtonUIView: UIView!
     // MARK: - Propeties
     weak var delegate: CustomDateTimePickerDelegate?
-    let dateFormater: DateFormatter = DateFormatter()
-    var dateValue: String = ""
     var date: Date = Date()
     
     // MARK: - Life cycle
@@ -31,17 +29,17 @@ class CustomDateTimePicker: UIView {
     }
     
     // MARK: - IBActions
-    @IBAction func actionDateTimePicker(_ sender: Any) {
-        date = dateTimePicker.date
-        dateFormater.dateFormat = "MMM dd, yyyy"
-        dateValue = dateFormater.string(from: date)
-    }
-    
     @IBAction func actionDoneButton(_ sender: Any) {
+        date = dateTimePicker.date
         UIView.animate(withDuration: 0.5) {
             self.alpha = 0
-            print(self.date)
-            self.delegate?.dateTime(self, date: self.date)
+            self.delegate?.dateTime(self, needsPerform: .pickDate(value: self.date))
         }
+    }
+}
+
+extension CustomDateTimePicker {
+    enum Action {
+        case pickDate(value: Date)
     }
 }

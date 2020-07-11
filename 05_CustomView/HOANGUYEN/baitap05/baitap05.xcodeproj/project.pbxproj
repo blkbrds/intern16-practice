@@ -23,7 +23,8 @@
 		F387FE0E24AECEE700353355 /* Baitap02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F387FE0C24AECEE700353355 /* Baitap02ViewController.xib */; };
 		F387FE1524AED20D00353355 /* Baitap03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FE1324AED20D00353355 /* Baitap03ViewController.swift */; };
 		F387FE1824AED28D00353355 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FE1724AED28D00353355 /* CustomButton.swift */; };
-		F387FE1A24AF384800353355 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FE1924AF384800353355 /* MySliderView.swift */; };
+		F387FE1A24AF384800353355 /* MySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387FE1924AF384800353355 /* MySlider.swift */; };
+		F3C1AA7824B7188E00D86ACF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1AA7724B7188E00D86ACF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +46,8 @@
 		F387FE0C24AECEE700353355 /* Baitap02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap02ViewController.xib; sourceTree = "<group>"; };
 		F387FE1324AED20D00353355 /* Baitap03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap03ViewController.swift; sourceTree = "<group>"; };
 		F387FE1724AED28D00353355 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		F387FE1924AF384800353355 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		F387FE1924AF384800353355 /* MySlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySlider.swift; sourceTree = "<group>"; };
+		F3C1AA7724B7188E00D86ACF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				F387FE0924ADD7E600353355 /* Avatar.swift */,
 				F387FE0324ADC53000353355 /* Baitap01ViewController.swift */,
+				F3C1AA7724B7188E00D86ACF /* User.swift */,
 			);
 			path = baitap01;
 			sourceTree = "<group>";
@@ -117,7 +120,7 @@
 			children = (
 				F387FE0B24AECEE700353355 /* Baitap02ViewController.swift */,
 				F387FE0C24AECEE700353355 /* Baitap02ViewController.xib */,
-				F387FE1924AF384800353355 /* MySliderView.swift */,
+				F387FE1924AF384800353355 /* MySlider.swift */,
 				F3751BFD24B02D6000AB0A9B /* MySliderView.xib */,
 			);
 			path = baitap02;
@@ -211,9 +214,10 @@
 				F3085D7824B0F6FE007983D3 /* CustomDateTimePicker.swift in Sources */,
 				F387FDF024ADC48D00353355 /* AppDelegate.swift in Sources */,
 				F3085D7524B0F520007983D3 /* Baitap04ViewController.swift in Sources */,
-				F387FE1A24AF384800353355 /* MySliderView.swift in Sources */,
+				F387FE1A24AF384800353355 /* MySlider.swift in Sources */,
 				F387FE0A24ADD7E600353355 /* Avatar.swift in Sources */,
 				F387FE1824AED28D00353355 /* CustomButton.swift in Sources */,
+				F3C1AA7824B7188E00D86ACF /* User.swift in Sources */,
 				F387FDF224ADC48D00353355 /* SceneDelegate.swift in Sources */,
 				F387FE1524AED20D00353355 /* Baitap03ViewController.swift in Sources */,
 				F387FE0D24AECEE700353355 /* Baitap02ViewController.swift in Sources */,

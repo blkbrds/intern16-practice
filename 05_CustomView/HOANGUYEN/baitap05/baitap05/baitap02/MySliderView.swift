@@ -10,65 +10,67 @@ import UIKit
 
 // MARK: - protocol
 protocol MySliderDelegate: class {
-    func mySlider(_ view: MySliderView, panTo value: Int)
+    func mySlider(_ view: MySlider, action: MySlider.Action )
 }
 
-class MySliderView: UIView {
-
-// MARK: - IBOutlet
-    @IBOutlet weak private var maxTrackSlider: UIImageView!
-    @IBOutlet weak private var minTrackSlider: UIImageView!
+class MySlider: UIView {
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak private var maxTrackSliderView: UIImageView!
+    @IBOutlet weak private var minTrackSliderView: UIImageView!
     @IBOutlet weak private var thumpLabel: UILabel!
     
-//MARK: - Properties
+    //MARK: - Properties
+    enum Action {
+        case dragThumb(value: Int)
+    }
     private var value: Int = 50
     var panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer()
     weak var delegate: MySliderDelegate?
-// MARK: - Life Cycle
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configThumpSlider()
     }
     
-// MARK: - Private Function
+    // MARK: - Private Function
     private func configThumpSlider(){
         thumpLabel.text = String(value)
-        minTrackSlider.contentMode = .bottom
-        minTrackSlider.clipsToBounds = true
-        thumpLabel.center.y = maxTrackSlider.center.y
+        minTrackSliderView.contentMode = .bottom
+        minTrackSliderView.clipsToBounds = true
+        thumpLabel.center.y = maxTrackSliderView.center.y
         thumpLabel.isUserInteractionEnabled = true
         thumpLabel.addGestureRecognizer(panGesture)
         panGesture.addTarget(self, action: #selector(panThump(pan:)))
     }
-
+    
     @objc private func panThump(pan: UIPanGestureRecognizer) {
         let translate: CGPoint = pan.translation(in: self)
-        thumpLabel.frame.origin.x = maxTrackSlider.frame.origin.x
+        thumpLabel.frame.origin.x = maxTrackSliderView.frame.origin.x
         thumpLabel.frame.origin.y = thumpLabel.frame.origin.y + translate.y
         pan.setTranslation(CGPoint.zero, in: self)
         if thumpLabel.center.y <= 0 {
-            thumpLabel.center.y = maxTrackSlider.frame.origin.y
+            thumpLabel.center.y = maxTrackSliderView.frame.origin.y
         }
-        if thumpLabel.center.y >=  maxTrackSlider.frame.height {
-            thumpLabel.center.y =  maxTrackSlider.frame.height
+        if thumpLabel.center.y >=  maxTrackSliderView.frame.height {
+            thumpLabel.center.y =  maxTrackSliderView.frame.height
         }
-        minTrackSlider.frame.origin.y = thumpLabel.center.y
-        minTrackSlider.frame.size.height = maxTrackSlider.frame.size.height - thumpLabel.center.y
-        value = Int((100 / maxTrackSlider.frame.height) * minTrackSlider.frame.height)
+        minTrackSliderView.frame.origin.y = thumpLabel.center.y
+        minTrackSliderView.frame.size.height = maxTrackSliderView.frame.size.height - thumpLabel.center.y
+        value = Int((100 / maxTrackSliderView.frame.height) * minTrackSliderView.frame.height)
         thumpLabel.text = String(value)
         delegate?.mySlider(self, panTo: value)
     }
 }
 
 // MARK: - extension
-extension MySliderView: Baitap02Delegate {
-    func changeValueSlider(_ view: Baitap02ViewController, value: String) {
+extension MySlider {
+    func changeValueSlider(value: String) {
         if let val = Int(value), val <= 100 {
             thumpLabel.text = value
-            print(maxTrackSlider.frame.size.height)
-            thumpLabel.center.y = maxTrackSlider.frame.size.height - (CGFloat(val) / CGFloat(100.0)) * maxTrackSlider.frame.size.height
-            minTrackSlider.frame.origin.y = thumpLabel.center.y
-            minTrackSlider.frame.size.height = maxTrackSlider.frame.size.height - thumpLabel.center.y
+            thumpLabel.center.y = maxTrackSliderView.frame.size.height - (CGFloat(val) / CGFloat(100.0)) * maxTrackSliderView.frame.size.height
+            minTrackSliderView.frame.origin.y = thumpLabel.center.y
+            minTrackSliderView.frame.size.height = maxTrackSliderView.frame.size.height - thumpLabel.center.y
         }
     }
 }

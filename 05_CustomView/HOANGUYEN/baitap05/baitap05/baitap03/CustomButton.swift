@@ -8,9 +8,19 @@
 
 import UIKit
 
-// MARK: - Properties
+
 class CustomButton: UIView {
-    var numberOfBadge: Int = 0
+    // MARK: - Properties
+    enum locationBadge {
+        case topLeft
+        case topRight
+        case topMid
+        case bottomLeft
+        case bottomRight
+        case bottomMid
+    }
+    var padding: CGFloat = 10
+    var badge: Int = 0
     var button: UIButton = {
         let btn: UIButton = UIButton()
         btn.layer.cornerRadius = 10
@@ -32,53 +42,71 @@ class CustomButton: UIView {
         lbl.layer.borderColor = UIColor.black.cgColor
         return lbl
     }()
-// MARK: - Life cycle
+    
+    // MARK: - Life cycle
     init(origin: CGPoint, numberOfBadge: Int) {
         super.init(frame: CGRect(x: origin.x, y: origin.y, width: 100, height: 70))
-        self.numberOfBadge = numberOfBadge
+        self.badge = numberOfBadge
         self.addSubview(button)
         checkBadgeNumber()
         button.frame.size = self.frame.size
         self.addSubview(badgeNumberLabel)
     }
     
-// MARK: - Private Function
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private Function
+    
     private func checkBadgeNumber() {
-        if numberOfBadge != 0 {
-            switch numberOfBadge {
+        if badge != 0 {
+            let sizeCharacter: CGFloat = String(badge).contentWidth(font: badgeNumberLabel.font)
+            switch badge {
             case 1...9:
-                badgeNumberLabel.frame.size = CGSize(width: 20, height: 20)
-                badgeNumberLabel.text = String(numberOfBadge)
+                badgeNumberLabel.frame.size = CGSize(width: sizeCharacter + padding, height: 20)
+                badgeNumberLabel.text = String(badge)
             case 10...99:
-                badgeNumberLabel.frame.size = CGSize(width: 30, height: 20)
-                badgeNumberLabel.text = String(numberOfBadge)
+                badgeNumberLabel.frame.size = CGSize(width: sizeCharacter + padding, height: 20)
+                badgeNumberLabel.text = String(badge)
             default:
-                badgeNumberLabel.frame.size = CGSize(width: 40, height: 20)
+                badgeNumberLabel.frame.size = CGSize(width: sizeCharacter + padding , height: 20)
                 badgeNumberLabel.text = "99+"
             }
         } else {
             badgeNumberLabel.isHidden = true
         }
     }
-    
-     func setBadge(loc: String = "") -> UILabel {
-        switch loc {
-        case "Top-Right":
+    // MARK: - Public Function
+    func setBadge(location: locationBadge ) {
+        switch location {
+        case .topRight:
             badgeNumberLabel.center.x = self.frame.width
             badgeNumberLabel.center.y = 0
-            return badgeNumberLabel
-        case "Top-Mid":
+        case .topMid:
             badgeNumberLabel.center.x = self.frame.width / 2
             badgeNumberLabel.center.y = 0
-            return badgeNumberLabel
+        case .bottomMid:
+            badgeNumberLabel.center.x = self.frame.width / 2
+            badgeNumberLabel.center.y = self.frame.height / 2
+        case .bottomLeft:
+            badgeNumberLabel.center.x = 0
+            badgeNumberLabel.center.y = self.frame.height
+        case .bottomRight:
+            badgeNumberLabel.center.x = self.frame.width
+            badgeNumberLabel.center.y = self.frame.height
         default:
             badgeNumberLabel.center.x = 0
             badgeNumberLabel.center.y = 0
-            return badgeNumberLabel
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+}
+
+// MARK: Extension
+extension String {
+    func contentWidth(font: UIFont) -> CGFloat {
+        let size = (self as NSString).size(withAttributes: [.font: font])
+        return size.width
     }
 }

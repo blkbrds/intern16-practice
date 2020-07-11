@@ -31,9 +31,12 @@ final class Baitap04ViewController: UIViewController {
 
 // MARK: - extension
 extension Baitap04ViewController: UITextFieldDelegate, CustomDateTimePickerDelegate {
-    func dateTime(_ view: CustomDateTimePicker, date: Date) {
+    func dateTime(_ view: CustomDateTimePicker, needsPerform: CustomDateTimePicker.Action) {
         dateFormater.dateFormat = "MMM dd, yyyy"
-        dateTimeTextField.text = dateFormater.string(from: date)
+        switch needsPerform {
+        case .pickDate(let date):
+            dateTimeTextField.text =  dateFormater.string(from: date)
+        }
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

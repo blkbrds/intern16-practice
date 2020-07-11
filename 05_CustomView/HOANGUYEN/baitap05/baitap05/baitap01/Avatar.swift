@@ -7,39 +7,53 @@
 //
 
 import UIKit
-
-protocol MyAvatarDelegate: class {
-    func viewPerson(_ person: Avatar, str: String)
+// MARK: - Protocol
+protocol AvatarDelegate: class {
+    func view(_ person: Avatar, needsPerform action: Avatar.Action)
 }
 
 class Avatar: UIView {
-    var createLblName = {() -> UILabel in
-        let lbl = UILabel()
-        lbl.textAlignment = .center
-        lbl.backgroundColor = .blue
-        return lbl
+    
+    // MARK: - Properties
+    enum Action {
+        case tap(index: Int)
+    }
+    
+    var index: Int?
+    
+    var nameLabel: UILabel = {() -> UILabel in
+        let label = UILabel()
+        label.frame = CGRect(x: 0, y: 100, width: 100, height: 30)
+        label.textAlignment = .center
+        label.backgroundColor = .blue
+        return label
     }()
     
-    var createImgAvatar = {() -> UIImageView in
+    var avatarImage = {() -> UIImageView in
         let img = UIImageView()
+        img.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         img.image = UIImage(named: "avatar")
         img.contentMode = .scaleAspectFill
         img.layer.masksToBounds = true
         return img
     }()
     
-    weak var delegate: MyAvatarDelegate?
+    weak var delegate: AvatarDelegate?
     
     @objc func tapPerson(_ sender: Any) {
-        delegate?.viewPerson(self, str: createLblName.text!)
+        if let index = index {
+            delegate?.view(self, needsPerform: .tap(index: index) )
+        }
     }
     
-    override init(frame: CGRect) {
+    // MARK: - Initialize
+    init(frame: CGRect, user: User, index: Int) {
         super.init(frame: frame)
-        self.addSubview(createImgAvatar)
-        self.addSubview(createLblName)
-        createImgAvatar.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        createLblName.frame = CGRect(x: 0, y: 100, width: 100, height: 30)
+        self.index = index
+        self.addSubview(avatarImage)
+        self.addSubview(nameLabel)
+        nameLabel.text = user.nameUser
+        avatarImage.image = UIImage(named: user.avatarUser)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapPerson(_:)))
         self.addGestureRecognizer(tapGesture)
         self.isUserInteractionEnabled = true
@@ -48,5 +62,4 @@ class Avatar: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
