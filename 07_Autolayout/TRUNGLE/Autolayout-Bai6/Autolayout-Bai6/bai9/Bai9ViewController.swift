@@ -1,14 +1,14 @@
 //
-//  Bai3-2ViewController.swift
-//  Autolayout
+//  Bai9ViewController.swift
+//  Autolayout-Bai6
 //
-//  Created by Trung Le D. on 7/9/20.
-//  Copyright © 2020 Trung Le D. All rights reserved.
+//  Created by Abcd on 7/12/20.
+//  Copyright © 2020 Trungld. All rights reserved.
 //
 
 import UIKit
 
-class Bai3_2ViewController: UIViewController {
+class Bai9ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

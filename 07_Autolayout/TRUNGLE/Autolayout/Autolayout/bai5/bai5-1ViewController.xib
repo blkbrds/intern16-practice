@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="bai5_1ViewController" customModule="Autolayout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-Xy-Dv1" userLabel="1">
+                    <rect key="frame" x="26.999999999999996" y="347.33333333333331" width="49.666666666666657" height="41.333333333333314"/>
+                    <color key="backgroundColor" red="0.54415685140000003" green="1" blue="0.28743192649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NN-oo-R82" userLabel="2">
+                    <rect key="frame" x="130" y="347.33333333333331" width="50.666666666666657" height="41.333333333333314"/>
+                    <color key="backgroundColor" red="0.54415685140000003" green="1" blue="0.28743192649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-RZ-tFH" userLabel="3">
+                    <rect key="frame" x="233.99999999999997" y="347.33333333333331" width="49.666666666666657" height="41.333333333333314"/>
+                    <color key="backgroundColor" red="0.54415685140000003" green="1" blue="0.28743192649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSZ-xM-rVf" userLabel="4">
+                    <rect key="frame" x="337" y="347.33333333333331" width="50.666666666666686" height="41.333333333333314"/>
+                    <color key="backgroundColor" red="0.54415685140000003" green="1" blue="0.28743192649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Eun-Xy-Dv1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="55q-R5-YV6"/>
+                <constraint firstItem="Eun-Xy-Dv1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.25" id="6kI-EQ-CBa"/>
+                <constraint firstItem="aSZ-xM-rVf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.75" id="6sD-BI-lth"/>
+                <constraint firstItem="aSZ-xM-rVf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="8tE-VJ-DbR"/>
+                <constraint firstItem="8NN-oo-R82" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.75" id="9zs-AK-sHi"/>
+                <constraint firstItem="aSZ-xM-rVf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Bpi-MK-KEb"/>
+                <constraint firstItem="8NN-oo-R82" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FHn-LX-2cC"/>
+                <constraint firstItem="fmw-RZ-tFH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GUt-6G-5Xg"/>
+                <constraint firstItem="fmw-RZ-tFH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.25" id="ISF-mq-yyT"/>
+                <constraint firstAttribute="trailing" secondItem="aSZ-xM-rVf" secondAttribute="trailing" constant="26.5" id="JbD-a2-cy2"/>
+                <constraint firstItem="aSZ-xM-rVf" firstAttribute="leading" secondItem="fmw-RZ-tFH" secondAttribute="trailing" constant="53.5" id="Nqk-Rd-uSP"/>
+                <constraint firstItem="8NN-oo-R82" firstAttribute="leading" secondItem="Eun-Xy-Dv1" secondAttribute="trailing" constant="53.5" id="Pvt-LP-YDU"/>
+                <constraint firstItem="Eun-Xy-Dv1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="S5j-20-FOH"/>
+                <constraint firstItem="Eun-Xy-Dv1" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="gcv-8H-nyZ"/>
+                <constraint firstItem="8NN-oo-R82" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="ggq-sd-5EA"/>
+                <constraint firstItem="fmw-RZ-tFH" firstAttribute="leading" secondItem="8NN-oo-R82" secondAttribute="trailing" constant="53.5" id="mBZ-uP-rpI"/>
+                <constraint firstItem="fmw-RZ-tFH" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0558036" id="ocG-q5-0Ay"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133" y="154"/>
+        </view>
+    </objects>
+</document>

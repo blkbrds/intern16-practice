@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		515D8F4124BA13FB00767F05 /* Bai2 in Resources */ = {isa = PBXBuildFile; fileRef = 515D8F4024BA13FB00767F05 /* Bai2 */; };
 		B08EA11A24B86B1B007D4955 /* bai4-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EA11824B86B1B007D4955 /* bai4-1ViewController.swift */; };
 		B08EA11B24B86B1B007D4955 /* bai4-1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08EA11924B86B1B007D4955 /* bai4-1ViewController.xib */; };
 		B08EA11E24B870E2007D4955 /* bai4-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08EA11C24B870E2007D4955 /* bai4-2ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		515D8F4024BA13FB00767F05 /* Bai2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Bai2; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/Autolayout/Autolayout/Bai2"; sourceTree = "<group>"; };
 		B08EA11824B86B1B007D4955 /* bai4-1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "bai4-1ViewController.swift"; sourceTree = "<group>"; };
 		B08EA11924B86B1B007D4955 /* bai4-1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "bai4-1ViewController.xib"; sourceTree = "<group>"; };
 		B08EA11C24B870E2007D4955 /* bai4-2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "bai4-2ViewController.swift"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		B0E6919C24B71F8800F895F3 /* Bai2 */ = {
 			isa = PBXGroup;
 			children = (
+				515D8F4024BA13FB00767F05 /* Bai2 */,
 				B0E6919D24B71F9900F895F3 /* Bai2ViewController.swift */,
 				B0E6919E24B71F9900F895F3 /* Bai2ViewController.xib */,
 				B0E691A124B71FCA00F895F3 /* Bai2-2ViewController.swift */,
@@ -243,6 +246,7 @@
 				B0E691A924B722CA00F895F3 /* Bai3ViewController.xib in Resources */,
 				B0E691A024B71F9900F895F3 /* Bai2ViewController.xib in Resources */,
 				B0E6919724B71EED00F895F3 /* Bai1ViewController.xib in Resources */,
+				515D8F4124BA13FB00767F05 /* Bai2 in Resources */,
 				B08EA11B24B86B1B007D4955 /* bai4-1ViewController.xib in Resources */,
 				B0DEF1D924B7F49500F88F98 /* Bai3-1ViewController.xib in Resources */,
 			);

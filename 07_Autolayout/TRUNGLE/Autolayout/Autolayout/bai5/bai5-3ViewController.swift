@@ -1,14 +1,14 @@
 //
-//  Bai3ViewController.swift
+//  bai5-3ViewController.swift
 //  Autolayout
 //
-//  Created by Trung Le D. on 7/9/20.
+//  Created by Abcd on 7/10/20.
 //  Copyright © 2020 Trung Le D. All rights reserved.
 //
 
 import UIKit
 
-class Bai3ViewController: UIViewController {
+class bai5_3ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
