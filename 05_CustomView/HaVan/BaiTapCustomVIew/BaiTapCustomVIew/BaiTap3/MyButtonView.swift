@@ -96,7 +96,7 @@ final class MyButtonView: UIView {
     }
 }
 
-//MARK: - Extension
+// MARK: - Extension
 extension String {
     func contentWidth(font: UIFont) -> CGFloat {
         let size = (self as NSString).size(withAttributes: [.font: font])

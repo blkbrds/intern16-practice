@@ -74,7 +74,7 @@ final class BaiTap1ViewController: UIViewController {
     }
 }
 
-//MARK: - MyClassDelegate
+// MARK: - MyClassDelegate
 extension BaiTap1ViewController: MyClassDelegate {
     func view(_ view: MyClass, needsPerform action: MyClass.Action) {
         switch action {

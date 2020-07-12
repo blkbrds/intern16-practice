@@ -13,13 +13,20 @@ final class BaiTap4ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var dateTextField: UITextField!
     
-    // MARK: - Propeties
+    // MARK: - Properties
     private var newDatePicker: MyDatePickerView = MyDatePickerView()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configDatePicker()
+    }
+
+    // MARK: - Override functions
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
+            self.newDatePicker.isHidden = true
+        }, completion: nil)
     }
     
     // MARK: - Private functions
@@ -32,16 +39,9 @@ final class BaiTap4ViewController: UIViewController {
         self.newDatePicker.isHidden = true
         view.addSubview(newDatePicker)
     }
-    
-    // MARK: - Public functions
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
-            self.newDatePicker.isHidden = true
-        }, completion: nil)
-    }
 }
 
-//MARK: - MyDatePickerViewDelegate
+// MARK: - MyDatePickerViewDelegate
 extension BaiTap4ViewController: MyDatePickerViewDelegate {
     func view(_ datePickerView: MyDatePickerView, needsPerform action: MyDatePickerView.Action) {
         switch action {
@@ -56,7 +56,7 @@ extension BaiTap4ViewController: MyDatePickerViewDelegate {
     }
 }
 
-//MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 extension BaiTap4ViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         UIView.animate(withDuration: 5.0, delay: 0.0, options: .curveEaseIn, animations: {

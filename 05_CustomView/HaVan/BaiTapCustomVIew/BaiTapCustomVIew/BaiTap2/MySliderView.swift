@@ -20,7 +20,7 @@ final class MySliderView: UIView {
     @IBOutlet private weak var processValue: UILabel!
     @IBOutlet private weak var whiteView: UIImageView!
     
-    // MARK: - Propeties
+    // MARK: - Properties
     var processNum: Float? {
         didSet {
             setViewAndProcess()

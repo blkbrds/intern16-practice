@@ -11,6 +11,7 @@ import UIKit
 protocol MyClassDelegate : class {
     func view(_ view: MyClass, needsPerform action: MyClass.Action)
 }
+
 final class MyClass: UIView {
     
     // MARK: - Properties

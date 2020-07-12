@@ -12,7 +12,7 @@ final class BaiTap2ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var valueTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet private weak var errorLabel: UILabel!
     
     // MARK: - Properties
     private var sliderView: MySliderView = MySliderView()
@@ -41,14 +41,14 @@ final class BaiTap2ViewController: UIViewController {
     }
 }
 
-//MARK: - MySliderViewDelegate
+// MARK: - MySliderViewDelegate
 extension BaiTap2ViewController: MySliderViewDelegate {
     func view(with num: Float) {
         valueTextField.text = String(format: "%.0f", num)
     }
 }
 
-//MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 extension BaiTap2ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
@@ -81,7 +81,3 @@ extension BaiTap2ViewController: UITextFieldDelegate {
         return true
     }
 }
-
-
-
-

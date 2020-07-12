@@ -38,7 +38,7 @@ final class MyDatePickerView: UIView {
     }
 }
 
-//MARK: - Config
+// MARK: - Config
 extension MyDatePickerView {
     enum Action {
         case didTapButtonDone(getDate: Date)
