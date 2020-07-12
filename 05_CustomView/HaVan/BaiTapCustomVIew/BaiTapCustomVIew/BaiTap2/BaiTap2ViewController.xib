@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap2ViewController" customModule="BaiTapCustomVIew" customModuleProvider="target">
             <connections>
+                <outlet property="errorLabel" destination="El3-vr-VtV" id="euS-aJ-hzp"/>
                 <outlet property="valueTextField" destination="Bhh-Yw-WAz" id="hRU-bX-Jcu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,8 +32,19 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El3-vr-VtV">
+                    <rect key="frame" x="30" y="160" width="325" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="El3-vr-VtV" secondAttribute="trailing" constant="20" id="Vha-p1-wSH"/>
+                <constraint firstItem="El3-vr-VtV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="mVX-co-y7r"/>
+                <constraint firstItem="El3-vr-VtV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="160" id="wFB-eP-XhV"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="106.59670164917542"/>
         </view>

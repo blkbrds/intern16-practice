@@ -10,13 +10,13 @@ import UIKit
 
 final class MyButtonView: UIView {
     
-    // MARK: - Propeties
-    private var featureButton: UIButton?
-    private var notificateLabel: UILabel?
-    private var buttonColor: String?
+    // MARK: - Properties
+    private var featureButton: UIButton = UIButton()
+    private var notificateLabel: UILabel = UILabel()
+    private var buttonColor: String = String()
     private var badgeNumber: Int = 0
     
-    // MARK: - Life cycle
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -31,74 +31,75 @@ final class MyButtonView: UIView {
     }
     
     // MARK: - Private functions
-    func configNotification(with badgeNum: Int,_ position: NotificationNumber, name button: String) {
+    private func configNotification(with badgeNum: Int,_ position: NotificationNumber, name button: String) {
         featureButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
-        featureButton?.backgroundColor = UIColor.init(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
-        featureButton?.layer.cornerRadius = 5
-        featureButton?.setTitle(button, for: .normal)
-        featureButton?.titleLabel?.textColor = .black
-        notificateLabel = UILabel()
-        notificateLabel?.textAlignment = .center
-        notificateLabel?.frame.size = CGSize(width: 30, height: 30)
-        notificateLabel?.layer.cornerRadius = 15
-        notificateLabel?.clipsToBounds = true
-        
+        featureButton.backgroundColor = UIColor.init(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
+        featureButton.layer.cornerRadius = 5
+        featureButton.setTitle(button, for: .normal)
+        featureButton.titleLabel?.textColor = .black
+        notificateLabel.textAlignment = .center
+        notificateLabel.frame.size = CGSize(width: 30, height: 30)
+        notificateLabel.layer.cornerRadius = 15
+        notificateLabel.clipsToBounds = true
         if badgeNum == 0 {
-            notificateLabel?.isHidden = true
+            notificateLabel.isHidden = true
         } else {
             configPositionOfBadge(position)
-            notificateLabel?.adjustsFontSizeToFitWidth = true
-            notificateLabel?.backgroundColor = .red
-            notificateLabel?.frame.size.width = CGFloat(labelSize(with: badgeNum))
-            notificateLabel?.layer.cornerRadius = 15
-            notificateLabel?.clipsToBounds = true
+            notificateLabel.backgroundColor = .red
+            guard let font = UIFont(name: "Arial", size: 12) else { return }
+            showNotification(with: badgeNum)
+            notificateLabel.font = notificateLabel.font.withSize(12)
+            notificateLabel.frame.size.width = String(badgeNum).contentWidth(font: font)
+            notificateLabel.clipsToBounds = true
         }
-        self.addSubview(featureButton!)
-        self.addSubview(notificateLabel!)
+        self.addSubview(featureButton)
+        self.addSubview(notificateLabel)
     }
     
     private func configPositionOfBadge(_ position: NotificationNumber) {
-        guard let featureWidth = featureButton?.frame.width else {return}
-        guard let featureHeight = featureButton?.frame.height else {return}
+        let featureWidth = featureButton.frame.width
+        let featureHeight = featureButton.frame.height
         switch position {
         case .topLeft:
-            notificateLabel?.center.x = 0
-            notificateLabel?.center.y = 0
+            notificateLabel.center.x = 0
+            notificateLabel.center.y = 0
         case .topCenter:
-            notificateLabel?.center.x = featureWidth / 2
-            notificateLabel?.center.y = 0
+            notificateLabel.center.x = featureWidth / 2
+            notificateLabel.center.y = 0
         case .topRight:
-            notificateLabel?.center.x = featureWidth / 2
-            notificateLabel?.center.y = 0
+            notificateLabel.center.x = featureWidth / 2
+            notificateLabel.center.y = 0
         case .centerLeft:
-            notificateLabel?.center.y = featureHeight / 2
-            notificateLabel?.center.x = 0
+            notificateLabel.center.y = featureHeight / 2
+            notificateLabel.center.x = 0
         case .centerRight:
-            notificateLabel?.center.x = featureWidth
-            notificateLabel?.center.y = featureHeight / 2
+            notificateLabel.center.x = featureWidth
+            notificateLabel.center.y = featureHeight / 2
         case .bottomLeft:
-            notificateLabel?.center.x = 0
-            notificateLabel?.center.y = featureHeight
+            notificateLabel.center.x = 0
+            notificateLabel.center.y = featureHeight
         case .bottomRight:
-            notificateLabel?.center.x = featureWidth
-            notificateLabel?.center.y = featureHeight
+            notificateLabel.center.x = featureWidth
+            notificateLabel.center.y = featureHeight
         case .bottomCenter:
-            notificateLabel?.center.x = featureWidth / 2
-            notificateLabel?.center.y = featureHeight
+            notificateLabel.center.x = featureWidth / 2
+            notificateLabel.center.y = featureHeight
         }
     }
     
-    private func labelSize(with number: Int) -> Float  {
-        switch number {
-        case 0...9:
-            notificateLabel?.text = String(number)
-            return 20
-        case 10..<99:
-            notificateLabel?.text = String(number)
-            return 30
-        default:
-            notificateLabel?.text = String("99+")
-            return 40
+    private func showNotification(with number: Int) {
+        if number > 0 && number < 99 {
+            notificateLabel.text = String(number)
+        } else {
+            notificateLabel.text = String("99+")
         }
+    }
+}
+
+//MARK: - Extension
+extension String {
+    func contentWidth(font: UIFont) -> CGFloat {
+        let size = (self as NSString).size(withAttributes: [.font: font])
+        return size.width + 20
     }
 }

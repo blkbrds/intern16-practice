@@ -13,7 +13,7 @@ protocol MyClassDelegate : class {
 }
 final class MyClass: UIView {
     
-    // MARK: - Propeties
+    // MARK: - Properties
     private lazy var usernameLabel: UILabel = UILabel()
     private lazy var imageView: UIImageView = UIImageView()
     private var tap = UITapGestureRecognizer()
@@ -21,7 +21,7 @@ final class MyClass: UIView {
     private var index: Int?
     weak var delegate: MyClassDelegate?
     
-    // MARK: - Initalize
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

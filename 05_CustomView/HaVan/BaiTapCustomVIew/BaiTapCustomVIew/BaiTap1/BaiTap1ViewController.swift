@@ -10,7 +10,7 @@ import UIKit
 
 final class BaiTap1ViewController: UIViewController {
     
-    // MARK: - Propeties
+    // MARK: - Properties
     private lazy var scrollView = UIScrollView()
     private var people: [People] = []
     
@@ -74,7 +74,7 @@ final class BaiTap1ViewController: UIViewController {
     }
 }
 
-//MARK: - Extention
+//MARK: - MyClassDelegate
 extension BaiTap1ViewController: MyClassDelegate {
     func view(_ view: MyClass, needsPerform action: MyClass.Action) {
         switch action {

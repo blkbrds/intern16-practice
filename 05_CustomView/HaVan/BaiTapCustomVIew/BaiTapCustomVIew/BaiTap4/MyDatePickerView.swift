@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 protocol MyDatePickerViewDelegate : class {
     func view(_ datePickerView: MyDatePickerView, needsPerform action: MyDatePickerView.Action)
 }
@@ -14,33 +15,32 @@ protocol MyDatePickerViewDelegate : class {
 final class MyDatePickerView: UIView {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var doneButton: UIButton!
     
-    // MARK: - Propeties
+    // MARK: - Properties
     private var selectedDate = Date()
     var delegateDate: MyDatePickerViewDelegate?
     
     // MARK: - Life cycle
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     // MARK: - IBActions
-    @IBAction func doneButtonPressed(_ sender: UIButton) {
+    @IBAction private func doneButtonPressed(_ sender: UIButton) {
         delegateDate?.view(self, needsPerform: .didTapButtonDone(getDate: selectedDate))
     }
     
-    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+    @IBAction private func datePickerValueChanged(_ sender: UIDatePicker) {
         datePicker.datePickerMode = UIDatePicker.Mode.date
         selectedDate = datePicker.date
     }
 }
 
-//MARK: -Extension
+//MARK: - Config
 extension MyDatePickerView {
     enum Action {
         case didTapButtonDone(getDate: Date)
     }
-    
 }
