@@ -11,6 +11,8 @@
 		7D144C4924B863F7006DE878 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D144C4824B863F7006DE878 /* SceneDelegate.swift */; };
 		7D144C5024B863F9006DE878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D144C4F24B863F9006DE878 /* Assets.xcassets */; };
 		7D144C5324B863F9006DE878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D144C5124B863F9006DE878 /* LaunchScreen.storyboard */; };
+		C436A3B424BB600C00353304 /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436A3B224BB600C00353304 /* CityViewController.xib */; };
+		C436A3B524BB600C00353304 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436A3B324BB600C00353304 /* CityViewController.swift */; };
 		C464F9DD24B9653E00457406 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464F9D724B9653D00457406 /* DetailProfileViewController.swift */; };
 		C464F9DE24B9653E00457406 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464F9D824B9653D00457406 /* PersonView.swift */; };
 		C464F9DF24B9653E00457406 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464F9D924B9653D00457406 /* ProfilesViewController.swift */; };
@@ -36,6 +38,8 @@
 		7D144C4F24B863F9006DE878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D144C5224B863F9006DE878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D144C5424B863F9006DE878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C436A3B224BB600C00353304 /* CityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityViewController.xib; sourceTree = "<group>"; };
+		C436A3B324BB600C00353304 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		C464F9D724B9653D00457406 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 		C464F9D824B9653D00457406 /* PersonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		C464F9D924B9653D00457406 /* ProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 		7D144C4524B863F7006DE878 /* Baitap10 */ = {
 			isa = PBXGroup;
 			children = (
+				C436A3B124BB5FE500353304 /* BaiTap04 */,
 				C464F9E424B9657000457406 /* BaiTap03 */,
 				C464F9D624B9651B00457406 /* BaiTap02 */,
 				7D144C4824B863F7006DE878 /* SceneDelegate.swift */,
@@ -93,6 +98,15 @@
 				7D144C5424B863F9006DE878 /* Info.plist */,
 			);
 			path = Baitap10;
+			sourceTree = "<group>";
+		};
+		C436A3B124BB5FE500353304 /* BaiTap04 */ = {
+			isa = PBXGroup;
+			children = (
+				C436A3B324BB600C00353304 /* CityViewController.swift */,
+				C436A3B224BB600C00353304 /* CityViewController.xib */,
+			);
+			path = BaiTap04;
 			sourceTree = "<group>";
 		};
 		C464F9D624B9651B00457406 /* BaiTap02 */ = {
@@ -189,6 +203,7 @@
 				C464F9E024B9653E00457406 /* ProfilesViewController.xib in Resources */,
 				7D144C5024B863F9006DE878 /* Assets.xcassets in Resources */,
 				C464F9E824B965C600457406 /* LocationViewController.xib in Resources */,
+				C436A3B424BB600C00353304 /* CityViewController.xib in Resources */,
 				C464F9E124B9653E00457406 /* DetailProfileViewController.xib in Resources */,
 				C4EF595424BAB3390012114E /* ProvinceViewController.xib in Resources */,
 			);
@@ -202,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C464F9EE24B96C3C00457406 /* ButtonExtension.swift in Sources */,
+				C436A3B524BB600C00353304 /* CityViewController.swift in Sources */,
 				C464F9EB24B9691200457406 /* RegionViewController.swift in Sources */,
 				C464F9E724B965C600457406 /* LocationViewController.swift in Sources */,
 				C464F9E224B9653E00457406 /* Person.swift in Sources */,
