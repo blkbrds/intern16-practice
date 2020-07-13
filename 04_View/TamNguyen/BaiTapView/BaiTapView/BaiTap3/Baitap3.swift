@@ -63,7 +63,7 @@ final class Bai3ViewController: UIViewController {
 }
 
 //MARK: - UITextFieldDelegate
-extension Bai3ViewController :UITextFieldDelegate {
+extension Bai3ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {
             usernameTextField.resignFirstResponder()

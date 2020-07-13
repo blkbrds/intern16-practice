@@ -22,10 +22,7 @@ final class Bai6ViewController: UIViewController {
     //MARK: - Private Method
     private func createGesture() {
         let pinGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch))
-        
         let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotate))
-        
-        
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
         
         monkeyImageView.isUserInteractionEnabled = true
@@ -34,14 +31,14 @@ final class Bai6ViewController: UIViewController {
         monkeyImageView.addGestureRecognizer(longPressGesture)
     }
     
-    @objc private func pinch(gestureRecognizer :UIPinchGestureRecognizer) {
+    @objc private func pinch(gestureRecognizer: UIPinchGestureRecognizer) {
         guard let viewPinch = gestureRecognizer.view, gestureRecognizer.scale <= 2 && gestureRecognizer.scale >= 0.5 else {
             return
         }
         viewPinch.transform = viewPinch.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale)
     }
     
-    @objc private func rotate(gestureRecognizer :UIRotationGestureRecognizer) {
+    @objc private func rotate(gestureRecognizer: UIRotationGestureRecognizer) {
         guard let viewRotate = gestureRecognizer.view else { return }
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
             viewRotate.transform = viewRotate.transform.rotated(by: gestureRecognizer.rotation)
@@ -49,7 +46,7 @@ final class Bai6ViewController: UIViewController {
         }
     }
     
-    @objc private func longPress(gestureRecognizer :UILongPressGestureRecognizer) {
+    @objc private func longPress(gestureRecognizer: UILongPressGestureRecognizer) {
         if let viewLongPress = gestureRecognizer.view {
             UIView.animate(withDuration: 1) {
                 viewLongPress.transform = CGAffineTransform(rotationAngle: 0)

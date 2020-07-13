@@ -13,18 +13,18 @@
 		3141A9AC24B85D0E00ADFEAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9AA24B85D0E00ADFEAB /* Main.storyboard */; };
 		3141A9AE24B85D0F00ADFEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9AD24B85D0F00ADFEAB /* Assets.xcassets */; };
 		3141A9B124B85D0F00ADFEAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9AF24B85D0F00ADFEAB /* LaunchScreen.storyboard */; };
-		3141A9BB24B85D5400ADFEAB /* Bai3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9B924B85D5400ADFEAB /* Bai3.swift */; };
-		3141A9BC24B85D5400ADFEAB /* Bai3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9BA24B85D5400ADFEAB /* Bai3.xib */; };
-		3141A9C024B85D6300ADFEAB /* Bai2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9BE24B85D6300ADFEAB /* Bai2.xib */; };
-		3141A9C124B85D6300ADFEAB /* Bai2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9BF24B85D6300ADFEAB /* Bai2.swift */; };
-		3141A9C524B85D6900ADFEAB /* Bai4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9C324B85D6900ADFEAB /* Bai4.xib */; };
-		3141A9C624B85D6900ADFEAB /* Bai4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9C424B85D6900ADFEAB /* Bai4.swift */; };
-		3141A9CA24B85D6E00ADFEAB /* B5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9C824B85D6E00ADFEAB /* B5.swift */; };
-		3141A9CB24B85D6E00ADFEAB /* B5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9C924B85D6E00ADFEAB /* B5.xib */; };
+		3141A9BB24B85D5400ADFEAB /* Baitap3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9B924B85D5400ADFEAB /* Baitap3.swift */; };
+		3141A9BC24B85D5400ADFEAB /* Baitap3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9BA24B85D5400ADFEAB /* Baitap3.xib */; };
+		3141A9C024B85D6300ADFEAB /* Baitap2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9BE24B85D6300ADFEAB /* Baitap2.xib */; };
+		3141A9C124B85D6300ADFEAB /* Baitap2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9BF24B85D6300ADFEAB /* Baitap2.swift */; };
+		3141A9C524B85D6900ADFEAB /* Baitap4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9C324B85D6900ADFEAB /* Baitap4.xib */; };
+		3141A9C624B85D6900ADFEAB /* Baitap4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9C424B85D6900ADFEAB /* Baitap4.swift */; };
+		3141A9CA24B85D6E00ADFEAB /* Baitap5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9C824B85D6E00ADFEAB /* Baitap5.swift */; };
+		3141A9CB24B85D6E00ADFEAB /* Baitap5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9C924B85D6E00ADFEAB /* Baitap5.xib */; };
 		3141A9CF24B85D7800ADFEAB /* Baitap7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9CD24B85D7800ADFEAB /* Baitap7.xib */; };
 		3141A9D024B85D7800ADFEAB /* Baitap7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9CE24B85D7800ADFEAB /* Baitap7.swift */; };
-		3141A9D324B85DBD00ADFEAB /* B6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9D224B85DBD00ADFEAB /* B6.swift */; };
-		3141A9D524B85DC800ADFEAB /* B6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9D424B85DC700ADFEAB /* B6.xib */; };
+		3141A9D324B85DBD00ADFEAB /* Baitap6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9D224B85DBD00ADFEAB /* Baitap6.swift */; };
+		3141A9D524B85DC800ADFEAB /* Baitap6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3141A9D424B85DC700ADFEAB /* Baitap6.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,18 +36,18 @@
 		3141A9AD24B85D0F00ADFEAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3141A9B024B85D0F00ADFEAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3141A9B224B85D0F00ADFEAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3141A9B924B85D5400ADFEAB /* Bai3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bai3.swift; sourceTree = "<group>"; };
-		3141A9BA24B85D5400ADFEAB /* Bai3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bai3.xib; sourceTree = "<group>"; };
-		3141A9BE24B85D6300ADFEAB /* Bai2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bai2.xib; sourceTree = "<group>"; };
-		3141A9BF24B85D6300ADFEAB /* Bai2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bai2.swift; sourceTree = "<group>"; };
-		3141A9C324B85D6900ADFEAB /* Bai4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bai4.xib; sourceTree = "<group>"; };
-		3141A9C424B85D6900ADFEAB /* Bai4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bai4.swift; sourceTree = "<group>"; };
-		3141A9C824B85D6E00ADFEAB /* B5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B5.swift; sourceTree = "<group>"; };
-		3141A9C924B85D6E00ADFEAB /* B5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = B5.xib; sourceTree = "<group>"; };
+		3141A9B924B85D5400ADFEAB /* Baitap3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap3.swift; sourceTree = "<group>"; };
+		3141A9BA24B85D5400ADFEAB /* Baitap3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap3.xib; sourceTree = "<group>"; };
+		3141A9BE24B85D6300ADFEAB /* Baitap2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap2.xib; sourceTree = "<group>"; };
+		3141A9BF24B85D6300ADFEAB /* Baitap2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap2.swift; sourceTree = "<group>"; };
+		3141A9C324B85D6900ADFEAB /* Baitap4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap4.xib; sourceTree = "<group>"; };
+		3141A9C424B85D6900ADFEAB /* Baitap4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap4.swift; sourceTree = "<group>"; };
+		3141A9C824B85D6E00ADFEAB /* Baitap5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap5.swift; sourceTree = "<group>"; };
+		3141A9C924B85D6E00ADFEAB /* Baitap5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap5.xib; sourceTree = "<group>"; };
 		3141A9CD24B85D7800ADFEAB /* Baitap7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap7.xib; sourceTree = "<group>"; };
 		3141A9CE24B85D7800ADFEAB /* Baitap7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap7.swift; sourceTree = "<group>"; };
-		3141A9D224B85DBD00ADFEAB /* B6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B6.swift; sourceTree = "<group>"; };
-		3141A9D424B85DC700ADFEAB /* B6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = B6.xib; sourceTree = "<group>"; };
+		3141A9D224B85DBD00ADFEAB /* Baitap6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap6.swift; sourceTree = "<group>"; };
+		3141A9D424B85DC700ADFEAB /* Baitap6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap6.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 		3141A9B824B85D3D00ADFEAB /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9B924B85D5400ADFEAB /* Bai3.swift */,
-				3141A9BA24B85D5400ADFEAB /* Bai3.xib */,
+				3141A9B924B85D5400ADFEAB /* Baitap3.swift */,
+				3141A9BA24B85D5400ADFEAB /* Baitap3.xib */,
 			);
 			path = BaiTap3;
 			sourceTree = "<group>";
@@ -109,8 +109,8 @@
 		3141A9BD24B85D6300ADFEAB /* Baitap2 */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9BF24B85D6300ADFEAB /* Bai2.swift */,
-				3141A9BE24B85D6300ADFEAB /* Bai2.xib */,
+				3141A9BF24B85D6300ADFEAB /* Baitap2.swift */,
+				3141A9BE24B85D6300ADFEAB /* Baitap2.xib */,
 			);
 			path = Baitap2;
 			sourceTree = "<group>";
@@ -118,8 +118,8 @@
 		3141A9C224B85D6900ADFEAB /* BaiTap4 */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9C324B85D6900ADFEAB /* Bai4.xib */,
-				3141A9C424B85D6900ADFEAB /* Bai4.swift */,
+				3141A9C324B85D6900ADFEAB /* Baitap4.xib */,
+				3141A9C424B85D6900ADFEAB /* Baitap4.swift */,
 			);
 			path = BaiTap4;
 			sourceTree = "<group>";
@@ -127,8 +127,8 @@
 		3141A9C724B85D6E00ADFEAB /* Baitap5 */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9C824B85D6E00ADFEAB /* B5.swift */,
-				3141A9C924B85D6E00ADFEAB /* B5.xib */,
+				3141A9C824B85D6E00ADFEAB /* Baitap5.swift */,
+				3141A9C924B85D6E00ADFEAB /* Baitap5.xib */,
 			);
 			path = Baitap5;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 		3141A9D124B85DBD00ADFEAB /* Baitap6 */ = {
 			isa = PBXGroup;
 			children = (
-				3141A9D424B85DC700ADFEAB /* B6.xib */,
-				3141A9D224B85DBD00ADFEAB /* B6.swift */,
+				3141A9D424B85DC700ADFEAB /* Baitap6.xib */,
+				3141A9D224B85DBD00ADFEAB /* Baitap6.swift */,
 			);
 			path = Baitap6;
 			sourceTree = "<group>";
@@ -209,11 +209,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3141A9BC24B85D5400ADFEAB /* Bai3.xib in Resources */,
-				3141A9CB24B85D6E00ADFEAB /* B5.xib in Resources */,
-				3141A9D524B85DC800ADFEAB /* B6.xib in Resources */,
-				3141A9C524B85D6900ADFEAB /* Bai4.xib in Resources */,
-				3141A9C024B85D6300ADFEAB /* Bai2.xib in Resources */,
+				3141A9BC24B85D5400ADFEAB /* Baitap3.xib in Resources */,
+				3141A9CB24B85D6E00ADFEAB /* Baitap5.xib in Resources */,
+				3141A9D524B85DC800ADFEAB /* Baitap6.xib in Resources */,
+				3141A9C524B85D6900ADFEAB /* Baitap4.xib in Resources */,
+				3141A9C024B85D6300ADFEAB /* Baitap2.xib in Resources */,
 				3141A9CF24B85D7800ADFEAB /* Baitap7.xib in Resources */,
 				3141A9B124B85D0F00ADFEAB /* LaunchScreen.storyboard in Resources */,
 				3141A9AE24B85D0F00ADFEAB /* Assets.xcassets in Resources */,
@@ -229,13 +229,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3141A9D024B85D7800ADFEAB /* Baitap7.swift in Sources */,
-				3141A9BB24B85D5400ADFEAB /* Bai3.swift in Sources */,
-				3141A9D324B85DBD00ADFEAB /* B6.swift in Sources */,
-				3141A9C624B85D6900ADFEAB /* Bai4.swift in Sources */,
-				3141A9CA24B85D6E00ADFEAB /* B5.swift in Sources */,
+				3141A9BB24B85D5400ADFEAB /* Baitap3.swift in Sources */,
+				3141A9D324B85DBD00ADFEAB /* Baitap6.swift in Sources */,
+				3141A9C624B85D6900ADFEAB /* Baitap4.swift in Sources */,
+				3141A9CA24B85D6E00ADFEAB /* Baitap5.swift in Sources */,
 				3141A9A924B85D0E00ADFEAB /* ViewController.swift in Sources */,
 				3141A9A524B85D0E00ADFEAB /* AppDelegate.swift in Sources */,
-				3141A9C124B85D6300ADFEAB /* Bai2.swift in Sources */,
+				3141A9C124B85D6300ADFEAB /* Baitap2.swift in Sources */,
 				3141A9A724B85D0E00ADFEAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
