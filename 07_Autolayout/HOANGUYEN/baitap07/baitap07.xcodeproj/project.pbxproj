@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F33694A624B622B100FF3650 /* Baitap10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33694A424B622B100FF3650 /* Baitap10ViewController.swift */; };
+		F33694A724B622B100FF3650 /* Baitap10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33694A524B622B100FF3650 /* Baitap10ViewController.xib */; };
+		F33694AB24B6231300FF3650 /* Baitap09ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33694A924B6231300FF3650 /* Baitap09ViewController.swift */; };
+		F33694AC24B6231300FF3650 /* Baitap09ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33694AA24B6231300FF3650 /* Baitap09ViewController.xib */; };
+		F33694AE24B62C0A00FF3650 /* HinhAnh.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33694AD24B62C0A00FF3650 /* HinhAnh.swift */; };
+		F33CA5CF24B9B87000561D86 /* Baitap11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CA5CD24B9B87000561D86 /* Baitap11ViewController.swift */; };
+		F33CA5D024B9B87000561D86 /* Baitap11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33CA5CE24B9B87000561D86 /* Baitap11ViewController.xib */; };
+		F33CA5D424BAD3C500561D86 /* Baitap12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CA5D224BAD3C500561D86 /* Baitap12ViewController.swift */; };
+		F33CA5D524BAD3C500561D86 /* Baitap12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33CA5D324BAD3C500561D86 /* Baitap12ViewController.xib */; };
+		F33CA5D924BAE51E00561D86 /* Baitap13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CA5D724BAE51E00561D86 /* Baitap13ViewController.swift */; };
+		F33CA5DA24BAE51E00561D86 /* Baitap13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33CA5D824BAE51E00561D86 /* Baitap13ViewController.xib */; };
+		F33CA5DF24BB029300561D86 /* Baitap14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33CA5DD24BB029300561D86 /* Baitap14ViewController.swift */; };
+		F33CA5E024BB029300561D86 /* Baitap14ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33CA5DE24BB029300561D86 /* Baitap14ViewController.xib */; };
 		F36F2EE624B40C6B000B825A /* Baitap0501ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2EE424B40C6B000B825A /* Baitap0501ViewController.swift */; };
 		F36F2EE724B40C6B000B825A /* Baitap0501ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2EE524B40C6B000B825A /* Baitap0501ViewController.xib */; };
 		F36F2EEB24B415B0000B825A /* Baitap0502ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2EE924B415B0000B825A /* Baitap0502ViewController.xib */; };
@@ -21,7 +34,7 @@
 		F36F2F0024B45900000B825A /* Baitap0601ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2EFE24B45900000B825A /* Baitap0601ViewController.xib */; };
 		F36F2F0524B45A3F000B825A /* Baitap0602ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2F0324B45A3F000B825A /* Baitap0602ViewController.swift */; };
 		F36F2F0A24B47BE0000B825A /* Baitap0602ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F0924B47BE0000B825A /* Baitap0602ViewController.xib */; };
-		F36F2F0E24B55E44000B825A /* Cái này hỏi lại mutilier.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F0C24B55E44000B825A /* Cái này hỏi lại mutilier.xib */; };
+		F36F2F0E24B55E44000B825A /* Baitap0603ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F0C24B55E44000B825A /* Baitap0603ViewController.xib */; };
 		F36F2F0F24B55E44000B825A /* Baitap0603ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2F0D24B55E44000B825A /* Baitap0603ViewController.swift */; };
 		F36F2F1324B57918000B825A /* Baitap0604ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2F1124B57917000B825A /* Baitap0604ViewController.swift */; };
 		F36F2F1424B57918000B825A /* Baitap0604ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F1224B57918000B825A /* Baitap0604ViewController.xib */; };
@@ -29,8 +42,6 @@
 		F36F2F1924B5950C000B825A /* Baitap0605ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F1724B5950C000B825A /* Baitap0605ViewController.xib */; };
 		F36F2F1D24B5A166000B825A /* Baitap08ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2F1B24B5A166000B825A /* Baitap08ViewController.swift */; };
 		F36F2F1E24B5A166000B825A /* Baitap08ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F1C24B5A166000B825A /* Baitap08ViewController.xib */; };
-		F36F2F2224B5D196000B825A /* Baitap08ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2F2024B5D196000B825A /* Baitap08ViewController.swift */; };
-		F36F2F2324B5D196000B825A /* Baitap08ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36F2F2124B5D196000B825A /* Baitap08ViewController.xib */; };
 		F38C695C24B2CAB6002749C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C695B24B2CAB6002749C4 /* AppDelegate.swift */; };
 		F38C695E24B2CAB6002749C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C695D24B2CAB6002749C4 /* SceneDelegate.swift */; };
 		F38C696024B2CAB6002749C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38C695F24B2CAB6002749C4 /* ViewController.swift */; };
@@ -61,6 +72,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F33694A424B622B100FF3650 /* Baitap10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap10ViewController.swift; sourceTree = "<group>"; };
+		F33694A524B622B100FF3650 /* Baitap10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap10ViewController.xib; sourceTree = "<group>"; };
+		F33694A924B6231300FF3650 /* Baitap09ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap09ViewController.swift; sourceTree = "<group>"; };
+		F33694AA24B6231300FF3650 /* Baitap09ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap09ViewController.xib; sourceTree = "<group>"; };
+		F33694AD24B62C0A00FF3650 /* HinhAnh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinhAnh.swift; sourceTree = "<group>"; };
+		F33CA5CD24B9B87000561D86 /* Baitap11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap11ViewController.swift; sourceTree = "<group>"; };
+		F33CA5CE24B9B87000561D86 /* Baitap11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap11ViewController.xib; sourceTree = "<group>"; };
+		F33CA5D224BAD3C500561D86 /* Baitap12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap12ViewController.swift; sourceTree = "<group>"; };
+		F33CA5D324BAD3C500561D86 /* Baitap12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap12ViewController.xib; sourceTree = "<group>"; };
+		F33CA5D724BAE51E00561D86 /* Baitap13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap13ViewController.swift; sourceTree = "<group>"; };
+		F33CA5D824BAE51E00561D86 /* Baitap13ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap13ViewController.xib; sourceTree = "<group>"; };
+		F33CA5DD24BB029300561D86 /* Baitap14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap14ViewController.swift; sourceTree = "<group>"; };
+		F33CA5DE24BB029300561D86 /* Baitap14ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap14ViewController.xib; sourceTree = "<group>"; };
 		F36F2EE424B40C6B000B825A /* Baitap0501ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap0501ViewController.swift; sourceTree = "<group>"; };
 		F36F2EE524B40C6B000B825A /* Baitap0501ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap0501ViewController.xib; sourceTree = "<group>"; };
 		F36F2EE924B415B0000B825A /* Baitap0502ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap0502ViewController.xib; sourceTree = "<group>"; };
@@ -75,7 +99,7 @@
 		F36F2EFE24B45900000B825A /* Baitap0601ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap0601ViewController.xib; sourceTree = "<group>"; };
 		F36F2F0324B45A3F000B825A /* Baitap0602ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap0602ViewController.swift; sourceTree = "<group>"; };
 		F36F2F0924B47BE0000B825A /* Baitap0602ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap0602ViewController.xib; sourceTree = "<group>"; };
-		F36F2F0C24B55E44000B825A /* Cái này hỏi lại mutilier.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Cái này hỏi lại mutilier.xib"; sourceTree = "<group>"; };
+		F36F2F0C24B55E44000B825A /* Baitap0603ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap0603ViewController.xib; sourceTree = "<group>"; };
 		F36F2F0D24B55E44000B825A /* Baitap0603ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap0603ViewController.swift; sourceTree = "<group>"; };
 		F36F2F1124B57917000B825A /* Baitap0604ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baitap0604ViewController.swift; sourceTree = "<group>"; };
 		F36F2F1224B57918000B825A /* Baitap0604ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap0604ViewController.xib; sourceTree = "<group>"; };
@@ -83,8 +107,6 @@
 		F36F2F1724B5950C000B825A /* Baitap0605ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Baitap0605ViewController.xib; sourceTree = "<group>"; };
 		F36F2F1B24B5A166000B825A /* Baitap08ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap08ViewController.swift; sourceTree = "<group>"; };
 		F36F2F1C24B5A166000B825A /* Baitap08ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap08ViewController.xib; sourceTree = "<group>"; };
-		F36F2F2024B5D196000B825A /* Baitap08ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap08ViewController.swift; sourceTree = "<group>"; };
-		F36F2F2124B5D196000B825A /* Baitap08ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap08ViewController.xib; sourceTree = "<group>"; };
 		F38C695824B2CAB6002749C4 /* baitap07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baitap07.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38C695B24B2CAB6002749C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38C695D24B2CAB6002749C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +149,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F33694A324B6229900FF3650 /* baitap10 */ = {
+			isa = PBXGroup;
+			children = (
+				F33694A424B622B100FF3650 /* Baitap10ViewController.swift */,
+				F33694A524B622B100FF3650 /* Baitap10ViewController.xib */,
+			);
+			path = baitap10;
+			sourceTree = "<group>";
+		};
+		F33694A824B622F900FF3650 /* baitap09 */ = {
+			isa = PBXGroup;
+			children = (
+				F33694A924B6231300FF3650 /* Baitap09ViewController.swift */,
+				F33694AA24B6231300FF3650 /* Baitap09ViewController.xib */,
+				F33694AD24B62C0A00FF3650 /* HinhAnh.swift */,
+			);
+			path = baitap09;
+			sourceTree = "<group>";
+		};
+		F33CA5D124BAD3AB00561D86 /* baitap12 */ = {
+			isa = PBXGroup;
+			children = (
+				F33CA5D224BAD3C500561D86 /* Baitap12ViewController.swift */,
+				F33CA5D324BAD3C500561D86 /* Baitap12ViewController.xib */,
+			);
+			path = baitap12;
+			sourceTree = "<group>";
+		};
+		F33CA5D624BAE50700561D86 /* baitap13 */ = {
+			isa = PBXGroup;
+			children = (
+				F33CA5D724BAE51E00561D86 /* Baitap13ViewController.swift */,
+				F33CA5D824BAE51E00561D86 /* Baitap13ViewController.xib */,
+			);
+			path = baitap13;
+			sourceTree = "<group>";
+		};
+		F33CA5DB24BB027100561D86 /* baitap14 */ = {
+			isa = PBXGroup;
+			children = (
+				F33CA5DD24BB029300561D86 /* Baitap14ViewController.swift */,
+				F33CA5DE24BB029300561D86 /* Baitap14ViewController.xib */,
+			);
+			path = baitap14;
+			sourceTree = "<group>";
+		};
+		F340357924B703A6001FAB55 /* baitap11 */ = {
+			isa = PBXGroup;
+			children = (
+				F33CA5CD24B9B87000561D86 /* Baitap11ViewController.swift */,
+				F33CA5CE24B9B87000561D86 /* Baitap11ViewController.xib */,
+			);
+			path = baitap11;
+			sourceTree = "<group>";
+		};
 		F36F2EE224B40BD0000B825A /* baitap05 */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				F36F2F0D24B55E44000B825A /* Baitap0603ViewController.swift */,
-				F36F2F0C24B55E44000B825A /* Cái này hỏi lại mutilier.xib */,
+				F36F2F0C24B55E44000B825A /* Baitap0603ViewController.xib */,
 			);
 			path = baitap06.3;
 			sourceTree = "<group>";
@@ -250,15 +327,6 @@
 			path = baitap08;
 			sourceTree = "<group>";
 		};
-		F36F2F1F24B5D17D000B825A /* baitap09 */ = {
-			isa = PBXGroup;
-			children = (
-				F36F2F2024B5D196000B825A /* Baitap08ViewController.swift */,
-				F36F2F2124B5D196000B825A /* Baitap08ViewController.xib */,
-			);
-			path = baitap09;
-			sourceTree = "<group>";
-		};
 		F38C694F24B2CAB6002749C4 = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +346,12 @@
 		F38C695A24B2CAB6002749C4 /* baitap07 */ = {
 			isa = PBXGroup;
 			children = (
-				F36F2F1F24B5D17D000B825A /* baitap09 */,
+				F33CA5DB24BB027100561D86 /* baitap14 */,
+				F33CA5D624BAE50700561D86 /* baitap13 */,
+				F33CA5D124BAD3AB00561D86 /* baitap12 */,
+				F340357924B703A6001FAB55 /* baitap11 */,
+				F33694A824B622F900FF3650 /* baitap09 */,
+				F33694A324B6229900FF3650 /* baitap10 */,
 				F36F2F1A24B59DEA000B825A /* baitap08 */,
 				F36F2F0824B47B97000B825A /* baitap06 */,
 				F36F2EE224B40BD0000B825A /* baitap05 */,
@@ -485,13 +558,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38C69AD24B369ED002749C4 /* Baitap0404ViewController.xib in Resources */,
-				F36F2F0E24B55E44000B825A /* Cái này hỏi lại mutilier.xib in Resources */,
+				F36F2F0E24B55E44000B825A /* Baitap0603ViewController.xib in Resources */,
 				F36F2EEB24B415B0000B825A /* Baitap0502ViewController.xib in Resources */,
 				F36F2F0A24B47BE0000B825A /* Baitap0602ViewController.xib in Resources */,
+				F33CA5D024B9B87000561D86 /* Baitap11ViewController.xib in Resources */,
+				F33CA5DA24BAE51E00561D86 /* Baitap13ViewController.xib in Resources */,
 				F38C69A324B3569D002749C4 /* Baitap0402ViewController.xib in Resources */,
 				F38C698D24B2E3DC002749C4 /* Baitap0303ViewController.xib in Resources */,
 				F36F2EF124B44FAE000B825A /* Baitap0503ViewController.xib in Resources */,
 				F36F2EF624B4541E000B825A /* Baitap0504ViewController.xib in Resources */,
+				F33694A724B622B100FF3650 /* Baitap10ViewController.xib in Resources */,
 				F36F2EE724B40C6B000B825A /* Baitap0501ViewController.xib in Resources */,
 				F38C698624B2D66F002749C4 /* Baitap0301ViewController.xib in Resources */,
 				F38C69A824B3675B002749C4 /* Baitap0403ViewController.xib in Resources */,
@@ -499,8 +575,9 @@
 				F38C697324B2CB28002749C4 /* Baitap01ViewController.xib in Resources */,
 				F36F2F0024B45900000B825A /* Baitap0601ViewController.xib in Resources */,
 				F38C697924B2CF73002749C4 /* Baitap021ViewController.xib in Resources */,
+				F33694AC24B6231300FF3650 /* Baitap09ViewController.xib in Resources */,
 				F36F2F1424B57918000B825A /* Baitap0604ViewController.xib in Resources */,
-				F36F2F2324B5D196000B825A /* Baitap08ViewController.xib in Resources */,
+				F33CA5E024BB029300561D86 /* Baitap14ViewController.xib in Resources */,
 				F38C69B124B36B0F002749C4 /* Baitap0405ViewController.xib in Resources */,
 				F38C699E24B35126002749C4 /* Baitap0401ViewController.xib in Resources */,
 				F38C698124B2D2E4002749C4 /* Baitap022ViewController.xib in Resources */,
@@ -508,6 +585,7 @@
 				F38C696824B2CAB8002749C4 /* LaunchScreen.storyboard in Resources */,
 				F38C696524B2CAB8002749C4 /* Assets.xcassets in Resources */,
 				F36F2EFA24B45650000B825A /* Baitap0505ViewController.xib in Resources */,
+				F33CA5D524BAD3C500561D86 /* Baitap12ViewController.xib in Resources */,
 				F38C699624B2E52E002749C4 /* Baitap0302ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,8 +599,8 @@
 			files = (
 				F36F2F1824B5950C000B825A /* Baitap0605ViewController.swift in Sources */,
 				F38C697224B2CB28002749C4 /* Baitap01ViewController.swift in Sources */,
+				F33694AE24B62C0A00FF3650 /* HinhAnh.swift in Sources */,
 				F38C697824B2CF73002749C4 /* Baitap021ViewController.swift in Sources */,
-				F36F2F2224B5D196000B825A /* Baitap08ViewController.swift in Sources */,
 				F38C69A224B3569D002749C4 /* Baitap0402ViewController.swift in Sources */,
 				F38C696024B2CAB6002749C4 /* ViewController.swift in Sources */,
 				F38C695C24B2CAB6002749C4 /* AppDelegate.swift in Sources */,
@@ -531,13 +609,19 @@
 				F38C69AC24B369ED002749C4 /* Baitap0404ViewController.swift in Sources */,
 				F36F2F0F24B55E44000B825A /* Baitap0603ViewController.swift in Sources */,
 				F38C699D24B35126002749C4 /* Baitap0401ViewController.swift in Sources */,
+				F33CA5DF24BB029300561D86 /* Baitap14ViewController.swift in Sources */,
 				F38C698024B2D2E4002749C4 /* Baitap022ViewController.swift in Sources */,
 				F38C698C24B2E3DC002749C4 /* Baitap0303ViewController.swift in Sources */,
+				F33694AB24B6231300FF3650 /* Baitap09ViewController.swift in Sources */,
+				F33694A624B622B100FF3650 /* Baitap10ViewController.swift in Sources */,
+				F33CA5CF24B9B87000561D86 /* Baitap11ViewController.swift in Sources */,
 				F36F2EE624B40C6B000B825A /* Baitap0501ViewController.swift in Sources */,
+				F33CA5D924BAE51E00561D86 /* Baitap13ViewController.swift in Sources */,
 				F36F2F0524B45A3F000B825A /* Baitap0602ViewController.swift in Sources */,
 				F38C698524B2D66F002749C4 /* Baitap0301ViewController.swift in Sources */,
 				F38C699524B2E52E002749C4 /* Baitap0302ViewController.swift in Sources */,
 				F36F2F1324B57918000B825A /* Baitap0604ViewController.swift in Sources */,
+				F33CA5D424BAD3C500561D86 /* Baitap12ViewController.swift in Sources */,
 				F36F2EF524B4541E000B825A /* Baitap0504ViewController.swift in Sources */,
 				F36F2EF024B44FAE000B825A /* Baitap0503ViewController.swift in Sources */,
 				F36F2EFF24B45900000B825A /* Baitap0601ViewController.swift in Sources */,
@@ -681,7 +765,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FGMSL24MR;
 				INFOPLIST_FILE = baitap07/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,7 +784,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FGMSL24MR;
 				INFOPLIST_FILE = baitap07/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
