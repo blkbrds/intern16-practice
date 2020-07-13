@@ -21,7 +21,8 @@ class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = buttonBarItem
         messageLabel.isHidden = true
         userNameTextField.delegate = self
-        passWordTextField.delegate = self        
+        passWordTextField.delegate = self
+        
     }
     
     
@@ -44,6 +45,7 @@ class LoginViewController: UIViewController {
                     }
                     messageLabel.isHidden = false
                     messageLabel.text = "Something was wrong"
+
                 }
             }
         }
