@@ -11,7 +11,7 @@ import UIKit
 final class Bai6ViewController: UIViewController {
     
     //MARK: - IBOutlet
-    @IBOutlet private weak var monkeyImage: UIImageView!
+    @IBOutlet private weak var monkeyImageView: UIImageView!
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -28,10 +28,10 @@ final class Bai6ViewController: UIViewController {
         
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
         
-        monkeyImage.isUserInteractionEnabled = true
-        monkeyImage.addGestureRecognizer(pinGesture)
-        monkeyImage.addGestureRecognizer(rotateGesture)
-        monkeyImage.addGestureRecognizer(longPressGesture)
+        monkeyImageView.isUserInteractionEnabled = true
+        monkeyImageView.addGestureRecognizer(pinGesture)
+        monkeyImageView.addGestureRecognizer(rotateGesture)
+        monkeyImageView.addGestureRecognizer(longPressGesture)
     }
     
     @objc private func pinch(gestureRecognizer :UIPinchGestureRecognizer) {
@@ -50,9 +50,9 @@ final class Bai6ViewController: UIViewController {
     }
     
     @objc private func longPress(gestureRecognizer :UILongPressGestureRecognizer) {
-        if let view = gestureRecognizer.view {
+        if let viewLongPress = gestureRecognizer.view {
             UIView.animate(withDuration: 1) {
-                view.transform = CGAffineTransform(rotationAngle: 0)
+                viewLongPress.transform = CGAffineTransform(rotationAngle: 0)
             }
         }
     }

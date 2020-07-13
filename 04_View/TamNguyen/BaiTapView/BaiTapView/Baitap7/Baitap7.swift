@@ -11,7 +11,7 @@ import UIKit
 final class Bai7ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var monkeyLablel: UITextField!
+    @IBOutlet private weak var monkeyTextField: UITextField!
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -21,8 +21,8 @@ final class Bai7ViewController: UIViewController {
     
     //MARK: - Private methods
     private func configView() {
-        monkeyLablel.isHidden = true
-        monkeyLablel.textAlignment = .center
+        monkeyTextField.isHidden = true
+        monkeyTextField.textAlignment = .center
         let singleTap = UITapGestureRecognizer(target: self, action:#selector(singleTapAction))
         singleTap.numberOfTapsRequired = 1
         view.addGestureRecognizer(singleTap)
@@ -34,8 +34,8 @@ final class Bai7ViewController: UIViewController {
     
     //MARK: - Private methods
     @objc private func singleTapAction() {
-        monkeyLablel.isHidden = false
-        monkeyLablel.text = String("Toi la khi")
+        monkeyTextField.isHidden = false
+        monkeyTextField.text = String("Toi la khi")
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
             UIView.animate(withDuration: 3) {
             }
@@ -43,12 +43,12 @@ final class Bai7ViewController: UIViewController {
     }
     
     @objc private func doubleTapAction() {
-        monkeyLablel.isHidden = false
-        monkeyLablel.text = "Khi la toi"
-        self.monkeyLablel.alpha = 1
+        monkeyTextField.isHidden = false
+        monkeyTextField.text = "Khi la toi"
+        self.monkeyTextField.alpha = 1
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
             UIView.animate(withDuration: 3) {
-                self.monkeyLablel.alpha = 0
+                self.monkeyTextField.alpha = 0
             }
         }
     }

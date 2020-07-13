@@ -14,13 +14,13 @@ final class Bai3ViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var resultLabel: UILabel!
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextField()
     }
-
+    
     // MARK: - Private Methods
     private func configTextField() {
         usernameTextField.delegate = self
@@ -33,7 +33,7 @@ final class Bai3ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
-
+    
     private func checkIDAndPassword() {
         if usernameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
             resultLabel.isHidden = true
@@ -45,16 +45,16 @@ final class Bai3ViewController: UIViewController {
             resultLabel.text = "Nhap thieu user va password"
         }
     }
-
+    
     @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
     //MARK: - IBAction
     @IBAction private func loginTouchUpInside(_ sender: UIButton) {
         checkIDAndPassword()
     }
-
+    
     @IBAction private func clearTouchUpInside(_ sender: UIButton) {
         usernameTextField.text = ""
         passwordTextField.text = ""
