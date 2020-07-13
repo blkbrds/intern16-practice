@@ -50,7 +50,7 @@ final class Bai6ViewController: UIViewController {
     }
     
     @objc private func longPress(gestureRecognizer :UILongPressGestureRecognizer) {
-        if let view =  gestureRecognizer.view {
+        if let view = gestureRecognizer.view {
             UIView.animate(withDuration: 1) {
                 view.transform = CGAffineTransform(rotationAngle: 0)
             }
