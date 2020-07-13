@@ -66,7 +66,7 @@
                     <rect key="frame" x="0.0" y="194" width="320" height="374"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWd-NH-kkO" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="70.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-MU-2vR">
                                     <rect key="frame" x="0.0" y="10" width="320" height="20.5"/>
@@ -116,7 +116,7 @@
                                 <constraint firstItem="XCQ-MU-2vR" firstAttribute="leading" secondItem="NWd-NH-kkO" secondAttribute="leading" id="IEA-n8-Yua"/>
                                 <constraint firstItem="JSG-7j-8Xp" firstAttribute="centerX" secondItem="NWd-NH-kkO" secondAttribute="centerX" multiplier="5:3" id="NEy-wh-3Mp"/>
                                 <constraint firstItem="XCQ-MU-2vR" firstAttribute="top" secondItem="NWd-NH-kkO" secondAttribute="top" constant="10" id="ZX4-VE-d4J"/>
-                                <constraint firstItem="anI-C9-nIz" firstAttribute="bottom" secondItem="NWd-NH-kkO" secondAttribute="bottom" constant="20" id="e5t-10-dHq"/>
+                                <constraint firstItem="anI-C9-nIz" firstAttribute="bottom" secondItem="NWd-NH-kkO" secondAttribute="bottom" constant="-20" id="e5t-10-dHq"/>
                                 <constraint firstItem="oaH-r0-YJG" firstAttribute="top" secondItem="XCQ-MU-2vR" secondAttribute="bottom" constant="10" id="gMd-2x-3si"/>
                                 <constraint firstItem="oaH-r0-YJG" firstAttribute="centerX" secondItem="NWd-NH-kkO" secondAttribute="centerX" multiplier="1:3" id="jZn-ES-J8P"/>
                                 <constraint firstItem="JSG-7j-8Xp" firstAttribute="top" secondItem="XCQ-MU-2vR" secondAttribute="bottom" constant="10" id="ljD-ys-EeI"/>
