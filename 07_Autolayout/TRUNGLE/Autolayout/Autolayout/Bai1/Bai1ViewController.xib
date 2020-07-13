@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,24 +14,22 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMY-vo-HWs">
-                    <rect key="frame" x="167" y="408" width="80" height="80"/>
+                    <rect key="frame" x="500" y="365" width="80" height="80"/>
                     <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="EgS-av-Iq4"/>
-                        <constraint firstAttribute="height" constant="80" id="HEY-fi-EIx"/>
+                        <constraint firstAttribute="width" constant="80" id="Civ-EY-9LC"/>
+                        <constraint firstAttribute="height" constant="80" id="Xkh-NO-Yvo"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CMY-vo-HWs" secondAttribute="bottom" constant="374" id="7gc-aV-zED"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CMY-vo-HWs" secondAttribute="trailing" constant="167" id="KGt-h1-dte"/>
-                <constraint firstItem="CMY-vo-HWs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="167" id="Ver-xc-M62"/>
-                <constraint firstItem="CMY-vo-HWs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="364" id="nAv-ac-rie"/>
+                <constraint firstItem="CMY-vo-HWs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="45v-yS-MOO"/>
+                <constraint firstItem="CMY-vo-HWs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KOt-tB-eb7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="154"/>
