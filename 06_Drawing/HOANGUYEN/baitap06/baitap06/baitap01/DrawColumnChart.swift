@@ -34,7 +34,7 @@ final class DrawColumnChart: UIView {
         }
     }
     // MARK: - Private function
-    private func drawFrameChart(){
+    private func drawFrameChart() {
         let dateInWeekList: [String] = ["Mon", "Tue", "Wes", "Thu", "Fri", "Sat", "Sun"]
         let context = UIGraphicsGetCurrentContext()
         context!.move(to: CGPoint(x: bounds.minX + 20, y: bounds.minY + 10))
@@ -51,10 +51,10 @@ final class DrawColumnChart: UIView {
         self.addSubview(valueLabel)
         self.addSubview(zeroLabel)
         var currentX: CGFloat = bounds.minX + 30
-        for i in dateInWeekList {
+        for index in dateInWeekList {
             let dateInWeekLabel: UILabel = UILabel()
             dateInWeekLabel.frame = CGRect(x: currentX, y: bounds.maxY, width: 40, height: 30)
-            dateInWeekLabel.text = i
+            dateInWeekLabel.text = index
             currentX += 50
             addSubview(dateInWeekLabel)
         }
@@ -62,11 +62,11 @@ final class DrawColumnChart: UIView {
     
     private func drawColumn(height: CGFloat, width: CGFloat, space: CGFloat) {
         let context = UIGraphicsGetCurrentContext()
-        context!.move(to: CGPoint(x: bounds.minX + space, y: bounds.maxY))
-        context!.addLine(to: CGPoint(x: bounds.minX + space, y: bounds.maxY - height))
-        context!.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY - height))
-        context!.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY))
-        context!.setFillColor(UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1).cgColor)
+        context?.move(to: CGPoint(x: bounds.minX + space, y: bounds.maxY))
+        context?.addLine(to: CGPoint(x: bounds.minX + space, y: bounds.maxY - height))
+        context?.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY - height))
+        context?.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY))
+        context?.setFillColor(UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1).cgColor)
         context!.fillPath()
     }
     

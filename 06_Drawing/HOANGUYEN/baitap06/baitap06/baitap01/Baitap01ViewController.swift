@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Baitap01ViewController: UIViewController {
+final class Baitap01ViewController: UIViewController {
     
     // MARK: - Properties
     private let values: [CGFloat] = [41, 30, 57, 84, 90, 46, 66]
@@ -16,6 +16,11 @@ class Baitap01ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configChart()
+    }
+    
+    // MARK: - Private Function
+    private func configChart() {
         let columnChartView = DrawColumnChart()
         columnChartView.frame = CGRect(x: 10, y: 50, width: view.bounds.width - 20, height: view.bounds.height - 100)
         columnChartView.backgroundColor = .white

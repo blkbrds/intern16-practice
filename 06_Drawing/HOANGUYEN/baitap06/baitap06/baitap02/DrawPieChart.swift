@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawPieChart: UIView {
+final class DrawPieChart: UIView {
     
     // MARK: - Properties
     private var transValue: [CGFloat] = []
@@ -35,6 +35,7 @@ class DrawPieChart: UIView {
         }
         drawPieWhite()
     }
+    
     // MARK: - Public Function
     func transform(values: [CGFloat]) {
         for value in values {
