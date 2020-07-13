@@ -1,72 +1,109 @@
-import Foundation
-class Thu {
-    var isDi: Bool
+protocol DongVat: class {
+    func ten() -> String
+}
+
+protocol Thu: DongVat {
+    var isDi: Bool { get set }
+}
+
+protocol Chim: DongVat {
+    var isBay: Bool { get set }
+}
+
+protocol Ca: DongVat {
+    var isBoi: Bool { get set }
+}
+
+class CaChuon: Ca, Chim {
+    var isBoi: Bool = true
+    var isBay: Bool = true
     
-    init(isDi: Bool) {
-        self.isDi = isDi
-    }
-    
-    func getName() -> String {
-        return ""
+    func ten() -> String {
+        return "Ca Chuon"
     }
 }
 
-class Chim {
-    var isBay: Bool
+class Bo: Thu {
+    var isDi: Bool = true
     
-    init(isBay: Bool) {
-        self.isBay = isBay
-    }
-    
-    func getName() -> String {
-        return ""
+    func ten() -> String {
+        return "Bo"
     }
 }
 
-class Ca {
-    var isBoi: Bool
+class Ga: Chim {
+    var isBay: Bool = true
     
-    init(isBoi: Bool) {
-        self.isBoi = isBoi
-    }
-    
-    func getName() -> String {
-        return ""
+    func ten() -> String {
+        return "Ga"
     }
 }
 
-
-
-
-
-@objc protocol P {
-    func show()
-    func add(a: Int, b: Int) -> Int
-    @objc optional func sum(array: [Int]) -> Int
-}
-
-class C {
-    var a: Int
-    var b: Int
-    var result: Int = 0
+class Vit: Chim, Thu, Ca {
+    var isBay: Bool = true
+    var isDi: Bool = true
+    var isBoi: Bool = true
     
-    init(a: Int, b: Int) {
-        self.a = a
-        self.b = b
+    func ten() -> String {
+        return "Vit"
     }
 }
 
-extension C: P {
-    func show() {
-        print("result: \(result)")
-    }
+class CaMap: Ca {
+    var isBoi: Bool = true
     
-    func add(a: Int, b: Int) -> Int {
-        result = a + b
-        return a + b
+    func ten() -> String {
+        return "Ca Map"
     }
 }
-let c = C(a: 5, b: 10)
 
-c.add(a: 15, b: 20)
-c.show()
+class Heo: Thu {
+    var isDi: Bool = true
+    
+    func ten() -> String {
+        return "Heo"
+    }
+}
+
+class HaiCau: Thu, Ca {
+    var isDi: Bool = true
+    var isBoi: Bool = true
+    
+    func ten() -> String {
+        return "Hai Cau"
+    }
+}
+
+class Doi: Thu, Chim {
+    var isDi: Bool = true
+    var isBay: Bool = true
+    
+    func ten() -> String {
+        return "Doi"
+    }
+}
+
+class CaSau: Thu, Ca {
+    var isDi: Bool = true
+    var isBoi: Bool = true
+    
+    func ten() -> String {
+        return "Ca Sau"
+    }
+}
+
+let caChuon = CaChuon()
+let bo = Bo()
+let ga = Ga()
+let vit = Vit()
+let caMap = CaMap()
+let heo = Heo()
+let haiCau = HaiCau()
+let doi = Doi()
+let caSau = CaSau()
+
+let dongVat = [caChuon, bo, ga, vit, caMap, heo, haiCau, doi, caSau] as [Any]
+
+for i in 0..<dongVat.count {
+    print(dongVat[i])
+}
