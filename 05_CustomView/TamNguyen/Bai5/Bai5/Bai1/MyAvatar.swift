@@ -1,18 +1,18 @@
 import UIKit
 
 protocol MyAvatarDelegate: class {
-    func viewPerson(_ person: Avatar, str: String)
+    func viewPerson(_ person: Avatar, string: String)
 }
 
-//MARK: - Properties
 class Avatar: UIView {
+    
+    //MARK: - Properties
     var userName = {() -> UILabel in
         let name = UILabel()
         name.textAlignment = .center
         name.backgroundColor = .red
         return name
     }()
-    
     var imageAvatar = {() -> UIImageView in
         let img = UIImageView()
         img.image = UIImage(named: "download")
@@ -20,12 +20,11 @@ class Avatar: UIView {
         img.layer.masksToBounds = true
         return img
     }()
-    
     weak var delegate: MyAvatarDelegate?
     
     //MARK: - Private methods
     @objc private func tapPerson(_ sender: Any) {
-        delegate?.viewPerson(self, str: userName.text!)
+        delegate?.viewPerson(self, string: userName.text!)
     }
     
     //MARK: - Override function

@@ -36,10 +36,8 @@ final class MySliderView: UIView {
     // MARK: - Override
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        
-        let touch = touches.first
-        guard let location = touch?.location(in: grayViewImage) else { return }
-        
+        let touchMoved = touches.first
+        guard let location = touchMoved?.location(in: grayViewImage) else { return }
         if location.y < grayViewImage.bounds.minY {
             percentLabel.center.y = grayViewImage.bounds.minY
         } else if location.y > grayViewImage.bounds.maxY {
@@ -49,17 +47,17 @@ final class MySliderView: UIView {
         }
         blueViewImage.frame = CGRect(x: blueViewImage.frame.origin.x, y: percentLabel.center.y, width: blueViewImage.frame.width, height: grayViewImage.frame.height - percentLabel.center.y)
         
-        let number = Int((blueViewImage.frame.height / grayViewImage.frame.height) * 100)
-        percentLabel.text = String(number)
-        delegate?.view(view: self, needPerformAction: .updatePercent(percent: number))
+        let numberThumb = Int((blueViewImage.frame.height / grayViewImage.frame.height) * 100)
+        percentLabel.text = String(numberThumb)
+        delegate?.view(view: self, needPerformAction: .updatePercent(percent: numberThumb))
     }
     
     func updatePercent() {
-        guard let temp = value else { return }
-        let newHeight = (grayViewImage.frame.height * CGFloat(temp)) / 100
+        guard let tempValue = value else { return }
+        let newHeight = (grayViewImage.frame.height * CGFloat(tempValue)) / 100
         let newY = grayViewImage.frame.height - newHeight
         blueViewImage.frame = CGRect(x: blueViewImage.frame.origin.x, y: newY, width: blueViewImage.frame.width, height: newHeight)
         percentLabel.center.y = newY
-        percentLabel.text = String(temp)
+        percentLabel.text = String(tempValue)
     }
 }

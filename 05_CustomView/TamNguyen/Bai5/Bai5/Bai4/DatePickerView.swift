@@ -17,10 +17,9 @@ class DatePickerView: UIView {
     
     
     //MARK: - IBOulet
-    
-    @IBOutlet weak var dateTimePicker: UIDatePicker!
-    @IBOutlet weak var containButtonView: UIView!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet private weak var dateTimePicker: UIDatePicker!
+    @IBOutlet private weak var containButtonView: UIView!
+    @IBOutlet private weak var doneButton: UIButton!
     
     // MARK: - Properties
     weak var delegate: DatePickerViewDelegate?

@@ -95,7 +95,6 @@ final class CustomView: UIView {
         case .BottomCenter:
             notifyLabel?.center.x = featureWidth / 2
             notifyLabel?.center.y = featureHeight
-            
         }
     }
     

@@ -29,6 +29,7 @@ final class Bai2ViewController: UIViewController {
         view.addSubview(mySliderView)
         valueTextField.delegate = self
     }
+    
     private func updatePercent(num : String){
         mySliderView.value = (Int(num))
         mySliderView.updatePercent()
