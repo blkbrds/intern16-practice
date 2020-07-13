@@ -22,10 +22,8 @@ class LoginViewController: UIViewController {
         messageLabel.isHidden = true
         userNameTextField.delegate = self
         passWordTextField.delegate = self
-        
     }
-    
-    
+        
     override func viewDidDisappear(_ animated: Bool) {
         userNameTextField.text = ""
         passWordTextField.text = ""
@@ -45,7 +43,6 @@ class LoginViewController: UIViewController {
                     }
                     messageLabel.isHidden = false
                     messageLabel.text = "Something was wrong"
-
                 }
             }
         }

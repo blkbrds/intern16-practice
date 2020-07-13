@@ -80,12 +80,9 @@ class ProfilesViewController: UIViewController {
 }
 
 extension ProfilesViewController: MyAvatarDelegate {
-
-    
     func pushViewController(_ personView: MyAvatar, _ profile: String) {
         let profileViewController = DetailProfileViewController()
         profileViewController.userName = profile
-        navigationController?.pushViewController(profileViewController, animated: true)
-        
+        navigationController?.pushViewController(profileViewController, animated: true)        
     }
 }

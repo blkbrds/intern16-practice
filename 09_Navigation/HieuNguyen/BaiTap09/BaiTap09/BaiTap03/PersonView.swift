@@ -28,10 +28,12 @@ class MyAvatar: UIView {
     private func setupAvatarView(profileName: String) {
         let profileView = UIView()
         profileView.frame = bounds
+        
         let avatarImageView = UIImageView(image: UIImage(named: "defaultProfileImage"))
         avatarImageView.contentMode = .scaleAspectFit
         profileView.addSubview(avatarImageView)
         avatarImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
         let nameLabel = UILabel()
         nameLabel.text = profileName
         nameLabel.font = UIFont(name: "Menlo", size: 16)
@@ -42,6 +44,7 @@ class MyAvatar: UIView {
         nameLabel.textAlignment = .center
         nameLabel.isUserInteractionEnabled = true
         profileView.addSubview(nameLabel)
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(printInfo(_:)))
         tapGesture.name = profileName
         profileView.addGestureRecognizer(tapGesture)

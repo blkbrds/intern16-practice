@@ -12,12 +12,16 @@ class BaiTap03VC: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    private func setupView() {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search"
         navigationItem.titleView = searchBar
+        
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
         navigationItem.rightBarButtonItem = cancelButton
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
     }
-
 }

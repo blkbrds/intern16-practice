@@ -13,9 +13,12 @@ class BaiTap01VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Gradient NavigationBar"
+        setupView()
+    }
+    
+    private func setupView() {
         let image = UIImage(named: "Gradient")
         navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-
 }

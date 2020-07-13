@@ -13,6 +13,10 @@ class BaiTap04VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Bar Button Test"
+        setupView()
+    }
+    
+    private func setupView() {
         let image:UIImage = UIImage(systemName: "questionmark.square")!
         let userButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(goToBaitap5))
         navigationItem.rightBarButtonItem = userButton
