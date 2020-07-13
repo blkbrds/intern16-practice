@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Operand {
+final class Operand {
     
     var operands: [Int]
-    var result:Int = 0
+    var result: Int = 0
     
     init(operands: [Int]) {
         self.operands = operands

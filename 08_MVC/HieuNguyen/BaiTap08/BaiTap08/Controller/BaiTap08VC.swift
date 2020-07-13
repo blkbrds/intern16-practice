@@ -8,17 +8,17 @@
 
 import UIKit
 
-class BaiTap08VC: UIViewController {
+final class BaiTap08VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?[0] as? CalculatorView
-        calculator?.frame = CGRect(x: 75, y: 100, width: 300, height: 400)
-        self.view.addSubview(calculator!)
+        setupView()
     }
     
-
-
-
+    private func setupView() {
+        view.backgroundColor = .white
+        guard let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?[0] as? CalculatorView else { return }
+        calculator.frame = CGRect(x: 75, y: 100, width: 300, height: 400)
+        view.addSubview(calculator)
+    }
 }

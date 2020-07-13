@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Calculator {
+final class Calculator {
     
     private static var usedCalculator: Calculator = {
         let calculator = Calculator()
@@ -19,22 +19,24 @@ class Calculator {
         return usedCalculator
     }
     
-    private init() {
-        
-    }
-    
-    func operatorCal(a: Int, b: Int, operatorCurrent: Int) -> Int{
+    private init() { }
+
+    func operatorCal(a: Int, b: Int, operatorCurrent: Int) -> Int? {
         switch operatorCurrent {
-        case -4:
-            return a + b
-        case -3:
-            return a - b
-        case -2:
-            return a * b
-        case -1:
-            return a / b
-        default:
-            return 0
-        }
+            case -4:
+                return a + b
+            case -3:
+                return a - b
+            case -2:
+                return a * b
+            case -1:
+                if b == 0 {
+                    return nil
+                } else {
+                    return a / b
+                }
+            default:
+                return 0
+            }
     }
 }

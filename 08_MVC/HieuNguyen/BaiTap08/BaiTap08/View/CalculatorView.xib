@@ -22,7 +22,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="K8s-6U-nfC"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="K8s-6U-nfC"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyl-iE-Eck">
@@ -34,7 +34,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="FJH-mE-FTe"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="FJH-mE-FTe"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDQ-sX-sQq">
@@ -46,7 +46,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="n2Q-xx-zdq"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="n2Q-xx-zdq"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="-4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-zS-gPF">
@@ -58,7 +58,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
-                        <action selector="calculatorWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="UpV-Hz-O9d"/>
+                        <action selector="calculatorButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="UpV-Hz-O9d"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-XP-nIa">
@@ -70,7 +70,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="DhR-oH-HZW"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="DhR-oH-HZW"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GS-DT-Oi3">
@@ -82,7 +82,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="1CH-Cc-xgM"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="1CH-Cc-xgM"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-MH-hQQ">
@@ -94,7 +94,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="oki-9c-RPI"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="oki-9c-RPI"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="-3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKS-TO-Gdm">
@@ -106,7 +106,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
-                        <action selector="calculatorWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="yRP-hj-TMn"/>
+                        <action selector="calculatorButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="yRP-hj-TMn"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkP-Uf-NYy">
@@ -118,7 +118,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="NeK-P2-L57"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="NeK-P2-L57"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epw-4t-4VP">
@@ -130,7 +130,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yb1-fZ-KVc"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yb1-fZ-KVc"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-b4-ypt">
@@ -142,7 +142,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="IiT-Vr-Buu"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="IiT-Vr-Buu"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="-2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMM-62-2hw">
@@ -154,7 +154,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
-                        <action selector="calculatorWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="nbB-dn-ZcI"/>
+                        <action selector="calculatorButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="nbB-dn-ZcI"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqn-nH-cDl">
@@ -166,7 +166,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="calculatorWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kwo-oU-9Qd"/>
+                        <action selector="calculatorButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kwo-oU-9Qd"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJT-z5-xXj">
@@ -178,7 +178,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="operandWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="agS-aA-1p5"/>
+                        <action selector="operandButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="agS-aA-1p5"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kes-sd-1LU">
@@ -190,7 +190,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="calculatorWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="z5Y-5e-4Xo"/>
+                        <action selector="calculatorButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="z5Y-5e-4Xo"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="-1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-wn-6bF">
@@ -202,7 +202,7 @@
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
-                        <action selector="calculatorWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="LZl-mz-E8w"/>
+                        <action selector="calculatorButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="LZl-mz-E8w"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-ji-7Cq">

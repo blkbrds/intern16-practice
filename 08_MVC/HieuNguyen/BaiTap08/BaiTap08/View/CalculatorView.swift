@@ -8,76 +8,93 @@
 
 import UIKit
 
-class CalculatorView: UIView {
-    
+final class CalculatorView: UIView {
+
+    @IBOutlet private weak var resultView: UIView!
+    @IBOutlet private weak var resultLabel: UILabel!
+
     var operand: Operand = Operand(operands: [])
     var operatorCurrent: Int?
-    var newNumber: Bool = true
-    var newOperator: Bool = false
-    @IBOutlet weak var resultView: UIView!
-    @IBOutlet weak var resultLabel: UILabel!
-    
-    @IBAction func operandWasPressed(_ sender: Any) {
-        let number: Int = (sender as AnyObject).tag as Int
-        if resultLabel.text == "0" || !newNumber {
-            resultLabel.text = String(number)
-            newNumber = true
-        } else if newNumber {
-            resultLabel.text = resultLabel.text! + String(number)
-        }
-        newOperator = false
-    }
-
-    @IBAction func calculatorWasPressed(_ sender: Any) {
-        let number = (sender as AnyObject).tag
-        switch (sender as AnyObject).tag {
-            case 10:
-                // result
-                if !newOperator {
-                    operand.operands.append(Int(resultLabel.text!)!)
-                    newNumber = false
-                    if operatorCurrent != nil {
-                        let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operand.operands.last!, operatorCurrent: operatorCurrent!)
-                        resultLabel.text = String(result)
-                        operand.result = result
-                        newOperator = true
-                    } else {
-                        operand.result = Int(resultLabel.text!)!
-                    }
-                }
-            case 11:
-                // AC
-                print("123")
-                if resultLabel.text!.count > 0 {
-                    resultLabel.text!.removeLast()
-                }
-                if resultLabel.text!.count == 0 {
-                    resultLabel.text = "0"
-                }
-            case number:
-                // add
-                if !newOperator {
-                    operand.operands.append(Int(resultLabel.text!)!)
-                    newNumber = false
-                    if operatorCurrent != nil {
-                        let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operand.operands.last!, operatorCurrent: operatorCurrent!)
-                        resultLabel.text = String(result)
-                        operand.result = result
-                        newOperator = true
-                    } else {
-                        operand.result = Int(resultLabel.text!)!
-                    }
-                }
-                operatorCurrent = number
-            case .none, .some(_):
-                return
-            }
-    }
+    var isNewNumber: Bool = true
+    var isNewOperator: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         resultView.layer.borderWidth = 1
         resultView.layer.borderColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
         resultLabel.text = "0"
+    }
+    
+    @IBAction private func operandButtonTouchUpInside(_ sender: Any) {
+        let number: Int = (sender as AnyObject).tag as Int
+        if resultLabel.text == "0" || !isNewNumber {
+            resultLabel.text = String(number)
+            isNewNumber = true
+        } else if isNewNumber, let result = resultLabel.text {
+            resultLabel.text = result + String(number)
+        }
+        isNewOperator = false
+    }
+
+    @IBAction private func calculatorButtonTouchUpInside(_ sender: Any) {
+        let number = (sender as AnyObject).tag
+        if var resultString = resultLabel.text, let resultInt = Int(resultString),let operands: [Int] = operand.operands {
+            switch number {
+                case 10:
+                    // ==
+                    if !isNewOperator {
+                        operand.operands.append(resultInt)
+                        isNewNumber = false
+                        isNewOperator = true
+                        if operatorCurrent != nil {
+                            guard let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operand.operands.last!, operatorCurrent: operatorCurrent!) else {
+                                resultLabel.text = "Error"
+                                operand.result = 0
+                                return
+                                
+                            }
+                            resultLabel.text = String(result)
+                            operand.result = result
+                        } else {
+                            operand.result = resultInt
+                        }
+                    }
+                    return
+                case 11:
+                    // AC
+                    if resultString.count > 1 {
+                        resultString.removeLast()
+                        resultLabel.text = resultString
+                        operand.result = resultInt
+                    } else {
+                        resultLabel.text = "0"
+                        operand.result = 0
+                    }
+                    return
+                case number:
+                    // add
+                    if !isNewOperator {
+                        operand.operands.append(resultInt)
+                        print(operand.operands)
+                        print(isNewOperator)
+                        isNewNumber = false
+                        isNewOperator = true
+                        if operatorCurrent != nil {
+                            guard let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operand.operands.last!, operatorCurrent: operatorCurrent!) else {
+                            resultLabel.text = "Error"
+                            operand.result = 0
+                                return }
+                            resultLabel.text = String(result)
+                            operand.result = result
+                        } else {
+                            operand.result = resultInt
+                        }
+                    }
+                    operatorCurrent = number
+                    return
+                case .none, .some(_):
+                    return
+                }
+        }
     }
 }
