@@ -21,9 +21,10 @@ class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = buttonBarItem
         messageLabel.isHidden = true
         userNameTextField.delegate = self
-        passWordTextField.delegate = self
+        passWordTextField.delegate = self        
     }
-        
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
         userNameTextField.text = ""
         passWordTextField.text = ""
