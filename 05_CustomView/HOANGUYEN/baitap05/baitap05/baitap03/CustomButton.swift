@@ -9,7 +9,8 @@
 import UIKit
 
 
-class CustomButton: UIView {
+final class CustomButton: UIView {
+    
     // MARK: - Properties
     enum locationBadge {
         case topLeft
@@ -22,25 +23,25 @@ class CustomButton: UIView {
     var padding: CGFloat = 10
     var badge: Int = 0
     var button: UIButton = {
-        let btn: UIButton = UIButton()
-        btn.layer.cornerRadius = 10
-        btn.layer.borderWidth = 1
-        btn.layer.backgroundColor = UIColor.systemYellow.cgColor
-        btn.layer.borderColor = UIColor.black.cgColor
-        btn.frame.origin = CGPoint(x: 0, y: 0)
-        return btn
+        let button: UIButton = UIButton()
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 1
+        button.layer.backgroundColor = UIColor.systemYellow.cgColor
+        button.layer.borderColor = UIColor.black.cgColor
+        button.frame.origin = CGPoint(x: 0, y: 0)
+        return button
     }()
     var badgeNumberLabel: UILabel = {
-        let lbl: UILabel = UILabel()
-        lbl.frame.size = CGSize(width: 20, height: 20)
-        lbl.layer.borderWidth = 1
-        lbl.layer.cornerRadius = 10
-        lbl.textAlignment = .center
-        lbl.textColor = .white
-        lbl.backgroundColor = UIColor.red
-        lbl.clipsToBounds = true
-        lbl.layer.borderColor = UIColor.black.cgColor
-        return lbl
+        let label: UILabel = UILabel()
+        label.frame.size = CGSize(width: 20, height: 20)
+        label.layer.borderWidth = 1
+        label.layer.cornerRadius = 10
+        label.textAlignment = .center
+        label.textColor = .white
+        label.backgroundColor = UIColor.red
+        label.clipsToBounds = true
+        label.layer.borderColor = UIColor.black.cgColor
+        return label
     }()
     
     // MARK: - Life cycle
