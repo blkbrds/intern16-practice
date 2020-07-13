@@ -8,15 +8,24 @@
 
 import UIKit
 
+protocol DatePickerViewDelegate: class {
+    func setData(_ view: DatePickerView, needPerformAction Action: DatePickerView.Action)
+}
+
 class DatePickerView: UIView {
 
     weak var delegate: DatePickerViewDelegate?
+    var dateValue: String?
+    let formatter = DateFormatter()
+    
+    enum Action {
+        case setDataPicker(data: String)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupDatePicker()
     }
-    var dateValue:String?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -47,23 +56,21 @@ class DatePickerView: UIView {
         addSubview(doneButton)
         
     }
+
     @objc func getDateChange(sender:UIDatePicker) {
-        let formatter = DateFormatter()
         formatter.calendar = sender.calendar
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         let dateString = formatter.string(from: sender.date)
         self.dateValue = dateString
     }
-    @objc func getDate(){
+
+    @objc func getDate() {
         if let date = dateValue {
-            delegate?.setData(self, forTf: date)
+            delegate?.setData(self, needPerformAction: .setDataPicker(data: date))
             UIView.animate(withDuration: 0.5) {
                 self.frame.origin.y = UIScreen.main.bounds.size.height
             }
         }
     }
-}
-protocol DatePickerViewDelegate: class {
-    func setData(_ view: DatePickerView,forTf data: String)
 }

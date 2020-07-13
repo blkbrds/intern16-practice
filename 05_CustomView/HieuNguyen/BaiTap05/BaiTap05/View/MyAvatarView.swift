@@ -1,5 +1,5 @@
 //
-//  PersonView.swift
+//  MyAvatarView.swift
 //  BaiTap05
 //
 //  Created by PCI0020 on 6/30/20.
@@ -8,32 +8,43 @@
 
 import UIKit
 
-class MyAvatar: UIView {
+protocol MyAvatarDelegate: class {
+    func view(_ view: MyAvatarView, needPerformAction action: MyAvatarView.Action)
+}
+
+class MyAvatarView: UIView {
     
     weak var delegate: MyAvatarDelegate?
+    private var name: String = ""
+    
+    enum Action {
+        case selectAvatar(name: String)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect,index: Int) {
+    convenience init(frame: CGRect, name: String, image: UIImage) {
         self.init(frame: frame)
-        setupAvatarView(index: index)
+        self.name = name
+        setupAvatarView(name: name, image: image)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupAvatarView(index: Int) {
+    private func setupAvatarView(name: String, image: UIImage) {
         let profileView = UIView()
         profileView.frame = bounds
-        let avatarImageView = UIImageView(image: UIImage(named: "defaultProfileImage"))
+        let avatarImageView = UIImageView(image: image)
         avatarImageView.contentMode = .scaleAspectFit
         profileView.addSubview(avatarImageView)
         avatarImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+
         let nameLabel = UILabel()
-        nameLabel.text = "Name \(index)"
+        nameLabel.text = name
         nameLabel.font = UIFont(name: "Menlo", size: 16)
         nameLabel.frame = CGRect(x: 0, y: 100, width: 100, height: 30)
         nameLabel.minimumScaleFactor = 0.5
@@ -42,20 +53,14 @@ class MyAvatar: UIView {
         nameLabel.textAlignment = .center
         nameLabel.isUserInteractionEnabled = true
         profileView.addSubview(nameLabel)
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(printInfo(_:)))
-        tapGesture.name = String(index)
         profileView.addGestureRecognizer(tapGesture)
         profileView.isUserInteractionEnabled = true
         addSubview(profileView)
     }
 
     @objc private func printInfo(_ gesture: UITapGestureRecognizer) {
-        if let name = gesture.name {
-            delegate?.setData(self, name)
-        }
+        delegate?.view(self, needPerformAction: .selectAvatar(name: self.name))
     }
-}
-
-protocol MyAvatarDelegate: class {
-    func setData(_ personView: MyAvatar,_ index: String)
 }

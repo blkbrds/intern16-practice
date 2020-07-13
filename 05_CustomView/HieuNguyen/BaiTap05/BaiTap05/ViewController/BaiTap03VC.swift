@@ -22,18 +22,20 @@ class BaiTap03VC: UIViewController {
         valueTextfield.delegate = self
         view.addSubview(sliderView)
     }
-   /// 123123
-    
 }
+
 extension BaiTap03VC: SliderViewDelegate {
-    func sendValue(_ view: UIView, _ value: Int) {
-        valueTextfield.text = String(value)
+    func sendValue(_ view: UIView, needPerformAction action: SliderView.Action) {
+        switch action {
+        case .getSliderValue(let numberValue):
+            valueTextfield.text = String(numberValue)
+        }
     }
 }
+
 extension BaiTap03VC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         valueSlider = Int(valueTextfield.text!)!
-        
         if valueSlider > 100 || valueSlider < 0 {
             valueTextfield.text = ""
             return true
@@ -41,8 +43,6 @@ extension BaiTap03VC: UITextFieldDelegate {
         sliderView.thumbSlider.center.y = sliderView.backgroundSlider.frame.size.height * (100 - CGFloat(valueSlider)) / 100
         sliderView.valueSlider.frame.size.height = sliderView.thumbSlider.center.y
         sliderView.numberLabel.text = String(valueSlider)
-        print( sliderView.thumbSlider.frame.origin.y )
-        
         valueTextfield.endEditing(true)
         return true
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class BadgeButton: UIButton {
+
     enum PositionBadge {
         case topLeft
         case topRight
@@ -56,6 +57,10 @@ class BadgeButton: UIButton {
         clipsToBounds = false
         setupBadgeView(position: position, number: pointNumber)
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     func setupBadgeView(position: PositionBadge, number: Int) {
         if number == 0 { return }
@@ -80,9 +85,5 @@ class BadgeButton: UIButton {
         numberLabel.font = UIFont.systemFont(ofSize: 17)
         badgeView.addSubview(numberLabel)
         numberLabel.frame = badgeView.bounds
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

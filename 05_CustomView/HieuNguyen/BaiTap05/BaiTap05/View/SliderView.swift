@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SliderViewDelegate: class {
+    func sendValue(_ view: UIView, needPerformAction action: SliderView.Action)
+}
+
 class SliderView: UIView {
 
     weak var delegate: SliderViewDelegate?
@@ -16,6 +20,11 @@ class SliderView: UIView {
     let backgroundSlider = UIImageView()
     let numberLabel = UILabel()
     var numberValue: CGFloat = 50
+    
+    enum Action {
+        case getSliderValue(numberValue: Int)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -30,7 +39,6 @@ class SliderView: UIView {
     }
 
     func setupSlider(value: Int) {
-        print(bounds)
         backgroundSlider.image = UIImage(named: "backgroundSlider")
         backgroundSlider.contentMode = .top
         backgroundSlider.frame = bounds
@@ -57,6 +65,7 @@ class SliderView: UIView {
         numberLabel.textAlignment = .center
         thumbSlider.addSubview(numberLabel)
     }
+
     @objc func handleSlider(_ tapGesture: UIPanGestureRecognizer) {
         let sliderY = self.bounds.origin.y
         let sliderHeight = self.bounds.height
@@ -72,13 +81,10 @@ class SliderView: UIView {
                     numberValue = ((sliderHeight - heightValue) / sliderHeight) * 100
                     numberValue = CGFloat(round(numberValue))
                     numberLabel.text = "\(Int(numberValue))"
-                    delegate?.sendValue(self, Int(numberValue))
+                    delegate?.sendValue(self, needPerformAction: .getSliderValue(numberValue: Int(numberValue)))
                 }
             }
         }
-
     }
 }
-protocol SliderViewDelegate: class {
-    func sendValue(_ view: UIView, _ value: Int)
-}
+
