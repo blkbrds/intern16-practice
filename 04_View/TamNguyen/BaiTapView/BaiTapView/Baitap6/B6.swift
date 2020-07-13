@@ -19,7 +19,7 @@ final class Bai6ViewController: UIViewController {
         createGesture()
     }
     
-    //MARK: - Private Methods›
+    //MARK: - Private Method
     private func createGesture() {
         let pinGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch))
         
