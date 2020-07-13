@@ -7,9 +7,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai3" customModule="TAMNGUYEN" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai3" customModule="BaiTapView" customModuleProvider="target">
             <connections>
-                <outlet property="label" destination="Dk0-Uy-RXp" id="DdM-6V-2kX"/>
                 <outlet property="passwordTextField" destination="VAf-JB-mEE" id="K7B-Hs-LPM"/>
                 <outlet property="usernameTextField" destination="8O8-AX-qey" id="8sl-YJ-dMO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -48,8 +47,8 @@
                         <action selector="clearTouchUpInside:" destination="-1" eventType="touchUpInside" id="zTi-4W-6Sy"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dk0-Uy-RXp">
-                    <rect key="frame" x="104" y="239" width="207" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-Mf-pmE">
+                    <rect key="frame" x="72" y="241" width="251" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>

@@ -11,20 +11,15 @@ import UIKit
 final class Bai4ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
-    @IBOutlet weak var redLabel: UILabel!
-    @IBOutlet weak var greenLabel: UILabel!
-    @IBOutlet weak var blueLabel: UILabel!
-        
-    // MARK: - Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    @IBOutlet private weak var redSlider: UISlider!
+    @IBOutlet private weak var greenSlider: UISlider!
+    @IBOutlet private weak var blueSlider: UISlider!
+    @IBOutlet private weak var redLabel: UILabel!
+    @IBOutlet private weak var greenLabel: UILabel!
+    @IBOutlet private weak var blueLabel: UILabel!
     
     // MARK: - IBAction
-    @IBAction private func sliderDidChage(_ sender: Any) {
+    @IBAction private func sliderDidChange(_ sender: Any) {
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
         greenSlider.minimumValue = 0

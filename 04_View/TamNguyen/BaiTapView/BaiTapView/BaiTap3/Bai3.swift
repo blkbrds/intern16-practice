@@ -13,7 +13,7 @@ final class Bai3ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -26,24 +26,23 @@ final class Bai3ViewController: UIViewController {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         usernameTextField.tag = 0
-        usernameTextField.returnKeyType = UIReturnKeyType.next
+        usernameTextField.returnKeyType = .next
         passwordTextField.tag = 1
-        passwordTextField.returnKeyType = UIReturnKeyType.done
+        passwordTextField.returnKeyType = .done
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
 
     private func checkIDAndPassword() {
         if usernameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
-            label.isHidden = true
+            resultLabel.isHidden = true
         } else {
-            label.isHidden = false
-            label.text = "Nhap sai user va password"
+            resultLabel.isHidden = false
+            resultLabel.text = "Nhap sai user va password"
         }
-
-        if usernameTextField.text == "" || passwordTextField.text == "" {
-            label.text = "Nhap thieu user va password"
+        if usernameTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
+            resultLabel.text = "Nhap thieu user va password"
         }
     }
 
@@ -52,19 +51,19 @@ final class Bai3ViewController: UIViewController {
     }
 
     //MARK: - IBAction
-    @IBAction private func loginTouchUpInside(_ sender: Any) {
+    @IBAction private func loginTouchUpInside(_ sender: UIButton) {
         checkIDAndPassword()
     }
 
-    @IBAction private func clearTouchUpInside(_ sender: Any) {
+    @IBAction private func clearTouchUpInside(_ sender: UIButton) {
         usernameTextField.text = ""
         passwordTextField.text = ""
-        label.text = ""
+        resultLabel.text = ""
     }
 }
 
 //MARK: - UITextFieldDelegate
-extension Bai3ViewController : UITextFieldDelegate {
+extension Bai3ViewController :UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {
             usernameTextField.resignFirstResponder()

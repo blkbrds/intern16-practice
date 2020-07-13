@@ -11,7 +11,7 @@ import UIKit
 final class Bai6ViewController: UIViewController {
     
     //MARK: - IBOutlet
-    @IBOutlet weak var monkeyImage: UIImageView!
+    @IBOutlet private weak var monkeyImage: UIImageView!
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ final class Bai6ViewController: UIViewController {
         createGesture()
     }
     
-    //MARK: - Private Methods
+    //MARK: - Private Methods›
     private func createGesture() {
         let pinGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinch))
         
@@ -34,23 +34,22 @@ final class Bai6ViewController: UIViewController {
         monkeyImage.addGestureRecognizer(longPressGesture)
     }
     
-    @objc private func pinch(gestureRecognizer: UIPinchGestureRecognizer) {
+    @objc private func pinch(gestureRecognizer :UIPinchGestureRecognizer) {
         guard let viewPinch = gestureRecognizer.view, gestureRecognizer.scale <= 2 && gestureRecognizer.scale >= 0.5 else {
             return
         }
         viewPinch.transform = viewPinch.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale)
     }
     
-    @objc private func rotate(gestureRecognizer : UIRotationGestureRecognizer) {
-        guard gestureRecognizer.view != nil else { return }
-        
+    @objc private func rotate(gestureRecognizer :UIRotationGestureRecognizer) {
+        guard let viewRotate = gestureRecognizer.view else { return }
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
-            gestureRecognizer.view?.transform = gestureRecognizer.view!.transform.rotated(by: gestureRecognizer.rotation)
+            viewRotate.transform = viewRotate.transform.rotated(by: gestureRecognizer.rotation)
             gestureRecognizer.rotation = 0
         }
     }
     
-    @objc private func longPress(gestureRecognizer : UILongPressGestureRecognizer) {
+    @objc private func longPress(gestureRecognizer :UILongPressGestureRecognizer) {
         if let view =  gestureRecognizer.view {
             UIView.animate(withDuration: 1) {
                 view.transform = CGAffineTransform(rotationAngle: 0)

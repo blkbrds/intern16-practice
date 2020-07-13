@@ -11,12 +11,12 @@ import UIKit
 final class Bai2ViewController: UIViewController {
     
     //MARK: -Propeties
-    var names : [String] = ["Thien", "Tam", "Nguyen", "Khanh", "Van", "Dat", "Tuan", "Trung","Tinh"]
+    var names : [String] = ["Thien", "Tam", "Nguyen", "Khanh", "Van", "Dat", "Tuan", "Trung", "Tinh"]
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        config()
+        configUI()
     }
     
     //MARK: -Private Methods
@@ -24,17 +24,17 @@ final class Bai2ViewController: UIViewController {
         let userView = UIView(frame: frame)
         
         // Add avatar
-        let avatar = UIImageView(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height - 25))
-        avatar.image = UIImage(named: "avatar_\(index)")
-        avatar.contentMode = .scaleToFill
-        userView.addSubview(avatar)
+        let avatarImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height - 25))
+        avatarImageView.image = UIImage(named: "avatar_\(index)")
+        avatarImageView.contentMode = .scaleToFill
+        userView.addSubview(avatarImageView)
         
         // Add name
-        let name = UILabel(frame: CGRect(x: 0, y: 150, width: userView.bounds.width, height: userView.bounds.height - avatar.bounds.height))
-        name.text = names[index]
-        name.textAlignment = .center
-        name.backgroundColor = .yellow
-        userView.addSubview(name)
+        let nameLabel = UILabel(frame: CGRect(x: 0, y: 150, width: userView.bounds.width, height: userView.bounds.height - avatarImageView.bounds.height))
+        nameLabel.text = names[index]
+        nameLabel.textAlignment = .center
+        nameLabel.backgroundColor = .yellow
+        userView.addSubview(nameLabel)
         
         // Add button
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: userView.bounds.width, height: userView.bounds.height))
@@ -46,7 +46,7 @@ final class Bai2ViewController: UIViewController {
         return userView
     }
     
-    private func config() {
+    private func configUI() {
         view.backgroundColor = .black
         let khoangCach: CGFloat = 10
         let widthScreen = UIScreen.main.bounds.width

@@ -11,9 +11,10 @@ import UIKit
 final class Bai5ViewController: UIViewController {
     
     //MARK: - IBOulet
-    @IBOutlet weak var bigView: UIView!
-    @IBOutlet weak var smallView: UIView!
-    @IBOutlet var thumbLabel: UILabel!
+    @IBOutlet private weak var bigView: UIView!
+    @IBOutlet private weak var smallView: UIView!
+    @IBOutlet private var thumbLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupThumb()
@@ -34,7 +35,7 @@ final class Bai5ViewController: UIViewController {
         super.touchesMoved(touches, with: event)
         if let touch = touches.first {
             let location = touch.location(in: self.view)
-            if   location.y >= bigView.frame.minY,
+            if location.y >= bigView.frame.minY,
                 location.y <= bigView.frame.maxY {
                 thumbLabel.center = CGPoint(x: bigView.center.x, y: location.y)
                 smallView.frame = CGRect(x: bigView.frame.origin.x, y: bigView.frame.origin.y, width: smallView.frame.width, height: location.y - bigView.frame.origin.y)
