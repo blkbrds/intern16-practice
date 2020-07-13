@@ -16,16 +16,16 @@ class ButtonExtension: UIButton {
         super.init(frame: frame)
     }
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.masksToBounds = true
         layer.cornerRadius = 10
         layer.borderWidth = 2.0
         
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
     
 

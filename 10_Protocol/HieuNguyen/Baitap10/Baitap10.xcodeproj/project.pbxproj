@@ -11,6 +11,11 @@
 		7D144C4924B863F7006DE878 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D144C4824B863F7006DE878 /* SceneDelegate.swift */; };
 		7D144C5024B863F9006DE878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D144C4F24B863F9006DE878 /* Assets.xcassets */; };
 		7D144C5324B863F9006DE878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D144C5124B863F9006DE878 /* LaunchScreen.storyboard */; };
+		7D397D6F24BBDEDC001F76BB /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397D6D24BBDEDC001F76BB /* CalculatorViewController.swift */; };
+		7D397D7024BBDEDC001F76BB /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397D6E24BBDEDC001F76BB /* CalculatorViewController.xib */; };
+		7D397D7624BBE08F001F76BB /* OperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397D7524BBE08F001F76BB /* OperatorView.swift */; };
+		7D397D7824BBE09E001F76BB /* OperatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397D7724BBE09E001F76BB /* OperatorView.xib */; };
+		7D397D7A24BBE4DD001F76BB /* ExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397D7924BBE4DD001F76BB /* ExtensionButton.swift */; };
 		C436A3B424BB600C00353304 /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C436A3B224BB600C00353304 /* CityViewController.xib */; };
 		C436A3B524BB600C00353304 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436A3B324BB600C00353304 /* CityViewController.swift */; };
 		C464F9DD24B9653E00457406 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C464F9D724B9653D00457406 /* DetailProfileViewController.swift */; };
@@ -38,6 +43,11 @@
 		7D144C4F24B863F9006DE878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D144C5224B863F9006DE878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D144C5424B863F9006DE878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D397D6D24BBDEDC001F76BB /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		7D397D6E24BBDEDC001F76BB /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		7D397D7524BBE08F001F76BB /* OperatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorView.swift; sourceTree = "<group>"; };
+		7D397D7724BBE09E001F76BB /* OperatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperatorView.xib; sourceTree = "<group>"; };
+		7D397D7924BBE4DD001F76BB /* ExtensionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionButton.swift; sourceTree = "<group>"; };
 		C436A3B224BB600C00353304 /* CityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityViewController.xib; sourceTree = "<group>"; };
 		C436A3B324BB600C00353304 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		C464F9D724B9653D00457406 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 		7D144C4524B863F7006DE878 /* Baitap10 */ = {
 			isa = PBXGroup;
 			children = (
+				7D397D6C24BBDEBD001F76BB /* BaiTap05 */,
 				C436A3B124BB5FE500353304 /* BaiTap04 */,
 				C464F9E424B9657000457406 /* BaiTap03 */,
 				C464F9D624B9651B00457406 /* BaiTap02 */,
@@ -98,6 +109,18 @@
 				7D144C5424B863F9006DE878 /* Info.plist */,
 			);
 			path = Baitap10;
+			sourceTree = "<group>";
+		};
+		7D397D6C24BBDEBD001F76BB /* BaiTap05 */ = {
+			isa = PBXGroup;
+			children = (
+				7D397D7924BBE4DD001F76BB /* ExtensionButton.swift */,
+				7D397D6D24BBDEDC001F76BB /* CalculatorViewController.swift */,
+				7D397D6E24BBDEDC001F76BB /* CalculatorViewController.xib */,
+				7D397D7524BBE08F001F76BB /* OperatorView.swift */,
+				7D397D7724BBE09E001F76BB /* OperatorView.xib */,
+			);
+			path = BaiTap05;
 			sourceTree = "<group>";
 		};
 		C436A3B124BB5FE500353304 /* BaiTap04 */ = {
@@ -201,10 +224,12 @@
 				C464F9EC24B9691200457406 /* RegionViewController.xib in Resources */,
 				7D144C5324B863F9006DE878 /* LaunchScreen.storyboard in Resources */,
 				C464F9E024B9653E00457406 /* ProfilesViewController.xib in Resources */,
+				7D397D7024BBDEDC001F76BB /* CalculatorViewController.xib in Resources */,
 				7D144C5024B863F9006DE878 /* Assets.xcassets in Resources */,
 				C464F9E824B965C600457406 /* LocationViewController.xib in Resources */,
 				C436A3B424BB600C00353304 /* CityViewController.xib in Resources */,
 				C464F9E124B9653E00457406 /* DetailProfileViewController.xib in Resources */,
+				7D397D7824BBE09E001F76BB /* OperatorView.xib in Resources */,
 				C4EF595424BAB3390012114E /* ProvinceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,9 +250,12 @@
 				C464F9DE24B9653E00457406 /* PersonView.swift in Sources */,
 				C464F9DF24B9653E00457406 /* ProfilesViewController.swift in Sources */,
 				7D144C4724B863F7006DE878 /* AppDelegate.swift in Sources */,
+				7D397D7A24BBE4DD001F76BB /* ExtensionButton.swift in Sources */,
 				C4EF595724BAB5C40012114E /* DistrictViewController.swift in Sources */,
 				C464F9F024B9760D00457406 /* Location.swift in Sources */,
+				7D397D7624BBE08F001F76BB /* OperatorView.swift in Sources */,
 				7D144C4924B863F7006DE878 /* SceneDelegate.swift in Sources */,
+				7D397D6F24BBDEDC001F76BB /* CalculatorViewController.swift in Sources */,
 				C4EF595324BAB3390012114E /* ProvinceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

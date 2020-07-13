@@ -52,6 +52,5 @@ extension CityViewController: UITextFieldDelegate, UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         fillData(data: data)
         searchBar.text = ""
-    }
-    
+    }    
 }

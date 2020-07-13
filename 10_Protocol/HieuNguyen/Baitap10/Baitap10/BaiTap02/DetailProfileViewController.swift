@@ -12,6 +12,7 @@ class DetailProfileViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     var userName:String = "user name"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"

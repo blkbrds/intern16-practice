@@ -8,11 +8,19 @@
 
 import UIKit
 
+protocol DistrictDelegate: class {
+    func DataLocation(fromVC viewController: DistrictViewController, needPerformAction action: DistrictViewController.Action)
+}
+
 class DistrictViewController: UIViewController {
 
     @IBOutlet weak var verticalStackButton: UIStackView!
-    var location: Location?
+    var location: Location = Location(region: nil, province: nil, district: nil)
     weak var delegate: DistrictDelegate?
+    
+    enum Action {
+        case receiveData(location: Location)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +37,10 @@ class DistrictViewController: UIViewController {
             }
         }
     }
-
     
     private func setupButton() {
         for button in verticalStackButton.arrangedSubviews {
-            if let buttonChoice = location?.district {
+            if let buttonChoice = location.district {
                 if button.tag == Int(buttonChoice) {
                     button.backgroundColor = #colorLiteral(red: 0.9171207929, green: 0.6194388663, blue: 0.1338604823, alpha: 1)
                 }
@@ -50,7 +57,7 @@ class DistrictViewController: UIViewController {
 
     private func changeButtonSelected(index: Int) {
         for button in verticalStackButton.arrangedSubviews {
-            if let buttonChoice = location?.district {
+            if let buttonChoice = location.district {
                 if button.tag == Int(buttonChoice) {
                     button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 }
@@ -59,15 +66,11 @@ class DistrictViewController: UIViewController {
                 button.backgroundColor = #colorLiteral(red: 0.9171207929, green: 0.6194388663, blue: 0.1338604823, alpha: 1)
             }
         }
-        location?.district = String(index)
+        location.district = String(index)
     }
     
     @objc func nextToProvinceViewController() {
-        delegate?.receiveData(fromVC: self, withData: location!)
+        delegate?.DataLocation(fromVC: self, needPerformAction: .receiveData(location: location))
         navigationController?.popToRootViewController(animated: true)
     }
-}
-
-protocol DistrictDelegate: class {
-    func receiveData(fromVC viewController: DistrictViewController,withData location: Location )
 }

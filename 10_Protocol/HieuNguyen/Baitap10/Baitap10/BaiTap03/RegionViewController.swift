@@ -11,7 +11,7 @@ import UIKit
 class RegionViewController: UIViewController {
 
     @IBOutlet weak var verticalStackButton: UIStackView!
-    var location: Location?
+    var location: Location = Location(region: nil, province: nil, district: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class RegionViewController: UIViewController {
     
     private func setupButton() {
         for button in verticalStackButton.arrangedSubviews {
-            if let buttonChoice = location?.region {
+            if let buttonChoice = location.region {
                 if button.tag == Int(buttonChoice) {
                     button.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
                 }
@@ -42,7 +42,7 @@ class RegionViewController: UIViewController {
     
     private func changeButtonSelected(index: Int) {
         for button in verticalStackButton.arrangedSubviews {
-            if let buttonChoice = location?.region {
+            if let buttonChoice = location.region {
                 if button.tag == Int(buttonChoice) {
                     button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 }
@@ -51,7 +51,7 @@ class RegionViewController: UIViewController {
                 button.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
             }
         }
-        location?.region = String(index)
+        location.region = String(index)
     }
     
     @objc func nextToProvinceViewController() {

@@ -9,12 +9,12 @@
 import UIKit
 
 class LocationViewController: UIViewController {
-    // region    province    districts
+    
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var provinceLabel: UILabel!
     @IBOutlet weak var districtLabel: UILabel!
     
-    var location: Location = Location(region: "5", province: "10", district: "1")
+    var location: Location = Location(region: nil, province: nil, district: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +42,12 @@ class LocationViewController: UIViewController {
         districtLabel.text = "Huyện \(location.district ?? "")"
     }
 }
+
 extension LocationViewController: DistrictDelegate {
-    func receiveData(fromVC viewController: DistrictViewController, withData location: Location) {
-        self.location = location
+    func DataLocation(fromVC viewController: DistrictViewController, needPerformAction action: DistrictViewController.Action) {
+        switch action {
+        case .receiveData(let location):
+            self.location = location
+        }
     }
 }

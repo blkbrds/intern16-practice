@@ -11,7 +11,8 @@ import UIKit
 class ProvinceViewController: UIViewController {
     
     @IBOutlet weak var verticalStackButton: UIStackView!
-    var location: Location?
+    var location: Location = Location(region: nil, province: nil, district: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Tỉnh"
@@ -24,7 +25,7 @@ class ProvinceViewController: UIViewController {
 
     private func setupButton() {
         for button in verticalStackButton.arrangedSubviews {
-            if let buttonChoice = location?.province {
+            if let buttonChoice = location.province {
                 if button.tag == Int(buttonChoice) {
                     button.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
                 }
@@ -41,7 +42,7 @@ class ProvinceViewController: UIViewController {
     
     private func changeButtonSelected(index: Int) {
         for button in verticalStackButton.arrangedSubviews {
-            if let buttonChoice = location?.province {
+            if let buttonChoice = location.province {
                 if button.tag == Int(buttonChoice) {
                     button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 }
@@ -50,7 +51,7 @@ class ProvinceViewController: UIViewController {
                 button.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
             }
         }
-        location?.province = String(index)
+        location.province = String(index)
     }
     
     @objc func nextToDisTrictViewController() {

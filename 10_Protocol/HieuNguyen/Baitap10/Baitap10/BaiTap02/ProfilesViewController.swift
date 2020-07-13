@@ -50,9 +50,7 @@ class ProfilesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        print(Data)
         setupImageView()
-        
     }
     
     private func setupImageView() {
@@ -80,11 +78,12 @@ class ProfilesViewController: UIViewController {
 }
 
 extension ProfilesViewController: MyAvatarDelegate {
-    
-    func pushViewController(_ personView: MyAvatar, _ profile: String) {
-        let profileViewController = DetailProfileViewController()
-        profileViewController.userName = profile
-        navigationController?.pushViewController(profileViewController, animated: true)
-        
+    func ProfileView(_ personView: MyAvatar, needPerformAction action: MyAvatar.Action) {
+        switch action {
+        case .getProfileName(let profileName):
+            let detailProfileViewController = DetailProfileViewController()
+            detailProfileViewController.userName = profileName
+            navigationController?.pushViewController(detailProfileViewController, animated: true)
+        }
     }
 }
