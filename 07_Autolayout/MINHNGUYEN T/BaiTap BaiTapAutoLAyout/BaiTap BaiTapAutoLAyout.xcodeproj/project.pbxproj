@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5266136424B6BA6B00D7482A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5266136324B6BA6B00D7482A /* AppDelegate.swift */; };
+		5266136624B6BA6B00D7482A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5266136524B6BA6B00D7482A /* SceneDelegate.swift */; };
+		5266136824B6BA6B00D7482A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5266136724B6BA6B00D7482A /* ViewController.swift */; };
+		5266136D24B6BA6F00D7482A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5266136C24B6BA6F00D7482A /* Assets.xcassets */; };
+		5266137024B6BA6F00D7482A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5266136E24B6BA6F00D7482A /* LaunchScreen.storyboard */; };
+		5266138524B6C25000D7482A /* BaiTap1aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5266138324B6C25000D7482A /* BaiTap1aViewController.swift */; };
+		5266138624B6C25000D7482A /* BaiTap1aViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5266138424B6C25000D7482A /* BaiTap1aViewController.xib */; };
+		5272133224BC0D18009C7A00 /* BaiTap1bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272133024BC0D18009C7A00 /* BaiTap1bViewController.swift */; };
+		5272133324BC0D18009C7A00 /* BaiTap1bViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272133124BC0D18009C7A00 /* BaiTap1bViewController.xib */; };
+		5272133824BC0E3D009C7A00 /* BaiTap2aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272133624BC0E3D009C7A00 /* BaiTap2aViewController.swift */; };
+		5272133924BC0E3D009C7A00 /* BaiTap2aViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272133724BC0E3D009C7A00 /* BaiTap2aViewController.xib */; };
+		5272134024BC0F90009C7A00 /* BaiTap2bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272133E24BC0F90009C7A00 /* BaiTap2bViewController.swift */; };
+		5272134124BC0F90009C7A00 /* BaiTap2bViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272133F24BC0F90009C7A00 /* BaiTap2bViewController.xib */; };
+		5272134524BC10ED009C7A00 /* BaiTap3aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272134324BC10ED009C7A00 /* BaiTap3aViewController.swift */; };
+		5272134624BC10ED009C7A00 /* BaiTap3aViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272134424BC10ED009C7A00 /* BaiTap3aViewController.xib */; };
+		5272134E24BC38F1009C7A00 /* BaiTap3bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272134C24BC38F1009C7A00 /* BaiTap3bViewController.swift */; };
+		5272134F24BC38F1009C7A00 /* BaiTap3bViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272134D24BC38F1009C7A00 /* BaiTap3bViewController.xib */; };
+		5272135224BD5C6B009C7A00 /* BaiTap3cViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272135024BD5C6B009C7A00 /* BaiTap3cViewController.swift */; };
+		5272135324BD5C6B009C7A00 /* BaiTap3cViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272135124BD5C6B009C7A00 /* BaiTap3cViewController.xib */; };
+		5272135724BD6872009C7A00 /* BaiTap4aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272135524BD6872009C7A00 /* BaiTap4aViewController.swift */; };
+		5272135824BD6872009C7A00 /* BaiTap4aViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272135624BD6872009C7A00 /* BaiTap4aViewController.xib */; };
+		5272135B24BD7052009C7A00 /* BaiTap4bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272135924BD7052009C7A00 /* BaiTap4bViewController.swift */; };
+		5272135C24BD7052009C7A00 /* BaiTap4bViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272135A24BD7052009C7A00 /* BaiTap4bViewController.xib */; };
+		5272135F24BD9532009C7A00 /* BaiTap4cViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272135D24BD9532009C7A00 /* BaiTap4cViewController.swift */; };
+		5272136024BD9532009C7A00 /* BaiTap4cViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272135E24BD9532009C7A00 /* BaiTap4cViewController.xib */; };
+		5272136324BD973A009C7A00 /* BaiTap4dViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272136124BD973A009C7A00 /* BaiTap4dViewController.swift */; };
+		5272136424BD973A009C7A00 /* BaiTap4dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272136224BD973A009C7A00 /* BaiTap4dViewController.xib */; };
+		5272136724BDBE01009C7A00 /* BaiTap4eViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272136524BDBE01009C7A00 /* BaiTap4eViewController.swift */; };
+		5272136824BDBE01009C7A00 /* BaiTap4eViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272136624BDBE01009C7A00 /* BaiTap4eViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5266136024B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BaiTap BaiTapAutoLAyout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5266136324B6BA6B00D7482A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5266136524B6BA6B00D7482A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5266136724B6BA6B00D7482A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5266136C24B6BA6F00D7482A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5266136F24B6BA6F00D7482A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5266137124B6BA6F00D7482A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5266138324B6C25000D7482A /* BaiTap1aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap1aViewController.swift; sourceTree = "<group>"; };
+		5266138424B6C25000D7482A /* BaiTap1aViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap1aViewController.xib; sourceTree = "<group>"; };
+		5272133024BC0D18009C7A00 /* BaiTap1bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap1bViewController.swift; sourceTree = "<group>"; };
+		5272133124BC0D18009C7A00 /* BaiTap1bViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap1bViewController.xib; sourceTree = "<group>"; };
+		5272133624BC0E3D009C7A00 /* BaiTap2aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2aViewController.swift; sourceTree = "<group>"; };
+		5272133724BC0E3D009C7A00 /* BaiTap2aViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap2aViewController.xib; sourceTree = "<group>"; };
+		5272133E24BC0F90009C7A00 /* BaiTap2bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2bViewController.swift; sourceTree = "<group>"; };
+		5272133F24BC0F90009C7A00 /* BaiTap2bViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap2bViewController.xib; sourceTree = "<group>"; };
+		5272134324BC10ED009C7A00 /* BaiTap3aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3aViewController.swift; sourceTree = "<group>"; };
+		5272134424BC10ED009C7A00 /* BaiTap3aViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3aViewController.xib; sourceTree = "<group>"; };
+		5272134C24BC38F1009C7A00 /* BaiTap3bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3bViewController.swift; sourceTree = "<group>"; };
+		5272134D24BC38F1009C7A00 /* BaiTap3bViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3bViewController.xib; sourceTree = "<group>"; };
+		5272135024BD5C6B009C7A00 /* BaiTap3cViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3cViewController.swift; sourceTree = "<group>"; };
+		5272135124BD5C6B009C7A00 /* BaiTap3cViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3cViewController.xib; sourceTree = "<group>"; };
+		5272135524BD6872009C7A00 /* BaiTap4aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4aViewController.swift; sourceTree = "<group>"; };
+		5272135624BD6872009C7A00 /* BaiTap4aViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4aViewController.xib; sourceTree = "<group>"; };
+		5272135924BD7052009C7A00 /* BaiTap4bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4bViewController.swift; sourceTree = "<group>"; };
+		5272135A24BD7052009C7A00 /* BaiTap4bViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4bViewController.xib; sourceTree = "<group>"; };
+		5272135D24BD9532009C7A00 /* BaiTap4cViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4cViewController.swift; sourceTree = "<group>"; };
+		5272135E24BD9532009C7A00 /* BaiTap4cViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4cViewController.xib; sourceTree = "<group>"; };
+		5272136124BD973A009C7A00 /* BaiTap4dViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4dViewController.swift; sourceTree = "<group>"; };
+		5272136224BD973A009C7A00 /* BaiTap4dViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4dViewController.xib; sourceTree = "<group>"; };
+		5272136524BDBE01009C7A00 /* BaiTap4eViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4eViewController.swift; sourceTree = "<group>"; };
+		5272136624BDBE01009C7A00 /* BaiTap4eViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4eViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5266135D24B6BA6B00D7482A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5266135724B6BA6A00D7482A = {
+			isa = PBXGroup;
+			children = (
+				5266136224B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout */,
+				5266136124B6BA6B00D7482A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5266136124B6BA6B00D7482A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5266136024B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5266136224B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout */ = {
+			isa = PBXGroup;
+			children = (
+				5272135424BD685A009C7A00 /* BaiTap4 */,
+				5272134224BC10D8009C7A00 /* BaiTap3 */,
+				5272133524BC0E27009C7A00 /* BaiTap2 */,
+				5266138224B6C23400D7482A /* BaiTap1 */,
+				5266136324B6BA6B00D7482A /* AppDelegate.swift */,
+				5266136524B6BA6B00D7482A /* SceneDelegate.swift */,
+				5266136724B6BA6B00D7482A /* ViewController.swift */,
+				5266136C24B6BA6F00D7482A /* Assets.xcassets */,
+				5266136E24B6BA6F00D7482A /* LaunchScreen.storyboard */,
+				5266137124B6BA6F00D7482A /* Info.plist */,
+			);
+			path = "BaiTap BaiTapAutoLAyout";
+			sourceTree = "<group>";
+		};
+		5266138224B6C23400D7482A /* BaiTap1 */ = {
+			isa = PBXGroup;
+			children = (
+				5266138324B6C25000D7482A /* BaiTap1aViewController.swift */,
+				5266138424B6C25000D7482A /* BaiTap1aViewController.xib */,
+				5272133024BC0D18009C7A00 /* BaiTap1bViewController.swift */,
+				5272133124BC0D18009C7A00 /* BaiTap1bViewController.xib */,
+			);
+			path = BaiTap1;
+			sourceTree = "<group>";
+		};
+		5272133524BC0E27009C7A00 /* BaiTap2 */ = {
+			isa = PBXGroup;
+			children = (
+				5272133624BC0E3D009C7A00 /* BaiTap2aViewController.swift */,
+				5272133724BC0E3D009C7A00 /* BaiTap2aViewController.xib */,
+				5272133E24BC0F90009C7A00 /* BaiTap2bViewController.swift */,
+				5272133F24BC0F90009C7A00 /* BaiTap2bViewController.xib */,
+			);
+			path = BaiTap2;
+			sourceTree = "<group>";
+		};
+		5272134224BC10D8009C7A00 /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+				5272134324BC10ED009C7A00 /* BaiTap3aViewController.swift */,
+				5272134424BC10ED009C7A00 /* BaiTap3aViewController.xib */,
+				5272134C24BC38F1009C7A00 /* BaiTap3bViewController.swift */,
+				5272134D24BC38F1009C7A00 /* BaiTap3bViewController.xib */,
+				5272135024BD5C6B009C7A00 /* BaiTap3cViewController.swift */,
+				5272135124BD5C6B009C7A00 /* BaiTap3cViewController.xib */,
+			);
+			path = BaiTap3;
+			sourceTree = "<group>";
+		};
+		5272135424BD685A009C7A00 /* BaiTap4 */ = {
+			isa = PBXGroup;
+			children = (
+				5272135524BD6872009C7A00 /* BaiTap4aViewController.swift */,
+				5272135624BD6872009C7A00 /* BaiTap4aViewController.xib */,
+				5272135924BD7052009C7A00 /* BaiTap4bViewController.swift */,
+				5272135A24BD7052009C7A00 /* BaiTap4bViewController.xib */,
+				5272135D24BD9532009C7A00 /* BaiTap4cViewController.swift */,
+				5272135E24BD9532009C7A00 /* BaiTap4cViewController.xib */,
+				5272136124BD973A009C7A00 /* BaiTap4dViewController.swift */,
+				5272136224BD973A009C7A00 /* BaiTap4dViewController.xib */,
+				5272136524BDBE01009C7A00 /* BaiTap4eViewController.swift */,
+				5272136624BDBE01009C7A00 /* BaiTap4eViewController.xib */,
+			);
+			path = BaiTap4;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5266135F24B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5266137424B6BA6F00D7482A /* Build configuration list for PBXNativeTarget "BaiTap BaiTapAutoLAyout" */;
+			buildPhases = (
+				5266135C24B6BA6B00D7482A /* Sources */,
+				5266135D24B6BA6B00D7482A /* Frameworks */,
+				5266135E24B6BA6B00D7482A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BaiTap BaiTapAutoLAyout";
+			productName = "BaiTap BaiTapAutoLAyout";
+			productReference = 5266136024B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5266135824B6BA6A00D7482A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = asiantech;
+				TargetAttributes = {
+					5266135F24B6BA6B00D7482A = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5266135B24B6BA6A00D7482A /* Build configuration list for PBXProject "BaiTap BaiTapAutoLAyout" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5266135724B6BA6A00D7482A;
+			productRefGroup = 5266136124B6BA6B00D7482A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5266135F24B6BA6B00D7482A /* BaiTap BaiTapAutoLAyout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5266135E24B6BA6B00D7482A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5272135824BD6872009C7A00 /* BaiTap4aViewController.xib in Resources */,
+				5272134F24BC38F1009C7A00 /* BaiTap3bViewController.xib in Resources */,
+				5272136824BDBE01009C7A00 /* BaiTap4eViewController.xib in Resources */,
+				5266138624B6C25000D7482A /* BaiTap1aViewController.xib in Resources */,
+				5272134624BC10ED009C7A00 /* BaiTap3aViewController.xib in Resources */,
+				5272134124BC0F90009C7A00 /* BaiTap2bViewController.xib in Resources */,
+				5272133924BC0E3D009C7A00 /* BaiTap2aViewController.xib in Resources */,
+				5266137024B6BA6F00D7482A /* LaunchScreen.storyboard in Resources */,
+				5272135324BD5C6B009C7A00 /* BaiTap3cViewController.xib in Resources */,
+				5272133324BC0D18009C7A00 /* BaiTap1bViewController.xib in Resources */,
+				5272136424BD973A009C7A00 /* BaiTap4dViewController.xib in Resources */,
+				5266136D24B6BA6F00D7482A /* Assets.xcassets in Resources */,
+				5272136024BD9532009C7A00 /* BaiTap4cViewController.xib in Resources */,
+				5272135C24BD7052009C7A00 /* BaiTap4bViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5266135C24B6BA6B00D7482A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5272133824BC0E3D009C7A00 /* BaiTap2aViewController.swift in Sources */,
+				5272135F24BD9532009C7A00 /* BaiTap4cViewController.swift in Sources */,
+				5272135B24BD7052009C7A00 /* BaiTap4bViewController.swift in Sources */,
+				5272134E24BC38F1009C7A00 /* BaiTap3bViewController.swift in Sources */,
+				5272133224BC0D18009C7A00 /* BaiTap1bViewController.swift in Sources */,
+				5272135224BD5C6B009C7A00 /* BaiTap3cViewController.swift in Sources */,
+				5272136724BDBE01009C7A00 /* BaiTap4eViewController.swift in Sources */,
+				5266136824B6BA6B00D7482A /* ViewController.swift in Sources */,
+				5272134524BC10ED009C7A00 /* BaiTap3aViewController.swift in Sources */,
+				5266138524B6C25000D7482A /* BaiTap1aViewController.swift in Sources */,
+				5272136324BD973A009C7A00 /* BaiTap4dViewController.swift in Sources */,
+				5272134024BC0F90009C7A00 /* BaiTap2bViewController.swift in Sources */,
+				5266136424B6BA6B00D7482A /* AppDelegate.swift in Sources */,
+				5272135724BD6872009C7A00 /* BaiTap4aViewController.swift in Sources */,
+				5266136624B6BA6B00D7482A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5266136E24B6BA6F00D7482A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5266136F24B6BA6F00D7482A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5266137224B6BA6F00D7482A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5266137324B6BA6F00D7482A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5266137524B6BA6F00D7482A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BaiTap BaiTapAutoLAyout/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asiantech.BaiTap-BaiTapAutoLAyout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5266137624B6BA6F00D7482A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BaiTap BaiTapAutoLAyout/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asiantech.BaiTap-BaiTapAutoLAyout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5266135B24B6BA6A00D7482A /* Build configuration list for PBXProject "BaiTap BaiTapAutoLAyout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5266137224B6BA6F00D7482A /* Debug */,
+				5266137324B6BA6F00D7482A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5266137424B6BA6F00D7482A /* Build configuration list for PBXNativeTarget "BaiTap BaiTapAutoLAyout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5266137524B6BA6F00D7482A /* Debug */,
+				5266137624B6BA6F00D7482A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5266135824B6BA6A00D7482A /* Project object */;
+}
