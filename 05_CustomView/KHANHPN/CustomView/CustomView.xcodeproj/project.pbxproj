@@ -14,13 +14,12 @@
 		F04089B024B308FA00290593 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04089AF24B308FA00290593 /* CustomButton.swift */; };
 		F0458A9324B55EE300F9FA72 /* BaiTap04.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458A9124B55EE300F9FA72 /* BaiTap04.swift */; };
 		F0458A9424B55EE300F9FA72 /* BaiTap04.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0458A9224B55EE300F9FA72 /* BaiTap04.xib */; };
-		F0458A9624B55F0A00F9FA72 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458A9524B55F0A00F9FA72 /* PickerView.swift */; };
-		F0458A9824B55F6A00F9FA72 /* PickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0458A9724B55F6A00F9FA72 /* PickerView.xib */; };
+		F0458A9624B55F0A00F9FA72 /* MyDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458A9524B55F0A00F9FA72 /* MyDatePickerView.swift */; };
+		F0458A9824B55F6A00F9FA72 /* MyDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0458A9724B55F6A00F9FA72 /* MyDatePickerView.xib */; };
 		F04CF24524B2B7BD00E74AD1 /* BaiTap02.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04CF24324B2B7BD00E74AD1 /* BaiTap02.swift */; };
 		F04CF24624B2B7BD00E74AD1 /* BaiTap02.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04CF24424B2B7BD00E74AD1 /* BaiTap02.xib */; };
 		F0D7B29524AF178E00348C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B29424AF178E00348C70 /* AppDelegate.swift */; };
 		F0D7B29724AF178E00348C70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B29624AF178E00348C70 /* SceneDelegate.swift */; };
-		F0D7B29924AF178E00348C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B29824AF178E00348C70 /* ViewController.swift */; };
 		F0D7B29E24AF179200348C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D7B29D24AF179200348C70 /* Assets.xcassets */; };
 		F0D7B2AB24AF187300348C70 /* BaiTap01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D7B2A924AF187300348C70 /* BaiTap01.swift */; };
 		F0D7B2AC24AF187300348C70 /* BaiTap01.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D7B2AA24AF187300348C70 /* BaiTap01.xib */; };
@@ -35,14 +34,13 @@
 		F04089AF24B308FA00290593 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F0458A9124B55EE300F9FA72 /* BaiTap04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04.swift; sourceTree = "<group>"; };
 		F0458A9224B55EE300F9FA72 /* BaiTap04.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04.xib; sourceTree = "<group>"; };
-		F0458A9524B55F0A00F9FA72 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		F0458A9724B55F6A00F9FA72 /* PickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerView.xib; sourceTree = "<group>"; };
+		F0458A9524B55F0A00F9FA72 /* MyDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDatePickerView.swift; sourceTree = "<group>"; };
+		F0458A9724B55F6A00F9FA72 /* MyDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDatePickerView.xib; sourceTree = "<group>"; };
 		F04CF24324B2B7BD00E74AD1 /* BaiTap02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02.swift; sourceTree = "<group>"; };
 		F04CF24424B2B7BD00E74AD1 /* BaiTap02.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02.xib; sourceTree = "<group>"; };
 		F0D7B29124AF178E00348C70 /* CustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D7B29424AF178E00348C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0D7B29624AF178E00348C70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0D7B29824AF178E00348C70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0D7B29D24AF179200348C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0D7B2A224AF179200348C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0D7B2A924AF187300348C70 /* BaiTap01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01.swift; sourceTree = "<group>"; };
@@ -76,8 +74,8 @@
 			children = (
 				F0458A9124B55EE300F9FA72 /* BaiTap04.swift */,
 				F0458A9224B55EE300F9FA72 /* BaiTap04.xib */,
-				F0458A9524B55F0A00F9FA72 /* PickerView.swift */,
-				F0458A9724B55F6A00F9FA72 /* PickerView.xib */,
+				F0458A9524B55F0A00F9FA72 /* MyDatePickerView.swift */,
+				F0458A9724B55F6A00F9FA72 /* MyDatePickerView.xib */,
 			);
 			path = BaiTap04;
 			sourceTree = "<group>";
@@ -118,7 +116,6 @@
 				F0D7B2A824AF185000348C70 /* BaiTap01 */,
 				F0D7B29424AF178E00348C70 /* AppDelegate.swift */,
 				F0D7B29624AF178E00348C70 /* SceneDelegate.swift */,
-				F0D7B29824AF178E00348C70 /* ViewController.swift */,
 				F0D7B29D24AF179200348C70 /* Assets.xcassets */,
 				F0D7B2A224AF179200348C70 /* Info.plist */,
 			);
@@ -196,7 +193,7 @@
 				F0458A9424B55EE300F9FA72 /* BaiTap04.xib in Resources */,
 				F04CF24624B2B7BD00E74AD1 /* BaiTap02.xib in Resources */,
 				F04089A124B2CE8100290593 /* SliderView.xib in Resources */,
-				F0458A9824B55F6A00F9FA72 /* PickerView.xib in Resources */,
+				F0458A9824B55F6A00F9FA72 /* MyDatePickerView.xib in Resources */,
 				F0D7B29E24AF179200348C70 /* Assets.xcassets in Resources */,
 				F04089AA24B301D000290593 /* BaiTap03.xib in Resources */,
 				F0D7B2AC24AF187300348C70 /* BaiTap01.xib in Resources */,
@@ -210,12 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0D7B29924AF178E00348C70 /* ViewController.swift in Sources */,
 				F0D7B29524AF178E00348C70 /* AppDelegate.swift in Sources */,
 				F04089B024B308FA00290593 /* CustomButton.swift in Sources */,
 				F0D7B29724AF178E00348C70 /* SceneDelegate.swift in Sources */,
 				F0458A9324B55EE300F9FA72 /* BaiTap04.swift in Sources */,
-				F0458A9624B55F0A00F9FA72 /* PickerView.swift in Sources */,
+				F0458A9624B55F0A00F9FA72 /* MyDatePickerView.swift in Sources */,
 				F040899F24B2CE7200290593 /* SliderView.swift in Sources */,
 				F0D7B2AE24AF2C5900348C70 /* AvatarView.swift in Sources */,
 				F04089A924B301D000290593 /* BaiTap03.swift in Sources */,

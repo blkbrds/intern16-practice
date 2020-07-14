@@ -11,7 +11,7 @@ import UIKit
 final class CustomButton: UIButton {
 
     // MARK: - Badge Position
-    enum badgePosition {
+    enum BadgePosition {
         case topLeft
         case topCenter
         case topRight
@@ -44,13 +44,11 @@ final class CustomButton: UIButton {
     }
     
     // MARK: - Custom Button
-
     override init(frame: CGRect) {
         super.init(frame: frame)
-
     }
     
-    convenience init(frame: CGRect, number: Int, colorButon: UIColor, position: badgePosition, name: String) {
+    convenience init(frame: CGRect, number: Int, colorButon: UIColor, position: BadgePosition, name: String) {
         self.init(frame: frame)
         backgroundColor = colorButon
         setTitle(name, for: .normal)
@@ -62,19 +60,23 @@ final class CustomButton: UIButton {
         }
     }
     
-    private func showBadge(position: badgePosition, number: Int) {
+    private func showBadge(position: BadgePosition, number: Int) {
         let badge = UIView()
-        badge.frame.size = CGSize(width: 30, height: 30)
+        let num = UILabel()
+        if number <= 99 {
+            badge.frame.size = CGSize(width: 30, height: 30)
+            num.text = String(number)
+        } else if number > 99 {
+            badge.frame.size = CGSize(width: 40, height: 30)
+            num.text = "99+"
+        }
         badge.center = position.customBadge(with: frame)
         badge.layer.cornerRadius = badge.bounds.height / 2
         badge.backgroundColor = .red
-        addSubview(badge)
-        // number:
-        let num = UILabel()
-        num.frame = badge.bounds // nhét vào thằng frame cha, là thằng badge view
-        num.text = String(number)
+        num.frame = badge.bounds
         num.textAlignment = .center
         num.textColor = .white
+        addSubview(badge)
         badge.addSubview(num)
     }
 

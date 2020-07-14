@@ -9,6 +9,13 @@
 import UIKit
 
 final class BaiTap01: UIViewController {
+    struct Profile {
+        var userNames: String
+        var userImages: UIImage
+    }
+    let data: [Profile] = [
+        Profile(userNames: "A", userImages: UIImage(named: "img-avatar")!),
+    ]
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -18,30 +25,30 @@ final class BaiTap01: UIViewController {
     
     // MARK: - Functions
     private func setupAvavtarView() {
-        var scrollHeigh: CGFloat = 180
+        var scrollHeight: CGFloat = 180
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
         var x = 32
         var y = 0
-        for i in 0..<100 {
+        for i in 0..<data.count {
             if i % 3 == 0 && i != 0 {
                 y += 160
                 x = 32
-                scrollHeigh += 160
+                scrollHeight += 160
             } else if i % 3 != 0 {
                 x += 130
             }
-            let avatarView = AvatarView(frame: CGRect(x: x, y: y, width: 100, height: 130), index: i)
-            avatarView.delegate = self
-            scrollView.addSubview(avatarView)
+//            let avatarView = AvatarView(frame: CGRect(x: x, y: y, width: 100, height: 130), name: userNames[i], image: userImages[i])
+//            avatarView.delegate = self
+//            scrollView.addSubview(avatarView)
         }
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: scrollHeigh)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: scrollHeight)
         view.addSubview(scrollView)
     }
 }
 
 // MARK: - Extension
 extension BaiTap01: AvatarViewDelegate {
-    func avatarView(_ avatarView: UIView, getName index: String) {
-        print("User \(index)")
+    func avatarView(_ avatarView: UIView, getName name: String) {
+        print("User \(name)")
     }
 }

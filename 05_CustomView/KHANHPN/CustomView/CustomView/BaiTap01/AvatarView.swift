@@ -9,22 +9,23 @@
 import UIKit
 
 protocol AvatarViewDelegate: class {
-    func avatarView(_ avatarView: UIView, getName index: String)
+    func avatarView(_ avatarView: UIView, getName name: String)
 }
 
 final class AvatarView: UIView {
     
     weak var delegate: AvatarViewDelegate?
     
+    private var userName: String?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    // convinience init khởi tạo phụ trợ cho hàm init
-    convenience init(frame: CGRect, index: Int) { // thêm 1 đối số index để lấy giá trị
+
+    convenience init(frame: CGRect, name: String, image: UIImage) {
         self.init(frame: frame)
-        userView(index: String(index))
+        userView(name: name, image: image)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGuesture))
-        tapGesture.name = String(index)
         self.addGestureRecognizer(tapGesture)
     }
     
@@ -33,24 +34,23 @@ final class AvatarView: UIView {
     }
     
     // MARK: - Functions
-    private func userView(index: String) {
-        // Add avatar
+    private func userView(name: String, image: UIImage) {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        let userAvatar = UIImageView(image: UIImage(named: "img-avatar"))
+        let userAvatar = UIImageView()
         userAvatar.frame = frame
         userAvatar.contentMode = .scaleToFill
         addSubview(userAvatar)
-        
-        // Add user name
         let userName = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
-        userName.text = "User \(index)"
+        userName.text = name
         userName.textAlignment = .center
         userName.textColor = .white
         userName.backgroundColor = .lightGray
+        self.userName = name
         addSubview(userName)
     }
     
     @objc func handleTapGuesture(_ sender: UIGestureRecognizer) {
-        delegate?.avatarView(self, getName: sender.name!)
+        guard let name = userName else { return }
+        delegate?.avatarView(self, getName: name)
     }
 }

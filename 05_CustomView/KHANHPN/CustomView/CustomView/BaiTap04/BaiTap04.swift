@@ -12,8 +12,9 @@ class BaiTap04: UIViewController, UITextFieldDelegate {
     // MARK: - Outlet
     @IBOutlet weak var dateTextField: UITextField!
 
-    let picker = Bundle.main.loadNibNamed("PickerView", owner: self, options: nil)?.first as? PickerView
-
+    let picker = Bundle.main.loadNibNamed("MyDatePickerView", owner: self, options: nil)?.first as? MyDatePickerView
+    
+    // MARK: - 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(picker!)
@@ -35,8 +36,10 @@ class BaiTap04: UIViewController, UITextFieldDelegate {
 
 // MARK: - Extensions
 extension BaiTap04: PickerViewDelegate {
-    func pickerView(_ pickerView: PickerView, didSelect date: String) {
-        dateTextField.text = date
+    func pickerView(_ pickerView: MyDatePickerView, didSelect date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd yyyy"
+        dateTextField.text = dateFormatter.string(from: date)
         view.endEditing(true)
     }
 }

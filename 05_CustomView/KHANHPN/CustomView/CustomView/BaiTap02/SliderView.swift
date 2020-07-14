@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Delegate
 protocol SliderViewDelegate: class {
-    func sliderView(_ sliderView: SliderView , didSelect index: Int)
+    func sliderView(_ sliderView: SliderView , didSelect value: Int)
 }
 
 final class SliderView: UIView {
@@ -22,11 +22,7 @@ final class SliderView: UIView {
     @IBOutlet weak var thumbLabel: UILabel!
     
     weak var delegate: SliderViewDelegate?
-    
-    override func awakeFromNib() {
-      super.awakeFromNib()
-    }
-    
+
     // MARK: - Override Functions
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {

@@ -12,12 +12,15 @@ class BaiTap02: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var valueTextField: UITextField!
     
-    let slider = Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)?.first as? SliderView // add slider
+    let slider = Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)?.first as? SliderView
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        showSlider()
+    }
+    
+    func showSlider() {
         slider?.frame = CGRect(x: 149 , y: 274, width: 116 , height: 523)
         view.addSubview(slider!)
         slider?.delegate = self
@@ -33,11 +36,12 @@ class BaiTap02: UIViewController {
 }
 
 extension BaiTap02: SliderViewDelegate {
-    func sliderView(_ sliderView: SliderView, didSelect index: Int) {
-        valueTextField.text = String(index)
+    func sliderView(_ sliderView: SliderView, didSelect value: Int) {
+        valueTextField.text = String(value)
     }
 }
 
+// MARK: - Extensions
 extension BaiTap02: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
