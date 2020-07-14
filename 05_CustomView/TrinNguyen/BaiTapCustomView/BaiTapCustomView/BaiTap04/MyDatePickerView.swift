@@ -8,28 +8,28 @@
 
 import UIKit
 
-// MARK: Protocol
+// MARK: - Protocol
 protocol MyDatePickerViewDelegate: class {
     func datePickerView(_ MyDatePickerView: MyDatePickerView, date: Date)
 }
 
-class MyDatePickerView: UIView {
+final class MyDatePickerView: UIView {
 
     // MARK: - IBOutlets
-    @IBOutlet private weak var datePickerView: UIDatePicker!
+    @IBOutlet private weak var datePicker: UIDatePicker!
     @IBOutlet private weak var toolBar: UIToolbar!
     @IBOutlet private weak var doneButton: UIBarButtonItem!
 
-    // MARK : - Propeties
+    // MARK: Properties
     weak var delegate: MyDatePickerViewDelegate?
     var date = Date()
 
     // MARK: - IBActions
-    @IBAction func datePicker(_ sender: Any) {
-        date = datePickerView.date
+    @IBAction private func datePicker(_ sender: Any) {
+        date = datePicker.date
     }
 
-    @IBAction func clickButton(_ sender: Any) {
+    @IBAction private func clickButton(_ sender: Any) {
         delegate?.datePickerView(self, date: date)
     }
 }

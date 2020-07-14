@@ -10,7 +10,7 @@ import UIKit
 
 final class BaiTap03: UIViewController {
 
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

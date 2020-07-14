@@ -8,36 +8,36 @@
 
 import UIKit
 
-// MARK: Protocol
+// MARK: - Protocol
 protocol MySliderViewDelegate: class {
-    func sliderView(_ sliderView: MySliderView, didSelect: Int)
+    func sliderView(_ sliderView: MySliderView, percentInput: Int)
 }
 
 final class MySliderView: UIView {
 
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet private weak var grayImageView: UIImageView!
     @IBOutlet private weak var blueImageView: UIImageView!
     @IBOutlet private weak var sliderView: UIView!
     @IBOutlet private weak var valueLabel: UILabel!
 
-    // MARK: Propeties
+    // MARK: - Properties
     weak var delegate: MySliderViewDelegate?
     var value: Int?
     var newBluePoint: CGPoint {
-        return self.blueImageView.frame.origin
+        return blueImageView.frame.origin
     }
     var newBlueSize: CGSize {
-        return self.blueImageView.frame.size
+        return blueImageView.frame.size
     }
     var newGraySize: CGSize {
-        return self.grayImageView.frame.size
+        return grayImageView.frame.size
     }
     var grayBounds: CGRect {
-        return self.grayImageView.bounds
+        return grayImageView.bounds
     }
 
-    // MARK: Private Methods
+    // MARK: - Private Methods
     func changeView(y: CGFloat) {
         blueImageView.frame = CGRect(x: newBluePoint.x, y: y, width: newBlueSize.width, height: newGraySize.height - y)
     }
@@ -57,7 +57,8 @@ final class MySliderView: UIView {
             let temp = "\(Int(newBlueSize.height / newGraySize.height * 100))"
             valueLabel.text = temp
             // Ban so % qua ViewController
-            delegate?.sliderView(self, didSelect: Int(temp)!)
+            guard let delegate = delegate else { return }
+            delegate.sliderView(self, percentInput: Int(temp) ?? 50)
         }
     }
 

@@ -10,16 +10,16 @@ import UIKit
 
 final class BaiTap01: UIViewController {
 
-    // MARK: Propeties
+    // MARK: - Properties
     var scrollView: UIScrollView?
 
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configAvatar()
     }
 
-    // MARK: Private Methods
+    // MARK: - Private Methods
     private func configAvatar() {
         let screenSize = UIScreen.main.bounds
         // Lay width cua man hinh
@@ -34,8 +34,7 @@ final class BaiTap01: UIViewController {
         // Add scrollView vao view
         view.addSubview(scrollView)
         let myAvatar = MyAvatar(frame: CGRect(x: 0, y: 0, width: 100, height: 250))
-        // Add class MyAvatar vao scrollViewa
-//        myAvatar.delegate = self
+        // Add class MyAvatar vao scrollView
         scrollView.addSubview(myAvatar)
     }
 }

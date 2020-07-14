@@ -10,8 +10,8 @@ import UIKit
 
 final class MyButton: UIButton {
 
-    // MARK: Propeties
-    enum notifyView1 {
+    // MARK: - Properties
+    enum NotifyView {
         case topRight
         case topLeft
         case centerTop
@@ -43,12 +43,12 @@ final class MyButton: UIButton {
         }
     }
 
-    // MARK: Life Cycle
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
 
-    convenience init(frame: CGRect, index: notifyView1, number: Int, name: String) {
+    convenience init(frame: CGRect, index: NotifyView, number: Int, name: String) {
         self.init(frame: frame)
         backgroundColor = .gray
         setTitle(name, for: .normal)
@@ -59,18 +59,18 @@ final class MyButton: UIButton {
         }
     }
 
-    // MARK: Private Methods
-    private func showBadge(index: notifyView1, number: Int) {
+    // MARK: - Private Methods
+    private func showBadge(index: NotifyView, number: Int) {
         // Tao view
         let notifyView = UIView()
-        let num = UILabel()
+        let numberLabel = UILabel()
 
         if number > 99 {
             notifyView.bounds.size = CGSize(width: 50, height: 30)
-            num.text = "99+"
+            numberLabel.text = "99+"
         } else {
             notifyView.bounds.size = CGSize(width: 30, height: 30)
-            num.text = String(number)
+            numberLabel.text = String(number)
         }
 
         notifyView.center = index.findPoint(bounds: bounds)
@@ -78,10 +78,10 @@ final class MyButton: UIButton {
         addSubview(notifyView)
 
         // Tao label
-        num.frame = notifyView.bounds
-        num.textAlignment = .center
-        num.textColor = .white
-        notifyView.addSubview(num)
+        numberLabel.frame = notifyView.bounds
+        numberLabel.textAlignment = .center
+        numberLabel.textColor = .white
+        notifyView.addSubview(numberLabel)
     }
 
     required init?(coder: NSCoder) {

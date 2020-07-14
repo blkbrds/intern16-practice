@@ -8,13 +8,13 @@
 
 import UIKit
 
-class BaiTap04: UIViewController {
+final class BaiTap04: UIViewController {
 
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet private weak var inputTextField: UITextField!
 
-    // MARK: - Propeties
-    var datePicker = Bundle.main.loadNibNamed("MyDatePickerView", owner: self, options: nil)?[0] as? MyDatePickerView
+    // MARK: - Properties
+    var myDatePickerView = Bundle.main.loadNibNamed("MyDatePickerView", owner: self, options: nil)?.first as? MyDatePickerView
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -24,10 +24,11 @@ class BaiTap04: UIViewController {
 
     // Private Function
     private func configUI() {
-        datePicker?.frame = CGRect(x: 0, y: 600, width: 414, height: 271)
-        view.addSubview(datePicker!)
-        datePicker?.isHidden = true
-        datePicker?.delegate = self
+        guard let myDatePickerView = myDatePickerView else { return }
+        myDatePickerView.frame = CGRect(x: 0, y: 600, width: 414, height: 271)
+        view.addSubview(myDatePickerView)
+        myDatePickerView.isHidden = true
+        myDatePickerView.delegate = self
         inputTextField.delegate = self
     }
 }
@@ -35,7 +36,7 @@ class BaiTap04: UIViewController {
 // MARK: - UITextFieldDelegate
 extension BaiTap04: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        datePicker?.isHidden = false
+        myDatePickerView?.isHidden = false
         return false
     }
 }
@@ -46,6 +47,6 @@ extension BaiTap04: MyDatePickerViewDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         inputTextField.text = dateFormatter.string(from: date)
-        datePicker?.isHidden = true
+        myDatePickerView?.isHidden = true
     }
 }
