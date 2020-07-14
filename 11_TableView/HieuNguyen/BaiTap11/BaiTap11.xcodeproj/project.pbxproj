@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D397D7C24BD4DF8001F76BB /* Data2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D397D7B24BD4DF8001F76BB /* Data2.plist */; };
+		7D397D7F24BD6C4F001F76BB /* NameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397D7E24BD6C4F001F76BB /* NameLabel.swift */; };
+		7D397D8224BD6D97001F76BB /* SectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397D8024BD6D97001F76BB /* SectionsTableViewCell.swift */; };
+		7D397D8324BD6D97001F76BB /* SectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397D8124BD6D97001F76BB /* SectionsTableViewCell.xib */; };
 		C46060D124BC845E003D9589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46060D024BC845E003D9589 /* AppDelegate.swift */; };
 		C46060D324BC845E003D9589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46060D224BC845E003D9589 /* SceneDelegate.swift */; };
 		C46060DA24BC845F003D9589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46060D924BC845F003D9589 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D397D7B24BD4DF8001F76BB /* Data2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data2.plist; sourceTree = "<group>"; };
+		7D397D7E24BD6C4F001F76BB /* NameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameLabel.swift; sourceTree = "<group>"; };
+		7D397D8024BD6D97001F76BB /* SectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsTableViewCell.swift; sourceTree = "<group>"; };
+		7D397D8124BD6D97001F76BB /* SectionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsTableViewCell.xib; sourceTree = "<group>"; };
 		C46060CD24BC845E003D9589 /* BaiTap11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46060D024BC845E003D9589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46060D224BC845E003D9589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D397D7D24BD6C24001F76BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D397D7E24BD6C4F001F76BB /* NameLabel.swift */,
+				7D397D8024BD6D97001F76BB /* SectionsTableViewCell.swift */,
+				7D397D8124BD6D97001F76BB /* SectionsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C46060C424BC845E003D9589 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +88,9 @@
 		C46060CF24BC845E003D9589 /* BaiTap11 */ = {
 			isa = PBXGroup;
 			children = (
-				C46060F524BCA398003D9589 /* BaiTap04 */,
-				C46060E924BC9D1C003D9589 /* BaiTap02.03 */,
-				C46060E424BC969B003D9589 /* BaiTap01 */,
+				C46060F524BCA398003D9589 /* BaiTap04.07.08.09 */,
+				C46060E924BC9D1C003D9589 /* BaiTap02.03.05.10 */,
+				C46060E424BC969B003D9589 /* BaiTap01.11.12 */,
 				C46060D024BC845E003D9589 /* AppDelegate.swift */,
 				C46060D224BC845E003D9589 /* SceneDelegate.swift */,
 				C46060D924BC845F003D9589 /* Assets.xcassets */,
@@ -82,16 +100,16 @@
 			path = BaiTap11;
 			sourceTree = "<group>";
 		};
-		C46060E424BC969B003D9589 /* BaiTap01 */ = {
+		C46060E424BC969B003D9589 /* BaiTap01.11.12 */ = {
 			isa = PBXGroup;
 			children = (
 				C46060E524BC9ACD003D9589 /* ExerciseOneViewController.swift */,
 				C46060E624BC9ACD003D9589 /* ExerciseOneViewController.xib */,
 			);
-			path = BaiTap01;
+			path = BaiTap01.11.12;
 			sourceTree = "<group>";
 		};
-		C46060E924BC9D1C003D9589 /* BaiTap02.03 */ = {
+		C46060E924BC9D1C003D9589 /* BaiTap02.03.05.10 */ = {
 			isa = PBXGroup;
 			children = (
 				C46060EE24BC9DB6003D9589 /* Data.plist */,
@@ -100,16 +118,18 @@
 				C46060F024BCA197003D9589 /* DetailViewController.swift */,
 				C46060F124BCA197003D9589 /* DetailViewController.xib */,
 			);
-			path = BaiTap02.03;
+			path = BaiTap02.03.05.10;
 			sourceTree = "<group>";
 		};
-		C46060F524BCA398003D9589 /* BaiTap04 */ = {
+		C46060F524BCA398003D9589 /* BaiTap04.07.08.09 */ = {
 			isa = PBXGroup;
 			children = (
+				7D397D7D24BD6C24001F76BB /* View */,
+				7D397D7B24BD4DF8001F76BB /* Data2.plist */,
 				C46060F624BCA3C3003D9589 /* SectionsViewController.swift */,
 				C46060F724BCA3C3003D9589 /* SectionsViewController.xib */,
 			);
-			path = BaiTap04;
+			path = BaiTap04.07.08.09;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +191,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46060DD24BC845F003D9589 /* LaunchScreen.storyboard in Resources */,
+				7D397D8324BD6D97001F76BB /* SectionsTableViewCell.xib in Resources */,
 				C46060F324BCA197003D9589 /* DetailViewController.xib in Resources */,
 				C46060F924BCA3C3003D9589 /* SectionsViewController.xib in Resources */,
 				C46060EF24BC9DB6003D9589 /* Data.plist in Resources */,
 				C46060ED24BC9D48003D9589 /* ContactsViewController.xib in Resources */,
 				C46060DA24BC845F003D9589 /* Assets.xcassets in Resources */,
+				7D397D7C24BD4DF8001F76BB /* Data2.plist in Resources */,
 				C46060E824BC9ACD003D9589 /* ExerciseOneViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,9 +210,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46060D124BC845E003D9589 /* AppDelegate.swift in Sources */,
+				7D397D8224BD6D97001F76BB /* SectionsTableViewCell.swift in Sources */,
 				C46060EC24BC9D48003D9589 /* ContactsViewController.swift in Sources */,
 				C46060F224BCA197003D9589 /* DetailViewController.swift in Sources */,
 				C46060E724BC9ACD003D9589 /* ExerciseOneViewController.swift in Sources */,
+				7D397D7F24BD6C4F001F76BB /* NameLabel.swift in Sources */,
 				C46060F824BCA3C3003D9589 /* SectionsViewController.swift in Sources */,
 				C46060D324BC845E003D9589 /* SceneDelegate.swift in Sources */,
 			);
