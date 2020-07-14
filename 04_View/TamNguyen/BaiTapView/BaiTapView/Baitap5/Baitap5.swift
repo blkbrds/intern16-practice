@@ -13,7 +13,7 @@ final class Bai5ViewController: UIViewController {
     //MARK: - IBOulet
     @IBOutlet private weak var bigView: UIView!
     @IBOutlet private weak var smallView: UIView!
-    @IBOutlet private var thumbLabel: UILabel!
+    @IBOutlet private weak var thumbLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
