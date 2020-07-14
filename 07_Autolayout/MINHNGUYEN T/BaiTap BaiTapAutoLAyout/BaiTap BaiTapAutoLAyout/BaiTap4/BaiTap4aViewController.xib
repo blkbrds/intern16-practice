@@ -44,9 +44,9 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="1/2" constant="-20" id="T4V-gd-2Fa"/>
+                <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="0.5" constant="-20" id="T4V-gd-2Fa"/>
                 <constraint firstItem="TPG-eG-7UI" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="bUN-74-COG"/>
-                <constraint firstItem="1Y7-V8-BtP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="3/2" constant="20" id="fKk-3B-u9m"/>
+                <constraint firstItem="1Y7-V8-BtP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="1.5" constant="20" id="fKk-3B-u9m"/>
                 <constraint firstItem="1Y7-V8-BtP" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="gZU-bn-9UA"/>
                 <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="r7J-tT-tQF"/>
                 <constraint firstItem="TPG-eG-7UI" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="t19-cX-rIg"/>
