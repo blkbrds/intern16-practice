@@ -7,7 +7,8 @@
 //
 
 import UIKit
-class BaiTap1ViewController: UIViewController {
+
+final class BaiTap1ViewController: UIViewController {
     
     //MARK: - Private Properties
     private let numberUser: Int = 30
@@ -26,18 +27,19 @@ class BaiTap1ViewController: UIViewController {
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
         scrollView = UIScrollView(frame: CGRect(x: 0, y: 10, width: screenWidth, height: screenHeight))
-        scrollView.contentSize = CGSize(width: screenWidth, height: 1800)
         let space: CGFloat = 10
         let widthUserView: CGFloat = 110
         let heightUserView: CGFloat = 165
         var yView: CGFloat = 50
         var xView: CGFloat = space
+        let heightScroll = Int(screenSize.height) * 3 - (numberUser / 3 * Int(space))
+        scrollView.contentSize = CGSize(width: screenWidth, height: CGFloat(heightScroll))
         view.addSubview(scrollView)
         for i in 0..<numberUser {
-            let User = UserView(frame: CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView))
-            User.delegate = self
-            User.usernameLabel?.text = names[i]
-            scrollView.addSubview(User)
+            let uSer = UserView(frame: CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView))
+            uSer.delegate = self
+            uSer.usernameLabel?.text = names[i]
+            scrollView.addSubview(uSer)
             if xView + widthUserView > screenWidth - xView {
                 yView += heightUserView + space
                 xView = space

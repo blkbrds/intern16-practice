@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BagdeNumberButton: UIButton {
+final class BagdeNumberButton: UIButton {
     
     enum PositionBadge {
         case bottomLeft
@@ -41,20 +41,20 @@ class BagdeNumberButton: UIButton {
             }
         }
     }
-
+    
     // MARK: - Public Properties
     var isShowBadge: Bool = true {
         didSet {
             showBadge()
         }
     }
-
+    
     var badgeNumber = 0 {
         didSet {
             updateLabel()
         }
     }
-
+    
     // MARK: - Lazy Properties
     lazy private var badgeLabel: UILabel = {
         let label = UILabel()
@@ -67,7 +67,7 @@ class BagdeNumberButton: UIButton {
         label.numberOfLines = 0
         return label
     }()
-
+    
     // MARK: - Private Function
     private func showBadge() {
         if isShowBadge {
@@ -76,20 +76,20 @@ class BagdeNumberButton: UIButton {
             badgeLabel.isHidden = true
         }
     }
-
+    
     private func updateLabel() {
         if badgeNumber == 0 {
             badgeLabel.isHidden = true
         } else {
             badgeLabel.frame.size = CGSize(width: badgeLabel.frame.width, height: badgeLabel.frame.height)
             if badgeNumber >= 1 && badgeNumber <= 99{
-                    badgeLabel.text = String(badgeNumber)
+                badgeLabel.text = String(badgeNumber)
             } else if badgeNumber > 99 {
-               badgeLabel.text = "99+"
+                badgeLabel.text = "99+"
             }
         }
     }
-
+    
     // MARK: Public Function
     func editPositionBagde(position: PositionBadge) {
         badgeLabel.center = position.position(with: bounds)

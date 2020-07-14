@@ -7,30 +7,31 @@
 //
 
 import UIKit
+
 // MARK: - Protocol
 protocol UserViewDelegate : class {
     func view(_ view: UserView, needsPerform action: UserView.Action)
 }
 
-class UserView: UIView {
-    // MARK: - Properties
-    var userAvartarImageView: UIImageView?
-    var usernameLabel: UILabel?
-    weak var delegate: UserViewDelegate?
+final class UserView: UIView {
+    // MARK: - Private Properties
+    private var userAvartarImageView: UIImageView!
+    var usernameLabel: UILabel!
+    weak var delegate: UserViewDelegate!
     
-    // MARK: - Lift Cycle
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         userAvartarImageView = UIImageView(image: UIImage(named: "avartar"))
-        userAvartarImageView?.frame = frame
-        userAvartarImageView?.contentMode = .scaleToFill
-        addSubview(userAvartarImageView!)
+        userAvartarImageView.frame = frame
+        userAvartarImageView.contentMode = .scaleToFill
+        addSubview(userAvartarImageView)
         // add name
         usernameLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
-        usernameLabel?.backgroundColor = .lightGray
-        usernameLabel?.textColor = .blue
-        usernameLabel?.textAlignment = .center
+        usernameLabel.backgroundColor = .lightGray
+        usernameLabel.textColor = .blue
+        usernameLabel.textAlignment = .center
         guard let username = usernameLabel else { return }
         addSubview(username)
         // add button
@@ -45,13 +46,13 @@ class UserView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Objc Funtion
+    // MARK: - Objc Funtion
     @objc func handleClickButton() {
-     delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel?.text ?? ""))
+        delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel?.text ?? ""))
     }
 }
 
-//  MARK: - extension UserView
+// MARK: - Config UserView
 extension UserView {
     enum Action {
         case didTapImage(nameLabel : String)

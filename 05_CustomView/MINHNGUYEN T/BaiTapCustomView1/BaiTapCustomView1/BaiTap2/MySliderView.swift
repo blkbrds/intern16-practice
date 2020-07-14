@@ -13,14 +13,14 @@ protocol MySliderViewDelegate: class {
     func view(_ view: MySliderView, needsPerform action: MySliderView.Action)
 }
 
-class MySliderView: UIView {
+final class MySliderView: UIView {
     
     // MARK: - IBOutlet Properties
-    @IBOutlet weak var blueImageView: UIImageView!
-    @IBOutlet weak var whiteImageView: UIImageView!
-    @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var thumbView: UIView!
-    weak var delegate: MySliderViewDelegate?
+    @IBOutlet weak private var blueImageView: UIImageView!
+    @IBOutlet weak private var whiteImageView: UIImageView!
+    @IBOutlet weak private var valueLabel: UILabel!
+    @IBOutlet weak private var thumbView: UIView!
+    weak var delegate: MySliderViewDelegate!
     var valueSlider: Int?
     
     // MARK: - awakeFromNib

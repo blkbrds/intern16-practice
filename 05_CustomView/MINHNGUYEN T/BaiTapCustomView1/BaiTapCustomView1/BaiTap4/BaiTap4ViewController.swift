@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BaiTap4ViewController: UIViewController {
+final class BaiTap4ViewController: UIViewController {
     
     // MARK: - IBOutlet
-    @IBOutlet weak var datetimeTextField: UITextField!
+    @IBOutlet weak private var datetimeTextField: UITextField!
     
     // MARK: - Private Properties
     private var datePickerView: DatePickerView!
