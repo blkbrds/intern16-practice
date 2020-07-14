@@ -45,7 +45,7 @@ final class Bai7ViewController: UIViewController {
     @objc private func doubleTapAction() {
         monkeyTextField.isHidden = false
         monkeyTextField.text = "Khi la toi"
-        self.monkeyTextField.alpha = 1
+        monkeyTextField.alpha = 1
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
             UIView.animate(withDuration: 3) {
                 self.monkeyTextField.alpha = 0
