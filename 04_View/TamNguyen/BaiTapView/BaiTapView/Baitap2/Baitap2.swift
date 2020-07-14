@@ -10,9 +10,8 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
-    //MARK: -Propeties
-    
-    var names : [String] = ["Thien", "Tam", "Nguyen", "Khanh", "Van", "Dat", "Tuan", "Trung", "Tinh"]
+    //MARK: -Properties
+    var names :[String] = ["Thien", "Tam", "Nguyen", "Khanh", "Van", "Dat", "Tuan", "Trung", "Tinh"]
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
