@@ -1,7 +1,7 @@
 //Bai tap 01
 import UIKit
 
-class MyViewController: UIViewController {
+final class MyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

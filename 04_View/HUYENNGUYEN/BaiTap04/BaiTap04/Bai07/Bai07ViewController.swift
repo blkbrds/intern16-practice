@@ -1,12 +1,12 @@
 //  Bai07ViewController.swift
 import UIKit
 
-class Bai07ViewController: UIViewController {
+final class Bai07ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var girlImageView: UIImageView!
-    @IBOutlet weak var viewMessage: UIImageView!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var girlImageView: UIImageView!
+    @IBOutlet private weak var viewMessage: UIImageView!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -30,12 +30,12 @@ class Bai07ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+    @objc private func handleTap(_ sender: UITapGestureRecognizer) {
         textLabel.text = "I'm girl"
         
     }
     
-    @objc func handleTap2(_ sender: UITapGestureRecognizer) {
+    @objc private func handleTap2(_ sender: UITapGestureRecognizer) {
         textLabel.text = "I'm boy"
     }
 }

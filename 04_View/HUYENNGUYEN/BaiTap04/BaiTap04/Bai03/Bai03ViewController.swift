@@ -1,7 +1,7 @@
 //  Bai03ViewController.swift
 import UIKit
 
-class Bai03ViewController: UIViewController {
+final class Bai03ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var usernameTextField: UITextField!
@@ -11,10 +11,10 @@ class Bai03ViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
     
     enum LoginError: String {
-        case chuaNhapUsernameVaPassword = "Bạn chưa nhập dữ liệu"
-        case chuaNhapUsername = "Bạn chưa nhập username"
-        case chuaNhapPassword = "Bạn chưa nhập password"
-        case nhapSaiUsernameVaPassword = "Nhập sai tên username hoặc password"
+        case notEnterData = "Bạn chưa nhập dữ liệu"
+        case notEnterUserName = "Bạn chưa nhập username"
+        case notEnterPassword = "Bạn chưa nhập password"
+        case errorEnterData = "Nhập sai tên username hoặc password"
     }
     
     private let validUsername = "Admin"
@@ -28,9 +28,6 @@ class Bai03ViewController: UIViewController {
         usernameTextField.delegate = self
         let tapToScreen = UITapGestureRecognizer(target: self, action: #selector(tapScreen(_:)))
         view.addGestureRecognizer(tapToScreen)
-        //        loginButton.addTarget(self, action: #selector(loginActionTouch(_:)), for: .touchUpInside)
-        //        clearButton.addTarget(self, action: #selector(clearActionTouch(_:)), for: .touchUpInside)
-        
     }
     
     // MARK: - Private Methods
@@ -62,43 +59,31 @@ class Bai03ViewController: UIViewController {
         let result: (String?, String?) = (username,password)
         switch result {
         case ("", ""), (nil, nil):
-            errorLabel.text = LoginError.chuaNhapUsernameVaPassword.rawValue
+            errorLabel.text = LoginError.notEnterData.rawValue
         case ("", _):
-            errorLabel.text = LoginError.chuaNhapPassword.rawValue
+            errorLabel.text = LoginError.notEnterPassword.rawValue
         case (_, ""):
-            errorLabel.text = LoginError.chuaNhapUsername.rawValue
+            errorLabel.text = LoginError.notEnterUserName.rawValue
         case (validUsername, validPassword):
             errorLabel.text = "Đăng nhập thành công"
         default:
-            errorLabel.text = LoginError.nhapSaiUsernameVaPassword.rawValue
+            errorLabel.text = LoginError.errorEnterData.rawValue
         }
     }
     
-    
-    @IBAction func loginButtonAction(_ sender: UIButton) {
+    // MARK: - IBAction
+    @IBAction private func loginButtonAction(_ sender: UIButton) {
         checkLogin()
         errorLabel.isHidden = false
     }
-    @IBAction func clearButtonAction(_ sender: UIButton) {
+    @IBAction private func clearButtonAction(_ sender: UIButton) {
         usernameTextField.text = nil
         passwordTextField.text = nil
         errorLabel.isHidden = true
     }
     
-    //// MARK: - objc
-    //@objc func loginActionTouch(_ sender: Any) {
-    //    if (usernameTextField.text?.contains("admin"))! && (passwordTextField.text?.contains("admin123"))! {
-    //        errorLabel.isHidden = false
-    //    } else { errorLabel.isHidden = true }
-    //}
-    //
-    //@objc func clearActionTouch(_ sender: Any) {
-    //    usernameTextField.text = nil
-    //    passwordTextField.text = nil
-    //    errorLabel.isHidden = true
-    //}
-    //
-    @objc func tapScreen(_ sender: UITapGestureRecognizer) {
+    // MARK: - objc
+    @objc private func tapScreen(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
 }
