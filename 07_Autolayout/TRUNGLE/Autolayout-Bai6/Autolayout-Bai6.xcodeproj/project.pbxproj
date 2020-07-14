@@ -21,6 +21,8 @@
 		515C8FE424BA14620064B956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515C8FE224BA14620064B956 /* LaunchScreen.storyboard */; };
 		515C8FEE24BA14870064B956 /* Bai6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C8FEC24BA14870064B956 /* Bai6ViewController.swift */; };
 		515C8FEF24BA14870064B956 /* Bai6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515C8FED24BA14870064B956 /* Bai6ViewController.xib */; };
+		51AC03A324BDD33C00AA5DFE /* bai10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC03A124BDD33C00AA5DFE /* bai10ViewController.swift */; };
+		51AC03A424BDD33C00AA5DFE /* bai10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51AC03A224BDD33C00AA5DFE /* bai10ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		515C8FE524BA14620064B956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515C8FEC24BA14870064B956 /* Bai6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai6ViewController.swift; sourceTree = "<group>"; };
 		515C8FED24BA14870064B956 /* Bai6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai6ViewController.xib; sourceTree = "<group>"; };
+		51AC03A124BDD33C00AA5DFE /* bai10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bai10ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/Autolayout-Bai6/Autolayout-Bai6/Bai10./bai10ViewController.swift"; sourceTree = "<group>"; };
+		51AC03A224BDD33C00AA5DFE /* bai10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = bai10ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/Autolayout-Bai6/Autolayout-Bai6/Bai10./bai10ViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		515C8FD624BA14600064B956 /* Autolayout-Bai6 */ = {
 			isa = PBXGroup;
 			children = (
+				51AC03A024BDD32A00AA5DFE /* Bai10. */,
 				512CF36A24BB6E5500AC9CEE /* bai9 */,
 				512CF36524BB6CB000AC9CEE /* Bai8 */,
 				515C8FEB24BA14760064B956 /* bai6 */,
@@ -113,6 +118,15 @@
 				512CF36224BB6A4400AC9CEE /* bai6-2ViewController.xib */,
 			);
 			path = bai6;
+			sourceTree = "<group>";
+		};
+		51AC03A024BDD32A00AA5DFE /* Bai10. */ = {
+			isa = PBXGroup;
+			children = (
+				51AC03A124BDD33C00AA5DFE /* bai10ViewController.swift */,
+				51AC03A224BDD33C00AA5DFE /* bai10ViewController.xib */,
+			);
+			path = Bai10.;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,7 @@
 			files = (
 				512CF36924BB6CDE00AC9CEE /* bai8ViewController.xib in Resources */,
 				512CF36E24BB6E6100AC9CEE /* Bai9ViewController.xib in Resources */,
+				51AC03A424BDD33C00AA5DFE /* bai10ViewController.xib in Resources */,
 				515C8FEF24BA14870064B956 /* Bai6ViewController.xib in Resources */,
 				515C8FE424BA14620064B956 /* LaunchScreen.storyboard in Resources */,
 				515C8FE124BA14620064B956 /* Assets.xcassets in Resources */,
@@ -196,6 +211,7 @@
 				515C8FD824BA14600064B956 /* AppDelegate.swift in Sources */,
 				512CF36D24BB6E6100AC9CEE /* Bai9ViewController.swift in Sources */,
 				515C8FDA24BA14600064B956 /* SceneDelegate.swift in Sources */,
+				51AC03A324BDD33C00AA5DFE /* bai10ViewController.swift in Sources */,
 				512CF36324BB6A4400AC9CEE /* bai6-2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
