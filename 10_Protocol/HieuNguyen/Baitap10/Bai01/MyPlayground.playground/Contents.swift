@@ -102,8 +102,22 @@ let haiCau = HaiCau()
 let doi = Doi()
 let caSau = CaSau()
 
-let dongVat = [caChuon, bo, ga, vit, caMap, heo, haiCau, doi, caSau] as [Any]
+let dongVat: [DongVat] = [caChuon, bo, ga, vit, caMap, heo, haiCau, doi, caSau]
 
-for i in 0..<dongVat.count {
-    print(dongVat[i])
+// bai tap 1
+func printBai1() -> [DongVat]{
+    var danhSach: [DongVat] = []
+    
+    for dv in dongVat {
+        if let dv = dv as? Chim {
+            if dv.isBay {
+                danhSach.append(dv)
+            }
+        }
+    }
+    return danhSach
+}
+let result = printBai1()
+for rs in result {
+    print(rs.ten())
 }
