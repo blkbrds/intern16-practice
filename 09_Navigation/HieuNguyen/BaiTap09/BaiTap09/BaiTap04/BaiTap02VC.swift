@@ -13,7 +13,10 @@ class BaiTap02VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "News Feed"
-        
+        setupView()
+    }
+    
+    private func setupView() {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1820863485, green: 0.3001145422, blue: 0.5367071629, alpha: 1)
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -21,14 +24,10 @@ class BaiTap02VC: UIViewController {
         let image:UIImage = UIImage(systemName: "person.fill")!
         let userButton = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = userButton
-        navigationItem.rightBarButtonItem?.tintColor = .white        
+        navigationItem.rightBarButtonItem?.tintColor = .white
         
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
         navigationItem.leftBarButtonItem = searchButton
         navigationItem.leftBarButtonItem?.tintColor = .white
-        
     }
-    
-    
-
 }
