@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0458AD624B5D28A00F9FA72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AD524B5D28A00F9FA72 /* AppDelegate.swift */; };
+		F0458AD824B5D28A00F9FA72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AD724B5D28A00F9FA72 /* SceneDelegate.swift */; };
+		F0458ADA24B5D28A00F9FA72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AD924B5D28A00F9FA72 /* ViewController.swift */; };
+		F0458ADF24B5D28E00F9FA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0458ADE24B5D28E00F9FA72 /* Assets.xcassets */; };
+		F0458AEC24B5D2FC00F9FA72 /* BaiTap01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AEA24B5D2FC00F9FA72 /* BaiTap01.swift */; };
+		F0458AED24B5D2FC00F9FA72 /* BaiTap01.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0458AEB24B5D2FC00F9FA72 /* BaiTap01.xib */; };
+		F0458AF124B5D43000F9FA72 /* BaiTap01A.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AEF24B5D43000F9FA72 /* BaiTap01A.swift */; };
+		F0458AF224B5D43000F9FA72 /* BaiTap01A.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0458AF024B5D43000F9FA72 /* BaiTap01A.xib */; };
+		F046E79024BD4E09001EA0F8 /* BaiTap13.swift in Sources */ = {isa = PBXBuildFile; fileRef = F046E78E24BD4E09001EA0F8 /* BaiTap13.swift */; };
+		F046E79124BD4E09001EA0F8 /* BaiTap13.xib in Resources */ = {isa = PBXBuildFile; fileRef = F046E78F24BD4E09001EA0F8 /* BaiTap13.xib */; };
+		F065770C24B6C4210017CC76 /* BaiTap03C.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065770A24B6C4210017CC76 /* BaiTap03C.swift */; };
+		F065770D24B6C4210017CC76 /* BaiTap03C.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065770B24B6C4210017CC76 /* BaiTap03C.xib */; };
+		F065771124B6C6280017CC76 /* BaiTap04A.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065770F24B6C6280017CC76 /* BaiTap04A.swift */; };
+		F065771224B6C6280017CC76 /* BaiTap04A.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065771024B6C6280017CC76 /* BaiTap04A.xib */; };
+		F065771524B6F1C50017CC76 /* Baitap04B.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065771324B6F1C50017CC76 /* Baitap04B.swift */; };
+		F065771624B6F1C50017CC76 /* Baitap04B.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065771424B6F1C50017CC76 /* Baitap04B.xib */; };
+		F065771924B6FD270017CC76 /* BaiTap04C.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065771724B6FD270017CC76 /* BaiTap04C.swift */; };
+		F065771A24B6FD270017CC76 /* BaiTap04C.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065771824B6FD270017CC76 /* BaiTap04C.xib */; };
+		F065771E24B6FDE10017CC76 /* BaiTap05A.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065771C24B6FDE10017CC76 /* BaiTap05A.swift */; };
+		F065771F24B6FDE10017CC76 /* BaiTap05A.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065771D24B6FDE10017CC76 /* BaiTap05A.xib */; };
+		F065772224B6FE0C0017CC76 /* BaiTap04D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065772024B6FE0C0017CC76 /* BaiTap04D.swift */; };
+		F065772324B6FE0C0017CC76 /* BaiTap04D.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065772124B6FE0C0017CC76 /* BaiTap04D.xib */; };
+		F065772724B700BD0017CC76 /* BaiTap06.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065772524B700BD0017CC76 /* BaiTap06.swift */; };
+		F065772824B700BD0017CC76 /* BaiTap06.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065772624B700BD0017CC76 /* BaiTap06.xib */; };
+		F065772C24B702410017CC76 /* BaiTap07A.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065772A24B702410017CC76 /* BaiTap07A.swift */; };
+		F065772D24B702410017CC76 /* BaiTap07A.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065772B24B702410017CC76 /* BaiTap07A.xib */; };
+		F065773024B702F00017CC76 /* BaiTap07B.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065772E24B702F00017CC76 /* BaiTap07B.swift */; };
+		F065773124B702F00017CC76 /* BaiTap07B.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065772F24B702F00017CC76 /* BaiTap07B.xib */; };
+		F065773524B7048F0017CC76 /* BaiTap08.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065773324B7048F0017CC76 /* BaiTap08.swift */; };
+		F065773624B7048F0017CC76 /* BaiTap08.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065773424B7048F0017CC76 /* BaiTap08.xib */; };
+		F065773A24B70F470017CC76 /* BaiTap09.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065773824B70F470017CC76 /* BaiTap09.swift */; };
+		F065773B24B70F470017CC76 /* BaiTap09.xib in Resources */ = {isa = PBXBuildFile; fileRef = F065773924B70F470017CC76 /* BaiTap09.xib */; };
+		F089010124B6B57500A49E02 /* BaiTap02A.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08900FF24B6B57500A49E02 /* BaiTap02A.swift */; };
+		F089010224B6B57500A49E02 /* BaiTap02A.xib in Resources */ = {isa = PBXBuildFile; fileRef = F089010024B6B57500A49E02 /* BaiTap02A.xib */; };
+		F089010524B6B71700A49E02 /* BaiTap02B.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089010324B6B71700A49E02 /* BaiTap02B.swift */; };
+		F089010624B6B71700A49E02 /* BaiTap02B.xib in Resources */ = {isa = PBXBuildFile; fileRef = F089010424B6B71700A49E02 /* BaiTap02B.xib */; };
+		F089010924B6B8A400A49E02 /* BaiTap03A.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089010724B6B8A400A49E02 /* BaiTap03A.swift */; };
+		F089010A24B6B8A400A49E02 /* BaiTap03A.xib in Resources */ = {isa = PBXBuildFile; fileRef = F089010824B6B8A400A49E02 /* BaiTap03A.xib */; };
+		F089010E24B6BDB600A49E02 /* BaiTap03B.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089010C24B6BDB600A49E02 /* BaiTap03B.swift */; };
+		F089010F24B6BDB600A49E02 /* BaiTap03B.xib in Resources */ = {isa = PBXBuildFile; fileRef = F089010D24B6BDB600A49E02 /* BaiTap03B.xib */; };
+		F08E2CC624BD680E006C2912 /* BaiTap14.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E2CC424BD680E006C2912 /* BaiTap14.swift */; };
+		F08E2CC724BD680E006C2912 /* BaiTap14.xib in Resources */ = {isa = PBXBuildFile; fileRef = F08E2CC524BD680E006C2912 /* BaiTap14.xib */; };
+		F0E70D7624BBFD9A00C96EEC /* BaiTap10.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E70D7424BBFD9A00C96EEC /* BaiTap10.swift */; };
+		F0E70D7724BBFD9A00C96EEC /* BaiTap10.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E70D7524BBFD9A00C96EEC /* BaiTap10.xib */; };
+		F0E70D7D24BC530C00C96EEC /* BaiTap11.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E70D7B24BC530C00C96EEC /* BaiTap11.swift */; };
+		F0E70D7E24BC530C00C96EEC /* BaiTap11.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E70D7C24BC530C00C96EEC /* BaiTap11.xib */; };
+		F0E70D8224BC608C00C96EEC /* BaiTap12.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E70D8024BC608C00C96EEC /* BaiTap12.swift */; };
+		F0E70D8324BC608C00C96EEC /* BaiTap12.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E70D8124BC608C00C96EEC /* BaiTap12.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F0458AD224B5D28900F9FA72 /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0458AD524B5D28A00F9FA72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0458AD724B5D28A00F9FA72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F0458AD924B5D28A00F9FA72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0458ADE24B5D28E00F9FA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0458AE324B5D28E00F9FA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0458AEA24B5D2FC00F9FA72 /* BaiTap01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01.swift; sourceTree = "<group>"; };
+		F0458AEB24B5D2FC00F9FA72 /* BaiTap01.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap01.xib; sourceTree = "<group>"; };
+		F0458AEF24B5D43000F9FA72 /* BaiTap01A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap01A.swift; sourceTree = "<group>"; };
+		F0458AF024B5D43000F9FA72 /* BaiTap01A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap01A.xib; sourceTree = "<group>"; };
+		F046E78E24BD4E09001EA0F8 /* BaiTap13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap13.swift; sourceTree = "<group>"; };
+		F046E78F24BD4E09001EA0F8 /* BaiTap13.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap13.xib; sourceTree = "<group>"; };
+		F065770A24B6C4210017CC76 /* BaiTap03C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03C.swift; sourceTree = "<group>"; };
+		F065770B24B6C4210017CC76 /* BaiTap03C.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03C.xib; sourceTree = "<group>"; };
+		F065770F24B6C6280017CC76 /* BaiTap04A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04A.swift; sourceTree = "<group>"; };
+		F065771024B6C6280017CC76 /* BaiTap04A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04A.xib; sourceTree = "<group>"; };
+		F065771324B6F1C50017CC76 /* Baitap04B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap04B.swift; sourceTree = "<group>"; };
+		F065771424B6F1C50017CC76 /* Baitap04B.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap04B.xib; sourceTree = "<group>"; };
+		F065771724B6FD270017CC76 /* BaiTap04C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04C.swift; sourceTree = "<group>"; };
+		F065771824B6FD270017CC76 /* BaiTap04C.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04C.xib; sourceTree = "<group>"; };
+		F065771C24B6FDE10017CC76 /* BaiTap05A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap05A.swift; sourceTree = "<group>"; };
+		F065771D24B6FDE10017CC76 /* BaiTap05A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap05A.xib; sourceTree = "<group>"; };
+		F065772024B6FE0C0017CC76 /* BaiTap04D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap04D.swift; sourceTree = "<group>"; };
+		F065772124B6FE0C0017CC76 /* BaiTap04D.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap04D.xib; sourceTree = "<group>"; };
+		F065772524B700BD0017CC76 /* BaiTap06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap06.swift; sourceTree = "<group>"; };
+		F065772624B700BD0017CC76 /* BaiTap06.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap06.xib; sourceTree = "<group>"; };
+		F065772A24B702410017CC76 /* BaiTap07A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap07A.swift; sourceTree = "<group>"; };
+		F065772B24B702410017CC76 /* BaiTap07A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap07A.xib; sourceTree = "<group>"; };
+		F065772E24B702F00017CC76 /* BaiTap07B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap07B.swift; sourceTree = "<group>"; };
+		F065772F24B702F00017CC76 /* BaiTap07B.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap07B.xib; sourceTree = "<group>"; };
+		F065773324B7048F0017CC76 /* BaiTap08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap08.swift; sourceTree = "<group>"; };
+		F065773424B7048F0017CC76 /* BaiTap08.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap08.xib; sourceTree = "<group>"; };
+		F065773824B70F470017CC76 /* BaiTap09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap09.swift; sourceTree = "<group>"; };
+		F065773924B70F470017CC76 /* BaiTap09.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap09.xib; sourceTree = "<group>"; };
+		F08900FF24B6B57500A49E02 /* BaiTap02A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02A.swift; sourceTree = "<group>"; };
+		F089010024B6B57500A49E02 /* BaiTap02A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02A.xib; sourceTree = "<group>"; };
+		F089010324B6B71700A49E02 /* BaiTap02B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02B.swift; sourceTree = "<group>"; };
+		F089010424B6B71700A49E02 /* BaiTap02B.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap02B.xib; sourceTree = "<group>"; };
+		F089010724B6B8A400A49E02 /* BaiTap03A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03A.swift; sourceTree = "<group>"; };
+		F089010824B6B8A400A49E02 /* BaiTap03A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03A.xib; sourceTree = "<group>"; };
+		F089010C24B6BDB600A49E02 /* BaiTap03B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap03B.swift; sourceTree = "<group>"; };
+		F089010D24B6BDB600A49E02 /* BaiTap03B.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap03B.xib; sourceTree = "<group>"; };
+		F08E2CC424BD680E006C2912 /* BaiTap14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap14.swift; sourceTree = "<group>"; };
+		F08E2CC524BD680E006C2912 /* BaiTap14.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap14.xib; sourceTree = "<group>"; };
+		F0E70D7424BBFD9A00C96EEC /* BaiTap10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap10.swift; sourceTree = "<group>"; };
+		F0E70D7524BBFD9A00C96EEC /* BaiTap10.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap10.xib; sourceTree = "<group>"; };
+		F0E70D7B24BC530C00C96EEC /* BaiTap11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap11.swift; sourceTree = "<group>"; };
+		F0E70D7C24BC530C00C96EEC /* BaiTap11.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap11.xib; sourceTree = "<group>"; };
+		F0E70D8024BC608C00C96EEC /* BaiTap12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap12.swift; sourceTree = "<group>"; };
+		F0E70D8124BC608C00C96EEC /* BaiTap12.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap12.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0458ACF24B5D28900F9FA72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0458AC924B5D28900F9FA72 = {
+			isa = PBXGroup;
+			children = (
+				F0458AD424B5D28900F9FA72 /* Autolayout */,
+				F0458AD324B5D28900F9FA72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0458AD324B5D28900F9FA72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0458AD224B5D28900F9FA72 /* Autolayout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0458AD424B5D28900F9FA72 /* Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				F08E2CC324BD67F7006C2912 /* BaiTap14 */,
+				F046E78D24BD4DA9001EA0F8 /* BaiTap13 */,
+				F0E70D7F24BC607D00C96EEC /* BaiTap12 */,
+				F0E70D7A24BC52F700C96EEC /* BaiTap11 */,
+				F0E70D7324BBFD8600C96EEC /* BaiTap10 */,
+				F065773724B70F310017CC76 /* BaiTap09 */,
+				F065773224B7047F0017CC76 /* BaiTap08 */,
+				F065772924B7022F0017CC76 /* BaiTap07 */,
+				F065772424B7008D0017CC76 /* BaiTap06 */,
+				F065771B24B6FDCD0017CC76 /* BaiTap05 */,
+				F065770E24B6C60A0017CC76 /* BaiTap04 */,
+				F089010B24B6B8AB00A49E02 /* BaiTap03 */,
+				F08900FE24B6B53F00A49E02 /* BaiTap02 */,
+				F0458AEE24B5D42000F9FA72 /* BaiTap01A */,
+				F0458AE924B5D2E800F9FA72 /* BaiTap01 */,
+				F0458AD524B5D28A00F9FA72 /* AppDelegate.swift */,
+				F0458AD724B5D28A00F9FA72 /* SceneDelegate.swift */,
+				F0458AD924B5D28A00F9FA72 /* ViewController.swift */,
+				F0458ADE24B5D28E00F9FA72 /* Assets.xcassets */,
+				F0458AE324B5D28E00F9FA72 /* Info.plist */,
+			);
+			path = Autolayout;
+			sourceTree = "<group>";
+		};
+		F0458AE924B5D2E800F9FA72 /* BaiTap01 */ = {
+			isa = PBXGroup;
+			children = (
+				F0458AEA24B5D2FC00F9FA72 /* BaiTap01.swift */,
+				F0458AEB24B5D2FC00F9FA72 /* BaiTap01.xib */,
+			);
+			path = BaiTap01;
+			sourceTree = "<group>";
+		};
+		F0458AEE24B5D42000F9FA72 /* BaiTap01A */ = {
+			isa = PBXGroup;
+			children = (
+				F0458AEF24B5D43000F9FA72 /* BaiTap01A.swift */,
+				F0458AF024B5D43000F9FA72 /* BaiTap01A.xib */,
+			);
+			path = BaiTap01A;
+			sourceTree = "<group>";
+		};
+		F046E78D24BD4DA9001EA0F8 /* BaiTap13 */ = {
+			isa = PBXGroup;
+			children = (
+				F046E78E24BD4E09001EA0F8 /* BaiTap13.swift */,
+				F046E78F24BD4E09001EA0F8 /* BaiTap13.xib */,
+			);
+			path = BaiTap13;
+			sourceTree = "<group>";
+		};
+		F065770E24B6C60A0017CC76 /* BaiTap04 */ = {
+			isa = PBXGroup;
+			children = (
+				F065770F24B6C6280017CC76 /* BaiTap04A.swift */,
+				F065771024B6C6280017CC76 /* BaiTap04A.xib */,
+				F065771324B6F1C50017CC76 /* Baitap04B.swift */,
+				F065771424B6F1C50017CC76 /* Baitap04B.xib */,
+				F065771724B6FD270017CC76 /* BaiTap04C.swift */,
+				F065771824B6FD270017CC76 /* BaiTap04C.xib */,
+				F065772024B6FE0C0017CC76 /* BaiTap04D.swift */,
+				F065772124B6FE0C0017CC76 /* BaiTap04D.xib */,
+			);
+			path = BaiTap04;
+			sourceTree = "<group>";
+		};
+		F065771B24B6FDCD0017CC76 /* BaiTap05 */ = {
+			isa = PBXGroup;
+			children = (
+				F065771C24B6FDE10017CC76 /* BaiTap05A.swift */,
+				F065771D24B6FDE10017CC76 /* BaiTap05A.xib */,
+			);
+			path = BaiTap05;
+			sourceTree = "<group>";
+		};
+		F065772424B7008D0017CC76 /* BaiTap06 */ = {
+			isa = PBXGroup;
+			children = (
+				F065772524B700BD0017CC76 /* BaiTap06.swift */,
+				F065772624B700BD0017CC76 /* BaiTap06.xib */,
+			);
+			path = BaiTap06;
+			sourceTree = "<group>";
+		};
+		F065772924B7022F0017CC76 /* BaiTap07 */ = {
+			isa = PBXGroup;
+			children = (
+				F065772A24B702410017CC76 /* BaiTap07A.swift */,
+				F065772B24B702410017CC76 /* BaiTap07A.xib */,
+				F065772E24B702F00017CC76 /* BaiTap07B.swift */,
+				F065772F24B702F00017CC76 /* BaiTap07B.xib */,
+			);
+			path = BaiTap07;
+			sourceTree = "<group>";
+		};
+		F065773224B7047F0017CC76 /* BaiTap08 */ = {
+			isa = PBXGroup;
+			children = (
+				F065773324B7048F0017CC76 /* BaiTap08.swift */,
+				F065773424B7048F0017CC76 /* BaiTap08.xib */,
+			);
+			path = BaiTap08;
+			sourceTree = "<group>";
+		};
+		F065773724B70F310017CC76 /* BaiTap09 */ = {
+			isa = PBXGroup;
+			children = (
+				F065773824B70F470017CC76 /* BaiTap09.swift */,
+				F065773924B70F470017CC76 /* BaiTap09.xib */,
+			);
+			path = BaiTap09;
+			sourceTree = "<group>";
+		};
+		F08900FE24B6B53F00A49E02 /* BaiTap02 */ = {
+			isa = PBXGroup;
+			children = (
+				F08900FF24B6B57500A49E02 /* BaiTap02A.swift */,
+				F089010024B6B57500A49E02 /* BaiTap02A.xib */,
+				F089010324B6B71700A49E02 /* BaiTap02B.swift */,
+				F089010424B6B71700A49E02 /* BaiTap02B.xib */,
+			);
+			path = BaiTap02;
+			sourceTree = "<group>";
+		};
+		F089010B24B6B8AB00A49E02 /* BaiTap03 */ = {
+			isa = PBXGroup;
+			children = (
+				F089010724B6B8A400A49E02 /* BaiTap03A.swift */,
+				F089010824B6B8A400A49E02 /* BaiTap03A.xib */,
+				F089010C24B6BDB600A49E02 /* BaiTap03B.swift */,
+				F089010D24B6BDB600A49E02 /* BaiTap03B.xib */,
+				F065770A24B6C4210017CC76 /* BaiTap03C.swift */,
+				F065770B24B6C4210017CC76 /* BaiTap03C.xib */,
+			);
+			path = BaiTap03;
+			sourceTree = "<group>";
+		};
+		F08E2CC324BD67F7006C2912 /* BaiTap14 */ = {
+			isa = PBXGroup;
+			children = (
+				F08E2CC424BD680E006C2912 /* BaiTap14.swift */,
+				F08E2CC524BD680E006C2912 /* BaiTap14.xib */,
+			);
+			path = BaiTap14;
+			sourceTree = "<group>";
+		};
+		F0E70D7324BBFD8600C96EEC /* BaiTap10 */ = {
+			isa = PBXGroup;
+			children = (
+				F0E70D7424BBFD9A00C96EEC /* BaiTap10.swift */,
+				F0E70D7524BBFD9A00C96EEC /* BaiTap10.xib */,
+			);
+			path = BaiTap10;
+			sourceTree = "<group>";
+		};
+		F0E70D7A24BC52F700C96EEC /* BaiTap11 */ = {
+			isa = PBXGroup;
+			children = (
+				F0E70D7B24BC530C00C96EEC /* BaiTap11.swift */,
+				F0E70D7C24BC530C00C96EEC /* BaiTap11.xib */,
+			);
+			path = BaiTap11;
+			sourceTree = "<group>";
+		};
+		F0E70D7F24BC607D00C96EEC /* BaiTap12 */ = {
+			isa = PBXGroup;
+			children = (
+				F0E70D8024BC608C00C96EEC /* BaiTap12.swift */,
+				F0E70D8124BC608C00C96EEC /* BaiTap12.xib */,
+			);
+			path = BaiTap12;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0458AD124B5D28900F9FA72 /* Autolayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0458AE624B5D28E00F9FA72 /* Build configuration list for PBXNativeTarget "Autolayout" */;
+			buildPhases = (
+				F0458ACE24B5D28900F9FA72 /* Sources */,
+				F0458ACF24B5D28900F9FA72 /* Frameworks */,
+				F0458AD024B5D28900F9FA72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Autolayout;
+			productName = Autolayout;
+			productReference = F0458AD224B5D28900F9FA72 /* Autolayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0458ACA24B5D28900F9FA72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Chipuscu;
+				TargetAttributes = {
+					F0458AD124B5D28900F9FA72 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = F0458ACD24B5D28900F9FA72 /* Build configuration list for PBXProject "Autolayout" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0458AC924B5D28900F9FA72;
+			productRefGroup = F0458AD324B5D28900F9FA72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0458AD124B5D28900F9FA72 /* Autolayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0458AD024B5D28900F9FA72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F089010F24B6BDB600A49E02 /* BaiTap03B.xib in Resources */,
+				F065771A24B6FD270017CC76 /* BaiTap04C.xib in Resources */,
+				F065772824B700BD0017CC76 /* BaiTap06.xib in Resources */,
+				F065772D24B702410017CC76 /* BaiTap07A.xib in Resources */,
+				F046E79124BD4E09001EA0F8 /* BaiTap13.xib in Resources */,
+				F0458AF224B5D43000F9FA72 /* BaiTap01A.xib in Resources */,
+				F065771224B6C6280017CC76 /* BaiTap04A.xib in Resources */,
+				F065772324B6FE0C0017CC76 /* BaiTap04D.xib in Resources */,
+				F089010224B6B57500A49E02 /* BaiTap02A.xib in Resources */,
+				F0E70D7E24BC530C00C96EEC /* BaiTap11.xib in Resources */,
+				F065773124B702F00017CC76 /* BaiTap07B.xib in Resources */,
+				F065773B24B70F470017CC76 /* BaiTap09.xib in Resources */,
+				F0E70D7724BBFD9A00C96EEC /* BaiTap10.xib in Resources */,
+				F0E70D8324BC608C00C96EEC /* BaiTap12.xib in Resources */,
+				F065771F24B6FDE10017CC76 /* BaiTap05A.xib in Resources */,
+				F0458ADF24B5D28E00F9FA72 /* Assets.xcassets in Resources */,
+				F08E2CC724BD680E006C2912 /* BaiTap14.xib in Resources */,
+				F065771624B6F1C50017CC76 /* Baitap04B.xib in Resources */,
+				F0458AED24B5D2FC00F9FA72 /* BaiTap01.xib in Resources */,
+				F065770D24B6C4210017CC76 /* BaiTap03C.xib in Resources */,
+				F089010624B6B71700A49E02 /* BaiTap02B.xib in Resources */,
+				F089010A24B6B8A400A49E02 /* BaiTap03A.xib in Resources */,
+				F065773624B7048F0017CC76 /* BaiTap08.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0458ACE24B5D28900F9FA72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F065772724B700BD0017CC76 /* BaiTap06.swift in Sources */,
+				F065771124B6C6280017CC76 /* BaiTap04A.swift in Sources */,
+				F0E70D8224BC608C00C96EEC /* BaiTap12.swift in Sources */,
+				F065771524B6F1C50017CC76 /* Baitap04B.swift in Sources */,
+				F0458ADA24B5D28A00F9FA72 /* ViewController.swift in Sources */,
+				F065773024B702F00017CC76 /* BaiTap07B.swift in Sources */,
+				F046E79024BD4E09001EA0F8 /* BaiTap13.swift in Sources */,
+				F065772224B6FE0C0017CC76 /* BaiTap04D.swift in Sources */,
+				F0E70D7624BBFD9A00C96EEC /* BaiTap10.swift in Sources */,
+				F065771E24B6FDE10017CC76 /* BaiTap05A.swift in Sources */,
+				F089010124B6B57500A49E02 /* BaiTap02A.swift in Sources */,
+				F065773524B7048F0017CC76 /* BaiTap08.swift in Sources */,
+				F0458AD624B5D28A00F9FA72 /* AppDelegate.swift in Sources */,
+				F089010524B6B71700A49E02 /* BaiTap02B.swift in Sources */,
+				F0458AD824B5D28A00F9FA72 /* SceneDelegate.swift in Sources */,
+				F065772C24B702410017CC76 /* BaiTap07A.swift in Sources */,
+				F0E70D7D24BC530C00C96EEC /* BaiTap11.swift in Sources */,
+				F065770C24B6C4210017CC76 /* BaiTap03C.swift in Sources */,
+				F0458AEC24B5D2FC00F9FA72 /* BaiTap01.swift in Sources */,
+				F065771924B6FD270017CC76 /* BaiTap04C.swift in Sources */,
+				F089010E24B6BDB600A49E02 /* BaiTap03B.swift in Sources */,
+				F0458AF124B5D43000F9FA72 /* BaiTap01A.swift in Sources */,
+				F089010924B6B8A400A49E02 /* BaiTap03A.swift in Sources */,
+				F08E2CC624BD680E006C2912 /* BaiTap14.swift in Sources */,
+				F065773A24B70F470017CC76 /* BaiTap09.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F0458AE424B5D28E00F9FA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0458AE524B5D28E00F9FA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0458AE724B5D28E00F9FA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Autolayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chipuscu.Autolayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0458AE824B5D28E00F9FA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Autolayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chipuscu.Autolayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0458ACD24B5D28900F9FA72 /* Build configuration list for PBXProject "Autolayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0458AE424B5D28E00F9FA72 /* Debug */,
+				F0458AE524B5D28E00F9FA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0458AE624B5D28E00F9FA72 /* Build configuration list for PBXNativeTarget "Autolayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0458AE724B5D28E00F9FA72 /* Debug */,
+				F0458AE824B5D28E00F9FA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0458ACA24B5D28900F9FA72 /* Project object */;
+}
