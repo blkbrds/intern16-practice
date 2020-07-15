@@ -18,6 +18,7 @@ class Bai3ViewController: UIViewController {
     
     // MARK: - Private functions
     private func configButton() {
+        view.backgroundColor = .white
         let emaillButton = CustomView(frame: CGRect(x: 100, y: 50, width: 150, height: 60), number: 50, position: .TopLeft, nameButton: "Email")
         view.addSubview(emaillButton)
         
