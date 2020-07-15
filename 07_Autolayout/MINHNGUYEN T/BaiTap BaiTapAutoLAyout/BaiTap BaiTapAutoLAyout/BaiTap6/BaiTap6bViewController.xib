@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap6bViewController" customModule="BaiTap_BaiTapAutoLAyout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xO5-dD-hex" userLabel="View2">
+                    <rect key="frame" x="98.666666666666686" y="419" width="59" height="58"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xO5-dD-hex" secondAttribute="height" multiplier="59:58" id="SVS-nZ-gke"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bet-vs-zwh" userLabel="View3">
+                    <rect key="frame" x="177.66666666666666" y="418.66666666666669" width="58.666666666666657" height="58.666666666666686"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bet-vs-zwh" secondAttribute="height" multiplier="1:1" id="VhT-3O-O1q"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sB-bP-Rgc" userLabel="View4">
+                    <rect key="frame" x="256.33333333333331" y="419" width="59" height="58"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8sB-bP-Rgc" secondAttribute="height" multiplier="59:58" id="2vc-pN-DCy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEh-hy-6cy" userLabel="View5">
+                    <rect key="frame" x="335.33333333333331" y="418.66666666666669" width="58.666666666666686" height="58.666666666666686"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CEh-hy-6cy" secondAttribute="height" multiplier="1:1" id="xd7-i9-wgI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g90-er-4AP" userLabel="View1">
+                    <rect key="frame" x="20" y="418.66666666666669" width="58.666666666666657" height="58.666666666666686"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="g90-er-4AP" secondAttribute="height" multiplier="1:1" id="JVl-rk-0rB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="bet-vs-zwh" firstAttribute="width" secondItem="g90-er-4AP" secondAttribute="width" id="4ZF-ZB-B8R"/>
+                <constraint firstItem="xO5-dD-hex" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4aC-FU-eAI"/>
+                <constraint firstItem="8sB-bP-Rgc" firstAttribute="width" secondItem="g90-er-4AP" secondAttribute="width" id="5yM-18-rUx"/>
+                <constraint firstItem="8sB-bP-Rgc" firstAttribute="leading" secondItem="bet-vs-zwh" secondAttribute="trailing" constant="20" id="CK1-Pl-KT7"/>
+                <constraint firstItem="xO5-dD-hex" firstAttribute="leading" secondItem="g90-er-4AP" secondAttribute="trailing" constant="20" id="DLh-kC-pw5"/>
+                <constraint firstItem="CEh-hy-6cy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="PNz-Tp-6iP"/>
+                <constraint firstItem="bet-vs-zwh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="S8G-3q-RYv"/>
+                <constraint firstItem="g90-er-4AP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bga-LS-038"/>
+                <constraint firstItem="CEh-hy-6cy" firstAttribute="leading" secondItem="8sB-bP-Rgc" secondAttribute="trailing" constant="20" id="ggq-fv-stQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CEh-hy-6cy" secondAttribute="trailing" constant="20" id="ju4-T4-6ot"/>
+                <constraint firstItem="g90-er-4AP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qC0-Qr-EFS"/>
+                <constraint firstItem="bet-vs-zwh" firstAttribute="leading" secondItem="xO5-dD-hex" secondAttribute="trailing" constant="20" id="u8C-YU-IzT"/>
+                <constraint firstItem="xO5-dD-hex" firstAttribute="width" secondItem="g90-er-4AP" secondAttribute="width" id="usi-0k-gcl"/>
+                <constraint firstItem="CEh-hy-6cy" firstAttribute="width" secondItem="g90-er-4AP" secondAttribute="width" id="ve6-Ul-Row"/>
+                <constraint firstItem="8sB-bP-Rgc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xnC-F2-3s4"/>
+                <constraint firstItem="bet-vs-zwh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="y1g-y5-7OC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="127"/>
+        </view>
+    </objects>
+</document>

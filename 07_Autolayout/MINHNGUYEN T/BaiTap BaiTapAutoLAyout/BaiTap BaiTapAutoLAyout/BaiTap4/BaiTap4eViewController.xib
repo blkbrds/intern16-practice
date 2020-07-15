@@ -18,38 +18,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPG-eG-7UI" userLabel="View2">
-                    <rect key="frame" x="163" y="404" width="88.5" height="88.5"/>
+                    <rect key="frame" x="157" y="398" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="TPG-eG-7UI" secondAttribute="height" multiplier="1:1" id="BfY-Tu-UHn"/>
+                        <constraint firstAttribute="width" secondItem="TPG-eG-7UI" secondAttribute="height" multiplier="1:1" id="K4w-Im-miY"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Y7-V8-BtP" userLabel="View3">
-                    <rect key="frame" x="266.5" y="405" width="85.5" height="86"/>
+                    <rect key="frame" x="295" y="398" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="1Y7-V8-BtP" secondAttribute="height" multiplier="1:1" id="iTw-kh-H9Z"/>
+                        <constraint firstAttribute="width" secondItem="1Y7-V8-BtP" secondAttribute="height" multiplier="1:1" id="cV6-WB-azU"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKG-Dw-8hL" userLabel="View1">
-                    <rect key="frame" x="59.5" y="404" width="88.5" height="88.5"/>
+                    <rect key="frame" x="19" y="398" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="WKG-Dw-8hL" secondAttribute="height" multiplier="1:1" id="S3T-Mj-BkA"/>
+                        <constraint firstAttribute="width" secondItem="WKG-Dw-8hL" secondAttribute="height" multiplier="1:1" id="qIe-aj-7hD"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="4Xx-Z6-rzb"/>
-                <constraint firstItem="TPG-eG-7UI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6oJ-f5-GGP"/>
-                <constraint firstItem="TPG-eG-7UI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Brx-wM-aCW"/>
-                <constraint firstItem="WKG-Dw-8hL" firstAttribute="trailing" secondItem="TPG-eG-7UI" secondAttribute="leading" constant="-15" id="Kfa-9g-dEJ"/>
-                <constraint firstItem="1Y7-V8-BtP" firstAttribute="leading" secondItem="TPG-eG-7UI" secondAttribute="trailing" constant="15" id="VRV-DJ-jD3"/>
-                <constraint firstItem="1Y7-V8-BtP" firstAttribute="height" secondItem="TPG-eG-7UI" secondAttribute="height" multiplier="0.966184" id="fIg-64-g8a"/>
-                <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sD5-wz-eym"/>
-                <constraint firstItem="WKG-Dw-8hL" firstAttribute="height" secondItem="TPG-eG-7UI" secondAttribute="height" id="tW2-lN-YYM"/>
-                <constraint firstItem="1Y7-V8-BtP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xNZ-iv-RQE"/>
+                <constraint firstItem="1Y7-V8-BtP" firstAttribute="width" secondItem="WKG-Dw-8hL" secondAttribute="height" multiplier="1:1" id="4cg-cl-lrW"/>
+                <constraint firstItem="TPG-eG-7UI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E9p-JD-whp"/>
+                <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1:3" id="PBA-xR-VcJ"/>
+                <constraint firstItem="TPG-eG-7UI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Qf9-aD-JnR"/>
+                <constraint firstItem="WKG-Dw-8hL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="25:224" id="RbE-gy-LGv"/>
+                <constraint firstItem="1Y7-V8-BtP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="5:3" id="YZT-r1-lal"/>
+                <constraint firstItem="TPG-eG-7UI" firstAttribute="width" secondItem="WKG-Dw-8hL" secondAttribute="height" multiplier="1:1" id="bXJ-IB-HE4"/>
+                <constraint firstItem="WKG-Dw-8hL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="trL-Mf-lrd"/>
+                <constraint firstItem="1Y7-V8-BtP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zdq-l4-BSQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="127"/>
