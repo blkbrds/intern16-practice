@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  BaiTapAutolayout
+//  BaiTap07
 //
 //  Created by Trung Le D. on 7/15/20.
 //  Copyright © 2020 Trung Le D. All rights reserved.
@@ -17,11 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        self.window = window
-        window.rootViewController = Bai9ViewController()
-        window.makeKeyAndVisible()
+      guard let windowScene = (scene as? UIWindowScene) else { return }
+               let window = UIWindow(windowScene: windowScene)
+               self.window = window
+               window.rootViewController = bai10ViewController()
+               window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  BaiTapAutolayout
+//  BaiTap07
 //
 //  Created by Trung Le D. on 7/15/20.
 //  Copyright © 2020 Trung Le D. All rights reserved.
