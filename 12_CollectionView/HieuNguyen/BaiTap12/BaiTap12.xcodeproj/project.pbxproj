@@ -16,6 +16,10 @@
 		7D397DB624BEE18A001F76BB /* ExerciseTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397DB424BEE18A001F76BB /* ExerciseTwoViewController.xib */; };
 		7D397DB724BEE18A001F76BB /* ExerciseTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397DB524BEE18A001F76BB /* ExerciseTwoViewController.swift */; };
 		7D397DB924BEEA88001F76BB /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397DB824BEEA88001F76BB /* CustomLayout.swift */; };
+		C45B0FAB24BF43C6006FC075 /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B0FA924BF43C6006FC075 /* HeaderReusableView.swift */; };
+		C45B0FAC24BF43C6006FC075 /* HeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45B0FAA24BF43C6006FC075 /* HeaderReusableView.xib */; };
+		C45B0FB024BF4791006FC075 /* ExerciseFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45B0FAE24BF4791006FC075 /* ExerciseFourViewController.swift */; };
+		C45B0FB124BF4791006FC075 /* ExerciseFourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45B0FAF24BF4791006FC075 /* ExerciseFourViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		7D397DB424BEE18A001F76BB /* ExerciseTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseTwoViewController.xib; sourceTree = "<group>"; };
 		7D397DB524BEE18A001F76BB /* ExerciseTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTwoViewController.swift; sourceTree = "<group>"; };
 		7D397DB824BEEA88001F76BB /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		C45B0FA924BF43C6006FC075 /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
+		C45B0FAA24BF43C6006FC075 /* HeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderReusableView.xib; sourceTree = "<group>"; };
+		C45B0FAE24BF4791006FC075 /* ExerciseFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFourViewController.swift; sourceTree = "<group>"; };
+		C45B0FAF24BF4791006FC075 /* ExerciseFourViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseFourViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +70,9 @@
 		7D397D8F24BEC362001F76BB /* BaiTap12 */ = {
 			isa = PBXGroup;
 			children = (
+				C45B0FAD24BF4763006FC075 /* BaiTap04 */,
 				7D397DB324BEE17A001F76BB /* BaiTap02 */,
-				7D397DA424BEC3C1001F76BB /* BaiTap01 */,
+				7D397DA424BEC3C1001F76BB /* BaiTap01.03 */,
 				7D397D9024BEC362001F76BB /* AppDelegate.swift */,
 				7D397D9224BEC362001F76BB /* SceneDelegate.swift */,
 				7D397D9924BEC366001F76BB /* Assets.xcassets */,
@@ -73,13 +82,15 @@
 			path = BaiTap12;
 			sourceTree = "<group>";
 		};
-		7D397DA424BEC3C1001F76BB /* BaiTap01 */ = {
+		7D397DA424BEC3C1001F76BB /* BaiTap01.03 */ = {
 			isa = PBXGroup;
 			children = (
+				C45B0FA924BF43C6006FC075 /* HeaderReusableView.swift */,
+				C45B0FAA24BF43C6006FC075 /* HeaderReusableView.xib */,
 				7D397DA524BEC3F9001F76BB /* ExerciseOneViewController.swift */,
 				7D397DA624BEC3F9001F76BB /* ExerciseOneViewController.xib */,
 			);
-			path = BaiTap01;
+			path = BaiTap01.03;
 			sourceTree = "<group>";
 		};
 		7D397DB324BEE17A001F76BB /* BaiTap02 */ = {
@@ -90,6 +101,15 @@
 				7D397DB424BEE18A001F76BB /* ExerciseTwoViewController.xib */,
 			);
 			path = BaiTap02;
+			sourceTree = "<group>";
+		};
+		C45B0FAD24BF4763006FC075 /* BaiTap04 */ = {
+			isa = PBXGroup;
+			children = (
+				C45B0FAE24BF4791006FC075 /* ExerciseFourViewController.swift */,
+				C45B0FAF24BF4791006FC075 /* ExerciseFourViewController.xib */,
+			);
+			path = BaiTap04;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +172,9 @@
 			files = (
 				7D397D9D24BEC366001F76BB /* LaunchScreen.storyboard in Resources */,
 				7D397D9A24BEC366001F76BB /* Assets.xcassets in Resources */,
+				C45B0FAC24BF43C6006FC075 /* HeaderReusableView.xib in Resources */,
 				7D397DA824BEC3F9001F76BB /* ExerciseOneViewController.xib in Resources */,
+				C45B0FB124BF4791006FC075 /* ExerciseFourViewController.xib in Resources */,
 				7D397DB624BEE18A001F76BB /* ExerciseTwoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,8 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45B0FB024BF4791006FC075 /* ExerciseFourViewController.swift in Sources */,
 				7D397D9124BEC362001F76BB /* AppDelegate.swift in Sources */,
 				7D397DB924BEEA88001F76BB /* CustomLayout.swift in Sources */,
+				C45B0FAB24BF43C6006FC075 /* HeaderReusableView.swift in Sources */,
 				7D397DA724BEC3F9001F76BB /* ExerciseOneViewController.swift in Sources */,
 				7D397D9324BEC362001F76BB /* SceneDelegate.swift in Sources */,
 				7D397DB724BEE18A001F76BB /* ExerciseTwoViewController.swift in Sources */,
@@ -236,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -290,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

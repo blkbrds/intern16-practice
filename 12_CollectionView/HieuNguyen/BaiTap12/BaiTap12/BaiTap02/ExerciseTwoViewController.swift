@@ -43,7 +43,6 @@ extension ExerciseTwoViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         let label = UILabel()
-        label.text = String(indexPath.row)
         label.backgroundColor = .blue
         label.textColor = .white
         label.textAlignment = .center
