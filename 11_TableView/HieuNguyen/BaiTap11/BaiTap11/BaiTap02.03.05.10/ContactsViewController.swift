@@ -101,9 +101,7 @@ class ContactsViewController: UIViewController {
 
         // Iterate all containers and append their contacts to our results array
         for container in allContainers {
-
             let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
-
             do {
                 let containerResults = try contactStore.unifiedContacts(matching: fetchPredicate, keysToFetch: keysToFetch as! [CNKeyDescriptor])
                 results.append(contentsOf: containerResults)
@@ -112,7 +110,6 @@ class ContactsViewController: UIViewController {
                 print("Error fetching results for container")
             }
         }
-
         return results
     }
 }
@@ -152,9 +149,5 @@ extension ContactsViewController: UISearchBarDelegate {
             return
         }
         search(keyword: keyword)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("123")
     }
 }
