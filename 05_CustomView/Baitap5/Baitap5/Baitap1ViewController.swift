@@ -10,14 +10,55 @@ import UIKit
 
 class Baitap1ViewController: UIViewController {
 
+    var userInfo: [UserInfo] = []
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .white
+        addNameForUser()
+        createUserAvatar()
+    }
+
+    private func addNameForUser() {
+        var userInfo: [UserInfo] = []
+        for i in 0...32 {
+            userInfo.append(UserInfo(userNameIndex: "Name \(i + 1)"))
+        }
+        self.userInfo = userInfo
+    }
+
+    private func createUserAvatar() {
+
+        let screen = UIScreen.main.bounds
+        let screenWidth = screen.size.width
+        let screenHeight = screen.size.height
+
+        let avatarWidthGap = round(screenWidth / 4 - 300 / 4)
+        let avatarHeightGap = round(screenHeight / 4 - 450 / 4)
         
-        let userView = UserView(frame: CGRect(x: 50, y: 100, width: 100, height: 250))
-        userView.delegate = self
-        userView.userAvatar?.image = UIImage(named: "avatar.png")
-        userView.userName?.text = "Nguyên"
-        view.addSubview(userView)
+        scrollView.frame =  CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        scrollView.contentSize = CGSize(width: screenWidth, height: avatarHeightGap * 12 + 150 * 11)
+        view.addSubview(scrollView)
+        
+        for i in 0...32 {
+            var x: CGFloat = avatarWidthGap
+            let z: CGFloat = CGFloat(i / 3)
+            let y: CGFloat = 150 * z + avatarHeightGap * (z + 1)
+            if i % 3 == 1 {
+                x = 100 + avatarWidthGap * 2
+            } else if i % 3 == 2 {
+                x = 200 + avatarWidthGap * 3
+            } else {
+                x = avatarWidthGap
+            }
+
+            let userView = UserView(frame: CGRect(x: x, y: y, width: 100, height: 150), userInfo: userInfo[i], index: i)
+            userView.delegate = self
+            scrollView.addSubview(userView)
+        }
     }
 }
 

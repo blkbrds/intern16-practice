@@ -13,50 +13,63 @@ protocol UserViewDelegate: class {
 }
 
 class UserView: UIView {
-    
-    var userAvatar: UIImageView?
-    var userName: UILabel?
-    
+
+    var userAvatarImageView: UIImageView = UIImageView()
+    var userNameLabel: UILabel = UILabel()
+    var userInfo: UserInfo?
+    var index: Int = 0
+
     weak var delegate: UserViewDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
 
-        //Add user avatar
-        let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        let userAvatar = UIImageView(image: UIImage(named: "avatar.png"))
-        userAvatar.frame = frame
-        userAvatar.contentMode = .scaleToFill
-        userAvatar.layer.borderWidth = 1
-        userAvatar.layer.borderColor = UIColor.black.cgColor
-        addSubview(userAvatar)
-
-        //Add user name
-        let userName = UILabel(frame: CGRect(x: userAvatar.frame.origin.x, y: userAvatar.frame.origin.y + 100, width: 100, height: 50))
-        userName.text = "Name"
-        userName.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.9333333333, blue: 0.7529411765, alpha: 1)
-        userName.textColor = #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1)
-        userName.textAlignment = .center
-        addSubview(userName)
-
-        //Add button
-        let userButton = UIButton(frame: CGRect(x: userAvatar.frame.origin.x, y: userAvatar.frame.origin.y, width: 100, height: 250))
-        userButton.backgroundColor = .clear
-//        let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(buttonDidClick))
-//        uiTapGestureRecognizer.name = userName.text
-//        userButton.addGestureRecognizer(uiTapGestureRecognizer)
-        userButton.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
-        addSubview(userButton)
+    convenience init(frame: CGRect, userInfo: UserInfo?, index: Int) {
+        self.init(frame: frame)
+        createUser()
+        self.index = index
+        self.userInfo = userInfo
+        createUserInfo()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func buttonDidClick() {
-//        let userName = sender.name
-//        print("\(userName ?? "no name")")
-//        delegate?.userView(self, didSelect: 10)
-        print("Button is clicked!")
+    func createUserInfo() {
+        guard let userInfo = userInfo else { return }
+        userNameLabel.text = userInfo.userNameIndex
+        userAvatarImageView.image = UIImage(named: userInfo.userImageIndex)
+    }
+
+    func createUser() {
+        //Add user avatar
+        let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        userAvatarImageView.frame = frame
+        userAvatarImageView.contentMode = .scaleToFill
+        userAvatarImageView.layer.borderWidth = 1
+        userAvatarImageView.layer.borderColor = UIColor.black.cgColor
+        addSubview(userAvatarImageView)
+
+        //Add user name
+        userNameLabel = UILabel(frame: CGRect(x: userAvatarImageView.frame.origin.x, y: userAvatarImageView.frame.origin.y + 100, width: 100, height: 50))
+        userNameLabel.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.9333333333, blue: 0.7529411765, alpha: 1)
+        userNameLabel.textColor = #colorLiteral(red: 0, green: 0.568627451, blue: 1, alpha: 1)
+        userNameLabel.textAlignment = .center
+        addSubview(userNameLabel)
+
+        //Add button
+        let userButton = UIButton(frame: CGRect(x: userAvatarImageView.frame.origin.x, y: userAvatarImageView.frame.origin.y, width: 100, height: 150))
+        userButton.backgroundColor = .clear
+        userButton.tag = index
+        userButton.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
+        addSubview(userButton)
+    }
+
+    @objc func buttonDidClick(sender: UIButton) {
+        let userName = userInfo?.userNameIndex
+        print(userName ?? "No name")
+        delegate?.userView(self, didSelect: index)
     }
 }

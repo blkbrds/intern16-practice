@@ -16,6 +16,7 @@
 		220F42BF24B61F720059635A /* Baitap1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220F42BD24B61F720059635A /* Baitap1ViewController.xib */; };
 		220F42C124B622000059635A /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F42C024B622000059635A /* UserView.swift */; };
 		220F42C424B623380059635A /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 220F42C324B623380059635A /* avatar.png */; };
+		226E707624BDF30200876FB9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E707524BDF30200876FB9 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		220F42BD24B61F720059635A /* Baitap1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap1ViewController.xib; sourceTree = "<group>"; };
 		220F42C024B622000059635A /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		220F42C324B623380059635A /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		226E707524BDF30200876FB9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				220F42B624B61F3D0059635A /* Info.plist */,
 				220F42BC24B61F720059635A /* Baitap1ViewController.swift */,
 				220F42BD24B61F720059635A /* Baitap1ViewController.xib */,
+				226E707524BDF30200876FB9 /* UserInfo.swift */,
 				220F42C024B622000059635A /* UserView.swift */,
 			);
 			path = Baitap5;
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226E707624BDF30200876FB9 /* UserInfo.swift in Sources */,
 				220F42AD24B61F3C0059635A /* ViewController.swift in Sources */,
 				220F42A924B61F3C0059635A /* AppDelegate.swift in Sources */,
 				220F42C124B622000059635A /* UserView.swift in Sources */,

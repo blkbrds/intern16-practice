@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap1ViewController" customModule="Baitap5" customModuleProvider="target">
             <connections>
+                <outlet property="scrollView" destination="bkW-Ab-tiN" id="OYb-pV-NJ9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,22 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-Fe-mco">
-                    <rect key="frame" x="29" y="61" width="353" height="791"/>
-                    <viewLayoutGuide key="contentLayoutGuide" id="XbN-SD-19n"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="MRd-12-syY"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-Ab-tiN">
+                    <rect key="frame" x="0.0" y="32" width="414" height="841"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="9RB-4Q-bcM"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="ss0-bc-6AW"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="ad6-Fe-mco" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0yu-aE-hvV"/>
-                <constraint firstItem="ad6-Fe-mco" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Hf-F1-dlB"/>
-                <constraint firstItem="ad6-Fe-mco" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AbG-hh-LXC"/>
-                <constraint firstItem="ad6-Fe-mco" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hhd-Fm-Ttr"/>
-                <constraint firstItem="ad6-Fe-mco" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IAK-7J-eMs"/>
-                <constraint firstItem="ad6-Fe-mco" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qz0-4L-4pm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ad6-Fe-mco" secondAttribute="trailing" id="gEK-v2-LBL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ad6-Fe-mco" secondAttribute="bottom" id="rbY-ha-Jph"/>
+                <constraint firstItem="bkW-Ab-tiN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3TP-nd-low"/>
+                <constraint firstItem="bkW-Ab-tiN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3lL-ri-ioL"/>
+                <constraint firstItem="bkW-Ab-tiN" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MeJ-fd-2rL"/>
+                <constraint firstItem="bkW-Ab-tiN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n3I-YG-YXC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
