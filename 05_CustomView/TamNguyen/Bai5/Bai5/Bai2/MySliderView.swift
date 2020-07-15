@@ -16,9 +16,9 @@ protocol MySliderViewDelegate: class {
 final class MySliderView: UIView {
     
     //MARK: IBOulet
-    @IBOutlet weak var grayViewImage: UIImageView!
-    @IBOutlet weak var blueViewImage: UIImageView!
-    @IBOutlet weak var percentLabel: UILabel!
+    @IBOutlet private weak var grayViewImage: UIImageView!
+    @IBOutlet private weak var blueViewImage: UIImageView!
+    @IBOutlet private weak var percentLabel: UILabel!
     
     enum Action {
         case updatePercent(percent: Int)

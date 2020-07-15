@@ -52,7 +52,7 @@ extension Bai4ViewController: DatePickerViewDelegate {
 }
 
 // MARK: - UITextFieldDelegate
-extension Bai4ViewController : UITextFieldDelegate {
+extension Bai4ViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         datePickerView.isHidden = false
         return false

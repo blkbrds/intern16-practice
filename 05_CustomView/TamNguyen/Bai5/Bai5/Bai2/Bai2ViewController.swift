@@ -10,7 +10,7 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     //MARK: - IBOulets
-    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet private weak var valueTextField: UITextField!
     
     //MARK: - Properties
     var mySliderView = MySliderView()
