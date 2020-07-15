@@ -6,8 +6,7 @@ struct account {
     var images: String
 }
 let list = [account(names: "Username 1", images: "user"),account(names: "Username 2", images: "user1"),account(names: "Username 3", images: "user2"),account(names: "Username 4", images: "user3"),account(names: "Username 5", images: "user4"),account(names: "Username 6", images: "user5")]
-//var names: [String] = ["UserName 1", "UserName 2", "UserName 3", "UserName 4", "UserName 5", "UserName 6"]
-//var images: [String] = ["user", "user1", "user2", "user3", "user4", "user5"]
+
 final class Bai2ViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
