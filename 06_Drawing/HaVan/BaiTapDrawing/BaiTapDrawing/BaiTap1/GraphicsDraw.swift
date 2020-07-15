@@ -7,12 +7,13 @@
 //
 
 import UIKit
+
 @IBDesignable
-class GraphicsDraw: UIView {
+final class GraphicsDraw: UIView {
+
     // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -49,10 +50,15 @@ class GraphicsDraw: UIView {
     }
     
     // add label
-    func addLabel(position: CGPoint, name: String) {
-        let label = UILabel(frame: CGRect(x: position.x, y: position.y, width: 50, height: 50))
+    func addLabel(position: CGPoint, name: String, fontSize: CGFloat? = nil) {
+        let label = UILabel(frame: CGRect(x: position.x, y: position.y, width: 30, height: 50))
         label.text = name
-        label.adjustsFontSizeToFitWidth = true
+        label.textAlignment = .center
+        if let size = fontSize {
+            label.font = UIFont.systemFont(ofSize: size)
+        } else {
+            label.adjustsFontSizeToFitWidth = true
+        }
         self.addSubview(label)
     }
 }

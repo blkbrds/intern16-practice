@@ -14,7 +14,7 @@ final class CircleGraphic: UIView {
     private var path = UIBezierPath()
     private let shapeLayer1 = CAShapeLayer()
     
-    // MARK: -Life cycle
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         layer.masksToBounds = false
@@ -30,9 +30,8 @@ final class CircleGraphic: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: -Private functions
+    // MARK: - Private functions
     private func createCircle(with value: Int) {
-        
         // background layer
         let frameWidth = min(bounds.width, bounds.height)
         let path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: frameWidth, height: frameWidth))
@@ -63,7 +62,7 @@ final class CircleGraphic: UIView {
         let numberLabel = UILabel()
         numberLabel.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.width)
         numberLabel.textAlignment = .center
-        numberLabel.text = String(num)
+        numberLabel.text = String(num) + " %"
         self.addSubview(numberLabel)
     }
 }
