@@ -9,32 +9,34 @@
 import UIKit
 
 final class CustomPickerViewController: UIViewController {
-
+    
     @IBOutlet weak var textField: UITextField!
     
     var customPickerView : CustomPickerView?
     override func viewDidLoad() {
         super.viewDidLoad()
         customPickerView = Bundle.main.loadNibNamed( "CustomPickerView", owner: self, options: nil)?.first as? CustomPickerView
-        customPickerView?.config()
-        customPickerView?.delegate = self
-        view.addSubview(customPickerView!)
+        guard let customPickerView = customPickerView else { return }
+        customPickerView.config()
+        customPickerView.delegate = self
+        view.addSubview(customPickerView)
         textField.delegate = self
     }
 }
 extension CustomPickerViewController: UITextFieldDelegate {
-  func textFieldDidBeginEditing(_ textField: UITextField) {
-    customPickerView?.show(animation: true)
-    view.endEditing(true)
-  }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let customPickerView = customPickerView else { return }
+        customPickerView.show(animation: true)
+        view.endEditing(true)
+    }
 }
 extension CustomPickerViewController: CustomePickerViewDelegate {
     func selectDate(datePicker pickerView: CustomPickerView, needsPerformAction action: CustomPickerView.Action, selectDate: Date?) {
-    guard let date = selectDate else { return }
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd-MM-yyyy"
-    let dateString = dateFormatter.string(from: date)
-    textField.text = dateString
+        guard let date = selectDate else { return }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let dateString = dateFormatter.string(from: date)
+        textField.text = dateString
         print(dateString)
-  }
+    }
 }

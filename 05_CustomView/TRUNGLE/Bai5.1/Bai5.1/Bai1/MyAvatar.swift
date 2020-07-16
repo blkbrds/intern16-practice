@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol SubViewDelegate: class {
+protocol MyAvatarDelegate: class {
     func didTapOnAvatar(_ myAvatar: MyAvatar)
 }
 final class MyAvatar: UIView {
     // MARK: - Properties
-    var myAvatarDelegate :SubViewDelegate?
+    weak var myAvatarDelegate :MyAvatarDelegate?
     var userAvatar : UIImageView!
     var userName : UILabel = UILabel()
     var button : UIButton!
@@ -25,7 +25,7 @@ final class MyAvatar: UIView {
     }
     // MARK: - Function
     private func setupView() {
-       let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         userAvatar = UIImageView(image: UIImage(named: "avatar"))
         userAvatar.frame = frame
         userAvatar.contentMode = .scaleToFill

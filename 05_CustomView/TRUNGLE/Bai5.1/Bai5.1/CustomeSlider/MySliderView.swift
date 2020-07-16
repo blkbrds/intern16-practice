@@ -44,15 +44,6 @@ final class MySliderView: UIView {
         nut.text = String(number)
         delegate?.view(view: self, needPerformAction: .updatePercent(percent: number))
     }
-    //    func updatePercent(percent: Int) {
-    //       guard let num = value else { return }
-    //        let newHeight = (white.frame.height * CGFloat(num)) / 100
-    //        let newY = white.bounds.height - newHeight
-    //        nut.frame = CGRect(x: blue.frame.origin.x, y: newY, width: blue.frame.width, height: newHeight)
-    //        nut.center.y = newY
-    //            nut.text = String(num)
-    //
-    //    }
     func updatePercent() {
         guard let temp = value else { return }
         let newHeight = (white.frame.height * CGFloat(temp)) / 100

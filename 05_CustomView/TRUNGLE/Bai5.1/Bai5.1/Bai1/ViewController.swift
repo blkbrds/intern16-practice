@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, SubViewDelegate {
+class ViewController: UIViewController, MyAvatarDelegate {
     func didTapOnAvatar(_ myAvatar: MyAvatar) {
         print(myAvatar.userName.text ?? "no name")
     }
