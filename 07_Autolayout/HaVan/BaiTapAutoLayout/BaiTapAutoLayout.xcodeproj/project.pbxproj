@@ -62,6 +62,12 @@
 		527BC7B724BFEF0400D14CA9 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC7B524BFEF0400D14CA9 /* DemoViewController.swift */; };
 		527BC7B824BFEF0400D14CA9 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527BC7B624BFEF0400D14CA9 /* DemoViewController.xib */; };
 		527BC7BA24C02E7500D14CA9 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC7B924C02E7500D14CA9 /* Information.swift */; };
+		527BC7BD24C044C500D14CA9 /* BaiTap10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC7BB24C044C500D14CA9 /* BaiTap10ViewController.swift */; };
+		527BC7BE24C044C500D14CA9 /* BaiTap10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527BC7BC24C044C500D14CA9 /* BaiTap10ViewController.xib */; };
+		527BC7C324C057D400D14CA9 /* BaiTap11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC7C124C057D400D14CA9 /* BaiTap11ViewController.swift */; };
+		527BC7C424C057D400D14CA9 /* BaiTap11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527BC7C224C057D400D14CA9 /* BaiTap11ViewController.xib */; };
+		527BC7C824C05D6F00D14CA9 /* BaiTap12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC7C624C05D6F00D14CA9 /* BaiTap12ViewController.swift */; };
+		527BC7C924C05D6F00D14CA9 /* BaiTap12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527BC7C724C05D6F00D14CA9 /* BaiTap12ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +128,12 @@
 		527BC7B524BFEF0400D14CA9 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		527BC7B624BFEF0400D14CA9 /* DemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
 		527BC7B924C02E7500D14CA9 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		527BC7BB24C044C500D14CA9 /* BaiTap10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap10ViewController.swift; sourceTree = "<group>"; };
+		527BC7BC24C044C500D14CA9 /* BaiTap10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap10ViewController.xib; sourceTree = "<group>"; };
+		527BC7C124C057D400D14CA9 /* BaiTap11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap11ViewController.swift; sourceTree = "<group>"; };
+		527BC7C224C057D400D14CA9 /* BaiTap11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap11ViewController.xib; sourceTree = "<group>"; };
+		527BC7C624C05D6F00D14CA9 /* BaiTap12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap12ViewController.swift; sourceTree = "<group>"; };
+		527BC7C724C05D6F00D14CA9 /* BaiTap12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap12ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,9 @@
 		527BC73224B8CB8700D14CA9 /* BaiTapAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				527BC7C524C05D5A00D14CA9 /* BaiTap12 */,
+				527BC7C024C057BA00D14CA9 /* BaiTap11 */,
+				527BC7BF24C044DC00D14CA9 /* BaiTap10 */,
 				527BC7B024BF618200D14CA9 /* BaiTap9 */,
 				527BC7AB24BEFC7F00D14CA9 /* BaiTap8 */,
 				527BC79624BEE8F900D14CA9 /* BaiTap6 */,
@@ -278,6 +293,33 @@
 			path = BaiTap9;
 			sourceTree = "<group>";
 		};
+		527BC7BF24C044DC00D14CA9 /* BaiTap10 */ = {
+			isa = PBXGroup;
+			children = (
+				527BC7BB24C044C500D14CA9 /* BaiTap10ViewController.swift */,
+				527BC7BC24C044C500D14CA9 /* BaiTap10ViewController.xib */,
+			);
+			path = BaiTap10;
+			sourceTree = "<group>";
+		};
+		527BC7C024C057BA00D14CA9 /* BaiTap11 */ = {
+			isa = PBXGroup;
+			children = (
+				527BC7C124C057D400D14CA9 /* BaiTap11ViewController.swift */,
+				527BC7C224C057D400D14CA9 /* BaiTap11ViewController.xib */,
+			);
+			path = BaiTap11;
+			sourceTree = "<group>";
+		};
+		527BC7C524C05D5A00D14CA9 /* BaiTap12 */ = {
+			isa = PBXGroup;
+			children = (
+				527BC7C624C05D6F00D14CA9 /* BaiTap12ViewController.swift */,
+				527BC7C724C05D6F00D14CA9 /* BaiTap12ViewController.xib */,
+			);
+			path = BaiTap12;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,16 +382,19 @@
 				527BC78024BEBAE200D14CA9 /* BaiTap4-4ViewController.xib in Resources */,
 				527BC75624BABF3E00D14CA9 /* BaiTap2ViewController.xib in Resources */,
 				527BC7AA24BEF80B00D14CA9 /* BaiTap6-4ViewController.xib in Resources */,
+				527BC7C924C05D6F00D14CA9 /* BaiTap12ViewController.xib in Resources */,
 				527BC74024B8CB8D00D14CA9 /* LaunchScreen.storyboard in Resources */,
 				527BC7B424BF619F00D14CA9 /* BaiTap9ViewController.xib in Resources */,
 				527BC7AF24BEFC9B00D14CA9 /* BaiTap8ViewController.xib in Resources */,
 				527BC77C24BEB71F00D14CA9 /* BaiTap4-3ViewController.xib in Resources */,
+				527BC7BE24C044C500D14CA9 /* BaiTap10ViewController.xib in Resources */,
 				527BC75A24BAC4AE00D14CA9 /* BaiTap2-1ViewController.xib in Resources */,
 				527BC74D24B954C100D14CA9 /* BaiTap1ViewController.xib in Resources */,
 				527BC76324BB085200D14CA9 /* BaiTap3-1ViewController.xib in Resources */,
 				527BC78524BEC0F000D14CA9 /* BaiTap5ViewController.xib in Resources */,
 				527BC76B24BE97E500D14CA9 /* BaiTap3-2ViewController.xib in Resources */,
 				527BC7B824BFEF0400D14CA9 /* DemoViewController.xib in Resources */,
+				527BC7C424C057D400D14CA9 /* BaiTap11ViewController.xib in Resources */,
 				527BC79524BEE7BE00D14CA9 /* BaiTap5-4ViewController.xib in Resources */,
 				527BC7A624BEF6EA00D14CA9 /* BaiTap6-3ViewController.xib in Resources */,
 				527BC79E24BEEED100D14CA9 /* BaiTap6-1ViewController.xib in Resources */,
@@ -376,6 +421,7 @@
 				527BC76A24BE97E500D14CA9 /* BaiTap3-2ViewController.swift in Sources */,
 				527BC78C24BEE12700D14CA9 /* BaiTap5-1ViewController.swift in Sources */,
 				527BC78424BEC0F000D14CA9 /* BaiTap5ViewController.swift in Sources */,
+				527BC7C324C057D400D14CA9 /* BaiTap11ViewController.swift in Sources */,
 				527BC7B724BFEF0400D14CA9 /* DemoViewController.swift in Sources */,
 				527BC79024BEE5D000D14CA9 /* BaiTap5-3ViewController.swift in Sources */,
 				527BC75924BAC4AE00D14CA9 /* BaiTap2-1ViewController.swift in Sources */,
@@ -386,9 +432,11 @@
 				527BC79924BEE93900D14CA9 /* BaiTap6ViewController.swift in Sources */,
 				527BC75524BABF3E00D14CA9 /* BaiTap2ViewController.swift in Sources */,
 				527BC7A124BEF42900D14CA9 /* BaiTap6-2ViewController.swift in Sources */,
+				527BC7C824C05D6F00D14CA9 /* BaiTap12ViewController.swift in Sources */,
 				527BC76F24BEACAE00D14CA9 /* BaiTap4ViewController.swift in Sources */,
 				527BC7A524BEF6EA00D14CA9 /* BaiTap6-3ViewController.swift in Sources */,
 				527BC74C24B954C100D14CA9 /* BaiTap1ViewController.swift in Sources */,
+				527BC7BD24C044C500D14CA9 /* BaiTap10ViewController.swift in Sources */,
 				527BC77B24BEB71F00D14CA9 /* BaiTap4-3ViewController.swift in Sources */,
 				527BC75D24BB028500D14CA9 /* BaiTap3ViewController.swift in Sources */,
 				527BC77F24BEBAE200D14CA9 /* BaiTap4-4ViewController.swift in Sources */,
