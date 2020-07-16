@@ -35,7 +35,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2y-Bl-GBH" userLabel="View2">
                     <rect key="frame" x="169.5" y="379" width="75" height="75"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="W2y-Bl-GBH" secondAttribute="height" multiplier="1:1" id="1EV-1m-IFc"/>
                         <constraint firstAttribute="height" constant="75" id="NBu-s0-LXg"/>
@@ -43,7 +43,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-w4-H8K" userLabel="View3">
                     <rect key="frame" x="169.5" y="514" width="75" height="75"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Mdn-w4-H8K" secondAttribute="height" multiplier="1:1" id="Jvt-j2-vXP"/>
                         <constraint firstAttribute="height" constant="75" id="jOK-aZ-MZL"/>
@@ -51,7 +51,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhX-Hr-N5G" userLabel="View4">
                     <rect key="frame" x="169.5" y="649" width="75" height="75"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="qhX-Hr-N5G" secondAttribute="height" multiplier="1:1" id="iQS-vb-ACf"/>
                         <constraint firstAttribute="height" constant="75" id="kPQ-XV-dUw"/>
@@ -62,7 +62,6 @@
             <constraints>
                 <constraint firstItem="Mdn-w4-H8K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Qc-dR-BL3"/>
                 <constraint firstItem="Mdn-w4-H8K" firstAttribute="top" secondItem="W2y-Bl-GBH" secondAttribute="bottom" constant="60" id="5ui-V3-2UL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qhX-Hr-N5G" secondAttribute="bottom" constant="138" id="7Mg-zp-vFi"/>
                 <constraint firstItem="qhX-Hr-N5G" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aXq-ex-pb3"/>
                 <constraint firstItem="GX9-jC-07t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hYn-hX-rwq"/>
                 <constraint firstItem="GX9-jC-07t" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="125" id="lZ6-fK-OjZ"/>

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class BaiTap10ViewController: UIViewController {
+final class BaiTap10ViewController: UIViewController {
     
+    // MARK: - IBOulet properties
     @IBOutlet weak var oneUIView: UIView!
     @IBOutlet weak var twoUIView: UIView!
     @IBOutlet weak var threetUIView: UIView!
@@ -22,7 +23,7 @@ class BaiTap10ViewController: UIViewController {
         super.viewDidLoad()
         setUpUiView()
     }
-    
+    // MARK: - Private Function
     private func setUpUiView(){
         let oneUIViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapOneUIView))
         let twoUIViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapTwoUIView))
@@ -34,7 +35,6 @@ class BaiTap10ViewController: UIViewController {
         fourUIView.addGestureRecognizer(fourUIViewTapGesture)
     }
     @objc func handleTapOneUIView() {
-        print("tap1")
         self.heightOneContraint.constant = 150
         self.heightTwoContraint.constant = 75
         self.heightThreeContraint.constant = 75
@@ -44,12 +44,30 @@ class BaiTap10ViewController: UIViewController {
         }
     }
     @objc func handleTapTwoUIView() {
-        
+        self.heightOneContraint.constant = 75
+        self.heightTwoContraint.constant = 150
+        self.heightThreeContraint.constant = 75
+        self.heigtFourContrain.constant = 75
+        UIView.animate(withDuration: 2) {
+            self.setNeedsFocusUpdate()
+        }
     }
     @objc func handleTapThreeUIView() {
-        
+        self.heightOneContraint.constant = 75
+        self.heightTwoContraint.constant = 75
+        self.heightThreeContraint.constant = 150
+        self.heigtFourContrain.constant = 75
+        UIView.animate(withDuration: 2) {
+            self.setNeedsFocusUpdate()
+        }
     }
     @objc func handleTapFourUIView() {
-        
+        self.heightOneContraint.constant = 75
+        self.heightTwoContraint.constant = 75
+        self.heightThreeContraint.constant = 75
+        self.heigtFourContrain.constant = 150
+        UIView.animate(withDuration: 2) {
+            self.setNeedsFocusUpdate()
+        }
     }
 }
