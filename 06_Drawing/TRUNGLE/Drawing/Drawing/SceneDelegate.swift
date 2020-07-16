@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-       let viewController = ChartViewViewController()
-       // let viewController = ChartViewViewController()
+       let viewController = Bai2ViewController()
+       // let viewController = ChartLineViewViewController()
         window?.rootViewController = viewController
     }
 

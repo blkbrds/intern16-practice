@@ -13,14 +13,13 @@
 		519B372824B6057400308F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519B372624B6057400308F87 /* Main.storyboard */; };
 		519B372A24B6057600308F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519B372924B6057600308F87 /* Assets.xcassets */; };
 		519B372D24B6057600308F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519B372B24B6057600308F87 /* LaunchScreen.storyboard */; };
-		B0E649CE24B6AD6300D8C60A /* TL1ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E649CA24B6AD6300D8C60A /* TL1ChartView.xib */; };
-		B0E649CF24B6AD6300D8C60A /* ChartViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E649CB24B6AD6300D8C60A /* ChartViewViewController.swift */; };
-		B0E649D024B6AD6300D8C60A /* TL1ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E649CC24B6AD6300D8C60A /* TL1ChartView.swift */; };
-		B0E649D124B6AD6300D8C60A /* ChartViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E649CD24B6AD6300D8C60A /* ChartViewViewController.xib */; };
-		B0E649D624B6B03400D8C60A /* BieuDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E649D224B6B03400D8C60A /* BieuDoViewController.xib */; };
-		B0E649D724B6B03400D8C60A /* BieuDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E649D324B6B03400D8C60A /* BieuDoViewController.swift */; };
-		B0E649D824B6B03400D8C60A /* TLLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E649D424B6B03400D8C60A /* TLLineView.xib */; };
-		B0E649D924B6B03400D8C60A /* TLLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E649D524B6B03400D8C60A /* TLLineView.swift */; };
+		51CCB13324C090810091C563 /* CircleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CCB13224C090810091C563 /* CircleChart.swift */; };
+		51CCB13624C091140091C563 /* Bai2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CCB13424C091140091C563 /* Bai2ViewController.swift */; };
+		51CCB13724C091140091C563 /* Bai2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CCB13524C091140091C563 /* Bai2ViewController.xib */; };
+		B0E649D624B6B03400D8C60A /* ChartLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E649D224B6B03400D8C60A /* ChartLineViewController.xib */; };
+		B0E649D724B6B03400D8C60A /* ChartLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E649D324B6B03400D8C60A /* ChartLineViewController.swift */; };
+		B0E649D824B6B03400D8C60A /* ChartLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E649D424B6B03400D8C60A /* ChartLineView.xib */; };
+		B0E649D924B6B03400D8C60A /* ChartLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E649D524B6B03400D8C60A /* ChartLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +31,13 @@
 		519B372924B6057600308F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		519B372C24B6057600308F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		519B372E24B6057600308F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0E649CA24B6AD6300D8C60A /* TL1ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TL1ChartView.xib; sourceTree = "<group>"; };
-		B0E649CB24B6AD6300D8C60A /* ChartViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewViewController.swift; sourceTree = "<group>"; };
-		B0E649CC24B6AD6300D8C60A /* TL1ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TL1ChartView.swift; sourceTree = "<group>"; };
-		B0E649CD24B6AD6300D8C60A /* ChartViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartViewViewController.xib; sourceTree = "<group>"; };
-		B0E649D224B6B03400D8C60A /* BieuDoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BieuDoViewController.xib; sourceTree = "<group>"; };
-		B0E649D324B6B03400D8C60A /* BieuDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BieuDoViewController.swift; sourceTree = "<group>"; };
-		B0E649D424B6B03400D8C60A /* TLLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLLineView.xib; sourceTree = "<group>"; };
-		B0E649D524B6B03400D8C60A /* TLLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLLineView.swift; sourceTree = "<group>"; };
+		51CCB13224C090810091C563 /* CircleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircleChart.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/06_Drawing/TRUNGLE/Drawing/Drawing/Bai2/CircleChart.swift"; sourceTree = "<group>"; };
+		51CCB13424C091140091C563 /* Bai2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai2ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/06_Drawing/TRUNGLE/Drawing/Drawing/Bai2/Bai2ViewController.swift"; sourceTree = "<group>"; };
+		51CCB13524C091140091C563 /* Bai2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai2ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/06_Drawing/TRUNGLE/Drawing/Drawing/Bai2/Bai2ViewController.xib"; sourceTree = "<group>"; };
+		B0E649D224B6B03400D8C60A /* ChartLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartLineViewController.xib; sourceTree = "<group>"; };
+		B0E649D324B6B03400D8C60A /* ChartLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartLineViewController.swift; sourceTree = "<group>"; };
+		B0E649D424B6B03400D8C60A /* ChartLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartLineView.xib; sourceTree = "<group>"; };
+		B0E649D524B6B03400D8C60A /* ChartLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +86,10 @@
 		519B373624B6060700308F87 /* Bai1 */ = {
 			isa = PBXGroup;
 			children = (
-				B0E649D324B6B03400D8C60A /* BieuDoViewController.swift */,
-				B0E649D224B6B03400D8C60A /* BieuDoViewController.xib */,
-				B0E649D524B6B03400D8C60A /* TLLineView.swift */,
-				B0E649D424B6B03400D8C60A /* TLLineView.xib */,
+				B0E649D324B6B03400D8C60A /* ChartLineViewController.swift */,
+				B0E649D224B6B03400D8C60A /* ChartLineViewController.xib */,
+				B0E649D524B6B03400D8C60A /* ChartLineView.swift */,
+				B0E649D424B6B03400D8C60A /* ChartLineView.xib */,
 			);
 			path = Bai1;
 			sourceTree = "<group>";
@@ -99,10 +97,9 @@
 		51D909A224B615FC007F9FE2 /* Bai2 */ = {
 			isa = PBXGroup;
 			children = (
-				B0E649CB24B6AD6300D8C60A /* ChartViewViewController.swift */,
-				B0E649CD24B6AD6300D8C60A /* ChartViewViewController.xib */,
-				B0E649CC24B6AD6300D8C60A /* TL1ChartView.swift */,
-				B0E649CA24B6AD6300D8C60A /* TL1ChartView.xib */,
+				51CCB13224C090810091C563 /* CircleChart.swift */,
+				51CCB13424C091140091C563 /* Bai2ViewController.swift */,
+				51CCB13524C091140091C563 /* Bai2ViewController.xib */,
 			);
 			path = Bai2;
 			sourceTree = "<group>";
@@ -166,11 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				519B372D24B6057600308F87 /* LaunchScreen.storyboard in Resources */,
-				B0E649CE24B6AD6300D8C60A /* TL1ChartView.xib in Resources */,
-				B0E649D124B6AD6300D8C60A /* ChartViewViewController.xib in Resources */,
-				B0E649D824B6B03400D8C60A /* TLLineView.xib in Resources */,
+				B0E649D824B6B03400D8C60A /* ChartLineView.xib in Resources */,
 				519B372A24B6057600308F87 /* Assets.xcassets in Resources */,
-				B0E649D624B6B03400D8C60A /* BieuDoViewController.xib in Resources */,
+				B0E649D624B6B03400D8C60A /* ChartLineViewController.xib in Resources */,
+				51CCB13724C091140091C563 /* Bai2ViewController.xib in Resources */,
 				519B372824B6057400308F87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,12 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E649D024B6AD6300D8C60A /* TL1ChartView.swift in Sources */,
+				51CCB13324C090810091C563 /* CircleChart.swift in Sources */,
 				519B372524B6057400308F87 /* ViewController.swift in Sources */,
-				B0E649D924B6B03400D8C60A /* TLLineView.swift in Sources */,
-				B0E649CF24B6AD6300D8C60A /* ChartViewViewController.swift in Sources */,
+				B0E649D924B6B03400D8C60A /* ChartLineView.swift in Sources */,
+				51CCB13624C091140091C563 /* Bai2ViewController.swift in Sources */,
 				519B372124B6057400308F87 /* AppDelegate.swift in Sources */,
-				B0E649D724B6B03400D8C60A /* BieuDoViewController.swift in Sources */,
+				B0E649D724B6B03400D8C60A /* ChartLineViewController.swift in Sources */,
 				519B372324B6057400308F87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
