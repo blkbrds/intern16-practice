@@ -12,7 +12,9 @@ import UIKit
 protocol MySliderViewDelegate: class {
     func view(view: MySliderView, needPerformAction action: MySliderView.Action)
 }
+
 final class MySliderView: UIView {
+    
     // MARK: - Outlets
     @IBOutlet weak private var blue: UIImageView!
     @IBOutlet weak private var nut: UILabel!
@@ -20,13 +22,16 @@ final class MySliderView: UIView {
     enum Action {
         case updatePercent(percent: Int)
     }
+    
     //MARK: - Properties
     weak var delegate: MySliderViewDelegate?
     var value: Int?
+    
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
     // MARK: - Override
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
@@ -44,6 +49,7 @@ final class MySliderView: UIView {
         nut.text = String(number)
         delegate?.view(view: self, needPerformAction: .updatePercent(percent: number))
     }
+    
     func updatePercent() {
         guard let temp = value else { return }
         let newHeight = (white.frame.height * CGFloat(temp)) / 100

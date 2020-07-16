@@ -12,15 +12,18 @@ class ViewController: UIViewController, MyAvatarDelegate {
     func didTapOnAvatar(_ myAvatar: MyAvatar) {
         print(myAvatar.userName.text ?? "no name")
     }
+    
     //MARK: - Properties
     var spacingX = 20
     var spacingY = 30
     var names = ["Teo", "TheShy", "Ning", "Rookie", "Sofm", "Slayder", "Palete", "Dnk", "celeb","Teo", "TheShy", "Ning", "Rookie", "Sofm", "Slayder", "Palete", "Dnk", "celeb","Teo", "TheShy", "Ning", "Rookie", "Sofm", "Slayder", "Palete", "Dnk", "celeb","Teo", "TheShy", "Ning"]
+    
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
+    
     //MARK: - Function
     private func setupView() {
         let screenSize = UIScreen.main.bounds

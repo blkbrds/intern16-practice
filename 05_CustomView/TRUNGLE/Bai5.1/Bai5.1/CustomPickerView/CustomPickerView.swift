@@ -8,6 +8,7 @@ protocol CustomePickerViewDelegate {
     func selectDate (datePicker: CustomPickerView,needsPerformAction action: CustomPickerView.Action, selectDate: Date?)
 }
 class CustomPickerView: UIView {
+    
     // MARK: - Enum
     enum Action {
         case hide
@@ -15,19 +16,23 @@ class CustomPickerView: UIView {
         case done
         case cancel
     }
+    
     // MARK: - Properties
     var delegate: CustomePickerViewDelegate?
+    
     // MARK: - Outlet
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var datePickerView: UIDatePicker!
+    
     // MARK: - Function
     func config() {
         backgroundView.alpha = 1
         contentView.alpha = 1
         isHidden = true
     }
+    
     func hide(animation: Bool) {
         if animation {
             UIView.animate(withDuration: 0.5, animations: { self.backgroundView.alpha = 0.5
@@ -41,6 +46,7 @@ class CustomPickerView: UIView {
             isHidden = true
         }
     }
+    
     func show(animation: Bool) {
         self.isHidden = false
         if animation {
@@ -53,11 +59,14 @@ class CustomPickerView: UIView {
             contentView.alpha = 1
         }
     }
+    
+    // MARK: - IBAction
     @IBAction func doneButton(_ sender: UIBarButtonItem) {
         hide(animation: true)
         guard let delegate = delegate else { return }
         delegate.selectDate(datePicker: self, needsPerformAction: .done, selectDate: datePickerView.date)
     }
+    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         hide(animation: true)
         guard let delegate = delegate else { return }

@@ -2,6 +2,7 @@
 import UIKit
 
 class Bai3: UIButton {
+    
     // MARK: - Enum
     enum positionBadge {
         case topLeft
@@ -12,6 +13,7 @@ class Bai3: UIButton {
         case bottomLeft
         case bottomRight
         case bottomCenter
+        
         // MARK: - Function
         func addNumberBadgeLabelAtPositon(inRect bounds: CGRect) -> CGPoint {
             switch self {
@@ -47,6 +49,7 @@ class Bai3: UIButton {
             numberBadgeLabel.text = text
         }
     }
+    
     // MARK: - Properties
     let heightBagde: CGFloat = 20
     let numberBadgeLabel: UILabel = {
@@ -74,6 +77,7 @@ class Bai3: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 // MARK: - Extension
 extension String {
     func width(constraintedHeight height: CGFloat, font: UIFont) -> CGFloat {

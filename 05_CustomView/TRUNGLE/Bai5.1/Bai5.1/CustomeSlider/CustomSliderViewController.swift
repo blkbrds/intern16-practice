@@ -9,15 +9,19 @@
 import UIKit
 
 final class CustomSliderViewController: UIViewController {
+    
     //MARK: - Outlet
     @IBOutlet private weak var value: UITextField!
+    
     //MARK: - Properties
     var mySliderView = MySliderView()
+    
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+    
     //MARK: - Private function
     private func configUI() {
         mySliderView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as! MySliderView
@@ -26,11 +30,13 @@ final class CustomSliderViewController: UIViewController {
         view.addSubview(mySliderView)
         value.delegate = self
     }
+    
     private func updatePercent(num : String){
         mySliderView.value = (Int(num))
         mySliderView.updatePercent()
     }
 }
+
 //MARK: - UITextFieldDelegate
 extension CustomSliderViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -48,6 +54,7 @@ extension CustomSliderViewController: UITextFieldDelegate {
         }
     }
 }
+
 //MARK: - MySliderViewDelegate
 extension CustomSliderViewController: MySliderViewDelegate {
     func view(view: MySliderView, needPerformAction action: MySliderView.Action) {

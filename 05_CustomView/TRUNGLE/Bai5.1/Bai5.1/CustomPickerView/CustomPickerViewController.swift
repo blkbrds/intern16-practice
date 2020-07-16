@@ -10,9 +10,13 @@ import UIKit
 
 final class CustomPickerViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var textField: UITextField!
     
+    // MARK: - Properties
     var customPickerView : CustomPickerView?
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         customPickerView = Bundle.main.loadNibNamed( "CustomPickerView", owner: self, options: nil)?.first as? CustomPickerView
@@ -23,6 +27,8 @@ final class CustomPickerViewController: UIViewController {
         textField.delegate = self
     }
 }
+
+// MARK: - Extension
 extension CustomPickerViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let customPickerView = customPickerView else { return }
@@ -30,6 +36,7 @@ extension CustomPickerViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
 }
+
 extension CustomPickerViewController: CustomePickerViewDelegate {
     func selectDate(datePicker pickerView: CustomPickerView, needsPerformAction action: CustomPickerView.Action, selectDate: Date?) {
         guard let date = selectDate else { return }

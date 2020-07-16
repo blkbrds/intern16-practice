@@ -2,11 +2,13 @@
 import UIKit
 
 class Bai3ViewController : UIViewController {
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
+    
     // MARK: - Function
     func setUpView(){
         view.backgroundColor = .white

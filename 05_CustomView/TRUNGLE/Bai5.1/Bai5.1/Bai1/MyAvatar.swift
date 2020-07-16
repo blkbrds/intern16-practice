@@ -12,6 +12,7 @@ protocol MyAvatarDelegate: class {
     func didTapOnAvatar(_ myAvatar: MyAvatar)
 }
 final class MyAvatar: UIView {
+    
     // MARK: - Properties
     weak var myAvatarDelegate :MyAvatarDelegate?
     var userAvatar : UIImageView!
@@ -23,6 +24,7 @@ final class MyAvatar: UIView {
         super.init(frame: frame)
         setupView()
     }
+    
     // MARK: - Function
     private func setupView() {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
