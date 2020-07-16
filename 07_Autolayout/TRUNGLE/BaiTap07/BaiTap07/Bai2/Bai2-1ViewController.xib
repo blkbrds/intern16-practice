@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai2_2ViewController" customModule="Autolayout" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Bai2_2ViewController" customModule="BaiTap07" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,12 +24,10 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kkx-vO-km7"/>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="SWb-hB-AoF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n88-y4-iGO" secondAttribute="trailing" constant="87" id="dxb-zW-Sqm"/>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.756696" id="iif-Ja-Nry"/>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.57971" id="opx-ep-TfW"/>
-                <constraint firstItem="n88-y4-iGO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uIa-4F-geF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n88-y4-iGO" secondAttribute="bottom" constant="75" id="BSE-Y2-PkF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n88-y4-iGO" secondAttribute="trailing" constant="87" id="Kbm-60-1iL"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="Rzk-jm-um4"/>
+                <constraint firstItem="n88-y4-iGO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="kV4-g5-aUY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
