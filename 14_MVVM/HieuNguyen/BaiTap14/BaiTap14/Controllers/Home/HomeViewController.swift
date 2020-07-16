@@ -18,7 +18,15 @@ class HomeViewController: UIViewController {
 
     private func setupSlideImage() {
         let slideImage = Bundle.main.loadNibNamed("SlideImageView", owner: self, options: nil)?[0] as? SlideImageView
-        slideImage?.frame = CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 300)
+        slideImage?.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(slideImage!)
+        // contrains
+        let topSafeArea: CGFloat = (UIApplication.shared.windows.first{$0.isKeyWindow }?.safeAreaInsets.top)! + (navigationController?.navigationBar.frame.height)!
+        slideImage?.topAnchor.constraint(equalTo: view.topAnchor, constant: topSafeArea).isActive = true
+        slideImage?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        slideImage?.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        slideImage?.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+
     }
 }

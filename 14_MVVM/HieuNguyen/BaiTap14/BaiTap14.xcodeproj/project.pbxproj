@@ -21,6 +21,8 @@
 		7D393EA724C04F3900515AA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393E9C24C04F3900515AA6 /* HomeViewController.swift */; };
 		7D393EAE24C0571300515AA6 /* SlideImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393EAD24C0571300515AA6 /* SlideImageView.swift */; };
 		7D393EB024C0573400515AA6 /* SlideImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D393EAF24C0573400515AA6 /* SlideImageView.xib */; };
+		C40C0C7924C097230060F382 /* SlideImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C0C7824C097230060F382 /* SlideImageViewModel.swift */; };
+		C40C0C7C24C09C690060F382 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C0C7B24C09C690060F382 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7D393E9C24C04F3900515AA6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7D393EAD24C0571300515AA6 /* SlideImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImageView.swift; sourceTree = "<group>"; };
 		7D393EAF24C0573400515AA6 /* SlideImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideImageView.xib; sourceTree = "<group>"; };
+		C40C0C7824C097230060F382 /* SlideImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImageViewModel.swift; sourceTree = "<group>"; };
+		C40C0C7B24C09C690060F382 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		7D393E6424C0470E00515AA6 /* BaiTap14 */ = {
 			isa = PBXGroup;
 			children = (
+				C40C0C7A24C09C440060F382 /* Models */,
 				7D393E8A24C04ED800515AA6 /* Controllers */,
 				7D393E6524C0470E00515AA6 /* AppDelegate.swift */,
 				7D393E6724C0470E00515AA6 /* SceneDelegate.swift */,
@@ -124,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				7D393EAC24C056CD00515AA6 /* SlideImages */,
-				7D393E9B24C04F3900515AA6 /* HomeViewController.xib */,
 				7D393E9C24C04F3900515AA6 /* HomeViewController.swift */,
+				7D393E9B24C04F3900515AA6 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -135,8 +140,17 @@
 			children = (
 				7D393EAD24C0571300515AA6 /* SlideImageView.swift */,
 				7D393EAF24C0573400515AA6 /* SlideImageView.xib */,
+				C40C0C7824C097230060F382 /* SlideImageViewModel.swift */,
 			);
 			path = SlideImages;
+			sourceTree = "<group>";
+		};
+		C40C0C7A24C09C440060F382 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C40C0C7B24C09C690060F382 /* Image.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D393E6624C0470E00515AA6 /* AppDelegate.swift in Sources */,
+				C40C0C7C24C09C690060F382 /* Image.swift in Sources */,
 				7D393E9D24C04F3900515AA6 /* MapViewController.swift in Sources */,
 				7D393EA024C04F3900515AA6 /* ProfileViewController.swift in Sources */,
 				7D393EA424C04F3900515AA6 /* FavoritesViewController.swift in Sources */,
+				C40C0C7924C097230060F382 /* SlideImageViewModel.swift in Sources */,
 				7D393EAE24C0571300515AA6 /* SlideImageView.swift in Sources */,
 				7D393EA724C04F3900515AA6 /* HomeViewController.swift in Sources */,
 				7D393E6824C0470E00515AA6 /* SceneDelegate.swift in Sources */,
