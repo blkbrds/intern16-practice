@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		519F164624BF317C0064B1D9 /* bai8bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F164424BF317C0064B1D9 /* bai8bViewController.swift */; };
-		519F164724BF317C0064B1D9 /* bai8bViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519F164524BF317C0064B1D9 /* bai8bViewController.xib */; };
-		519F164B24BF3CB90064B1D9 /* bai12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F164924BF3CB90064B1D9 /* bai12ViewController.swift */; };
-		519F164C24BF3CB90064B1D9 /* bai12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519F164A24BF3CB90064B1D9 /* bai12ViewController.xib */; };
-		519F165024BF43C20064B1D9 /* bai13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F164E24BF43C20064B1D9 /* bai13ViewController.swift */; };
-		519F165124BF43C20064B1D9 /* bai13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519F164F24BF43C20064B1D9 /* bai13ViewController.xib */; };
+		B08C9DE124BFF2DC00294E9C /* bai13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C9DDF24BFF2DC00294E9C /* bai13ViewController.swift */; };
+		B08C9DE224BFF2DC00294E9C /* bai13ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08C9DE024BFF2DC00294E9C /* bai13ViewController.xib */; };
+		B08C9DE524BFF8C900294E9C /* bai12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08C9DE324BFF8C900294E9C /* bai12ViewController.xib */; };
+		B08C9DE624BFF8C900294E9C /* bai12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C9DE424BFF8C900294E9C /* bai12ViewController.swift */; };
+		B08C9DEA24BFF91400294E9C /* Bai14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C9DE824BFF91400294E9C /* Bai14ViewController.swift */; };
+		B08C9DEB24BFF91400294E9C /* Bai14ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08C9DE924BFF91400294E9C /* Bai14ViewController.xib */; };
+		B08C9DEE24BFFAD400294E9C /* bai8bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C9DEC24BFFAD400294E9C /* bai8bViewController.swift */; };
+		B08C9DEF24BFFAD400294E9C /* bai8bViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08C9DED24BFFAD400294E9C /* bai8bViewController.xib */; };
 		B0DE80B624BEFD410051DFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80B524BEFD410051DFD5 /* AppDelegate.swift */; };
 		B0DE80B824BEFD410051DFD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80B724BEFD410051DFD5 /* SceneDelegate.swift */; };
 		B0DE80BA24BEFD410051DFD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80B924BEFD410051DFD5 /* ViewController.swift */; };
@@ -31,8 +33,6 @@
 		B0DE810224BEFD670051DFD5 /* Bai6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DE80D424BEFD660051DFD5 /* Bai6ViewController.xib */; };
 		B0DE810324BEFD670051DFD5 /* Bai6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80D524BEFD660051DFD5 /* Bai6ViewController.swift */; };
 		B0DE810424BEFD670051DFD5 /* bai6-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80D624BEFD660051DFD5 /* bai6-2ViewController.swift */; };
-		B0DE810524BEFD670051DFD5 /* bai8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DE80D824BEFD660051DFD5 /* bai8ViewController.xib */; };
-		B0DE810624BEFD670051DFD5 /* bai8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80D924BEFD660051DFD5 /* bai8ViewController.swift */; };
 		B0DE810724BEFD670051DFD5 /* bai1-1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DE80DB24BEFD660051DFD5 /* bai1-1ViewController.xib */; };
 		B0DE810824BEFD670051DFD5 /* bai1-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE80DC24BEFD660051DFD5 /* bai1-1ViewController.swift */; };
 		B0DE810924BEFD670051DFD5 /* Bai1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DE80DD24BEFD660051DFD5 /* Bai1ViewController.xib */; };
@@ -60,12 +60,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		519F164424BF317C0064B1D9 /* bai8bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bai8bViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/BaiTap07/BaiTap07/Bai8/bai8bViewController.swift"; sourceTree = "<group>"; };
-		519F164524BF317C0064B1D9 /* bai8bViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = bai8bViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/BaiTap07/BaiTap07/Bai8/bai8bViewController.xib"; sourceTree = "<group>"; };
-		519F164924BF3CB90064B1D9 /* bai12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bai12ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/BaiTap07/BaiTap07/Bai12/bai12ViewController.swift"; sourceTree = "<group>"; };
-		519F164A24BF3CB90064B1D9 /* bai12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = bai12ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/BaiTap07/BaiTap07/Bai12/bai12ViewController.xib"; sourceTree = "<group>"; };
-		519F164E24BF43C20064B1D9 /* bai13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bai13ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/BaiTap07/BaiTap07/Bai13/bai13ViewController.swift"; sourceTree = "<group>"; };
-		519F164F24BF43C20064B1D9 /* bai13ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = bai13ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/07_Autolayout/TRUNGLE/BaiTap07/BaiTap07/Bai13/bai13ViewController.xib"; sourceTree = "<group>"; };
+		B08C9DDF24BFF2DC00294E9C /* bai13ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bai13ViewController.swift; sourceTree = "<group>"; };
+		B08C9DE024BFF2DC00294E9C /* bai13ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bai13ViewController.xib; sourceTree = "<group>"; };
+		B08C9DE324BFF8C900294E9C /* bai12ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bai12ViewController.xib; sourceTree = "<group>"; };
+		B08C9DE424BFF8C900294E9C /* bai12ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bai12ViewController.swift; sourceTree = "<group>"; };
+		B08C9DE824BFF91400294E9C /* Bai14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai14ViewController.swift; sourceTree = "<group>"; };
+		B08C9DE924BFF91400294E9C /* Bai14ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai14ViewController.xib; sourceTree = "<group>"; };
+		B08C9DEC24BFFAD400294E9C /* bai8bViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bai8bViewController.swift; sourceTree = "<group>"; };
+		B08C9DED24BFFAD400294E9C /* bai8bViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bai8bViewController.xib; sourceTree = "<group>"; };
 		B0DE80B224BEFD410051DFD5 /* BaiTap07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap07.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DE80B524BEFD410051DFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0DE80B724BEFD410051DFD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +88,6 @@
 		B0DE80D424BEFD660051DFD5 /* Bai6ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bai6ViewController.xib; sourceTree = "<group>"; };
 		B0DE80D524BEFD660051DFD5 /* Bai6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bai6ViewController.swift; sourceTree = "<group>"; };
 		B0DE80D624BEFD660051DFD5 /* bai6-2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "bai6-2ViewController.swift"; sourceTree = "<group>"; };
-		B0DE80D824BEFD660051DFD5 /* bai8ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bai8ViewController.xib; sourceTree = "<group>"; };
-		B0DE80D924BEFD660051DFD5 /* bai8ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bai8ViewController.swift; sourceTree = "<group>"; };
 		B0DE80DB24BEFD660051DFD5 /* bai1-1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "bai1-1ViewController.xib"; sourceTree = "<group>"; };
 		B0DE80DC24BEFD660051DFD5 /* bai1-1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "bai1-1ViewController.swift"; sourceTree = "<group>"; };
 		B0DE80DD24BEFD660051DFD5 /* Bai1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bai1ViewController.xib; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 		519F164824BF3CAC0064B1D9 /* Bai12 */ = {
 			isa = PBXGroup;
 			children = (
-				519F164924BF3CB90064B1D9 /* bai12ViewController.swift */,
-				519F164A24BF3CB90064B1D9 /* bai12ViewController.xib */,
+				B08C9DE424BFF8C900294E9C /* bai12ViewController.swift */,
+				B08C9DE324BFF8C900294E9C /* bai12ViewController.xib */,
 			);
 			path = Bai12;
 			sourceTree = "<group>";
@@ -137,10 +137,19 @@
 		519F164D24BF43B20064B1D9 /* Bai13 */ = {
 			isa = PBXGroup;
 			children = (
-				519F164E24BF43C20064B1D9 /* bai13ViewController.swift */,
-				519F164F24BF43C20064B1D9 /* bai13ViewController.xib */,
+				B08C9DDF24BFF2DC00294E9C /* bai13ViewController.swift */,
+				B08C9DE024BFF2DC00294E9C /* bai13ViewController.xib */,
 			);
 			path = Bai13;
+			sourceTree = "<group>";
+		};
+		B08C9DE724BFF90300294E9C /* bai14 */ = {
+			isa = PBXGroup;
+			children = (
+				B08C9DE824BFF91400294E9C /* Bai14ViewController.swift */,
+				B08C9DE924BFF91400294E9C /* Bai14ViewController.xib */,
+			);
+			path = bai14;
 			sourceTree = "<group>";
 		};
 		B0DE80A924BEFD410051DFD5 = {
@@ -162,6 +171,7 @@
 		B0DE80B424BEFD410051DFD5 /* BaiTap07 */ = {
 			isa = PBXGroup;
 			children = (
+				B08C9DE724BFF90300294E9C /* bai14 */,
 				519F164D24BF43B20064B1D9 /* Bai13 */,
 				519F164824BF3CAC0064B1D9 /* Bai12 */,
 				B0DE80DA24BEFD660051DFD5 /* Bai1 */,
@@ -172,7 +182,7 @@
 				B0DE80D224BEFD660051DFD5 /* bai6 */,
 				B0DE80D724BEFD660051DFD5 /* Bai8 */,
 				B0DE80ED24BEFD670051DFD5 /* bai9 */,
-				B0DE80DF24BEFD660051DFD5 /* Bai10. */,
+				B0DE80DF24BEFD660051DFD5 /* Bai10 */,
 				B0DE80F224BEFD670051DFD5 /* BAI11 */,
 				B0DE80B524BEFD410051DFD5 /* AppDelegate.swift */,
 				B0DE80B724BEFD410051DFD5 /* SceneDelegate.swift */,
@@ -214,10 +224,8 @@
 		B0DE80D724BEFD660051DFD5 /* Bai8 */ = {
 			isa = PBXGroup;
 			children = (
-				B0DE80D824BEFD660051DFD5 /* bai8ViewController.xib */,
-				B0DE80D924BEFD660051DFD5 /* bai8ViewController.swift */,
-				519F164424BF317C0064B1D9 /* bai8bViewController.swift */,
-				519F164524BF317C0064B1D9 /* bai8bViewController.xib */,
+				B08C9DEC24BFFAD400294E9C /* bai8bViewController.swift */,
+				B08C9DED24BFFAD400294E9C /* bai8bViewController.xib */,
 			);
 			path = Bai8;
 			sourceTree = "<group>";
@@ -233,13 +241,13 @@
 			path = Bai1;
 			sourceTree = "<group>";
 		};
-		B0DE80DF24BEFD660051DFD5 /* Bai10. */ = {
+		B0DE80DF24BEFD660051DFD5 /* Bai10 */ = {
 			isa = PBXGroup;
 			children = (
 				B0DE80E024BEFD660051DFD5 /* bai10ViewController.swift */,
 				B0DE80E124BEFD660051DFD5 /* bai10ViewController.xib */,
 			);
-			path = Bai10.;
+			path = Bai10;
 			sourceTree = "<group>";
 		};
 		B0DE80E224BEFD670051DFD5 /* bai5 */ = {
@@ -354,13 +362,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0DE811224BEFD670051DFD5 /* bai5-3ViewController.xib in Resources */,
-				519F164C24BF3CB90064B1D9 /* bai12ViewController.xib in Resources */,
 				B0DE811924BEFD670051DFD5 /* Bai2-2ViewController.xib in Resources */,
 				B0DE811C24BEFD670051DFD5 /* Bai3-2ViewController.xib in Resources */,
 				B0DE80C224BEFD420051DFD5 /* LaunchScreen.storyboard in Resources */,
-				519F165124BF43C20064B1D9 /* bai13ViewController.xib in Resources */,
 				B0DE810124BEFD670051DFD5 /* bai6-2ViewController.xib in Resources */,
-				519F164724BF317C0064B1D9 /* bai8bViewController.xib in Resources */,
 				B0DE811524BEFD670051DFD5 /* bai5-1ViewController.xib in Resources */,
 				B0DE811424BEFD670051DFD5 /* bai5-4ViewController.xib in Resources */,
 				B0DE80BF24BEFD420051DFD5 /* Assets.xcassets in Resources */,
@@ -369,13 +374,16 @@
 				B0DE80BD24BEFD410051DFD5 /* Main.storyboard in Resources */,
 				B0DE811324BEFD670051DFD5 /* Bai5ViewController.xib in Resources */,
 				B0DE811B24BEFD670051DFD5 /* bai11ViewController.xib in Resources */,
-				B0DE810524BEFD670051DFD5 /* bai8ViewController.xib in Resources */,
 				B0DE80FB24BEFD670051DFD5 /* Bai44ViewController.xib in Resources */,
 				B0DE811D24BEFD670051DFD5 /* Bai3-1ViewController.xib in Resources */,
 				B0DE810224BEFD670051DFD5 /* Bai6ViewController.xib in Resources */,
 				B0DE810924BEFD670051DFD5 /* Bai1ViewController.xib in Resources */,
+				B08C9DE524BFF8C900294E9C /* bai12ViewController.xib in Resources */,
 				B0DE810724BEFD670051DFD5 /* bai1-1ViewController.xib in Resources */,
+				B08C9DE224BFF2DC00294E9C /* bai13ViewController.xib in Resources */,
 				B0DE80FC24BEFD670051DFD5 /* bai4-1ViewController.xib in Resources */,
+				B08C9DEB24BFF91400294E9C /* Bai14ViewController.xib in Resources */,
+				B08C9DEF24BFFAD400294E9C /* bai8bViewController.xib in Resources */,
 				B0DE811724BEFD670051DFD5 /* Bai9ViewController.xib in Resources */,
 				B0DE80FD24BEFD670051DFD5 /* Bai4ViewController.xib in Resources */,
 				B0DE80FA24BEFD670051DFD5 /* bai4-2ViewController.xib in Resources */,
@@ -396,10 +404,10 @@
 				B0DE811124BEFD670051DFD5 /* bai5-4ViewController.swift in Sources */,
 				B0DE811A24BEFD670051DFD5 /* bai11ViewController.swift in Sources */,
 				B0DE80FF24BEFD670051DFD5 /* bai4-2ViewController.swift in Sources */,
+				B08C9DE124BFF2DC00294E9C /* bai13ViewController.swift in Sources */,
 				B0DE810F24BEFD670051DFD5 /* Bai5-2ViewController.swift in Sources */,
 				B0DE811E24BEFD670051DFD5 /* Bai3-1ViewController.swift in Sources */,
-				519F164B24BF3CB90064B1D9 /* bai12ViewController.swift in Sources */,
-				519F164624BF317C0064B1D9 /* bai8bViewController.swift in Sources */,
+				B08C9DEE24BFFAD400294E9C /* bai8bViewController.swift in Sources */,
 				B0DE810B24BEFD670051DFD5 /* bai10ViewController.swift in Sources */,
 				B0DE810D24BEFD670051DFD5 /* bai5-1ViewController.swift in Sources */,
 				B0DE810424BEFD670051DFD5 /* bai6-2ViewController.swift in Sources */,
@@ -407,11 +415,11 @@
 				B0DE810E24BEFD670051DFD5 /* bai5-3ViewController.swift in Sources */,
 				B0DE810824BEFD670051DFD5 /* bai1-1ViewController.swift in Sources */,
 				B0DE810A24BEFD670051DFD5 /* Bai1ViewController.swift in Sources */,
-				B0DE810624BEFD670051DFD5 /* bai8ViewController.swift in Sources */,
-				519F165024BF43C20064B1D9 /* bai13ViewController.swift in Sources */,
 				B0DE80B824BEFD410051DFD5 /* SceneDelegate.swift in Sources */,
 				B0DE810024BEFD670051DFD5 /* bai4-1ViewController.swift in Sources */,
+				B08C9DEA24BFF91400294E9C /* Bai14ViewController.swift in Sources */,
 				B0DE80F924BEFD670051DFD5 /* Bai44ViewController.swift in Sources */,
+				B08C9DE624BFF8C900294E9C /* bai12ViewController.swift in Sources */,
 				B0DE811624BEFD670051DFD5 /* Bai5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

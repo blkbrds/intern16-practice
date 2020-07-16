@@ -176,32 +176,73 @@
                                             </constraints>
                                             <state key="normal" image="139"/>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrf-uG-Y1d">
-                                            <rect key="frame" x="81" y="28" width="78.333333333333314" height="20.333333333333329"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrf-uG-Y1d">
+                                            <rect key="frame" x="83" y="20" width="97" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.056943517999999999" blue="0.051655111669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-bi-DDf">
-                                            <rect key="frame" x="89" y="56" width="62.666666666666657" height="21"/>
+                                            <rect key="frame" x="83" y="57" width="62.666666666666657" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="ccr-Gm-lSh" firstAttribute="centerY" secondItem="SQI-GW-NYP" secondAttribute="centerY" id="1zg-T9-A0s"/>
                                         <constraint firstItem="UIy-Ow-hOg" firstAttribute="centerY" secondItem="SQI-GW-NYP" secondAttribute="centerY" id="ALs-fm-p1S"/>
+                                        <constraint firstItem="zrf-uG-Y1d" firstAttribute="leading" secondItem="UIy-Ow-hOg" secondAttribute="trailing" constant="10" id="AQI-Vh-2yS"/>
                                         <constraint firstAttribute="trailing" secondItem="ccr-Gm-lSh" secondAttribute="trailing" constant="10" id="FdA-No-Jgp"/>
+                                        <constraint firstAttribute="trailing" secondItem="zrf-uG-Y1d" secondAttribute="trailing" constant="194" id="ji0-LM-Mhg"/>
+                                        <constraint firstItem="zrf-uG-Y1d" firstAttribute="top" secondItem="SQI-GW-NYP" secondAttribute="top" constant="20" id="q0r-8A-SSg"/>
                                         <constraint firstItem="UIy-Ow-hOg" firstAttribute="leading" secondItem="SQI-GW-NYP" secondAttribute="leading" constant="14" id="tZr-Hp-tmZ"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyO-H6-i61" userLabel="ViewStack1">
                                     <rect key="frame" x="0.0" y="315" width="374" height="105"/>
-                                    <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ml3-ag-XFY">
+                                            <rect key="frame" x="19" y="27.666666666666629" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="AoK-8Q-scH"/>
+                                                <constraint firstAttribute="width" constant="50" id="kY7-u2-p7P"/>
+                                            </constraints>
+                                            <state key="normal" image="136"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Unlocker Pattern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-Bk-Ps4">
+                                            <rect key="frame" x="86.000000000000014" y="27" width="158.33333333333337" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.19320292350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friend's Default Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-dF-cMO">
+                                            <rect key="frame" x="86" y="56" width="179" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmF-f6-SA9">
+                                            <rect key="frame" x="316" y="27.666666666666629" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="DTh-bJ-F8b"/>
+                                                <constraint firstAttribute="width" constant="50" id="PHz-Oz-Dr4"/>
+                                            </constraints>
+                                            <state key="normal" image="139"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="BmF-f6-SA9" firstAttribute="centerY" secondItem="nyO-H6-i61" secondAttribute="centerY" id="KdI-DF-eX5"/>
+                                        <constraint firstItem="c5D-Bk-Ps4" firstAttribute="top" secondItem="nyO-H6-i61" secondAttribute="top" constant="27" id="LdF-Ug-Blr"/>
+                                        <constraint firstItem="c5D-Bk-Ps4" firstAttribute="leading" secondItem="Ml3-ag-XFY" secondAttribute="trailing" constant="17" id="Y34-OT-gnS"/>
+                                        <constraint firstItem="Ml3-ag-XFY" firstAttribute="centerY" secondItem="nyO-H6-i61" secondAttribute="centerY" id="iDn-zn-Rz3"/>
+                                        <constraint firstAttribute="trailing" secondItem="BmF-f6-SA9" secondAttribute="trailing" constant="8" id="nbA-gX-1Wp"/>
+                                        <constraint firstItem="Ml3-ag-XFY" firstAttribute="leading" secondItem="nyO-H6-i61" secondAttribute="leading" constant="19" id="yKz-sE-zAU"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                             <constraints>
@@ -265,6 +306,7 @@
         <image name="132" width="40.5" height="35"/>
         <image name="133" width="95" height="93"/>
         <image name="134" width="99" height="102"/>
+        <image name="136" width="101" height="99"/>
         <image name="137" width="101" height="98"/>
         <image name="138" width="85" height="77"/>
         <image name="139" width="69" height="64"/>
