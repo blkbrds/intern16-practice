@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D393E8824C04E4200515AA6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D393E8624C04E4200515AA6 /* LoginViewController.xib */; };
+		7D393E8924C04E4200515AA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393E8724C04E4200515AA6 /* LoginViewController.swift */; };
 		7D397DC724BFF3A5001F76BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397DC624BFF3A5001F76BB /* AppDelegate.swift */; };
 		7D397DC924BFF3A5001F76BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397DC824BFF3A5001F76BB /* SceneDelegate.swift */; };
 		7D397DD024BFF3A7001F76BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D397DCF24BFF3A7001F76BB /* Assets.xcassets */; };
@@ -19,14 +21,14 @@
 		7D397DEB24BFF4B4001F76BB /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397DE924BFF4B4001F76BB /* FavoritesViewController.xib */; };
 		7D397DEE24BFF4C6001F76BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397DEC24BFF4C6001F76BB /* ProfileViewController.swift */; };
 		7D397DEF24BFF4C6001F76BB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397DED24BFF4C6001F76BB /* ProfileViewController.xib */; };
-		7D397DFB24C01450001F76BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397DF924C01450001F76BB /* LoginViewController.swift */; };
-		7D397DFC24C01450001F76BB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397DFA24C01450001F76BB /* LoginViewController.xib */; };
 		7D397DFE24C01455001F76BB /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D397DFD24C01455001F76BB /* data.plist */; };
 		7D397E0224C01474001F76BB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D397E0024C01474001F76BB /* RegisterViewController.xib */; };
 		7D397E0324C01474001F76BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D397E0124C01474001F76BB /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D393E8624C04E4200515AA6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7D393E8724C04E4200515AA6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7D397DC324BFF3A5001F76BB /* BaiTap13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D397DC624BFF3A5001F76BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D397DC824BFF3A5001F76BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +43,6 @@
 		7D397DE924BFF4B4001F76BB /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		7D397DEC24BFF4C6001F76BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7D397DED24BFF4C6001F76BB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		7D397DF924C01450001F76BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../../../../Desktop/at-hieunguyen3/BaiTap09/BaiTap09/BaiTap02/LoginViewController.swift"; sourceTree = "<group>"; };
-		7D397DFA24C01450001F76BB /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = "../../../../../../../Desktop/at-hieunguyen3/BaiTap09/BaiTap09/BaiTap02/LoginViewController.xib"; sourceTree = "<group>"; };
 		7D397DFD24C01455001F76BB /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		7D397E0024C01474001F76BB /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		7D397E0124C01474001F76BB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				7D397DFD24C01455001F76BB /* data.plist */,
-				7D397DF924C01450001F76BB /* LoginViewController.swift */,
-				7D397DFA24C01450001F76BB /* LoginViewController.xib */,
+				7D393E8724C04E4200515AA6 /* LoginViewController.swift */,
+				7D393E8624C04E4200515AA6 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D397DFC24C01450001F76BB /* LoginViewController.xib in Resources */,
+				7D393E8824C04E4200515AA6 /* LoginViewController.xib in Resources */,
 				7D397DEF24BFF4C6001F76BB /* ProfileViewController.xib in Resources */,
 				7D397E0224C01474001F76BB /* RegisterViewController.xib in Resources */,
 				7D397DD324BFF3A7001F76BB /* LaunchScreen.storyboard in Resources */,
@@ -233,10 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D393E8924C04E4200515AA6 /* LoginViewController.swift in Sources */,
 				7D397DEE24BFF4C6001F76BB /* ProfileViewController.swift in Sources */,
 				7D397DC724BFF3A5001F76BB /* AppDelegate.swift in Sources */,
 				7D397DC924BFF3A5001F76BB /* SceneDelegate.swift in Sources */,
-				7D397DFB24C01450001F76BB /* LoginViewController.swift in Sources */,
 				7D397DE224BFF499001F76BB /* HomeViewController.swift in Sources */,
 				7D397DEA24BFF4B4001F76BB /* FavoritesViewController.swift in Sources */,
 				7D397DE624BFF4A6001F76BB /* MapViewController.swift in Sources */,
