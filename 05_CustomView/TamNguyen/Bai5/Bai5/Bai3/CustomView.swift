@@ -10,8 +10,7 @@ import UIKit
 
 final class CustomView: UIView {
     
-    //MARK: Properties
-    enum NotificationNumber {
+    enum notificationNumber {
         case TopLeft
         case TopRight
         case TopCenter
@@ -21,6 +20,8 @@ final class CustomView: UIView {
         case BottomRight
         case BottomCenter
     }
+    
+    //MARK: Properties
     private var featureButton: UIButton?
     private var notifyLabel: UILabel?
     private var buttonColor: String?
@@ -31,7 +32,7 @@ final class CustomView: UIView {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect, number: Int, position: NotificationNumber, nameButton: String) {
+    convenience init(frame: CGRect, number: Int, position: notificationNumber, nameButton: String) {
         self.init(frame: frame)
         configNotification(with: number, position, name: nameButton)
     }
@@ -41,7 +42,7 @@ final class CustomView: UIView {
     }
     
     //MARK: - Private methods
-    func configNotification(with badgeNum: Int,_ position: NotificationNumber, name button: String) {
+    func configNotification(with badgeNum: Int,_ position: notificationNumber, name button: String) {
         featureButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         featureButton?.backgroundColor = UIColor.init(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
         featureButton?.layer.cornerRadius = 5
@@ -63,13 +64,13 @@ final class CustomView: UIView {
             notifyLabel?.layer.cornerRadius = 15
             notifyLabel?.clipsToBounds = true
         }
-        self.addSubview(featureButton!)
-        self.addSubview(notifyLabel!)
+        addSubview(featureButton!)
+        addSubview(notifyLabel!)
     }
     
-    private func configPositionOfBadge(_ position: NotificationNumber) {
-        guard let featureWidth = featureButton?.frame.width else {return}
-        guard let featureHeight = featureButton?.frame.height else {return}
+    private func configPositionOfBadge(_ position: notificationNumber) {
+        guard let featureWidth = featureButton?.frame.width else { return }
+        guard let featureHeight = featureButton?.frame.height else { return }
         switch position {
         case .TopLeft:
             notifyLabel?.center.x = 0

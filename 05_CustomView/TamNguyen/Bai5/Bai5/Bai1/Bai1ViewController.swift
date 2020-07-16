@@ -8,17 +8,17 @@
 import UIKit
 
 class Bai1ViewController: UIViewController {
-
-// MARK: - Propeties
+    
+    // MARK: - Propeties
     let numberOfItems: Int = 30
-
-// MARK: - Life cycle
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         createListAvatar()
     }
-
-// MARK: - Private functions
+    
+    // MARK: - Private functions
     func createListAvatar() {
         let widthSizeScrollView: CGFloat = view.frame.width
         var originX: CGFloat = -100
@@ -30,14 +30,14 @@ class Bai1ViewController: UIViewController {
         for i in 0..<30 {
             if originX < view.frame.width - 120 {
                 originX += 120
-                let imageAvatar: Avatar = Avatar(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
+                let imageAvatar: AvatarView = AvatarView(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
                 imageAvatar.delegate = self
                 scrollView.addSubview(imageAvatar)
                 imageAvatar.userName.text = "Name\(i + 1)"
             } else {
                 originX = 20
                 originY += 150
-                let imageAvatar: Avatar = Avatar(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
+                let imageAvatar: AvatarView = AvatarView(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
                 imageAvatar.delegate = self
                 scrollView.addSubview(imageAvatar)
                 imageAvatar.userName.text = "Name\(i + 1)"
@@ -46,9 +46,9 @@ class Bai1ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension MyAvatarDelegate
 extension Bai1ViewController: MyAvatarDelegate {
-    func viewPerson(_ person: Avatar, string: String) {
+    func viewPerson(_ person: AvatarView, string: String) {
         print(string)
     }
 }

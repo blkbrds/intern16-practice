@@ -10,11 +10,10 @@ import UIKit
 
 // MARK: - Protocol
 protocol DatePickerViewDelegate: class {
-    func doneTime(_ view: DatePickerView,needsPerform action: DatePickerView.Action)
+    func doneTime(_ view: DatePickerView, needsPerform action: DatePickerView.Action)
 }
 
-class DatePickerView: UIView {
-    
+final class DatePickerView: UIView {
     
     //MARK: - IBOulet
     @IBOutlet private weak var dateTimePicker: UIDatePicker!
@@ -24,7 +23,7 @@ class DatePickerView: UIView {
     // MARK: - Properties
     weak var delegate: DatePickerViewDelegate?
     let dateFormater: DateFormatter = DateFormatter()
-    var dateValue: String!
+    var dateValue: String = ""
     var date: Date = Date()
     
     //MARK: - Override
@@ -33,13 +32,13 @@ class DatePickerView: UIView {
     }
     
     // MARK: - IBAction
-    @IBAction func actionDateTimePicker(_ sender: UIDatePicker) {
+    @IBAction private func actionDateTimePicker(_ sender: UIDatePicker) {
         date = dateTimePicker.date
         dateFormater.dateFormat = "MMM dd, yyyy"
         dateValue = dateFormater.string(from: date)
     }
     
-    @IBAction func actionDoneButton(_ sender: UIButton) {
+    @IBAction private func actionDoneButton(_ sender: UIButton) {
         date = dateTimePicker.date
         dateFormater.dateFormat = "MMM dd, yyyy"
         dateValue = dateFormater.string(from: date)
@@ -50,6 +49,6 @@ class DatePickerView: UIView {
 //MARK: - Extension
 extension DatePickerView {
     enum Action {
-        case didClickDatePicker(date : Date)
+        case didClickDatePicker(date: Date)
     }
 }

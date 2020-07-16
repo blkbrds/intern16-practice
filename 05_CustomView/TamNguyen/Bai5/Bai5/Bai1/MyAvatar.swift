@@ -1,10 +1,10 @@
 import UIKit
 
 protocol MyAvatarDelegate: class {
-    func viewPerson(_ person: Avatar, string: String)
+    func viewPerson(_ person: AvatarView, string: String)
 }
 
-class Avatar: UIView {
+class AvatarView: UIView {
     
     //MARK: - Properties
     var userName = {() -> UILabel in
@@ -30,13 +30,13 @@ class Avatar: UIView {
     //MARK: - Override function
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(imageAvatar)
-        self.addSubview(imageAvatar)
+        addSubview(imageAvatar)
+        addSubview(imageAvatar)
         imageAvatar.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         imageAvatar.frame = CGRect(x: 0, y: 100, width: 100, height: 30)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapPerson(_:)))
-        self.addGestureRecognizer(tapGesture)
-        self.isUserInteractionEnabled = true
+        addGestureRecognizer(tapGesture)
+        isUserInteractionEnabled = true
     }
     
     required init?(coder: NSCoder) {

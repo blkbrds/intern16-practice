@@ -13,18 +13,18 @@ final class Bai4ViewController: UIViewController {
     //MARK: - IBOulets
     @IBOutlet private weak var dateTextField: UITextField!
     
-    // MARK: - Private Properties
+    // MARK: - Properties
     private var datePickerView: DatePickerView!
     private let dateFormater: DateFormatter = DateFormatter()
     
     // MARK: - Lyfe Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configPicker()
+        configUI()
     }
     
     //MARK: - Private methods
-    private func configPicker() {
+    private func configUI() {
         datePickerView = Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView
         datePickerView.frame = CGRect(x: 0, y: view.frame.height - datePickerView.frame.height, width: view.frame.width, height: datePickerView.frame.height)
         datePickerView.delegate = self
@@ -35,7 +35,9 @@ final class Bai4ViewController: UIViewController {
     
     //MARK: - Override function
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         datePickerView.isHidden = true
+        
     }
 }
 
