@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = BaiTap01()
+        window.rootViewController = BaiTap09A()
         self.window = window
         window.makeKeyAndVisible()
 

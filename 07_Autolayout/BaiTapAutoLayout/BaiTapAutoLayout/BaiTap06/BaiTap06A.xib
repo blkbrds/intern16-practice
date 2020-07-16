@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlH-Wo-Zvy">
-                    <rect key="frame" x="19.999999999999996" y="418.66666666666669" width="58.666666666666657" height="58.666666666666686"/>
+                    <rect key="frame" x="20" y="418.66666666666669" width="58.666666666666657" height="58.666666666666686"/>
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="NlH-Wo-Zvy" secondAttribute="height" id="Seq-44-aDb"/>
