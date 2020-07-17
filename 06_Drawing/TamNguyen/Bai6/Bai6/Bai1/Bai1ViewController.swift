@@ -33,13 +33,13 @@ final class Bai1ViewController: UIViewController {
     //MARK: - Private Methods
     private func drawChart() {
         
-        //Draw OXY
+        // Draw OXY
         let lineX = ChartLine(frame: CGRect(x: 30, y: 200, width: 3, height: 300), backgroundColor: UIColor.black.cgColor)
         let lineY = ChartLine(frame: CGRect(x: lineX.frame.origin.x, y: lineX.frame.maxY, width: 320, height: 3), backgroundColor: UIColor.black.cgColor)
         view.addSubview(lineY)
         view.addSubview(lineX)
         
-        //Draw Column
+        // Draw Column
         let width: Int = 30
         let space: Int = 30
         for (i,inforCharts) in inforChar.enumerated() {

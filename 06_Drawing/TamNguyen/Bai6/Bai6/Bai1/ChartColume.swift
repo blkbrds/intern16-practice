@@ -21,6 +21,7 @@ final class ChartColume: UIView {
     fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Private methods
     private func createRectangle(name: String, backgroundColor: CGColor, nameColor: UIColor) {
      clipsToBounds = false
         let path1 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ChartColume.heightLabel))
@@ -36,7 +37,7 @@ final class ChartColume: UIView {
         shapeLayer1.fillColor = backgroundColor
         shapeLayer1.lineWidth = 1
         shapeLayer1.path = path1.cgPath
-        self.layer.addSublayer(shapeLayer1)
+        layer.addSublayer(shapeLayer1)
     }
 }
 

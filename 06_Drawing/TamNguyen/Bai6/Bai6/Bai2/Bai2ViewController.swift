@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Bai2ViewController: UIViewController {
+final class Bai2ViewController: UIViewController {
     
     //MARK: - Life Cycle
     override func viewDidLoad() {

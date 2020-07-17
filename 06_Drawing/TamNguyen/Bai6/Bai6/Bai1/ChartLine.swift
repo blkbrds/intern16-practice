@@ -31,6 +31,6 @@ final class ChartLine: UIView {
         shapeLayer1.fillColor = backgroundColor
         shapeLayer1.lineWidth = 1
         shapeLayer1.path = path1.cgPath
-        self.layer.addSublayer(shapeLayer1)
+        layer.addSublayer(shapeLayer1)
     }
 }

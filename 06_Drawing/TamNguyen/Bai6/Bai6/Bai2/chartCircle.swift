@@ -13,8 +13,7 @@ class chartCircle: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         createCircle()
-        
-    }
+        }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -25,7 +24,6 @@ class chartCircle: UIView {
         let shapeLayer1 = CAShapeLayer()
         let shapeLayer2 = CAShapeLayer()
         let shapeLayer3 = CAShapeLayer()
-        
         shapeLayer1.lineWidth = 50.0
         shapeLayer1.fillColor = UIColor.white.cgColor
         shapeLayer1.strokeColor = UIColor.red.cgColor
