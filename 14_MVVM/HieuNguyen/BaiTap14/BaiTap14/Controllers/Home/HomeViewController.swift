@@ -8,25 +8,40 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
+    @IBOutlet private weak var tableView: UITableView!
+    
+    private let homeViewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
-        setupSlideImage()
+        setupTableView()
+        homeViewModel.getData()
+        tableView.reloadData()
     }
+    
+    private func setupTableView() {
+        let nib = UINib(nibName: "HomeCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: "HomeCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
 
-    private func setupSlideImage() {
-        let slideImage = Bundle.main.loadNibNamed("SlideImageView", owner: self, options: nil)?[0] as? SlideImageView
-        slideImage?.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(slideImage!)
-        // contrains
-        let topSafeArea: CGFloat = (UIApplication.shared.windows.first{$0.isKeyWindow }?.safeAreaInsets.top)! + (navigationController?.navigationBar.frame.height)!
-        slideImage?.topAnchor.constraint(equalTo: view.topAnchor, constant: topSafeArea).isActive = true
-        slideImage?.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        slideImage?.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        slideImage?.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
-
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return homeViewModel.numberOfItems()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCell else { return UITableViewCell() }
+        cell.viewModel = homeViewModel.viewModelForItem(indexPath: indexPath)
+        return cell
     }
 }
