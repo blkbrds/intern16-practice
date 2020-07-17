@@ -32,7 +32,7 @@ final class BaiTap1ViewController: UIViewController {
         let heightUserView: CGFloat = 165
         var yView: CGFloat = 50
         var xView: CGFloat = space
-        let heightScroll = Int(screenSize.height) * 3 - (numberUser / 3 * Int(space))
+        let heightScroll = Int(screenSize.height) * 3 - (numberUser / 2 * Int(space))
         scrollView.contentSize = CGSize(width: screenWidth, height: CGFloat(heightScroll))
         view.addSubview(scrollView)
         for i in 0..<numberUser {

@@ -56,7 +56,7 @@ final class BagdeNumberButton: UIButton {
     }
     
     // MARK: - Lazy Properties
-    lazy private var badgeLabel: UILabel = {
+    private var badgeLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true
         label.layer.cornerRadius = 10

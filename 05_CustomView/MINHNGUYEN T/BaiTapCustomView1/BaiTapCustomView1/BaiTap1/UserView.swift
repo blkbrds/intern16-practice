@@ -14,6 +14,7 @@ protocol UserViewDelegate : class {
 }
 
 final class UserView: UIView {
+
     // MARK: - Private Properties
     private var userAvartarImageView: UIImageView!
     var usernameLabel: UILabel!
