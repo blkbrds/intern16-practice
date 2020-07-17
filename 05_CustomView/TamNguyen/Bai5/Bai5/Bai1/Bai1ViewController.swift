@@ -1,54 +1,39 @@
-//
-//  Bai1ViewController.swift
-//  Bai5
-//
-//  Created by PCI0001 on 7/6/20.
-//  Copyright © 2020 PCI0001. All rights reserved.
-//
 import UIKit
 
-class Bai1ViewController: UIViewController {
-    
-    // MARK: - Propeties
-    let numberOfItems: Int = 30
-    
-    // MARK: - Life cycle
+final class BaiTap01: UIViewController {
+
+    // MARK: - Properties
+    var scrollView: UIScrollView?
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        createListAvatar()
+        configAvatar()
     }
-    
-    // MARK: - Private functions
-    func createListAvatar() {
-        let widthSizeScrollView: CGFloat = view.frame.width
-        var originX: CGFloat = -100
-        var originY: CGFloat = 20
-        let scrollView: UIScrollView = UIScrollView(frame: view.frame)
-        scrollView.backgroundColor = .gray
-        scrollView.contentSize = CGSize(width: widthSizeScrollView, height: (150 * CGFloat(numberOfItems) / (widthSizeScrollView / 120)) + 100)
+
+    // MARK: - Private Methods
+    private func configAvatar() {
+        let screenSize = UIScreen.main.bounds
+        // Lay width cua man hinh
+        let widthScreen = screenSize.width
+        // Lay height cua man hinh
+        let heightScreen = screenSize.height
+        // Gan frame cua scrollView
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: widthScreen, height: heightScreen))
+        // Gan size cho scrollView
+        scrollView.contentSize = CGSize(width: widthScreen, height: 1280)
+        view.backgroundColor = .white
+        // Add scrollView vao view
         view.addSubview(scrollView)
-        for i in 0..<30 {
-            if originX < view.frame.width - 120 {
-                originX += 120
-                let imageAvatar: AvatarView = AvatarView(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
-                imageAvatar.delegate = self
-                scrollView.addSubview(imageAvatar)
-                imageAvatar.userName.text = "Name\(i + 1)"
-            } else {
-                originX = 20
-                originY += 150
-                let imageAvatar: AvatarView = AvatarView(frame: CGRect(x: originX, y: originY, width: 100, height: 130))
-                imageAvatar.delegate = self
-                scrollView.addSubview(imageAvatar)
-                imageAvatar.userName.text = "Name\(i + 1)"
-            }
-        }
+        let myAvatar = MyAvatar(frame: CGRect(x: 0, y: 0, width: 100, height: 250))
+        // Add class MyAvatar vao scrollView
+        scrollView.addSubview(myAvatar)
     }
 }
 
-// MARK: - Extension MyAvatarDelegate
-extension Bai1ViewController: MyAvatarDelegate {
-    func viewPerson(_ person: AvatarView, string: String) {
-        print(string)
+// MARK: - MyAvatarDelegate
+extension BaiTap01: MyAvatarDelegate {
+    func myAvatar(_ myAvatar: MyAvatar, didSelect index: Int) {
+        print("Select user with index \(index).")
     }
 }
