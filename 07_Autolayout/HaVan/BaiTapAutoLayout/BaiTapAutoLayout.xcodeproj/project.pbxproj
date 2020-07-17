@@ -166,6 +166,7 @@
 		527BC73224B8CB8700D14CA9 /* BaiTapAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				527BC7CA24C13BBF00D14CA9 /* New Group */,
 				527BC7C524C05D5A00D14CA9 /* BaiTap12 */,
 				527BC7C024C057BA00D14CA9 /* BaiTap11 */,
 				527BC7BF24C044DC00D14CA9 /* BaiTap10 */,
@@ -318,6 +319,13 @@
 				527BC7C724C05D6F00D14CA9 /* BaiTap12ViewController.xib */,
 			);
 			path = BaiTap12;
+			sourceTree = "<group>";
+		};
+		527BC7CA24C13BBF00D14CA9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
