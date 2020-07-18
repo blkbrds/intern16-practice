@@ -16,7 +16,11 @@
 		220F42BF24B61F720059635A /* Baitap1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220F42BD24B61F720059635A /* Baitap1ViewController.xib */; };
 		220F42C124B622000059635A /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F42C024B622000059635A /* UserView.swift */; };
 		220F42C424B623380059635A /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 220F42C324B623380059635A /* avatar.png */; };
+		223F568F24BF44510055779F /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F568E24BF44510055779F /* DatePickerView.swift */; };
+		223F569324BF51470055779F /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223F569224BF51470055779F /* DatePickerView.xib */; };
 		226E707624BDF30200876FB9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E707524BDF30200876FB9 /* UserInfo.swift */; };
+		226E707B24BEE24900876FB9 /* Baitap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E707924BEE24900876FB9 /* Baitap4ViewController.swift */; };
+		226E707C24BEE24900876FB9 /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +35,11 @@
 		220F42BD24B61F720059635A /* Baitap1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap1ViewController.xib; sourceTree = "<group>"; };
 		220F42C024B622000059635A /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		220F42C324B623380059635A /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		223F568E24BF44510055779F /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		223F569224BF51470055779F /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
 		226E707524BDF30200876FB9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		226E707924BEE24900876FB9 /* Baitap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4ViewController.swift; sourceTree = "<group>"; };
+		226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,10 @@
 				220F42BD24B61F720059635A /* Baitap1ViewController.xib */,
 				226E707524BDF30200876FB9 /* UserInfo.swift */,
 				220F42C024B622000059635A /* UserView.swift */,
+				226E707924BEE24900876FB9 /* Baitap4ViewController.swift */,
+				226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */,
+				223F568E24BF44510055779F /* DatePickerView.swift */,
+				223F569224BF51470055779F /* DatePickerView.xib */,
 			);
 			path = Baitap5;
 			sourceTree = "<group>";
@@ -145,10 +157,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223F569324BF51470055779F /* DatePickerView.xib in Resources */,
 				220F42C424B623380059635A /* avatar.png in Resources */,
 				220F42B524B61F3D0059635A /* LaunchScreen.storyboard in Resources */,
 				220F42B224B61F3D0059635A /* Assets.xcassets in Resources */,
 				220F42BF24B61F720059635A /* Baitap1ViewController.xib in Resources */,
+				226E707C24BEE24900876FB9 /* Baitap4ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,10 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				226E707624BDF30200876FB9 /* UserInfo.swift in Sources */,
+				226E707B24BEE24900876FB9 /* Baitap4ViewController.swift in Sources */,
 				220F42AD24B61F3C0059635A /* ViewController.swift in Sources */,
 				220F42A924B61F3C0059635A /* AppDelegate.swift in Sources */,
 				220F42C124B622000059635A /* UserView.swift in Sources */,
 				220F42AB24B61F3C0059635A /* SceneDelegate.swift in Sources */,
+				223F568F24BF44510055779F /* DatePickerView.swift in Sources */,
 				220F42BE24B61F720059635A /* Baitap1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

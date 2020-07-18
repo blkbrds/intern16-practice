@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UserViewDelegate: class {
-    func userView(_ userView: UserView, didSelect index: Int)
+    func view(_ view: UserView, needsPerform action: UserView.Action)
 }
 
 class UserView: UIView {
@@ -18,7 +18,7 @@ class UserView: UIView {
     var userNameLabel: UILabel = UILabel()
     var userInfo: UserInfo?
     var index: Int = 0
-
+    
     weak var delegate: UserViewDelegate?
 
     override init(frame: CGRect) {
@@ -68,8 +68,15 @@ class UserView: UIView {
     }
 
     @objc func buttonDidClick(sender: UIButton) {
-        let userName = userInfo?.userNameIndex
-        print(userName ?? "No name")
-        delegate?.userView(self, didSelect: index)
+        delegate?.view(self, needsPerform: .didTapSendUsername(index: index))
+        delegate?.view(self, needsPerform: .didTapSendIndex(index: index))
+    }
+}
+
+extension UserView {
+    
+    enum Action {
+        case didTapSendUsername(index: Int)
+        case didTapSendIndex(index: Int)
     }
 }

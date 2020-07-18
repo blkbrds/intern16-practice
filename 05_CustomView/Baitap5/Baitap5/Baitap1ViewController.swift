@@ -11,17 +11,16 @@ import UIKit
 class Baitap1ViewController: UIViewController {
 
     var userInfo: [UserInfo] = []
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .white
         addNameForUser()
         createUserAvatar()
     }
-
+    
     private func addNameForUser() {
         var userInfo: [UserInfo] = []
         for i in 0...32 {
@@ -31,7 +30,6 @@ class Baitap1ViewController: UIViewController {
     }
 
     private func createUserAvatar() {
-
         let screen = UIScreen.main.bounds
         let screenWidth = screen.size.width
         let screenHeight = screen.size.height
@@ -63,7 +61,12 @@ class Baitap1ViewController: UIViewController {
 }
 
 extension Baitap1ViewController: UserViewDelegate {
-    func userView(_ userView: UserView, didSelect index: Int) {
-        print("Select user view with index \(index).")
+    func view(_ view: UserView, needsPerform action: UserView.Action) {
+        switch action {
+        case .didTapSendUsername(index: let index):
+            print("name \(userInfo[index].userNameIndex)")
+        case .didTapSendIndex(index: let index):
+            print("index \(index)")
+        }
     }
 }
