@@ -18,9 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let window = UIWindow(windowScene: windowScene)
 //            window.rootViewController = Baitap1ViewController()
-    //        window.rootViewController = Baitap2ViewController()
+            window.rootViewController = Baitap2ViewController()
     //        window.rootViewController = Baitap3ViewController()
-            window.rootViewController = Baitap4ViewController()
+//            window.rootViewController = Baitap4ViewController()
             self.window = window
             window.makeKeyAndVisible()
             

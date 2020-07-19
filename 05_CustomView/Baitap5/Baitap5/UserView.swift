@@ -74,7 +74,6 @@ class UserView: UIView {
 }
 
 extension UserView {
-    
     enum Action {
         case didTapSendUsername(index: Int)
         case didTapSendIndex(index: Int)

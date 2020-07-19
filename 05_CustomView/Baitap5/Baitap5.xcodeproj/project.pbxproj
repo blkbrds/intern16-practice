@@ -21,6 +21,11 @@
 		226E707624BDF30200876FB9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E707524BDF30200876FB9 /* UserInfo.swift */; };
 		226E707B24BEE24900876FB9 /* Baitap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E707924BEE24900876FB9 /* Baitap4ViewController.swift */; };
 		226E707C24BEE24900876FB9 /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */; };
+		22E1724824C35AC70048750A /* Baitap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E1724624C35AC70048750A /* Baitap2ViewController.swift */; };
+		22E1724924C35AC70048750A /* Baitap2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E1724724C35AC70048750A /* Baitap2ViewController.xib */; };
+		22E1724B24C35AF10048750A /* CustomSiderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E1724A24C35AF00048750A /* CustomSiderView.swift */; };
+		22E1724F24C43D280048750A /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E1724E24C43D280048750A /* TriangleView.swift */; };
+		22E1725124C47EF40048750A /* CustomSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E1725024C47EF40048750A /* CustomSliderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		226E707524BDF30200876FB9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		226E707924BEE24900876FB9 /* Baitap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4ViewController.swift; sourceTree = "<group>"; };
 		226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
+		22E1724624C35AC70048750A /* Baitap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap2ViewController.swift; sourceTree = "<group>"; };
+		22E1724724C35AC70048750A /* Baitap2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap2ViewController.xib; sourceTree = "<group>"; };
+		22E1724A24C35AF00048750A /* CustomSiderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSiderView.swift; sourceTree = "<group>"; };
+		22E1724E24C43D280048750A /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		22E1725024C47EF40048750A /* CustomSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,11 @@
 				220F42BD24B61F720059635A /* Baitap1ViewController.xib */,
 				226E707524BDF30200876FB9 /* UserInfo.swift */,
 				220F42C024B622000059635A /* UserView.swift */,
+				22E1724624C35AC70048750A /* Baitap2ViewController.swift */,
+				22E1724724C35AC70048750A /* Baitap2ViewController.xib */,
+				22E1724A24C35AF00048750A /* CustomSiderView.swift */,
+				22E1725024C47EF40048750A /* CustomSliderView.xib */,
+				22E1724E24C43D280048750A /* TriangleView.swift */,
 				226E707924BEE24900876FB9 /* Baitap4ViewController.swift */,
 				226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */,
 				223F568E24BF44510055779F /* DatePickerView.swift */,
@@ -161,7 +176,9 @@
 				220F42C424B623380059635A /* avatar.png in Resources */,
 				220F42B524B61F3D0059635A /* LaunchScreen.storyboard in Resources */,
 				220F42B224B61F3D0059635A /* Assets.xcassets in Resources */,
+				22E1724924C35AC70048750A /* Baitap2ViewController.xib in Resources */,
 				220F42BF24B61F720059635A /* Baitap1ViewController.xib in Resources */,
+				22E1725124C47EF40048750A /* CustomSliderView.xib in Resources */,
 				226E707C24BEE24900876FB9 /* Baitap4ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,11 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E1724824C35AC70048750A /* Baitap2ViewController.swift in Sources */,
 				226E707624BDF30200876FB9 /* UserInfo.swift in Sources */,
 				226E707B24BEE24900876FB9 /* Baitap4ViewController.swift in Sources */,
+				22E1724B24C35AF10048750A /* CustomSiderView.swift in Sources */,
 				220F42AD24B61F3C0059635A /* ViewController.swift in Sources */,
 				220F42A924B61F3C0059635A /* AppDelegate.swift in Sources */,
 				220F42C124B622000059635A /* UserView.swift in Sources */,
+				22E1724F24C43D280048750A /* TriangleView.swift in Sources */,
 				220F42AB24B61F3C0059635A /* SceneDelegate.swift in Sources */,
 				223F568F24BF44510055779F /* DatePickerView.swift in Sources */,
 				220F42BE24B61F720059635A /* Baitap1ViewController.swift in Sources */,
