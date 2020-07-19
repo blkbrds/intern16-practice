@@ -61,9 +61,9 @@ final class Bai03ViewController: UIViewController {
         case ("", ""), (nil, nil):
             errorLabel.text = LoginError.notEnterData.rawValue
         case ("", _):
-            errorLabel.text = LoginError.notEnterPassword.rawValue
-        case (_, ""):
             errorLabel.text = LoginError.notEnterUserName.rawValue
+        case (_, ""):
+            errorLabel.text = LoginError.notEnterPassword.rawValue
         case (validUsername, validPassword):
             errorLabel.text = "Đăng nhập thành công"
         default:
