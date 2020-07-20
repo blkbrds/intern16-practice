@@ -20,36 +20,33 @@ final class Baitap10ViewController: UIViewController {
     @IBOutlet private weak var redWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var yellowWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var purpleWidthConstraint: NSLayoutConstraint!
-    // MARK: - Properties
-    private var previousButton: UIButton = UIButton()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        previousButton = greenButton
     }
     
     // MARK: - IBAction
     @IBAction func allButtonTouchUpInSide(_ sender: UIButton) {
-        if sender === greenButton {
+        if sender.tag == 1 {
             greenWidthConstraint.constant = 200
             redWidthConstraint.constant = 100
             purpleWidthConstraint.constant = 100
             yellowWidthConstraint.constant = 100
         }
-        if sender == redButton {
+        if sender.tag == 2 {
             greenWidthConstraint.constant = 100
             redWidthConstraint.constant = 200
             purpleWidthConstraint.constant = 100
             yellowWidthConstraint.constant = 100
         }
-        if sender == purpleButton {
+        if sender.tag == 3 {
             greenWidthConstraint.constant = 100
             redWidthConstraint.constant = 100
             purpleWidthConstraint.constant = 200
             yellowWidthConstraint.constant = 100
         }
-        if sender == yellowButton {
+        if sender.tag == 4 {
             greenWidthConstraint.constant = 100
             redWidthConstraint.constant = 100
             purpleWidthConstraint.constant = 100
