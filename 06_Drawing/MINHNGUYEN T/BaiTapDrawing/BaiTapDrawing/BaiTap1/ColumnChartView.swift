@@ -11,32 +11,39 @@ import UIKit
 final class ColumnChartView: UIView {
 
     // MARK: - Properties
-    private var valueForColume: [CGFloat] = [] {
-        didSet {
-            columnWidth = bounds.width / CGFloat(valueForColume.count) / 2
-        }
-    }
+    private var valueForColumn: [CGFloat] = []
     private var columnWidth: CGFloat = 0
-    private var arrayDate:[String] = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Today"]
+    private var arrayDate: [String] = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Today"]
 
     // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .clear
+        backgroundColor = .white
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
+    convenience init(frame: CGRect, valueForColumn: [CGFloat] = []) {
+        self.init(frame: frame)
+        guard let max = valueForColumn.max() else { return }
+        for value in valueForColumn {
+            self.valueForColumn.append(value * (bounds.height - 50) / max)
+        }
+        columnWidth = bounds.width / CGFloat(self.valueForColumn.count) / 2
+    }
+
     // MARK: - Override functions
     override func draw(_ rect: CGRect) {
         var parameter: CGFloat = 0.3
-        for index in valueForColume {
-            drawOneComlumnChart(height: index, width: columnWidth, space: parameter * columnWidth)
+        addValue()
+        drawLine()
+        for (index, height) in valueForColumn.enumerated() {
+            drawOneComlumnChart(height: height, width: columnWidth, space: columnWidth * parameter)
+            addRawDate(width: columnWidth, space: columnWidth * parameter, index: index)
             parameter += 2
         }
-        drawLine()
     }
 
     // MARK: - Private functions
@@ -55,13 +62,23 @@ final class ColumnChartView: UIView {
     }
     
     private func drawLine() {
-        let aPath = UIBezierPath()
-        aPath.move(to: CGPoint(x:bounds.minX + 7, y:bounds.maxY))
-        aPath.addLine(to: CGPoint(x: bounds.maxX - 18, y: bounds.maxY))
-        aPath.close()
+        // Truc X
+        let xPath = UIBezierPath()
+        xPath.move(to: CGPoint(x :bounds.minX, y: bounds.maxY))
+        xPath.addLine(to: CGPoint(x: bounds.maxX, y: bounds.maxY))
+        xPath.close()
         UIColor.red.set()
-        aPath.lineWidth = 1
-        aPath.stroke()
+        xPath.lineWidth = 1
+        xPath.stroke()
+
+        // Truc Y
+        let yPath = UIBezierPath()
+        yPath.move(to: CGPoint(x : bounds.minX, y: bounds.maxY))
+        yPath.addLine(to: CGPoint(x: bounds.minX, y: bounds.minY))
+        yPath.close()
+        UIColor.red.set()
+        yPath.lineWidth = 1
+        yPath.stroke()
     }
     
     // MARK: - Public functions
@@ -70,36 +87,35 @@ final class ColumnChartView: UIView {
         startLabel.frame = CGRect(x: bounds.minX - 20, y: bounds.maxY - 13, width: 20, height: 20)
         startLabel.text = "0"
         startLabel.font = startLabel.font.withSize(12)
+
         let startLabel1: UILabel = UILabel()
-        startLabel1.frame = CGRect(x: bounds.minX - 20, y: (bounds.maxY - 60) / 2, width: 20, height: 20)
+        startLabel1.frame = CGRect(x: bounds.minX - 20, y: (bounds.maxY) / 2 - 10, width: 20, height: 20)
         startLabel1.text = "50"
         startLabel1.font = startLabel.font.withSize(12)
+        let xPath = UIBezierPath()
+        xPath.move(to: CGPoint(x: bounds.minX, y: bounds.maxY / 2))
+        xPath.addLine(to: CGPoint(x: bounds.maxX, y: bounds.maxY / 2))
+        xPath.close()
+        UIColor.red.set()
+        xPath.lineWidth = 1
+        xPath.stroke()
+
         let startLabel2: UILabel = UILabel()
-        startLabel2.frame = CGRect(x: bounds.minX - 25, y: bounds.minY, width: 30, height: 20)
+        startLabel2.frame = CGRect(x: bounds.minX - 25, y: bounds.minY - 10, width: 30, height: 20)
         startLabel2.text = "100"
         startLabel2.font = startLabel.font.withSize(12)
+
         addSubview(startLabel)
         addSubview(startLabel1)
         addSubview(startLabel2)
     }
     
-    func addRawDate() {
-        var spaceX: CGFloat = 30
-        for i in arrayDate {
-            let dateLabel: UILabel = UILabel()
-            dateLabel.frame = CGRect(x: spaceX, y: bounds.maxY + 10, width: columnWidth, height: 20)
-            dateLabel.font = dateLabel.font.withSize(11)
-            dateLabel.textAlignment = .center
-            dateLabel.text = i
-            spaceX += 50
-            addSubview(dateLabel)
-        }
-    }
-    
-    func getValue(values: [CGFloat]) {
-        guard let max = values.max() else { return }
-        for value in values {
-            valueForColume.append(value * (bounds.height - 50) / max)
-        }
+    func addRawDate(width: CGFloat, space: CGFloat, index: Int) {
+        let dateLabel: UILabel = UILabel()
+        dateLabel.frame = CGRect(x: bounds.minX + space - 5, y: bounds.maxY + 10, width: columnWidth + 10, height: 20)
+        dateLabel.font = dateLabel.font.withSize(11)
+        dateLabel.textAlignment = .center
+        dateLabel.text = arrayDate[index]
+        addSubview(dateLabel)
     }
 }

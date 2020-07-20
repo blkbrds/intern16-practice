@@ -22,13 +22,8 @@ final class BaiTap1ViewController: UIViewController {
     // MARK: - Private functions
     private func drawColumeChart() {
         let screenSize = UIScreen.main.bounds
-        let columnChartView = ColumnChartView()
         let frame = CGRect(x: 30, y: 30, width: screenSize.width - 55, height: screenSize.height / 2)
-        columnChartView.frame = frame
-        columnChartView.backgroundColor = .white
-        columnChartView.getValue(values: values)
-        columnChartView.addRawDate()
-        columnChartView.addValue()
+        let columnChartView = ColumnChartView(frame: frame, valueForColumn: values)
         view.addSubview(columnChartView)
     }
 }
