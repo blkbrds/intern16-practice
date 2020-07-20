@@ -10,13 +10,13 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configCircle()
     }
     
-    //MARK: - Private methods
+    // MARK: - Private methods
     private func configCircle() {
         let circle = chartCircle(frame: CGRect(x: 130, y: 250, width: 100, height: 50))
         view.addSubview(circle)

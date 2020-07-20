@@ -8,12 +8,12 @@
 
 import UIKit
 
-class chartCircle: UIView {
+final class chartCircle: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         createCircle()
-        }
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -32,7 +32,6 @@ class chartCircle: UIView {
                                            startAngle: 0.0,
                                            endAngle: CGFloat.pi,
                                            clockwise: true)
-        
         shapeLayer1.path = openCirclePath1.cgPath
         layer.addSublayer(shapeLayer1)
         shapeLayer2.lineWidth = 50.0
