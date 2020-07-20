@@ -66,44 +66,47 @@
                     <rect key="frame" x="0.0" y="194" width="320" height="374"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWd-NH-kkO" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-MU-2vR">
-                                    <rect key="frame" x="0.0" y="10" width="320" height="20.5"/>
+                                    <rect key="frame" x="40" y="10" width="240" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anI-C9-nIz">
-                                    <rect key="frame" x="110" y="40.5" width="100" height="50"/>
+                                    <rect key="frame" x="135" y="40.5" width="50" height="30"/>
                                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="cHn-f8-SaE"/>
-                                        <constraint firstAttribute="height" constant="50" id="hrY-P5-kxi"/>
+                                        <constraint firstAttribute="width" constant="50" id="cHn-f8-SaE"/>
+                                        <constraint firstAttribute="height" constant="30" id="hrY-P5-kxi"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <state key="normal" title="Comment">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSG-7j-8Xp" userLabel="Share">
-                                    <rect key="frame" x="216.5" y="40.5" width="100" height="50"/>
-                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaH-r0-YJG" userLabel="Like">
+                                    <rect key="frame" x="40" y="40.5" width="50" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="D53-bF-MTm"/>
-                                        <constraint firstAttribute="width" constant="100" id="dix-OR-sdC"/>
+                                        <constraint firstAttribute="height" constant="30" id="B54-qp-NiY"/>
+                                        <constraint firstAttribute="width" constant="50" id="zSq-Ey-TXc"/>
                                     </constraints>
-                                    <state key="normal" title="Share">
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="Like">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaH-r0-YJG" userLabel="Like">
-                                    <rect key="frame" x="3.5" y="40.5" width="100" height="50"/>
-                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSG-7j-8Xp" userLabel="Share">
+                                    <rect key="frame" x="230" y="40.5" width="50" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="B54-qp-NiY"/>
-                                        <constraint firstAttribute="width" constant="100" id="zSq-Ey-TXc"/>
+                                        <constraint firstAttribute="height" constant="30" id="D53-bF-MTm"/>
+                                        <constraint firstAttribute="width" constant="50" id="dix-OR-sdC"/>
                                     </constraints>
-                                    <state key="normal" title="Like">
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="Share">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
@@ -111,15 +114,13 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="anI-C9-nIz" firstAttribute="centerX" secondItem="NWd-NH-kkO" secondAttribute="centerX" id="7di-5F-9gl"/>
-                                <constraint firstAttribute="trailing" secondItem="XCQ-MU-2vR" secondAttribute="trailing" id="CK4-OR-vIv"/>
                                 <constraint firstItem="anI-C9-nIz" firstAttribute="top" secondItem="XCQ-MU-2vR" secondAttribute="bottom" constant="10" id="GCI-Ce-VIv"/>
-                                <constraint firstItem="XCQ-MU-2vR" firstAttribute="leading" secondItem="NWd-NH-kkO" secondAttribute="leading" id="IEA-n8-Yua"/>
-                                <constraint firstItem="JSG-7j-8Xp" firstAttribute="centerX" secondItem="NWd-NH-kkO" secondAttribute="centerX" multiplier="5:3" id="NEy-wh-3Mp"/>
                                 <constraint firstItem="XCQ-MU-2vR" firstAttribute="top" secondItem="NWd-NH-kkO" secondAttribute="top" constant="10" id="ZX4-VE-d4J"/>
                                 <constraint firstItem="anI-C9-nIz" firstAttribute="bottom" secondItem="NWd-NH-kkO" secondAttribute="bottom" constant="-20" id="e5t-10-dHq"/>
                                 <constraint firstItem="oaH-r0-YJG" firstAttribute="top" secondItem="XCQ-MU-2vR" secondAttribute="bottom" constant="10" id="gMd-2x-3si"/>
-                                <constraint firstItem="oaH-r0-YJG" firstAttribute="centerX" secondItem="NWd-NH-kkO" secondAttribute="centerX" multiplier="1:3" id="jZn-ES-J8P"/>
                                 <constraint firstItem="JSG-7j-8Xp" firstAttribute="top" secondItem="XCQ-MU-2vR" secondAttribute="bottom" constant="10" id="ljD-ys-EeI"/>
+                                <constraint firstItem="oaH-r0-YJG" firstAttribute="leading" secondItem="XCQ-MU-2vR" secondAttribute="leading" id="tcG-gs-Vz4"/>
+                                <constraint firstItem="JSG-7j-8Xp" firstAttribute="trailing" secondItem="XCQ-MU-2vR" secondAttribute="trailing" id="w1o-jb-7UT"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -144,9 +145,11 @@
                 <constraint firstItem="E5w-lv-VGH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GR5-Iz-aRD"/>
                 <constraint firstItem="TGE-E4-QKz" firstAttribute="centerY" secondItem="Zwq-2Q-iOf" secondAttribute="centerY" id="JAE-ae-Wbf"/>
                 <constraint firstItem="Zwq-2Q-iOf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TA5-Pe-H4U"/>
+                <constraint firstItem="XCQ-MU-2vR" firstAttribute="trailing" secondItem="Zwq-2Q-iOf" secondAttribute="trailing" id="Vtf-aS-963"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="E5w-lv-VGH" secondAttribute="bottom" id="acQ-j8-Lz3"/>
                 <constraint firstItem="Zwq-2Q-iOf" firstAttribute="top" secondItem="isw-3L-Y27" secondAttribute="bottom" constant="10" id="beg-3e-j8V"/>
                 <constraint firstItem="Zwq-2Q-iOf" firstAttribute="leading" secondItem="TGE-E4-QKz" secondAttribute="trailing" id="cMK-Yv-yxn"/>
+                <constraint firstItem="XCQ-MU-2vR" firstAttribute="leading" secondItem="Zwq-2Q-iOf" secondAttribute="leading" id="rG8-Kz-qsR"/>
                 <constraint firstItem="isw-3L-Y27" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="wjB-0o-MIw"/>
                 <constraint firstItem="E5w-lv-VGH" firstAttribute="top" secondItem="Zwq-2Q-iOf" secondAttribute="bottom" constant="10" id="zDA-yt-Y7x"/>
             </constraints>

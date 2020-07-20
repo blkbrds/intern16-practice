@@ -400,8 +400,8 @@
 		F38C698724B2E31B002749C4 /* baitap03.2 */ = {
 			isa = PBXGroup;
 			children = (
-				F38C698A24B2E3DC002749C4 /* Baitap0303ViewController.swift */,
-				F38C698B24B2E3DC002749C4 /* Baitap0303ViewController.xib */,
+				F38C699324B2E52D002749C4 /* Baitap0302ViewController.swift */,
+				F38C699424B2E52E002749C4 /* Baitap0302ViewController.xib */,
 			);
 			path = baitap03.2;
 			sourceTree = "<group>";
@@ -418,8 +418,8 @@
 		F38C698E24B2E4BF002749C4 /* baitap03.3 */ = {
 			isa = PBXGroup;
 			children = (
-				F38C699324B2E52D002749C4 /* Baitap0302ViewController.swift */,
-				F38C699424B2E52E002749C4 /* Baitap0302ViewController.xib */,
+				F38C698A24B2E3DC002749C4 /* Baitap0303ViewController.swift */,
+				F38C698B24B2E3DC002749C4 /* Baitap0303ViewController.xib */,
 			);
 			path = baitap03.3;
 			sourceTree = "<group>";

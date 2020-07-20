@@ -18,16 +18,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-Rq-bIp">
-                    <rect key="frame" x="103.5" y="229" width="207" height="448"/>
+                    <rect key="frame" x="95" y="229" width="224" height="448"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZoG-Rq-bIp" secondAttribute="height" multiplier="1:2" id="Lcz-X6-RRc"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Uck-qS-mx8"/>
-                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="h5N-Gr-jH9"/>
-                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="x3U-Vj-aQb"/>
-                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="yVn-Mo-Dfq"/>
+                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="SIM-HB-Zfz"/>
+                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="q8f-nl-SEZ"/>
+                <constraint firstItem="ZoG-Rq-bIp" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="zEL-NR-BYH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
