@@ -22,19 +22,19 @@ final class UserView: UIView {
     // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let frame = CGRect(x: 0, y: 0, width: 110, height: 100)
         userAvartarImageView = UIImageView(image: UIImage(named: "avartar"))
         userAvartarImageView.frame = frame
         userAvartarImageView.contentMode = .scaleToFill
         addSubview(userAvartarImageView)
         // add name
-        usernameLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
+        usernameLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 110, height: 30))
         usernameLabel.backgroundColor = .lightGray
         usernameLabel.textColor = .blue
         usernameLabel.textAlignment = .center
         addSubview(usernameLabel)
         // add button
-        let userButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 130))
+        let userButton = UIButton(frame: CGRect(x: 0, y: 0, width: 110, height: 130))
         userButton.backgroundColor = .clear
         let uiTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleClickButton))
         userButton.addGestureRecognizer(uiTapGestureRecognizer)
