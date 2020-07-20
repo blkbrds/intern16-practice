@@ -52,14 +52,14 @@ final class BaiTap01: UIViewController {
         view.addSubview(lineX)
         view.addSubview(lineY)
 
-        let width: Int = 30
+        let widthColumn: Int = 30
         let space: Int = 30
 
         // Draw columns
         for (index, chart) in charts.enumerated() {
-            let x: Int = Int(lineX.frame.origin.x) + space + index * space + index * width
+            let x: Int = Int(lineX.frame.origin.x) + space + index * space + index * widthColumn
             let y: Int = Int(lineY.frame.origin.y) - chart.heightY + Int(ChartColume.heightLabel)
-            let column = ChartColume(frame: CGRect(x: x, y: y, width: width, height: chart.heightY),
+            let column = ChartColume(frame: CGRect(x: x, y: y, width: widthColumn, height: chart.heightY),
                 name: chart.name,
                 backgroundColor: random().cgColor,
                 nameColor: .black)

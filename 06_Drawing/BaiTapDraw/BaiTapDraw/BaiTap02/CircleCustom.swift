@@ -69,11 +69,11 @@ final class DrawLine: UIView {
 
     // MARK: - Private Function
     private func createRectangle(backgroundColor: CGColor) {
-        let path1 = UIBezierPath(rect: bounds)
-        let shapeLayer1 = CAShapeLayer()
-        shapeLayer1.fillColor = backgroundColor
-        shapeLayer1.lineWidth = 1
-        shapeLayer1.path = path1.cgPath
-        self.layer.addSublayer(shapeLayer1)
+        let path = UIBezierPath(rect: bounds)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.fillColor = backgroundColor
+        shapeLayer.lineWidth = 1
+        shapeLayer.path = path.cgPath
+        self.layer.addSublayer(shapeLayer)
     }
 }
