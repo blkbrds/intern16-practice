@@ -8,7 +8,6 @@
 
 import UIKit
 
-// MARK: - Protocol
 protocol UserViewDelegate : class {
     func view(_ view: UserView, needsPerform action: UserView.Action)
 }
@@ -16,9 +15,9 @@ protocol UserViewDelegate : class {
 final class UserView: UIView {
 
     // MARK: - Private Properties
-    private var userAvartarImageView: UIImageView!
-    var usernameLabel: UILabel!
-    weak var delegate: UserViewDelegate!
+    private var userAvartarImageView: UIImageView = UIImageView()
+    var usernameLabel: UILabel = UILabel()
+    weak var delegate: UserViewDelegate?
     
     // MARK: - Initialize
     override init(frame: CGRect) {
@@ -33,8 +32,7 @@ final class UserView: UIView {
         usernameLabel.backgroundColor = .lightGray
         usernameLabel.textColor = .blue
         usernameLabel.textAlignment = .center
-        guard let username = usernameLabel else { return }
-        addSubview(username)
+        addSubview(usernameLabel)
         // add button
         let userButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 130))
         userButton.backgroundColor = .clear
@@ -47,9 +45,9 @@ final class UserView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Objc Funtion
-    @objc func handleClickButton() {
-        delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel?.text ?? ""))
+    // MARK: - Funtion
+    @objc private func handleClickButton() {
+        delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel.text ?? ""))
     }
 }
 

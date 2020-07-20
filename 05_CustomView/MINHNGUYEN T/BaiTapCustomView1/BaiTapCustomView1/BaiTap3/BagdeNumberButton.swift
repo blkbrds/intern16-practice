@@ -42,7 +42,7 @@ final class BagdeNumberButton: UIButton {
         }
     }
     
-    // MARK: - Public Properties
+    // MARK: - Properties
     var isShowBadge: Bool = true {
         didSet {
             showBadge()
@@ -55,8 +55,7 @@ final class BagdeNumberButton: UIButton {
         }
     }
     
-    // MARK: - Properties
-    private var badgeLabel: UILabel = {
+    lazy private var badgeLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true
         label.layer.cornerRadius = 10
@@ -68,7 +67,7 @@ final class BagdeNumberButton: UIButton {
         return label
     }()
     
-    // MARK: - Private Function
+    // MARK: - Private functions
     private func showBadge() {
         if isShowBadge {
             addSubview(badgeLabel)
@@ -82,7 +81,7 @@ final class BagdeNumberButton: UIButton {
             badgeLabel.isHidden = true
         } else {
             badgeLabel.frame.size = CGSize(width: badgeLabel.frame.width, height: badgeLabel.frame.height)
-            if badgeNumber >= 1 && badgeNumber <= 99{
+            if badgeNumber >= 1 && badgeNumber <= 99 {
                 badgeLabel.text = String(badgeNumber)
             } else if badgeNumber > 99 {
                 badgeLabel.text = "99+"
@@ -90,7 +89,7 @@ final class BagdeNumberButton: UIButton {
         }
     }
     
-    // MARK: Public Function
+    // MARK: Public functions
     func editPositionBagde(position: PositionBadge) {
         badgeLabel.center = position.position(with: bounds)
     }

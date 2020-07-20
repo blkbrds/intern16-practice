@@ -10,16 +10,16 @@ import UIKit
 
 final class BaiTap3ViewController: UIViewController {
     
-    //MARK: - Private Properties
+    //MARK: - Properties
     private let button = BagdeNumberButton()
     private let button1 = BagdeNumberButton()
     
-    // MARK: - Life Cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         setupUIButton()
     }
     
-    // MARK: - Private Function
+    // MARK: - Private functions
     private func setupUIButton() {
         button1.frame = CGRect(x: 100, y: 150, width: 150, height: 70)
         button1.isShowBadge = true

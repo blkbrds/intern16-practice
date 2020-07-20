@@ -15,20 +15,22 @@ protocol MySliderViewDelegate: class {
 
 final class MySliderView: UIView {
     
-    // MARK: - IBOutlet Properties
-    @IBOutlet weak private var blueImageView: UIImageView!
-    @IBOutlet weak private var whiteImageView: UIImageView!
-    @IBOutlet weak private var valueLabel: UILabel!
-    @IBOutlet weak private var thumbView: UIView!
-    weak var delegate: MySliderViewDelegate!
+    // MARK: - IBOutlets
+    @IBOutlet private weak var blueImageView: UIImageView!
+    @IBOutlet private weak var whiteImageView: UIImageView!
+    @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var thumbView: UIView!
+
+    // MARK: - Properties
+    weak var delegate: MySliderViewDelegate?
     var valueSlider: Int?
-    
-    // MARK: - awakeFromNib
+
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    // MARK: - Overide Funtion
+    // MARK: - Override funtions
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: whiteImageView)
@@ -46,7 +48,7 @@ final class MySliderView: UIView {
         delegate?.view(self, needsPerform: .changeValueSlider(valueSlide: number))
     }
     
-    // MARK: - Public Funtion
+    // MARK: - Public funtions
     func setSliderView() {
         guard let num = valueSlider else { return }
         let newHeight = (whiteImageView.bounds.height * CGFloat(num)) / 100
@@ -56,6 +58,8 @@ final class MySliderView: UIView {
         valueLabel.text = String(num)
     }
 }
+
+// MARK: - Config 
 extension MySliderView {
     enum Action {
         case changeValueSlider(valueSlide: Int)

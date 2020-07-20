@@ -10,6 +10,8 @@
 		5235813024B23CE100DD95B6 /* BaiTap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235812E24B23CE100DD95B6 /* BaiTap3ViewController.swift */; };
 		5235813124B23CE100DD95B6 /* BaiTap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5235812F24B23CE100DD95B6 /* BaiTap3ViewController.xib */; };
 		5235813324B2494B00DD95B6 /* BagdeNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235813224B2494B00DD95B6 /* BagdeNumberButton.swift */; };
+		5271553524C57F3E00CFA579 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271553324C57F3E00CFA579 /* DemoViewController.swift */; };
+		5271553624C57F3E00CFA579 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5271553424C57F3E00CFA579 /* DemoViewController.xib */; };
 		52869B1124B16FA10052A235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52869B1024B16FA10052A235 /* AppDelegate.swift */; };
 		52869B1324B16FA10052A235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52869B1224B16FA10052A235 /* SceneDelegate.swift */; };
 		52869B1524B16FA10052A235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52869B1424B16FA10052A235 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		5235812E24B23CE100DD95B6 /* BaiTap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3ViewController.swift; sourceTree = "<group>"; };
 		5235812F24B23CE100DD95B6 /* BaiTap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3ViewController.xib; sourceTree = "<group>"; };
 		5235813224B2494B00DD95B6 /* BagdeNumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagdeNumberButton.swift; sourceTree = "<group>"; };
+		5271553324C57F3E00CFA579 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		5271553424C57F3E00CFA579 /* DemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
 		52869B0D24B16FA10052A235 /* BaiTapCustomView1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapCustomView1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52869B1024B16FA10052A235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52869B1224B16FA10052A235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				52869B1924B16FA40052A235 /* Assets.xcassets */,
 				52869B1B24B16FA40052A235 /* LaunchScreen.storyboard */,
 				52869B1E24B16FA40052A235 /* Info.plist */,
+				5271553324C57F3E00CFA579 /* DemoViewController.swift */,
+				5271553424C57F3E00CFA579 /* DemoViewController.xib */,
 			);
 			path = BaiTapCustomView1;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 				52869B1D24B16FA40052A235 /* LaunchScreen.storyboard in Resources */,
 				52C68ED224B2E2D2001EA57D /* DatePickerView.xib in Resources */,
 				52C68ECE24B2E2A5001EA57D /* BaiTap4ViewController.xib in Resources */,
+				5271553624C57F3E00CFA579 /* DemoViewController.xib in Resources */,
 				52869B2824B16FE80052A235 /* BaiTap1ViewController.xib in Resources */,
 				52869B3324B1722B0052A235 /* MySliderView.xib in Resources */,
 				5235813124B23CE100DD95B6 /* BaiTap3ViewController.xib in Resources */,
@@ -217,6 +224,7 @@
 				52869B1524B16FA10052A235 /* ViewController.swift in Sources */,
 				52869B1124B16FA10052A235 /* AppDelegate.swift in Sources */,
 				52869B2A24B1706F0052A235 /* UserView.swift in Sources */,
+				5271553524C57F3E00CFA579 /* DemoViewController.swift in Sources */,
 				52C68ED024B2E2C3001EA57D /* DatePickerView.swift in Sources */,
 				52869B1324B16FA10052A235 /* SceneDelegate.swift in Sources */,
 				52C68ECD24B2E2A5001EA57D /* BaiTap4ViewController.swift in Sources */,

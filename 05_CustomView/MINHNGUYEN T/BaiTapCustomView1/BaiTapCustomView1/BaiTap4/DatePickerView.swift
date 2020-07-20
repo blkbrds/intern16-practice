@@ -16,21 +16,21 @@ protocol DatePickerViewDelegate: class {
 final class DatePickerView: UIView {
 
     // MARK: IBOutlet Properties
-    @IBOutlet weak private var dateTimePicker: UIDatePicker!
-    @IBOutlet weak private var doneButton: UIButton!
-    @IBOutlet weak private var containButtonUIView: UIView!
+    @IBOutlet private weak var dateTimePicker: UIDatePicker!
+    @IBOutlet private weak var doneButton: UIButton!
+    @IBOutlet private weak var containButtonUIView: UIView!
 
     // MARK: - Properties
     weak var delegate: DatePickerViewDelegate?
     let dateFormater: DateFormatter = DateFormatter()
     var date: Date = Date()
     
-    // MARK: - awakeFromNib
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    // MARK: - IBAction
+    // MARK: - IBActions
     @IBAction private func actionDateTimePicker(_ sender: UIDatePicker) {
         date = dateTimePicker.date
         dateFormater.dateFormat = "MMM dd, yyyy"
@@ -43,6 +43,7 @@ final class DatePickerView: UIView {
     }
 }
 
+// MARK: - Config
 extension DatePickerView {
     enum Action {
         case didClickDatePicker(date : Date)

@@ -10,27 +10,28 @@ import UIKit
 
 final class BaiTap4ViewController: UIViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet weak private var datetimeTextField: UITextField!
     
-    // MARK: - Private Properties
-    private var datePickerView: DatePickerView!
+    // MARK: - Properties
+    private var datePickerView: DatePickerView?
     private let dateFormater: DateFormatter = DateFormatter()
     
-    // MARK: - Lyfe Cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         datePickerView = Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView
-        datePickerView.frame = CGRect(x: 0, y: view.frame.height - datePickerView.frame.height, width: view.frame.width, height: datePickerView.frame.height)
-        datePickerView.delegate = self
-        view.addSubview(datePickerView)
-        datetimeTextField.delegate = self
-        datePickerView.isHidden = true
+        guard let datePicker = datePickerView else { return }
+        datePicker.frame = CGRect(x: 0, y: view.frame.height - datePickerView!.frame.height, width: view.frame.width, height: datePickerView!.frame.height)
+        datePicker.delegate = self
+        view.addSubview(datePicker)
+        datetimeTextField?.delegate = self
+        datePicker.isHidden = true
     }
 
-    // MARK: - TouchesBegan
+    // MARK: - Override funtions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        datePickerView.isHidden = true
+        datePickerView?.isHidden = true
     }
 }
 
@@ -41,7 +42,7 @@ extension BaiTap4ViewController: DatePickerViewDelegate {
         case .didClickDatePicker(date: let date):
             dateFormater.dateFormat = "MMM dd, yyyy"
             datetimeTextField.text = dateFormater.string(from: date)
-            datePickerView.isHidden = true
+            datePickerView?.isHidden = true
         }
     }
 }
@@ -49,7 +50,7 @@ extension BaiTap4ViewController: DatePickerViewDelegate {
 // MARK: - UITextFieldDelegate
 extension BaiTap4ViewController : UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        datePickerView.isHidden = false
+        datePickerView?.isHidden = false
         return false
     }
 }
