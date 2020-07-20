@@ -8,22 +8,21 @@
 
 import UIKit
 
-// MARK: - Struct
 struct Segment {
     var color: UIColor
     var value: CGFloat
 }
 
-class BaiTap2View: UIView {
+final class BaiTap2View: UIView {
     
     // MARK: - Properties
-    var segments = [Segment]() {
+    var segments: [Segment] = [] {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    // MARK: - Override
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -32,6 +31,7 @@ class BaiTap2View: UIView {
         super.init(coder: aDecoder)
     }
 
+    // MARK: - Override functions
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let radius = min(frame.size.width, frame.size.height) * 0.5

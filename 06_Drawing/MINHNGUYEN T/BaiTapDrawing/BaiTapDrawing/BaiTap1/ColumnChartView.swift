@@ -8,11 +8,18 @@
 
 import UIKit
 
-class ColumnChartView: UIView {
-    // MARK: - Private Properties
-    private  var valueForColume: [CGFloat] = []
-    private var arrayDate:[String] = ["Tue","Wed","Thu","Fri","Sat","Sun","Today"]
+final class ColumnChartView: UIView {
 
+    // MARK: - Properties
+    private var valueForColume: [CGFloat] = [] {
+        didSet {
+            columnWidth = bounds.width / CGFloat(valueForColume.count) / 2
+        }
+    }
+    private var columnWidth: CGFloat = 0
+    private var arrayDate:[String] = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Today"]
+
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
@@ -22,18 +29,17 @@ class ColumnChartView: UIView {
         super.init(coder: coder)
     }
 
-    // MARK: - Override
+    // MARK: - Override functions
     override func draw(_ rect: CGRect) {
-        let range = bounds.width / CGFloat(valueForColume.count) / 2
         var parameter: CGFloat = 0.3
         for index in valueForColume {
-            drawOneComlumnChart(height: index, width: range, space: parameter * range)
+            drawOneComlumnChart(height: index, width: columnWidth, space: parameter * columnWidth)
             parameter += 2
         }
         drawLine()
     }
 
-    // MARK: - Private Function
+    // MARK: - Private functions
     private func drawOneComlumnChart(height: CGFloat, width: CGFloat, space: CGFloat) {
         if let context = UIGraphicsGetCurrentContext(){
             context.move(to: CGPoint(x: bounds.minX + space, y: bounds.maxY))
@@ -58,7 +64,7 @@ class ColumnChartView: UIView {
         aPath.stroke()
     }
     
-    // MARK: - Public Function
+    // MARK: - Public functions
     func addValue() {
         let startLabel: UILabel = UILabel()
         startLabel.frame = CGRect(x: bounds.minX - 20, y: bounds.maxY - 13, width: 20, height: 20)
@@ -78,10 +84,10 @@ class ColumnChartView: UIView {
     }
     
     func addRawDate() {
-        var spaceX = bounds.minX
+        var spaceX: CGFloat = 30
         for i in arrayDate {
             let dateLabel: UILabel = UILabel()
-            dateLabel.frame = CGRect(x: spaceX - 10, y: bounds.maxY + 10, width: 50, height: 20)
+            dateLabel.frame = CGRect(x: spaceX, y: bounds.maxY + 10, width: columnWidth, height: 20)
             dateLabel.font = dateLabel.font.withSize(11)
             dateLabel.textAlignment = .center
             dateLabel.text = i
@@ -91,8 +97,9 @@ class ColumnChartView: UIView {
     }
     
     func getValue(values: [CGFloat]) {
+        guard let max = values.max() else { return }
         for value in values {
-            valueForColume.append(value * (bounds.height - 50) / values.max()!)
+            valueForColume.append(value * (bounds.height - 50) / max)
         }
     }
 }

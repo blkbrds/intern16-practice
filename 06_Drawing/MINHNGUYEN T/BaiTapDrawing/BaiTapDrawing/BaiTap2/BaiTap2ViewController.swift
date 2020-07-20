@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap2ViewController: UIViewController {
+final class BaiTap2ViewController: UIViewController {
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -17,11 +17,11 @@ class BaiTap2ViewController: UIViewController {
         drawPieChart()
     }
 
-    // MARK: - Life Cycle
-    private func drawPieChart(){
+    // MARK: - Private functions
+    private func drawPieChart() {
         let pieChartView = BaiTap2View()
         pieChartView.backgroundColor = .lightGray
-        pieChartView.frame = CGRect(x: 10, y: 30, width: view.frame.size.width - 20, height: 400)
+        pieChartView.frame = CGRect(x: 10, y: 30, width: UIScreen.main.bounds.width - 20, height: 400)
         pieChartView.segments = [
             Segment(color: #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1) ,value: 50),
             Segment(color: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1), value: 30),
