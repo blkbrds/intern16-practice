@@ -11,7 +11,7 @@ import UIKit
 final class BaiTap1ViewController: UIViewController {
 
     // MARK: - Properties
-    var graphs = GraphicsDraw()
+    private var graphs = GraphicsDraw()
     
     // MARK: - Life cycle
     override func viewDidLoad() {

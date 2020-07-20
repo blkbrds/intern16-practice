@@ -16,7 +16,7 @@ final class BaiTap2ViewController: UIViewController {
         configCircleView()
     }
     
-    //MARK: - Private functions
+    // MARK: - Private functions
     private func configCircleView() {
         let screenSize = UIScreen.main.bounds.size
         let widthCircle: CGFloat = 300
