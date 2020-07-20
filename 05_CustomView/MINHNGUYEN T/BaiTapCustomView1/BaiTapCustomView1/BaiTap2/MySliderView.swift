@@ -8,7 +8,6 @@
 
 import UIKit
 
-// MARK: - Protocol
 protocol MySliderViewDelegate: class {
     func view(_ view: MySliderView, needsPerform action: MySliderView.Action)
 }

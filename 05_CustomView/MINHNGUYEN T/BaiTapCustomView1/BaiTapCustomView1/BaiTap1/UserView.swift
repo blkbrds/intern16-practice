@@ -14,7 +14,7 @@ protocol UserViewDelegate : class {
 
 final class UserView: UIView {
 
-    // MARK: - Private Properties
+    // MARK: - Properties
     private var userAvartarImageView: UIImageView = UIImageView()
     var usernameLabel: UILabel = UILabel()
     weak var delegate: UserViewDelegate?
@@ -45,7 +45,7 @@ final class UserView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Funtion
+    // MARK: - Objc funtions
     @objc private func handleClickButton() {
         delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel.text ?? ""))
     }
