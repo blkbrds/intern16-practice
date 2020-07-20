@@ -8,22 +8,47 @@
 
 import Foundation
 
-struct CalculatorLogic{
+struct CalculatorLogic {
     
-    var number: Double
-    
-    init(number: Double) {
+    // MARK: - Properties
+    private var number: Double?
+    var intermediateCalculation: ( n1: Double, calMethod: String)?
+    mutating func setNumber(_ number: Double) {
         self.number = number
     }
     //MARK: - Function
-    func calculate(symbol: String) -> Double? {
-        
-        if  symbol == "+/-" {
-            return number * -1
-        } else if symbol == "%" {
-            return number  * 0.01
-        } else if symbol == "AC" {
-            return 0
+    mutating func calculate(symbol: String) -> Double? {
+        if let n = number {
+            switch symbol {
+            case "+/-":
+                return n * -1
+            case "%":
+                return n  * 0.01
+            case "AC":
+                return 0
+            case "=" :
+                return performTwoNumberCalculation(n2: n)
+                
+            default:
+                intermediateCalculation = (n1: n, calMethod: symbol)
+            }
+        }
+        return nil
+    }
+    private func performTwoNumberCalculation(n2:Double) ->Double? {
+        if let n1 = intermediateCalculation?.n1, let operation = intermediateCalculation?.calMethod {
+            switch operation {
+            case  "+" :
+                return n1 + n2
+            case "-" :
+                return n1 - n2
+            case "X" :
+                return n1 * n2
+            case "÷" :
+                return n1 / n2
+            default:
+                fatalError("error operator")
+            }
         }
         return nil
     }

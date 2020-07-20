@@ -21,20 +21,20 @@ class bai12ViewController: UIViewController {
                 fatalError("Cannot covert text to Double")
             }
             return number
-            
         } set {
             displayLabel.text = String(newValue)
         }
     }
     // MARK: - IBAction
-    
+    private var calculator = CalculatorLogic()
     @IBAction func calcButton(_ sender: UIButton) {
         endEditing = true
-         if let calMethod = sender.currentTitle {
-       let calculator = CalculatorLogic( number: displayValue)
-            guard let result = calculator.calculate(symbol: calMethod) else { fatalError("the result of the calculation is nil")}
-           displayValue = result 
-    }
+        calculator.setNumber(displayValue)
+        if let calMethod = sender.currentTitle {
+            if let result = calculator.calculate(symbol: calMethod) {
+                displayValue = result
+            }
+        }
     }
     @IBAction func numberButton(_ sender: UIButton) {
         if let number = sender.currentTitle {
@@ -51,7 +51,6 @@ class bai12ViewController: UIViewController {
                 }
                 displayLabel.text = displayLabel.text! + number
             }
-            
         }
     }
 }
