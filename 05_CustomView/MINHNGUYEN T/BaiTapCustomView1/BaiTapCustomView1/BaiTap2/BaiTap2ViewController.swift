@@ -9,13 +9,13 @@
 import UIKit
 
 final class BaiTap2ViewController: UIViewController {
-    
+
     // MARK: - IBOulet properties
     @IBOutlet weak private var valueTextField: UITextField!
-    
+
     // MARK: - Properties
-    private var sliderView: MySliderView = MySliderView()
-    
+    private var sliderView: MySliderView?
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +24,17 @@ final class BaiTap2ViewController: UIViewController {
 
     // MARK: - Private funtions
     private func configSlider() {
-        sliderView.frame = CGRect(x: 90, y: 200, width: view.frame.width, height: view.frame.height)
-        view.addSubview(sliderView)
-        sliderView.delegate = self
+        sliderView = Bundle.main.loadNibNamed("MySliderView", owner: self, options: nil)?.first as? MySliderView
+        sliderView?.frame = CGRect(x: 90, y: 200, width: view.frame.width, height: view.frame.height)
+        guard let newSliderView = sliderView else { return }
+        view.addSubview(newSliderView)
+        sliderView?.delegate = self
         valueTextField.delegate = self
     }
 
     private func changeSlider(num : String) {
-        sliderView.valueSlider = Int(num)
-        sliderView.setSliderView()
+        sliderView?.valueSlider = Int(num)
+        sliderView?.setSliderView()
     }
 }
 

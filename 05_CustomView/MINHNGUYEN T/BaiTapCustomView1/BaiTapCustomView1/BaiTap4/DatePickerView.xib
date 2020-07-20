@@ -13,9 +13,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="262"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-nC-e0i">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-nC-e0i">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFW-Gl-ORL">
                             <rect key="frame" x="13" y="8" width="37" height="30"/>
@@ -27,6 +26,9 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="wRD-wZ-xaq"/>
+                    </constraints>
                 </view>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-iz-vCl">
                     <rect key="frame" x="0.0" y="46" width="375" height="216"/>
@@ -37,6 +39,11 @@
                 </datePicker>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="z8g-nC-e0i" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TKE-T5-8tF"/>
+                <constraint firstItem="z8g-nC-e0i" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fg4-l9-UxG"/>
+                <constraint firstItem="z8g-nC-e0i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gPq-Ya-hZh"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

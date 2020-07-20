@@ -14,7 +14,7 @@ protocol MySliderViewDelegate: class {
 }
 
 final class MySliderView: UIView {
-    
+
     // MARK: - IBOutlets
     @IBOutlet private weak var blueImageView: UIImageView!
     @IBOutlet private weak var whiteImageView: UIImageView!
@@ -29,7 +29,7 @@ final class MySliderView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     // MARK: - Override funtions
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
@@ -47,7 +47,7 @@ final class MySliderView: UIView {
         valueLabel.text = String(number)
         delegate?.view(self, needsPerform: .changeValueSlider(valueSlide: number))
     }
-    
+
     // MARK: - Public funtions
     func setSliderView() {
         guard let num = valueSlider else { return }

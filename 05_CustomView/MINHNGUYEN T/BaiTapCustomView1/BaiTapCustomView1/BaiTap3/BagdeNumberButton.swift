@@ -9,7 +9,7 @@
 import UIKit
 
 final class BagdeNumberButton: UIButton {
-    
+
     enum PositionBadge {
         case bottomLeft
         case bottomCenter
@@ -19,7 +19,7 @@ final class BagdeNumberButton: UIButton {
         case topLeft
         case topCenter
         case topRight
-        
+
         func position(with frame: CGRect) -> CGPoint {
             switch self {
             case .topRight:
@@ -48,13 +48,13 @@ final class BagdeNumberButton: UIButton {
             showBadge()
         }
     }
-    
+
     var badgeNumber = 0 {
         didSet {
             updateLabel()
         }
     }
-    
+
     lazy private var badgeLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true
@@ -66,7 +66,7 @@ final class BagdeNumberButton: UIButton {
         label.numberOfLines = 0
         return label
     }()
-    
+
     // MARK: - Private functions
     private func showBadge() {
         if isShowBadge {
@@ -75,7 +75,7 @@ final class BagdeNumberButton: UIButton {
             badgeLabel.isHidden = true
         }
     }
-    
+
     private func updateLabel() {
         if badgeNumber == 0 {
             badgeLabel.isHidden = true
@@ -88,7 +88,7 @@ final class BagdeNumberButton: UIButton {
             }
         }
     }
-    
+
     // MARK: Public functions
     func editPositionBagde(position: PositionBadge) {
         badgeLabel.center = position.position(with: bounds)

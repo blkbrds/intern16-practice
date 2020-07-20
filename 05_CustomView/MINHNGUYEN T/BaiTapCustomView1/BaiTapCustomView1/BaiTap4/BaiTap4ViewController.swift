@@ -9,20 +9,20 @@
 import UIKit
 
 final class BaiTap4ViewController: UIViewController {
-    
+
     // MARK: - IBOutlets
     @IBOutlet weak private var datetimeTextField: UITextField!
-    
+
     // MARK: - Properties
     private var datePickerView: DatePickerView?
     private let dateFormater: DateFormatter = DateFormatter()
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         datePickerView = Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView
         guard let datePicker = datePickerView else { return }
-        datePicker.frame = CGRect(x: 0, y: view.frame.height - datePickerView!.frame.height, width: view.frame.width, height: datePickerView!.frame.height)
+        datePicker.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - datePicker.frame.height, width: UIScreen.main.bounds.width, height: datePicker.frame.height)
         datePicker.delegate = self
         view.addSubview(datePicker)
         datetimeTextField?.delegate = self

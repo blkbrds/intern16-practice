@@ -9,16 +9,16 @@
 import UIKit
 
 final class BaiTap1ViewController: UIViewController {
-    
+
     // MARK: - Properties
     private var names: [String] = ["Name1","Name2","Name3", "Name4","Name5","Name6","Name7", "Name8","Name9","Name10","Name11"]
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         createUserView()
     }
-    
+
     // MARK: - Private funtions
     private func createUserView() {
         let screenSize = UIScreen.main.bounds

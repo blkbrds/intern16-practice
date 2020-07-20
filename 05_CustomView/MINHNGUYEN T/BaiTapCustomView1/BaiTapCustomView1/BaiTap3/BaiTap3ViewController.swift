@@ -9,16 +9,16 @@
 import UIKit
 
 final class BaiTap3ViewController: UIViewController {
-    
+
     //MARK: - Properties
     private let button = BagdeNumberButton()
     private let button1 = BagdeNumberButton()
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         setupUIButton()
     }
-    
+
     // MARK: - Private functions
     private func setupUIButton() {
         button1.frame = CGRect(x: 100, y: 150, width: 150, height: 70)
@@ -29,7 +29,7 @@ final class BaiTap3ViewController: UIViewController {
         button1.setTitle("Photos", for: .normal)
         button1.editPositionBagde(position: .topRight)
         view.addSubview(button1)
-        
+
         button.frame = CGRect(x: 50, y: 250, width: 150, height: 70)
         button.isShowBadge = true
         button.badgeNumber = 22
