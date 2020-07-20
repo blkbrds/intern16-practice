@@ -11,7 +11,8 @@ import UIKit
 final class DrawColumnChart: UIView {
     
     // MARK: - Properties
-    private var transValue: [CGFloat] = []
+    private var transValues: [CGFloat] = []
+    private let dateInWeekList: [String] = ["Mon", "Tue", "Wes", "Thu", "Fri", "Sat", "Sun"]
     
     // MARK: - Initialize
     override init(frame: CGRect) {
@@ -22,26 +23,27 @@ final class DrawColumnChart: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
     // MARK: - Overrride function
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let range: CGFloat = 20
         var space: CGFloat = 30
-        for index in transValue {
+        for index in transValues {
             drawColumn(height: index, width: range, space: space)
             space += 50
             drawFrameChart()
         }
     }
+    
     // MARK: - Private function
     private func drawFrameChart() {
-        let dateInWeekList: [String] = ["Mon", "Tue", "Wes", "Thu", "Fri", "Sat", "Sun"]
         let context = UIGraphicsGetCurrentContext()
-        context!.move(to: CGPoint(x: bounds.minX + 20, y: bounds.minY + 10))
-        context!.addLine(to: CGPoint(x: bounds.minX + 20, y: bounds.maxY))
-        context!.addLine(to: CGPoint(x: bounds.maxX - 5, y: bounds.maxY))
-        context!.setLineWidth(3)
-        context!.strokePath()
+        context?.move(to: CGPoint(x: bounds.minX + 20, y: bounds.minY + 10))
+        context?.addLine(to: CGPoint(x: bounds.minX + 20, y: bounds.maxY))
+        context?.addLine(to: CGPoint(x: bounds.maxX - 5, y: bounds.maxY))
+        context?.setLineWidth(3)
+        context?.strokePath()
         let valueLabel: UILabel = UILabel()
         valueLabel.frame = CGRect(x: bounds.minX - 10, y: bounds.minY, width: 30, height: 20)
         valueLabel.text = "100"
@@ -67,13 +69,13 @@ final class DrawColumnChart: UIView {
         context?.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY - height))
         context?.addLine(to: CGPoint(x: bounds.minX + width + space, y: bounds.maxY))
         context?.setFillColor(UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1).cgColor)
-        context!.fillPath()
+        context?.fillPath()
     }
     
     // MARK: - Public Function
     func transform(values: [CGFloat]) {
         for value in values {
-            transValue.append(value * (bounds.height) / 100)
+            transValues.append(value * (bounds.height) / 100)
         }
     }
 }

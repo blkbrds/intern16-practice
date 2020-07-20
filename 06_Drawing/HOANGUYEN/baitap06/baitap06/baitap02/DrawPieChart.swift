@@ -11,7 +11,7 @@ import UIKit
 final class DrawPieChart: UIView {
     
     // MARK: - Properties
-    private var transValue: [CGFloat] = []
+    private var transValues: [CGFloat] = []
     
     // MARK: - Initialize
     override init(frame: CGRect) {
@@ -25,11 +25,11 @@ final class DrawPieChart: UIView {
     // MARK: - Override function
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        if transValue.isEmpty { return }
+        if transValues.isEmpty { return }
         var starAngle: CGFloat = 0
         var endAngle: CGFloat = 0
-        for i in transValue {
-            endAngle = endAngle + i
+        for value in transValues {
+            endAngle = endAngle + value
             drawPie(radius: 150, startAngle: starAngle, endAngle: endAngle)
             starAngle = endAngle
         }
@@ -39,7 +39,7 @@ final class DrawPieChart: UIView {
     // MARK: - Public Function
     func transform(values: [CGFloat]) {
         for value in values {
-            transValue.append(value * 2 * .pi / 100)
+            transValues.append(value * 2 * .pi / 100)
         }
     }
     
