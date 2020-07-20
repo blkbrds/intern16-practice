@@ -28,25 +28,23 @@ final class Baitap10ViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func allButtonTouchUpInSide(_ sender: UIButton) {
-        if sender.tag == 1 {
+        switch sender.tag {
+        case 1:
             greenWidthConstraint.constant = 200
             redWidthConstraint.constant = 100
             purpleWidthConstraint.constant = 100
             yellowWidthConstraint.constant = 100
-        }
-        if sender.tag == 2 {
+        case 2:
             greenWidthConstraint.constant = 100
             redWidthConstraint.constant = 200
             purpleWidthConstraint.constant = 100
             yellowWidthConstraint.constant = 100
-        }
-        if sender.tag == 3 {
+        case 3:
             greenWidthConstraint.constant = 100
             redWidthConstraint.constant = 100
             purpleWidthConstraint.constant = 200
             yellowWidthConstraint.constant = 100
-        }
-        if sender.tag == 4 {
+        default:
             greenWidthConstraint.constant = 100
             redWidthConstraint.constant = 100
             purpleWidthConstraint.constant = 100
