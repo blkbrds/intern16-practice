@@ -27,7 +27,8 @@ final class CalculatorView: UIView {
             performMath = false
         } else {
             currentValueLabel.text = String(sender.tag - 1)
-            previousNumber = Float(currentValueLabel.text!)!
+            guard let textValue = currentValueLabel.text, let valueLabel = Float(textValue) else { return }
+            previousNumber = valueLabel
         }
     }
     
@@ -57,7 +58,8 @@ final class CalculatorView: UIView {
             } else if operation == 15 {
                 currentValueLabel.text = String(calculator.addTwoNumber(a: numberOnScreen, b: previousNumber))
             }
-            previousNumber = Float(currentValueLabel.text!)!
+            guard let textValue = currentValueLabel.text, let valueLabel = Float(textValue) else { return }
+            previousNumber = valueLabel
         } else if sender.tag == 11 {
             currentValueLabel.text = ""
             previousNumber = 0
