@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "chibi-girl-png-2-original-1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "chibi-girl-png-2-original.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "chibi-girl-png-2-original-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
