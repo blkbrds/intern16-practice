@@ -10,15 +10,15 @@ import UIKit
 
 final class CustomView: UIView {
     
-    enum notificationNumber {
-        case TopLeft
-        case TopRight
-        case TopCenter
-        case CenterLeft
-        case CenterRight
-        case BottomLeft
-        case BottomRight
-        case BottomCenter
+    enum NotificationNumber {
+        case topLeft
+        case topRight
+        case topCenter
+        case centerLeft
+        case centerRight
+        case bottomLeft
+        case bottomRight
+        case bottomCenter
     }
     
     //MARK: Properties
@@ -32,7 +32,7 @@ final class CustomView: UIView {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect, number: Int, position: notificationNumber, nameButton: String) {
+    convenience init(frame: CGRect, number: Int, position: NotificationNumber, nameButton: String) {
         self.init(frame: frame)
         configNotification(with: number, position, name: nameButton)
     }
@@ -42,7 +42,7 @@ final class CustomView: UIView {
     }
     
     //MARK: - Private methods
-    func configNotification(with badgeNum: Int,_ position: notificationNumber, name button: String) {
+    func configNotification(with badgeNum: Int,_ position: NotificationNumber, name button: String) {
         featureButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         featureButton?.backgroundColor = UIColor.init(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
         featureButton?.layer.cornerRadius = 5
@@ -68,32 +68,32 @@ final class CustomView: UIView {
         addSubview(notifyLabel!)
     }
     
-    private func configPositionOfBadge(_ position: notificationNumber) {
+    private func configPositionOfBadge(_ position: NotificationNumber) {
         guard let featureWidth = featureButton?.frame.width else { return }
         guard let featureHeight = featureButton?.frame.height else { return }
         switch position {
-        case .TopLeft:
+        case .topLeft:
             notifyLabel?.center.x = 0
             notifyLabel?.center.y = 0
-        case .TopCenter:
+        case .topCenter:
             notifyLabel?.center.x = featureWidth / 2
             notifyLabel?.center.y = 0
-        case .TopRight:
+        case .topRight:
             notifyLabel?.center.x = featureWidth / 2
             notifyLabel?.center.y = 0
-        case .CenterLeft:
+        case .centerLeft:
             notifyLabel?.center.y = featureHeight / 2
             notifyLabel?.center.x = 0
-        case .CenterRight:
+        case .centerRight:
             notifyLabel?.center.x = featureWidth
             notifyLabel?.center.y = featureHeight / 2
-        case .BottomLeft:
+        case .bottomLeft:
             notifyLabel?.center.x = 0
             notifyLabel?.center.y = featureHeight
-        case .BottomRight:
+        case .bottomRight:
             notifyLabel?.center.x = featureWidth
             notifyLabel?.center.y = featureHeight
-        case .BottomCenter:
+        case .bottomCenter:
             notifyLabel?.center.x = featureWidth / 2
             notifyLabel?.center.y = featureHeight
         }
