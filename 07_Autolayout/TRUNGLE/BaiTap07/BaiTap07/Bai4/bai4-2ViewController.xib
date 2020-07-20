@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="bai4_2ViewController" customModule="BaiTap07" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-6x-HJu" userLabel="1">
+                    <rect key="frame" x="392" y="531" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="wRA-hi-SOC"/>
+                        <constraint firstAttribute="height" constant="50" id="wcv-HC-Dko"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-Do-7Ka" userLabel="2">
+                    <rect key="frame" x="729" y="531" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="g8V-nw-s1r"/>
+                        <constraint firstAttribute="width" constant="50" id="iIY-L5-UIi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBJ-N6-oXp" userLabel="3">
+                    <rect key="frame" x="55" y="531" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dIN-Wl-Ter"/>
+                        <constraint firstAttribute="width" constant="50" id="eGI-Ur-JMb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="CIg-Do-7Ka" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Dxu-E3-dUw"/>
+                <constraint firstItem="FBJ-N6-oXp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="55" id="NMk-Wy-7Yk"/>
+                <constraint firstItem="FBJ-N6-oXp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QTk-Bl-J9k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CIg-Do-7Ka" secondAttribute="trailing" constant="55" id="ZQa-2m-gHD"/>
+                <constraint firstItem="Y6b-6x-HJu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c36-eL-qOZ"/>
+                <constraint firstItem="Y6b-6x-HJu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qzb-Tk-ACf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+</document>
