@@ -27,14 +27,14 @@ final class CaculatorUIView: UIView {
     @IBAction private func numberButtonTouchUpInside(_ sender: UIButton) {
         if performMath == true {
             numberResultLabel.text = String(sender.tag - 1)
-            guard let number = numberResultLabel.text, let nb = Float(number) else { return }
-            numberOnScreen = nb
+            guard let textNumber = numberResultLabel.text, let newNumber = Float(textNumber) else { return }
+            numberOnScreen = newNumber
             performMath = false
         } else {
             guard let text = numberResultLabel.text, text.isEmpty else { return }
             numberResultLabel.text = text + String(sender.tag - 1)
-            guard let number = numberResultLabel.text, let nb = Float(number) else { return }
-            numberOnScreen = nb
+            guard let textNumber = numberResultLabel.text, let newNumber = Float(textNumber) else { return }
+            numberOnScreen = newNumber
         }
     }
 
