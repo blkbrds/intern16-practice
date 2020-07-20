@@ -43,7 +43,7 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFB-zN-LsF">
                                     <rect key="frame" x="20" y="169.5" width="374" height="453.5"/>
-                                    <mutableString key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</mutableString>
+                                    <string key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -166,14 +166,11 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="6gp-v0-OjE" firstAttribute="top" secondItem="mU7-4T-y92" secondAttribute="top" id="07S-Fr-Uoq"/>
                         <constraint firstItem="mU7-4T-y92" firstAttribute="width" secondItem="6gp-v0-OjE" secondAttribute="width" id="6fP-B5-giI"/>
                         <constraint firstItem="6gp-v0-OjE" firstAttribute="bottom" secondItem="ZUD-6b-Irh" secondAttribute="bottom" id="PRe-uZ-FBG"/>
-                        <constraint firstItem="mU7-4T-y92" firstAttribute="trailing" secondItem="6gp-v0-OjE" secondAttribute="trailing" id="Suh-wW-ANf"/>
                         <constraint firstItem="6gp-v0-OjE" firstAttribute="leading" secondItem="ZUD-6b-Irh" secondAttribute="leading" id="alO-mA-afn"/>
                         <constraint firstItem="6gp-v0-OjE" firstAttribute="trailing" secondItem="ZUD-6b-Irh" secondAttribute="trailing" id="cEn-qt-kBe"/>
                         <constraint firstItem="6gp-v0-OjE" firstAttribute="top" secondItem="ZUD-6b-Irh" secondAttribute="top" id="ypX-aM-8lr"/>
-                        <constraint firstItem="6gp-v0-OjE" firstAttribute="leading" secondItem="mU7-4T-y92" secondAttribute="leading" id="zhx-KR-KxT"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="ZUD-6b-Irh"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="mU7-4T-y92"/>
