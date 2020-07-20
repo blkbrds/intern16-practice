@@ -1,14 +1,14 @@
 //
-//  HomeTableViewCell.swift
+//  HomeCollectionViewCell.swift
 //  BaiTap14
 //
-//  Created by PCI0020 on 7/17/20.
+//  Created by PCI0020 on 7/20/20.
 //  Copyright © 2020 hieu.ngq. All rights reserved.
 //
 
 import UIKit
 
-final class HomeCell: UITableViewCell {
+class HomeCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var coffeeShopImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -38,5 +38,7 @@ final class HomeCell: UITableViewCell {
     }
     
     @IBAction private func likeButtonTouchUpInside(_ sender: Any) {
+        viewModel?.changeLikeButton(button: sender as! UIButton)
     }
+
 }

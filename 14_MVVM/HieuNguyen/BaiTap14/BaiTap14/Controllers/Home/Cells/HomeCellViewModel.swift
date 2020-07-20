@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class HomeCellViewModel {
     
@@ -14,5 +15,15 @@ final class HomeCellViewModel {
     
     init(coffeeShop: CoffeeShop? = nil) {
         self.coffeeShop = coffeeShop
+    }
+    
+    func changeLikeButton(button: UIButton) {
+        if button.tag == 2 {
+            button.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            button.tag = 1
+        } else {
+            button.setImage(UIImage(systemName: "star"), for: .normal)
+            button.tag = 2
+        }
     }
 }

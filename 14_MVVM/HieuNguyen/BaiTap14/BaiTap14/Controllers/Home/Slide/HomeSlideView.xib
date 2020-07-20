@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeSlideView" customModule="BaiTap14" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YJC-eX-Vp0">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UQJ-Kf-aFx">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCZ-KZ-Gfu">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="135"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Z3Q-v4-Nsk"/>
+                    </constraints>
+                    <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                    <connections>
+                        <action selector="previousButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="GAF-W7-sdO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oc-6X-hy5">
+                    <rect key="frame" x="364" y="0.0" width="50" height="135"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="50H-Cv-g5C"/>
+                    </constraints>
+                    <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                    <connections>
+                        <action selector="nextButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="S57-Xr-Ma1"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ov9-1g-2nT">
+                    <rect key="frame" x="107" y="98" width="200" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="DOO-kT-2Er"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="6oc-6X-hy5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0w3-Ro-O1G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XCZ-KZ-Gfu" secondAttribute="bottom" id="44N-VC-tzh"/>
+                <constraint firstItem="XCZ-KZ-Gfu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FXP-mG-pU2"/>
+                <constraint firstItem="YJC-eX-Vp0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GEM-Og-CIh"/>
+                <constraint firstItem="XCZ-KZ-Gfu" firstAttribute="top" secondItem="YJC-eX-Vp0" secondAttribute="top" id="N5v-1i-SNP"/>
+                <constraint firstItem="Ov9-1g-2nT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sox-ly-bIN"/>
+                <constraint firstItem="6oc-6X-hy5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZLH-CU-j4O"/>
+                <constraint firstItem="Ov9-1g-2nT" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="eez-sz-cu5"/>
+                <constraint firstItem="6oc-6X-hy5" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="n8f-eO-cML"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YJC-eX-Vp0" secondAttribute="trailing" id="odE-Uy-QF9"/>
+                <constraint firstItem="YJC-eX-Vp0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="snu-bn-Xi8"/>
+                <constraint firstAttribute="bottom" secondItem="YJC-eX-Vp0" secondAttribute="bottom" id="vNI-g1-itu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="YJC-eX-Vp0" id="3v0-yr-lzx"/>
+                <outlet property="nextButton" destination="6oc-6X-hy5" id="HVO-dG-CBU"/>
+                <outlet property="pageControl" destination="Ov9-1g-2nT" id="hAs-6M-H9M"/>
+                <outlet property="previousButton" destination="XCZ-KZ-Gfu" id="WM4-2G-gLt"/>
+            </connections>
+            <point key="canvasLocation" x="-316" y="-37"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+    </resources>
+</document>

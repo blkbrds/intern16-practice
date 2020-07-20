@@ -29,6 +29,7 @@ final class HomeViewModel {
         let coffeeShop = coffeeShops[indexPath.row]
         return HomeCellViewModel(coffeeShop: coffeeShop)
     }
+    
 }
 
 // dummy data
