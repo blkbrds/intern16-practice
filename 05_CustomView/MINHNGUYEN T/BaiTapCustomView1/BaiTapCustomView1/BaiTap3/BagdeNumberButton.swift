@@ -55,7 +55,7 @@ final class BagdeNumberButton: UIButton {
         }
     }
     
-    // MARK: - Lazy Properties
+    // MARK: - Properties
     private var badgeLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true
