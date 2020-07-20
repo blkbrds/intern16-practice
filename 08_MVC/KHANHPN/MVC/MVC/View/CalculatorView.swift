@@ -8,10 +8,6 @@
 
 import UIKit
 
-//protocol CalculatorViewDelegate: class {
-//    func calculatorView(_ calculatorView: CalculatorView , didSelect value: String)
-//}
-
 final class CalculatorView: UIView {
     
     // MARK: - Outlets
@@ -20,24 +16,24 @@ final class CalculatorView: UIView {
     var previousNumber: Double = 0
     var performingMath = false
     var operation = 0
+    var text: String = ""
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Actions
     @IBAction private func numberButtonTouchUpInside(_ sender: UIButton) {
         resultLabel.text = ""
         if performingMath == true {
             resultLabel.text = String(sender.tag)
-            numberOnScreen = Double(resultLabel.text!)!
+            guard let number = resultLabel.text, let nb = Double(number) else { return }
+            numberOnScreen = nb
             performingMath = false
         } else {
-            resultLabel.text = resultLabel.text! + String(sender.tag)
-            previousNumber = Double(resultLabel.text!)!
+            text = text + String(sender.tag)
+            resultLabel.text = text
+            guard let number1 = resultLabel.text, let nb1 = Double(number1) else { return }
+            previousNumber = nb1
         }
     }
-    
+
     @IBAction private func operatorButtonTouchUpInside(_ sender: UIButton) {
         let calculator = Calculate()
         if resultLabel.text != "" && sender.tag != 11 && sender.tag != 12 {
@@ -57,6 +53,7 @@ final class CalculatorView: UIView {
             performingMath = true
         }
         else if sender.tag == 11 {
+            text = ""
             resultLabel.text = "0"
             numberOnScreen = 0
         }
