@@ -18,16 +18,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-Bj-tFL">
-                    <rect key="frame" x="174.5" y="433" width="65" height="30"/>
-                    <state key="normal" title="Pop Multi"/>
+                    <rect key="frame" x="192" y="433" width="30" height="30"/>
+                    <state key="normal" title="Pre"/>
                     <connections>
                         <action selector="pop:" destination="-1" eventType="touchUpInside" id="Ds7-wN-19Z"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkk-Z1-zjk">
-                    <rect key="frame" x="169" y="508" width="76" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="pop to root"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWg-vF-OFG">
+                    <rect key="frame" x="191" y="333" width="32" height="30"/>
+                    <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="push:" destination="-1" eventType="touchUpInside" id="ETU-M9-QFD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkk-Z1-zjk">
+                    <rect key="frame" x="191" y="533" width="32" height="30"/>
+                    <state key="normal" title="Root"/>
                     <connections>
                         <action selector="popToRoot:" destination="-1" eventType="touchUpInside" id="zxB-Tj-clG"/>
                     </connections>
@@ -35,8 +41,14 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="jWg-vF-OFG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5FM-Ao-iDF"/>
+                <constraint firstItem="0dS-Bj-tFL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7BU-mH-7eW"/>
+                <constraint firstItem="Vkk-Z1-zjk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ar2-IA-Izq"/>
                 <constraint firstItem="0dS-Bj-tFL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="B0Z-up-i9T"/>
+                <constraint firstItem="Vkk-Z1-zjk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="100" id="Cgc-dJ-FT4"/>
+                <constraint firstItem="jWg-vF-OFG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="I95-cd-rJL"/>
                 <constraint firstItem="0dS-Bj-tFL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IjH-zl-gl8"/>
+                <constraint firstItem="0dS-Bj-tFL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m5R-bA-11X"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="134"/>

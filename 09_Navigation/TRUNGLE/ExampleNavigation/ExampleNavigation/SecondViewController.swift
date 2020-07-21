@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SecondViewController"
+        title = "ViewControllerB"
         // Do any additional setup after loading the view.
     }
 

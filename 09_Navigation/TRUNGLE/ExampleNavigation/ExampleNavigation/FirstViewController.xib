@@ -18,8 +18,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZH-0f-W3d">
-                    <rect key="frame" x="189.5" y="433" width="35" height="30"/>
-                    <state key="normal" title="Push"/>
+                    <rect key="frame" x="191" y="433" width="32" height="30"/>
+                    <state key="normal" title="Next"/>
                     <connections>
                         <action selector="push:" destination="-1" eventType="touchUpInside" id="nUg-h5-Qsk"/>
                     </connections>

@@ -12,13 +12,17 @@ class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title  = "thirdVC"
+        title  = "ViewController C"
         // Do any additional setup after loading the view.
     }
 
     @IBAction func pop(_ sender: Any) {
         let vc = (self.navigationController?.viewControllers[1])!
         self.navigationController?.popToViewController(vc, animated: true)
+    }
+    @IBAction func push(_ sender: Any) {
+        let vc = FourthViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func popToRoot(_ sender: Any) {
