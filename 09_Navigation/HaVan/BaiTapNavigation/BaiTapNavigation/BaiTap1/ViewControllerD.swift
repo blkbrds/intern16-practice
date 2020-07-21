@@ -27,9 +27,7 @@ final class ViewControllerD: UIViewController {
     }
     
     @IBAction private func BButtonTouchUpInside(_ sender: UIButton) {
-        guard let viewControllerB = navigationController?.viewControllers[1] else {
-            return
-        }
+        guard let viewControllerB = navigationController?.viewControllers.first(where: {$0 is ViewControllerB}) else { return }
         navigationController?.popToViewController(viewControllerB, animated: true)
     }
     

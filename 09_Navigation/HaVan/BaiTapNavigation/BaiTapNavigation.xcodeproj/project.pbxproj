@@ -21,6 +21,8 @@
 		52679C9B24C6CBF700A8DDFE /* ViewControllerD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52679C9924C6CBF700A8DDFE /* ViewControllerD.xib */; };
 		52679C9E24C6CC7500A8DDFE /* ViewControllerE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52679C9C24C6CC7500A8DDFE /* ViewControllerE.swift */; };
 		52679C9F24C6CC7500A8DDFE /* ViewControllerE.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52679C9D24C6CC7500A8DDFE /* ViewControllerE.xib */; };
+		52679CA224C6DA2900A8DDFE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52679CA024C6DA2900A8DDFE /* LoginViewController.swift */; };
+		52679CA324C6DA2900A8DDFE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52679CA124C6DA2900A8DDFE /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		52679C9924C6CBF700A8DDFE /* ViewControllerD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerD.xib; sourceTree = "<group>"; };
 		52679C9C24C6CC7500A8DDFE /* ViewControllerE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerE.swift; sourceTree = "<group>"; };
 		52679C9D24C6CC7500A8DDFE /* ViewControllerE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerE.xib; sourceTree = "<group>"; };
+		52679CA024C6DA2900A8DDFE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52679CA124C6DA2900A8DDFE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		52679C7224C5F7F300A8DDFE /* BaiTapNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				52679CA424C6DA3200A8DDFE /* BaiTap2 */,
 				52679C8F24C6CA6E00A8DDFE /* BaiTap1 */,
 				52679C7324C5F7F300A8DDFE /* AppDelegate.swift */,
 				52679C7524C5F7F300A8DDFE /* SceneDelegate.swift */,
@@ -97,6 +102,15 @@
 				52679C9D24C6CC7500A8DDFE /* ViewControllerE.xib */,
 			);
 			path = BaiTap1;
+			sourceTree = "<group>";
+		};
+		52679CA424C6DA3200A8DDFE /* BaiTap2 */ = {
+			isa = PBXGroup;
+			children = (
+				52679CA024C6DA2900A8DDFE /* LoginViewController.swift */,
+				52679CA124C6DA2900A8DDFE /* LoginViewController.xib */,
+			);
+			path = BaiTap2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52679CA324C6DA2900A8DDFE /* LoginViewController.xib in Resources */,
 				52679C8E24C6CA6600A8DDFE /* ViewControllerA.xib in Resources */,
 				52679C9F24C6CC7500A8DDFE /* ViewControllerE.xib in Resources */,
 				52679C9324C6CAF000A8DDFE /* ViewControllerB.xib in Resources */,
@@ -178,6 +193,7 @@
 				52679C7424C5F7F300A8DDFE /* AppDelegate.swift in Sources */,
 				52679C9224C6CAF000A8DDFE /* ViewControllerB.swift in Sources */,
 				52679C9624C6CB7900A8DDFE /* ViewControllerC.swift in Sources */,
+				52679CA224C6DA2900A8DDFE /* LoginViewController.swift in Sources */,
 				52679C8D24C6CA6600A8DDFE /* ViewControllerA.swift in Sources */,
 				52679C7624C5F7F300A8DDFE /* SceneDelegate.swift in Sources */,
 				52679C9A24C6CBF700A8DDFE /* ViewControllerD.swift in Sources */,
