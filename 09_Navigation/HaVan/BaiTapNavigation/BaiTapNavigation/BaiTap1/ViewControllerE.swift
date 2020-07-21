@@ -17,20 +17,19 @@ final class ViewControllerE: UIViewController {
     }
     
     // MARK: - IBActions
-    
-    @IBAction func CButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func CButtonTouchUpInside(_ sender: UIButton) {
         guard let viewControllerC = navigationController?.viewControllers[2] else { return }
         navigationController?.popToViewController(viewControllerC, animated: true)
     }
-    @IBAction func BButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func BButtonTouchUpInside(_ sender: UIButton) {
         guard let viewControllerB = navigationController?.viewControllers[1] else { return }
         navigationController?.popToViewController(viewControllerB, animated: true)
     }
     
-    @IBAction func DButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func DButtonTouchUpInside(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    @IBAction func rootButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func rootButtonTouchUpInside(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
 }
