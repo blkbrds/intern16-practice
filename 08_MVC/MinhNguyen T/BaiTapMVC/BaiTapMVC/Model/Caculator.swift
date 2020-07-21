@@ -7,21 +7,31 @@
 //
 
 import Foundation
+
 final class Caculator {
+
     // MARK: - Function
-    func sumNumber(a: Float, b: Float) -> Float {
+    var a: Float
+    var b: Float
+    
+    init(a:Float, b: Float) {
+        self.a = a
+        self.b = b
+    }
+    
+    func sumNumber() -> Float {
         return a + b
     }
 
-    func subNumber(a: Float, b: Float) -> Float {
+    func subNumber() -> Float {
         return a - b
     }
 
-    func mulNumber(a: Float, b: Float) -> Float {
+    func mulNumber() -> Float {
         return a * b
     }
 
-    func divNumber(a: Float, b: Float) -> Float {
+    func divNumber() -> Float {
         if b == 0 {
             return 0
         } else {

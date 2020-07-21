@@ -53,15 +53,15 @@ final class CaculatorUIView: UIView {
             performMath = true
             operation = sender.tag
         } else if sender.tag == 12 {
-            let result = Caculator()
+            let result = Caculator(a: previousNumber, b: numberOnScreen)
             if operation == 13 {
-                numberResultLabel.text = String(result.sumNumber(a: previousNumber, b: numberOnScreen))
+                numberResultLabel.text = String(result.sumNumber())
             } else if operation == 14 {
-                numberResultLabel.text = String(result.subNumber(a: previousNumber, b: numberOnScreen))
+                numberResultLabel.text = String(result.subNumber())
             } else if operation == 15 {
-                numberResultLabel.text = String(result.mulNumber(a: previousNumber, b: numberOnScreen))
+                numberResultLabel.text = String(result.mulNumber())
             } else if operation == 16 {
-                numberResultLabel.text = String(result.divNumber(a: previousNumber, b: numberOnScreen))
+                numberResultLabel.text = String(result.divNumber())
             }
         } else if sender.tag == 11 {
             numberResultLabel.text = ""
