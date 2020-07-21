@@ -24,7 +24,6 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="HGJ-kL-19y" secondAttribute="height" multiplier="1:1" id="gAO-Q8-WnY"/>
                         </constraints>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <state key="normal" image="star.fill" catalog="system"/>
                         <connections>
                             <action selector="likeButtonTouchUpInside:" destination="gTV-IL-0wX" eventType="touchUpInside" id="8yF-RB-SF6"/>

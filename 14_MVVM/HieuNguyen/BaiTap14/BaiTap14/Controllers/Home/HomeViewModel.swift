@@ -11,7 +11,7 @@ import UIKit
 
 final class HomeViewModel {
 
-    private var coffeeShops: [CoffeeShop] = []
+    private(set) var coffeeShops: [CoffeeShop] = []
     
     func getData() {
         for item in dummyData {
@@ -20,16 +20,33 @@ final class HomeViewModel {
         }
     }
     
-    func numberOfItems() -> Int {
-        return coffeeShops.count
-    }
-    
     func viewModelForItem(indexPath: IndexPath) -> HomeCellViewModel? {
         guard indexPath.row < coffeeShops.count else { return nil }
         let coffeeShop = coffeeShops[indexPath.row]
         return HomeCellViewModel(coffeeShop: coffeeShop)
     }
     
+    func removeCell(indexPath: IndexPath) {
+        coffeeShops.remove(at: indexPath.row)
+    }
+    
+    func insertCell(indexPath: IndexPath) {
+        let dummyCell: [String: Any] =
+        ["name": "Highland Coffee 1","image": UIImage(named: "1")!,"address": "1 Lê Lợi","rating":8,"distance": 3,"isLike": true]
+        coffeeShops.insert(CoffeeShop(dummyData: dummyCell), at: indexPath.row + 1)
+    }
+    
+    func detailViewModelForItem(indexPath: IndexPath) -> HomeDetailViewModel? {
+        guard indexPath.row < coffeeShops.count else { return nil }
+        let coffeeShop = coffeeShops[indexPath.row]
+        return HomeDetailViewModel(coffeeShop: coffeeShop)
+    }
+    
+    func changeLike(at index: Int, isLike: Bool, completion: () -> Void) {
+        guard index < coffeeShops.count else { return }
+        coffeeShops[index].isLike = isLike
+        completion()
+    }
 }
 
 // dummy data

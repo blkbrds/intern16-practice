@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol HomeCollectionViewCellDelegate: class {
+    func likeCell(cell: HomeCollectionViewCell, isLike: Bool)
+}
+
+
 class HomeCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var coffeeShopImageView: UIImageView!
@@ -22,7 +27,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
             updateView()
         }
     }
-
+    
+    weak var delegate: HomeCollectionViewCellDelegate?
+    
     private func updateView() {
         guard let coffeeShop = viewModel?.coffeeShop else { return }
         nameLabel.text = coffeeShop.name
@@ -38,7 +45,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction private func likeButtonTouchUpInside(_ sender: Any) {
-        viewModel?.changeLikeButton(button: sender as! UIButton)
+        guard let coffeeShop = viewModel?.coffeeShop else { return }
+        delegate?.likeCell(cell: self, isLike: !coffeeShop.isLike)
     }
 
 }

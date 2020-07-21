@@ -24,7 +24,7 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    private let homeViewModel = HomeViewModel()
+    private let viewModel = HomeViewModel()
     private var changeButton = UIBarButtonItem()
     private var lastContentOffset: CGFloat = 0
     private var scrollDirection: ScrollDirection = .up
@@ -32,7 +32,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
-        homeViewModel.getData()
+        viewModel.getData()
         changeButton.tag = 1
         changeViewType()
     }
@@ -80,12 +80,13 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeViewModel.numberOfItems()
+        return viewModel.coffeeShops.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
-        cell.viewModel = homeViewModel.viewModelForItem(indexPath: indexPath)
+        cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
     
@@ -99,16 +100,43 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }  
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .right)
+            self.viewModel.removeCell(indexPath: indexPath)
+            tableView.endUpdates()
+        }
+        delete.backgroundColor = UIColor.red
+
+        let insert = UITableViewRowAction(style: .default, title: "Insert") { (action, indexPath) in
+            tableView.beginUpdates()
+            tableView.insertRows(at: [IndexPath(row: indexPath.row + 1, section: indexPath.section)], with: .left)
+            self.viewModel.insertCell(indexPath: indexPath)
+            tableView.endUpdates()
+        }
+        insert.backgroundColor = UIColor.green
+
+        return [delete, insert]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let homeDetailViewController = HomeDetailViewController()
+        homeDetailViewController.viewModel = viewModel.detailViewModelForItem(indexPath: indexPath)
+        navigationController?.pushViewController(homeDetailViewController, animated: true)
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeViewModel.numberOfItems()
+        return viewModel.coffeeShops.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
-        cell.viewModel = homeViewModel.viewModelForItem(indexPath: indexPath)
+        cell.viewModel = viewModel.viewModelForItem(indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
     
@@ -157,4 +185,31 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
       // update the new position acquired
       lastContentOffset = scrollView.contentOffset.y
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let homeDetailViewController = HomeDetailViewController()
+        homeDetailViewController.viewModel = viewModel.detailViewModelForItem(indexPath: indexPath)
+        navigationController?.pushViewController(homeDetailViewController, animated: true)
+    }
 }
+
+extension HomeViewController: HomeTableViewCellDelegate {
+    func likeCell(cell: HomeTableViewCell, isLike: Bool) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        viewModel.changeLike(at: indexPath.row, isLike: isLike) {
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
+}
+
+extension HomeViewController: HomeCollectionViewCellDelegate {
+    func likeCell(cell: HomeCollectionViewCell, isLike: Bool) {
+        guard let indexPath = collectionView.indexPath(for: cell) else { return }
+        viewModel.changeLike(at: indexPath.row, isLike: isLike) {
+            collectionView.reloadItems(at: [indexPath])
+        }
+    }
+    
+    
+}
+

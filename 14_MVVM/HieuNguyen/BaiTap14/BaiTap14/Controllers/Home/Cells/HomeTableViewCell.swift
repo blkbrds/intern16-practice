@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HomeTableViewCellDelegate: class {
+    func likeCell(cell: HomeTableViewCell, isLike: Bool)
+}
+
 final class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var coffeeShopImageView: UIImageView!
@@ -16,6 +20,8 @@ final class HomeTableViewCell: UITableViewCell {
     @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var distanceLabel: UILabel!
     @IBOutlet private weak var likeButton: UIButton!
+    
+    weak var delegate: HomeTableViewCellDelegate?
     
     var viewModel: HomeCellViewModel? = HomeCellViewModel() {
         didSet {
@@ -41,6 +47,7 @@ final class HomeTableViewCell: UITableViewCell {
     }
     
     @IBAction private func likeButtonTouchUpInside(_ sender: Any) {
-        viewModel?.changeLikeButton(button: sender as! UIButton)
+        guard let coffeeShop = viewModel?.coffeeShop else { return }
+        delegate?.likeCell(cell: self, isLike: !coffeeShop.isLike)
     }
 }
