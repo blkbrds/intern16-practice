@@ -19,7 +19,6 @@
 		B0307C2D24C689E300CCA0CA /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0307C2B24C689E300CCA0CA /* EditViewController.swift */; };
 		B0307C2E24C689E300CCA0CA /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0307C2C24C689E300CCA0CA /* EditViewController.xib */; };
 		B0307C3024C69E4100CCA0CA /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0307C2F24C69E4100CCA0CA /* user.plist */; };
-		B0307C3524C6DBA900CCA0CA /* a1.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0307C3424C6DBA900CCA0CA /* a1.plist */; };
 		B0307C3924C6DE2500CCA0CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0307C3824C6DE2500CCA0CA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		B0307C2B24C689E300CCA0CA /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		B0307C2C24C689E300CCA0CA /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		B0307C2F24C69E4100CCA0CA /* user.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
-		B0307C3424C6DBA900CCA0CA /* a1.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = a1.plist; sourceTree = "<group>"; };
 		B0307C3824C6DE2500CCA0CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				B0307C3324C6A63A00CCA0CA /* View */,
-				B0307C3224C6A63300CCA0CA /* Controller */,
-				B0307C3124C6A62B00CCA0CA /* Model */,
 				B0307C2F24C69E4100CCA0CA /* user.plist */,
 				B0307C0F24C689A900CCA0CA /* AppDelegate.swift */,
 				B0307C1124C689A900CCA0CA /* SceneDelegate.swift */,
@@ -83,23 +79,8 @@
 				B0307C1824C689AD00CCA0CA /* Assets.xcassets */,
 				B0307C1A24C689AD00CCA0CA /* LaunchScreen.storyboard */,
 				B0307C1D24C689AD00CCA0CA /* Info.plist */,
-				B0307C3424C6DBA900CCA0CA /* a1.plist */,
 			);
 			path = Bai2Navigation;
-			sourceTree = "<group>";
-		};
-		B0307C3124C6A62B00CCA0CA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B0307C3224C6A63300CCA0CA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		B0307C3324C6A63A00CCA0CA /* View */ = {
@@ -179,7 +160,6 @@
 				B0307C1C24C689AD00CCA0CA /* LaunchScreen.storyboard in Resources */,
 				B0307C2A24C689D000CCA0CA /* HomeViewController.xib in Resources */,
 				B0307C1924C689AD00CCA0CA /* Assets.xcassets in Resources */,
-				B0307C3524C6DBA900CCA0CA /* a1.plist in Resources */,
 				B0307C1724C689A900CCA0CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
