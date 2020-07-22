@@ -24,7 +24,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="popView:" destination="-1" eventType="touchUpInside" id="wGP-qR-NN7"/>
+                        <action selector="popViewTouchUpInSide:" destination="-1" eventType="touchUpInside" id="Ee6-XA-XYY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-UR-2SJ">
@@ -34,7 +34,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="rootView:" destination="-1" eventType="touchUpInside" id="mLf-iu-puN"/>
+                        <action selector="rootViewTouchUpInSide:" destination="-1" eventType="touchUpInside" id="1Ud-5Q-Vea"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-BA-FF5">
@@ -48,7 +48,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="pushView:" destination="-1" eventType="touchUpInside" id="Eq8-Cs-4fd"/>
+                        <action selector="pushViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="fXd-LT-liD"/>
                     </connections>
                 </button>
             </subviews>

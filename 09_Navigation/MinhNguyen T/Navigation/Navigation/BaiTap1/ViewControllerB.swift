@@ -17,12 +17,12 @@ final class ViewControllerB: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction private func pushView(_ sender: UIButton) {
+    @IBAction private func pushViewTouchUpInside(_ sender: UIButton) {
         let nextUi = ViewControllerC()
         self.navigationController?.pushViewController(nextUi, animated: true)
     }
 
-    @IBAction private func popView(_ sender: UIButton) {
+    @IBAction private func popViewTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }

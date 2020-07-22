@@ -17,21 +17,23 @@ final class ViewControllerD: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction private func pushView(_ sender: UIButton) {
+    @IBAction private func pushViewTouchUpInside(_ sender: UIButton) {
         let nextUi = ViewControllerE()
         self.navigationController?.pushViewController(nextUi, animated: true)
     }
 
-    @IBAction private func popView(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction private func backToViewCTCouchUpInside(_ sender: UIButton) {
+        guard let viewPrevious = navigationController?.viewControllers.first(where: {$0 is ViewControllerC}) else { return }
+        self.navigationController?.popToViewController(viewPrevious, animated: true)
     }
 
-    @IBAction private func rootView(_ sender: UIButton) {
+    @IBAction private func rootViewTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
 
-    @IBAction private func viewBView(_ sender: UIButton) {
-        let viewB = ViewControllerB()
-        self.navigationController?.pushViewController(viewB, animated: true)
+    @IBAction private func backViewBTouchUpInside(_ sender: UIButton) {
+     
+        guard let viewPrevious = navigationController?.viewControllers.first(where: {$0 is ViewControllerB}) else { return }
+        self.navigationController?.popToViewController(viewPrevious, animated: true)
     }
 }

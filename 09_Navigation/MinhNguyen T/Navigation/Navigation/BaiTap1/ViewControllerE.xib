@@ -25,7 +25,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="viewDView:" destination="-1" eventType="touchUpInside" id="gnw-Mg-uGP"/>
+                        <action selector="backToViewDTouchUpInside:" destination="-1" eventType="touchUpInside" id="fDj-c9-szP"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-7D-ZOD">
@@ -36,7 +36,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="viewBView:" destination="-1" eventType="touchUpInside" id="2WF-na-nwV"/>
+                        <action selector="backToViewBTouchUpInside:" destination="-1" eventType="touchUpInside" id="cAO-qv-xPS"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhg-9A-zTK">
@@ -47,7 +47,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="rootView:" destination="-1" eventType="touchUpInside" id="39D-6s-yoW"/>
+                        <action selector="rootViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="HZV-EZ-eLM"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-3I-EDY">
@@ -62,7 +62,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="viewCView:" destination="-1" eventType="touchUpInside" id="Uoe-PJ-qt2"/>
+                        <action selector="backToCViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="Dkc-Lk-ovJ"/>
                     </connections>
                 </button>
             </subviews>

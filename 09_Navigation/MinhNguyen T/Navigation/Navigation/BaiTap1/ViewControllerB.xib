@@ -28,7 +28,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="pushView:" destination="-1" eventType="touchUpInside" id="6aA-2s-AGf"/>
+                        <action selector="pushViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="cWT-lS-Lre"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSW-Qn-mce">
@@ -38,7 +38,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="popView:" destination="-1" eventType="touchUpInside" id="FF6-x9-pQW"/>
+                        <action selector="popViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="dEc-Cy-eZm"/>
                     </connections>
                 </button>
             </subviews>
