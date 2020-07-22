@@ -10,6 +10,9 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
+    // MARK: - IBOulet
+    @IBOutlet weak var nameLabel: UILabel!
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +22,8 @@ final class HomeViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Home"
-        let logoutButoon = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(popLoginTouchUpInside))
-        navigationItem.leftBarButtonItem = logoutButoon
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(popLoginTouchUpInside))
+        navigationItem.leftBarButtonItem = logoutButton
         let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(pushEditTouchUpInside))
         navigationItem.rightBarButtonItem = editButton
     }

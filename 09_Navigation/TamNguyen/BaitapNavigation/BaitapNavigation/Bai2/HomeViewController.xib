@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BaitapNavigation" customModuleProvider="target">
             <connections>
+                <outlet property="nameLabel" destination="yOn-b4-auL" id="xU8-3E-q2N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

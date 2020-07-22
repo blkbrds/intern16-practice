@@ -29,6 +29,8 @@
 		310B489D24C6A138009425F0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B489B24C6A138009425F0 /* EditViewController.swift */; };
 		310B489E24C6A138009425F0 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B489C24C6A138009425F0 /* EditViewController.xib */; };
 		310B48A024C6F239009425F0 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 310B489F24C6F239009425F0 /* data.plist */; };
+		310B48AF24C7D0CA009425F0 /* Bai3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B48AD24C7D0CA009425F0 /* Bai3ViewController.swift */; };
+		310B48B024C7D0CA009425F0 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B48AE24C7D0CA009425F0 /* Bai3ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		310B489B24C6A138009425F0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		310B489C24C6A138009425F0 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		310B489F24C6F239009425F0 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		310B48AD24C7D0CA009425F0 /* Bai3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai3ViewController.swift; sourceTree = "<group>"; };
+		310B48AE24C7D0CA009425F0 /* Bai3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		310B486724C688F0009425F0 /* BaitapNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				310B48AC24C7D0AA009425F0 /* Bai3 */,
 				310B489224C6A0E4009425F0 /* Bai2 */,
 				310B488024C6896E009425F0 /* Bai1 */,
 				310B486824C688F0009425F0 /* AppDelegate.swift */,
@@ -129,6 +134,15 @@
 				310B489C24C6A138009425F0 /* EditViewController.xib */,
 			);
 			path = Bai2;
+			sourceTree = "<group>";
+		};
+		310B48AC24C7D0AA009425F0 /* Bai3 */ = {
+			isa = PBXGroup;
+			children = (
+				310B48AD24C7D0CA009425F0 /* Bai3ViewController.swift */,
+				310B48AE24C7D0CA009425F0 /* Bai3ViewController.xib */,
+			);
+			path = Bai3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +208,7 @@
 				310B487F24C68966009425F0 /* ViewControllerA.xib in Resources */,
 				310B489E24C6A138009425F0 /* EditViewController.xib in Resources */,
 				310B489024C689C9009425F0 /* ViewControllerE.xib in Resources */,
+				310B48B024C7D0CA009425F0 /* Bai3ViewController.xib in Resources */,
 				310B488424C68989009425F0 /* ViewControllerB.xib in Resources */,
 				310B487524C688F2009425F0 /* LaunchScreen.storyboard in Resources */,
 				310B488C24C689AF009425F0 /* ViewControllerD.xib in Resources */,
@@ -211,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				310B489524C6A11A009425F0 /* LoginViewController.swift in Sources */,
+				310B48AF24C7D0CA009425F0 /* Bai3ViewController.swift in Sources */,
 				310B488724C68998009425F0 /* ViewControllerC.swift in Sources */,
 				310B487E24C68966009425F0 /* ViewControllerA.swift in Sources */,
 				310B488B24C689AF009425F0 /* ViewControllerD.swift in Sources */,

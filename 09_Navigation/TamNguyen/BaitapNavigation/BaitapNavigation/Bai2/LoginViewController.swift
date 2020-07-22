@@ -54,6 +54,7 @@ final class LoginViewController: UIViewController {
                     case (account.key, account.value):
                         let nextHomeView = HomeViewController()
                         navigationController?.pushViewController(nextHomeView, animated: true)
+                        nextHomeView.nameLabel.text = account.key
                     default:
                         informationLabel.text = Attention.wrongInformation.rawValue
                     }
