@@ -9,29 +9,30 @@
 import UIKit
 
 class EditViewController: UIViewController {
-
+    
+    @IBOutlet weak var userNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "EDIT"
         let cancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButton))
-        let done = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(doneButton))
-              navigationItem.rightBarButtonItems = [cancel,done]
+        navigationItem.leftBarButtonItem = cancel
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButton))
+        navigationItem.rightBarButtonItem = done
     }
-
+    
     @objc func cancelButton() {
-        print("cancel")
+        navigationController?.popViewController(animated: true)
     }
     @objc func doneButton() {
-        print("Done")
+        let viewcontroller = navigationController?.viewControllers
+        for vc in viewcontroller! {
+            if let homeViewController = vc as? HomeViewController {
+                homeViewController.userName = userNameTextField.text!
+                navigationController?.popViewController(animated: true)
+            }
+        }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
