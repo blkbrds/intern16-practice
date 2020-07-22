@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ExerciseFourViewController: UIViewController {
+final class ExerciseFourViewController: UIViewController {
 
-    @IBOutlet weak var topHeaderCollectionView: UICollectionView!
-    @IBOutlet weak var tag1CollectionView: UICollectionView!
-    @IBOutlet weak var tag2CollectionView: UICollectionView!
-    @IBOutlet weak var tag3CollectionView: UICollectionView!
-    @IBOutlet weak var tag4CollectionView: UICollectionView!
+    @IBOutlet private weak var topHeaderCollectionView: UICollectionView!
+    @IBOutlet private weak var tag1CollectionView: UICollectionView!
+    @IBOutlet private weak var tag2CollectionView: UICollectionView!
+    @IBOutlet private weak var tag3CollectionView: UICollectionView!
+    @IBOutlet private weak var tag4CollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class ExerciseFourViewController: UIViewController {
         tag4CollectionView.dataSource = self
     }
     
-    @IBAction func previousButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func previousButtonTouchUpInside(_ sender: Any) {
         let visibleItems: NSArray = self.topHeaderCollectionView.indexPathsForVisibleItems as NSArray
         let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
         let nextItem: IndexPath = IndexPath(item: currentItem.item - 1, section: 0)
@@ -54,7 +54,7 @@ class ExerciseFourViewController: UIViewController {
         }
     }
     
-    @IBAction func nextButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func nextButtonTouchUpInside(_ sender: Any) {
          let visibleItems: NSArray = self.topHeaderCollectionView.indexPathsForVisibleItems as NSArray
          let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
          let nextItem: IndexPath = IndexPath(item: currentItem.item + 1, section: 0)

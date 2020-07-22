@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ExerciseOneViewController: UIViewController {
+final class ExerciseOneViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
-    let internMember: [String] = ["Hieu ng", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan"]
-    let mentor: [String] = ["Bien Le", "Tien Le", "Hai Nguyen" ,"Khoa Nguyen" ,"Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen"]
-    var atIosTeam: [[String]] = []
+    private let internMember: [String] = ["Hieu ng", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan", "Trin Nguyen", "Khanh Phan"]
+    private let mentor: [String] = ["Bien Le", "Tien Le", "Hai Nguyen" ,"Khoa Nguyen" ,"Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen","Tien Le", "Hai Nguyen" ,"Khoa Nguyen"]
+    private var atIosTeam: [[String]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
@@ -49,7 +50,6 @@ extension ExerciseOneViewController: UICollectionViewDelegate, UICollectionViewD
         label.frame = cell.bounds
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
-        
         cell.addSubview(label)
         return cell
     }

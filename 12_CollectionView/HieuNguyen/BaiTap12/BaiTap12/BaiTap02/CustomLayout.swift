@@ -12,7 +12,7 @@ protocol CustomLayoutDelegate {
     func heightFor(index: Int) -> CGFloat
 }
 
-class CustomLayout: UICollectionViewFlowLayout {
+final class CustomLayout: UICollectionViewFlowLayout {
     
     var layoutDelegate: CustomLayoutDelegate?
     private let numberOfColumns = 3
