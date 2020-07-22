@@ -26,7 +26,6 @@ final class ChartLine: UIView {
     //MARK: - Private Methods
     private func createRectangle(backgroundColor: CGColor) {
         let path = UIBezierPath(rect: bounds)
-        
         let shapeLayer = CAShapeLayer()
         shapeLayer.fillColor = backgroundColor
         shapeLayer.lineWidth = 1

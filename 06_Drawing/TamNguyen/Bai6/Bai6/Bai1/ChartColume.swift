@@ -32,7 +32,6 @@ final class ChartColume: UIView {
         nameLabel.clipsToBounds = false
         nameLabel.font = .systemFont(ofSize: 11)
         addSubview(nameLabel)
-        
         let shapeLayer = CAShapeLayer()
         shapeLayer.fillColor = backgroundColor
         shapeLayer.lineWidth = 1
