@@ -43,14 +43,14 @@ class bai12ViewController: UIViewController {
                 endEditing = false
             }
             else {
-                if number == "." {
-                    let isInt = floor(displayValue) == displayValue
-                    if !isInt  {
-                        return
-                    }
+                let isInt = floor(displayValue) == displayValue
+                if number != "." || (number == "." && isInt) {
+                    displayLabel.text = displayLabel.text! + number
                 }
-                displayLabel.text = displayLabel.text! + number
             }
         }
     }
 }
+
+
+
