@@ -18,12 +18,14 @@ final class UserView: UIView {
     private var userAvartarImageView: UIImageView = UIImageView()
     var usernameLabel: UILabel = UILabel()
     weak var delegate: UserViewDelegate?
-    
+    var nameImage:String = "avartar"
+    var index: Int = 0
+
     // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         let frame = CGRect(x: 0, y: 0, width: 110, height: 100)
-        userAvartarImageView = UIImageView(image: UIImage(named: "avartar"))
+        userAvartarImageView = UIImageView(image: UIImage(named: nameImage))
         userAvartarImageView.frame = frame
         userAvartarImageView.contentMode = .scaleToFill
         addSubview(userAvartarImageView)
@@ -45,15 +47,20 @@ final class UserView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    convenience init(frame: CGRect, index: Int = 0, name: String = "") {
+        self.init(frame: frame)
+        self.index = index
+    }
+    
     // MARK: - Objc funtions
     @objc private func handleClickButton() {
-        delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel.text ?? ""))
+        delegate?.view(self, needsPerform: .didTapImage(nameLabel: usernameLabel.text ?? "", nameImage: userAvartarImageView.image, index: index))
     }
 }
 
 // MARK: - Config UserView
 extension UserView {
     enum Action {
-        case didTapImage(nameLabel : String)
+        case didTapImage(nameLabel : String, nameImage: UIImage?, index: Int)
     }
 }

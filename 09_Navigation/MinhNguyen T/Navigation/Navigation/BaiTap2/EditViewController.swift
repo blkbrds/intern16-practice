@@ -37,7 +37,7 @@ class EditViewController: UIViewController {
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
         navigationItem.leftBarButtonItem = cancelButton
     }
-
+    
     private func configDoneButton() {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneAction))
         navigationItem.rightBarButtonItem = doneButton
@@ -64,3 +64,4 @@ extension EditViewController {
         case UpdateName(username : String)
     }
 }
+
