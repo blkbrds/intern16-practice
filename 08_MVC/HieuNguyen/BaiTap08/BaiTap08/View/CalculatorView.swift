@@ -38,7 +38,7 @@ final class CalculatorView: UIView {
 
     @IBAction private func calculatorButtonTouchUpInside(_ sender: Any) {
         let number = (sender as AnyObject).tag
-        if var resultString = resultLabel.text, let resultInt = Int(resultString),let operands: [Int] = operand.operands {
+        if var resultString = resultLabel.text, let resultInt = Int(resultString),let operandLast: Int = operand.operands.last {
             switch number {
                 case 10:
                     // ==
@@ -46,12 +46,11 @@ final class CalculatorView: UIView {
                         operand.operands.append(resultInt)
                         isNewNumber = false
                         isNewOperator = true
-                        if operatorCurrent != nil {
-                            guard let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operand.operands.last!, operatorCurrent: operatorCurrent!) else {
+                        if let operatorCurrent = operatorCurrent {
+                            guard let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operandLast, operatorCurrent: operatorCurrent) else {
                                 resultLabel.text = "Error"
                                 operand.result = 0
                                 return
-                                
                             }
                             resultLabel.text = String(result)
                             operand.result = result
@@ -79,8 +78,8 @@ final class CalculatorView: UIView {
                         print(isNewOperator)
                         isNewNumber = false
                         isNewOperator = true
-                        if operatorCurrent != nil {
-                            guard let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operand.operands.last!, operatorCurrent: operatorCurrent!) else {
+                        if let operatorCurrent = operatorCurrent {
+                            guard let result: Int = Calculator.shared().operatorCal(a: operand.result, b: operandLast, operatorCurrent: operatorCurrent) else {
                             resultLabel.text = "Error"
                             operand.result = 0
                                 return }
