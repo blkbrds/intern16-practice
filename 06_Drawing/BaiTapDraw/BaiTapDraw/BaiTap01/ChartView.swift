@@ -9,7 +9,7 @@
 import UIKit
 
 final class ChartLineView: UIView {
-    
+
     // MARK: - Initialize
     init(frame: CGRect, backgroundColor: CGColor) {
         super.init(frame: frame)
@@ -32,7 +32,7 @@ final class ChartLineView: UIView {
 }
 
 final class ChartColumnView: UIView {
-    
+
     // MARK: - Propeties
     static let labelHeight: CGFloat = 40
     let labelWidth: CGFloat = 70
@@ -64,6 +64,6 @@ final class ChartColumnView: UIView {
         shapeLayer.fillColor = backgroundColor
         shapeLayer.lineWidth = 1
         shapeLayer.path = path.cgPath
-        self.layer.addSublayer(shapeLayer)
+        layer.addSublayer(shapeLayer)
     }
 }

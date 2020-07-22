@@ -15,7 +15,6 @@ final class BaiTap02: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         drawChart()
-
     }
 
     // MARK: - Private Function
