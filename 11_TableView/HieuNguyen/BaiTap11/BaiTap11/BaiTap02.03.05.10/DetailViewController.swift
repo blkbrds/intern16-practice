@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
 
-    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet private weak var contactNameLabel: UILabel!
     var name: String = ""
     
     override func viewDidLoad() {

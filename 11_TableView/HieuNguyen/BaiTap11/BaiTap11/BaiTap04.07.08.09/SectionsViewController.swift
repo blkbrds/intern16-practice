@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SectionsViewController: UIViewController {
+final class SectionsViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    var datas: [[String]] = [[]]
-    var dataIndex: [String] = []
-    var doAn: [String] = []
-    var dongVat: [String] = []
-    var vatDung: [String] = []
+    @IBOutlet private weak var tableView: UITableView!
+    private var datas: [[String]] = [[]]
+    private var dataIndex: [String] = []
+    private var doAn: [String] = []
+    private var dongVat: [String] = []
+    private var vatDung: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

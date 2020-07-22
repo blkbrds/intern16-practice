@@ -12,11 +12,11 @@ protocol SectionsTableViewCellDelegate: class {
     func getSectionName(view: SectionsTableViewCell, needPerformAction action: SectionsTableViewCell.Action)
 }
 
-class SectionsTableViewCell: UITableViewCell {
+final class SectionsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var descriptLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet private weak var descriptLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var profileImageView: UIImageView!
     
     weak var delegate: SectionsTableViewCellDelegate?
     var name: String = ""

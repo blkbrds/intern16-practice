@@ -10,12 +10,12 @@ import UIKit
 import Contacts
 import ContactsUI
 
-class ContactsViewController: UIViewController {
+final class ContactsViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    var contactsData: [String] = []
-    var contacts: [String] = []
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    private var contactsData: [String] = []
+    private var contacts: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +40,7 @@ class ContactsViewController: UIViewController {
 //        self.contactsData = contactsData
 //        self.contacts = contactsData
         
-        // bai tap 10
-        
+        // bai tap 10        
         let contactsIphone = self.getContactFromCNContact()
         for contact in contactsIphone {
             self.contacts.append("\(contact.givenName) \(contact.familyName)")
@@ -79,7 +78,6 @@ class ContactsViewController: UIViewController {
     }
     
     private func getContactFromCNContact() -> [CNContact] {
-
         let contactStore = CNContactStore()
         let keysToFetch = [
             CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
@@ -88,7 +86,6 @@ class ContactsViewController: UIViewController {
             CNContactFamilyNameKey,
             CNContactEmailAddressesKey,
             ] as [Any]
-
         //Get all the containers
         var allContainers: [CNContainer] = []
         do {
@@ -96,9 +93,8 @@ class ContactsViewController: UIViewController {
         } catch {
             print("Error fetching containers")
         }
-
+        
         var results: [CNContact] = []
-
         // Iterate all containers and append their contacts to our results array
         for container in allContainers {
             let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
