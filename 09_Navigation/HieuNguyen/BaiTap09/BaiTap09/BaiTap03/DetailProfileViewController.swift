@@ -10,8 +10,9 @@ import UIKit
 
 class DetailProfileViewController: UIViewController {
 
-    @IBOutlet weak var userNameTextField: UITextField!
-    var userName:String = "user name"
+    @IBOutlet private weak var userNameTextField: UITextField!
+    var userName: String = "user name"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
@@ -20,13 +21,14 @@ class DetailProfileViewController: UIViewController {
         userNameTextField.text = userName
     }
     
-    @objc func finishExit() {
+    @objc private func finishExit() {
         let viewControllers = navigationController?.viewControllers
         for vc in viewControllers! {
             if let profilesViewController = vc as? ProfilesViewController {
-                for i in 0..<profilesViewController.Data.count {
-                    if profilesViewController.Data[i].name == userName {
-                        profilesViewController.Data[i].name = userNameTextField.text!
+                for i in 0..<profilesViewController.Datas.count {
+                    if profilesViewController.Datas[i].name == userName {
+                        profilesViewController.Datas[i].name = userNameTextField.text!
+                        profilesViewController.scrollView.removeFromSuperview()
                     }
                     navigationController?.popViewController(animated: true)
                 }
