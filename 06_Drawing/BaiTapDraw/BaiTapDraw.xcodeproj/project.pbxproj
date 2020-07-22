@@ -14,7 +14,7 @@
 		7025E9BE24B7108900D50CA0 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7025E9BD24B7108900D50CA0 /* ChartView.swift */; };
 		7025E9C024B710A000D50CA0 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7025E9BF24B710A000D50CA0 /* ChartView.xib */; };
 		704B4B0A24BBF49000BC5B8F /* BaiTap02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B4B0924BBF49000BC5B8F /* BaiTap02.swift */; };
-		704B4B0C24BBF4CE00BC5B8F /* CircleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B4B0B24BBF4CE00BC5B8F /* CircleCustom.swift */; };
+		704B4B0C24BBF4CE00BC5B8F /* CircleCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B4B0B24BBF4CE00BC5B8F /* CircleCustomView.swift */; };
 		704B4B0E24BBF4DF00BC5B8F /* CircleCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 704B4B0D24BBF4DF00BC5B8F /* CircleCustom.xib */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		7025E9BD24B7108900D50CA0 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		7025E9BF24B710A000D50CA0 /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 		704B4B0924BBF49000BC5B8F /* BaiTap02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap02.swift; sourceTree = "<group>"; };
-		704B4B0B24BBF4CE00BC5B8F /* CircleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCustom.swift; sourceTree = "<group>"; };
+		704B4B0B24BBF4CE00BC5B8F /* CircleCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCustomView.swift; sourceTree = "<group>"; };
 		704B4B0D24BBF4DF00BC5B8F /* CircleCustom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleCustom.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				704B4B0924BBF49000BC5B8F /* BaiTap02.swift */,
-				704B4B0B24BBF4CE00BC5B8F /* CircleCustom.swift */,
+				704B4B0B24BBF4CE00BC5B8F /* CircleCustomView.swift */,
 				704B4B0D24BBF4DF00BC5B8F /* CircleCustom.xib */,
 			);
 			path = BaiTap02;
@@ -168,7 +168,7 @@
 				7025E9BE24B7108900D50CA0 /* ChartView.swift in Sources */,
 				704B4B0A24BBF49000BC5B8F /* BaiTap02.swift in Sources */,
 				7025E9BC24B7103700D50CA0 /* BaiTap01.swift in Sources */,
-				704B4B0C24BBF4CE00BC5B8F /* CircleCustom.swift in Sources */,
+				704B4B0C24BBF4CE00BC5B8F /* CircleCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

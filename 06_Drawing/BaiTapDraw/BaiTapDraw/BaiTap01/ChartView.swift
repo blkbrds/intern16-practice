@@ -8,8 +8,8 @@
 
 import UIKit
 
-final class ChartLine: UIView {
-
+final class ChartLineView: UIView {
+    
     // MARK: - Initialize
     init(frame: CGRect, backgroundColor: CGColor) {
         super.init(frame: frame)
@@ -31,11 +31,11 @@ final class ChartLine: UIView {
     }
 }
 
-final class ChartColume: UIView {
-
+final class ChartColumnView: UIView {
+    
     // MARK: - Propeties
-    static let heightLabel: CGFloat = 40
-    let widthLabel: CGFloat = 70
+    static let labelHeight: CGFloat = 40
+    let labelWidth: CGFloat = 70
 
     // MARK: - Initialize
     init(frame: CGRect, name: String, backgroundColor: CGColor, nameColor: UIColor) {
@@ -50,8 +50,8 @@ final class ChartColume: UIView {
     // MARK: - Private Function
     private func createRectangle(name: String, backgroundColor: CGColor, nameColor: UIColor) {
         clipsToBounds = false
-        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ChartColume.heightLabel))
-        let nameLabel = UILabel(frame: CGRect(x: bounds.width / 2 - widthLabel / 2, y: path.bounds.height, width: widthLabel, height: ChartColume.heightLabel))
+        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ChartColumnView.labelHeight))
+        let nameLabel = UILabel(frame: CGRect(x: bounds.width / 2 - labelWidth / 2, y: path.bounds.height, width: labelWidth, height: ChartColumnView.labelHeight))
 
         nameLabel.text = name
         nameLabel.textColor = nameColor

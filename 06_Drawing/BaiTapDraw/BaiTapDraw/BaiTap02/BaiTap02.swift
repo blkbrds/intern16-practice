@@ -31,10 +31,9 @@ final class BaiTap02: UIViewController {
 
         // Draw Circle
         let frameCircle = CGRect(x: 50, y: 250, width: 300, height: 300)
-        let circleCustom = CircleCustom(frame: frameCircle)
+        let circleCustom = CircleCustomView(frame: frameCircle)
         circleCustom.values = [1, 2, 3, 4]
         circleCustom.createCircle()
         view.addSubview(circleCustom)
-
     }
 }

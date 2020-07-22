@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CircleCustom: UIView {
+final class CircleCustomView: UIView {
 
     // MARK: - Propeties
     var values: [CGFloat] = [] {
@@ -21,10 +21,7 @@ final class CircleCustom: UIView {
 
     // MARK: - Private Function
     private func random() -> UIColor {
-        return UIColor(red: .random(in: 0...1),
-            green: .random(in: 0...1),
-            blue: .random(in: 0...1),
-            alpha: 1.0)
+        return UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
     }
 
     func createCircle() {
@@ -49,7 +46,7 @@ final class CircleCustom: UIView {
             shapeLayer.fillColor = random().cgColor
             // You can change the line width
             shapeLayer.lineWidth = 3.0
-            self.layer.addSublayer(shapeLayer)
+            layer.addSublayer(shapeLayer)
             startAngle += angle
         }
     }
@@ -74,6 +71,6 @@ final class DrawLine: UIView {
         shapeLayer.fillColor = backgroundColor
         shapeLayer.lineWidth = 1
         shapeLayer.path = path.cgPath
-        self.layer.addSublayer(shapeLayer)
+        layer.addSublayer(shapeLayer)
     }
 }
