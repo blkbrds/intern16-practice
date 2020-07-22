@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //Bài 1
         //let navigationController = UINavigationController(rootViewController: ViewControllerA())
         //Bài 2
-        let navigationController = UINavigationController(rootViewController: LoginViewController())
+//        let navigationController = UINavigationController(rootViewController: LoginViewController())
+        //Bai 3
+        let navigationController = UINavigationController(rootViewController: BaiTap3HomeViewController())
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
