@@ -12,8 +12,7 @@ protocol HomeCollectionViewCellDelegate: class {
     func likeCell(cell: HomeCollectionViewCell, isLike: Bool)
 }
 
-
-class HomeCollectionViewCell: UICollectionViewCell {
+final class HomeCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var coffeeShopImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!

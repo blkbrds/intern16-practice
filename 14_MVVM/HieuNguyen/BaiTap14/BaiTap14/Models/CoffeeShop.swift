@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CoffeeShop {
+final class CoffeeShop {
     var name: String
     var image: UIImage
     var address: String

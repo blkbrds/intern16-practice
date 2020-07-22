@@ -11,6 +11,7 @@ import UIKit
 
 class HomeSlideViewModel {
     private var images: [UIImage] = []
+    
     enum slideChange {
         case previous
         case next

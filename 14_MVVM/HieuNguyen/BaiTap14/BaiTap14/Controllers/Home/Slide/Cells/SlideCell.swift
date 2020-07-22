@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SlideCell: UICollectionViewCell {
+final class SlideCell: UICollectionViewCell {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
     
     var viewModel: SlideCellViewModel? = SlideCellViewModel() {
         didSet {

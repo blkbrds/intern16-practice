@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeSlideView: UICollectionReusableView {
+final class HomeSlideView: UICollectionReusableView {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var previousButton: UIButton!

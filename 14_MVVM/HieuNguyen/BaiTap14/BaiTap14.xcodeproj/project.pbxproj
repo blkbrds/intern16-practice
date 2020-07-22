@@ -35,7 +35,6 @@
 		7D39B3FC24C699E6001385D5 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D39B3FA24C699E6001385D5 /* HomeDetailViewController.swift */; };
 		7D39B3FD24C699E6001385D5 /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D39B3FB24C699E6001385D5 /* HomeDetailViewController.xib */; };
 		7D39B3FF24C69AE6001385D5 /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D39B3FE24C69AE5001385D5 /* HomeDetailViewModel.swift */; };
-		C40C0C7C24C09C690060F382 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C0C7B24C09C690060F382 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +68,6 @@
 		7D39B3FA24C699E6001385D5 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		7D39B3FB24C699E6001385D5 /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		7D39B3FE24C69AE5001385D5 /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
-		C40C0C7B24C09C690060F382 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +134,8 @@
 		7D393E8F24C04F3900515AA6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				7D393E9024C04F3900515AA6 /* ProfileViewController.xib */,
 				7D393E9124C04F3900515AA6 /* ProfileViewController.swift */,
+				7D393E9024C04F3900515AA6 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -210,7 +208,6 @@
 		C40C0C7A24C09C440060F382 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C40C0C7B24C09C690060F382 /* Image.swift */,
 				7D393EC524C1897400515AA6 /* CoffeeShop.swift */,
 			);
 			path = Models;
@@ -298,7 +295,6 @@
 				7D393E6624C0470E00515AA6 /* AppDelegate.swift in Sources */,
 				7D393EC824C18D1400515AA6 /* HomeViewModel.swift in Sources */,
 				7D39B3FF24C69AE6001385D5 /* HomeDetailViewModel.swift in Sources */,
-				C40C0C7C24C09C690060F382 /* Image.swift in Sources */,
 				7D393ED324C19FC400515AA6 /* HomeCellViewModel.swift in Sources */,
 				7D393E9D24C04F3900515AA6 /* MapViewController.swift in Sources */,
 				7D393ED024C1960E00515AA6 /* HomeTableViewCell.swift in Sources */,

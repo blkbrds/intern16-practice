@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomeDetailViewModel {
+final class HomeDetailViewModel {
     private(set) var coffeeShop: CoffeeShop?
     
     init(coffeeShop: CoffeeShop? = nil) {

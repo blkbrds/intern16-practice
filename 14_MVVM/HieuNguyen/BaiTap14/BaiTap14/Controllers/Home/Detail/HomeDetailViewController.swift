@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomeDetailViewController: UIViewController {
+final class HomeDetailViewController: UIViewController {
 
-    @IBOutlet weak var slideView: UIView!
+    @IBOutlet private weak var slideView: UIView!
     
     var viewModel: HomeDetailViewModel? {
         didSet {

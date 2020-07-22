@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SlideCellViewModel {
+final class SlideCellViewModel {
     private(set) var image: UIImage?
     
     init(image: UIImage? = nil) {
