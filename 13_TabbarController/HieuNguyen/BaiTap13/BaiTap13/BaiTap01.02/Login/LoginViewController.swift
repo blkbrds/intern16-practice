@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passWordTextField: UITextField!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passWordTextField: UITextField!
+    @IBOutlet private weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +21,13 @@ class LoginViewController: UIViewController {
         userNameTextField.delegate = self
         passWordTextField.delegate = self        
     }
-    
-    
+        
     override func viewDidDisappear(_ animated: Bool) {
         userNameTextField.text = ""
         passWordTextField.text = ""
     }
     
-    @IBAction func loginButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
         if let path = Bundle.main.path(forResource: "data", ofType: "plist") {
             if let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
                 for user in dic {
@@ -38,17 +37,17 @@ class LoginViewController: UIViewController {
                     }
                     messageLabel.isHidden = false
                     messageLabel.text = "Something was wrong"
-
                 }
             }
         }
     }
     
-    @IBAction func registerButtonTouchUpInside(_ sender: Any) {
+    @IBAction private func registerButtonTouchUpInside(_ sender: Any) {
         let registerViewController = RegisterViewController()
         navigationController?.pushViewController(registerViewController, animated: true)
     }
-    @IBAction func forgotPasswordButtonTouchUpInside(_ sender: Any) {
+    
+    @IBAction private func forgotPasswordButtonTouchUpInside(_ sender: Any) {
         let registerViewController = RegisterViewController()
         navigationController?.pushViewController(registerViewController, animated: true)
     }

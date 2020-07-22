@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem = logoutButton
     }
 
-    @objc func logOut() {
+    @objc private func logOut() {
         SceneDelegate.shared.changeRootViewController(root: .login)
     }
 }
