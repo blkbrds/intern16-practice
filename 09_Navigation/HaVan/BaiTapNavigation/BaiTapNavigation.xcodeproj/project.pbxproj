@@ -23,6 +23,12 @@
 		52679C9F24C6CC7500A8DDFE /* ViewControllerE.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52679C9D24C6CC7500A8DDFE /* ViewControllerE.xib */; };
 		52679CA224C6DA2900A8DDFE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52679CA024C6DA2900A8DDFE /* LoginViewController.swift */; };
 		52679CA324C6DA2900A8DDFE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52679CA124C6DA2900A8DDFE /* LoginViewController.xib */; };
+		52EBD25224C6E27A000B8FB9 /* UserData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52EBD25124C6E279000B8FB9 /* UserData.plist */; };
+		52EBD25424C7D710000B8FB9 /* ManagementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBD25324C7D70F000B8FB9 /* ManagementData.swift */; };
+		52EBD25B24C7EAA4000B8FB9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBD25924C7EAA4000B8FB9 /* HomeViewController.swift */; };
+		52EBD25C24C7EAA4000B8FB9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EBD25A24C7EAA4000B8FB9 /* HomeViewController.xib */; };
+		52EBD25F24C7FB5F000B8FB9 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBD25D24C7FB5F000B8FB9 /* EditViewController.swift */; };
+		52EBD26024C7FB5F000B8FB9 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EBD25E24C7FB5F000B8FB9 /* EditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		52679C9D24C6CC7500A8DDFE /* ViewControllerE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerE.xib; sourceTree = "<group>"; };
 		52679CA024C6DA2900A8DDFE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52679CA124C6DA2900A8DDFE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		52EBD25124C6E279000B8FB9 /* UserData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserData.plist; sourceTree = "<group>"; };
+		52EBD25324C7D70F000B8FB9 /* ManagementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementData.swift; sourceTree = "<group>"; };
+		52EBD25924C7EAA4000B8FB9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52EBD25A24C7EAA4000B8FB9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		52EBD25D24C7FB5F000B8FB9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		52EBD25E24C7FB5F000B8FB9 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 		52679C7224C5F7F300A8DDFE /* BaiTapNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				52EBD26124C82A82000B8FB9 /* BaiTap3 */,
 				52679CA424C6DA3200A8DDFE /* BaiTap2 */,
 				52679C8F24C6CA6E00A8DDFE /* BaiTap1 */,
 				52679C7324C5F7F300A8DDFE /* AppDelegate.swift */,
@@ -109,8 +122,21 @@
 			children = (
 				52679CA024C6DA2900A8DDFE /* LoginViewController.swift */,
 				52679CA124C6DA2900A8DDFE /* LoginViewController.xib */,
+				52EBD25124C6E279000B8FB9 /* UserData.plist */,
+				52EBD25324C7D70F000B8FB9 /* ManagementData.swift */,
+				52EBD25924C7EAA4000B8FB9 /* HomeViewController.swift */,
+				52EBD25A24C7EAA4000B8FB9 /* HomeViewController.xib */,
+				52EBD25D24C7FB5F000B8FB9 /* EditViewController.swift */,
+				52EBD25E24C7FB5F000B8FB9 /* EditViewController.xib */,
 			);
 			path = BaiTap2;
+			sourceTree = "<group>";
+		};
+		52EBD26124C82A82000B8FB9 /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaiTap3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +204,10 @@
 				52679C8024C5F7F400A8DDFE /* LaunchScreen.storyboard in Resources */,
 				52679C9B24C6CBF700A8DDFE /* ViewControllerD.xib in Resources */,
 				52679C9724C6CB7900A8DDFE /* ViewControllerC.xib in Resources */,
+				52EBD25C24C7EAA4000B8FB9 /* HomeViewController.xib in Resources */,
 				52679C7D24C5F7F400A8DDFE /* Assets.xcassets in Resources */,
+				52EBD25224C6E27A000B8FB9 /* UserData.plist in Resources */,
+				52EBD26024C7FB5F000B8FB9 /* EditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +223,12 @@
 				52679C9224C6CAF000A8DDFE /* ViewControllerB.swift in Sources */,
 				52679C9624C6CB7900A8DDFE /* ViewControllerC.swift in Sources */,
 				52679CA224C6DA2900A8DDFE /* LoginViewController.swift in Sources */,
+				52EBD25B24C7EAA4000B8FB9 /* HomeViewController.swift in Sources */,
 				52679C8D24C6CA6600A8DDFE /* ViewControllerA.swift in Sources */,
 				52679C7624C5F7F300A8DDFE /* SceneDelegate.swift in Sources */,
 				52679C9A24C6CBF700A8DDFE /* ViewControllerD.swift in Sources */,
+				52EBD25F24C7FB5F000B8FB9 /* EditViewController.swift in Sources */,
+				52EBD25424C7D710000B8FB9 /* ManagementData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
