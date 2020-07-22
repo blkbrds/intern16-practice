@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol EditViewControllerDelegate: class {
+    func editUserName(userName: String?)
+}
+
 class EditViewController: UIViewController {
     
+    weak var delegate: EditViewControllerDelegate?
     @IBOutlet weak var userNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +29,13 @@ class EditViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func doneButton() {
-        let viewcontroller = navigationController?.viewControllers
-        for vc in viewcontroller! {
-            if let homeViewController = vc as? HomeViewController {
-                homeViewController.userName = userNameTextField.text!
-                navigationController?.popViewController(animated: true)
-            }
+        if let delegate = delegate {
+            delegate.editUserName(userName: userNameTextField.text)
+        }
+        if let navigationController = navigationController {
+            navigationController.popViewController(animated: true)
         }
     }
 }
-
 
 

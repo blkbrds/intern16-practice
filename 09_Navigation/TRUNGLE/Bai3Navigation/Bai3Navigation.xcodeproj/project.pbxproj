@@ -13,6 +13,10 @@
 		B06FB55324C7E86A003FB484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06FB55124C7E86A003FB484 /* Main.storyboard */; };
 		B06FB55524C7E86E003FB484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06FB55424C7E86E003FB484 /* Assets.xcassets */; };
 		B06FB55824C7E86E003FB484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06FB55624C7E86E003FB484 /* LaunchScreen.storyboard */; };
+		B06FB56E24C8215C003FB484 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FB56C24C8215C003FB484 /* HomeViewController.swift */; };
+		B06FB56F24C8215C003FB484 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06FB56D24C8215C003FB484 /* HomeViewController.xib */; };
+		B06FB57224C8216A003FB484 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FB57024C8216A003FB484 /* ProfileViewController.swift */; };
+		B06FB57324C8216A003FB484 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06FB57124C8216A003FB484 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		B06FB55424C7E86E003FB484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B06FB55724C7E86E003FB484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B06FB55924C7E86E003FB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06FB56C24C8215C003FB484 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B06FB56D24C8215C003FB484 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B06FB57024C8216A003FB484 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B06FB57124C8216A003FB484 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				B06FB55424C7E86E003FB484 /* Assets.xcassets */,
 				B06FB55624C7E86E003FB484 /* LaunchScreen.storyboard */,
 				B06FB55924C7E86E003FB484 /* Info.plist */,
+				B06FB56C24C8215C003FB484 /* HomeViewController.swift */,
+				B06FB56D24C8215C003FB484 /* HomeViewController.xib */,
+				B06FB57024C8216A003FB484 /* ProfileViewController.swift */,
+				B06FB57124C8216A003FB484 /* ProfileViewController.xib */,
 			);
 			path = Bai3Navigation;
 			sourceTree = "<group>";
@@ -128,6 +140,8 @@
 				B06FB55824C7E86E003FB484 /* LaunchScreen.storyboard in Resources */,
 				B06FB55524C7E86E003FB484 /* Assets.xcassets in Resources */,
 				B06FB55324C7E86A003FB484 /* Main.storyboard in Resources */,
+				B06FB57324C8216A003FB484 /* ProfileViewController.xib in Resources */,
+				B06FB56F24C8215C003FB484 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +154,9 @@
 			files = (
 				B06FB55024C7E86A003FB484 /* ViewController.swift in Sources */,
 				B06FB54C24C7E869003FB484 /* AppDelegate.swift in Sources */,
+				B06FB57224C8216A003FB484 /* ProfileViewController.swift in Sources */,
 				B06FB54E24C7E86A003FB484 /* SceneDelegate.swift in Sources */,
+				B06FB56E24C8215C003FB484 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

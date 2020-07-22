@@ -27,17 +27,16 @@ class HomeViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func editButton() {
-        navigationController?.pushViewController( EditViewController(), animated: true)
+        let viewcontroller = EditViewController()
+        viewcontroller.delegate = self
+        self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
+extension HomeViewController: EditViewControllerDelegate {
+    func editUserName(userName: String?) {
+        if let userName = userName {
+            userNameLabel.text = userName
+        }
+    }
+}
+
