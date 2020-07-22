@@ -23,6 +23,16 @@ class RegionViewController: UIViewController {
         setupButton()
     }
     
+    @IBAction private func regionButtonTouchUpInside(_ sender: Any) {
+        changeButtonSelected(index: (sender as AnyObject).tag)
+    }
+    
+    @objc func nextToProvinceViewController() {
+        let provinceViewController = ProvinceViewController()
+        provinceViewController.location = location
+        navigationController?.pushViewController(provinceViewController, animated: true)
+    }
+    
     private func setupButton() {
         for button in verticalStackButton.arrangedSubviews {
             if let buttonChoice = location.region {
@@ -34,10 +44,6 @@ class RegionViewController: UIViewController {
         }
         let rightButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(nextToProvinceViewController))
         navigationItem.rightBarButtonItem = rightButton
-    }
-    
-    @IBAction func regionButtonTouchUpInside(_ sender: Any) {
-        changeButtonSelected(index: (sender as AnyObject).tag)
     }
     
     private func changeButtonSelected(index: Int) {
@@ -52,12 +58,6 @@ class RegionViewController: UIViewController {
             }
         }
         location.region = String(index)
-    }
-    
-    @objc func nextToProvinceViewController() {
-        let provinceViewController = ProvinceViewController()
-        provinceViewController.location = location
-        navigationController?.pushViewController(provinceViewController, animated: true)        
     }
 }
 

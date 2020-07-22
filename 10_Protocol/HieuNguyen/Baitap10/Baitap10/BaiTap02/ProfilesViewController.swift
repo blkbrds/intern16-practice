@@ -10,7 +10,7 @@ import UIKit
 
 class ProfilesViewController: UIViewController {
 
-    var Data:[Person] = [
+    var Datas:[Person] = [
         Person(name: "Tien Le P."),
         Person(name: "Dai Ho V."),
         Person(name: "Trin Nguyen X."),
@@ -42,6 +42,7 @@ class ProfilesViewController: UIViewController {
         Person(name: "Nhi Kieu"),
         Person(name: "Bien Le")
     ]
+    let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +55,6 @@ class ProfilesViewController: UIViewController {
     }
     
     private func setupImageView() {
-        let screensize: CGRect = UIScreen.main.bounds
-        let screenWidth = screensize.width
-        let screenHeight = screensize.height
-        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
         var x: Int = 32
         var y: Int = 32
         for i in 0..<30 {
@@ -67,11 +64,11 @@ class ProfilesViewController: UIViewController {
             } else if i != 0 {
                 x += 116
             }
-            let userView = MyAvatar(frame: CGRect(x: x, y: y, width: 100, height: 130), profileName: Data[i].name)
+            let userView = MyAvatar(frame: CGRect(x: x, y: y, width: 100, height: 130), profileName: Datas[i].name)
             userView.delegate = self
             scrollView.addSubview(userView)
         }
-        scrollView.contentSize = CGSize(width: screenWidth, height: 130 * 12)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 130 * 12)
         view.addSubview(scrollView)
     }
 

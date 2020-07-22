@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ButtonExtension: UIButton {
+final class ButtonExtension: UIButton {
     
-    var colorButton:UIColor?
+    private var colorButton:UIColor?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

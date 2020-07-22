@@ -38,6 +38,15 @@ class DistrictViewController: UIViewController {
         }
     }
     
+    @IBAction func districtButtonTouchUpInside(_ sender: Any) {
+        changeButtonSelected(index: (sender as AnyObject).tag)
+    }
+    
+    @objc func nextToProvinceViewController() {
+        delegate?.DataLocation(fromVC: self, needPerformAction: .receiveData(location: location))
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     private func setupButton() {
         for button in verticalStackButton.arrangedSubviews {
             if let buttonChoice = location.district {
@@ -49,10 +58,6 @@ class DistrictViewController: UIViewController {
         }
         let rightButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(nextToProvinceViewController))
         navigationItem.rightBarButtonItem = rightButton
-    }
-    
-    @IBAction func districtButtonTouchUpInside(_ sender: Any) {
-        changeButtonSelected(index: (sender as AnyObject).tag)
     }
 
     private func changeButtonSelected(index: Int) {
@@ -67,10 +72,5 @@ class DistrictViewController: UIViewController {
             }
         }
         location.district = String(index)
-    }
-    
-    @objc func nextToProvinceViewController() {
-        delegate?.DataLocation(fromVC: self, needPerformAction: .receiveData(location: location))
-        navigationController?.popToRootViewController(animated: true)
     }
 }

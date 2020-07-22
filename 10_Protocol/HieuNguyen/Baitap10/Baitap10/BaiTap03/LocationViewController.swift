@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationViewController: UIViewController {
+final class LocationViewController: UIViewController {
     
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var provinceLabel: UILabel!
@@ -30,7 +30,7 @@ class LocationViewController: UIViewController {
         setupAllLabel()
     }
 
-    @objc func moveToRegion() {
+    @objc private func moveToRegion() {
         let regionViewController = RegionViewController()
         regionViewController.location = location
         navigationController?.pushViewController(regionViewController, animated: true)

@@ -22,6 +22,16 @@ class ProvinceViewController: UIViewController {
         super.viewWillAppear(true)
         setupButton()
     }
+    
+    @IBAction private func provinceButtonTouchUpInside(_ sender: Any) {
+        changeButtonSelected(index: (sender as AnyObject).tag)
+    }
+    
+    @objc private func nextToDisTrictViewController() {
+        let districtViewController = DistrictViewController()
+        districtViewController.location = location
+        navigationController?.pushViewController(districtViewController, animated: true)
+    }
 
     private func setupButton() {
         for button in verticalStackButton.arrangedSubviews {
@@ -36,10 +46,6 @@ class ProvinceViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButton
     }
     
-    @IBAction func provinceButtonTouchUpInside(_ sender: Any) {
-        changeButtonSelected(index: (sender as AnyObject).tag)
-    }
-    
     private func changeButtonSelected(index: Int) {
         for button in verticalStackButton.arrangedSubviews {
             if let buttonChoice = location.province {
@@ -52,11 +58,5 @@ class ProvinceViewController: UIViewController {
             }
         }
         location.province = String(index)
-    }
-    
-    @objc func nextToDisTrictViewController() {
-        let districtViewController = DistrictViewController()
-        districtViewController.location = location
-        navigationController?.pushViewController(districtViewController, animated: true)
     }
 }

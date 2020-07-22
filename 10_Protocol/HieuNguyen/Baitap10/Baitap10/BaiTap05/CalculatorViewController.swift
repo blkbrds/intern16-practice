@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
 
-    @IBOutlet weak var xTextField: UITextField!
-    @IBOutlet weak var yTextField: UITextField!
-    @IBOutlet weak var questionButton: ExtensionButton!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var xTextField: UITextField!
+    @IBOutlet private weak var yTextField: UITextField!
+    @IBOutlet private weak var questionButton: ExtensionButton!
+    @IBOutlet private weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +21,17 @@ class CalculatorViewController: UIViewController {
 
     @IBAction func operatorChoiceTouchUpInside(_ sender: Any) {
         if xTextField.text != "" && yTextField.text != "" {
-            let operatorView = Bundle.main.loadNibNamed("OperatorView", owner: self, options: nil)?[0] as? OperatorView
-            operatorView?.dataSource = self
-            operatorView?.delegate = self
-            operatorView?.layer.borderWidth = 1
-            operatorView?.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-            operatorView?.frame = CGRect(x: 16, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width - 36, height: 500)
-            view.addSubview(operatorView!)
-            operatorView?.configData()
-            UIView.animate(withDuration: 0.5) {
-                operatorView?.frame.origin.y = 250
+            if let operatorView = Bundle.main.loadNibNamed("OperatorView", owner: self, options: nil)?[0] as? OperatorView {
+                operatorView.dataSource = self
+                operatorView.delegate = self
+                operatorView.layer.borderWidth = 1
+                operatorView.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+                operatorView.frame = CGRect(x: 16, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width - 36, height: 500)
+                view.addSubview(operatorView)
+                operatorView.configData()
+                UIView.animate(withDuration: 0.5) {
+                    operatorView.frame.origin.y = 250
+                }                
             }
         }
     }

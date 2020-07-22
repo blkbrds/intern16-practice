@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CityViewController: UIViewController {
+final class CityViewController: UIViewController {
 
-    var data: [String] = ["An Giang", "Bà Rịa-Vũng Tàu", "Bạc Liêu", "Bắc Kạn", "Bắc Giang", "Bắc Ninh", "Bến Tre", "Bình Dương", "Bình Định", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Cần Thơ (TP)", "Đà Nẵng (TP)", "Đắk Lắk", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội (TP)"]
-    @IBOutlet weak var listCityTextView: UITextView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    private var data: [String] = ["An Giang", "Bà Rịa-Vũng Tàu", "Bạc Liêu", "Bắc Kạn", "Bắc Giang", "Bắc Ninh", "Bến Tre", "Bình Dương", "Bình Định", "Bình Phước", "Bình Thuận", "Cà Mau", "Cao Bằng", "Cần Thơ (TP)", "Đà Nẵng (TP)", "Đắk Lắk", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội (TP)"]
+    @IBOutlet private weak var listCityTextView: UITextView!
+    @IBOutlet private weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,12 @@ class CityViewController: UIViewController {
         fillData(data: data)
     }
     
-    @IBAction func cancelButton(_ sender: Any) {
+    @IBAction private func cancelButton(_ sender: Any) {
         fillData(data: data)
         searchBar.text = ""
     }
     
-    func fillData(data: [String]) {
+    private func fillData(data: [String]) {
         var listCity:String = ""
         for city in data {
             listCity += "- \(city) \n"
