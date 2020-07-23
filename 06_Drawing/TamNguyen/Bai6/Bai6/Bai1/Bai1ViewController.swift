@@ -36,6 +36,7 @@ final class Bai1ViewController: UIViewController {
         
         // Draw OXY
         let lineX = LineView(frame: CGRect(x: 30, y: 200, width: 3, height: 300), backgroundColor: UIColor.black.cgColor)
+
         let lineY = LineView(frame: CGRect(x: lineX.frame.origin.x, y: lineX.frame.maxY, width: 320, height: 3), backgroundColor: UIColor.black.cgColor)
         view.addSubview(lineY)
         view.addSubview(lineX)
