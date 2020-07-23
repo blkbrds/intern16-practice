@@ -11,7 +11,8 @@ import UIKit
 final class BaiTap3ViewController: UIViewController {
 
     // MARK: - Properties
-    private var datas = [Data (name: "user1", nameImage: "image1"),Data (name: "user2", nameImage: "image1")]
+    private var datas = [Data (name: "user1", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1")]
     private var scrollView = UIScrollView()
 
     // MARK: - Life cycle
