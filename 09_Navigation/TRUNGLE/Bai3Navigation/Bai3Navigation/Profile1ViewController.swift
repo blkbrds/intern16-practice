@@ -1,24 +1,23 @@
 //
-//  ProfileViewController.swift
+//  Profile1ViewController.swift
 //  Bai3Navigation
 //
-//  Created by Trung Le D. on 7/22/20.
+//  Created by Trung Le D. on 7/23/20.
 //  Copyright © 2020 Trung Le D. All rights reserved.
 //
 
 import UIKit
-protocol ProfileViewControllerDelegate {
+protocol ProfileViewControllerDelegate1 {
     func updateAvatarTextField(userName: String, index: Int)
 }
-class ProfileViewController: UIViewController {
-    
-    @IBOutlet weak var avatarTextField: UITextField!
+class Profile1ViewController: UIViewController {
     @IBOutlet weak var avatarImageView: UIImageView!
     
-    var userName: String = ""
+    @IBOutlet weak var avatarTextField: UITextField!
+   var userName: String = ""
     var imageView: String = ""
     var index: Int?
-    var profileViewControllerDelegate: ProfileViewControllerDelegate?
+    var profileViewControllerDelegate1: ProfileViewControllerDelegate1?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
@@ -40,7 +39,7 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func doneButtonTouchUpInSide() {
-        if let delegate = profileViewControllerDelegate, let index = index {
+        if let delegate = profileViewControllerDelegate1, let index = index {
             delegate.updateAvatarTextField(userName: avatarTextField.text ?? "", index: index)
         }
         
@@ -50,6 +49,6 @@ class ProfileViewController: UIViewController {
     }
     private func updateUI() {
         avatarTextField.text = userName
-        avatarImageView.image = UIImage(named: imageView)
+      avatarImageView.image = UIImage(named: imageView)
     }
 }

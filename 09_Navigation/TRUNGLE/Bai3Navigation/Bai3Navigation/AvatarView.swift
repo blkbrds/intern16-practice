@@ -15,14 +15,19 @@ class AvatarView: UIView {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var avatarLabel: UILabel!
     
-    var avatarviewDelegate : AvatarViewDelegate?
+     var avatarviewDelegate : AvatarViewDelegate?
     var userName: String = ""
     var imageView: String = ""
-    
+        
+    func updateUser(){
+        avatarLabel.text = userName
+    }
 
     @IBAction func touchesInImageView(_ sender: Any) {
         if let delegate = avatarviewDelegate {
-   //         delegate.touchesAvatar(userName: userName, imageView: imageView, index: index)
+            print(imageView.count)
+           delegate.touchesAvatar(userName: userName, imageView: imageView, index: tag)
+            
         }
     }
 }
