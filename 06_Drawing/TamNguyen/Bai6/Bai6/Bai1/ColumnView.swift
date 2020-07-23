@@ -25,8 +25,8 @@ final class ColumnView: UIView {
     //MARK: - Private methods
     private func createRectangle(name: String, backgroundColor: CGColor, nameColor: UIColor) {
         clipsToBounds = false
-        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ColumnView.heightLabel))
-        let nameLabel = UILabel(frame: CGRect(x: bounds.width / 2 - widthLabel / 2, y: path.bounds.height, width: widthLabel, height: ColumnView.heightLabel))
+        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ColumnView.labelHeight))
+        let nameLabel = UILabel(frame: CGRect(x: bounds.width / 2 - labelWidth / 2, y: path.bounds.height, width: labelWidth, height: ColumnView.labelHeight))
         nameLabel.text = name
         nameLabel.textColor = nameColor
         nameLabel.textAlignment = .center

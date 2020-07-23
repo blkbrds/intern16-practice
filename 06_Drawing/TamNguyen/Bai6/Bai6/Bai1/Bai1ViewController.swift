@@ -35,8 +35,8 @@ final class Bai1ViewController: UIViewController {
     private func drawChart() {
         
         // Draw OXY
-        let lineX = ChartLine(frame: CGRect(x: 30, y: 200, width: 3, height: 300), backgroundColor: UIColor.black.cgColor)
-        let lineY = ChartLine(frame: CGRect(x: lineX.frame.origin.x, y: lineX.frame.maxY, width: 320, height: 3), backgroundColor: UIColor.black.cgColor)
+        let lineX = LineView(frame: CGRect(x: 30, y: 200, width: 3, height: 300), backgroundColor: UIColor.black.cgColor)
+        let lineY = LineView(frame: CGRect(x: lineX.frame.origin.x, y: lineX.frame.maxY, width: 320, height: 3), backgroundColor: UIColor.black.cgColor)
         view.addSubview(lineY)
         view.addSubview(lineX)
         
@@ -45,7 +45,7 @@ final class Bai1ViewController: UIViewController {
         let space: Int = 30
         for (i,inforCharts) in inforChar.enumerated() {
             let x: Int = Int(lineX.frame.origin.x) + space + i * space + i * width
-            let column = ChartColume(frame: CGRect(x: x, y: Int(lineY.frame.origin.y) - inforCharts.heightY + Int(ChartColume.heightLabel), width: width, height: inforCharts.heightY), name: inforCharts.name, backgroundColor: UIColor.green.cgColor, nameColor: .black)
+            let column = ColumnView(frame: CGRect(x: x, y: Int(lineY.frame.origin.y) - inforCharts.heightY + Int(ColumnView.labelHeight), width: width, height: inforCharts.heightY), name: inforCharts.name, backgroundColor: UIColor.green.cgColor, nameColor: .black)
             view.addSubview(column)
         }
     }
