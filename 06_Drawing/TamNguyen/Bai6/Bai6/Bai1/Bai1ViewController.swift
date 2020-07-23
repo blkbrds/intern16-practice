@@ -15,6 +15,7 @@ final class Bai1ViewController: UIViewController {
         var heightY: Int
         var name: String
     }
+    
     let inforChar: [InforChart] = [
         InforChart(heightY: 200, name: "Monday"),
         InforChart(heightY: 250, name: "Tuesday"),
@@ -43,7 +44,7 @@ final class Bai1ViewController: UIViewController {
         let width: Int = 30
         let space: Int = 30
         for (i,inforCharts) in inforChar.enumerated() {
-            let x: Int =  Int(lineX.frame.origin.x) + space + i * space + i * width
+            let x: Int = Int(lineX.frame.origin.x) + space + i * space + i * width
             let column = ChartColume(frame: CGRect(x: x, y: Int(lineY.frame.origin.y) - inforCharts.heightY + Int(ChartColume.heightLabel), width: width, height: inforCharts.heightY), name: inforCharts.name, backgroundColor: UIColor.green.cgColor, nameColor: .black)
             view.addSubview(column)
         }

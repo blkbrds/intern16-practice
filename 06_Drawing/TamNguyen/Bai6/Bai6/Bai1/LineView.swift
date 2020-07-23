@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ChartLine: UIView {
+final class LineView: UIView {
     
     //MARK: - Properties
     static let heightLabel: CGFloat = 40

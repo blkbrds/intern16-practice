@@ -14,9 +14,9 @@
 		314049B324B82B66005228AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314049B124B82B66005228AE /* LaunchScreen.storyboard */; };
 		314049BC24B847A5005228AE /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314049BB24B847A5005228AE /* Bai1ViewController.swift */; };
 		3141A9DA24B86BEC00ADFEAB /* Bai2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9D924B86BEC00ADFEAB /* Bai2ViewController.swift */; };
-		3141A9DE24B9AC4800ADFEAB /* ChartLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9DD24B9AC4800ADFEAB /* ChartLine.swift */; };
-		3141A9E024B9AC6300ADFEAB /* ChartColume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9DF24B9AC6300ADFEAB /* ChartColume.swift */; };
-		3141A9E224BA13D400ADFEAB /* chartCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9E124BA13D400ADFEAB /* chartCircle.swift */; };
+		3141A9DE24B9AC4800ADFEAB /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9DD24B9AC4800ADFEAB /* LineView.swift */; };
+		3141A9E024B9AC6300ADFEAB /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9DF24B9AC6300ADFEAB /* ColumnView.swift */; };
+		3141A9E224BA13D400ADFEAB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141A9E124BA13D400ADFEAB /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		314049B424B82B66005228AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		314049BB24B847A5005228AE /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai1ViewController.swift; sourceTree = "<group>"; };
 		3141A9D924B86BEC00ADFEAB /* Bai2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai2ViewController.swift; sourceTree = "<group>"; };
-		3141A9DD24B9AC4800ADFEAB /* ChartLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLine.swift; sourceTree = "<group>"; };
-		3141A9DF24B9AC6300ADFEAB /* ChartColume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartColume.swift; sourceTree = "<group>"; };
-		3141A9E124BA13D400ADFEAB /* chartCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartCircle.swift; sourceTree = "<group>"; };
+		3141A9DD24B9AC4800ADFEAB /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		3141A9DF24B9AC6300ADFEAB /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
+		3141A9E124BA13D400ADFEAB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				314049BB24B847A5005228AE /* Bai1ViewController.swift */,
-				3141A9DD24B9AC4800ADFEAB /* ChartLine.swift */,
-				3141A9DF24B9AC6300ADFEAB /* ChartColume.swift */,
+				3141A9DD24B9AC4800ADFEAB /* LineView.swift */,
+				3141A9DF24B9AC6300ADFEAB /* ColumnView.swift */,
 			);
 			path = Bai1;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3141A9D924B86BEC00ADFEAB /* Bai2ViewController.swift */,
-				3141A9E124BA13D400ADFEAB /* chartCircle.swift */,
+				3141A9E124BA13D400ADFEAB /* CircleView.swift */,
 			);
 			path = Bai2;
 			sourceTree = "<group>";
@@ -165,11 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3141A9E224BA13D400ADFEAB /* chartCircle.swift in Sources */,
-				3141A9DE24B9AC4800ADFEAB /* ChartLine.swift in Sources */,
+				3141A9E224BA13D400ADFEAB /* CircleView.swift in Sources */,
+				3141A9DE24B9AC4800ADFEAB /* LineView.swift in Sources */,
 				3141A9DA24B86BEC00ADFEAB /* Bai2ViewController.swift in Sources */,
 				314049AB24B82B63005228AE /* ViewController.swift in Sources */,
-				3141A9E024B9AC6300ADFEAB /* ChartColume.swift in Sources */,
+				3141A9E024B9AC6300ADFEAB /* ColumnView.swift in Sources */,
 				314049A724B82B63005228AE /* AppDelegate.swift in Sources */,
 				314049A924B82B63005228AE /* SceneDelegate.swift in Sources */,
 				314049BC24B847A5005228AE /* Bai1ViewController.swift in Sources */,

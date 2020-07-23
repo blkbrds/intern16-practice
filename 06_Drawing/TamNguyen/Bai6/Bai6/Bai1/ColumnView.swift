@@ -8,15 +8,16 @@
 
 import UIKit
 
-final class ChartColume: UIView {
+final class ColumnView: UIView {
     // MARK: - Properties
-    static let heightLabel: CGFloat = 40
-    let widthLabel: CGFloat = 70
+    static let labelHeight: CGFloat = 40
+    let labelWidth: CGFloat = 70
     
     init(frame: CGRect, name: String, backgroundColor: CGColor, nameColor: UIColor) {
         super.init(frame: frame)
         createRectangle(name: name, backgroundColor: backgroundColor, nameColor: nameColor )
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -24,8 +25,8 @@ final class ChartColume: UIView {
     //MARK: - Private methods
     private func createRectangle(name: String, backgroundColor: CGColor, nameColor: UIColor) {
         clipsToBounds = false
-        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ChartColume.heightLabel))
-        let nameLabel = UILabel(frame: CGRect(x: bounds.width / 2 - widthLabel / 2, y: path.bounds.height, width: widthLabel, height: ChartColume.heightLabel))
+        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - ColumnView.heightLabel))
+        let nameLabel = UILabel(frame: CGRect(x: bounds.width / 2 - widthLabel / 2, y: path.bounds.height, width: widthLabel, height: ColumnView.heightLabel))
         nameLabel.text = name
         nameLabel.textColor = nameColor
         nameLabel.textAlignment = .center

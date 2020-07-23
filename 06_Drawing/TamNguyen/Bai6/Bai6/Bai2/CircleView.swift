@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class chartCircle: UIView {
+final class CircleView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
