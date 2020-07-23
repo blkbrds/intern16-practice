@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Bai3Navigation" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Profile1ViewController" customModule="Bai3Navigation" customModuleProvider="target">
             <connections>
-                <outlet property="avatarImageView" destination="fdy-Eh-2O7" id="ycX-Cv-4qc"/>
-                <outlet property="avatarTextField" destination="pdu-gW-lRq" id="YGR-QR-o2d"/>
+                <outlet property="avatarImageView" destination="1kJ-e5-GgE" id="AdU-kq-Gst"/>
+                <outlet property="avatarTextField" destination="gGy-Hn-nr0" id="XbH-8b-GM7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,30 +19,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="fdy-Eh-2O7">
-                    <rect key="frame" x="87" y="128" width="240" height="272"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="1kJ-e5-GgE">
+                    <rect key="frame" x="115.5" y="310.5" width="183" height="275"/>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdu-gW-lRq">
-                    <rect key="frame" x="87" y="445" width="240" height="73"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGy-Hn-nr0">
+                    <rect key="frame" x="116" y="231" width="183" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="183" id="KxL-A1-ZDM"/>
+                        <constraint firstAttribute="height" constant="34" id="kpE-hF-FrF"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fdy-Eh-2O7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="9Hb-ez-FY7"/>
-                <constraint firstItem="pdu-gW-lRq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="87" id="Dpy-8b-h6J"/>
-                <constraint firstItem="pdu-gW-lRq" firstAttribute="top" secondItem="fdy-Eh-2O7" secondAttribute="bottom" constant="45" id="HnR-CH-9rv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pdu-gW-lRq" secondAttribute="trailing" constant="87" id="Ned-Dk-NOA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fdy-Eh-2O7" secondAttribute="trailing" constant="87" id="hrA-ea-ApH"/>
-                <constraint firstItem="fdy-Eh-2O7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="84" id="nnc-lk-Rpr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pdu-gW-lRq" secondAttribute="bottom" constant="344" id="vAe-Dy-d8S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gGy-Hn-nr0" secondAttribute="trailing" constant="115" id="3UY-LT-CUd"/>
+                <constraint firstItem="gGy-Hn-nr0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="116" id="97N-gH-4BN"/>
+                <constraint firstItem="1kJ-e5-GgE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="115.5" id="AnN-fC-NL6"/>
+                <constraint firstItem="gGy-Hn-nr0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="187" id="Ifv-rb-PSs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1kJ-e5-GgE" secondAttribute="bottom" constant="276.5" id="XnF-30-MGv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1kJ-e5-GgE" secondAttribute="trailing" constant="115.5" id="XzO-En-iMp"/>
+                <constraint firstItem="1kJ-e5-GgE" firstAttribute="top" secondItem="gGy-Hn-nr0" secondAttribute="bottom" constant="45.5" id="bNK-fn-DUv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+            <point key="canvasLocation" x="92.753623188405811" y="166.74107142857142"/>
         </view>
     </objects>
-    <resources>
-        <image name="4" width="185" height="272"/>
-    </resources>
 </document>

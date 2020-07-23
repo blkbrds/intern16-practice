@@ -15,10 +15,8 @@
 		B06FB55824C7E86E003FB484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06FB55624C7E86E003FB484 /* LaunchScreen.storyboard */; };
 		B06FB56E24C8215C003FB484 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FB56C24C8215C003FB484 /* HomeViewController.swift */; };
 		B06FB56F24C8215C003FB484 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06FB56D24C8215C003FB484 /* HomeViewController.xib */; };
-		B06FB57224C8216A003FB484 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FB57024C8216A003FB484 /* ProfileViewController.swift */; };
-		B06FB57324C8216A003FB484 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06FB57124C8216A003FB484 /* ProfileViewController.xib */; };
-		B0C941DF24C92BAC00350C04 /* Profile1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C941DD24C92BAC00350C04 /* Profile1ViewController.swift */; };
-		B0C941E024C92BAC00350C04 /* Profile1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C941DE24C92BAC00350C04 /* Profile1ViewController.xib */; };
+		B0C941DF24C92BAC00350C04 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C941DD24C92BAC00350C04 /* ProfileViewController.swift */; };
+		B0C941E024C92BAC00350C04 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C941DE24C92BAC00350C04 /* ProfileViewController.xib */; };
 		B0F6C97F24C840CE0066FAEA /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6C97E24C840CE0066FAEA /* AvatarView.swift */; };
 		B0F6C98124C840D90066FAEA /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F6C98024C840D90066FAEA /* AvatarView.xib */; };
 /* End PBXBuildFile section */
@@ -34,10 +32,8 @@
 		B06FB55924C7E86E003FB484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B06FB56C24C8215C003FB484 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B06FB56D24C8215C003FB484 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		B06FB57024C8216A003FB484 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B06FB57124C8216A003FB484 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		B0C941DD24C92BAC00350C04 /* Profile1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile1ViewController.swift; sourceTree = "<group>"; };
-		B0C941DE24C92BAC00350C04 /* Profile1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Profile1ViewController.xib; sourceTree = "<group>"; };
+		B0C941DD24C92BAC00350C04 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B0C941DE24C92BAC00350C04 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		B0F6C97E24C840CE0066FAEA /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B0F6C98024C840D90066FAEA /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,12 +77,10 @@
 				B06FB55924C7E86E003FB484 /* Info.plist */,
 				B06FB56C24C8215C003FB484 /* HomeViewController.swift */,
 				B06FB56D24C8215C003FB484 /* HomeViewController.xib */,
-				B06FB57024C8216A003FB484 /* ProfileViewController.swift */,
-				B06FB57124C8216A003FB484 /* ProfileViewController.xib */,
 				B0F6C97E24C840CE0066FAEA /* AvatarView.swift */,
 				B0F6C98024C840D90066FAEA /* AvatarView.xib */,
-				B0C941DD24C92BAC00350C04 /* Profile1ViewController.swift */,
-				B0C941DE24C92BAC00350C04 /* Profile1ViewController.xib */,
+				B0C941DD24C92BAC00350C04 /* ProfileViewController.swift */,
+				B0C941DE24C92BAC00350C04 /* ProfileViewController.xib */,
 			);
 			path = Bai3Navigation;
 			sourceTree = "<group>";
@@ -153,8 +147,7 @@
 				B06FB55524C7E86E003FB484 /* Assets.xcassets in Resources */,
 				B06FB55324C7E86A003FB484 /* Main.storyboard in Resources */,
 				B0F6C98124C840D90066FAEA /* AvatarView.xib in Resources */,
-				B0C941E024C92BAC00350C04 /* Profile1ViewController.xib in Resources */,
-				B06FB57324C8216A003FB484 /* ProfileViewController.xib in Resources */,
+				B0C941E024C92BAC00350C04 /* ProfileViewController.xib in Resources */,
 				B06FB56F24C8215C003FB484 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,10 +162,9 @@
 				B06FB55024C7E86A003FB484 /* ViewController.swift in Sources */,
 				B0F6C97F24C840CE0066FAEA /* AvatarView.swift in Sources */,
 				B06FB54C24C7E869003FB484 /* AppDelegate.swift in Sources */,
-				B06FB57224C8216A003FB484 /* ProfileViewController.swift in Sources */,
 				B06FB54E24C7E86A003FB484 /* SceneDelegate.swift in Sources */,
 				B06FB56E24C8215C003FB484 /* HomeViewController.swift in Sources */,
-				B0C941DF24C92BAC00350C04 /* Profile1ViewController.swift in Sources */,
+				B0C941DF24C92BAC00350C04 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

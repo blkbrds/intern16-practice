@@ -17,7 +17,7 @@ class AvatarView: UIView {
     
      var avatarviewDelegate : AvatarViewDelegate?
     var userName: String = ""
-    var imageView: String = ""
+    var imageView: String = "avatar"
         
     func updateUser(){
         avatarLabel.text = userName

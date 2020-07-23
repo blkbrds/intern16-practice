@@ -11,13 +11,14 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    var coordinatesX: CGFloat = 10
-    var coordinatesY: CGFloat = 10
-    var names: [String] = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    var postionX: CGFloat = 10
+    var postionY: CGFloat = 10
+    var spacing: CGFloat = 40
+    var names: [String] = ["jackeylove","theShy","Sofm","Faker","Ronaldo","messi","cantona","ramos","marcelo","bale","jackeylove","theShy","Sofm","Faker","Ronaldo","messi","cantona","ramos","marcelo","bale","jackeylove","theShy","Sofm","Faker","Ronaldo","messi","cantona","ramos","marcelo","bale"]
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "HOME"
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.loadAvatar()
         }
     }
@@ -27,14 +28,14 @@ class HomeViewController: UIViewController {
             scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 2)
             let avatar = Bundle.main.loadNibNamed("AvatarView", owner: self, options: nil)?.first as? AvatarView
             if let avatar = avatar {
-                avatar.frame = CGRect(x: coordinatesX, y: coordinatesY, width: (UIScreen.main.bounds.width - CGFloat(40)) / 3, height: (UIScreen.main.bounds.width - CGFloat(40)) / 3)
+                avatar.frame = CGRect(x: postionX, y: postionY, width: (UIScreen.main.bounds.width - spacing) / 3, height: (UIScreen.main.bounds.width - spacing) / 3)
                 avatar.userName = names[index - 1]
-                 avatar.avatarviewDelegate = self
+                avatar.avatarviewDelegate = self
                 avatar.tag = index
-                coordinatesX += (UIScreen.main.bounds.width - CGFloat(40)) / 3 + 10
+                postionX += (UIScreen.main.bounds.width - spacing) / 3 + 10
                 if index % 3 == 0 {
-                    coordinatesY += (UIScreen.main.bounds.width - CGFloat(40)) / 3 + 10
-                    coordinatesX = 10
+                    postionY += (UIScreen.main.bounds.width - spacing) / 3 + 10
+                    postionX = 10
                 }
                 avatar.updateUser()
                 scrollView.addSubview(avatar)
@@ -45,18 +46,18 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: AvatarViewDelegate {
     func touchesAvatar(userName: String, imageView: String, index: Int) {
-        let vc = Profile1ViewController()
-        vc.userName = userName
-        vc.imageView = imageView
-        vc.index = index
-        vc.profileViewControllerDelegate1 = self
+        let profileViewController = ProfileViewController()
+        profileViewController.userName = userName
+        profileViewController.imageView = imageView
+        profileViewController.index = index
+        profileViewController.profileViewControllerDelegate = self
         if let navigationController = navigationController {
-            navigationController.pushViewController(vc, animated: true)
+            navigationController.pushViewController(profileViewController, animated: true)
         }
     }
 }
 
-extension HomeViewController: ProfileViewControllerDelegate1 {
+extension HomeViewController: ProfileViewControllerDelegate {
     func updateAvatarTextField(userName: String, index: Int) {
         guard index > 0 && index <= names.count else {
             return

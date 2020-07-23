@@ -1,8 +1,8 @@
 //
-//  ProfileViewController.swift
+//  Profile1ViewController.swift
 //  Bai3Navigation
 //
-//  Created by Trung Le D. on 7/22/20.
+//  Created by Trung Le D. on 7/23/20.
 //  Copyright © 2020 Trung Le D. All rights reserved.
 //
 
@@ -11,10 +11,9 @@ protocol ProfileViewControllerDelegate {
     func updateAvatarTextField(userName: String, index: Int)
 }
 class ProfileViewController: UIViewController {
-    
-    @IBOutlet weak var avatarTextField: UITextField!
     @IBOutlet weak var avatarImageView: UIImageView!
     
+    @IBOutlet weak var avatarTextField: UITextField!
     var userName: String = ""
     var imageView: String = ""
     var index: Int?
@@ -27,23 +26,14 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func configNavigationBar() {
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTouchUpInSide))
-        navigationItem.leftBarButtonItem = backButton
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTouchUpInSide))
+ 
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonClick))
         navigationItem.rightBarButtonItem = doneButton
     }
-    @objc func backTouchUpInSide() {
-        if let navigationController = navigationController {
-            navigationController.popViewController(animated: true)
-        }
-    }
-    
-    @objc func doneButtonTouchUpInSide() {
+    @objc func doneButtonClick() {
         if let delegate = profileViewControllerDelegate, let index = index {
             delegate.updateAvatarTextField(userName: avatarTextField.text ?? "", index: index)
         }
-        
         if let navigationController = navigationController {
             navigationController.popViewController(animated: true)
         }
