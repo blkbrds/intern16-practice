@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //Bài 2
 //        let navigationController = UINavigationController(rootViewController: LoginViewController())
         //Bai 3
-        let navigationController = UINavigationController(rootViewController: BaiTap3HomeViewController())
+//        let navigationController = UINavigationController(rootViewController: BaiTap3HomeViewController())
+       //Baif tap 4-2
+        let navigationController = UINavigationController(rootViewController: BaiTap4_1ViewController())
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
