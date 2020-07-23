@@ -49,7 +49,9 @@ class Bai01ViewController: UIViewController {
 
 // MARK: - Extension
 extension Bai01ViewController: UserViewDelegate {
-    func userView(view: UIView, avatar: String) {
-        print(avatar)
-    }
+    func userView(view: UserView,needsPerform action: UserView.Action){
+        switch action {
+        case .didTapImage(nameLabel: let userName):
+            print(userName)
+        }    }
 }

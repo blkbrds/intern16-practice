@@ -13,11 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //                window.rootViewController = Bai01ViewController()
         
-                window.rootViewController = Bai02ViewController()
+//                window.rootViewController = Bai02ViewController()
         
 //                window.rootViewController = Bai03ViewController()
         
-//                window.rootViewController = Bai04ViewController()
+                window.rootViewController = Bai04ViewController()
         
         
         self.window = window

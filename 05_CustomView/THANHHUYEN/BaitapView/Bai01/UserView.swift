@@ -3,7 +3,7 @@
 import UIKit
 
 protocol UserViewDelegate: class {
-    func userView(view: UIView, avatar: String)
+    func userView(view: UserView, needsPerform action: UserView.Action)
 }
 
 class UserView: UIView {
@@ -52,11 +52,16 @@ class UserView: UIView {
     
     // MARK: - objc
     @objc func tapGesture(_ sender: UITapGestureRecognizer) {
-        delegate?.userView(view: self, avatar: sender.name!)
-    }
+        delegate?.userView(view: self, needsPerform: .didTapImage(nameLabel: userNameLabel.text ?? ""))
+        }
 
     // MARK: - required
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+extension UserView {
+    enum Action {
+        case didTapImage(nameLabel : String)
     }
 }

@@ -41,8 +41,9 @@ class SliderView: UIView {
     
     // MARK: - touchesBegan
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+
         let touch = touches.first
-        
         guard let location = touch?.location(in: self) else { return }
         
         if location.y < whiteImageView.bounds.minY {
