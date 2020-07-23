@@ -7,9 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Naviagtion" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Phan3ViewController" customModule="Naviagtion" customModuleProvider="target">
             <connections>
-                <outlet property="scrollView" destination="jfP-tz-Sy3" id="B4k-Wh-pYu"/>
+                <outlet property="searchBar" destination="D4n-RO-6JN" id="Fdb-xg-XIl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,19 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfP-tz-Sy3">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                </scrollView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="D4n-RO-6JN">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="jfP-tz-Sy3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3du-ma-WNC"/>
-                <constraint firstAttribute="bottom" secondItem="jfP-tz-Sy3" secondAttribute="bottom" id="9v4-uy-Rjl"/>
-                <constraint firstItem="jfP-tz-Sy3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BMB-Ba-f5G"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jfP-tz-Sy3" secondAttribute="trailing" id="K6c-N9-8f4"/>
+                <constraint firstItem="D4n-RO-6JN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EpH-gj-feo"/>
+                <constraint firstItem="D4n-RO-6JN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="MN5-Zs-N6D"/>
+                <constraint firstItem="D4n-RO-6JN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SB6-4L-Zam"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="154"/>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </view>
     </objects>
 </document>

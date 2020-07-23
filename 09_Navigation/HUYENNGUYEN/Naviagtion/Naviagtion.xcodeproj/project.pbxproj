@@ -25,6 +25,18 @@
 		83284B7E24C6E23C00B31132 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83284B7C24C6E23C00B31132 /* EditViewController.xib */; };
 		8329F84F24C81825005F2B42 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329F84D24C81825005F2B42 /* ProfileViewController.swift */; };
 		8329F85024C81825005F2B42 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8329F84E24C81825005F2B42 /* ProfileViewController.xib */; };
+		832A138F24C96A9C00F73511 /* Phan5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A138D24C96A9C00F73511 /* Phan5ViewController.swift */; };
+		832A139024C96A9C00F73511 /* Phan5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832A138E24C96A9C00F73511 /* Phan5ViewController.xib */; };
+		832B3DF924C93609008ABE92 /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B3DF724C93609008ABE92 /* Bai4ViewController.swift */; };
+		832B3DFA24C93609008ABE92 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B3DF824C93609008ABE92 /* Bai4ViewController.xib */; };
+		832B3E0124C943E2008ABE92 /* Phan2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B3DFF24C943E2008ABE92 /* Phan2ViewController.swift */; };
+		832B3E0224C943E2008ABE92 /* Phan2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B3E0024C943E2008ABE92 /* Phan2ViewController.xib */; };
+		832B3E0524C94967008ABE92 /* Phan3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B3E0324C94967008ABE92 /* Phan3ViewController.swift */; };
+		832B3E0624C94967008ABE92 /* Phan3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B3E0424C94967008ABE92 /* Phan3ViewController.xib */; };
+		832B3E0924C94D82008ABE92 /* Phan4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B3E0724C94D82008ABE92 /* Phan4ViewController.swift */; };
+		832B3E0A24C94D82008ABE92 /* Phan4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B3E0824C94D82008ABE92 /* Phan4ViewController.xib */; };
+		832EFAEB24C838270005EFC2 /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EFAE924C838270005EFC2 /* ProfileUserViewController.swift */; };
+		832EFAEC24C838270005EFC2 /* ProfileUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832EFAEA24C838270005EFC2 /* ProfileUserViewController.xib */; };
 		8332CFE424C6AC3C004914A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332CFE324C6AC3C004914A1 /* AppDelegate.swift */; };
 		8332CFE624C6AC3C004914A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332CFE524C6AC3C004914A1 /* SceneDelegate.swift */; };
 		8332CFE824C6AC3C004914A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332CFE724C6AC3C004914A1 /* ViewController.swift */; };
@@ -52,6 +64,18 @@
 		83284B7C24C6E23C00B31132 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		8329F84D24C81825005F2B42 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8329F84E24C81825005F2B42 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		832A138D24C96A9C00F73511 /* Phan5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phan5ViewController.swift; sourceTree = "<group>"; };
+		832A138E24C96A9C00F73511 /* Phan5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Phan5ViewController.xib; sourceTree = "<group>"; };
+		832B3DF724C93609008ABE92 /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai4ViewController.swift; sourceTree = "<group>"; };
+		832B3DF824C93609008ABE92 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai4ViewController.xib; sourceTree = "<group>"; };
+		832B3DFF24C943E2008ABE92 /* Phan2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phan2ViewController.swift; sourceTree = "<group>"; };
+		832B3E0024C943E2008ABE92 /* Phan2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Phan2ViewController.xib; sourceTree = "<group>"; };
+		832B3E0324C94967008ABE92 /* Phan3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phan3ViewController.swift; sourceTree = "<group>"; };
+		832B3E0424C94967008ABE92 /* Phan3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Phan3ViewController.xib; sourceTree = "<group>"; };
+		832B3E0724C94D82008ABE92 /* Phan4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phan4ViewController.swift; sourceTree = "<group>"; };
+		832B3E0824C94D82008ABE92 /* Phan4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Phan4ViewController.xib; sourceTree = "<group>"; };
+		832EFAE924C838270005EFC2 /* ProfileUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
+		832EFAEA24C838270005EFC2 /* ProfileUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUserViewController.xib; sourceTree = "<group>"; };
 		8332CFE024C6AC3C004914A1 /* Naviagtion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Naviagtion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8332CFE324C6AC3C004914A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8332CFE524C6AC3C004914A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +117,27 @@
 				8329F84D24C81825005F2B42 /* ProfileViewController.swift */,
 				8329F84E24C81825005F2B42 /* ProfileViewController.xib */,
 				8327715624C82E32001FD360 /* ListUserView.swift */,
+				832EFAE924C838270005EFC2 /* ProfileUserViewController.swift */,
+				832EFAEA24C838270005EFC2 /* ProfileUserViewController.xib */,
 			);
 			path = Bai03;
+			sourceTree = "<group>";
+		};
+		832EFAED24C847760005EFC2 /* Bai04 */ = {
+			isa = PBXGroup;
+			children = (
+				832B3DF724C93609008ABE92 /* Bai4ViewController.swift */,
+				832B3DF824C93609008ABE92 /* Bai4ViewController.xib */,
+				832B3DFF24C943E2008ABE92 /* Phan2ViewController.swift */,
+				832B3E0024C943E2008ABE92 /* Phan2ViewController.xib */,
+				832B3E0324C94967008ABE92 /* Phan3ViewController.swift */,
+				832B3E0424C94967008ABE92 /* Phan3ViewController.xib */,
+				832B3E0724C94D82008ABE92 /* Phan4ViewController.swift */,
+				832B3E0824C94D82008ABE92 /* Phan4ViewController.xib */,
+				832A138D24C96A9C00F73511 /* Phan5ViewController.swift */,
+				832A138E24C96A9C00F73511 /* Phan5ViewController.xib */,
+			);
+			path = Bai04;
 			sourceTree = "<group>";
 		};
 		8332CFD724C6AC3C004914A1 = {
@@ -116,6 +159,7 @@
 		8332CFE224C6AC3C004914A1 /* Naviagtion */ = {
 			isa = PBXGroup;
 			children = (
+				832EFAED24C847760005EFC2 /* Bai04 */,
 				8329F84C24C817F6005F2B42 /* Bai03 */,
 				83284B6E24C6DB5200B31132 /* Bai02 */,
 				8332CFF724C6AD38004914A1 /* Bai01 */,
@@ -205,12 +249,18 @@
 			files = (
 				83284B6D24C6D89100B31132 /* EViewController.xib in Resources */,
 				83284B6924C6D3B300B31132 /* DViewController.xib in Resources */,
+				832B3E0A24C94D82008ABE92 /* Phan4ViewController.xib in Resources */,
 				832847F924C7E8A40010B217 /* dbAccount.plist in Resources */,
 				83284B6124C6CAD800B31132 /* BViewController.xib in Resources */,
 				8332CFFB24C6AD93004914A1 /* Bai01ViewController.xib in Resources */,
+				832B3E0624C94967008ABE92 /* Phan3ViewController.xib in Resources */,
+				832EFAEC24C838270005EFC2 /* ProfileUserViewController.xib in Resources */,
+				832B3DFA24C93609008ABE92 /* Bai4ViewController.xib in Resources */,
 				8329F85024C81825005F2B42 /* ProfileViewController.xib in Resources */,
+				832A139024C96A9C00F73511 /* Phan5ViewController.xib in Resources */,
 				83284B6524C6CAE500B31132 /* CViewController.xib in Resources */,
 				83284B7224C6DB7500B31132 /* LoginViewController.xib in Resources */,
+				832B3E0224C943E2008ABE92 /* Phan2ViewController.xib in Resources */,
 				83284B7E24C6E23C00B31132 /* EditViewController.xib in Resources */,
 				8332CFED24C6AC3D004914A1 /* Assets.xcassets in Resources */,
 				83284B7624C6DF5B00B31132 /* HomeViewController.xib in Resources */,
@@ -224,6 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832B3E0524C94967008ABE92 /* Phan3ViewController.swift in Sources */,
+				832B3DF924C93609008ABE92 /* Bai4ViewController.swift in Sources */,
+				832A138F24C96A9C00F73511 /* Phan5ViewController.swift in Sources */,
 				83284B7124C6DB7500B31132 /* LoginViewController.swift in Sources */,
 				8332CFFA24C6AD93004914A1 /* Bai01ViewController.swift in Sources */,
 				8332CFE824C6AC3C004914A1 /* ViewController.swift in Sources */,
@@ -232,8 +285,11 @@
 				8327715724C82E32001FD360 /* ListUserView.swift in Sources */,
 				83284B7524C6DF5B00B31132 /* HomeViewController.swift in Sources */,
 				8329F84F24C81825005F2B42 /* ProfileViewController.swift in Sources */,
+				832B3E0924C94D82008ABE92 /* Phan4ViewController.swift in Sources */,
 				83284B6C24C6D89100B31132 /* EViewController.swift in Sources */,
+				832EFAEB24C838270005EFC2 /* ProfileUserViewController.swift in Sources */,
 				83284B6824C6D3B300B31132 /* DViewController.swift in Sources */,
+				832B3E0124C943E2008ABE92 /* Phan2ViewController.swift in Sources */,
 				83284B6424C6CAE500B31132 /* CViewController.swift in Sources */,
 				83284B7D24C6E23C00B31132 /* EditViewController.swift in Sources */,
 				8332CFE624C6AC3C004914A1 /* SceneDelegate.swift in Sources */,
