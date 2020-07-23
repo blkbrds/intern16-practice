@@ -83,21 +83,9 @@ class UserProfileViewController: UIViewController {
 }
 
 extension UserProfileViewController: UserViewDelegate {
-//    func pushViewController(_ personView: UserView, data: Data, index: Int) {
-//        <#code#>
-//    }
-    
     func pushViewController(_ personView: UserView, _ name: String, index: Int) {
         let userDetailsViewController = UserDetailsViewController()
         userDetailsViewController.userName = name
-//        userDetailsViewController.delegate = self
-        
         navigationController?.pushViewController(userDetailsViewController, animated: true)
     }
 }
-
-//extension UserProfileViewController: UserDetailsDelegate {
-//    func userDetails(viewController: UserDetailsViewController, data: Data, index: Int) {
-//        datas[index] = data
-//    }
-//}

@@ -8,26 +8,9 @@
 
 import UIKit
 
-//protocol UserDetailsDelegate: class {
-//    func userDetails(viewController: UserDetailsViewController, data: Data, index: Int)
-//}
-
 class UserDetailsViewController: UIViewController {
-    
     @IBOutlet weak var editNameTextField: UITextField!
     var userName:String = "user name"
-//    var data: Data
-    var index: Int = 0
-//    
-//    weak var delegate: UserDetailsDelegate?
-    
-//    init(data: Data, index: Int) {
-//        userName = data.name
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +28,9 @@ class UserDetailsViewController: UIViewController {
                         profilesViewController.datas[i].name = editNameTextField.text!
                         profilesViewController.scrollView.removeFromSuperview()
                     }
-//                    delegate?.userDetails(viewController: self, update: profilesViewController.datas[i].name)
                     navigationController?.popViewController(animated: true)
                 }
             }
         }
     }
-    
-//    @objc func tapToDone() {
-//        let data: Data
-//        data.name = editNameTextField.text!
-//        delegate?.userDetails(viewController: self, data: data, index: <#T##Int#>)
-//    }
 }
