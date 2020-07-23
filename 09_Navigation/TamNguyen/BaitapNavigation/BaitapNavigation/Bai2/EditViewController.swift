@@ -8,7 +8,18 @@
 
 import UIKit
 
+// MARK: - Protocol
+protocol EditViewDelegate: class {
+    func updateUser(view: EditViewController, user: String)
+}
+
 final class EditViewController: UIViewController {
+    // MARK: - IBOulets
+    @IBOutlet private weak var userNameTextField: UITextField!
+    
+    // MARK: - Properties
+    var user: String = ""
+    weak var delegate: EditViewDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,5 +38,8 @@ final class EditViewController: UIViewController {
     
     @objc private func popLoginTouchUpInside() {
         navigationController?.popViewController(animated: true)
+        if let delegate = delegate {
+        delegate.updateUser(view: self, user: userNameTextField.text!)
     }
+}
 }

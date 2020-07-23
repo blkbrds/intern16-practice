@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let vc = LoginViewController()
+        let vc = Bai3ViewController()
         let navi = UINavigationController(rootViewController: vc)
         
         window.rootViewController = navi
