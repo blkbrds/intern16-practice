@@ -9,7 +9,8 @@
 import UIKit
 
 final class BaiTap14ViewController: UIViewController {
-    //MARK: - Life cycle
+
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
