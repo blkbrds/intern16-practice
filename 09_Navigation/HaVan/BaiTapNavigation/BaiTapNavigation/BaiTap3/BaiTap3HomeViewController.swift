@@ -80,6 +80,7 @@ extension BaiTap3HomeViewController: MyClassDelegate {
             let vc = ProfileViewController()
             vc.imageName = people[index].image
             vc.name = people[index].username
+            vc.index = index
             vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -90,11 +91,14 @@ extension BaiTap3HomeViewController: MyClassDelegate {
 extension BaiTap3HomeViewController: ProfileViewControllerDelegate {
     func controller(_ viewController: ProfileViewController, needsPerform action: ProfileViewController.Action) {
         switch action {
-        case .changeValue(name: let name):
+        case .changeValue(index: let i, newName: let name):
             people[index].username = name
-            createScrollView()
+            for (index, view) in scrollView.subviews.enumerated() {
+                if let subView = view as? MyClass, index == i, name == name {
+                    subView.updateName(newName: name)
+                }
+            }
         }
     }
 }
-
 

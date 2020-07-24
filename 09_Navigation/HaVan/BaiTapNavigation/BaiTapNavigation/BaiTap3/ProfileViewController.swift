@@ -20,6 +20,7 @@ final class ProfileViewController: UIViewController {
     // MARK: - Propeties
     var imageName: String = ""
     var name: String = ""
+    var index: Int = -1
     weak var delegate: ProfileViewControllerDelegate?
     
     // MARK: - Life cycle
@@ -50,7 +51,7 @@ final class ProfileViewController: UIViewController {
         guard let name = nameTextField.text else {
             return
         }
-        delegate?.controller(self, needsPerform: .changeValue(name: name))
+        delegate?.controller(self, needsPerform: .changeValue(index: index, newName: name))
         navigationController?.popViewController(animated: true)
     }
     
@@ -63,7 +64,7 @@ final class ProfileViewController: UIViewController {
 //MARK: -Extension
 extension ProfileViewController {
     enum Action {
-        case changeValue(name: String)
+        case changeValue(index: Int, newName: String)
     }
 }
 

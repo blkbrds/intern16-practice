@@ -64,6 +64,10 @@ final class MyClass: UIView {
         imageView.image = UIImage(named: people.image)
     }
     
+    func updateName(newName: String) {
+        usernameLabel.text = newName
+    }
+    
     //MARK: - Objc functions
     @objc private func clickImage() {
         guard let index = index else { return }
