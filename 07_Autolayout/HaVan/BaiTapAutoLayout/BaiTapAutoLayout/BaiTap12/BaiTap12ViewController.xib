@@ -20,13 +20,24 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="The-i3-eUe">
                     <rect key="frame" x="5" y="64" width="404" height="788"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyi-77-RNR">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFH-lT-99D">
                             <rect key="frame" x="0.0" y="0.0" width="404" height="127"/>
-                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                        </label>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyi-77-RNR">
+                                    <rect key="frame" x="10" y="64" width="384" height="48"/>
+                                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="Jyi-77-RNR" firstAttribute="leading" secondItem="CFH-lT-99D" secondAttribute="leading" constant="10" id="C6l-Jf-utc"/>
+                                <constraint firstAttribute="bottom" secondItem="Jyi-77-RNR" secondAttribute="bottom" constant="15" id="QBa-TE-FhY"/>
+                                <constraint firstAttribute="trailing" secondItem="Jyi-77-RNR" secondAttribute="trailing" constant="10" id="bnq-Yj-w9y"/>
+                            </constraints>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3ib-4v-w8j">
                             <rect key="frame" x="0.0" y="132" width="404" height="127.5"/>
                             <subviews>

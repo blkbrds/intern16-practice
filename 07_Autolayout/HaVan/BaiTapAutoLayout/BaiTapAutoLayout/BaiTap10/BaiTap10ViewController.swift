@@ -8,27 +8,27 @@
 
 import UIKit
 
-class BaiTap10ViewController: UIViewController {
-
+final class BaiTap10ViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var redView: UIView!
     @IBOutlet private weak var greenView: UIView!
     @IBOutlet private weak var orangeView: UIView!
     @IBOutlet private weak var grayView: UIView!
+    @IBOutlet private weak var greenViewHeightLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var redViewHeightLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var grayViewHeightLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var orangeViewHeightLayoutConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var heightGreenLayoutConstrain: NSLayoutConstraint!
-    @IBOutlet weak var heightRedLayoutConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var heightGrayLayoutConstraint: NSLayoutConstraint!
-    @IBOutlet weak var heightOrangeLayoutConstraint: NSLayoutConstraint!
     // MARK: - Propeties
     private var previousView = UIView()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
-          super.viewDidLoad()
+        super.viewDidLoad()
         changeStateView()
-      }
-    // MARK: - Override functions
+    }
+    
     // MARK: - Private functions
     private func changeStateView() {
         redView.isUserInteractionEnabled = true
@@ -43,49 +43,42 @@ class BaiTap10ViewController: UIViewController {
         orangeView.addGestureRecognizer(tapOrange)
         let tapGray = UITapGestureRecognizer(target: self, action: #selector(tapInGrayView))
         grayView.addGestureRecognizer(tapGray)
-        
     }
+    
     // MARK: - Objc functions
-    @objc func tapInRedView() {
-        if heightRedLayoutConstraint.constant == 100 {
-            heightRedLayoutConstraint.constant = 200
-            heightGreenLayoutConstrain.constant = 100
-            heightGrayLayoutConstraint.constant = 100
-            heightOrangeLayoutConstraint.constant = 100
+    @objc private func tapInRedView() {
+        if redViewHeightLayoutConstraint.constant == 100 {
+            redViewHeightLayoutConstraint.constant = 200
+            greenViewHeightLayoutConstraint.constant = 100
+            grayViewHeightLayoutConstraint.constant = 100
+            orangeViewHeightLayoutConstraint.constant = 100
         }
     }
     
-    @objc func tapInGreenView() {
-           if heightGreenLayoutConstrain.constant == 100 {
-               heightGreenLayoutConstrain.constant = 200
-               heightRedLayoutConstraint.constant = 100
-               heightGrayLayoutConstraint.constant = 100
-               heightOrangeLayoutConstraint.constant = 100
-           }
-       }
+    @objc private func tapInGreenView() {
+        if greenViewHeightLayoutConstraint.constant == 100 {
+            greenViewHeightLayoutConstraint.constant = 200
+            redViewHeightLayoutConstraint.constant = 100
+            grayViewHeightLayoutConstraint.constant = 100
+            orangeViewHeightLayoutConstraint.constant = 100
+        }
+    }
     
-    @objc func tapInOrangeView() {
-           if heightOrangeLayoutConstraint.constant == 100 {
-               heightOrangeLayoutConstraint.constant = 200
-               heightGreenLayoutConstrain.constant = 100
-               heightGrayLayoutConstraint.constant = 100
-               heightRedLayoutConstraint.constant = 100
-           }
-       }
+    @objc private func tapInOrangeView() {
+        if orangeViewHeightLayoutConstraint.constant == 100 {
+            orangeViewHeightLayoutConstraint.constant = 200
+            greenViewHeightLayoutConstraint.constant = 100
+            grayViewHeightLayoutConstraint.constant = 100
+            redViewHeightLayoutConstraint.constant = 100
+        }
+    }
     
-    @objc func tapInGrayView() {
-           if heightGrayLayoutConstraint.constant == 100 {
-               heightGrayLayoutConstraint.constant = 200
-               heightGreenLayoutConstrain.constant = 100
-               heightRedLayoutConstraint.constant = 100
-               heightOrangeLayoutConstraint.constant = 100
-           }
-       }
-    
-    
-    // MARK: - Public functions
-    // MARK: - IBActions
-    
-
-  
+    @objc private func tapInGrayView() {
+        if grayViewHeightLayoutConstraint.constant == 100 {
+            grayViewHeightLayoutConstraint.constant = 200
+            greenViewHeightLayoutConstraint.constant = 100
+            redViewHeightLayoutConstraint.constant = 100
+            orangeViewHeightLayoutConstraint.constant = 100
+        }
+    }
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,13 +9,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap10ViewController" customModule="BaiTapAutoLayout" customModuleProvider="target">
             <connections>
                 <outlet property="grayView" destination="VxM-78-CRa" id="JNr-1t-HnX"/>
+                <outlet property="grayViewHeightLayoutConstraint" destination="rlP-fB-bks" id="BKn-Is-CmH"/>
                 <outlet property="greenView" destination="nWY-pL-dKr" id="KvP-j2-kJS"/>
-                <outlet property="heightGrayLayoutConstraint" destination="rlP-fB-bks" id="BKn-Is-CmH"/>
-                <outlet property="heightGreenLayoutConstrain" destination="0V1-eo-4f3" id="A8I-Si-BlF"/>
-                <outlet property="heightOrangeLayoutConstraint" destination="cig-Ic-zD7" id="PUh-fz-eZF"/>
-                <outlet property="heightRedLayoutConstraint" destination="Fzg-TH-m2s" id="29x-K9-9gb"/>
+                <outlet property="greenViewHeightLayoutConstraint" destination="0V1-eo-4f3" id="A8I-Si-BlF"/>
                 <outlet property="orangeView" destination="b3I-nA-NlQ" id="w5W-YL-LFD"/>
+                <outlet property="orangeViewHeightLayoutConstraint" destination="cig-Ic-zD7" id="PUh-fz-eZF"/>
                 <outlet property="redView" destination="AsJ-Oc-fzA" id="hPX-hJ-alj"/>
+                <outlet property="redViewHeightLayoutConstraint" destination="Fzg-TH-m2s" id="29x-K9-9gb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsJ-Oc-fzA" userLabel="firstView">
-                    <rect key="frame" x="107" y="104" width="200" height="200"/>
+                    <rect key="frame" x="107" y="60" width="200" height="200"/>
                     <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="Fzg-TH-m2s"/>
@@ -34,7 +33,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-pL-dKr" userLabel="secondView">
-                    <rect key="frame" x="157" y="364" width="100" height="100"/>
+                    <rect key="frame" x="157" y="320" width="100" height="100"/>
                     <color key="backgroundColor" red="0.1879570981" green="0.9630869031" blue="0.16065391800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="0V1-eo-4f3"/>
@@ -42,7 +41,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3I-nA-NlQ" userLabel="thirdView">
-                    <rect key="frame" x="157" y="524" width="100" height="100"/>
+                    <rect key="frame" x="157" y="480" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="cig-Ic-zD7"/>
@@ -50,7 +49,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxM-78-CRa" userLabel="finalView">
-                    <rect key="frame" x="157" y="684" width="100" height="100"/>
+                    <rect key="frame" x="157" y="640" width="100" height="100"/>
                     <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="VxM-78-CRa" secondAttribute="height" multiplier="1:1" id="o5t-Ub-r3U"/>

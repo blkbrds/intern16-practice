@@ -8,17 +8,20 @@
 
 import UIKit
 
-class BaiTap9ViewController: UIViewController {
+final class BaiTap9ViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var likeButton: UIButton!
     @IBOutlet private weak var commentButton: UIButton!
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var numberLabel: UILabel!
-    @IBOutlet weak var horizontalScrollView: UIScrollView!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet private weak var horizontalScrollView: UIScrollView!
+    @IBOutlet private weak var contentLabel: UILabel!
+    
     // MARK: - Properties
     private var temp: Int = 0
-    private var informationArray = [Information]()
+    private var informationArray: [Information] = []
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class BaiTap9ViewController: UIViewController {
         configInformation()
         updateView()
     }
+    
     // MARK: - Private functions
     private func configButton() {
         likeButton.layer.cornerRadius = 10
@@ -34,33 +38,33 @@ class BaiTap9ViewController: UIViewController {
     }
     
     private func configInformation() {
-       let array: InformationCreation = InformationCreation()
-        informationArray = array.create()
+        let array: InformationCreation = InformationCreation()
+        array.create()
+        informationArray = array.informationArray
     }
     
     private func updateView() {
         UIView.animate(withDuration: 3.0, delay: 0, options: .curveEaseIn, animations: {
-                self.horizontalScrollView.setContentOffset(CGPoint(x: CGFloat(self.temp) * self.horizontalScrollView.bounds.width, y: 0), animated: true)
-            }, completion: nil)
-        numberLabel.text = "\(temp + 1)/5"
+            self.horizontalScrollView.setContentOffset(CGPoint(x: CGFloat(self.temp) * self.horizontalScrollView.bounds.width, y: 0), animated: true)
+        }, completion: nil)
+        numberLabel.text = "\(temp + 1) / 5"
         contentLabel.text = informationArray[temp].content
     }
     
     // MARK: - IBActions
-    @IBAction func preciousButtonTouchUpInSide(_ sender: UIButton) {
-        if temp == 0 {
-            return
+    @IBAction private func preciousButtonTouchUpInSide(_ sender: UIButton) {
+        if temp != 0 {
+            temp -= 1
+            updateView()
         }
-        temp -= 1
-        updateView()
     }
-
-    @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
+    
+    @IBAction private func nextButtonTouchUpInside(_ sender: UIButton) {
         if temp == 4 {
             temp = 0
         } else {
             temp += 1
         }
-           updateView()
-        }
+        updateView()
     }
+}
