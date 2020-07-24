@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="BaiTapNavigation" customModuleProvider="target">
             <connections>
+                <outlet property="confirmPasswordTextField" destination="3so-xT-c9t" id="mXX-yc-nhd"/>
+                <outlet property="newPasswordTextField" destination="d2t-ui-CAe" id="9gF-fd-Ulr"/>
+                <outlet property="usernameTextField" destination="s8Y-Ed-sM5" id="xf3-gF-1O9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

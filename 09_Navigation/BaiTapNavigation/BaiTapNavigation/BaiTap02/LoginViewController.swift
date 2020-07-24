@@ -8,14 +8,12 @@
 
 import UIKit
 
-protocol LoginViewControllerDelegate: class {
-    func setValue(_ loginViewController: LoginViewController, username: String)
-}
 
 final class LoginViewController: UIViewController {
 
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var erorLabel: UILabel!
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -34,14 +32,26 @@ final class LoginViewController: UIViewController {
         let backButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: nil)
         navigationItem.backBarButtonItem = backButton
     }
+
+    func getMyPlist() {
+
+    }
+
     @objc private func processLogin() {
         let username = usernameTextField.text
         let password = passwordTextField.text
-        if username == "admin123" && password == "admin" {
-            let homeViewController = HomeViewController()
-            navigationController?.pushViewController(homeViewController, animated: true)
-            guard let username = username else { return }
-            homeViewController.username = username
+        if let path = Bundle.main.path(forResource: "Data", ofType: "plist") {
+            if let myDict = NSDictionary(contentsOfFile: path) as? [String: String] {
+                for i in myDict {
+                    if i.key == username {
+                        if i.value == password {
+                            let homeViewController = HomeViewController()
+                            navigationController?.pushViewController(homeViewController, animated: true)
+                            homeViewController.username = i.key
+                        }
+                    }
+                }
+            }
         }
     }
 }

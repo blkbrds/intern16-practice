@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="BaiTapNavigation" customModuleProvider="target">
             <connections>
+                <outlet property="erorLabel" destination="aOh-o5-Ia9" id="gID-ah-UWh"/>
                 <outlet property="passwordTextField" destination="vHU-0u-nG7" id="aNM-4U-axl"/>
                 <outlet property="usernameTextField" destination="EOO-7v-roo" id="qUY-jP-vfG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,12 +38,21 @@
                         <constraint firstItem="EOO-7v-roo" firstAttribute="width" secondItem="vHU-0u-nG7" secondAttribute="width" id="hdM-uq-qXB"/>
                     </constraints>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOh-o5-Ia9">
+                    <rect key="frame" x="62" y="322" width="290" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="2nV-wz-PJM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="2Ip-0t-Qbj"/>
+                <constraint firstItem="aOh-o5-Ia9" firstAttribute="width" secondItem="2nV-wz-PJM" secondAttribute="width" id="2vB-mR-Eth"/>
+                <constraint firstItem="aOh-o5-Ia9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5m9-lg-zBw"/>
                 <constraint firstItem="2nV-wz-PJM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IDR-CU-60s"/>
                 <constraint firstItem="EOO-7v-roo" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="df2-IU-XzV"/>
+                <constraint firstItem="aOh-o5-Ia9" firstAttribute="top" secondItem="2nV-wz-PJM" secondAttribute="bottom" constant="90" id="p1p-BQ-lHD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="154"/>
