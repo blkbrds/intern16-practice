@@ -9,19 +9,39 @@
 import UIKit
 
 final class BaiTap3ViewController: UIViewController {
-
+    
     // MARK: - Properties
     private var datas = [Data (name: "user1", nameImage: "image1"),
-                         Data (name: "user2", nameImage: "image1")]
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),
+                         Data (name: "user2", nameImage: "image1"),]
     private var scrollView = UIScrollView()
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         createUserView()
         title = "Home"
     }
-
+    
     // MARK: - Private funtions
     private func createUserView() {
         let screenSize = UIScreen.main.bounds
@@ -49,7 +69,7 @@ final class BaiTap3ViewController: UIViewController {
             scrollView.addSubview(avartar)
             if xView + widthUserView > screenSize.width - xView {
                 yView += heightUserView + space
-                 xView = (screenSize.width - widthUserView * 3 - 2 * space) / 2
+                xView = (screenSize.width - widthUserView * 3 - 2 * space) / 2
             } else {
                 xView += widthUserView + space
             }
@@ -72,6 +92,7 @@ extension BaiTap3ViewController: UserViewDelegate {
     }
 }
 
+// MARK: - ProfileViewControllerDelegate
 extension BaiTap3ViewController : ProfileViewControllerDelegate {
     func changeNameUser(_ controller: ProfileViewController, needsPerfrom action: ProfileViewController.Action) {
         switch action {

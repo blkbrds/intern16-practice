@@ -9,7 +9,6 @@
 import Foundation
 
 struct Data {
-    
     var name: String
     var nameImage: String
 }

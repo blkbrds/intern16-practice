@@ -58,7 +58,7 @@ final class UserView: UIView {
     }
 }
 
-// MARK: - Config UserView
+// MARK: - Config
 extension UserView {
     enum Action {
         case didTapImage(nameLabel : String, nameImage: UIImage?, index: Int)

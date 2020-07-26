@@ -11,14 +11,20 @@ import UIKit
 protocol ProfileViewControllerDelegate: class {
     func changeNameUser(_ controller: ProfileViewController, needsPerfrom action: ProfileViewController.Action)
 }
+
 class ProfileViewController: UIViewController {
-    
+
+    // MARK: - IBOulets
     @IBOutlet private weak var nameUserTextFiled: UITextField!
     @IBOutlet private weak var userImageView: UIImageView!
+    
+    // MARK: - Properties
     weak var delegate: ProfileViewControllerDelegate?
     var username = ""
     var nameImage:UIImage?
-    var index:Int = 0
+    var index: Int = 0
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
@@ -28,11 +34,13 @@ class ProfileViewController: UIViewController {
         configDoneButton()
     }
     
+    // MARK: - Private funtions
     private func configDoneButton() {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(clickDoneButton))
         navigationItem.rightBarButtonItem = doneButton
     }
     
+    // MARK: - Objc funtions
     @objc func clickDoneButton() {
         guard let newNameUser = nameUserTextFiled.text else { return }
         delegate?.changeNameUser(self, needsPerfrom: .changNameUser(username: newNameUser , index: index))
