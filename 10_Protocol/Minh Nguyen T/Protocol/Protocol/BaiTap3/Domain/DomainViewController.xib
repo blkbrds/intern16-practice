@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DomainViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei4-3c-xlR">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-zh-8cp">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7A-XW-fLo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="tnd-KP-ObV"/>
+                                    </constraints>
+                                    <state key="normal" title="Miền 1"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="NOf-9b-99r"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qow-cy-1kl">
+                                    <rect key="frame" x="0.0" y="80" width="414" height="80"/>
+                                    <state key="normal" title="Miền 2"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="7aj-8U-Sql"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygK-xc-3uD">
+                                    <rect key="frame" x="0.0" y="160" width="414" height="80"/>
+                                    <state key="normal" title="Miền 3"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="3V4-G6-CuD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ml4-hG-sY4">
+                                    <rect key="frame" x="0.0" y="240" width="414" height="80"/>
+                                    <state key="normal" title="Miền 4"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="GYk-W2-G6a"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-Lw-FuV">
+                                    <rect key="frame" x="0.0" y="320" width="414" height="80"/>
+                                    <state key="normal" title="Miền 5"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="67A-7b-F3c"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-3K-9P2">
+                                    <rect key="frame" x="0.0" y="400" width="414" height="80"/>
+                                    <state key="normal" title="Miền 6"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="UxD-aH-jpc"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-hL-PY2">
+                                    <rect key="frame" x="0.0" y="480" width="414" height="80"/>
+                                    <state key="normal" title="Miền 7"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="aeC-30-hza"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-fC-glR">
+                                    <rect key="frame" x="0.0" y="560" width="414" height="80"/>
+                                    <state key="normal" title="Miền 8"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Crf-hO-Cys"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtr-bu-bag">
+                                    <rect key="frame" x="0.0" y="640" width="414" height="80"/>
+                                    <state key="normal" title="Miền 9"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="FEw-EQ-cjG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJu-yd-ffJ">
+                                    <rect key="frame" x="0.0" y="720" width="414" height="80"/>
+                                    <state key="normal" title="Miền 10"/>
+                                    <connections>
+                                        <action selector="handleDomainButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="1a4-Su-cqv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="VaX-Lw-FuV" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="7Gj-zI-JGl"/>
+                                <constraint firstItem="ml4-hG-sY4" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="8lx-xm-Ime"/>
+                                <constraint firstItem="ygK-xc-3uD" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="9FA-Tf-mBY"/>
+                                <constraint firstItem="fM9-hL-PY2" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="Arc-By-KMa"/>
+                                <constraint firstItem="rtr-bu-bag" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="D1a-Vi-MMx"/>
+                                <constraint firstItem="ml4-hG-sY4" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="FVm-wL-N4N"/>
+                                <constraint firstItem="AdP-3K-9P2" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="FoC-qC-04W"/>
+                                <constraint firstItem="fM9-hL-PY2" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="FqB-jR-J8h"/>
+                                <constraint firstItem="rtr-bu-bag" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="RNo-d3-TTg"/>
+                                <constraint firstItem="AdP-3K-9P2" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="Uej-ON-bkb"/>
+                                <constraint firstItem="fJu-yd-ffJ" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="ekP-Xz-Mzs"/>
+                                <constraint firstItem="VaX-Lw-FuV" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="jTO-gW-fYx"/>
+                                <constraint firstItem="Ohb-fC-glR" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="jhf-nP-AEM"/>
+                                <constraint firstItem="fJu-yd-ffJ" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="mBk-GB-XdF"/>
+                                <constraint firstItem="ygK-xc-3uD" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="pRT-zo-pCM"/>
+                                <constraint firstItem="Ohb-fC-glR" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="wKS-aC-Hyu"/>
+                                <constraint firstItem="Qow-cy-1kl" firstAttribute="width" secondItem="E7A-XW-fLo" secondAttribute="width" id="wU2-Xa-t0r"/>
+                                <constraint firstItem="Qow-cy-1kl" firstAttribute="height" secondItem="E7A-XW-fLo" secondAttribute="height" id="y5k-aR-uAy"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2dh-zh-8cp" firstAttribute="top" secondItem="C9p-tB-ui8" secondAttribute="top" id="1Mi-mG-cPM"/>
+                        <constraint firstItem="2dh-zh-8cp" firstAttribute="trailing" secondItem="C9p-tB-ui8" secondAttribute="trailing" id="PU0-SN-Rws"/>
+                        <constraint firstItem="2dh-zh-8cp" firstAttribute="leading" secondItem="C9p-tB-ui8" secondAttribute="leading" id="kTr-c7-rGo"/>
+                        <constraint firstItem="2dh-zh-8cp" firstAttribute="bottom" secondItem="C9p-tB-ui8" secondAttribute="bottom" id="qJM-De-bOD"/>
+                        <constraint firstItem="2dh-zh-8cp" firstAttribute="width" secondItem="8tM-X4-Y1x" secondAttribute="width" id="sdY-Ug-M0D"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="C9p-tB-ui8"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="8tM-X4-Y1x"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ei4-3c-xlR" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="CEU-F4-hN8"/>
+                <constraint firstItem="ei4-3c-xlR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UHu-d9-vDE"/>
+                <constraint firstItem="ei4-3c-xlR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YFO-5c-SbN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ei4-3c-xlR" secondAttribute="trailing" id="uYs-Io-nLA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>

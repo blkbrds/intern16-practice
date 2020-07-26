@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DictrictViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqa-PM-mvP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3DD-sg-GeX">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dg-qh-NpS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="dHX-Ux-mn1"/>
+                                    </constraints>
+                                    <state key="normal" title="Huyện 1"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="0hb-1t-txc"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgy-Hg-ZIc">
+                                    <rect key="frame" x="0.0" y="80" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 2"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="PSH-54-bgl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ0-we-E2W">
+                                    <rect key="frame" x="0.0" y="160" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 3"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="Zbq-p8-Ajv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uho-5S-OZG">
+                                    <rect key="frame" x="0.0" y="240" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 4"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="dhU-08-Koo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-JY-n5F">
+                                    <rect key="frame" x="0.0" y="320" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 5"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="sSF-ZD-QPu"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="542-dV-SQX">
+                                    <rect key="frame" x="0.0" y="400" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 6"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="ecK-Yc-8Dg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7E-Hi-Tfb">
+                                    <rect key="frame" x="0.0" y="480" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 7"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="rfz-PH-Hwo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0k-si-JY0">
+                                    <rect key="frame" x="0.0" y="560" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 8"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="Iao-qZ-twR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTY-bb-DF5">
+                                    <rect key="frame" x="0.0" y="640" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 9"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="SGG-II-Vrs"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vt-jv-xUT">
+                                    <rect key="frame" x="0.0" y="720" width="414" height="80"/>
+                                    <state key="normal" title="Huyện 10"/>
+                                    <connections>
+                                        <action selector="handleDictritButton:" destination="-1" eventType="touchUpInside" id="c5K-kY-ISM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="XQ0-we-E2W" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="1A1-ob-ph4"/>
+                                <constraint firstItem="Twy-JY-n5F" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="5eo-dM-c1m"/>
+                                <constraint firstItem="Bgy-Hg-ZIc" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="7Px-uP-Jm5"/>
+                                <constraint firstItem="N0k-si-JY0" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="8rr-nI-Ggs"/>
+                                <constraint firstItem="uho-5S-OZG" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="BT2-Ya-5A3"/>
+                                <constraint firstItem="aTY-bb-DF5" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="RWy-pJ-gP8"/>
+                                <constraint firstItem="542-dV-SQX" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="RsD-3A-7An"/>
+                                <constraint firstItem="1Vt-jv-xUT" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="Uqa-Yp-rNg"/>
+                                <constraint firstItem="k7E-Hi-Tfb" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="UyI-d8-GIm"/>
+                                <constraint firstItem="N0k-si-JY0" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="W2D-KQ-Xrk"/>
+                                <constraint firstItem="k7E-Hi-Tfb" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="ena-Or-oLi"/>
+                                <constraint firstItem="Bgy-Hg-ZIc" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="g4y-4Q-rZ0"/>
+                                <constraint firstItem="542-dV-SQX" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="gzt-yY-Hkw"/>
+                                <constraint firstItem="1Vt-jv-xUT" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="oKR-hT-8tP"/>
+                                <constraint firstItem="uho-5S-OZG" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="uSf-rx-nu2"/>
+                                <constraint firstItem="XQ0-we-E2W" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="xct-dI-m10"/>
+                                <constraint firstItem="aTY-bb-DF5" firstAttribute="height" secondItem="3Dg-qh-NpS" secondAttribute="height" id="yur-xo-dpn"/>
+                                <constraint firstItem="Twy-JY-n5F" firstAttribute="width" secondItem="3Dg-qh-NpS" secondAttribute="width" id="zFn-Eb-08I"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="3DD-sg-GeX" firstAttribute="top" secondItem="Kdr-k0-7vr" secondAttribute="top" id="A3H-VH-1cv"/>
+                        <constraint firstItem="3DD-sg-GeX" firstAttribute="leading" secondItem="Kdr-k0-7vr" secondAttribute="leading" id="AeW-im-XaC"/>
+                        <constraint firstItem="3DD-sg-GeX" firstAttribute="trailing" secondItem="Kdr-k0-7vr" secondAttribute="trailing" id="HQF-Qm-vMB"/>
+                        <constraint firstItem="3DD-sg-GeX" firstAttribute="width" secondItem="Eed-ea-hEW" secondAttribute="width" id="ip6-ma-S7y"/>
+                        <constraint firstItem="3DD-sg-GeX" firstAttribute="bottom" secondItem="Kdr-k0-7vr" secondAttribute="bottom" id="jpM-q2-qNM"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Kdr-k0-7vr"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Eed-ea-hEW"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="mqa-PM-mvP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4CT-8R-DCH"/>
+                <constraint firstItem="mqa-PM-mvP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8xO-5v-XEg"/>
+                <constraint firstItem="mqa-PM-mvP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E2J-Cm-gCM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mqa-PM-mvP" secondAttribute="trailing" id="EfJ-Kl-0bf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>

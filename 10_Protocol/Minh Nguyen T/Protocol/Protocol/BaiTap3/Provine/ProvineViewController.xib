@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProvineViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dac-xs-LA7">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BJd-0o-jB9">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pg-Tt-JOd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="k6R-CL-mbZ"/>
+                                    </constraints>
+                                    <state key="normal" title="Tỉnh 1"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Acq-pg-Tt2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abW-7J-ui5">
+                                    <rect key="frame" x="0.0" y="80" width="414" height="80"/>
+                                    <state key="normal" title="Tinh 2"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="7qY-CU-2qO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l9-Pi-OQr">
+                                    <rect key="frame" x="0.0" y="160" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 3"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="e13-Px-Rtw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ3-Eh-ElE">
+                                    <rect key="frame" x="0.0" y="240" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 4"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="hxj-WR-P5d"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ0-nc-UgO">
+                                    <rect key="frame" x="0.0" y="320" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 5"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="2eL-nb-KgU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4s-lO-ZKX">
+                                    <rect key="frame" x="0.0" y="400" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 6"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="uAr-3h-EpN"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfa-T4-vSR">
+                                    <rect key="frame" x="0.0" y="480" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 7"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="JXb-vm-IDV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-qT-0Rn">
+                                    <rect key="frame" x="0.0" y="560" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 8"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="XC4-Cf-mtL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXP-oI-IXt">
+                                    <rect key="frame" x="0.0" y="640" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 9"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="FMb-tA-Zjh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndI-xo-5Ey">
+                                    <rect key="frame" x="0.0" y="720" width="414" height="80"/>
+                                    <state key="normal" title="Tỉnh 10"/>
+                                    <connections>
+                                        <action selector="handleProvineButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="b6d-PA-dhe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="HDf-qT-0Rn" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="14M-ZA-fbN"/>
+                                <constraint firstItem="2l9-Pi-OQr" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="CWr-Hm-Oz2"/>
+                                <constraint firstItem="ndI-xo-5Ey" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="DvJ-3d-0fP"/>
+                                <constraint firstItem="cQ0-nc-UgO" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="FNx-Dj-y8E"/>
+                                <constraint firstItem="pXP-oI-IXt" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="IC8-K1-TgV"/>
+                                <constraint firstItem="ndI-xo-5Ey" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="Tx1-RU-P0f"/>
+                                <constraint firstItem="lQ3-Eh-ElE" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="WNM-TB-vcB"/>
+                                <constraint firstItem="HDf-qT-0Rn" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="WYz-D5-3NM"/>
+                                <constraint firstItem="cQ0-nc-UgO" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="XCe-dK-2eS"/>
+                                <constraint firstItem="2l9-Pi-OQr" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="atH-0r-Wtl"/>
+                                <constraint firstItem="tfa-T4-vSR" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="bhT-A7-aVp"/>
+                                <constraint firstItem="T4s-lO-ZKX" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="biX-12-Uu5"/>
+                                <constraint firstItem="pXP-oI-IXt" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="g0E-gk-3U3"/>
+                                <constraint firstItem="abW-7J-ui5" firstAttribute="width" secondItem="9pg-Tt-JOd" secondAttribute="width" id="hbc-Jn-azf"/>
+                                <constraint firstItem="lQ3-Eh-ElE" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="k2w-uS-QUF"/>
+                                <constraint firstItem="abW-7J-ui5" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="w15-Vu-eqO"/>
+                                <constraint firstItem="T4s-lO-ZKX" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="weB-Gl-gw4"/>
+                                <constraint firstItem="tfa-T4-vSR" firstAttribute="height" secondItem="9pg-Tt-JOd" secondAttribute="height" id="yRq-Pb-YR6"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="BJd-0o-jB9" firstAttribute="leading" secondItem="y0y-sb-qII" secondAttribute="leading" id="7em-fv-TeN"/>
+                        <constraint firstItem="BJd-0o-jB9" firstAttribute="trailing" secondItem="y0y-sb-qII" secondAttribute="trailing" id="H4C-KG-uaC"/>
+                        <constraint firstItem="BJd-0o-jB9" firstAttribute="bottom" secondItem="y0y-sb-qII" secondAttribute="bottom" id="hqI-jN-cgT"/>
+                        <constraint firstItem="BJd-0o-jB9" firstAttribute="top" secondItem="y0y-sb-qII" secondAttribute="top" id="yNK-C3-9ew"/>
+                        <constraint firstItem="BJd-0o-jB9" firstAttribute="width" secondItem="dCI-dE-BHN" secondAttribute="width" id="yhi-tq-0Z6"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="y0y-sb-qII"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="dCI-dE-BHN"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Dac-xs-LA7" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="4tX-mR-gGZ"/>
+                <constraint firstItem="Dac-xs-LA7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7mr-3b-Ycb"/>
+                <constraint firstItem="Dac-xs-LA7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="CHO-km-ptP"/>
+                <constraint firstItem="Dac-xs-LA7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="w8G-At-xyi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>
