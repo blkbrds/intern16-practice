@@ -20,8 +20,8 @@ struct CalculatorBrain {
     }
     
     mutating func performOperation(_ symbol: String) {
-        
-        let operation = operations[symbol]! //lay gia tri cua phep tinh
+        //lay gia tri cua phep tinh
+        let operation = operations[symbol]!
         
         switch operation {
         case .binary(let function):
