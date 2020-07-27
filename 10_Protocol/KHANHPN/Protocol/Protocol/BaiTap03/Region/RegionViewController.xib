@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegionViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="regionButtons" destination="54n-Cm-CaR" collectionClass="NSMutableArray" id="iM6-wg-hP1"/>
+                <outletCollection property="regionButtons" destination="Uqn-f6-PoD" collectionClass="NSMutableArray" id="sVa-cs-Wgb"/>
+                <outletCollection property="regionButtons" destination="oom-ct-bJW" collectionClass="NSMutableArray" id="Yms-HW-bqp"/>
+                <outletCollection property="regionButtons" destination="jHH-vi-qgB" collectionClass="NSMutableArray" id="e4g-aw-QRT"/>
+                <outletCollection property="regionButtons" destination="h4B-2W-QXr" collectionClass="NSMutableArray" id="vXQ-CQ-dbg"/>
+                <outletCollection property="regionButtons" destination="zC4-AI-3xE" collectionClass="NSMutableArray" id="jR2-rf-Z3N"/>
+                <outletCollection property="regionButtons" destination="yML-rg-kz5" collectionClass="NSMutableArray" id="lIs-pH-9zN"/>
+                <outletCollection property="regionButtons" destination="FGG-Ke-Vdh" collectionClass="NSMutableArray" id="9Hp-3G-y60"/>
+                <outletCollection property="regionButtons" destination="v5V-dS-IKX" collectionClass="NSMutableArray" id="ir4-zS-Pqy"/>
+                <outletCollection property="regionButtons" destination="tAU-Kt-kWG" collectionClass="NSMutableArray" id="zlk-Ft-0xx"/>
+                <outletCollection property="regionButtons" destination="54n-Cm-CaR" collectionClass="NSMutableArray" id="FKM-JT-n4S"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bkj-V0-b4K">
+                    <rect key="frame" x="117" y="160.5" width="180" height="575"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-Kt-kWG">
+                            <rect key="frame" x="0.0" y="0.0" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="O3i-Zn-Dx4"/>
+                            </constraints>
+                            <state key="normal" title="Miền 1"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="fT4-tN-bsx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5V-dS-IKX">
+                            <rect key="frame" x="0.0" y="60" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Miền 2"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="TQw-hx-h3n"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGG-Ke-Vdh">
+                            <rect key="frame" x="0.0" y="120" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="ngj-ZY-f27"/>
+                            </constraints>
+                            <state key="normal" title="Miền 3"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="DAS-Ce-8Dh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54n-Cm-CaR">
+                            <rect key="frame" x="0.0" y="180" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="MkB-NX-9i4"/>
+                            </constraints>
+                            <state key="normal" title="Miền 4"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="qSI-Rp-qVR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqn-f6-PoD">
+                            <rect key="frame" x="0.0" y="240" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="z5N-LF-CGe"/>
+                            </constraints>
+                            <state key="normal" title="Miền 5"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="1Zw-so-jvP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oom-ct-bJW">
+                            <rect key="frame" x="0.0" y="300" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="tDS-Sc-MC7"/>
+                            </constraints>
+                            <state key="normal" title="Miền 6"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="86g-zV-yaD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHH-vi-qgB">
+                            <rect key="frame" x="0.0" y="360" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="bSF-BK-Clq"/>
+                            </constraints>
+                            <state key="normal" title="Miền 7"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="C6G-Gu-VaB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-2W-QXr">
+                            <rect key="frame" x="0.0" y="420" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Qc9-14-faP"/>
+                            </constraints>
+                            <state key="normal" title="Miền 8"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="mPu-kr-fAa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zC4-AI-3xE">
+                            <rect key="frame" x="0.0" y="480" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="dvz-qE-QuC"/>
+                            </constraints>
+                            <state key="normal" title="Miền 9"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="bBH-pl-hQP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yML-rg-kz5">
+                            <rect key="frame" x="0.0" y="540" width="180" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="kdV-5G-5K7"/>
+                            </constraints>
+                            <state key="normal" title="Miền 10"/>
+                            <connections>
+                                <action selector="regionTouchUpInside:" destination="-1" eventType="touchUpInside" id="Hxu-RB-rgV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tAU-Kt-kWG" firstAttribute="height" secondItem="v5V-dS-IKX" secondAttribute="height" id="41g-Er-QWS"/>
+                        <constraint firstAttribute="width" constant="180" id="lCt-ag-Cku"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Bkj-V0-b4K" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AIq-fq-l86"/>
+                <constraint firstItem="Bkj-V0-b4K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="llv-Te-dba"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
+        </view>
+    </objects>
+</document>
