@@ -12,7 +12,7 @@ protocol ProfileViewControllerDelegate: class {
     func changeNameUser(_ controller: ProfileViewController, needsPerfrom action: ProfileViewController.Action)
 }
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     // MARK: - IBOulets
     @IBOutlet private weak var nameUserTextFiled: UITextField!

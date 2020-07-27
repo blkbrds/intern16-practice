@@ -8,10 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     // MARK: - IBOulets
     @IBOutlet private weak var usenameLabel: UILabel!
+    
+    // MARK: - Preroperties
     var username = ""
     
     // MARK: - Life cycle
@@ -23,12 +25,13 @@ class HomeViewController: UIViewController {
         usenameLabel.text = "\(username)"
     }
 
+    // MARK: - Override functions
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         usenameLabel.text = username
     }
 
-    // MARK: - Frivate funtions
+    // MARK: - Frivate functions
     private func configLogoutButton() {
         let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutAction))
         navigationItem.leftBarButtonItem = logoutButton
@@ -39,7 +42,7 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = editButton
     }
 
-    // MARK: - Objc funtions
+    // MARK: - Objc functions
     @objc func logoutAction(){
         navigationController?.popViewController(animated: true)
     }

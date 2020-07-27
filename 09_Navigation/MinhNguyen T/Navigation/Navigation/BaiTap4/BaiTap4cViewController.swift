@@ -20,7 +20,7 @@ final class BaiTap4cViewController: UIViewController {
     private func configNaviBar() {
         view.backgroundColor = .white
         let addButton = UIBarButtonItem(image: UIImage(named: "images_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: nil, action: nil)
-           navigationController?.navigationBar.tintColor = .systemRed
-           navigationItem.rightBarButtonItem = addButton
-       }
+        navigationController?.navigationBar.tintColor = .systemRed
+        navigationItem.rightBarButtonItem = addButton
+    }
 }

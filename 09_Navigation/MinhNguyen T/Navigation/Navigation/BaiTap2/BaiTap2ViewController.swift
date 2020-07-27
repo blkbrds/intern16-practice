@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap2ViewController: UIViewController {
+final class BaiTap2ViewController: UIViewController {
     
     enum Suit: String {
         case emty = "-> khong duoc de trong"
@@ -20,8 +20,6 @@ class BaiTap2ViewController: UIViewController {
     @IBOutlet private weak var usernameTexField: UITextField!
     @IBOutlet private weak var passwordTexField: UITextField!
     @IBOutlet private weak var notificationLabel: UILabel!
-    
-    // MARK: - Properties
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -68,7 +66,7 @@ class BaiTap2ViewController: UIViewController {
     }
     
     // MARK: - Objc funtions
-    @objc func loginView() {
+    @objc private func loginView() {
         login()
     }
 }

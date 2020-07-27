@@ -8,14 +8,18 @@
 
 import UIKit
 
-class BaiTap4bViewController: UIViewController {
-    var searchBar:UISearchBar = UISearchBar()
+final class BaiTap4bViewController: UIViewController {
     
+    // MARK: - Properties
+    private var searchBar:UISearchBar = UISearchBar()
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavi()
     }
     
+    // MARK: - Private functions
     private func configNavi() {
         navigationController?.navigationBar.backgroundColor = .gray
         let searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 300, height: 20))

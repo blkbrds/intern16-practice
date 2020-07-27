@@ -18,7 +18,7 @@ final class UserView: UIView {
     private var userAvartarImageView: UIImageView = UIImageView()
     var usernameLabel: UILabel = UILabel()
     weak var delegate: UserViewDelegate?
-    var nameImage:String = "avartar"
+    var nameImage: String = "avartar"
     var index: Int = 0
 
     // MARK: - Initialize

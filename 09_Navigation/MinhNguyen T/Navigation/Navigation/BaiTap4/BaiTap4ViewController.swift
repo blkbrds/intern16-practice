@@ -9,7 +9,7 @@
 import UIKit
 
 final class BaiTap4ViewController: UIViewController {
-
+    
     // MARk: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,6 @@ final class BaiTap4ViewController: UIViewController {
         UIGraphicsEndImageContext()
         navigationController!.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        }
+    }
 }
 

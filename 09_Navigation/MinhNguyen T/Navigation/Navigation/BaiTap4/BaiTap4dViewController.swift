@@ -9,16 +9,16 @@
 import UIKit
 
 final class BaiTap4dViewController: UIViewController {
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNaviBar() 
     }
     
-    // MAR: - Private functions
+    // MARK: - Private functions
     private func configNaviBar() {
-     view.backgroundColor = .white
+        view.backgroundColor = .white
         let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
         let bookMarkItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
         let mid1 = UIBarButtonItem(title: "mid1", style: .plain, target: self, action: nil)

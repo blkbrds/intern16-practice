@@ -12,7 +12,7 @@ protocol EditViewControllerDelegate: class {
     func updateUsename(_ controller: EditViewController, needsPerform action: EditViewController.Action)
 }
 
-class EditViewController: UIViewController {
+final class EditViewController: UIViewController {
     
     // MARK: - IBOulets
     @IBOutlet private weak var usernameTextField: UITextField!
@@ -48,7 +48,7 @@ class EditViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 
-    @objc func doneAction(){
+    @objc private func doneAction(){
         if newPasswordTextField.text == confirmPasswordTextField.text {
             guard let newName = usernameTextField.text else { return }
             delegate?.updateUsename(self, needsPerform: .UpdateName(username: newName))
