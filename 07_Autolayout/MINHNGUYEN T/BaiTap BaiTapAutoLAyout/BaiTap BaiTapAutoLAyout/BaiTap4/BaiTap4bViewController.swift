@@ -8,8 +8,9 @@
 
 import UIKit
 
-class BaiTap4bViewController: UIViewController {
+final class BaiTap4bViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

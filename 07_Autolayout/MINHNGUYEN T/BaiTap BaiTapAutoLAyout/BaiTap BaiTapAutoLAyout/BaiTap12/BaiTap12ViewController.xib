@@ -23,8 +23,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0V-bl-vGL">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zC-eL-W2A">
-                                    <rect key="frame" x="373.5" y="173" width="20.5" height="39.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2zC-eL-W2A">
+                                    <rect key="frame" x="20" y="173" width="374" height="39.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -32,8 +32,9 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             <constraints>
+                                <constraint firstItem="2zC-eL-W2A" firstAttribute="leading" secondItem="G0V-bl-vGL" secondAttribute="leading" constant="20" id="37i-fv-9NW"/>
                                 <constraint firstAttribute="bottom" secondItem="2zC-eL-W2A" secondAttribute="bottom" constant="20" id="4za-2p-peK"/>
-                                <constraint firstAttribute="trailing" secondItem="2zC-eL-W2A" secondAttribute="trailing" constant="20" id="fyK-8Z-F7h"/>
+                                <constraint firstAttribute="trailing" secondItem="2zC-eL-W2A" secondAttribute="trailing" constant="20" id="xJN-qE-bf0"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hbs-JU-UyN">

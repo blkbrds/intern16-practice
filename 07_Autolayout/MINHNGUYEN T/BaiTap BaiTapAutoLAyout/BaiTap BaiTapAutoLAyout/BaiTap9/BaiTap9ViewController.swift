@@ -10,27 +10,27 @@ import UIKit
 
 final class BaiTap9ViewController: UIViewController {
     
-    //MARK: - @IBOutlet Properties
-    @IBOutlet weak var numberOfImageLabel: UILabel!
-    @IBOutlet weak var imageImageView: UIImageView!
-    @IBOutlet weak var descriptionImageLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var commentButton: UIButton!
-    @IBOutlet weak var shareButton: UIButton!
+    //MARK: - @IBOutlets
+    @IBOutlet private weak var numberOfImageLabel: UILabel!
+    @IBOutlet private weak var imageImageView: UIImageView!
+    @IBOutlet private weak var descriptionImageLabel: UILabel!
+    @IBOutlet private weak var likeButton: UIButton!
+    @IBOutlet private weak var commentButton: UIButton!
+    @IBOutlet private weak var shareButton: UIButton!
 
-    // MARK: - Private Properties
+    // MARK: - Properties
     private let data: Data = Data()
     private var location: Int = 0
 
-    // MARK: - Life Cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configButton()
         cofigDescription()
     }
 
-    // MARK: - Private Function
-    private func cofigDescription(){
+    // MARK: - Private functions
+    private func cofigDescription() {
         if data.nameImage.count == 0 {
             numberOfImageLabel.text = ""
             return
@@ -46,10 +46,10 @@ final class BaiTap9ViewController: UIViewController {
         shareButton.layer.cornerRadius = 5
     }
 
-    // MARK: - @IBAction
-    @IBAction func nextButtonTouchInside(_ sender: UIButton) {
+    // MARK: - @IBActions
+    @IBAction private func nextButtonTouchInside(_ sender: UIButton) {
         location += 1
-        if location == data.nameImage.count{
+        if location == data.nameImage.count {
             location = 0
         }
         numberOfImageLabel.text = "\(location + 1) / \(data.nameImage.count)"
@@ -57,7 +57,7 @@ final class BaiTap9ViewController: UIViewController {
         descriptionImageLabel.text = data.descriptionImage[location]
     }
     
-    @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func backButtonTouchUpInside(_ sender: UIButton) {
         location -= 1
         if location < 0 {
             location = data.nameImage.count - 1

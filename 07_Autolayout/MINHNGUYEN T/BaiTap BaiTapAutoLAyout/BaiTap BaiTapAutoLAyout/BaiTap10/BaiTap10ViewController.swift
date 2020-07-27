@@ -10,21 +10,24 @@ import UIKit
 
 final class BaiTap10ViewController: UIViewController {
     
-    // MARK: - IBOulet properties
-    @IBOutlet weak var oneUIView: UIView!
-    @IBOutlet weak var twoUIView: UIView!
-    @IBOutlet weak var threetUIView: UIView!
-    @IBOutlet weak var fourUIView: UIView!
-    @IBOutlet weak var heightTwoContraint: NSLayoutConstraint!
-    @IBOutlet weak var heightOneContraint: NSLayoutConstraint!
-    @IBOutlet weak var heightThreeContraint: NSLayoutConstraint!
-    @IBOutlet weak var heigtFourContrain: NSLayoutConstraint!
+    // MARK: - IBOulets
+    @IBOutlet private weak var oneUIView: UIView!
+    @IBOutlet private weak var twoUIView: UIView!
+    @IBOutlet private weak var threetUIView: UIView!
+    @IBOutlet private weak var fourUIView: UIView!
+    @IBOutlet private weak var twoHeightContraint: NSLayoutConstraint!
+    @IBOutlet private weak var oneHeightContraint: NSLayoutConstraint!
+    @IBOutlet private weak var threeHeightContraint: NSLayoutConstraint!
+    @IBOutlet private weak var fourHeightContrain: NSLayoutConstraint!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUiView()
+        setupUiView()
     }
-    // MARK: - Private Function
-    private func setUpUiView(){
+    
+    // MARK: - Private functions
+    private func setupUiView(){
         let oneUIViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapOneUIView))
         let twoUIViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapTwoUIView))
         let threeUIViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapThreeUIView))
@@ -34,38 +37,43 @@ final class BaiTap10ViewController: UIViewController {
         threetUIView.addGestureRecognizer(threeUIViewTapGesture)
         fourUIView.addGestureRecognizer(fourUIViewTapGesture)
     }
-    @objc func handleTapOneUIView() {
-        self.heightOneContraint.constant = 150
-        self.heightTwoContraint.constant = 75
-        self.heightThreeContraint.constant = 75
-        self.heigtFourContrain.constant = 75
+    
+    // MARK: Objc functions
+    @objc private func handleTapOneUIView() {
+        oneHeightContraint.constant = 150
+        twoHeightContraint.constant = 75
+        threeHeightContraint.constant = 75
+        fourHeightContrain.constant = 75
         UIView.animate(withDuration: 2) {
             self.setNeedsFocusUpdate()
         }
     }
-    @objc func handleTapTwoUIView() {
-        self.heightOneContraint.constant = 75
-        self.heightTwoContraint.constant = 150
-        self.heightThreeContraint.constant = 75
-        self.heigtFourContrain.constant = 75
+    
+    @objc private func handleTapTwoUIView() {
+        oneHeightContraint.constant = 75
+        twoHeightContraint.constant = 150
+        threeHeightContraint.constant = 75
+        fourHeightContrain.constant = 75
         UIView.animate(withDuration: 2) {
             self.setNeedsFocusUpdate()
         }
     }
-    @objc func handleTapThreeUIView() {
-        self.heightOneContraint.constant = 75
-        self.heightTwoContraint.constant = 75
-        self.heightThreeContraint.constant = 150
-        self.heigtFourContrain.constant = 75
+    
+    @objc private func handleTapThreeUIView() {
+        oneHeightContraint.constant = 75
+        twoHeightContraint.constant = 75
+        threeHeightContraint.constant = 150
+        fourHeightContrain.constant = 75
         UIView.animate(withDuration: 2) {
             self.setNeedsFocusUpdate()
         }
     }
-    @objc func handleTapFourUIView() {
-        self.heightOneContraint.constant = 75
-        self.heightTwoContraint.constant = 75
-        self.heightThreeContraint.constant = 75
-        self.heigtFourContrain.constant = 150
+    
+    @objc private func handleTapFourUIView() {
+        oneHeightContraint.constant = 75
+        twoHeightContraint.constant = 75
+        threeHeightContraint.constant = 75
+        fourHeightContrain.constant = 150
         UIView.animate(withDuration: 2) {
             self.setNeedsFocusUpdate()
         }
