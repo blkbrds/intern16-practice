@@ -11,10 +11,10 @@ struct Pie {
 
 class Bai02: UIView {
     
-    var pies: [Pie] = [Pie(value: 50, color: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), radius: 70),
-                       Pie(value: 80, color: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), radius: 80),
-                       Pie(value: 110, color: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), radius: 90),
-                       Pie(value: 120, color: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), radius: 55)] {
+    var pies: [Pie] = [Pie(value: 60, color: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), radius: 100),
+                       Pie(value: 90, color: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), radius: 100),
+                       Pie(value: 90, color: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), radius: 100),
+                       Pie(value: 120, color: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), radius: 100)] {
         didSet {
             setNeedsDisplay()
         }
