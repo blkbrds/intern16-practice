@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let navigationController = UINavigationController(rootViewController: DiaDiemViewController())
-        window.rootViewController = navigationController
+//        let navigationController = UINavigationController(rootViewController: BaiTap4ViewController())
+        window.rootViewController = BaiTap4ViewController()
         window.backgroundColor = .white
         window.makeKeyAndVisible()
     }
