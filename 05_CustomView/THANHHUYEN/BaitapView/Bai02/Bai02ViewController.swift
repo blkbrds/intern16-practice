@@ -51,7 +51,7 @@ class Bai02ViewController: UIViewController {
 // MARK: - Extension
 extension Bai02ViewController: SliderViewDelegate {
     func sliderView(value: CGFloat){
-        volunmTextField.text = "\(Int(value))"
+        self.value = Int(value)
     }
 }
 

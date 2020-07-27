@@ -25,6 +25,7 @@
 		832B72B524B079720049FEFF /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B72B324B079720049FEFF /* Bai01ViewController.swift */; };
 		832B72B624B079720049FEFF /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B72B424B079720049FEFF /* Bai01ViewController.xib */; };
 		8334CD7524B30C0500F281DC /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8334CD7424B30C0500F281DC /* SliderView.xib */; };
+		8372D52B24CD790A003FBFCE /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8372D52A24CD790A003FBFCE /* DatePicker.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		832B72B324B079720049FEFF /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
 		832B72B424B079720049FEFF /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
 		8334CD7424B30C0500F281DC /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
+		8372D52A24CD790A003FBFCE /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				832B72AE24B0767A0049FEFF /* Bai04ViewController.swift */,
 				832B72AF24B0767A0049FEFF /* Bai04ViewController.xib */,
 				83262D6424B46E11005740CE /* DatePicker.swift */,
+				8372D52A24CD790A003FBFCE /* DatePicker.xib */,
 			);
 			path = Bai04;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				832B72A124B06B3A0049FEFF /* LaunchScreen.storyboard in Resources */,
 				832B729E24B06B3A0049FEFF /* Assets.xcassets in Resources */,
 				832B72B624B079720049FEFF /* Bai01ViewController.xib in Resources */,
+				8372D52B24CD790A003FBFCE /* DatePicker.xib in Resources */,
 				832B72AC24B06BCC0049FEFF /* Bai02ViewController.xib in Resources */,
 				8327444A24B21CC000FCB285 /* Bai03ViewController.xib in Resources */,
 				8334CD7524B30C0500F281DC /* SliderView.xib in Resources */,
