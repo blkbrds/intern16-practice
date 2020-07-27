@@ -17,21 +17,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-zw-jvU" userLabel="blueView">
-                    <rect key="frame" x="274" y="398" width="66" height="110"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-zw-jvU" userLabel="blueView">
+                    <rect key="frame" x="257" y="398" width="100" height="100"/>
                     <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2Vt-zw-jvU" secondAttribute="height" multiplier="1:1" id="6g5-1q-dTx"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-KR-lNA" userLabel="whiteView">
-                    <rect key="frame" x="58" y="398" width="98" height="110"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-KR-lNA" userLabel="whiteView">
+                    <rect key="frame" x="57" y="398" width="100" height="100"/>
                     <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bpx-KR-lNA" secondAttribute="height" multiplier="1:1" id="c97-NW-k2Q"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="bpx-KR-lNA" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="-100" id="REd-YV-XBj"/>
-                <constraint firstItem="bpx-KR-lNA" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ZlK-Ab-llV"/>
-                <constraint firstItem="bpx-KR-lNA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="58" id="jxK-l5-5fT"/>
+                <constraint firstItem="2Vt-zw-jvU" firstAttribute="leading" secondItem="bpx-KR-lNA" secondAttribute="trailing" constant="100" id="HSO-b3-kNN"/>
+                <constraint firstItem="bpx-KR-lNA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="57" id="LPR-YQ-J4h"/>
+                <constraint firstItem="bpx-KR-lNA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eyz-nM-zeP"/>
+                <constraint firstItem="2Vt-zw-jvU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="25:224" id="lBv-ED-rrp"/>
+                <constraint firstItem="2Vt-zw-jvU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="r05-vB-F0B"/>
+                <constraint firstItem="bpx-KR-lNA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="25:224" id="tg8-c1-kgT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Vt-zw-jvU" secondAttribute="trailing" constant="57" id="yvk-7n-YQR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-355" y="154"/>

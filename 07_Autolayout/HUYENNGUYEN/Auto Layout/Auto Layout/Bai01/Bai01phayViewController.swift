@@ -1,5 +1,5 @@
 //
-//  Bai14ViewController.swift
+//  Bai01phayViewController.swift
 //  Auto Layout
 //
 //  Created by bu on 7/27/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Bai14ViewController: UIViewController {
+class Bai01phayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

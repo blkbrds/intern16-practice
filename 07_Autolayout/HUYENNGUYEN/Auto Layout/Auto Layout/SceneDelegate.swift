@@ -16,15 +16,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
+//        window.rootViewController = Bai01ViewController()
+//        window.rootViewController = Bai01phayViewController()
+        
+//        window.rootViewController = Bai02ViewController()
+//        window.rootViewController = Bai02phayViewController()
+        
+//        window.rootViewController = Bai03ViewController()
+//        window.rootViewController = Bai03phayViewController()
+//        window.rootViewController = Bai03phayphayViewController()
+        
+//        window.rootViewController = Bai04ViewController()
+//        window.rootViewController = Bai04phay1ViewController()
+//        window.rootViewController = Bai04phay2ViewController()
+//        window.rootViewController = Bai04phay3ViewController()
+//        window.rootViewController = Bai04phay4ViewController()
+        
+//        window.rootViewController = Bai05ViewController()
+//        window.rootViewController = Bai05phay2ViewController()
+        
+//        window.rootViewController = Bai06phay4ViewController()
+        
+//        window.rootViewController = Bai08ViewController()
+//        window.rootViewController = Bai09ViewController()
+//        window.rootViewController = Bai10ViewController()
 //        window.rootViewController = Bai11ViewController()
 //        window.rootViewController = Bai12ViewController()
-        window.rootViewController = Bai13ViewController()
-
-//        window.rootViewController = Bai10ViewController()
-//        window.rootViewController = Bai09ViewController()
-//        window.rootViewController = Bai05phay2ViewController()
-//        window.rootViewController = Bai06phay4ViewController()
-
+//        window.rootViewController = Bai13ViewController()
+        window.rootViewController = Bai14ViewController()
         
         self.window = window
         window.makeKeyAndVisible()

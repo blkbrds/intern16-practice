@@ -20,33 +20,36 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clM-zh-h44" userLabel="grayView">
                     <rect key="frame" x="213" y="213" width="54" height="54"/>
                     <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="clM-zh-h44" secondAttribute="height" multiplier="1:1" id="vvH-u3-2hg"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-Gd-cdL" userLabel="blueView">
                     <rect key="frame" x="53" y="213" width="54" height="54"/>
                     <color key="backgroundColor" red="0.32929339460000001" green="0.46308212370000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fmQ-Gd-cdL" secondAttribute="height" multiplier="1:1" id="L6c-qp-AwA"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-c4-uc9" userLabel="redView">
                     <rect key="frame" x="133" y="213" width="54" height="54"/>
                     <color key="backgroundColor" red="0.57647058819999997" green="0.46043002420000001" blue="0.47919813300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="VQ0-c4-uc9" secondAttribute="height" multiplier="1:1" id="Eti-Nm-tRg"/>
+                        <constraint firstAttribute="width" secondItem="VQ0-c4-uc9" secondAttribute="height" multiplier="1:1" id="be7-da-OcP"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="2SM-Wl-lPx"/>
-                <constraint firstItem="VQ0-c4-uc9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4sC-wn-U9A"/>
-                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4zg-5X-fem"/>
-                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111607" id="7JU-Yz-RBl"/>
-                <constraint firstItem="clM-zh-h44" firstAttribute="width" secondItem="VQ0-c4-uc9" secondAttribute="width" id="8av-AB-vRb"/>
-                <constraint firstItem="VQ0-c4-uc9" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.111607" id="Ls0-Zd-BqL"/>
-                <constraint firstItem="clM-zh-h44" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RQ2-Vx-afC"/>
-                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="width" secondItem="VQ0-c4-uc9" secondAttribute="width" id="TAc-bl-AW2"/>
-                <constraint firstItem="VQ0-c4-uc9" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.241546" id="ZLF-8w-V4m"/>
-                <constraint firstItem="VQ0-c4-uc9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="adc-sQ-Y2B"/>
-                <constraint firstItem="clM-zh-h44" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="h1c-DU-lXd"/>
-                <constraint firstItem="clM-zh-h44" firstAttribute="height" secondItem="VQ0-c4-uc9" secondAttribute="height" id="yE2-Cd-Ph1"/>
+                <constraint firstItem="VQ0-c4-uc9" firstAttribute="width" secondItem="fmQ-Gd-cdL" secondAttribute="height" multiplier="1:1" id="3ck-X8-CWh"/>
+                <constraint firstItem="VQ0-c4-uc9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8ZP-76-Q4T"/>
+                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Cjt-6Q-idf"/>
+                <constraint firstItem="clM-zh-h44" firstAttribute="width" secondItem="VQ0-c4-uc9" secondAttribute="height" multiplier="1:1" id="OyK-2B-liC"/>
+                <constraint firstItem="clM-zh-h44" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="T5P-kq-4ND"/>
+                <constraint firstItem="VQ0-c4-uc9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Toz-Ti-k1h"/>
+                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="b96-4d-yjn"/>
+                <constraint firstItem="fmQ-Gd-cdL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="9:80" id="h5W-0t-JFi"/>
+                <constraint firstItem="clM-zh-h44" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uDc-7c-4fA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-354" y="154"/>
