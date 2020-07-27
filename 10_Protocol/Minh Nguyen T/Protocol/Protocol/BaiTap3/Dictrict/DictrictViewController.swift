@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - DictrictViewControllerDelegate
 protocol DictrictViewControllerDelegate: class {
     func getdataDictrict( _ controller: DictrictViewController, needsPerform action: DictrictViewController.Action)
 }

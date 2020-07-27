@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - DomainViewControllerDelegate
 protocol DomainViewControllerDelegate: class {
     func getDataDomain(_ controller: DomainViewController, needsPerform action: DomainViewController.Action)
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap4ViewController: UIViewController {
+final class BaiTap4ViewController: UIViewController {
     
     // MARK: - IBOulets
     @IBOutlet private weak var searchBar: UISearchBar!
@@ -97,7 +97,6 @@ class BaiTap4ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    
     @IBAction private func cancelButtonTouchUpInside(_ sender: UIButton) {
         searchBar.text = ""
         getData(data: dataList)

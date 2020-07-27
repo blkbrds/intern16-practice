@@ -24,7 +24,7 @@ final class BaiTap5ViewController: UIViewController {
     @IBAction private func handleDisplayCalculatorTouchUpInside(_ sender: UIButton) {
         UIView.animate(withDuration: 1) {
             let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?.first as! CalculatorView
-            calculator.frame = CGRect(x: 0, y: 300, width: UIScreen.main.bounds.width, height: 400)
+            calculator.frame = CGRect(x: 0, y: 400, width: UIScreen.main.bounds.width, height: 400)
             calculator.dataSource = self
             calculator.delegate = self
             calculator.configView()
