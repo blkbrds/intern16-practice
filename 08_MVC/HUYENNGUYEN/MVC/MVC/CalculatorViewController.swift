@@ -5,15 +5,15 @@ import UIKit
 class CalculatorViewController: UIViewController {
     
     //MARK: - IBOutlet
-    @IBOutlet weak var digitLabel: UILabel!
+    @IBOutlet private weak var digitLabel: UILabel!
     
     //MARK: - Properties
-    var isDigitInLabel: Bool = false
-    var previousNumber: Double = 0
-    var numberOnLabel: Double = 0
-    var operation = 0
+    private var isDigitInLabel: Bool = false
+    private var previousNumber: Double = 0
+    private var numberOnLabel: Double = 0
+    private var operation = 0
     
-    var displayValue: Double {
+    private var displayValue: Double {
         get {
             return Double(digitLabel.text!)!
         }
@@ -26,7 +26,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    var brain = CalculatorBrain()
+    private var brain = CalculatorBrain()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class CalculatorViewController: UIViewController {
         
     }
     
-    @IBAction func numberButtonAction(_ sender: UIButton) {
+    @IBAction private func numberButtonAction(_ sender: UIButton) {
         if isDigitInLabel == true {
             if sender.currentTitle == "0" && digitLabel.text! == "0" {
                 digitLabel.text = "0"
@@ -62,14 +62,14 @@ class CalculatorViewController: UIViewController {
         //        numberOnLabel = Double(digitLabel.text!)!
     }
     
-    @IBAction func deleteButtonAction(_ sender: UIButton) {
+    @IBAction private func deleteButtonAction(_ sender: UIButton) {
         digitLabel.text = "0"
 //        previousNumber = 0
 //        numberOnLabel = 0
 //        operation = 0
     }
     
-    @IBAction func operatorButtonAction(_ sender: UIButton) {
+    @IBAction private func operatorButtonAction(_ sender: UIButton) {
         if isDigitInLabel {
             brain.setOpera(displayValue)
             isDigitInLabel = false
