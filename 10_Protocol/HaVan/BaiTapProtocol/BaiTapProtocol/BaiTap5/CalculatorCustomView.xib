@@ -24,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="135.5" height="42.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="WrP-7v-jvM"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR5-Zd-NHK">
                                     <rect key="frame" x="143.5" y="0.0" width="136" height="42.5"/>
@@ -35,6 +38,9 @@
                                     <rect key="frame" x="287.5" y="0.0" width="135.5" height="42.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <state key="normal" title="Done"/>
+                                    <connections>
+                                        <action selector="doneButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="LBi-HA-HQq"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>

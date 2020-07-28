@@ -12,9 +12,13 @@ protocol CalculatorCustomViewDatasource: class {
     func getData() -> (x: Float, y: Float)?
 }
 
+protocol CalculatorCustomViewDelegate: class {
+    func view(_ view: CalculatorCustomView, needsPerform action: CalculatorCustomView.Action)
+}
+
 final class CalculatorCustomView: UIView {
-    // MARK: - IBOutlets
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var plusButton: UIButton!
     @IBOutlet private weak var powerButton: UIButton!
     @IBOutlet private weak var percentButton: UIButton!
@@ -29,17 +33,30 @@ final class CalculatorCustomView: UIView {
     
     // MARK: - Propeties
     weak var datasource: CalculatorCustomViewDatasource?
-    // MARK: - Initialize
-    
+    weak var delegate: CalculatorCustomViewDelegate?
+    private var firstNum: Float?
+    private var secondNum: Float?
+    private var result: Float = 0
+
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configButton()
         configValue()
+        setInitialValueLabel()
     }
-    // MARK: - Override functions
-    
+
     // MARK: - Private functions
+    private func setInitialValueLabel() {
+        xValueLabel.isHidden = true
+        yValueLabel.isHidden = true
+        resultLabel.isHidden = true
+    }
+    
+    private func showValueLabel() {
+        xValueLabel.isHidden = false
+        yValueLabel.isHidden = false
+    }
     private func setInitialStateButton(button: UIButton) {
         button.layer.cornerRadius = 15
         button.layer.borderColor = UIColor.orange.cgColor
@@ -47,7 +64,6 @@ final class CalculatorCustomView: UIView {
         button.setTitleColor(.black, for: .normal)
         button.layer.borderWidth = 1
         button.clipsToBounds = true
-       
     }
     
     private func configButton() {
@@ -70,6 +86,7 @@ final class CalculatorCustomView: UIView {
     }
     
      func configValue() {
+        showValueLabel()
         guard let x = getXY()?.x, let y = getXY()?.y else {
             xValueLabel.text = ""
             yValueLabel.text = ""
@@ -83,17 +100,37 @@ final class CalculatorCustomView: UIView {
         guard let result = datasource?.getData() else { return nil }
         return (result.x, result.y)
     }
-    // MARK: - Public functions
     
-    // MARK: - Objc functions
-    
+    private func calculate(buttonName: String, firstNumber: Float, secondNumber: Float) -> Float {
+        let toantu = Calculator(firstNumber, secondNumber)
+        return Calculator.ketQua(toantu, op: Calculator.thucHienPhepTinh(phepTinh: buttonName))
+    }
+
     // MARK: - IBActions
     @IBAction private func operatorButtonTouchUpInside(_ sender: UIButton) {
         changeButtonState(button: sender)
+        guard let getXY = datasource?.getData() else { return }
+        guard let phepTinh = sender.currentTitle else { return }
+        result = calculate(buttonName: phepTinh, firstNumber: getXY.x, secondNumber: getXY.y)
+        resultLabel.isHidden = false
+        resultLabel.text = String(format: "%.2f", result)
     }
     
-    @IBAction func clearButtonTouchUpInside(_ sender: UIButton) {
-        
+    @IBAction private func clearButtonTouchUpInside(_ sender: UIButton) {
+        xValueLabel.text = ""
+        yValueLabel.text = ""
+        resultLabel.text = ""
+        delegate?.view(self, needsPerform: .hiddingView)
+        delegate?.view(self, needsPerform: .deleteXY)
+    }
+    
+    @IBAction private func doneButtonTouchUpInside(_ sender: UIButton) {
+        delegate?.view(self, needsPerform: .returnResult(result: result))
+        delegate?.view(self, needsPerform: .hiddingView)
+    }
+    
+    @IBAction private func cancelButtonTouchUpInside(_ sender: UIButton) {
+        delegate?.view(self, needsPerform: .hiddingView)
     }
 }
 
@@ -102,6 +139,9 @@ extension CalculatorCustomView {
     enum TransData {
         case transXAndY(x: Float, y: Float)
     }
+    enum Action {
+        case returnResult(result: Float)
+        case hiddingView
+        case deleteXY
+    }
 }
-
-
