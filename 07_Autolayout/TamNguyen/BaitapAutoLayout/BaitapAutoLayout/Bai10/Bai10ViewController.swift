@@ -10,7 +10,7 @@ import UIKit
 
 final class Bai10ViewController: UIViewController {
     
-    //MARK: - IBOulet
+    // MARK: - IBOulet
     @IBOutlet private weak var grayView: UIView!
     @IBOutlet private weak var greenView: UIView!
     @IBOutlet private weak var blueView: UIView!
@@ -20,14 +20,14 @@ final class Bai10ViewController: UIViewController {
     @IBOutlet private weak var heightGreenLayoutConstraint: NSLayoutConstraint!
     @IBOutlet private weak var heightGrayLayoutConstraint: NSLayoutConstraint!
     
-    //MARK: - Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        configUI()
     }
     
-    //MARK: - Private methods
-    private func setupUI() {
+    // MARK: - Private methods
+    private func configUI() {
         let grayTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGrayView))
         let greenTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGreenView))
         let blueTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapBlueView))

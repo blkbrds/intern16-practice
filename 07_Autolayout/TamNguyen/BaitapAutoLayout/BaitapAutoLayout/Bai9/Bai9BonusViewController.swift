@@ -10,10 +10,10 @@ import UIKit
 
 final class Bai9BonusViewController: UIViewController {
     
-    //MARK: - Properties
+    // MARK: - Properties
     var imageNumber: Int = 0
     
-    //MARK: - IBOulet
+    // MARK: - IBOulet
     @IBOutlet private weak var rightButton: UIButton!
     @IBOutlet private weak var leftButton: UIButton!
     @IBOutlet private weak var playerImageView: UIImageView!
@@ -24,7 +24,7 @@ final class Bai9BonusViewController: UIViewController {
         configUI()
     }
     
-    //MARK: - IBActions
+    // MARK: - IBActions
     @IBAction private func rightButton(_ sender: UIButton) {
         imageNumber += 1
         numberLabel.text = "\(imageNumber)/3"
@@ -37,7 +37,7 @@ final class Bai9BonusViewController: UIViewController {
         imagePlayerGallary()
     }
     
-    //MARRK: - Private methods
+    // MARRK: - Private methods
     private func configUI() {
         imageNumber = 1
         numberLabel.text = "\(imageNumber)/3"
