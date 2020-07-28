@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.backgroundColor = .white
-       let navigationController = UINavigationController(rootViewController: BaiTap2TableViewController())
+       let navigationController = UINavigationController(rootViewController: BaiTap3HomeViewController())
          window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
