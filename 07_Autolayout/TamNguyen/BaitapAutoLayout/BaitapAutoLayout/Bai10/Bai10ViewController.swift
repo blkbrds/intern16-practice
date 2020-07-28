@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Bai10ViewController: UIViewController {
+final class Bai10ViewController: UIViewController {
     
     //MARK: - IBOulet
     @IBOutlet private weak var grayView: UIView!
@@ -37,32 +37,36 @@ class Bai10ViewController: UIViewController {
         blueView.addGestureRecognizer(blueTapGesture)
         redView.addGestureRecognizer(redTapGesture)
     }
+    
     @objc private func handleTapGrayView() {
-        self.heightGreenLayoutConstraint.constant = 200
-        self.heightGrayLayoutConstraint.constant = 100
-        self.heightBlueLayoutConstraint.constant = 200
-        self.heightRedLayoutConstraint.constant = 200
+        heightGreenLayoutConstraint.constant = 200
+        heightGrayLayoutConstraint.constant = 100
+        heightBlueLayoutConstraint.constant = 200
+        heightRedLayoutConstraint.constant = 200
         UIView.animate(withDuration: 1.5, animations: self.setNeedsFocusUpdate)
     }
+    
     @objc private func handleTapGreenView() {
-        self.heightGreenLayoutConstraint.constant = 200
-        self.heightGrayLayoutConstraint.constant = 100
-        self.heightBlueLayoutConstraint.constant = 100
-        self.heightRedLayoutConstraint.constant = 100
+        heightGreenLayoutConstraint.constant = 200
+        heightGrayLayoutConstraint.constant = 100
+        heightBlueLayoutConstraint.constant = 100
+        heightRedLayoutConstraint.constant = 100
         UIView.animate(withDuration: 1.5, animations: self.setNeedsFocusUpdate)
     }
+    
     @objc private func handleTapBlueView() {
-        self.heightGreenLayoutConstraint.constant = 100
-        self.heightGrayLayoutConstraint.constant = 100
-        self.heightBlueLayoutConstraint.constant = 200
-        self.heightRedLayoutConstraint.constant = 100
+        heightGreenLayoutConstraint.constant = 100
+        heightGrayLayoutConstraint.constant = 100
+        heightBlueLayoutConstraint.constant = 200
+        heightRedLayoutConstraint.constant = 100
         UIView.animate(withDuration: 1.5, animations: self.setNeedsFocusUpdate)
     }
+    
     @objc private func handleTapRedView() {
-        self.heightGreenLayoutConstraint.constant = 100
-        self.heightGrayLayoutConstraint.constant = 100
-        self.heightBlueLayoutConstraint.constant = 100
-        self.heightRedLayoutConstraint.constant = 200
+        heightGreenLayoutConstraint.constant = 100
+        heightGrayLayoutConstraint.constant = 100
+        heightBlueLayoutConstraint.constant = 100
+        heightRedLayoutConstraint.constant = 200
         UIView.animate(withDuration: 1.5, animations: self.setNeedsFocusUpdate)
     }
 }

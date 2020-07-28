@@ -8,35 +8,37 @@
 
 import UIKit
 
-class Bai9BonusViewController: UIViewController {
+final class Bai9BonusViewController: UIViewController {
+    
     //MARK: - Properties
-    var imageNumber = 0
+    var imageNumber: Int = 0
+    
     //MARK: - IBOulet
-    @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet private weak var rightButton: UIButton!
+    @IBOutlet private weak var leftButton: UIButton!
     @IBOutlet private weak var playerImageView: UIImageView!
     @IBOutlet private weak var contentTextView: UITextView!
     @IBOutlet private weak var numberLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        configUI()
     }
     
     //MARK: - IBActions
-    @IBAction func rightButton(_ sender: UIButton) {
+    @IBAction private func rightButton(_ sender: UIButton) {
         imageNumber += 1
         numberLabel.text = "\(imageNumber)/3"
-        self.imagePlayerGallary()
+        imagePlayerGallary()
     }
     
-    @IBAction func leftButton(_ sender: UIButton) {
+    @IBAction private func leftButton(_ sender: UIButton) {
         imageNumber -= 1
         numberLabel.text = "\(imageNumber)/3"
-        self.imagePlayerGallary()
+        imagePlayerGallary()
     }
     
     //MARRK: - Private methods
-    private func setupUI() {
+    private func configUI() {
         imageNumber = 1
         numberLabel.text = "\(imageNumber)/3"
         numberLabel.textAlignment = .center
