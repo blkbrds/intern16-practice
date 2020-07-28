@@ -170,6 +170,7 @@
 		31C8451424CD7FB200D4AEF6 /* Bai5 */ = {
 			isa = PBXGroup;
 			children = (
+				31C8452124CDB31A00D4AEF6 /* Models */,
 				31C8451C24CD902B00D4AEF6 /* CustomView */,
 				31C8451D24CD906C00D4AEF6 /* Bai5ViewController.swift */,
 				31C8451E24CD906C00D4AEF6 /* Bai5ViewController.xib */,
@@ -180,7 +181,6 @@
 		31C8451C24CD902B00D4AEF6 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				31C8452124CDB31A00D4AEF6 /* Models */,
 				31C8451A24CD870200D4AEF6 /* RoundButton.swift */,
 				31C8451824CD82EE00D4AEF6 /* Calculator.xib */,
 				31C8451624CD82D200D4AEF6 /* Calculator.swift */,
