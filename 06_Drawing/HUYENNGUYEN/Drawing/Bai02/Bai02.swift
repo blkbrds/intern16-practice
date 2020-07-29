@@ -50,7 +50,6 @@ final class Bai02: UIView {
         let whitePath = UIBezierPath(arcCenter: center, radius: 30, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         UIColor.white.setFill()
         whitePath.fill()
-        
         drawPie()
     }
     

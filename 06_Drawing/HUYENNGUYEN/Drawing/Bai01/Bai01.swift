@@ -54,24 +54,23 @@ final class Bai01: UIView {
             return item.valueCGFloat
         }
         guard let maxValue = valuesCGFloat.max() else { return }
+        
         var x: CGFloat = rightPadding
         let startY: CGFloat = bounds.height - bottomPadding
         var endY: CGFloat = startY
         
         for index in 0..<values.count {
             endY -= 150 * values[index].valueCGFloat / maxValue
-            
-            drawLineVertical(x: x, yStart: startY, yEnd: endY, color: values[index].color)
+            drawLineVertical(x: x, startY: startY, endY: endY, color: values[index].color)
             x += spacePadding
-            
             endY = startY
         }
     }
     
-    private func drawLineVertical(x: CGFloat, yStart: CGFloat, yEnd: CGFloat, color: UIColor) {
+    private func drawLineVertical(x: CGFloat, startY: CGFloat, endY: CGFloat, color: UIColor) {
         path = UIBezierPath()
-        path?.move(to: CGPoint(x: x, y: yStart))
-        path?.addLine(to: CGPoint(x: x, y: yEnd))
+        path?.move(to: CGPoint(x: x, y: startY))
+        path?.addLine(to: CGPoint(x: x, y: endY))
         path?.close()
         
         shapeLayer = CAShapeLayer()
@@ -92,10 +91,7 @@ final class Bai01: UIView {
         shapeLayer?.strokeColor = #colorLiteral(red: 0.5741485357, green: 0.5741624236, blue: 0.574154973, alpha: 0.4205372432)
         shapeLayer?.lineWidth = 2
         shapeLayer?.path = path?.cgPath
-        guard let shapeLayer = shapeLayer else {
-            return
-        }
+        guard let shapeLayer = shapeLayer else { return }
         layer.addSublayer(shapeLayer)
     }
-    
 }
