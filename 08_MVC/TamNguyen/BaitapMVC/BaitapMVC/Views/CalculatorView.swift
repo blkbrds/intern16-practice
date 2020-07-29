@@ -17,51 +17,55 @@ final class CalculatorView: UIView {
     private var operation: Int = 0
     
     // MARK: - IBOulet
-    @IBOutlet private weak var currentValueLabel: UILabel!
+    @IBOutlet private weak var currentValueFloat: UILabel!
     
     // MARK: - IBAction
     @IBAction private func clickNumbersTouchUpInside(_ sender: UIButton) { 
         if performMath {
             numberOnScreen = Float((sender.tag - 1))
-            currentValueLabel.text = String(numberOnScreen)
+            currentValueFloat.text = String(numberOnScreen)
             performMath = false
         } else {
-            currentValueLabel.text = String(sender.tag - 1)
-            guard let textValue = currentValueLabel.text, let valueLabel = Float(textValue) else { return }
+            currentValueFloat.text = String(sender.tag - 1)
+            guard let textValue = currentValueFloat.text, let valueLabel = Float(textValue) else { return }
             previousNumber = valueLabel
         }
     }
     
-    @IBAction func clickCalculatorTouchUpInside(_ sender: UIButton) {
-        if currentValueLabel.text != "" && sender.tag != 11 && sender.tag != 16 {
+    @IBAction private func clickCalculatorTouchUpInside(_ sender: UIButton) {
+        guard let valueText = currentValueFloat.text else { return }
+        if !valueText.isEmpty && sender.tag != 11 && sender.tag != 16 {
             //devide
-            if sender.tag == 12 {
-                currentValueLabel.text = "/"
-            } else if sender.tag == 13 {
-                currentValueLabel.text = "*"
-            } else if sender.tag == 14 {
-                currentValueLabel.text = "-"
-            } else if sender.tag == 15 {
-                currentValueLabel.text = "+"
+            switch sender.tag {
+            case 12:
+                currentValueFloat.text = "/"
+            case 13:
+                currentValueFloat.text = "*"
+            case 14:
+                currentValueFloat.text = "-"
+            case 15:
+                currentValueFloat.text = "+"
+            default:
+                currentValueFloat.text = "0"
             }
             performMath = true
             operation = sender.tag
-        }
-        else if sender.tag == 16 {
+        } else if sender.tag == 16 {
             let calculator = Calculator()
-            if operation == 12 {
-                currentValueLabel.text = String(calculator.divTwoNumber(a: previousNumber, b: numberOnScreen))
-            } else if operation == 13 {
-                currentValueLabel.text = String(calculator.mulTwoNumber(a: previousNumber, b: numberOnScreen))
-            } else if operation == 14 {
-                currentValueLabel.text = String(calculator.subTwoNumber(a: previousNumber, b: numberOnScreen))
-            } else if operation == 15 {
-                currentValueLabel.text = String(calculator.addTwoNumber(a: numberOnScreen, b: previousNumber))
+            switch operation {
+            case 12:
+                currentValueFloat.text = String(calculator.divTwoNumber(a: previousNumber, b: numberOnScreen))
+            case 13:
+                currentValueFloat.text = String(calculator.mulTwoNumber(a: previousNumber, b: numberOnScreen))
+            case 14:
+                currentValueFloat.text = String(calculator.subTwoNumber(a: previousNumber, b: numberOnScreen))
+            default:
+                currentValueFloat.text = String(calculator.addTwoNumber(a: numberOnScreen, b: previousNumber))
+                guard let textValue = currentValueFloat.text, let valueLabel = Float(textValue) else { return }
+                previousNumber = valueLabel
             }
-            guard let textValue = currentValueLabel.text, let valueLabel = Float(textValue) else { return }
-            previousNumber = valueLabel
         } else if sender.tag == 11 {
-            currentValueLabel.text = ""
+            currentValueFloat.text = ""
             previousNumber = 0
             numberOnScreen = 0
             operation = 0

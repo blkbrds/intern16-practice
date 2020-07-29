@@ -18,8 +18,8 @@ final class BaitapMVCViewController: UIViewController {
     
     //MARK: - Private methods
     private func configCaculator() {
-        guard let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?[0] as? CalculatorView else { return }
-        calculator.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        view.addSubview(calculator)
+        guard let calculatorCustomView = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?[0] as? CalculatorView else { return }
+        calculatorCustomView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        view.addSubview(calculatorCustomView)
     }
 }   
