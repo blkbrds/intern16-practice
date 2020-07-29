@@ -18,9 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-                window.rootViewController = Bai01ViewController()
+//                window.rootViewController = Bai01ViewController()
         
-//                window.rootViewController = Bai02ViewController()
+                window.rootViewController = Bai02ViewController()
 
         self.window = window
         window.makeKeyAndVisible() }
