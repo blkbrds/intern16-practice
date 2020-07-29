@@ -4,9 +4,9 @@ import UIKit
 
 final class Bai03ViewController: UIViewController {
 
-    let button1 = BagdeNumber()
-    let button2 = BagdeNumber()
-    let button3 = BagdeNumber()
+    let button1 = BadgeNumber()
+    let button2 = BadgeNumber()
+    let button3 = BadgeNumber()
 
     // MARK: - LifeCycle
     override func viewDidLoad() {

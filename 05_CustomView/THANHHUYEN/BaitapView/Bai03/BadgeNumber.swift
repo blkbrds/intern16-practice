@@ -5,7 +5,7 @@ import UIKit
 final class BadgeNumber: UIButton {
 
     // MARK: - Enum
-    enum position {
+    enum Position {
         case topLeft
         case topRight
         case topCenter
@@ -38,7 +38,7 @@ final class BadgeNumber: UIButton {
     }
 
     // MARK: - Properties
-    var numberBagdePosition: position = .topLeft {
+    var numberBagdePosition: Position = .topLeft {
         didSet {
             numberBadgeLabel.center = numberBagdePosition.addNumberBadgeLabelAtPositon(inRect: bounds)
         }
@@ -46,14 +46,14 @@ final class BadgeNumber: UIButton {
 
     var text: String = "" {
         didSet {
-            let width = text.width(constraintedHeight: heightBagde, font: numberBadgeLabel.font)
-            numberBadgeLabel.frame.size = CGSize(width: width + 10, height: heightBagde)
+            let width = text.width(constraintedHeight: badgeHeight, font: numberBadgeLabel.font)
+            numberBadgeLabel.frame.size = CGSize(width: width + 10, height: badgeHeight)
             numberBadgeLabel.center = numberBagdePosition.addNumberBadgeLabelAtPositon(inRect: bounds)
             numberBadgeLabel.text = text
         }
     }
 
-    let heightBagde: CGFloat = 20
+    let badgeHeight: CGFloat = 20
 
     let numberBadgeLabel: UILabel = {
         let label = UILabel()
@@ -68,8 +68,8 @@ final class BadgeNumber: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let width = text.width(constraintedHeight: heightBagde, font: numberBadgeLabel.font)
-        numberBadgeLabel.frame.size = CGSize(width: width + 30, height: heightBagde)
+        let width = text.width(constraintedHeight: badgeHeight, font: numberBadgeLabel.font)
+        numberBadgeLabel.frame.size = CGSize(width: width + 30, height: badgeHeight)
         numberBadgeLabel.center = numberBagdePosition.addNumberBadgeLabelAtPositon(inRect: frame)
         numberBadgeLabel.text = text
         numberBadgeLabel.layer.cornerRadius = numberBadgeLabel.frame.height / 2

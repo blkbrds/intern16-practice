@@ -25,24 +25,23 @@ class SliderView: UIView {
     // MARK: - LifeCycle func
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
+        configUI()
     }
     
     // MARK: - private function
-    private func setUI() {
+    private func configUI() {
         thumbButton.layer.shadowOpacity = 3
         thumbButton.layer.opacity = 10
     }
     
     func updateUI() {
-        //        thumbButton. = "\(Int(value))"
         thumbButton.setTitle("\(Int(value))", for: .normal)
     }
     
     // MARK: - touchesBegan
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-
+        
         let touch = touches.first
         guard let location = touch?.location(in: self) else { return }
         
