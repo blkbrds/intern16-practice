@@ -1,8 +1,8 @@
-//  BagdeNumber.swift
+//  BadgeNumber.swift
 
 import UIKit
 
-final class BadgeNumber: UIButton {
+final class BadgeNumberButton: UIButton {
 
     // MARK: - Enum
     enum Position {
@@ -38,9 +38,9 @@ final class BadgeNumber: UIButton {
     }
 
     // MARK: - Properties
-    var numberBagdePosition: Position = .topLeft {
+    var numberBadgePosition: Position = .topLeft {
         didSet {
-            numberBadgeLabel.center = numberBagdePosition.addNumberBadgeLabelAtPositon(inRect: bounds)
+            numberBadgeLabel.center = numberBadgePosition.addNumberBadgeLabelAtPositon(inRect: bounds)
         }
     }
 
@@ -48,7 +48,7 @@ final class BadgeNumber: UIButton {
         didSet {
             let width = text.width(constraintedHeight: badgeHeight, font: numberBadgeLabel.font)
             numberBadgeLabel.frame.size = CGSize(width: width + 10, height: badgeHeight)
-            numberBadgeLabel.center = numberBagdePosition.addNumberBadgeLabelAtPositon(inRect: bounds)
+            numberBadgeLabel.center = numberBadgePosition.addNumberBadgeLabelAtPositon(inRect: bounds)
             numberBadgeLabel.text = text
         }
     }
@@ -70,7 +70,7 @@ final class BadgeNumber: UIButton {
         super.init(frame: frame)
         let width = text.width(constraintedHeight: badgeHeight, font: numberBadgeLabel.font)
         numberBadgeLabel.frame.size = CGSize(width: width + 30, height: badgeHeight)
-        numberBadgeLabel.center = numberBagdePosition.addNumberBadgeLabelAtPositon(inRect: frame)
+        numberBadgeLabel.center = numberBadgePosition.addNumberBadgeLabelAtPositon(inRect: frame)
         numberBadgeLabel.text = text
         numberBadgeLabel.layer.cornerRadius = numberBadgeLabel.frame.height / 2
         addSubview(numberBadgeLabel)
@@ -80,6 +80,7 @@ final class BadgeNumber: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 // MARK: - Extension
 extension String {
     func width(constraintedHeight height: CGFloat, font: UIFont) -> CGFloat {

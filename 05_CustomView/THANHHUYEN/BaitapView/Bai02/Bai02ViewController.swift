@@ -5,9 +5,10 @@ import UIKit
 
 final class Bai02ViewController: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - IBOutlet
     @IBOutlet private weak var volunmTextField: UITextField!
     
+    // MARK: - Properties
     private var value: Int = 0 {
         didSet {
             volunmTextField.text = String(value)
@@ -47,9 +48,7 @@ final class Bai02ViewController: UIViewController {
         self.value = value
         sliderView.isChange = false
         sliderView.value = CGFloat(value)
-        
     }
-    
 }
 
 // MARK: - Extension SliderViewDelegate

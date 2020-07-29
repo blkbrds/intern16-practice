@@ -50,7 +50,7 @@ final class Bai01ViewController: UIViewController {
 extension Bai01ViewController: UserViewDelegate {
     func userView(view: UserView, needsPerform action: UserView.Action) {
         switch action {
-        case .didTapImage(nameLabel: let userName):
+        case .didTapImage(let userName):
             print(userName)
         }
     }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		832602B924B28DD70004F3C2 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832602B824B28DD70004F3C2 /* UserView.swift */; };
 		832602BB24B29E4A0004F3C2 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832602BA24B29E4A0004F3C2 /* SliderView.swift */; };
-		832602BD24B2A0CA0004F3C2 /* BadgeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832602BC24B2A0CA0004F3C2 /* BadgeNumber.swift */; };
+		832602BD24B2A0CA0004F3C2 /* BadgeNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832602BC24B2A0CA0004F3C2 /* BadgeNumberButton.swift */; };
 		83262D6524B46E11005740CE /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83262D6424B46E11005740CE /* DatePicker.swift */; };
 		8327444924B21CC000FCB285 /* Bai03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327444724B21CC000FCB285 /* Bai03ViewController.swift */; };
 		8327444A24B21CC000FCB285 /* Bai03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8327444824B21CC000FCB285 /* Bai03ViewController.xib */; };
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		832602B824B28DD70004F3C2 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		832602BA24B29E4A0004F3C2 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
-		832602BC24B2A0CA0004F3C2 /* BadgeNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumber.swift; sourceTree = "<group>"; };
+		832602BC24B2A0CA0004F3C2 /* BadgeNumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberButton.swift; sourceTree = "<group>"; };
 		83262D6424B46E11005740CE /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		8327444724B21CC000FCB285 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03ViewController.swift; sourceTree = "<group>"; };
 		8327444824B21CC000FCB285 /* Bai03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai03ViewController.xib; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			children = (
 				8327444724B21CC000FCB285 /* Bai03ViewController.swift */,
 				8327444824B21CC000FCB285 /* Bai03ViewController.xib */,
-				832602BC24B2A0CA0004F3C2 /* BadgeNumber.swift */,
+				832602BC24B2A0CA0004F3C2 /* BadgeNumberButton.swift */,
 			);
 			path = Bai03;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 				832B729924B06B390049FEFF /* ViewController.swift in Sources */,
 				832602B924B28DD70004F3C2 /* UserView.swift in Sources */,
 				832B729524B06B390049FEFF /* AppDelegate.swift in Sources */,
-				832602BD24B2A0CA0004F3C2 /* BadgeNumber.swift in Sources */,
+				832602BD24B2A0CA0004F3C2 /* BadgeNumberButton.swift in Sources */,
 				83262D6524B46E11005740CE /* DatePicker.swift in Sources */,
 				832B729724B06B390049FEFF /* SceneDelegate.swift in Sources */,
 				832B72B524B079720049FEFF /* Bai01ViewController.swift in Sources */,

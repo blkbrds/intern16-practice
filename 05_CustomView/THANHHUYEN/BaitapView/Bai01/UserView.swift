@@ -6,7 +6,7 @@ protocol UserViewDelegate: class {
     func userView(view: UserView, needsPerform action: UserView.Action)
 }
 
-class UserView: UIView {
+final class UserView: UIView {
     
     // MARK: - Properties
     private var userAvatarImageView: UIImageView = UIImageView()

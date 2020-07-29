@@ -7,13 +7,14 @@ protocol SliderViewDelegate: class {
     func sliderView(value: CGFloat)
 }
 
-class SliderView: UIView {
+final class SliderView: UIView {
     
     // MARK: - IBOulet private
     @IBOutlet private weak var thumbButton: UIButton!
     @IBOutlet private weak var blueImageView: UIImageView!
-    @IBOutlet weak var whiteImageView: UIImageView!
+    @IBOutlet private weak var whiteImageView: UIImageView!
     
+    // MARK: - Properties
     weak var delegate: SliderViewDelegate?
     var isChange = true
     var value: CGFloat = 0 {

@@ -19,7 +19,7 @@ final class DatePicker: UIView {
     @IBOutlet private weak var doneButton: UIButton!
     
     //MARK: - Properties
-    weak private var delegate: DatePickerDelegate?
+    weak var delegate: DatePickerDelegate?
     private var dateValue: String?
     
     //MARK: - Life Cycle
@@ -36,7 +36,7 @@ final class DatePicker: UIView {
         addSubview(pickerView)
     }
     
-    private func hidePicker() {
+    func hidePicker() {
         UIView.animate(withDuration: 0.5, animations: {
             self.pickerView.alpha = 0
         }) { (done) in
@@ -46,7 +46,7 @@ final class DatePicker: UIView {
         }
     }
     
-    private func showPicker() {
+    func showPicker() {
         UIView.animate(withDuration: 0.5, animations: {
             self.pickerView.alpha = 1
         }) { (done) in
