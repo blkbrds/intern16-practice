@@ -2,7 +2,7 @@
 //  MVC
 import UIKit
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
     
     //MARK: - IBOutlet
     @IBOutlet private weak var digitLabel: UILabel!
@@ -20,7 +20,7 @@ class CalculatorViewController: UIViewController {
         set {
             if Double(Int(newValue)) == newValue {
                 digitLabel.text = String(Int(newValue))
-            }else {
+            } else {
                 digitLabel.text = String(newValue)
             }
         }
@@ -31,15 +31,14 @@ class CalculatorViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
+    //MARK: - IBAction
     @IBAction private func numberButtonAction(_ sender: UIButton) {
         if isDigitInLabel == true {
             if sender.currentTitle == "0" && digitLabel.text! == "0" {
                 digitLabel.text = "0"
-            }
-            else {
+            } else {
                 digitLabel.text = digitLabel.text! + sender.currentTitle!
             }
         } else {
@@ -57,9 +56,7 @@ class CalculatorViewController: UIViewController {
             brain.setOpera(displayValue)
             isDigitInLabel = false
         }
-        
         brain.performOperation(sender.currentTitle!)
-        
         if let result = brain.result {
             displayValue = result
         }

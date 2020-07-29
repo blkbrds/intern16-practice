@@ -3,16 +3,16 @@
 import Foundation
 
 struct CalculatorBrain {
-    var result : Double? {
+    var result: Double? {
         didSet {
             if result != nil {
                 opera = result
             }
         }
     }
-    var opera: Double?
+    private var opera: Double?
     private var pendingOperation: PendingBinaryOperation?
-
+    
     //set phep tinh
     mutating func setOpera(_ opera: Double) {
         self.opera = opera
@@ -42,22 +42,22 @@ struct CalculatorBrain {
         let firstOperand: Double
         let operation: (Double, Double) -> Double
         func perform(with secondOperand: Double) -> Double {
-            return operation(firstOperand,secondOperand)
+            return operation(firstOperand, secondOperand)
         }
     }
     
     // enum xac dinh cac phep tinh
     enum Operation {
-        case binary((Double,Double) -> Double)
+        case binary((Double, Double) -> Double)
         case equal
     }
     
     //gan co dinh cac phep tinh
     var operations: [String: Operation] = [
-        "+" :   .binary( + ),
-        "−" :   .binary( - ),
-        "×" :   .binary( * ),
-        "/" :   .binary( / ),
-        "=" :   .equal,
+        "+": .binary(+),
+        "−": .binary(-),
+        "×": .binary(*),
+        "/": .binary(/),
+        "=": .equal,
     ]
 }
