@@ -17,4 +17,19 @@ struct Sections {
                else { return }
            sections = sectionData
        }
+    
+    
 }
+
+struct MyClass {
+    var avatar: String
+    var name: String
+    var description: String
+    
+    init(avatar: String, name: String, description: String) {
+        self.avatar = avatar
+        self.name = name
+        self.description = description
+    }
+}
+
