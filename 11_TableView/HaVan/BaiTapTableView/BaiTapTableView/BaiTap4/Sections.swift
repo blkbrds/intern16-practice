@@ -7,29 +7,17 @@
 //
 
 import Foundation
+
 struct Sections {
     static var sections: [[String]] = [[String]]()
     
-     static func loadData(){
-           guard let path = Bundle.main.url(forResource: "Sections", withExtension: ".plist")
-               else { return }
-           guard let sectionData = NSArray(contentsOf: path) as? [[String]]
-               else { return }
-           sections = sectionData
-       }
-    
-    
-}
-
-struct MyClass {
-    var avatar: String
-    var name: String
-    var description: String
-    
-    init(avatar: String, name: String, description: String) {
-        self.avatar = avatar
-        self.name = name
-        self.description = description
+    static func loadData(){
+        guard let path = Bundle.main.url(forResource: "Sections", withExtension: ".plist")
+            else { return }
+        guard let sectionData = NSArray(contentsOf: path) as? [[String]]
+            else { return }
+        sections = sectionData
     }
+    
+    
 }
-

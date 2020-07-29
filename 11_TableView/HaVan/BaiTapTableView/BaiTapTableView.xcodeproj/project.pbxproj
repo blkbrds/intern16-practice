@@ -35,6 +35,15 @@
 		52BD163824D10D84002B36D9 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD163624D10D84002B36D9 /* CustomTableViewCell.xib */; };
 		52BD163B24D10DB4002B36D9 /* BaiTap9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD163924D10DB4002B36D9 /* BaiTap9ViewController.swift */; };
 		52BD163C24D10DB4002B36D9 /* BaiTap9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD163A24D10DB4002B36D9 /* BaiTap9ViewController.xib */; };
+		52BD164024D13711002B36D9 /* BaiTap10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD163E24D13711002B36D9 /* BaiTap10ViewController.swift */; };
+		52BD164124D13711002B36D9 /* BaiTap10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD163F24D13711002B36D9 /* BaiTap10ViewController.xib */; };
+		52BD164424D158FF002B36D9 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD164324D158FF002B36D9 /* MyClass.swift */; };
+		52BD164824D15977002B36D9 /* BaiTap11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD164624D15977002B36D9 /* BaiTap11ViewController.swift */; };
+		52BD164924D15977002B36D9 /* BaiTap11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD164724D15977002B36D9 /* BaiTap11ViewController.xib */; };
+		52BD164B24D15993002B36D9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD164A24D15993002B36D9 /* Message.swift */; };
+		52BD164D24D15A83002B36D9 /* Messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD164C24D15A83002B36D9 /* Messages.plist */; };
+		52BD165024D15EA4002B36D9 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD164E24D15EA4002B36D9 /* MessageTableViewCell.swift */; };
+		52BD165124D15EA4002B36D9 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD164F24D15EA4002B36D9 /* MessageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +77,15 @@
 		52BD163624D10D84002B36D9 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		52BD163924D10DB4002B36D9 /* BaiTap9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap9ViewController.swift; sourceTree = "<group>"; };
 		52BD163A24D10DB4002B36D9 /* BaiTap9ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap9ViewController.xib; sourceTree = "<group>"; };
+		52BD163E24D13711002B36D9 /* BaiTap10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap10ViewController.swift; sourceTree = "<group>"; };
+		52BD163F24D13711002B36D9 /* BaiTap10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap10ViewController.xib; sourceTree = "<group>"; };
+		52BD164324D158FF002B36D9 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		52BD164624D15977002B36D9 /* BaiTap11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap11ViewController.swift; sourceTree = "<group>"; };
+		52BD164724D15977002B36D9 /* BaiTap11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap11ViewController.xib; sourceTree = "<group>"; };
+		52BD164A24D15993002B36D9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		52BD164C24D15A83002B36D9 /* Messages.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Messages.plist; sourceTree = "<group>"; };
+		52BD164E24D15EA4002B36D9 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		52BD164F24D15EA4002B36D9 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +118,8 @@
 		5272607F24CFDC0900F28539 /* BaiTapTableView */ = {
 			isa = PBXGroup;
 			children = (
+				52BD164524D1595D002B36D9 /* BaiTap11 */,
+				52BD163D24D136F7002B36D9 /* BaiTap10 */,
 				52BD163424D10D03002B36D9 /* BaiTap9 */,
 				52BD162B24D02A77002B36D9 /* BaiTap8 */,
 				52BD162624D023F3002B36D9 /* BaiTap7 */,
@@ -193,8 +213,31 @@
 				52BD163624D10D84002B36D9 /* CustomTableViewCell.xib */,
 				52BD163924D10DB4002B36D9 /* BaiTap9ViewController.swift */,
 				52BD163A24D10DB4002B36D9 /* BaiTap9ViewController.xib */,
+				52BD164324D158FF002B36D9 /* MyClass.swift */,
 			);
 			path = BaiTap9;
+			sourceTree = "<group>";
+		};
+		52BD163D24D136F7002B36D9 /* BaiTap10 */ = {
+			isa = PBXGroup;
+			children = (
+				52BD163E24D13711002B36D9 /* BaiTap10ViewController.swift */,
+				52BD163F24D13711002B36D9 /* BaiTap10ViewController.xib */,
+			);
+			path = BaiTap10;
+			sourceTree = "<group>";
+		};
+		52BD164524D1595D002B36D9 /* BaiTap11 */ = {
+			isa = PBXGroup;
+			children = (
+				52BD164624D15977002B36D9 /* BaiTap11ViewController.swift */,
+				52BD164724D15977002B36D9 /* BaiTap11ViewController.xib */,
+				52BD164A24D15993002B36D9 /* Message.swift */,
+				52BD164C24D15A83002B36D9 /* Messages.plist */,
+				52BD164E24D15EA4002B36D9 /* MessageTableViewCell.swift */,
+				52BD164F24D15EA4002B36D9 /* MessageTableViewCell.xib */,
+			);
+			path = BaiTap11;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +310,10 @@
 				52BD162124D01451002B36D9 /* BaiTap5HomeViewController.xib in Resources */,
 				5272608A24CFDC0D00F28539 /* Assets.xcassets in Resources */,
 				527260B124D0052C00F28539 /* BaiTap4ViewController.xib in Resources */,
+				52BD164D24D15A83002B36D9 /* Messages.plist in Resources */,
+				52BD165124D15EA4002B36D9 /* MessageTableViewCell.xib in Resources */,
+				52BD164124D13711002B36D9 /* BaiTap10ViewController.xib in Resources */,
+				52BD164924D15977002B36D9 /* BaiTap11ViewController.xib in Resources */,
 				5272609F24CFDFF000F28539 /* Contacts.plist in Resources */,
 				52BD163C24D10DB4002B36D9 /* BaiTap9ViewController.xib in Resources */,
 			);
@@ -282,7 +329,11 @@
 				527260A624CFFCFA00F28539 /* BaiTap3HomeViewController.swift in Sources */,
 				52BD162924D02410002B36D9 /* BaiTap7HomeViewController.swift in Sources */,
 				5272608124CFDC0900F28539 /* AppDelegate.swift in Sources */,
+				52BD164B24D15993002B36D9 /* Message.swift in Sources */,
+				52BD165024D15EA4002B36D9 /* MessageTableViewCell.swift in Sources */,
+				52BD164824D15977002B36D9 /* BaiTap11ViewController.swift in Sources */,
 				527260B024D0052C00F28539 /* BaiTap4ViewController.swift in Sources */,
+				52BD164424D158FF002B36D9 /* MyClass.swift in Sources */,
 				5272609724CFDCCD00F28539 /* BaiTap1TableViewConroller.swift in Sources */,
 				5272609C24CFDF9E00F28539 /* BaiTap2TableViewController.swift in Sources */,
 				5272608324CFDC0900F28539 /* SceneDelegate.swift in Sources */,
@@ -291,6 +342,7 @@
 				527260B524D008CF00F28539 /* Sections.swift in Sources */,
 				52BD163724D10D84002B36D9 /* CustomTableViewCell.swift in Sources */,
 				52BD162E24D02A94002B36D9 /* BaiTap8ViewController.swift in Sources */,
+				52BD164024D13711002B36D9 /* BaiTap10ViewController.swift in Sources */,
 				527260AA24D0019900F28539 /* DetailViewController.swift in Sources */,
 				52BD163B24D10DB4002B36D9 /* BaiTap9ViewController.swift in Sources */,
 			);
