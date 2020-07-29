@@ -12,10 +12,10 @@
 		83273A6F24B6F97F000629CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A6E24B6F97F000629CE /* ViewController.swift */; };
 		83273A7424B6F980000629CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83273A7324B6F980000629CE /* Assets.xcassets */; };
 		83273A7724B6F980000629CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83273A7524B6F980000629CE /* LaunchScreen.storyboard */; };
-		83273A8024B6FBAC000629CE /* Bai01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A7F24B6FBAC000629CE /* Bai01.swift */; };
+		83273A8024B6FBAC000629CE /* Bai01View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A7F24B6FBAC000629CE /* Bai01View.swift */; };
 		83273A8224B6FF89000629CE /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A8124B6FF89000629CE /* Bai01ViewController.swift */; };
 		83273A8624B71487000629CE /* Bai02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A8524B71487000629CE /* Bai02ViewController.swift */; };
-		83273A8824B714E9000629CE /* Bai02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A8724B714E9000629CE /* Bai02.swift */; };
+		83273A8824B714E9000629CE /* Bai02View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83273A8724B714E9000629CE /* Bai02View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		83273A7324B6F980000629CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83273A7624B6F980000629CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83273A7824B6F980000629CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83273A7F24B6FBAC000629CE /* Bai01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01.swift; sourceTree = "<group>"; };
+		83273A7F24B6FBAC000629CE /* Bai01View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01View.swift; sourceTree = "<group>"; };
 		83273A8124B6FF89000629CE /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
 		83273A8524B71487000629CE /* Bai02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02ViewController.swift; sourceTree = "<group>"; };
-		83273A8724B714E9000629CE /* Bai02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02.swift; sourceTree = "<group>"; };
+		83273A8724B714E9000629CE /* Bai02View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 		83273A7E24B6FB83000629CE /* Bai01 */ = {
 			isa = PBXGroup;
 			children = (
-				83273A7F24B6FBAC000629CE /* Bai01.swift */,
+				83273A7F24B6FBAC000629CE /* Bai01View.swift */,
 				83273A8124B6FF89000629CE /* Bai01ViewController.swift */,
 			);
 			path = Bai01;
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				83273A8524B71487000629CE /* Bai02ViewController.swift */,
-				83273A8724B714E9000629CE /* Bai02.swift */,
+				83273A8724B714E9000629CE /* Bai02View.swift */,
 			);
 			path = Bai02;
 			sourceTree = "<group>";
@@ -165,9 +165,9 @@
 				83273A6F24B6F97F000629CE /* ViewController.swift in Sources */,
 				83273A6B24B6F97F000629CE /* AppDelegate.swift in Sources */,
 				83273A6D24B6F97F000629CE /* SceneDelegate.swift in Sources */,
-				83273A8824B714E9000629CE /* Bai02.swift in Sources */,
+				83273A8824B714E9000629CE /* Bai02View.swift in Sources */,
 				83273A8224B6FF89000629CE /* Bai01ViewController.swift in Sources */,
-				83273A8024B6FBAC000629CE /* Bai01.swift in Sources */,
+				83273A8024B6FBAC000629CE /* Bai01View.swift in Sources */,
 				83273A8624B71487000629CE /* Bai02ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

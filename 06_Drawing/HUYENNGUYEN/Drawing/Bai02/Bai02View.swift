@@ -9,7 +9,7 @@ struct Pie {
     let radius: CGFloat
 }
 
-final class Bai02: UIView {
+final class Bai02View: UIView {
     
     //MARK: - Properties
     private var pies: [Pie] = [Pie(value: 60, color: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), radius: 100),
@@ -21,18 +21,8 @@ final class Bai02: UIView {
         }
     }
     
-    private var maskColor: UIColor = .black {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-    
     private var sum: CGFloat {
         return pies.reduce(0) { $0 + $1.value }
-    }
-    
-    private var boundCenter: CGPoint {
-        return CGPoint(x: frame.width / 2, y: frame.height / 2)
     }
     
     //MARK: - Init
@@ -46,18 +36,18 @@ final class Bai02: UIView {
     
     //MARK: - Function
     override func draw(_ rect: CGRect) {
-        let center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
-        let whitePath = UIBezierPath(arcCenter: center, radius: 30, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
+        let centerPoint = CGPoint(x: frame.width / 2, y: frame.height / 2)
+        let whitePath = UIBezierPath(arcCenter: centerPoint, radius: 30, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         UIColor.white.setFill()
         whitePath.fill()
         drawPie()
     }
     
     private func pieOfChart(radius: CGFloat, color: UIColor, startAngle: CGFloat, endAngle: CGFloat) {
-        let center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        let centerPoint = CGPoint(x: frame.width / 2, y: frame.height / 2)
         let path = UIBezierPath()
-        path.move(to: center)
-        path.addArc(withCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        path.move(to: centerPoint)
+        path.addArc(withCenter: centerPoint, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         color.setFill()
         path.close()
         path.fill()

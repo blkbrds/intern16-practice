@@ -14,7 +14,7 @@ final class Bai02ViewController: UIViewController {
     //MARK: - Function
     private func configUI() {
         view.backgroundColor = .white
-        let pie = Bai02()
+        let pie = Bai02View()
         pie.frame = CGRect(x: 50, y: 50, width: 200, height: 200)
         pie.center = view.center
         pie.backgroundColor = .white

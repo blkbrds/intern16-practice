@@ -19,7 +19,7 @@ final class Bai01View: UIView {
     private var path: UIBezierPath?
     private var shapeLayer: CAShapeLayer?
     private let bottomPadding: CGFloat = 50
-    private let leftPađding: CGFloat = 30
+    private let leftPadding: CGFloat = 30
     private let rightPadding: CGFloat = 50
     private let lineWidth: CGFloat = 20
     private var spacePadding: CGFloat = 0
@@ -83,8 +83,8 @@ final class Bai01View: UIView {
     
     private func drawLineHorizontal() {
         path = UIBezierPath()
-        path?.move(to: CGPoint(x: leftPađding, y: self.bounds.height - bottomPadding))
-        path?.addLine(to: CGPoint(x: self.bounds.maxX - leftPađding, y: self.bounds.height - bottomPadding))
+        path?.move(to: CGPoint(x: leftPadding, y: self.bounds.height - bottomPadding))
+        path?.addLine(to: CGPoint(x: self.bounds.maxX - leftPadding, y: self.bounds.height - bottomPadding))
         path?.close()
         
         shapeLayer = CAShapeLayer()
