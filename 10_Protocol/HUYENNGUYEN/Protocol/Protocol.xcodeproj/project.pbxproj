@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8328D1B924CFC99E0099DC25 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D1B724CFC99E0099DC25 /* LocationViewController.swift */; };
+		8328D1BA24CFC99E0099DC25 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328D1B824CFC99E0099DC25 /* LocationViewController.xib */; };
+		8328D1BD24CFC9B30099DC25 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D1BB24CFC9B30099DC25 /* CountryViewController.swift */; };
+		8328D1BE24CFC9B30099DC25 /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328D1BC24CFC9B30099DC25 /* CountryViewController.xib */; };
+		8328D1C124CFC9C50099DC25 /* ProvinceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D1BF24CFC9C50099DC25 /* ProvinceViewController.swift */; };
+		8328D1C224CFC9C50099DC25 /* ProvinceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328D1C024CFC9C50099DC25 /* ProvinceViewController.xib */; };
+		8328D1C524CFC9EB0099DC25 /* DistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D1C324CFC9EB0099DC25 /* DistrictViewController.swift */; };
+		8328D1C624CFC9EB0099DC25 /* DistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328D1C424CFC9EB0099DC25 /* DistrictViewController.xib */; };
+		83298C6224D012A100BF0A4A /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83298C6124D012A100BF0A4A /* DataManagement.swift */; };
 		836722C424CA73E400AD6CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836722C324CA73E400AD6CD8 /* AppDelegate.swift */; };
 		836722C624CA73E400AD6CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836722C524CA73E400AD6CD8 /* SceneDelegate.swift */; };
 		836722C824CA73E400AD6CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836722C724CA73E400AD6CD8 /* ViewController.swift */; };
-		836722CB24CA73E400AD6CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836722C924CA73E400AD6CD8 /* Main.storyboard */; };
 		836722CD24CA73E500AD6CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836722CC24CA73E500AD6CD8 /* Assets.xcassets */; };
-		836722D024CA73E500AD6CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836722CE24CA73E500AD6CD8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8328D1B724CFC99E0099DC25 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		8328D1B824CFC99E0099DC25 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
+		8328D1BB24CFC9B30099DC25 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		8328D1BC24CFC9B30099DC25 /* CountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryViewController.xib; sourceTree = "<group>"; };
+		8328D1BF24CFC9C50099DC25 /* ProvinceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceViewController.swift; sourceTree = "<group>"; };
+		8328D1C024CFC9C50099DC25 /* ProvinceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProvinceViewController.xib; sourceTree = "<group>"; };
+		8328D1C324CFC9EB0099DC25 /* DistrictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictViewController.swift; sourceTree = "<group>"; };
+		8328D1C424CFC9EB0099DC25 /* DistrictViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistrictViewController.xib; sourceTree = "<group>"; };
+		83298C6124D012A100BF0A4A /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
 		836722C024CA73E400AD6CD8 /* Protocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836722C324CA73E400AD6CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836722C524CA73E400AD6CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		836722C724CA73E400AD6CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		836722CA24CA73E400AD6CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		836722CC24CA73E500AD6CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		836722CF24CA73E500AD6CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836722D124CA73E500AD6CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +51,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8328D1B624CFC9800099DC25 /* Bai02 */ = {
+			isa = PBXGroup;
+			children = (
+				832F3D7F24D156BC004D4789 /* District */,
+				832F3D7E24D156AE004D4789 /* Province */,
+				832F3D7D24D1569E004D4789 /* Country */,
+				832F3D7C24D15688004D4789 /* Location */,
+				83298C6124D012A100BF0A4A /* DataManagement.swift */,
+			);
+			path = Bai02;
+			sourceTree = "<group>";
+		};
+		83298C6024D004EB00BF0A4A /* Bai04 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bai04;
+			sourceTree = "<group>";
+		};
+		832F3D7C24D15688004D4789 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				8328D1B724CFC99E0099DC25 /* LocationViewController.swift */,
+				8328D1B824CFC99E0099DC25 /* LocationViewController.xib */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		832F3D7D24D1569E004D4789 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				8328D1BB24CFC9B30099DC25 /* CountryViewController.swift */,
+				8328D1BC24CFC9B30099DC25 /* CountryViewController.xib */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		832F3D7E24D156AE004D4789 /* Province */ = {
+			isa = PBXGroup;
+			children = (
+				8328D1BF24CFC9C50099DC25 /* ProvinceViewController.swift */,
+				8328D1C024CFC9C50099DC25 /* ProvinceViewController.xib */,
+			);
+			path = Province;
+			sourceTree = "<group>";
+		};
+		832F3D7F24D156BC004D4789 /* District */ = {
+			isa = PBXGroup;
+			children = (
+				8328D1C324CFC9EB0099DC25 /* DistrictViewController.swift */,
+				8328D1C424CFC9EB0099DC25 /* DistrictViewController.xib */,
+			);
+			path = District;
+			sourceTree = "<group>";
+		};
 		836722B724CA73E400AD6CD8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +125,23 @@
 		836722C224CA73E400AD6CD8 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				83298C6024D004EB00BF0A4A /* Bai04 */,
+				8328D1B624CFC9800099DC25 /* Bai02 */,
+				836722D724CA747C00AD6CD8 /* Bai01 */,
 				836722C324CA73E400AD6CD8 /* AppDelegate.swift */,
 				836722C524CA73E400AD6CD8 /* SceneDelegate.swift */,
 				836722C724CA73E400AD6CD8 /* ViewController.swift */,
-				836722C924CA73E400AD6CD8 /* Main.storyboard */,
 				836722CC24CA73E500AD6CD8 /* Assets.xcassets */,
-				836722CE24CA73E500AD6CD8 /* LaunchScreen.storyboard */,
 				836722D124CA73E500AD6CD8 /* Info.plist */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		836722D724CA747C00AD6CD8 /* Bai01 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bai01;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +202,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836722D024CA73E500AD6CD8 /* LaunchScreen.storyboard in Resources */,
+				8328D1C624CFC9EB0099DC25 /* DistrictViewController.xib in Resources */,
+				8328D1C224CFC9C50099DC25 /* ProvinceViewController.xib in Resources */,
 				836722CD24CA73E500AD6CD8 /* Assets.xcassets in Resources */,
-				836722CB24CA73E400AD6CD8 /* Main.storyboard in Resources */,
+				8328D1BA24CFC99E0099DC25 /* LocationViewController.xib in Resources */,
+				8328D1BE24CFC9B30099DC25 /* CountryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,31 +218,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				836722C824CA73E400AD6CD8 /* ViewController.swift in Sources */,
+				8328D1C524CFC9EB0099DC25 /* DistrictViewController.swift in Sources */,
 				836722C424CA73E400AD6CD8 /* AppDelegate.swift in Sources */,
 				836722C624CA73E400AD6CD8 /* SceneDelegate.swift in Sources */,
+				8328D1BD24CFC9B30099DC25 /* CountryViewController.swift in Sources */,
+				8328D1C124CFC9C50099DC25 /* ProvinceViewController.swift in Sources */,
+				83298C6224D012A100BF0A4A /* DataManagement.swift in Sources */,
+				8328D1B924CFC99E0099DC25 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		836722C924CA73E400AD6CD8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				836722CA24CA73E400AD6CD8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		836722CE24CA73E500AD6CD8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				836722CF24CA73E500AD6CD8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		836722D224CA73E500AD6CD8 /* Debug */ = {
