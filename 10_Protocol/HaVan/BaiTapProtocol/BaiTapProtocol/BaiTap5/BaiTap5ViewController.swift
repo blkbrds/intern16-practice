@@ -14,7 +14,6 @@ final class BaiTap5ViewController: UIViewController {
     @IBOutlet private weak var firstNumberTextField: UITextField!
     @IBOutlet private weak var secondNumberTextField: UITextField!
     @IBOutlet private weak var questionMarkButton: UIButton!
-    @IBOutlet private weak var calculatorView: UIView!
     @IBOutlet private weak var finalResultLabel: UILabel!
     
     // MARK: - Propeties
@@ -44,24 +43,24 @@ final class BaiTap5ViewController: UIViewController {
         guard let calculator = Bundle.main.loadNibNamed("CalculatorCustomView", owner: self, options: nil)?.first as? CalculatorCustomView else { return }
         newCalculator = calculator
         newCalculator.datasource = self
-        newCalculator.frame = CGRect(x: 0, y: 0, width: calculatorView.bounds.width, height: calculatorView.bounds.height)
+        newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 350)
         newCalculator.delegate = self
-        calculatorView.addSubview(newCalculator)
-        calculatorView.alpha = 0
+        view.addSubview(newCalculator)
     }
     
     private func hideCalculatorView() {
-        UIView.animate(withDuration: 3.0, delay: 0, options: .transitionCurlDown, animations: {
-            self.calculatorView.alpha = 0
-        }, completion: nil)
+        UIView.animate(withDuration: 1.0, animations: {
+            self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 350)
+        }) { _ in
+        }
     }
     
     // MARK: - IBActions
     @IBAction private func questionMarkButtonTouchUpInside(_ sender: UIButton) {
-        UIView.animate(withDuration: 3.0, delay: 0, options: .transitionCurlDown, animations: {
-            self.calculatorView.alpha = 1
-        }, completion: nil)
-        
+       UIView.animate(withDuration: 1.0, animations: {
+                  self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 350, width: UIScreen.main.bounds.width, height: 350)
+              }) { _ in
+              }
     }
 }
 

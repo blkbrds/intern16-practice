@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap5ViewController" customModule="BaiTapProtocol" customModuleProvider="target">
             <connections>
-                <outlet property="calculatorView" destination="g2d-4M-02H" id="a3R-Uo-Kb7"/>
                 <outlet property="finalResultLabel" destination="vWI-Oa-Zva" id="BOy-ZT-V4T"/>
                 <outlet property="firstNumberTextField" destination="ga7-Ts-hoK" id="msX-Me-EYg"/>
                 <outlet property="questionMarkButton" destination="P08-aU-YJK" id="u4m-L4-nrU"/>
@@ -54,13 +53,6 @@
                         <constraint firstItem="sAw-ut-Ulf" firstAttribute="width" secondItem="ga7-Ts-hoK" secondAttribute="width" id="TgZ-QU-z03"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2d-4M-02H">
-                    <rect key="frame" x="0.0" y="562" width="414" height="300"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="300" id="9Kh-3P-RrF"/>
-                    </constraints>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-Oa-Zva">
                     <rect key="frame" x="297.5" y="214" width="66.5" height="33.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -71,11 +63,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="aeN-ba-vPd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="5eM-ET-ptI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g2d-4M-02H" secondAttribute="bottom" id="5gN-Ro-ffo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vWI-Oa-Zva" secondAttribute="trailing" constant="50" id="Aa1-Pl-5oF"/>
                 <constraint firstItem="aeN-ba-vPd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="F43-pu-YL0"/>
-                <constraint firstItem="g2d-4M-02H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RfK-hk-oNL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g2d-4M-02H" secondAttribute="trailing" id="TRT-QN-nV5"/>
                 <constraint firstItem="vWI-Oa-Zva" firstAttribute="top" secondItem="aeN-ba-vPd" secondAttribute="bottom" constant="80" id="WOh-9u-2wt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aeN-ba-vPd" secondAttribute="trailing" constant="50" id="zz5-Rk-o9a"/>
             </constraints>
