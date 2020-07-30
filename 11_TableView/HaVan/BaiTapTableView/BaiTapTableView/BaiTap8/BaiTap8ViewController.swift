@@ -35,7 +35,7 @@ final class BaiTap8ViewController: UIViewController {
     }
     
     private func addLabel() -> UILabel {
-        let nameLabel = UILabel(frame: CGRect(x: 130, y: 20, width: 50, height: 30))
+        let nameLabel = UILabel(frame: CGRect(x: 50, y: 25, width: 50, height: 20))
         nameLabel.textColor = .red
         nameLabel.text = "name"
         return nameLabel
