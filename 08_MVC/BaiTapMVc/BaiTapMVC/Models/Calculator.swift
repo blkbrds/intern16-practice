@@ -14,14 +14,13 @@ final class Calculator {
     var a: Float = 0.0
     var b: Float = 0.0
 
-
     // MARK: Initialize
     init(a: Float, b: Float) {
         self.a = a
         self.b = b
     }
 
-    // MARK: - Function
+    // MARK: - Functions
     func add() -> Float {
         return a + b
     }
