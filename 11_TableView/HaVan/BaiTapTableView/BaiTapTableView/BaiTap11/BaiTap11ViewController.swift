@@ -30,6 +30,8 @@ final class BaiTap11ViewController: UIViewController {
         let nib = UINib(nibName: "MessageTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "messageCell")
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 800
     }
     
     private func configData() {

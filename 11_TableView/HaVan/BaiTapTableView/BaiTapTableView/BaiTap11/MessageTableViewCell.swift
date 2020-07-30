@@ -16,7 +16,6 @@ final class MessageTableViewCell: UITableViewCell {
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     // MARK: - Override functions

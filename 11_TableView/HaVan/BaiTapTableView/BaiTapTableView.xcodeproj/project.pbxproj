@@ -44,6 +44,10 @@
 		52BD164D24D15A83002B36D9 /* Messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD164C24D15A83002B36D9 /* Messages.plist */; };
 		52BD165024D15EA4002B36D9 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD164E24D15EA4002B36D9 /* MessageTableViewCell.swift */; };
 		52BD165124D15EA4002B36D9 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD164F24D15EA4002B36D9 /* MessageTableViewCell.xib */; };
+		52BD165824D266E1002B36D9 /* AddressBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD165724D266E1002B36D9 /* AddressBook.plist */; };
+		52BD165B24D26728002B36D9 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD165924D26728002B36D9 /* PeopleTableViewCell.swift */; };
+		52BD165C24D26728002B36D9 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD165A24D26728002B36D9 /* PeopleTableViewCell.xib */; };
+		52BD165E24D26809002B36D9 /* ContactInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD165D24D26809002B36D9 /* ContactInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		52BD164C24D15A83002B36D9 /* Messages.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Messages.plist; sourceTree = "<group>"; };
 		52BD164E24D15EA4002B36D9 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		52BD164F24D15EA4002B36D9 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		52BD165724D266E1002B36D9 /* AddressBook.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AddressBook.plist; sourceTree = "<group>"; };
+		52BD165924D26728002B36D9 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		52BD165A24D26728002B36D9 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
+		52BD165D24D26809002B36D9 /* ContactInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +231,10 @@
 			children = (
 				52BD163E24D13711002B36D9 /* BaiTap10ViewController.swift */,
 				52BD163F24D13711002B36D9 /* BaiTap10ViewController.xib */,
+				52BD165724D266E1002B36D9 /* AddressBook.plist */,
+				52BD165924D26728002B36D9 /* PeopleTableViewCell.swift */,
+				52BD165A24D26728002B36D9 /* PeopleTableViewCell.xib */,
+				52BD165D24D26809002B36D9 /* ContactInformation.swift */,
 			);
 			path = BaiTap10;
 			sourceTree = "<group>";
@@ -299,8 +311,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5272609824CFDCCD00F28539 /* BaiTap1TableViewConroller.xib in Resources */,
+				52BD165824D266E1002B36D9 /* AddressBook.plist in Resources */,
 				5272609D24CFDF9E00F28539 /* BaiTap2TableViewController.xib in Resources */,
 				52BD162F24D02A94002B36D9 /* BaiTap8ViewController.xib in Resources */,
+				52BD165C24D26728002B36D9 /* PeopleTableViewCell.xib in Resources */,
 				527260AB24D0019900F28539 /* DetailViewController.xib in Resources */,
 				52BD162A24D02410002B36D9 /* BaiTap7HomeViewController.xib in Resources */,
 				527260B324D0057C00F28539 /* Sections.plist in Resources */,
@@ -326,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BD165B24D26728002B36D9 /* PeopleTableViewCell.swift in Sources */,
 				527260A624CFFCFA00F28539 /* BaiTap3HomeViewController.swift in Sources */,
 				52BD162924D02410002B36D9 /* BaiTap7HomeViewController.swift in Sources */,
 				5272608124CFDC0900F28539 /* AppDelegate.swift in Sources */,
@@ -337,6 +352,7 @@
 				5272609724CFDCCD00F28539 /* BaiTap1TableViewConroller.swift in Sources */,
 				5272609C24CFDF9E00F28539 /* BaiTap2TableViewController.swift in Sources */,
 				5272608324CFDC0900F28539 /* SceneDelegate.swift in Sources */,
+				52BD165E24D26809002B36D9 /* ContactInformation.swift in Sources */,
 				52BD162024D01451002B36D9 /* BaiTap5HomeViewController.swift in Sources */,
 				527260A124CFE14000F28539 /* Contacts.swift in Sources */,
 				527260B524D008CF00F28539 /* Sections.swift in Sources */,
