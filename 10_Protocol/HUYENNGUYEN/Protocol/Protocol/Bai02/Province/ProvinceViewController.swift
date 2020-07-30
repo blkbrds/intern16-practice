@@ -8,13 +8,19 @@
 
 import UIKit
 
+protocol ProvinceViewControllerDelegate: class {
+    func getProvince(_ controller: ProvinceViewController, needsPerform action: ProvinceViewController.Action)
+}
+
 class ProvinceViewController: UIViewController {
 
     @IBOutlet private weak var stackView: UIStackView!
 
-//    var newCountry: String = ""
     var provinceButtons: [UIButton] = []
     var tinhs: [Tinh] = []
+    var huyens: [Huyen] = [Huyen]
+    var temp: Int = 0
+    weak var delegate: ProvinceViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +47,7 @@ class ProvinceViewController: UIViewController {
     }
     @objc private func goToDistrict() {
         let districtView = DistrictViewController()
-        districtView.huyens = self.tinhs[0].huyens
-//        districtView.newCountry = newCountry
-//        districtView.newProvince = province
+        districtView.huyens = tinhs[temp].huyens
         navigationController?.pushViewController(districtView, animated: true)
     }
     @objc func provinceTouchUpInside(_ sender: UIButton) {
@@ -80,6 +84,22 @@ class ProvinceViewController: UIViewController {
         }
         provinceButtons[i].backgroundColor = .green
         provinceButtons[i].setTitleColor(.black, for: .normal)
-//        province = "Tỉnh \(i + 1)"
+        temp = i
+    }
+}
+
+extension ProvinceViewController {
+    enum Action {
+        case saveProvince(provinceName: String)
+        case saveProvinceDistrict(provinceName: String, districtName: String)
+    }
+}
+
+extension ProvinceViewController: DistrictViewControllerDelegate {
+    func getDistrict(_ controller: DistrictViewController, needsPerform action: DistrictViewController.Action) {
+        switch action {
+        case .saveDistrict(districtName: let district):
+            delegate?.getProvince(self, needsPerform: .saveProvinceDistrict(provinceName: tinhs[temp].name, districtName: district))
+        }
     }
 }

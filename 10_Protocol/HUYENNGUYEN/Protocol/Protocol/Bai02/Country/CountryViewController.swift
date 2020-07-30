@@ -8,23 +8,29 @@
 
 import UIKit
 
+protocol CountryViewControllerDelegate: class {
+    func getCountry(_ controller: CountryViewController, needsPerform action: CountryViewController.Action)
+}
+
 class CountryViewController: UIViewController {
-    
+
     @IBOutlet private weak var stackView: UIStackView!
-    
+
     var countryButtons: [UIButton] = []
     var miens: [Mien] = []
-    
+    var temp: Int = 0
+    weak var delegate: CountryViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
-    
+
     private func configUI() {
         title = "Miền"
         let provinceButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(goToProvinceVC))
         navigationItem.rightBarButtonItem = provinceButton
-        
+
         for (index, item) in miens.enumerated() {
             let button = UIButton()
             button.setTitleColor(.black, for: .normal)
@@ -41,7 +47,7 @@ class CountryViewController: UIViewController {
     }
     @objc private func goToProvinceVC() {
         let provinceView = ProvinceViewController()
-        provinceView.tinhs = DataManagement.miens[0].tinhs
+        provinceView.tinhs = DataManagement.miens[temp].tinhs
         // provinceView.newCountry = country
         navigationController?.pushViewController(provinceView, animated: true)
     }
@@ -71,6 +77,7 @@ class CountryViewController: UIViewController {
             print("Error")
         }
     }
+
     func setupButton(i: Int) {
         for index in 0..<countryButtons.count {
             countryButtons[index].backgroundColor = .clear
@@ -78,6 +85,24 @@ class CountryViewController: UIViewController {
         }
         countryButtons[i].backgroundColor = .red
         countryButtons[i].setTitleColor(.white, for: .normal)
-//        country = "Miền \(i + 1)"
+        temp = i
+    }
+}
+
+extension CountryViewController {
+    enum Action {
+        case saveCountry(countryName: String)
+        case saveCountryProvineDictrict(countryName: String, provinceName: String, districtName: String)
+    }
+}
+
+extension CountryViewController: ProvinceViewControllerDelegate {
+    func getProvince(_ controller: ProvinceViewController, needsPerform action: ProvinceViewController.Action) {
+        switch action {
+        case .saveProvince(provinceName: _):
+            break
+        case .saveProvinceDistrict(provinceName: let province, districtName: let district):
+            delegate?.getCountry(self, needsPerform: .saveCountryProvineDictrict(countryName: miens[temp].name, provinceName: province, districtName: district))
+        }
     }
 }

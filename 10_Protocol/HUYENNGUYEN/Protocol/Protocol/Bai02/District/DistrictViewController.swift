@@ -8,15 +8,18 @@
 
 import UIKit
 
+protocol DistrictViewControllerDelegate: class {
+    func getDistrict(_ controller: DistrictViewController, needsPerform action: DistrictViewController.Action)
+}
+
 class DistrictViewController: UIViewController {
     
     @IBOutlet private weak var stackView: UIStackView!
 
     var districtButtons: [UIButton] = []
     var huyens: [Huyen] = []
-//    var newCountry: String = ""
-//    var newProvince: String = ""
-//    var district: String = ""
+    weak var delegate: DistrictViewControllerDelegate?
+    var districtNames: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,24 +99,13 @@ class DistrictViewController: UIViewController {
     func chooseButtonTouchUpInSide(i: Int) {
         districtButtons[i].backgroundColor = .blue
         districtButtons[i].setTitleColor(.white, for: .normal)
-        
-//        district = "Huyện \(i + 1)"
-        
+        districtNames  = districtButtons[i].title(for: .selected) ?? "nil"
     }
 }
-//
-//extension DistrictViewController: LocationViewControllerDataSource {
-//    func getCountry() -> String {
-////        return newCountry
-//    }
-//
-//    func getProvince() -> String {
-////        return newProvince
-//    }
-//
-//    func getDistrict() -> String {
-////        return district
-//    }
+
+extension DistrictViewController {
+   enum Action {
+        case saveDistrict(districtName: String)
+    }
     
-    
-//}
+}
