@@ -38,6 +38,7 @@ final class BaiTap9ViewController: UIViewController {
         let nib = UINib(nibName: "CustomTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "customCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -81,6 +82,14 @@ extension BaiTap9ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension BaiTap9ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 
