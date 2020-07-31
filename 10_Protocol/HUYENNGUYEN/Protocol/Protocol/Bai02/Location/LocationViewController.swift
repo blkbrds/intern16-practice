@@ -8,39 +8,52 @@
 
 import UIKit
 
-class LocationViewController: UIViewController {
-    
+enum Action {
+    case sendCountry(String)
+    case sendProvince(String)
+    case sendDictrict(String)
+}
+
+final class LocationViewController: UIViewController {
+
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var provinceLabel: UILabel!
     @IBOutlet weak var districtLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
-    
+
     private func configUI() {
         title = "Địa điểm"
-        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editAction))
+        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTouchUpInside))
         navigationItem.rightBarButtonItem = editButton
     }
-    
-    @objc private func editAction() {
+
+    @objc private func editButtonTouchUpInside(_ sender: UIButton) {
         let countryView = CountryViewController()
-        countryView.miens = DataManagement.miens
+        countryView.delegate = self
+        countryView.dataSource = self
         navigationController?.pushViewController(countryView, animated: true)
     }
 }
 
 extension LocationViewController: CountryViewControllerDelegate {
-    func getCountry(_ controller: CountryViewController, needsPerform action: CountryViewController.Action) {
+    func controller(_ controller: CountryViewController, needsPerform action: Action) {
         switch action {
-        case .saveCountry(countryName: _):
-            break
-        case .saveCountryProvineDictrict(countryName: let country, provinceName: let province, districtName: let district):
+        case .sendCountry(let country):
             countryLabel.text = country
+        case .sendProvince(let province):
             provinceLabel.text = province
+        case .sendDictrict(let district):
             districtLabel.text = district
         }
+    }
+}
+
+extension LocationViewController: CountryViewControllerDataSource {
+    func getCountry() -> [Mien] {
+        return DataManagement.miens
     }
 }

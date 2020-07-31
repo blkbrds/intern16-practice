@@ -27,9 +27,6 @@
                             <state key="normal" title="Huyện 1">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
-                            <connections>
-                                <action selector="districtTouchUpInside:" destination="-1" eventType="touchUpInside" id="TK0-xA-iau"/>
-                            </connections>
                         </button>
                     </subviews>
                     <variation key="default">

@@ -1,7 +1,6 @@
 //
 //  DistrictViewController.swift
 //  Protocol
-//
 //  Created by bu on 7/28/20.
 //  Copyright © 2020 bu. All rights reserved.
 //
@@ -9,7 +8,11 @@
 import UIKit
 
 protocol DistrictViewControllerDelegate: class {
-    func getDistrict(_ controller: DistrictViewController, needsPerform action: DistrictViewController.Action)
+    func controller(_ controller: DistrictViewController, needsPerform action: Action)
+}
+
+protocol DistrictViewControllerDataSource: class {
+    func getDistrict() -> [Huyen]
 }
 
 class DistrictViewController: UIViewController {
@@ -19,7 +22,7 @@ class DistrictViewController: UIViewController {
     var districtButtons: [UIButton] = []
     var huyens: [Huyen] = []
     weak var delegate: DistrictViewControllerDelegate?
-    var districtNames: String = ""
+    weak var dataSoure: DistrictViewControllerDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,81 +34,33 @@ class DistrictViewController: UIViewController {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(goToLocation))
         navigationItem.rightBarButtonItem = doneButton
         
+        if let dataSource = dataSoure {
+            huyens = dataSource.getDistrict()
+        }
+        
         for (index, item) in huyens.enumerated() {
             let button = UIButton()
             button.setTitleColor(.black, for: .normal)
-            button.backgroundColor = .red
-            button.layer.borderWidth = 1.0
+            button.backgroundColor = .gray
             button.layer.cornerRadius = 10
             button.clipsToBounds = true
             button.setTitle(item.name, for: .normal)
-            button.tag = index + 1
+            button.tag = index
             button.addTarget(self, action: #selector(districtTouchUpInside), for: .touchUpInside)
             districtButtons.append(button)
             stackView.addArrangedSubview(button)
         }
     }
     
-    @objc private func goToLocation() {
-        let vc = (self.navigationController?.viewControllers[0])!
-        self.navigationController?.popToViewController(vc, animated: true)
-        
+    @objc private func goToLocation(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
-    private func resetButton() {
-        for index in 0..<districtButtons.count {
-            districtButtons[index].backgroundColor = .clear
-            districtButtons[index].setTitleColor(.black, for: .normal)
+    @objc private func districtTouchUpInside(_ sender: UIButton) {
+        districtButtons.forEach { button in
+            button.backgroundColor = .gray
         }
+        sender.backgroundColor = .orange
+        delegate?.controller(self, needsPerform: .sendDictrict(huyens[sender.tag].name))
     }
-    
-    @IBAction func districtTouchUpInside(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 0)
-        case 2:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 1)
-        case 3:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 2)
-        case 4:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 3)
-        case 5:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 4)
-        case 6:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 5)
-        case 7:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 6)
-        case 8:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 7)
-        case 9:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 8)
-        case 10:
-            resetButton()
-            chooseButtonTouchUpInSide(i: 9)
-        default:
-            print("Error")
-        }
-    }
-    
-    func chooseButtonTouchUpInSide(i: Int) {
-        districtButtons[i].backgroundColor = .blue
-        districtButtons[i].setTitleColor(.white, for: .normal)
-        districtNames  = districtButtons[i].title(for: .selected) ?? "nil"
-    }
-}
-
-extension DistrictViewController {
-   enum Action {
-        case saveDistrict(districtName: String)
-    }
-    
 }
