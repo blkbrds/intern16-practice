@@ -9,12 +9,25 @@
 import Foundation
 import Contacts
 
-struct ContactInformation {
+
+
+struct ExpandableNames {
+    var isExpanded: Bool
+    var names: [FavoritableContact]
+}
+
+struct FavoritableContact {
+    let contact: CNContact
+    var hasFavorited: Bool
+}
+
+final class ContactInformation {
+
+    static let shared = ContactInformation()
+
+    var contacts: [String: String] = [String: String]()
     
-    
-    static var contacts: [String: String] = [String: String]()
-    
-    static func readPropertyList() {
+    func readPropertyList() {
         var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
         guard let plistPath: String = Bundle.main.path(forResource: "AddressBook", ofType: "plist") else { return }
         guard let plistXML = FileManager.default.contents(atPath: plistPath) else { return }
@@ -27,32 +40,48 @@ struct ContactInformation {
     }
 }
 
-class ManagementContact {
+final class ManagementContact {
     
     var contactsDictionary: [String: String] = [String: String]()
     
-    func getContactsFromIphone(){
+
+    func fetchContacts() {
+        print("Attempting to fetch contacts today..")
+
         let store = CNContactStore()
-        store.requestAccess(for: .contacts) { (granted, error) in
-            if let error = error {
-                print("Fail to request access: \(error)")
+
+        store.requestAccess(for: .contacts) { (granted, err) in
+            if let err = err {
+                print("Failed to request access:", err)
                 return
             }
+
             if granted {
                 print("Access granted")
-                let keys = [CNContactGivenNameKey]
+
+                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
                 let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+
                 do {
-                    try store.enumerateContacts(with: request) { (contacts, stopPointer) in
-                        let name = contacts.givenName + " " + contacts.familyName
-                        let phoneNumber = contacts.phoneNumbers.first?.value.stringValue ?? ""
-                        self.contactsDictionary[name] = phoneNumber
-                    }
+                    var favoritableContacts = [FavoritableContact]()
+
+                    try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointerIfYouWantToStopEnumerating) in
+
+                        print(contact.givenName)
+                        print(contact.familyName)
+                        print(contact.phoneNumbers.first?.value.stringValue ?? "")
+
+                        favoritableContacts.append(FavoritableContact(contact: contact, hasFavorited: false))
+                    })
+
+                    let _ = ExpandableNames(isExpanded: true, names: favoritableContacts)
+
                 } catch let err {
-                    print("Failed to enumarate contacts: \(err)")
+                    print("Failed to enumerate contacts:", err)
                 }
+
             } else {
-                return
+                print("Access denied..")
             }
         }
     }

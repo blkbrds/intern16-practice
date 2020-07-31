@@ -16,6 +16,7 @@ final class BaiTap10ViewController: UIViewController {
     // MARK: - Propeties
     private var keys: [String] = []
     private var values: [String] = []
+    private var contacts: ContactInformation = ContactInformation()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -33,14 +34,14 @@ final class BaiTap10ViewController: UIViewController {
     
     private func configData() {
         let managementContact = ManagementContact()
-        managementContact.getContactsFromIphone()
+        managementContact.fetchContacts()
         managementContact.saveContacts()
-        ContactInformation.readPropertyList()
+        contacts.readPropertyList()
     }
     
     private func getKey() {
-        keys = Array(ContactInformation.contacts.keys)
-        values = Array(ContactInformation.contacts.values)
+        keys = Array(contacts.contacts.keys)
+        values = Array(contacts.contacts.values)
     }
     
     private func configTableView() {
@@ -57,7 +58,7 @@ extension BaiTap10ViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ContactInformation.contacts.count
+        return contacts.contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
