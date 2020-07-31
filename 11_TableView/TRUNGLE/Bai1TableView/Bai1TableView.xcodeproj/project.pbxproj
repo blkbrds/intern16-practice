@@ -23,6 +23,14 @@
 		510B372524D2C0C000F118A5 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510B372324D2C0C000F118A5 /* Bai3ViewController.xib */; };
 		510B372824D2C13B00F118A5 /* Bai3DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B372624D2C13B00F118A5 /* Bai3DetailViewController.swift */; };
 		510B372924D2C13B00F118A5 /* Bai3DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510B372724D2C13B00F118A5 /* Bai3DetailViewController.xib */; };
+		51FD938524D32D86009C3865 /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD938324D32D86009C3865 /* Bai4ViewController.swift */; };
+		51FD938624D32D86009C3865 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FD938424D32D86009C3865 /* Bai4ViewController.xib */; };
+		51FD938824D32D9D009C3865 /* Bai4Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51FD938724D32D9D009C3865 /* Bai4Data.plist */; };
+		51FD938A24D32DA6009C3865 /* Bai4Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD938924D32DA6009C3865 /* Bai4Model.swift */; };
+		51FD938E24D33211009C3865 /* Bai5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD938C24D33211009C3865 /* Bai5ViewController.swift */; };
+		51FD938F24D33211009C3865 /* Bai5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FD938D24D33211009C3865 /* Bai5ViewController.xib */; };
+		51FD939224D332F2009C3865 /* Bai5DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD939024D332F2009C3865 /* Bai5DetailViewController.swift */; };
+		51FD939324D332F2009C3865 /* Bai5DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FD939124D332F2009C3865 /* Bai5DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,14 @@
 		510B372324D2C0C000F118A5 /* Bai3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3ViewController.xib; sourceTree = "<group>"; };
 		510B372624D2C13B00F118A5 /* Bai3DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai3DetailViewController.swift; sourceTree = "<group>"; };
 		510B372724D2C13B00F118A5 /* Bai3DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3DetailViewController.xib; sourceTree = "<group>"; };
+		51FD938324D32D86009C3865 /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai4ViewController.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.swift"; sourceTree = "<group>"; };
+		51FD938424D32D86009C3865 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai4ViewController.xib; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.xib"; sourceTree = "<group>"; };
+		51FD938724D32D9D009C3865 /* Bai4Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Bai4Data.plist; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4Data.plist"; sourceTree = "<group>"; };
+		51FD938924D32DA6009C3865 /* Bai4Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai4Model.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4Model.swift"; sourceTree = "<group>"; };
+		51FD938C24D33211009C3865 /* Bai5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai5ViewController.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5ViewController.swift"; sourceTree = "<group>"; };
+		51FD938D24D33211009C3865 /* Bai5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai5ViewController.xib; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5ViewController.xib"; sourceTree = "<group>"; };
+		51FD939024D332F2009C3865 /* Bai5DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai5DetailViewController.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5DetailViewController.swift"; sourceTree = "<group>"; };
+		51FD939124D332F2009C3865 /* Bai5DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai5DetailViewController.xib; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5DetailViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,9 @@
 		510B36FA24D2B84700F118A5 /* Bai1TableView */ = {
 			isa = PBXGroup;
 			children = (
+				51C0E6F224D3ACBB0058CDD8 /* Bai7 */,
+				51FD938B24D331E4009C3865 /* Bai5 */,
+				510B372A24D2C5F300F118A5 /* Bai4 */,
 				510B372124D2C0B200F118A5 /* Bai3 */,
 				510B371424D2BB7B00F118A5 /* Bai2 */,
 				510B370F24D2B86A00F118A5 /* Bai1 */,
@@ -119,6 +138,35 @@
 				510B372724D2C13B00F118A5 /* Bai3DetailViewController.xib */,
 			);
 			path = Bai3;
+			sourceTree = "<group>";
+		};
+		510B372A24D2C5F300F118A5 /* Bai4 */ = {
+			isa = PBXGroup;
+			children = (
+				51FD938324D32D86009C3865 /* Bai4ViewController.swift */,
+				51FD938424D32D86009C3865 /* Bai4ViewController.xib */,
+				51FD938724D32D9D009C3865 /* Bai4Data.plist */,
+				51FD938924D32DA6009C3865 /* Bai4Model.swift */,
+			);
+			path = Bai4;
+			sourceTree = "<group>";
+		};
+		51C0E6F224D3ACBB0058CDD8 /* Bai7 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bai7;
+			sourceTree = "<group>";
+		};
+		51FD938B24D331E4009C3865 /* Bai5 */ = {
+			isa = PBXGroup;
+			children = (
+				51FD938C24D33211009C3865 /* Bai5ViewController.swift */,
+				51FD938D24D33211009C3865 /* Bai5ViewController.xib */,
+				51FD939024D332F2009C3865 /* Bai5DetailViewController.swift */,
+				51FD939124D332F2009C3865 /* Bai5DetailViewController.xib */,
+			);
+			path = Bai5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,12 +227,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FD938824D32D9D009C3865 /* Bai4Data.plist in Resources */,
 				510B370824D2B84900F118A5 /* LaunchScreen.storyboard in Resources */,
 				510B371624D2BB8700F118A5 /* Data.plist in Resources */,
+				51FD938624D32D86009C3865 /* Bai4ViewController.xib in Resources */,
+				51FD939324D332F2009C3865 /* Bai5DetailViewController.xib in Resources */,
 				510B370524D2B84900F118A5 /* Assets.xcassets in Resources */,
 				510B370324D2B84700F118A5 /* Main.storyboard in Resources */,
 				510B372524D2C0C000F118A5 /* Bai3ViewController.xib in Resources */,
 				510B371A24D2BC0100F118A5 /* Bai2ViewController.xib in Resources */,
+				51FD938F24D33211009C3865 /* Bai5ViewController.xib in Resources */,
 				510B372924D2C13B00F118A5 /* Bai3DetailViewController.xib in Resources */,
 				510B371324D2B88300F118A5 /* Bai1ViewController.xib in Resources */,
 			);
@@ -198,11 +250,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				510B370024D2B84700F118A5 /* ViewController.swift in Sources */,
+				51FD938A24D32DA6009C3865 /* Bai4Model.swift in Sources */,
 				510B372424D2C0C000F118A5 /* Bai3ViewController.swift in Sources */,
 				510B372824D2C13B00F118A5 /* Bai3DetailViewController.swift in Sources */,
+				51FD938524D32D86009C3865 /* Bai4ViewController.swift in Sources */,
 				510B371924D2BC0100F118A5 /* Bai2ViewController.swift in Sources */,
 				510B372024D2BC2500F118A5 /* Bai2Model.swift in Sources */,
 				510B36FC24D2B84700F118A5 /* AppDelegate.swift in Sources */,
+				51FD939224D332F2009C3865 /* Bai5DetailViewController.swift in Sources */,
+				51FD938E24D33211009C3865 /* Bai5ViewController.swift in Sources */,
 				510B36FE24D2B84700F118A5 /* SceneDelegate.swift in Sources */,
 				510B371224D2B88300F118A5 /* Bai1ViewController.swift in Sources */,
 			);
