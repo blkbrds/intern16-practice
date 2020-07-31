@@ -23,14 +23,18 @@
 		510B372524D2C0C000F118A5 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510B372324D2C0C000F118A5 /* Bai3ViewController.xib */; };
 		510B372824D2C13B00F118A5 /* Bai3DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B372624D2C13B00F118A5 /* Bai3DetailViewController.swift */; };
 		510B372924D2C13B00F118A5 /* Bai3DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510B372724D2C13B00F118A5 /* Bai3DetailViewController.xib */; };
-		51FD938524D32D86009C3865 /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD938324D32D86009C3865 /* Bai4ViewController.swift */; };
-		51FD938624D32D86009C3865 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FD938424D32D86009C3865 /* Bai4ViewController.xib */; };
-		51FD938824D32D9D009C3865 /* Bai4Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51FD938724D32D9D009C3865 /* Bai4Data.plist */; };
-		51FD938A24D32DA6009C3865 /* Bai4Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD938924D32DA6009C3865 /* Bai4Model.swift */; };
-		51FD938E24D33211009C3865 /* Bai5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD938C24D33211009C3865 /* Bai5ViewController.swift */; };
-		51FD938F24D33211009C3865 /* Bai5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FD938D24D33211009C3865 /* Bai5ViewController.xib */; };
-		51FD939224D332F2009C3865 /* Bai5DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD939024D332F2009C3865 /* Bai5DetailViewController.swift */; };
-		51FD939324D332F2009C3865 /* Bai5DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FD939124D332F2009C3865 /* Bai5DetailViewController.xib */; };
+		5127CCA724D3FDA2007CBC7B /* Bai7_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCA524D3FDA2007CBC7B /* Bai7_8ViewController.swift */; };
+		5127CCA824D3FDA2007CBC7B /* Bai7_8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCA624D3FDA2007CBC7B /* Bai7_8ViewController.xib */; };
+		5127CCAC24D3FE2C007CBC7B /* Data7.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCAB24D3FE2C007CBC7B /* Data7.plist */; };
+		5127CCAE24D3FEE5007CBC7B /* Bai7_8Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCAD24D3FEE5007CBC7B /* Bai7_8Model.swift */; };
+		5127CCB324D400C5007CBC7B /* Bai5DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCAF24D400C5007CBC7B /* Bai5DetailViewController.swift */; };
+		5127CCB424D400C5007CBC7B /* Bai5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCB024D400C5007CBC7B /* Bai5ViewController.swift */; };
+		5127CCB524D400C5007CBC7B /* Bai5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCB124D400C5007CBC7B /* Bai5ViewController.xib */; };
+		5127CCB624D400C5007CBC7B /* Bai5DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCB224D400C5007CBC7B /* Bai5DetailViewController.xib */; };
+		5127CCBB24D400E4007CBC7B /* Bai4Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCB724D400E4007CBC7B /* Bai4Model.swift */; };
+		5127CCBC24D400E4007CBC7B /* Bai4Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCB824D400E4007CBC7B /* Bai4Data.plist */; };
+		5127CCBD24D400E4007CBC7B /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCB924D400E4007CBC7B /* Bai4ViewController.swift */; };
+		5127CCBE24D400E4007CBC7B /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCBA24D400E4007CBC7B /* Bai4ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,14 +56,18 @@
 		510B372324D2C0C000F118A5 /* Bai3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3ViewController.xib; sourceTree = "<group>"; };
 		510B372624D2C13B00F118A5 /* Bai3DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai3DetailViewController.swift; sourceTree = "<group>"; };
 		510B372724D2C13B00F118A5 /* Bai3DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai3DetailViewController.xib; sourceTree = "<group>"; };
-		51FD938324D32D86009C3865 /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai4ViewController.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.swift"; sourceTree = "<group>"; };
-		51FD938424D32D86009C3865 /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai4ViewController.xib; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.xib"; sourceTree = "<group>"; };
-		51FD938724D32D9D009C3865 /* Bai4Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Bai4Data.plist; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4Data.plist"; sourceTree = "<group>"; };
-		51FD938924D32DA6009C3865 /* Bai4Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai4Model.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai4/Bai4Model.swift"; sourceTree = "<group>"; };
-		51FD938C24D33211009C3865 /* Bai5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai5ViewController.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5ViewController.swift"; sourceTree = "<group>"; };
-		51FD938D24D33211009C3865 /* Bai5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai5ViewController.xib; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5ViewController.xib"; sourceTree = "<group>"; };
-		51FD939024D332F2009C3865 /* Bai5DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai5DetailViewController.swift; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5DetailViewController.swift"; sourceTree = "<group>"; };
-		51FD939124D332F2009C3865 /* Bai5DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai5DetailViewController.xib; path = "../../../../../../../trungld/Desktop/at-baitap-trung/11.tableview/Bai1TableView/Bai1TableView/Bai5/Bai5DetailViewController.xib"; sourceTree = "<group>"; };
+		5127CCA524D3FDA2007CBC7B /* Bai7_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai7_8ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai7+8/Bai7_8ViewController.swift"; sourceTree = "<group>"; };
+		5127CCA624D3FDA2007CBC7B /* Bai7_8ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai7_8ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai7+8/Bai7_8ViewController.xib"; sourceTree = "<group>"; };
+		5127CCAB24D3FE2C007CBC7B /* Data7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data7.plist; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai7+8/Data7.plist"; sourceTree = "<group>"; };
+		5127CCAD24D3FEE5007CBC7B /* Bai7_8Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai7_8Model.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai7+8/Bai7_8Model.swift"; sourceTree = "<group>"; };
+		5127CCAF24D400C5007CBC7B /* Bai5DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai5DetailViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai5/Bai5DetailViewController.swift"; sourceTree = "<group>"; };
+		5127CCB024D400C5007CBC7B /* Bai5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai5ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai5/Bai5ViewController.swift"; sourceTree = "<group>"; };
+		5127CCB124D400C5007CBC7B /* Bai5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai5ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai5/Bai5ViewController.xib"; sourceTree = "<group>"; };
+		5127CCB224D400C5007CBC7B /* Bai5DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai5DetailViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai5/Bai5DetailViewController.xib"; sourceTree = "<group>"; };
+		5127CCB724D400E4007CBC7B /* Bai4Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai4Model.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4Model.swift"; sourceTree = "<group>"; };
+		5127CCB824D400E4007CBC7B /* Bai4Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Bai4Data.plist; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4Data.plist"; sourceTree = "<group>"; };
+		5127CCB924D400E4007CBC7B /* Bai4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai4ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.swift"; sourceTree = "<group>"; };
+		5127CCBA24D400E4007CBC7B /* Bai4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai4ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +100,8 @@
 		510B36FA24D2B84700F118A5 /* Bai1TableView */ = {
 			isa = PBXGroup;
 			children = (
-				51C0E6F224D3ACBB0058CDD8 /* Bai7 */,
+				5127CCBF24D40B1A007CBC7B /* Bai9 */,
+				51C0E6F224D3ACBB0058CDD8 /* Bai7+8 */,
 				51FD938B24D331E4009C3865 /* Bai5 */,
 				510B372A24D2C5F300F118A5 /* Bai4 */,
 				510B372124D2C0B200F118A5 /* Bai3 */,
@@ -143,28 +152,39 @@
 		510B372A24D2C5F300F118A5 /* Bai4 */ = {
 			isa = PBXGroup;
 			children = (
-				51FD938324D32D86009C3865 /* Bai4ViewController.swift */,
-				51FD938424D32D86009C3865 /* Bai4ViewController.xib */,
-				51FD938724D32D9D009C3865 /* Bai4Data.plist */,
-				51FD938924D32DA6009C3865 /* Bai4Model.swift */,
+				5127CCB824D400E4007CBC7B /* Bai4Data.plist */,
+				5127CCB724D400E4007CBC7B /* Bai4Model.swift */,
+				5127CCB924D400E4007CBC7B /* Bai4ViewController.swift */,
+				5127CCBA24D400E4007CBC7B /* Bai4ViewController.xib */,
 			);
 			path = Bai4;
 			sourceTree = "<group>";
 		};
-		51C0E6F224D3ACBB0058CDD8 /* Bai7 */ = {
+		5127CCBF24D40B1A007CBC7B /* Bai9 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Bai7;
+			path = Bai9;
+			sourceTree = "<group>";
+		};
+		51C0E6F224D3ACBB0058CDD8 /* Bai7+8 */ = {
+			isa = PBXGroup;
+			children = (
+				5127CCAB24D3FE2C007CBC7B /* Data7.plist */,
+				5127CCA524D3FDA2007CBC7B /* Bai7_8ViewController.swift */,
+				5127CCA624D3FDA2007CBC7B /* Bai7_8ViewController.xib */,
+				5127CCAD24D3FEE5007CBC7B /* Bai7_8Model.swift */,
+			);
+			path = "Bai7+8";
 			sourceTree = "<group>";
 		};
 		51FD938B24D331E4009C3865 /* Bai5 */ = {
 			isa = PBXGroup;
 			children = (
-				51FD938C24D33211009C3865 /* Bai5ViewController.swift */,
-				51FD938D24D33211009C3865 /* Bai5ViewController.xib */,
-				51FD939024D332F2009C3865 /* Bai5DetailViewController.swift */,
-				51FD939124D332F2009C3865 /* Bai5DetailViewController.xib */,
+				5127CCAF24D400C5007CBC7B /* Bai5DetailViewController.swift */,
+				5127CCB224D400C5007CBC7B /* Bai5DetailViewController.xib */,
+				5127CCB024D400C5007CBC7B /* Bai5ViewController.swift */,
+				5127CCB124D400C5007CBC7B /* Bai5ViewController.xib */,
 			);
 			path = Bai5;
 			sourceTree = "<group>";
@@ -227,16 +247,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51FD938824D32D9D009C3865 /* Bai4Data.plist in Resources */,
+				5127CCBC24D400E4007CBC7B /* Bai4Data.plist in Resources */,
+				5127CCB624D400C5007CBC7B /* Bai5DetailViewController.xib in Resources */,
+				5127CCAC24D3FE2C007CBC7B /* Data7.plist in Resources */,
 				510B370824D2B84900F118A5 /* LaunchScreen.storyboard in Resources */,
 				510B371624D2BB8700F118A5 /* Data.plist in Resources */,
-				51FD938624D32D86009C3865 /* Bai4ViewController.xib in Resources */,
-				51FD939324D332F2009C3865 /* Bai5DetailViewController.xib in Resources */,
+				5127CCBE24D400E4007CBC7B /* Bai4ViewController.xib in Resources */,
+				5127CCA824D3FDA2007CBC7B /* Bai7_8ViewController.xib in Resources */,
 				510B370524D2B84900F118A5 /* Assets.xcassets in Resources */,
 				510B370324D2B84700F118A5 /* Main.storyboard in Resources */,
 				510B372524D2C0C000F118A5 /* Bai3ViewController.xib in Resources */,
 				510B371A24D2BC0100F118A5 /* Bai2ViewController.xib in Resources */,
-				51FD938F24D33211009C3865 /* Bai5ViewController.xib in Resources */,
+				5127CCB524D400C5007CBC7B /* Bai5ViewController.xib in Resources */,
 				510B372924D2C13B00F118A5 /* Bai3DetailViewController.xib in Resources */,
 				510B371324D2B88300F118A5 /* Bai1ViewController.xib in Resources */,
 			);
@@ -250,17 +272,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				510B370024D2B84700F118A5 /* ViewController.swift in Sources */,
-				51FD938A24D32DA6009C3865 /* Bai4Model.swift in Sources */,
+				5127CCBB24D400E4007CBC7B /* Bai4Model.swift in Sources */,
+				5127CCBD24D400E4007CBC7B /* Bai4ViewController.swift in Sources */,
 				510B372424D2C0C000F118A5 /* Bai3ViewController.swift in Sources */,
+				5127CCB424D400C5007CBC7B /* Bai5ViewController.swift in Sources */,
 				510B372824D2C13B00F118A5 /* Bai3DetailViewController.swift in Sources */,
-				51FD938524D32D86009C3865 /* Bai4ViewController.swift in Sources */,
+				5127CCAE24D3FEE5007CBC7B /* Bai7_8Model.swift in Sources */,
 				510B371924D2BC0100F118A5 /* Bai2ViewController.swift in Sources */,
 				510B372024D2BC2500F118A5 /* Bai2Model.swift in Sources */,
+				5127CCB324D400C5007CBC7B /* Bai5DetailViewController.swift in Sources */,
 				510B36FC24D2B84700F118A5 /* AppDelegate.swift in Sources */,
-				51FD939224D332F2009C3865 /* Bai5DetailViewController.swift in Sources */,
-				51FD938E24D33211009C3865 /* Bai5ViewController.swift in Sources */,
 				510B36FE24D2B84700F118A5 /* SceneDelegate.swift in Sources */,
 				510B371224D2B88300F118A5 /* Bai1ViewController.swift in Sources */,
+				5127CCA724D3FDA2007CBC7B /* Bai7_8ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
