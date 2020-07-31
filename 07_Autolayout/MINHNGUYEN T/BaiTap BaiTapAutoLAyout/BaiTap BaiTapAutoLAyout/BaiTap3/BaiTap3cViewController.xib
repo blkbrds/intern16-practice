@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap3cViewController" customModule="BaiTap_BaiTapAutoLAyout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAP-N7-qSN" userLabel="ViewLeft">
+                    <rect key="frame" x="68" y="400.5" width="105.5" height="105.5"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GAP-N7-qSN" secondAttribute="height" multiplier="1:1" id="f1X-Vy-NLk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHH-GZ-giu" userLabel="ViewRight">
+                    <rect key="frame" x="233.5" y="400.5" width="105.5" height="105.5"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZHH-GZ-giu" secondAttribute="height" multiplier="1:1" id="AER-lK-qcX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ZHH-GZ-giu" firstAttribute="height" secondItem="GAP-N7-qSN" secondAttribute="height" id="053-nn-JVe"/>
+                <constraint firstItem="GAP-N7-qSN" firstAttribute="trailing" secondItem="ZHH-GZ-giu" secondAttribute="leading" constant="-60" id="3QE-QD-XgG"/>
+                <constraint firstItem="ZHH-GZ-giu" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="6Vd-0M-VdR"/>
+                <constraint firstItem="GAP-N7-qSN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QTR-NN-NwL"/>
+                <constraint firstItem="GAP-N7-qSN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="68" id="py8-gd-Fu3"/>
+                <constraint firstItem="ZHH-GZ-giu" firstAttribute="width" secondItem="GAP-N7-qSN" secondAttribute="width" id="qLG-Xe-YmU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZHH-GZ-giu" secondAttribute="trailing" constant="75" id="w2V-t4-za2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="131"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap5eViewController" customModule="BaiTap_BaiTapAutoLAyout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y48-Ti-Eqd" userLabel="View1">
+                    <rect key="frame" x="12" y="408" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="y48-Ti-Eqd" secondAttribute="height" multiplier="1:1" id="RGx-Xf-aeu"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8t-bl-9qn" userLabel="View2">
+                    <rect key="frame" x="115.5" y="408" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="q8t-bl-9qn" secondAttribute="height" multiplier="1:1" id="hWJ-0B-juQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryu-P3-hwP" userLabel="View3">
+                    <rect key="frame" x="219" y="408" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ryu-P3-hwP" secondAttribute="height" multiplier="1:1" id="t6m-7D-hl3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rj0-T7-yKn" userLabel="View4">
+                    <rect key="frame" x="322.5" y="408" width="80" height="80"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rj0-T7-yKn" secondAttribute="height" multiplier="1:1" id="06e-qt-HRO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="rj0-T7-yKn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="1.75" id="0D1-rG-pBm"/>
+                <constraint firstItem="ryu-P3-hwP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3dW-LV-whP"/>
+                <constraint firstItem="y48-Ti-Eqd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4UN-IB-3xE"/>
+                <constraint firstItem="q8t-bl-9qn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="0.75" id="Cog-cu-n4u"/>
+                <constraint firstItem="y48-Ti-Eqd" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.193237" id="HRS-d6-h2Z"/>
+                <constraint firstItem="q8t-bl-9qn" firstAttribute="width" secondItem="y48-Ti-Eqd" secondAttribute="width" id="IKK-kE-tcW"/>
+                <constraint firstItem="ryu-P3-hwP" firstAttribute="height" secondItem="y48-Ti-Eqd" secondAttribute="height" id="PMi-YW-Rkv"/>
+                <constraint firstItem="rj0-T7-yKn" firstAttribute="width" secondItem="y48-Ti-Eqd" secondAttribute="width" id="Skl-CR-iEy"/>
+                <constraint firstItem="rj0-T7-yKn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lJj-MQ-wkx"/>
+                <constraint firstItem="q8t-bl-9qn" firstAttribute="height" secondItem="y48-Ti-Eqd" secondAttribute="height" id="lNM-Ax-S3Y"/>
+                <constraint firstItem="q8t-bl-9qn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="p8t-jt-wdH"/>
+                <constraint firstItem="y48-Ti-Eqd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="0.25" id="pqh-uH-JWQ"/>
+                <constraint firstItem="ryu-P3-hwP" firstAttribute="width" secondItem="y48-Ti-Eqd" secondAttribute="width" id="sRx-K7-jGw"/>
+                <constraint firstItem="ryu-P3-hwP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" multiplier="1.25" id="tEd-44-Yst"/>
+                <constraint firstItem="rj0-T7-yKn" firstAttribute="height" secondItem="y48-Ti-Eqd" secondAttribute="height" id="wSi-44-SMN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="127"/>
+        </view>
+    </objects>
+</document>
