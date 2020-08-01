@@ -17,6 +17,7 @@ final class LoginViewController: UIViewController {
     
     //MARK: - Properties
     private var count = 0
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ final class LoginViewController: UIViewController {
             passwordTextField.text = ""
         }
     }
+    
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -60,7 +62,7 @@ final class LoginViewController: UIViewController {
         let checkResult = ManagementData.checkInformation(username: username, pass: password)
         if checkResult {
             let homeViewController = HomeViewController()
-            HomeViewController.username = username
+            homeViewController.username = username
             navigationController?.pushViewController(homeViewController, animated: true)
         } else {
             errorLabel.isHidden = false
@@ -69,13 +71,14 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Objc functions
-    @objc func doneBarButtonItemPressed() {
+    @objc private func doneBarButtonItemPressed() {
         login()
     }
 }
 
-//MARK: -Extension
+//MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === usernameTextField {
             passwordTextField.becomeFirstResponder()

@@ -9,19 +9,12 @@
 import UIKit
 
 final class BaiTap4_2ViewController: UIViewController {
-
-    // MARK: - IBOutlets
-    
-    // MARK: - Propeties
-    
-    // MARK: - Initialize
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
     }
-    // MARK: - Override functions
     
     // MARK: - Private functions
     private func configNavigationBar() {
@@ -34,11 +27,4 @@ final class BaiTap4_2ViewController: UIViewController {
             , action: nil)
         navigationItem.rightBarButtonItem = peopleButton
     }
-    // MARK: - Public functions
-    
-    // MARK: - Objc functions
-    
-    // MARK: - IBActions
-
-
 }

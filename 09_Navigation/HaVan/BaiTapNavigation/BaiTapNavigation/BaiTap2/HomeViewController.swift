@@ -9,11 +9,12 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
+   
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameLabel: UILabel!
     
     // MARK: - Properties
-    static var username = ""
+    var username = ""
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -32,15 +33,15 @@ final class HomeViewController: UIViewController {
     }
     
     private func showUsername() {
-        usernameLabel.text = HomeViewController.username
+        usernameLabel.text = username
     }
     
     // MARK: - Objc functions
-    @objc func backLoginController() {
+    @objc private func backLoginController() {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc func turnToEditController() {
+    @objc private func turnToEditController() {
         let editViewController = EditViewController()
         navigationController?.pushViewController(editViewController, animated: true)
         editViewController.delegate = self
@@ -49,7 +50,7 @@ final class HomeViewController: UIViewController {
 
 //MARK: -Extension
 extension HomeViewController: EditViewControllerDelegate {
-    func controller(_ controller: EditViewController, perform action: EditViewController.Action) {
+    func controller(_ controller: EditViewController, needsPerform action: EditViewController.Action) {
         switch action {
         case .changeValue(with: let name):
             usernameLabel.text = name

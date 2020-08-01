@@ -13,6 +13,7 @@ protocol ProfileViewControllerDelegate: class {
 }
 
 final class ProfileViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet weak var personImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,9 +31,10 @@ final class ProfileViewController: UIViewController {
         configProfile()
         nameTextField.delegate = self
     }
+    
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+        nameTextField.resignFirstResponder()
     }
     
     // MARK: - Private functions
@@ -48,28 +50,27 @@ final class ProfileViewController: UIViewController {
     }
     
     private func backHome() {
-        guard let name = nameTextField.text else {
-            return
-        }
+        guard let name = nameTextField.text else { return }
         delegate?.controller(self, needsPerform: .changeValue(index: index, newName: name))
         navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Objc functions
-    @objc func backToHomeViewController() {
+    @objc private func backToHomeViewController() {
         backHome()
     }
 }
 
-//MARK: -Extension
+//MARK: - Extension
 extension ProfileViewController {
     enum Action {
         case changeValue(index: Int, newName: String)
     }
 }
 
-//MARK: -TextFieldDelegate
+//MARK: - UITextFieldDelegate
 extension ProfileViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         backHome()
         return true

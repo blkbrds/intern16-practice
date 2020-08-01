@@ -9,10 +9,11 @@
 import UIKit
 
 protocol EditViewControllerDelegate: class {
-    func controller(_ controller: EditViewController, perform action: EditViewController.Action)
+    func controller(_ controller: EditViewController, needsPerform action: EditViewController.Action)
 }
 
 final class EditViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
@@ -32,7 +33,9 @@ final class EditViewController: UIViewController {
     
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+        usernameTextField.resignFirstResponder()
+        newPasswordTextField.resignFirstResponder()
+        confirmNewPasswordTextField.resignFirstResponder()
     }
     
     // MARK: - Private functions
@@ -73,18 +76,17 @@ final class EditViewController: UIViewController {
     private func updateInformation() {
         if checkConditionTextField() {
             guard let name = usernameTextField.text else { return }
-            delegate?.controller(self, perform: .changeValue(with: name))
+            delegate?.controller(self, needsPerform: .changeValue(with: name))
             navigationController?.popViewController(animated: true)
         }
-        
     }
     
     // MARK: - Objc functions
-    @objc func backToHomeWithoutEdit() {
+    @objc private func backToHomeWithoutEdit() {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc func backToHomeWithEdit() {
+    @objc private func backToHomeWithEdit() {
         updateInformation()
     }
 }

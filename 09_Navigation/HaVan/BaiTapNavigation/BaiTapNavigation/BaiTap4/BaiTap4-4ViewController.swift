@@ -9,8 +9,8 @@
 import UIKit
 
 final class BaiTap4_4ViewController: UIViewController {
-
-     // MARK: - Life cycle
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
@@ -22,12 +22,10 @@ final class BaiTap4_4ViewController: UIViewController {
         let questionMarkButton = UIBarButtonItem(image: UIImage(named: "questionmark"), style: .plain, target: self, action: #selector(turnTo5ViewController))
         navigationItem.rightBarButtonItem = questionMarkButton
     }
-  
+    
     // MARK: - Objc functions
     @objc private func turnTo5ViewController() {
         let vc = BaiTap4_5ViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
-   
-
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 final class BaiTap3HomeViewController: UIViewController {
+    
     // MARK: - Properties
     private lazy var scrollView = UIScrollView()
     private var people: [People] = DataPeople.setDataOfPeople()
@@ -73,6 +74,7 @@ final class BaiTap3HomeViewController: UIViewController {
 
 // MARK: - MyClassDelegate
 extension BaiTap3HomeViewController: MyClassDelegate {
+    
     func view(_ view: MyClass, needsPerform action: MyClass.Action) {
         switch action {
         case .didTapImage(let index):
@@ -89,6 +91,7 @@ extension BaiTap3HomeViewController: MyClassDelegate {
 
 // MARK: - ProfileViewControllerDelegate
 extension BaiTap3HomeViewController: ProfileViewControllerDelegate {
+    
     func controller(_ viewController: ProfileViewController, needsPerform action: ProfileViewController.Action) {
         switch action {
         case .changeValue(index: let i, newName: let name):
@@ -101,4 +104,3 @@ extension BaiTap3HomeViewController: ProfileViewControllerDelegate {
         }
     }
 }
-

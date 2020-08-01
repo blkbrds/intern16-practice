@@ -9,6 +9,7 @@
 import Foundation
 
 final class ManagementData {
+    
     static func getData(key: String) -> Any? {
         if let path = Bundle.main.path(forResource: "UserData", ofType: "plist"), let myDict = NSDictionary(contentsOfFile: path){
             for acount in myDict {

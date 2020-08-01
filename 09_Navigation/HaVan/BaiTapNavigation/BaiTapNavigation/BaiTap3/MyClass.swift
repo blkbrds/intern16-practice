@@ -64,6 +64,7 @@ final class MyClass: UIView {
         imageView.image = UIImage(named: people.image)
     }
     
+    // MARK: - Public functions
     func updateName(newName: String) {
         usernameLabel.text = newName
     }
@@ -75,7 +76,7 @@ final class MyClass: UIView {
     }
 }
 
-//MARK: -Extension
+//MARK: - Extension
 extension MyClass {
     enum Action {
         case didTapImage(index: Int)

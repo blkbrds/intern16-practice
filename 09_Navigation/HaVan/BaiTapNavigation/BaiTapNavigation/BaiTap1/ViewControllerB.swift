@@ -9,13 +9,13 @@
 import UIKit
 
 final class ViewControllerB: UIViewController {
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ViewControllerB"
     }
-
+    
     // MARK: - IBActions
     @IBAction private func nextButtonTouchUpInside(_ sender: UIButton) {
         let viewControllerC = ViewControllerC()
@@ -25,5 +25,4 @@ final class ViewControllerB: UIViewController {
     @IBAction private func preButtonTouchUpInside(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
 }
