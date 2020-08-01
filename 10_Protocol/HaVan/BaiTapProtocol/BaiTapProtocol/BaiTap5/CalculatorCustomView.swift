@@ -57,6 +57,7 @@ final class CalculatorCustomView: UIView {
         xValueLabel.isHidden = false
         yValueLabel.isHidden = false
     }
+    
     private func setInitialStateButton(button: UIButton) {
         button.layer.cornerRadius = 15
         button.layer.borderColor = UIColor.orange.cgColor
@@ -76,7 +77,6 @@ final class CalculatorCustomView: UIView {
         controlButtonsView.layer.borderWidth = 1
         controlButtonsView.layer.borderColor = UIColor.blue.cgColor
         clearButton.layer.cornerRadius = 15
-        
     }
     
     private func changeButtonState(button: UIButton) {
@@ -85,7 +85,18 @@ final class CalculatorCustomView: UIView {
             button.setTitleColor(.white, for: .normal)
     }
     
-     func configValue() {
+    private func getXY() -> (x: Float, y: Float)? {
+        guard let result = datasource?.getData() else { return nil }
+        return (result.x, result.y)
+    }
+    
+    private func calculate(buttonName: String, firstNumber: Float, secondNumber: Float) -> Float {
+        let toantu = Calculator(firstNumber, secondNumber)
+        return Calculator.ketQua(toantu, op: Calculator.thucHienPhepTinh(phepTinh: buttonName))
+    }
+    
+    // MARK: - Public functions
+    func configValue() {
         showValueLabel()
         guard let x = getXY()?.x, let y = getXY()?.y else {
             xValueLabel.text = ""
@@ -94,16 +105,6 @@ final class CalculatorCustomView: UIView {
         }
         xValueLabel.text = String(x)
         yValueLabel.text = String(y)
-    }
-    
-    func getXY() -> (x: Float, y: Float)? {
-        guard let result = datasource?.getData() else { return nil }
-        return (result.x, result.y)
-    }
-    
-    private func calculate(buttonName: String, firstNumber: Float, secondNumber: Float) -> Float {
-        let toantu = Calculator(firstNumber, secondNumber)
-        return Calculator.ketQua(toantu, op: Calculator.thucHienPhepTinh(phepTinh: buttonName))
     }
 
     // MARK: - IBActions

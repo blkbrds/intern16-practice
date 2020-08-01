@@ -69,9 +69,7 @@ final class MienViewController: UIViewController {
     private func changeButtonState(button: UIButton) {
         button.backgroundColor = .init(red: 0, green: 0.2, blue: 1.0, alpha: 1)
         button.setTitleColor(.white, for: .normal)
-        guard let title = button.currentTitle else {
-            return
-        }
+        guard let title = button.currentTitle else { return }
         tenMien = title
     }
     
@@ -128,7 +126,6 @@ extension MienViewController: TinhViewControllerDelegate {
             break
         case .saveHuyenAndTinh(tenTinh: let tinh, tenHuyen: let huyen):
             delegate?.controller(self, needsPerform: .saveMienAndTinhAndHuyen(tenMien: tenMien, tenTinh: tinh, tenHuyen: huyen))
-            
         }
     }
 }

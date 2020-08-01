@@ -62,7 +62,7 @@ final class BaiTap4ViewController: UIViewController {
     }
 }
 
-// MARK: - SearchBarDelegate
+// MARK: - UISearchBarDelegate
 extension BaiTap4ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {

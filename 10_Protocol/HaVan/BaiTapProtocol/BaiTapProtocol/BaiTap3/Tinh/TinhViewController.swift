@@ -68,9 +68,7 @@ final class TinhViewController: UIViewController {
     private func changeButtonState(button: UIButton) {
         button.backgroundColor = .init(red: 0, green: 0.8, blue: 0.2, alpha: 1)
         button.setTitleColor(.white, for: .normal)
-        guard let title = button.currentTitle else {
-            return
-        }
+        guard let title = button.currentTitle else { return }
         tenTinh = title
     }
     
@@ -106,10 +104,9 @@ final class TinhViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func buttonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func buttonTouchUpInside(_ sender: UIButton) {
         setUAllButtonState(button: sender)
     }
-    
 }
 
 // MARK: - Extension
@@ -122,6 +119,7 @@ extension TinhViewController {
 
 // MARK: - HuyenViewControllerDelegate
 extension TinhViewController: HuyenViewControllerDelegate {
+    
     func controller(_ controller: HuyenViewController, needsPerform action: HuyenViewController.Action) {
         switch action {
         case .saveHuyen(tenHuyen: let huyen):

@@ -67,9 +67,7 @@ final class HuyenViewController: UIViewController {
     private func changeButtonState(button: UIButton) {
         button.backgroundColor = .init(red: 0.9, green: 0.1, blue: 0, alpha: 1)
         button.setTitleColor(.white, for: .normal)
-        guard let title = button.currentTitle else {
-            return
-        }
+        guard let title = button.currentTitle else { return }
         tenHuyen = title
     }
     
@@ -103,7 +101,7 @@ final class HuyenViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func buttonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func buttonTouchUpInside(_ sender: UIButton) {
         setUAllButtonState(button: sender)
     }
 }

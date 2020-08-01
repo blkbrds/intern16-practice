@@ -17,7 +17,7 @@ final class BaiTap5ViewController: UIViewController {
     @IBOutlet private weak var finalResultLabel: UILabel!
     
     // MARK: - Propeties
-    var newCalculator = CalculatorCustomView()
+    private var newCalculator = CalculatorCustomView()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -51,16 +51,14 @@ final class BaiTap5ViewController: UIViewController {
     private func hideCalculatorView() {
         UIView.animate(withDuration: 1.0, animations: {
             self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 350)
-        }) { _ in
-        }
+        })
     }
     
     // MARK: - IBActions
     @IBAction private func questionMarkButtonTouchUpInside(_ sender: UIButton) {
-       UIView.animate(withDuration: 1.0, animations: {
-                  self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 350, width: UIScreen.main.bounds.width, height: 350)
-              }) { _ in
-              }
+        UIView.animate(withDuration: 1.0, animations: {
+            self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 350, width: UIScreen.main.bounds.width, height: 350)
+        })
     }
 }
 
@@ -76,6 +74,7 @@ extension BaiTap5ViewController: CalculatorCustomViewDatasource {
 
 // MARK: - CalculatorCustomViewDelegate
 extension BaiTap5ViewController: CalculatorCustomViewDelegate {
+    
     func view(_ view: CalculatorCustomView, needsPerform action: CalculatorCustomView.Action) {
         switch action {
         case .deleteXY:
@@ -92,6 +91,7 @@ extension BaiTap5ViewController: CalculatorCustomViewDelegate {
 
 // MARK: - UITextFieldDelegate
 extension BaiTap5ViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === firstNumberTextField {
             secondNumberTextField.becomeFirstResponder()

@@ -17,16 +17,16 @@ enum Operator {
 }
 
 class Calculator {
-  
+    
     // MARK: - Properties
     private var firstNumber: Float = 0
     private var secondNumber: Float = 0
-  
+    
     init(_ firstNumber: Float, _ secondNumber: Float) {
         self.firstNumber = firstNumber
         self.secondNumber = secondNumber
     }
-
+    
     
     static func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber + secondNumber
@@ -82,8 +82,6 @@ class Calculator {
             return phanTram(toanTu.firstNumber)
         case .power:
             return luyThua(toanTu.firstNumber, toanTu.secondNumber)
-            }
+        }
     }
-
 }
-

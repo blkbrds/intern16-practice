@@ -31,7 +31,7 @@ final class DiaDiemViewController: UIViewController {
     }
     
     // MARK: - Objc functions
-    @objc func turnToTinhViewController() {
+    @objc private func turnToTinhViewController() {
         let mienVC = MienViewController()
         mienVC.delegate = self
         navigationController?.pushViewController(mienVC, animated: true)
@@ -51,4 +51,3 @@ extension DiaDiemViewController: MienViewControllerDelegate {
         }
     }
 }
-
