@@ -35,6 +35,14 @@
 		5127CCBC24D400E4007CBC7B /* Bai4Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCB824D400E4007CBC7B /* Bai4Data.plist */; };
 		5127CCBD24D400E4007CBC7B /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127CCB924D400E4007CBC7B /* Bai4ViewController.swift */; };
 		5127CCBE24D400E4007CBC7B /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5127CCBA24D400E4007CBC7B /* Bai4ViewController.xib */; };
+		516BADA624D4EFEA00E84A9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BADA424D4EFEA00E84A9C /* HomeViewController.swift */; };
+		516BADA724D4EFEA00E84A9C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516BADA524D4EFEA00E84A9C /* HomeViewController.xib */; };
+		516BADA924D4F03B00E84A9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BADA824D4F03B00E84A9C /* User.swift */; };
+		516BADAB24D4F04600E84A9C /* CustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BADAA24D4F04600E84A9C /* CustomCellModel.swift */; };
+		516BADAD24D4F05600E84A9C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BADAC24D4F05600E84A9C /* HomeModel.swift */; };
+		516BADAF24D4F07500E84A9C /* Data9.plist in Resources */ = {isa = PBXBuildFile; fileRef = 516BADAE24D4F07500E84A9C /* Data9.plist */; };
+		516BADB224D4F23D00E84A9C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BADB024D4F23D00E84A9C /* CustomTableViewCell.swift */; };
+		516BADB324D4F23D00E84A9C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516BADB124D4F23D00E84A9C /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +76,14 @@
 		5127CCB824D400E4007CBC7B /* Bai4Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Bai4Data.plist; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4Data.plist"; sourceTree = "<group>"; };
 		5127CCB924D400E4007CBC7B /* Bai4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai4ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.swift"; sourceTree = "<group>"; };
 		5127CCBA24D400E4007CBC7B /* Bai4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai4ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai4/Bai4ViewController.xib"; sourceTree = "<group>"; };
+		516BADA424D4EFEA00E84A9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/HomeViewController.swift"; sourceTree = "<group>"; };
+		516BADA524D4EFEA00E84A9C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/HomeViewController.xib"; sourceTree = "<group>"; };
+		516BADA824D4F03B00E84A9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/User.swift"; sourceTree = "<group>"; };
+		516BADAA24D4F04600E84A9C /* CustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellModel.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/CustomCellModel.swift"; sourceTree = "<group>"; };
+		516BADAC24D4F05600E84A9C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/HomeModel.swift"; sourceTree = "<group>"; };
+		516BADAE24D4F07500E84A9C /* Data9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data9.plist; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/Data9.plist"; sourceTree = "<group>"; };
+		516BADB024D4F23D00E84A9C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/CustomTableViewCell.swift"; sourceTree = "<group>"; };
+		516BADB124D4F23D00E84A9C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai9/CustomTableViewCell.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +179,14 @@
 		5127CCBF24D40B1A007CBC7B /* Bai9 */ = {
 			isa = PBXGroup;
 			children = (
+				516BADAE24D4F07500E84A9C /* Data9.plist */,
+				516BADA424D4EFEA00E84A9C /* HomeViewController.swift */,
+				516BADA524D4EFEA00E84A9C /* HomeViewController.xib */,
+				516BADA824D4F03B00E84A9C /* User.swift */,
+				516BADAA24D4F04600E84A9C /* CustomCellModel.swift */,
+				516BADAC24D4F05600E84A9C /* HomeModel.swift */,
+				516BADB024D4F23D00E84A9C /* CustomTableViewCell.swift */,
+				516BADB124D4F23D00E84A9C /* CustomTableViewCell.xib */,
 			);
 			path = Bai9;
 			sourceTree = "<group>";
@@ -261,6 +285,9 @@
 				5127CCB524D400C5007CBC7B /* Bai5ViewController.xib in Resources */,
 				510B372924D2C13B00F118A5 /* Bai3DetailViewController.xib in Resources */,
 				510B371324D2B88300F118A5 /* Bai1ViewController.xib in Resources */,
+				516BADA724D4EFEA00E84A9C /* HomeViewController.xib in Resources */,
+				516BADB324D4F23D00E84A9C /* CustomTableViewCell.xib in Resources */,
+				516BADAF24D4F07500E84A9C /* Data9.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,13 +302,18 @@
 				5127CCBB24D400E4007CBC7B /* Bai4Model.swift in Sources */,
 				5127CCBD24D400E4007CBC7B /* Bai4ViewController.swift in Sources */,
 				510B372424D2C0C000F118A5 /* Bai3ViewController.swift in Sources */,
+				516BADAD24D4F05600E84A9C /* HomeModel.swift in Sources */,
+				516BADB224D4F23D00E84A9C /* CustomTableViewCell.swift in Sources */,
 				5127CCB424D400C5007CBC7B /* Bai5ViewController.swift in Sources */,
 				510B372824D2C13B00F118A5 /* Bai3DetailViewController.swift in Sources */,
 				5127CCAE24D3FEE5007CBC7B /* Bai7_8Model.swift in Sources */,
+				516BADA924D4F03B00E84A9C /* User.swift in Sources */,
 				510B371924D2BC0100F118A5 /* Bai2ViewController.swift in Sources */,
 				510B372024D2BC2500F118A5 /* Bai2Model.swift in Sources */,
+				516BADAB24D4F04600E84A9C /* CustomCellModel.swift in Sources */,
 				5127CCB324D400C5007CBC7B /* Bai5DetailViewController.swift in Sources */,
 				510B36FC24D2B84700F118A5 /* AppDelegate.swift in Sources */,
+				516BADA624D4EFEA00E84A9C /* HomeViewController.swift in Sources */,
 				510B36FE24D2B84700F118A5 /* SceneDelegate.swift in Sources */,
 				510B371224D2B88300F118A5 /* Bai1ViewController.swift in Sources */,
 				5127CCA724D3FDA2007CBC7B /* Bai7_8ViewController.swift in Sources */,
