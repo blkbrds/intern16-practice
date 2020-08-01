@@ -51,6 +51,8 @@
 		52BD166624D2B0FC002B36D9 /* BaiTap12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD166424D2B0FC002B36D9 /* BaiTap12ViewController.swift */; };
 		52BD166724D2B0FC002B36D9 /* BaiTap12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD166524D2B0FC002B36D9 /* BaiTap12ViewController.xib */; };
 		52BD166924D2B7CE002B36D9 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD166824D2B7CE002B36D9 /* Number.swift */; };
+		52BD166C24D4499A002B36D9 /* CustomInsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD166A24D4499A002B36D9 /* CustomInsertViewController.swift */; };
+		52BD166D24D4499A002B36D9 /* CustomInsertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD166B24D4499A002B36D9 /* CustomInsertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,8 @@
 		52BD166424D2B0FC002B36D9 /* BaiTap12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap12ViewController.swift; sourceTree = "<group>"; };
 		52BD166524D2B0FC002B36D9 /* BaiTap12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap12ViewController.xib; sourceTree = "<group>"; };
 		52BD166824D2B7CE002B36D9 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		52BD166A24D4499A002B36D9 /* CustomInsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInsertViewController.swift; sourceTree = "<group>"; };
+		52BD166B24D4499A002B36D9 /* CustomInsertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInsertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,8 @@
 				52BD166424D2B0FC002B36D9 /* BaiTap12ViewController.swift */,
 				52BD166524D2B0FC002B36D9 /* BaiTap12ViewController.xib */,
 				52BD166824D2B7CE002B36D9 /* Number.swift */,
+				52BD166A24D4499A002B36D9 /* CustomInsertViewController.swift */,
+				52BD166B24D4499A002B36D9 /* CustomInsertViewController.xib */,
 			);
 			path = BaiTap12;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				52BD165824D266E1002B36D9 /* AddressBook.plist in Resources */,
 				5272609D24CFDF9E00F28539 /* BaiTap2TableViewController.xib in Resources */,
 				52BD162F24D02A94002B36D9 /* BaiTap8ViewController.xib in Resources */,
+				52BD166D24D4499A002B36D9 /* CustomInsertViewController.xib in Resources */,
 				52BD165C24D26728002B36D9 /* PeopleTableViewCell.xib in Resources */,
 				527260AB24D0019900F28539 /* DetailViewController.xib in Resources */,
 				52BD162A24D02410002B36D9 /* BaiTap7HomeViewController.xib in Resources */,
@@ -362,6 +369,7 @@
 				52BD166924D2B7CE002B36D9 /* Number.swift in Sources */,
 				527260A624CFFCFA00F28539 /* BaiTap3HomeViewController.swift in Sources */,
 				52BD162924D02410002B36D9 /* BaiTap7HomeViewController.swift in Sources */,
+				52BD166C24D4499A002B36D9 /* CustomInsertViewController.swift in Sources */,
 				5272608124CFDC0900F28539 /* AppDelegate.swift in Sources */,
 				52BD164B24D15993002B36D9 /* Message.swift in Sources */,
 				52BD165024D15EA4002B36D9 /* MessageTableViewCell.swift in Sources */,
