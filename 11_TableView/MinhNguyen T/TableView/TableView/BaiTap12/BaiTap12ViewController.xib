@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap12ViewController" customModule="TableView" customModuleProvider="target">
+            <connections>
+                <outlet property="editButton" destination="KBo-Ja-4bN" id="OXc-Xi-3CX"/>
+                <outlet property="myTableView" destination="BDv-gZ-QH6" id="SpX-fL-oAf"/>
+                <outlet property="selectAllButton" destination="QbZ-1o-CRy" id="zs9-To-0CA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avq-j8-kww">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Table reorder" id="bDJ-i9-lhq">
+                            <barButtonItem key="leftBarButtonItem" title="DeleteAll" id="4hq-QF-V3f">
+                                <connections>
+                                    <action selector="handleDeleteAllButtonTouchUpInside:" destination="-1" id="CuF-8s-PuX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Edit" id="KBo-Ja-4bN">
+                                <connections>
+                                    <action selector="handleEditButtonTouchUpInside:" destination="-1" id="5n4-qw-YkL"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-gZ-QH6">
+                    <rect key="frame" x="0.0" y="88" width="414" height="778"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="She-rF-Bt6">
+                    <rect key="frame" x="0.0" y="816" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbZ-1o-CRy">
+                            <rect key="frame" x="14" y="10" width="65" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Select All"/>
+                            <connections>
+                                <action selector="selectAllButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="kG1-NF-jGp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fGq-6E-cKa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="BDv-gZ-QH6" firstAttribute="bottom" secondItem="She-rF-Bt6" secondAttribute="bottom" id="21U-m5-2NN"/>
+                <constraint firstItem="Avq-j8-kww" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5kQ-mj-z96"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Avq-j8-kww" secondAttribute="trailing" id="AYh-xE-y8j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BDv-gZ-QH6" secondAttribute="trailing" id="Dan-ZY-1uA"/>
+                <constraint firstAttribute="bottom" secondItem="She-rF-Bt6" secondAttribute="bottom" constant="30" id="Fqh-rn-Xr3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="She-rF-Bt6" secondAttribute="trailing" id="NdH-xt-7qd"/>
+                <constraint firstItem="BDv-gZ-QH6" firstAttribute="top" secondItem="Avq-j8-kww" secondAttribute="bottom" id="b3b-Eh-t67"/>
+                <constraint firstItem="She-rF-Bt6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hNW-ut-l34"/>
+                <constraint firstItem="BDv-gZ-QH6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="inR-NG-cEg"/>
+                <constraint firstItem="Avq-j8-kww" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yC0-Xz-yMb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </view>
+    </objects>
+</document>

@@ -19,7 +19,6 @@ final class BaiTap1ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "HOME"
         myTableView.dataSource = self
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
