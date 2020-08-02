@@ -17,19 +17,23 @@ protocol  ProvinceViewControllerDataSource: class {
 
 class ProvinceViewController: UIViewController {
 
+    // MARK: - Outlet
     @IBOutlet private weak var stackView: UIStackView!
 
+    // MARK: - Properties
     private var provinceButtons: [UIButton] = []
     private var tinhs: [Tinh] = []
     weak var delegate: ProvinceViewControllerDelegate?
     weak var dataSource: ProvinceViewControllerDataSource?
     private var selectedIndex = 0
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
     
+    // MARK: - Function
     private func configUI() {
         title = "Tỉnh"
         let districtButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(goToDistrict))
@@ -53,6 +57,7 @@ class ProvinceViewController: UIViewController {
         }
     }
     
+    // MARK: - Objc
     @objc private func goToDistrict(_ sender: UIButton) {
         let districtView = DistrictViewController()
         districtView.delegate = self
@@ -69,6 +74,7 @@ class ProvinceViewController: UIViewController {
     }
 }
 
+// MARK: - Extension Delegate
 extension ProvinceViewController: DistrictViewControllerDelegate {
     func controller(_ controller: DistrictViewController, needsPerform action: Action) {
         switch action {
@@ -80,6 +86,7 @@ extension ProvinceViewController: DistrictViewControllerDelegate {
     }
 }
 
+// MARK: - Extension Datasource
 extension ProvinceViewController: DistrictViewControllerDataSource {
     func getDistrict() -> [Huyen] {
         return tinhs[selectedIndex].huyens

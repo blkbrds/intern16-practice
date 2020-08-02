@@ -18,19 +18,23 @@ protocol CountryViewControllerDataSource: class {
 
 final class CountryViewController: UIViewController {
 
+    // MARK: - Outlet
     @IBOutlet private weak var stackView: UIStackView!
 
+    // MARK: - Function
     private var countryButtons: [UIButton] = []
     private var miens: [Mien] = []
     weak var delegate: CountryViewControllerDelegate?
     weak var dataSource: CountryViewControllerDataSource?
     private var selectedIndex = 0
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
 
+    // MARK: - Function
     private func configUI() {
         title = "Miền"
         let provinceButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(goToProvinceVC))
@@ -54,6 +58,7 @@ final class CountryViewController: UIViewController {
         }
     }
     
+    // MARK: - Objc
     @objc private func goToProvinceVC(_ sender: UIButton) {
         let provinceView = ProvinceViewController()
         provinceView.delegate = self
@@ -71,6 +76,7 @@ final class CountryViewController: UIViewController {
     }
 }
 
+// MARK: - Extension Delegate
 extension CountryViewController: ProvinceViewControllerDelegate {
     func controller(_ controller: ProvinceViewController, needsPerform action: Action) {
         switch action {
@@ -85,6 +91,7 @@ extension CountryViewController: ProvinceViewControllerDelegate {
     
 }
 
+// MARK: - Extension DataSource
 extension CountryViewController: ProvinceViewControllerDataSource {
     func getProvince() -> [Tinh] {
         return miens[selectedIndex].tinhs

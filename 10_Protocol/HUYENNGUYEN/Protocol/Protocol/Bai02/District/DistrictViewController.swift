@@ -17,18 +17,22 @@ protocol DistrictViewControllerDataSource: class {
 
 class DistrictViewController: UIViewController {
     
+    // MARK: - Outlet
     @IBOutlet private weak var stackView: UIStackView!
 
-    var districtButtons: [UIButton] = []
-    var huyens: [Huyen] = []
+    // MARK: - Properties
+    private var districtButtons: [UIButton] = []
+    private var huyens: [Huyen] = []
     weak var delegate: DistrictViewControllerDelegate?
     weak var dataSoure: DistrictViewControllerDataSource?
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
     
+    // MARK: - Function
     private func configUI() {
         title = "Huyện"
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(goToLocation))
@@ -37,7 +41,7 @@ class DistrictViewController: UIViewController {
         if let dataSource = dataSoure {
             huyens = dataSource.getDistrict()
         }
-        
+    
         for (index, item) in huyens.enumerated() {
             let button = UIButton()
             button.setTitleColor(.black, for: .normal)
@@ -52,6 +56,7 @@ class DistrictViewController: UIViewController {
         }
     }
     
+    // MARK: - Objc
     @objc private func goToLocation(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }

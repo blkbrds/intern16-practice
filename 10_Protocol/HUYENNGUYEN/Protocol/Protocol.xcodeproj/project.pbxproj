@@ -16,6 +16,13 @@
 		8328D1C524CFC9EB0099DC25 /* DistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D1C324CFC9EB0099DC25 /* DistrictViewController.swift */; };
 		8328D1C624CFC9EB0099DC25 /* DistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328D1C424CFC9EB0099DC25 /* DistrictViewController.xib */; };
 		83298C6224D012A100BF0A4A /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83298C6124D012A100BF0A4A /* DataManagement.swift */; };
+		832B1E1624D5731D0052DE49 /* OperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1E1524D5731D0052DE49 /* OperatorView.swift */; };
+		832B1E1824D573340052DE49 /* OperatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1E1724D573340052DE49 /* OperatorView.xib */; };
+		832D800C24D2BB1700BFCAE1 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D800A24D2BB1700BFCAE1 /* CalculatorViewController.swift */; };
+		832D800D24D2BB1700BFCAE1 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832D800B24D2BB1700BFCAE1 /* CalculatorViewController.xib */; };
+		832FA79A24D26EF9006265A5 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FA79824D26EF9006265A5 /* CountryListViewController.swift */; };
+		832FA79B24D26EF9006265A5 /* CountryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FA79924D26EF9006265A5 /* CountryListViewController.xib */; };
+		832FA79D24D27685006265A5 /* DataCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FA79C24D27685006265A5 /* DataCountry.swift */; };
 		836722C424CA73E400AD6CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836722C324CA73E400AD6CD8 /* AppDelegate.swift */; };
 		836722C624CA73E400AD6CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836722C524CA73E400AD6CD8 /* SceneDelegate.swift */; };
 		836722C824CA73E400AD6CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836722C724CA73E400AD6CD8 /* ViewController.swift */; };
@@ -32,6 +39,13 @@
 		8328D1C324CFC9EB0099DC25 /* DistrictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictViewController.swift; sourceTree = "<group>"; };
 		8328D1C424CFC9EB0099DC25 /* DistrictViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistrictViewController.xib; sourceTree = "<group>"; };
 		83298C6124D012A100BF0A4A /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
+		832B1E1524D5731D0052DE49 /* OperatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorView.swift; sourceTree = "<group>"; };
+		832B1E1724D573340052DE49 /* OperatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperatorView.xib; sourceTree = "<group>"; };
+		832D800A24D2BB1700BFCAE1 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		832D800B24D2BB1700BFCAE1 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		832FA79824D26EF9006265A5 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
+		832FA79924D26EF9006265A5 /* CountryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryListViewController.xib; sourceTree = "<group>"; };
+		832FA79C24D27685006265A5 /* DataCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCountry.swift; sourceTree = "<group>"; };
 		836722C024CA73E400AD6CD8 /* Protocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836722C324CA73E400AD6CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836722C524CA73E400AD6CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +80,38 @@
 		83298C6024D004EB00BF0A4A /* Bai04 */ = {
 			isa = PBXGroup;
 			children = (
+				832FA79824D26EF9006265A5 /* CountryListViewController.swift */,
+				832FA79924D26EF9006265A5 /* CountryListViewController.xib */,
+				832FA79C24D27685006265A5 /* DataCountry.swift */,
 			);
 			path = Bai04;
+			sourceTree = "<group>";
+		};
+		832D800924D2BADC00BFCAE1 /* Bai05 */ = {
+			isa = PBXGroup;
+			children = (
+				832D801324D2BCAB00BFCAE1 /* Operator */,
+				832D801224D2BC7300BFCAE1 /* Home */,
+			);
+			path = Bai05;
+			sourceTree = "<group>";
+		};
+		832D801224D2BC7300BFCAE1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				832D800A24D2BB1700BFCAE1 /* CalculatorViewController.swift */,
+				832D800B24D2BB1700BFCAE1 /* CalculatorViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		832D801324D2BCAB00BFCAE1 /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				832B1E1524D5731D0052DE49 /* OperatorView.swift */,
+				832B1E1724D573340052DE49 /* OperatorView.xib */,
+			);
+			path = Operator;
 			sourceTree = "<group>";
 		};
 		832F3D7C24D15688004D4789 /* Location */ = {
@@ -125,6 +169,7 @@
 		836722C224CA73E400AD6CD8 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				832D800924D2BADC00BFCAE1 /* Bai05 */,
 				83298C6024D004EB00BF0A4A /* Bai04 */,
 				8328D1B624CFC9800099DC25 /* Bai02 */,
 				836722D724CA747C00AD6CD8 /* Bai01 */,
@@ -202,11 +247,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832B1E1824D573340052DE49 /* OperatorView.xib in Resources */,
 				8328D1C624CFC9EB0099DC25 /* DistrictViewController.xib in Resources */,
+				832FA79B24D26EF9006265A5 /* CountryListViewController.xib in Resources */,
 				8328D1C224CFC9C50099DC25 /* ProvinceViewController.xib in Resources */,
 				836722CD24CA73E500AD6CD8 /* Assets.xcassets in Resources */,
 				8328D1BA24CFC99E0099DC25 /* LocationViewController.xib in Resources */,
 				8328D1BE24CFC9B30099DC25 /* CountryViewController.xib in Resources */,
+				832D800D24D2BB1700BFCAE1 /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +267,15 @@
 			files = (
 				836722C824CA73E400AD6CD8 /* ViewController.swift in Sources */,
 				8328D1C524CFC9EB0099DC25 /* DistrictViewController.swift in Sources */,
+				832D800C24D2BB1700BFCAE1 /* CalculatorViewController.swift in Sources */,
 				836722C424CA73E400AD6CD8 /* AppDelegate.swift in Sources */,
 				836722C624CA73E400AD6CD8 /* SceneDelegate.swift in Sources */,
+				832FA79D24D27685006265A5 /* DataCountry.swift in Sources */,
 				8328D1BD24CFC9B30099DC25 /* CountryViewController.swift in Sources */,
 				8328D1C124CFC9C50099DC25 /* ProvinceViewController.swift in Sources */,
+				832B1E1624D5731D0052DE49 /* OperatorView.swift in Sources */,
 				83298C6224D012A100BF0A4A /* DataManagement.swift in Sources */,
+				832FA79A24D26EF9006265A5 /* CountryListViewController.swift in Sources */,
 				8328D1B924CFC99E0099DC25 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
