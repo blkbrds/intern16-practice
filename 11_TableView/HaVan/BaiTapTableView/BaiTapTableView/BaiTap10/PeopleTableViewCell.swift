@@ -14,6 +14,7 @@ final class PeopleTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var phoneLabel: UILabel!
+    @IBOutlet private weak var personImageView: UIImageView!
     // MARK: - Propeties
     
     // MARK: - Initialize
@@ -22,6 +23,7 @@ final class PeopleTableViewCell: UITableViewCell {
    override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
            super.setSelected(selected, animated: animated)
@@ -32,6 +34,7 @@ final class PeopleTableViewCell: UITableViewCell {
     func updateCell(name: String, phone: String) {
         nameLabel.text = name
         phoneLabel.text = phone
+        personImageView.image = UIImage(named: "sushi")
     }
     // MARK: - Objc functions
     

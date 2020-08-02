@@ -50,6 +50,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="nameLabel" destination="mVM-ge-pHT" id="Uyo-nI-YHn"/>
+                <outlet property="personImageView" destination="O4x-95-bEM" id="6e9-H7-nAP"/>
                 <outlet property="phoneLabel" destination="91f-oY-ZKs" id="jxp-AO-pt7"/>
             </connections>
             <point key="canvasLocation" x="164.49275362318841" y="123.54910714285714"/>
