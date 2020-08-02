@@ -9,11 +9,13 @@
 import UIKit
 
 final class Bai4ViewController: UIViewController {
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+    
     // MARK: - Private methods
     private func configUI() {
         title = "Gradient NavigationBar"

@@ -15,22 +15,23 @@ final class ViewControllerE: UIViewController {
         super.viewDidLoad()
         title = "ViewController E"
     }
+    
     // MARK: - IBActions
     @IBAction private func popRootTouchUpInside(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func popBControllerTouchUpInside(_ sender: UIButton) {
+    @IBAction private func popBControllerTouchUpInside(_ sender: UIButton) {
         guard let vc = navigationController?.viewControllers.first(where: { $0 is ViewControllerB }) else { return }
         navigationController?.popToViewController(vc, animated: true)
     }
     
-    @IBAction func popCControllerTouchUpInside(_ sender: UIButton) {
+    @IBAction private func popCControllerTouchUpInside(_ sender: UIButton) {
         guard let vc = navigationController?.viewControllers.first(where: { $0 is ViewControllerC }) else { return }
         navigationController?.popToViewController(vc, animated: true)
     }
     
-    @IBAction func popDControllerTouchUpInside(_ sender: UIButton) {
+    @IBAction private func popDControllerTouchUpInside(_ sender: UIButton) {
         guard let vc = navigationController?.viewControllers.first(where: { $0 is ViewControllerD }) else { return }
         navigationController?.popToViewController(vc, animated: true)
     }

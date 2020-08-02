@@ -9,13 +9,14 @@
 import UIKit
 
 final class ViewControllerA: UIViewController {
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ViewController A"
     }
     
-    //MARK: - IBActions
+    // MARK: - IBActions
     @IBAction private func pushViewTouchUpInside(_sender: UIButton) {
         let nextView = ViewControllerB()
         navigationController?.pushViewController(nextView, animated: true)

@@ -47,8 +47,8 @@ final class Avatar: UIView {
     }
     
     convenience init(frame: CGRect, index: Int, name: String) {
-      self.init(frame: frame)
-      self.index = index
+        self.init(frame: frame)
+        self.index = index
     }
     
     // MARK: - Objc funtions

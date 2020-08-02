@@ -14,6 +14,7 @@ protocol EditViewDelegate: class {
 }
 
 final class EditViewController: UIViewController {
+    
     // MARK: - IBOulets
     @IBOutlet private weak var userNameTextField: UITextField!
     
@@ -39,7 +40,7 @@ final class EditViewController: UIViewController {
     @objc private func popLoginTouchUpInside() {
         navigationController?.popViewController(animated: true)
         if let delegate = delegate {
-        delegate.updateUser(view: self, user: userNameTextField.text!)
+            delegate.updateUser(view: self, user: userNameTextField.text!)
+        }
     }
-}
 }

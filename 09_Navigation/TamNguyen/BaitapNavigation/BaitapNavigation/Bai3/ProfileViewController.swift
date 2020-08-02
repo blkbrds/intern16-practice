@@ -31,7 +31,7 @@ final class ProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneButton
         nameTextField.text = username
         avatarImageView.image = image
-        }
+    }
     
     @objc private func popHomeViewTouchUpInside() {
         navigationController?.popToRootViewController(animated: true)

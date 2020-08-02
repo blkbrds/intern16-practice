@@ -34,11 +34,12 @@ final class HomeViewController: UIViewController {
     
     @objc private func pushEditTouchUpInside() {
         let nextEditView = EditViewController()
-         nextEditView.delegate = self
+        nextEditView.delegate = self
         navigationController?.pushViewController(nextEditView, animated: true)
     }
 }
 
+// MARK: - Extension
 extension HomeViewController: EditViewDelegate {
     func updateUser(view: EditViewController, user: String) {
         nameLabel.text = user
