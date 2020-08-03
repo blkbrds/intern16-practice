@@ -26,13 +26,13 @@ final class Bai3ViewController: UIViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: 10, width: screenSize.width, height: screenSize.height))
         let space: CGFloat = 10
-        let widthUserView: CGFloat = 110
-        let heightUserView: CGFloat = 165
+        let userViewWidth: CGFloat = 110
+        let userViewHeight: CGFloat = 165
         var yView: CGFloat = 10
-        var xView: CGFloat = (screenSize.width - widthUserView * 3 - 2 * space) / 2
+        var xView: CGFloat = (screenSize.width - userViewWidth * 3 - 2 * space) / 2
         let numberUserInRow = names.count / 3
-        let heightOfScrollView = heightUserView * CGFloat(numberUserInRow) + space * CGFloat((numberUserInRow - 1))
-        let heightOfScrollView1 = heightUserView * (CGFloat(numberUserInRow) + 1) + space * CGFloat((numberUserInRow - 1))
+        let heightOfScrollView = userViewHeight * CGFloat(numberUserInRow) + space * CGFloat((numberUserInRow - 1))
+        let heightOfScrollView1 = userViewHeight * (CGFloat(numberUserInRow) + 1) + space * CGFloat((numberUserInRow - 1))
         
         if names.count % 3 == 0 {
             scrollView.contentSize = CGSize(width: screenSize.width,
@@ -43,17 +43,17 @@ final class Bai3ViewController: UIViewController {
         view.addSubview(scrollView)
         
         for index in 0..<names.count {
-            let frame = CGRect(x: xView, y: yView, width: widthUserView, height: heightUserView)
+            let frame = CGRect(x: xView, y: yView, width: userViewWidth, height: userViewHeight)
             let avartar = Avatar(frame: frame, index: index, name: names[index])
             avartar.delegate = self
             avartar.usernameLabel.text = names[index]
             scrollView.addSubview(avartar)
 
-            if xView + widthUserView > screenSize.width - xView {
-                yView += heightUserView + space
-                xView = (screenSize.width - widthUserView * 3 - 2 * space) / 2
+            if xView + userViewWidth > screenSize.width - xView {
+                yView += userViewHeight + space
+                xView = (screenSize.width - userViewWidth * 3 - 2 * space) / 2
             } else {
-                xView += widthUserView + space
+                xView += userViewWidth + space
             }
         }
     }
