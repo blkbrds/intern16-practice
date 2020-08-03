@@ -7,15 +7,15 @@
 //
 
 import Foundation
-struct Country {
+struct Countries {
     var name: String
 }
 final class DataCountry {
-    static let countries: [Country] = {
-        let country1 = Country(name: "Quảng Nam")
-        let country2 = Country(name: "Đà Nẵng")
-        let country3 = Country(name: "Hồ Chí Minh")
-        let country4 = Country(name: "Hà Nội")
+    static let countries: [Countries] = {
+        let country1 = Countries(name: "Quảng Nam")
+        let country2 = Countries(name: "Đà Nẵng")
+        let country3 = Countries(name: "Hồ Chí Minh")
+        let country4 = Countries(name: "Hà Nội")
         
         return [country1, country2, country3, country4]
     }()

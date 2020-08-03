@@ -12,7 +12,8 @@ protocol Chim: DongVat {
 protocol Ca: DongVat {
     var isBoi: Bool { get set }
 }
-class caChuon: Chim, Ca {
+
+class CaChuon: Chim, Ca {
     var isBay: Bool = true
     
     var isBoi: Bool = true
@@ -21,19 +22,22 @@ class caChuon: Chim, Ca {
         return "Ca chuon"
     }
 }
-class bo: Thu {
+
+class Bo: Thu {
     func ten() -> String {
         return "Bo"
     }
     var isDi: Bool = true
 }
-class ga: Chim {
+
+class Ga: Chim {
     var isBay: Bool = true
     func ten() -> String {
         return "Ga"
     }
 }
-class vit: Chim, Thu, Ca {
+
+class Vit: Chim, Thu, Ca {
     var isDi: Bool = true
     var isBay: Bool = true
     var isBoi: Bool = true
@@ -41,33 +45,38 @@ class vit: Chim, Thu, Ca {
         return "Vit"
     }
 }
-class caMap: Ca {
+
+class CaMap: Ca {
     var isBoi: Bool = true
     func ten() -> String {
         return "Ca Map"
     }
 }
-class heo: Thu {
+
+class Heo: Thu {
     var isDi: Bool = true
     func ten() -> String {
         return "Heo"
     }
 }
-class haiCau: Thu, Ca {
+
+class HaiCau: Thu, Ca {
     var isBoi: Bool = true
     var isDi: Bool = true
     func ten() -> String {
         return "Hai Cau"
     }
 }
-class doi: Chim, Thu {
+
+class Doi: Chim, Thu {
     var isDi: Bool = true
     var isBay: Bool = true
     func ten() -> String {
         return "Doi"
     }
 }
-class caSau: Ca, Thu {
+
+class CaSau: Ca, Thu {
     var isBoi: Bool = true
     var isDi: Bool = true
     func ten() -> String {

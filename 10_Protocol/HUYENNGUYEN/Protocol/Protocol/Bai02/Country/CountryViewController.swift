@@ -13,7 +13,7 @@ protocol CountryViewControllerDelegate: class {
 }
 
 protocol CountryViewControllerDataSource: class {
-    func getCountry() -> [Mien]
+    func getCountry() -> [Country]
 }
 
 final class CountryViewController: UIViewController {
@@ -23,7 +23,7 @@ final class CountryViewController: UIViewController {
 
     // MARK: - Function
     private var countryButtons: [UIButton] = []
-    private var miens: [Mien] = []
+    private var countries: [Country] = []
     weak var delegate: CountryViewControllerDelegate?
     weak var dataSource: CountryViewControllerDataSource?
     private var selectedIndex = 0
@@ -41,10 +41,10 @@ final class CountryViewController: UIViewController {
         navigationItem.rightBarButtonItem = provinceButton
         
         if let dataSource = dataSource {
-            miens = dataSource.getCountry()
+            countries = dataSource.getCountry()
         }
         
-        for (index, item) in miens.enumerated() {
+        for (index, item) in countries.enumerated() {
             let button = UIButton()
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = .gray
@@ -71,7 +71,7 @@ final class CountryViewController: UIViewController {
             button.backgroundColor = .gray
         }
         sender.backgroundColor = .red
-        delegate?.controller(self, needsPerform: .sendCountry(miens[sender.tag].name))
+        delegate?.controller(self, needsPerform: .sendCountry(countries[sender.tag].name))
         selectedIndex = sender.tag
     }
 }
@@ -93,7 +93,7 @@ extension CountryViewController: ProvinceViewControllerDelegate {
 
 // MARK: - Extension DataSource
 extension CountryViewController: ProvinceViewControllerDataSource {
-    func getProvince() -> [Tinh] {
-        return miens[selectedIndex].tinhs
+    func getProvince() -> [Province] {
+        return countries[selectedIndex].provinces
     }
 }

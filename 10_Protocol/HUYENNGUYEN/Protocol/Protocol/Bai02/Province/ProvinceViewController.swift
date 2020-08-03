@@ -12,7 +12,7 @@ protocol ProvinceViewControllerDelegate: class {
     func controller(_ controller: ProvinceViewController, needsPerform action: Action)
 }
 protocol  ProvinceViewControllerDataSource: class {
-    func getProvince() -> [Tinh]
+    func getProvince() -> [Province]
 }
 
 class ProvinceViewController: UIViewController {
@@ -22,7 +22,7 @@ class ProvinceViewController: UIViewController {
 
     // MARK: - Properties
     private var provinceButtons: [UIButton] = []
-    private var tinhs: [Tinh] = []
+    private var provinces: [Province] = []
     weak var delegate: ProvinceViewControllerDelegate?
     weak var dataSource: ProvinceViewControllerDataSource?
     private var selectedIndex = 0
@@ -40,10 +40,10 @@ class ProvinceViewController: UIViewController {
         navigationItem.rightBarButtonItem = districtButton
         
         if let dataSource = dataSource {
-            tinhs = dataSource.getProvince()
+            provinces = dataSource.getProvince()
         }
 
-        for (index, item) in tinhs.enumerated() {
+        for (index, item) in provinces.enumerated() {
             let button = UIButton()
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = .gray
@@ -70,7 +70,7 @@ class ProvinceViewController: UIViewController {
             button.backgroundColor = .gray
         }
         sender.backgroundColor = .blue
-        delegate?.controller(self, needsPerform: .sendProvince(tinhs[sender.tag].name))
+        delegate?.controller(self, needsPerform: .sendProvince(provinces[sender.tag].name))
     }
 }
 
@@ -88,7 +88,7 @@ extension ProvinceViewController: DistrictViewControllerDelegate {
 
 // MARK: - Extension Datasource
 extension ProvinceViewController: DistrictViewControllerDataSource {
-    func getDistrict() -> [Huyen] {
-        return tinhs[selectedIndex].huyens
+    func getDistrict() -> [District] {
+        return provinces[selectedIndex].districts
     }
 }

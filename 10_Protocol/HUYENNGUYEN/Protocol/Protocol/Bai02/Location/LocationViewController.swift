@@ -59,7 +59,7 @@ extension LocationViewController: CountryViewControllerDelegate {
 
 // MARK: - Extension DataSource
 extension LocationViewController: CountryViewControllerDataSource {
-    func getCountry() -> [Mien] {
-        return DataManagement.miens
+    func getCountry() -> [Country] {
+        return DataManagement.countries
     }
 }

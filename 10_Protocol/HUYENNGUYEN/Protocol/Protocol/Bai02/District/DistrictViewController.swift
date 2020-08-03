@@ -12,7 +12,7 @@ protocol DistrictViewControllerDelegate: class {
 }
 
 protocol DistrictViewControllerDataSource: class {
-    func getDistrict() -> [Huyen]
+    func getDistrict() -> [District]
 }
 
 class DistrictViewController: UIViewController {
@@ -22,7 +22,7 @@ class DistrictViewController: UIViewController {
 
     // MARK: - Properties
     private var districtButtons: [UIButton] = []
-    private var huyens: [Huyen] = []
+    private var districts: [District] = []
     weak var delegate: DistrictViewControllerDelegate?
     weak var dataSoure: DistrictViewControllerDataSource?
     
@@ -39,10 +39,10 @@ class DistrictViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneButton
         
         if let dataSource = dataSoure {
-            huyens = dataSource.getDistrict()
+            districts = dataSource.getDistrict()
         }
     
-        for (index, item) in huyens.enumerated() {
+        for (index, item) in districts.enumerated() {
             let button = UIButton()
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = .gray
@@ -66,6 +66,6 @@ class DistrictViewController: UIViewController {
             button.backgroundColor = .gray
         }
         sender.backgroundColor = .orange
-        delegate?.controller(self, needsPerform: .sendDictrict(huyens[sender.tag].name))
+        delegate?.controller(self, needsPerform: .sendDictrict(districts[sender.tag].name))
     }
 }

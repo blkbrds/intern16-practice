@@ -8,34 +8,43 @@
 
 import Foundation
 
-struct Huyen {
+struct District {
     var name: String
 }
 
-struct Tinh {
+struct Province {
     var name: String
-    var huyens: [Huyen]
+    var districts: [District]
 }
 
-struct Mien {
+struct Country {
     var name: String
-    var tinhs: [Tinh]
+    var provinces: [Province]
 }
 
 final class DataManagement {
-    static let miens: [Mien] = {
-        let huyen1 = Huyen(name: "Huyen 1")
-        let huyen2 = Huyen(name: "Huyen 2")
-        let huyen3 = Huyen(name: "Huyen 3")
-        let huyen4 = Huyen(name: "Huyen 4")
+    static let countries: [Country] = {
+        let district1 = District(name: "Huyện 1")
+        let district2 = District(name: "Huyện 2")
+        let district3 = District(name: "Huyện 3")
+        let district4 = District(name: "Huyện 4")
+        let district5 = District(name: "Huyện 5")
+        let district6 = District(name: "Huyện 6")
+        let district7 = District(name: "Huyện 7")
+        let district8 = District(name: "Huyện 8")
+        let district9 = District(name: "Huyện 9")
+        let district10 = District(name: "Huyện 10")
+
+        let province1 = Province(name: "Tỉnh 1", districts: [district1, district2, district6])
+        let province2 = Province(name: "Tỉnh 2", districts: [district3, district9])
+        let province3 = Province(name: "Tỉnh 3", districts: [district4])
+        let province4 = Province(name: "Tỉnh 4", districts: [district8, district10, district5])
+        let province5 = Province(name: "Tỉnh 5", districts: [district7])
         
-        let tinh1 = Tinh(name: "Tinh 1", huyens: [huyen1, huyen2])
-        let tinh2 = Tinh(name: "Tinh 2", huyens: [huyen3])
-        let tinh3 = Tinh(name: "Tinh 3", huyens: [huyen4])
+        let country1 = Country(name: "Miền 1", provinces: [province1])
+        let country2 = Country(name: "Miền 2", provinces: [province2, province3])
+        let country3 = Country(name: "Miền 3", provinces: [province4])
         
-        let mien1 = Mien(name: "Mien 1", tinhs: [tinh1])
-        let mien2 = Mien(name: "Mien 2", tinhs: [tinh2, tinh3])
-        
-        return [mien1, mien2]
+        return [country1, country2, country3]
     }()
 }
