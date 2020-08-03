@@ -23,6 +23,7 @@ final class Bai3ViewController: UIViewController {
     private func createUserView() {
         title = "Home"
         navigationController?.navigationBar.barTintColor = .black
+        
         let screenSize: CGRect = UIScreen.main.bounds
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: 10, width: screenSize.width, height: screenSize.height))
         let space: CGFloat = 10
@@ -40,6 +41,7 @@ final class Bai3ViewController: UIViewController {
         } else {
             scrollView.contentSize = CGSize(width: screenSize.width, height:heightOfScrollView1)
         }
+        
         view.addSubview(scrollView)
         
         for index in 0..<names.count {
