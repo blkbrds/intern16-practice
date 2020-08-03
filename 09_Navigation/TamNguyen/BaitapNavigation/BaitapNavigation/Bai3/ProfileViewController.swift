@@ -18,6 +18,7 @@ final class ProfileViewController: UIViewController {
     var username: String = ""
     var image: UIImage?
     var index: Int = 0
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
