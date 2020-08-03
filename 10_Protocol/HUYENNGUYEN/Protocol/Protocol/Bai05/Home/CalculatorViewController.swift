@@ -61,14 +61,14 @@ class CalculatorViewController: UIViewController {
 // MARK: - Extension
 extension CalculatorViewController: OperatorViewDataSource, OperatorViewDelegate {
     func getNumber1(operatorView: OperatorView) -> Int! {
-        return Int(self.number1TextField.text!)
+        return Int(number1TextField.text!)
     }
     
     func getNumber2(operatorView: OperatorView) -> Int! {
-        return Int(self.number2TextField.text!)
+        return Int(number2TextField.text!)
     }
     
-    func sendResult(view: OperatorView, needsPerform action: OperatorView.Action) {
+    func view(_ view: OperatorView, needsPerform action: OperatorView.Action) {
         switch action {
         case .done(result: let result):
             resultLabel.text = "\(result)"
@@ -76,7 +76,7 @@ extension CalculatorViewController: OperatorViewDataSource, OperatorViewDelegate
             number1TextField.text = ""
             number2TextField.text = ""
             resultLabel.text = ""
-        case .cacel:
+        case .cancel:
             break
         }
         slideDown()

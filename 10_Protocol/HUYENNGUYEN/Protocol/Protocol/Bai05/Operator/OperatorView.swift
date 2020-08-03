@@ -14,7 +14,7 @@ protocol OperatorViewDataSource: class {
 }
 
 protocol OperatorViewDelegate: class {
-    func sendResult(view: OperatorView, needsPerform action: OperatorView.Action)
+    func view(_ view: OperatorView, needsPerform action: OperatorView.Action)
 }
 
 class OperatorView: UIView {
@@ -29,7 +29,7 @@ class OperatorView: UIView {
     var dataSource: OperatorViewDataSource?
     
     enum Action {
-        case cacel
+        case cancel
         case clear
         case done(result: Float)
     }
@@ -78,14 +78,14 @@ class OperatorView: UIView {
     }
     
     @IBAction private func cancelTouchUpInside(_ sender: UIBarButtonItem) {
-        delegate?.sendResult(view: self, needsPerform: .cacel)
+        delegate?.view(self, needsPerform: .cancel)
     }
     
     @IBAction private func doneTouchUpInside(_ sender: UIBarButtonItem) {
-        delegate?.sendResult(view: self, needsPerform: .done(result: result))
+        delegate?.view(self, needsPerform: .done(result: result))
     }
     
     @IBAction private func clearTouchUpInside(_ sender: UIButton) {
-        delegate?.sendResult(view: self, needsPerform: .clear)
+        delegate?.view(self, needsPerform: .clear)
     }
 }

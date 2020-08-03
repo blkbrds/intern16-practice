@@ -60,10 +60,10 @@ final class CountryViewController: UIViewController {
     
     // MARK: - Objc
     @objc private func goToProvinceVC(_ sender: UIButton) {
-        let provinceView = ProvinceViewController()
-        provinceView.delegate = self
-        provinceView.dataSource = self
-        navigationController?.pushViewController(provinceView, animated: true)
+        let provinceVC = ProvinceViewController()
+        provinceVC.delegate = self
+        provinceVC.dataSource = self
+        navigationController?.pushViewController(provinceVC, animated: true)
     }
     
     @objc private func countryTouchUpInside(_ sender: UIButton) {
@@ -94,6 +94,7 @@ extension CountryViewController: ProvinceViewControllerDelegate {
 // MARK: - Extension DataSource
 extension CountryViewController: ProvinceViewControllerDataSource {
     func getProvince() -> [Province] {
+        guard selectedIndex < countries.count else { return [] }
         return countries[selectedIndex].provinces
     }
 }

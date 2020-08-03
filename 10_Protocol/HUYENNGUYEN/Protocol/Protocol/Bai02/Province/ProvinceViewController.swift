@@ -59,10 +59,10 @@ class ProvinceViewController: UIViewController {
     
     // MARK: - Objc
     @objc private func goToDistrict(_ sender: UIButton) {
-        let districtView = DistrictViewController()
-        districtView.delegate = self
-        districtView.dataSoure = self
-        navigationController?.pushViewController(districtView, animated: true)
+        let districtVC = DistrictViewController()
+        districtVC.delegate = self
+        districtVC.dataSoure = self
+        navigationController?.pushViewController(districtVC, animated: true)
     }
     
     @objc private func provinceTouchUpInside(_ sender: UIButton) {
@@ -89,6 +89,7 @@ extension ProvinceViewController: DistrictViewControllerDelegate {
 // MARK: - Extension Datasource
 extension ProvinceViewController: DistrictViewControllerDataSource {
     func getDistrict() -> [District] {
+        guard selectedIndex < provinces.count else { return [] }
         return provinces[selectedIndex].districts
     }
 }

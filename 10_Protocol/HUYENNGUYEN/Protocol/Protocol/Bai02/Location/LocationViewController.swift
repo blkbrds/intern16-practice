@@ -36,10 +36,10 @@ final class LocationViewController: UIViewController {
 
     // MARK: - Objc
     @objc private func editButtonTouchUpInside(_ sender: UIButton) {
-        let countryView = CountryViewController()
-        countryView.delegate = self
-        countryView.dataSource = self
-        navigationController?.pushViewController(countryView, animated: true)
+        let countryVC = CountryViewController()
+        countryVC.delegate = self
+        countryVC.dataSource = self
+        navigationController?.pushViewController(countryVC, animated: true)
     }
 }
 
