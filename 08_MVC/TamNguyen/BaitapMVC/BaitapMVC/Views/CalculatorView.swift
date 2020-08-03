@@ -42,30 +42,30 @@ final class CalculatorView: UIView {
     
     @IBAction private func clickCalculatorTouchUpInside(_ sender: UIButton) {
         guard let valueText = currentValueFloat.text else { return }
-        if !valueText.isEmpty && sender.tag != Operand.clear.rawValue && sender.tag != Operand.equal.rawValue {
+        guard let operand = Operand(rawValue: sender.tag) else { return }
+        if !valueText.isEmpty && operand != .clear && operand != .equal {
             //devide
-            switch sender.tag {
-            case Operand.divide.rawValue:
+            switch operand {
+            case .divide:
                 currentValueFloat.text = "/"
-            case Operand.multiply.rawValue:
+            case .multiply:
                 currentValueFloat.text = "*"
-            case Operand.subtract.rawValue:
+            case .subtract:
                 currentValueFloat.text = "-"
-            case Operand.add.rawValue:
+            case .add:
                 currentValueFloat.text = "+"
             default:
                 currentValueFloat.text = "0"
             }
             performMath = true
-            operation = sender.tag
-        } else if sender.tag == Operand.equal.rawValue {
+        } else if operand == .equal {
             let calculator = Calculator()
-            switch operation {
-            case Operand.divide.rawValue:
+            switch operand {
+            case .divide:
                 currentValueFloat.text = String(calculator.divTwoNumber(a: previousNumber, b: numberOnScreen))
-            case Operand.multiply.rawValue:
+            case .multiply:
                 currentValueFloat.text = String(calculator.mulTwoNumber(a: previousNumber, b: numberOnScreen))
-            case Operand.subtract.rawValue:
+            case .subtract:
                 currentValueFloat.text = String(calculator.subTwoNumber(a: previousNumber, b: numberOnScreen))
             default:
                 currentValueFloat.text = String(calculator.addTwoNumber(a: numberOnScreen, b: previousNumber))
