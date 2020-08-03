@@ -43,10 +43,10 @@ final class CalculatorViewController: UIViewController {
 
     @IBAction private func procesValue(_ sender: UIButton) {
         let calculator = Calculator(a: previousNumber, b: numberOnScreen)
-        if displayLabel.text != "" && sender.tag != Operand.ac.rawValue && sender.tag != Operand.equal.rawValue {
+        guard let operand = Operand(rawValue: sender.tag) else { return }
+        if displayLabel.text != "" && operand != .ac && operand != .equal {
             guard let temp = displayLabel.text else { return }
             previousNumber = Float(temp) ?? 0.0
-            guard let operand = Operand(rawValue: sender.tag) else { return }
             switch operand {
             case .add:
                 displayLabel.text = "+"
@@ -61,9 +61,9 @@ final class CalculatorViewController: UIViewController {
             }
             numberTag = sender.tag
             checkMath = true
-        } else if sender.tag == Operand.equal.rawValue {
-            guard let operand = Operand(rawValue: numberTag) else { return }
-            switch operand {
+        } else if operand == .equal {
+            guard let temp = Operand(rawValue: numberTag) else { return }
+            switch temp {
             case .add:
                 displayLabel.text = String(calculator.add())
             case .subtract:
@@ -75,7 +75,7 @@ final class CalculatorViewController: UIViewController {
             default:
                 print("Eror")
             }
-        } else if sender.tag == Operand.ac.rawValue {
+        } else if operand == .ac {
             displayLabel.text = ""
             numberOnScreen = 0.0
             previousNumber = 0.0
