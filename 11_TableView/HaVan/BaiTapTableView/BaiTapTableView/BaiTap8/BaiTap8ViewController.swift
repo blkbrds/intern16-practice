@@ -14,7 +14,7 @@ final class BaiTap8ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Propeties
-    private var thingIndex: [String] = []
+    private var thingIndex: [String] = [String]()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
