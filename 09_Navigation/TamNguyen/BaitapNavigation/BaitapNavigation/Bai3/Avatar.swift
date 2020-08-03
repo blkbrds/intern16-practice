@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AvatarViewDelegate : class {
+protocol AvatarViewDelegate: class {
     func view(_ view: Avatar, needsPerform action: Avatar.Action)
 }
 
@@ -42,6 +42,7 @@ final class Avatar: UIView {
         userButton.addGestureRecognizer(uiTapGestureRecognizer)
         addSubview(userButton)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

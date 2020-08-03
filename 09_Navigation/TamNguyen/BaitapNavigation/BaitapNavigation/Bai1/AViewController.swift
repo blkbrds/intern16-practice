@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewControllerA: UIViewController {
+final class AViewController: UIViewController {
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -17,8 +17,8 @@ final class ViewControllerA: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction private func pushViewTouchUpInside(_sender: UIButton) {
-        let nextView = ViewControllerB()
+    @IBAction private func pushViewButtonTouchUpInside(_sender: UIButton) {
+        let nextView = BViewController()
         navigationController?.pushViewController(nextView, animated: true)
     }
 }

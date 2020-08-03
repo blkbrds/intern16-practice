@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewControllerC: UIViewController {
+final class CViewController: UIViewController {
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -17,16 +17,16 @@ final class ViewControllerC: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction private func pushViewTouchUpInside(_sender: UIButton) {
-        let nextView = ViewControllerD()
+    @IBAction private func pushViewButtonTouchUpInside(_sender: UIButton) {
+        let nextView = DViewController()
         navigationController?.pushViewController(nextView, animated: true)
     }
     
-    @IBAction private func popViewTouchUpInside(_sender: UIButton) {
+    @IBAction private func popViewButtonTouchUpInside(_sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction private func popRootTouchUpInside(_ sender: UIButton) {
+    @IBAction private func popRootButtonTouchUpInside(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
 }

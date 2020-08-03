@@ -11,7 +11,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     // MARK: - IBOulet
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension EditViewDelegate
 extension HomeViewController: EditViewDelegate {
     func updateUser(view: EditViewController, user: String) {
         nameLabel.text = user

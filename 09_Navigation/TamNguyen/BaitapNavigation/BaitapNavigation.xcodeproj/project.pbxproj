@@ -12,16 +12,16 @@
 		310B486D24C688F0009425F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B486C24C688F0009425F0 /* ViewController.swift */; };
 		310B487224C688F2009425F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310B487124C688F2009425F0 /* Assets.xcassets */; };
 		310B487524C688F2009425F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310B487324C688F2009425F0 /* LaunchScreen.storyboard */; };
-		310B487E24C68966009425F0 /* ViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B487C24C68966009425F0 /* ViewControllerA.swift */; };
-		310B487F24C68966009425F0 /* ViewControllerA.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B487D24C68966009425F0 /* ViewControllerA.xib */; };
-		310B488324C68989009425F0 /* ViewControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488124C68989009425F0 /* ViewControllerB.swift */; };
-		310B488424C68989009425F0 /* ViewControllerB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488224C68989009425F0 /* ViewControllerB.xib */; };
-		310B488724C68998009425F0 /* ViewControllerC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488524C68998009425F0 /* ViewControllerC.swift */; };
-		310B488824C68998009425F0 /* ViewControllerC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488624C68998009425F0 /* ViewControllerC.xib */; };
-		310B488B24C689AF009425F0 /* ViewControllerD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488924C689AF009425F0 /* ViewControllerD.swift */; };
-		310B488C24C689AF009425F0 /* ViewControllerD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488A24C689AF009425F0 /* ViewControllerD.xib */; };
-		310B488F24C689C9009425F0 /* ViewControllerE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488D24C689C9009425F0 /* ViewControllerE.swift */; };
-		310B489024C689C9009425F0 /* ViewControllerE.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488E24C689C9009425F0 /* ViewControllerE.xib */; };
+		310B487E24C68966009425F0 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B487C24C68966009425F0 /* AViewController.swift */; };
+		310B487F24C68966009425F0 /* AViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B487D24C68966009425F0 /* AViewController.xib */; };
+		310B488324C68989009425F0 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488124C68989009425F0 /* BViewController.swift */; };
+		310B488424C68989009425F0 /* BViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488224C68989009425F0 /* BViewController.xib */; };
+		310B488724C68998009425F0 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488524C68998009425F0 /* CViewController.swift */; };
+		310B488824C68998009425F0 /* CViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488624C68998009425F0 /* CViewController.xib */; };
+		310B488B24C689AF009425F0 /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488924C689AF009425F0 /* DViewController.swift */; };
+		310B488C24C689AF009425F0 /* DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488A24C689AF009425F0 /* DViewController.xib */; };
+		310B488F24C689C9009425F0 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B488D24C689C9009425F0 /* EViewController.swift */; };
+		310B489024C689C9009425F0 /* EViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B488E24C689C9009425F0 /* EViewController.xib */; };
 		310B489524C6A11A009425F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B489324C6A11A009425F0 /* LoginViewController.swift */; };
 		310B489624C6A11A009425F0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310B489424C6A11A009425F0 /* LoginViewController.xib */; };
 		310B489924C6A12D009425F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B489724C6A12D009425F0 /* HomeViewController.swift */; };
@@ -49,16 +49,16 @@
 		310B487124C688F2009425F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310B487424C688F2009425F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310B487624C688F2009425F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		310B487C24C68966009425F0 /* ViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerA.swift; sourceTree = "<group>"; };
-		310B487D24C68966009425F0 /* ViewControllerA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerA.xib; sourceTree = "<group>"; };
-		310B488124C68989009425F0 /* ViewControllerB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerB.swift; sourceTree = "<group>"; };
-		310B488224C68989009425F0 /* ViewControllerB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerB.xib; sourceTree = "<group>"; };
-		310B488524C68998009425F0 /* ViewControllerC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerC.swift; sourceTree = "<group>"; };
-		310B488624C68998009425F0 /* ViewControllerC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerC.xib; sourceTree = "<group>"; };
-		310B488924C689AF009425F0 /* ViewControllerD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerD.swift; sourceTree = "<group>"; };
-		310B488A24C689AF009425F0 /* ViewControllerD.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerD.xib; sourceTree = "<group>"; };
-		310B488D24C689C9009425F0 /* ViewControllerE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerE.swift; sourceTree = "<group>"; };
-		310B488E24C689C9009425F0 /* ViewControllerE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerE.xib; sourceTree = "<group>"; };
+		310B487C24C68966009425F0 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		310B487D24C68966009425F0 /* AViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AViewController.xib; sourceTree = "<group>"; };
+		310B488124C68989009425F0 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
+		310B488224C68989009425F0 /* BViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BViewController.xib; sourceTree = "<group>"; };
+		310B488524C68998009425F0 /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		310B488624C68998009425F0 /* CViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CViewController.xib; sourceTree = "<group>"; };
+		310B488924C689AF009425F0 /* DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
+		310B488A24C689AF009425F0 /* DViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DViewController.xib; sourceTree = "<group>"; };
+		310B488D24C689C9009425F0 /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
+		310B488E24C689C9009425F0 /* EViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EViewController.xib; sourceTree = "<group>"; };
 		310B489324C6A11A009425F0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		310B489424C6A11A009425F0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		310B489724C6A12D009425F0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -126,16 +126,16 @@
 		310B488024C6896E009425F0 /* Bai1 */ = {
 			isa = PBXGroup;
 			children = (
-				310B488624C68998009425F0 /* ViewControllerC.xib */,
-				310B488524C68998009425F0 /* ViewControllerC.swift */,
-				310B487C24C68966009425F0 /* ViewControllerA.swift */,
-				310B487D24C68966009425F0 /* ViewControllerA.xib */,
-				310B488124C68989009425F0 /* ViewControllerB.swift */,
-				310B488224C68989009425F0 /* ViewControllerB.xib */,
-				310B488924C689AF009425F0 /* ViewControllerD.swift */,
-				310B488A24C689AF009425F0 /* ViewControllerD.xib */,
-				310B488D24C689C9009425F0 /* ViewControllerE.swift */,
-				310B488E24C689C9009425F0 /* ViewControllerE.xib */,
+				310B488624C68998009425F0 /* CViewController.xib */,
+				310B488524C68998009425F0 /* CViewController.swift */,
+				310B487C24C68966009425F0 /* AViewController.swift */,
+				310B487D24C68966009425F0 /* AViewController.xib */,
+				310B488124C68989009425F0 /* BViewController.swift */,
+				310B488224C68989009425F0 /* BViewController.xib */,
+				310B488924C689AF009425F0 /* DViewController.swift */,
+				310B488A24C689AF009425F0 /* DViewController.xib */,
+				310B488D24C689C9009425F0 /* EViewController.swift */,
+				310B488E24C689C9009425F0 /* EViewController.xib */,
 			);
 			path = Bai1;
 			sourceTree = "<group>";
@@ -237,15 +237,15 @@
 			files = (
 				310B489624C6A11A009425F0 /* LoginViewController.xib in Resources */,
 				310B48A024C6F239009425F0 /* data.plist in Resources */,
-				310B487F24C68966009425F0 /* ViewControllerA.xib in Resources */,
+				310B487F24C68966009425F0 /* AViewController.xib in Resources */,
 				310B48B824C82150009425F0 /* ProfileViewController.xib in Resources */,
 				310B489E24C6A138009425F0 /* EditViewController.xib in Resources */,
-				310B489024C689C9009425F0 /* ViewControllerE.xib in Resources */,
+				310B489024C689C9009425F0 /* EViewController.xib in Resources */,
 				310B48B024C7D0CA009425F0 /* Bai3ViewController.xib in Resources */,
-				310B488424C68989009425F0 /* ViewControllerB.xib in Resources */,
+				310B488424C68989009425F0 /* BViewController.xib in Resources */,
 				310B487524C688F2009425F0 /* LaunchScreen.storyboard in Resources */,
-				310B488C24C689AF009425F0 /* ViewControllerD.xib in Resources */,
-				310B488824C68998009425F0 /* ViewControllerC.xib in Resources */,
+				310B488C24C689AF009425F0 /* DViewController.xib in Resources */,
+				310B488824C68998009425F0 /* CViewController.xib in Resources */,
 				310B487224C688F2009425F0 /* Assets.xcassets in Resources */,
 				310B489A24C6A12D009425F0 /* HomeViewController.xib in Resources */,
 			);
@@ -262,18 +262,18 @@
 				310B489524C6A11A009425F0 /* LoginViewController.swift in Sources */,
 				310B48AF24C7D0CA009425F0 /* Bai3ViewController.swift in Sources */,
 				310B48C124C93F1C009425F0 /* SearchViewController.swift in Sources */,
-				310B488724C68998009425F0 /* ViewControllerC.swift in Sources */,
-				310B487E24C68966009425F0 /* ViewControllerA.swift in Sources */,
+				310B488724C68998009425F0 /* CViewController.swift in Sources */,
+				310B487E24C68966009425F0 /* AViewController.swift in Sources */,
 				310B48C524C946B9009425F0 /* ButtonItemViewController.swift in Sources */,
 				310B48B724C82150009425F0 /* ProfileViewController.swift in Sources */,
-				310B488B24C689AF009425F0 /* ViewControllerD.swift in Sources */,
+				310B488B24C689AF009425F0 /* DViewController.swift in Sources */,
 				310B48BF24C927E3009425F0 /* NewsFeedViewController.swift in Sources */,
 				310B486D24C688F0009425F0 /* ViewController.swift in Sources */,
 				310B48C324C944BB009425F0 /* BarButtonViewController.swift in Sources */,
 				310B489924C6A12D009425F0 /* HomeViewController.swift in Sources */,
-				310B488F24C689C9009425F0 /* ViewControllerE.swift in Sources */,
+				310B488F24C689C9009425F0 /* EViewController.swift in Sources */,
 				310B48B224C7FCA1009425F0 /* Avatar.swift in Sources */,
-				310B488324C68989009425F0 /* ViewControllerB.swift in Sources */,
+				310B488324C68989009425F0 /* BViewController.swift in Sources */,
 				310B486924C688F0009425F0 /* AppDelegate.swift in Sources */,
 				310B489D24C6A138009425F0 /* EditViewController.swift in Sources */,
 				310B486B24C688F0009425F0 /* SceneDelegate.swift in Sources */,
