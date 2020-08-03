@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5102F6A424D700EA0081289D /* Bai11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102F6A224D700EA0081289D /* Bai11ViewController.swift */; };
+		5102F6A524D700EA0081289D /* Bai11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5102F6A324D700EA0081289D /* Bai11ViewController.xib */; };
+		5102F6AB24D701BB0081289D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102F6AA24D701BB0081289D /* Data.swift */; };
+		5102F6AD24D702C00081289D /* Bai11ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102F6AC24D702C00081289D /* Bai11ModelCell.swift */; };
+		5102F6B424D704090081289D /* CustomBai11TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102F6B224D704090081289D /* CustomBai11TableViewCell.swift */; };
+		5102F6B524D704090081289D /* CustomBai11TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5102F6B324D704090081289D /* CustomBai11TableViewCell.xib */; };
+		5102F6B924D706B60081289D /* Bai12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102F6B724D706B60081289D /* Bai12ViewController.swift */; };
+		5102F6BA24D706B60081289D /* Bai12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5102F6B824D706B60081289D /* Bai12ViewController.xib */; };
 		510B36FC24D2B84700F118A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B36FB24D2B84700F118A5 /* AppDelegate.swift */; };
 		510B36FE24D2B84700F118A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B36FD24D2B84700F118A5 /* SceneDelegate.swift */; };
 		510B370024D2B84700F118A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B36FF24D2B84700F118A5 /* ViewController.swift */; };
@@ -46,6 +54,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5102F6A224D700EA0081289D /* Bai11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai11ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai11/Bai11ViewController.swift"; sourceTree = "<group>"; };
+		5102F6A324D700EA0081289D /* Bai11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai11ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai11/Bai11ViewController.xib"; sourceTree = "<group>"; };
+		5102F6AA24D701BB0081289D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Data.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai11/Data.swift"; sourceTree = "<group>"; };
+		5102F6AC24D702C00081289D /* Bai11ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai11ModelCell.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai11/Bai11ModelCell.swift"; sourceTree = "<group>"; };
+		5102F6B224D704090081289D /* CustomBai11TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomBai11TableViewCell.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai11/CustomBai11TableViewCell.swift"; sourceTree = "<group>"; };
+		5102F6B324D704090081289D /* CustomBai11TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomBai11TableViewCell.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai11/CustomBai11TableViewCell.xib"; sourceTree = "<group>"; };
+		5102F6B724D706B60081289D /* Bai12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai12ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai12/Bai12ViewController.swift"; sourceTree = "<group>"; };
+		5102F6B824D706B60081289D /* Bai12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai12ViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/11_TableView/TRUNGLE/Bai1TableView/Bai1TableView/Bai12/Bai12ViewController.xib"; sourceTree = "<group>"; };
 		510B36F824D2B84700F118A5 /* Bai1TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bai1TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		510B36FB24D2B84700F118A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		510B36FD24D2B84700F118A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +113,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5102F6A124D700C90081289D /* Bai11 */ = {
+			isa = PBXGroup;
+			children = (
+				5102F6A224D700EA0081289D /* Bai11ViewController.swift */,
+				5102F6A324D700EA0081289D /* Bai11ViewController.xib */,
+				5102F6AA24D701BB0081289D /* Data.swift */,
+				5102F6AC24D702C00081289D /* Bai11ModelCell.swift */,
+				5102F6B224D704090081289D /* CustomBai11TableViewCell.swift */,
+				5102F6B324D704090081289D /* CustomBai11TableViewCell.xib */,
+			);
+			path = Bai11;
+			sourceTree = "<group>";
+		};
+		5102F6B624D7068F0081289D /* Bai12 */ = {
+			isa = PBXGroup;
+			children = (
+				5102F6B724D706B60081289D /* Bai12ViewController.swift */,
+				5102F6B824D706B60081289D /* Bai12ViewController.xib */,
+			);
+			path = Bai12;
+			sourceTree = "<group>";
+		};
 		510B36EF24D2B84700F118A5 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +154,8 @@
 		510B36FA24D2B84700F118A5 /* Bai1TableView */ = {
 			isa = PBXGroup;
 			children = (
+				5102F6B624D7068F0081289D /* Bai12 */,
+				5102F6A124D700C90081289D /* Bai11 */,
 				5127CCBF24D40B1A007CBC7B /* Bai9 */,
 				51C0E6F224D3ACBB0058CDD8 /* Bai7+8 */,
 				51FD938B24D331E4009C3865 /* Bai5 */,
@@ -274,12 +314,14 @@
 				5127CCBC24D400E4007CBC7B /* Bai4Data.plist in Resources */,
 				5127CCB624D400C5007CBC7B /* Bai5DetailViewController.xib in Resources */,
 				5127CCAC24D3FE2C007CBC7B /* Data7.plist in Resources */,
+				5102F6B524D704090081289D /* CustomBai11TableViewCell.xib in Resources */,
 				510B370824D2B84900F118A5 /* LaunchScreen.storyboard in Resources */,
 				510B371624D2BB8700F118A5 /* Data.plist in Resources */,
 				5127CCBE24D400E4007CBC7B /* Bai4ViewController.xib in Resources */,
 				5127CCA824D3FDA2007CBC7B /* Bai7_8ViewController.xib in Resources */,
 				510B370524D2B84900F118A5 /* Assets.xcassets in Resources */,
 				510B370324D2B84700F118A5 /* Main.storyboard in Resources */,
+				5102F6A524D700EA0081289D /* Bai11ViewController.xib in Resources */,
 				510B372524D2C0C000F118A5 /* Bai3ViewController.xib in Resources */,
 				510B371A24D2BC0100F118A5 /* Bai2ViewController.xib in Resources */,
 				5127CCB524D400C5007CBC7B /* Bai5ViewController.xib in Resources */,
@@ -287,6 +329,7 @@
 				510B371324D2B88300F118A5 /* Bai1ViewController.xib in Resources */,
 				516BADA724D4EFEA00E84A9C /* HomeViewController.xib in Resources */,
 				516BADB324D4F23D00E84A9C /* CustomTableViewCell.xib in Resources */,
+				5102F6BA24D706B60081289D /* Bai12ViewController.xib in Resources */,
 				516BADAF24D4F07500E84A9C /* Data9.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,15 +350,20 @@
 				5127CCB424D400C5007CBC7B /* Bai5ViewController.swift in Sources */,
 				510B372824D2C13B00F118A5 /* Bai3DetailViewController.swift in Sources */,
 				5127CCAE24D3FEE5007CBC7B /* Bai7_8Model.swift in Sources */,
+				5102F6A424D700EA0081289D /* Bai11ViewController.swift in Sources */,
+				5102F6B924D706B60081289D /* Bai12ViewController.swift in Sources */,
 				516BADA924D4F03B00E84A9C /* User.swift in Sources */,
 				510B371924D2BC0100F118A5 /* Bai2ViewController.swift in Sources */,
 				510B372024D2BC2500F118A5 /* Bai2Model.swift in Sources */,
 				516BADAB24D4F04600E84A9C /* CustomCellModel.swift in Sources */,
+				5102F6AB24D701BB0081289D /* Data.swift in Sources */,
+				5102F6B424D704090081289D /* CustomBai11TableViewCell.swift in Sources */,
 				5127CCB324D400C5007CBC7B /* Bai5DetailViewController.swift in Sources */,
 				510B36FC24D2B84700F118A5 /* AppDelegate.swift in Sources */,
 				516BADA624D4EFEA00E84A9C /* HomeViewController.swift in Sources */,
 				510B36FE24D2B84700F118A5 /* SceneDelegate.swift in Sources */,
 				510B371224D2B88300F118A5 /* Bai1ViewController.swift in Sources */,
+				5102F6AD24D702C00081289D /* Bai11ModelCell.swift in Sources */,
 				5127CCA724D3FDA2007CBC7B /* Bai7_8ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
