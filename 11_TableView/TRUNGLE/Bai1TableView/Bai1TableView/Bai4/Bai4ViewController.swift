@@ -9,7 +9,11 @@
 import UIKit
 
 class Bai4ViewController: UIViewController {
+    
+      //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
+    
+      //MARK: - Properties
     private var viewModel = Bai4Model()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,7 @@ class Bai4ViewController: UIViewController {
         
     }
     
+      //MARK: - Function
     func loadData() {
         viewModel.getData()
     }
@@ -28,6 +33,8 @@ class Bai4ViewController: UIViewController {
         tableView.dataSource = self
     }
 }
+
+      //MARK: - Extension
 extension Bai4ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSection()

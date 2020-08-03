@@ -73,7 +73,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
-
+      //MARK: - Extension
 extension HomeViewController: CustomTableViewCellDelegate {
     func clickMe(_ customTableViewCell: CustomTableViewCell) {
         var userName = ""

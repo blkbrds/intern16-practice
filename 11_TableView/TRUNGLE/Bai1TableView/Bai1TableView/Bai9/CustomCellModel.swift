@@ -9,8 +9,11 @@
 import Foundation
 
 final class CustomCellModel {
+    
+      //MARK: - Properties
     var user: User = User()
     
+      //MARK: - Init
     init(user: User  = User()) {
         self.user = user
     }

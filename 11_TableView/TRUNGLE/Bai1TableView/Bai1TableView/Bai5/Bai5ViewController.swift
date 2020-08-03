@@ -9,12 +9,18 @@
 import UIKit
 
 class Bai5ViewController: UIViewController {
+    
+      //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+      //MARK: - Properties
     var contactsData: [String] = ["tuy", "nhiên", "các học"," trò của"," cựu danh"," thủ Scott"," Parker rất ","nhanh chóng"," lấy lại","tinh thần", "Chỉ 1 phút sau"," Neeskens Kebano"]
     var contacts: [String] = []
     var names: [String] = []
     
+    
+      //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -22,6 +28,7 @@ class Bai5ViewController: UIViewController {
         loadData()
     }
     
+      //MARK: - Function
     override func viewWillAppear(_ animated: Bool) {
            names = contacts
            searchBar.text = ""
@@ -60,6 +67,7 @@ private func getNames(keyword: String) -> [String] {
        }
    }
 }
+      //MARK: - Extension
 extension Bai5ViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count

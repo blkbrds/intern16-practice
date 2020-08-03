@@ -9,6 +9,8 @@
 import UIKit
 
 class Bai1ViewController: UIViewController {
+    
+    //MARK: - Properties
     var names: [String] = ["Name 1",
                              "Name 2",
                              "Name 3",
@@ -17,7 +19,11 @@ class Bai1ViewController: UIViewController {
                              "Name 6",
                              "Name 7",
                              "Name 8","Name 9","Name 10"]
+    
+    //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -26,6 +32,7 @@ class Bai1ViewController: UIViewController {
        
     }
 }
+    //MARK: - Extension
 extension Bai1ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count

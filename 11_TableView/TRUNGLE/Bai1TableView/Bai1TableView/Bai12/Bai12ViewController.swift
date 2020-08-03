@@ -10,13 +10,14 @@ import UIKit
 
 class Bai12ViewController: UIViewController {
     
-    //MARK: -IBOutlet
+    //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     
     //MARK: - Properties
     var data  = ["one", "two", "three", "four", "five"]
     
+      //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configtableView()
@@ -73,6 +74,7 @@ class Bai12ViewController: UIViewController {
     }
 }
 
+  //MARK: - Extension
 extension Bai12ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count

@@ -9,8 +9,11 @@
 import UIKit
 
 class Bai2Model {
+    
+    //MARK: - Properties
     var dataArray : [String] = []
     
+    //MARK: - Function
     func getData(){
         guard let path = Bundle.main.url(forResource: "Data", withExtension: "plist")
             else { return }

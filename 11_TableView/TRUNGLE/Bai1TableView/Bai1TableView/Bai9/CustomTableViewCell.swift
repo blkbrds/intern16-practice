@@ -7,20 +7,27 @@
 //
 
 import UIKit
+
+  //MARK: - Protocol
 protocol CustomTableViewCellDelegate: class {
     func clickMe(_ customTableViewCell: CustomTableViewCell)
 }
 class CustomTableViewCell: UITableViewCell {
-
+    
+      //MARK: - IBOutlet
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
+    
+      //MARK: - Properties
     var delegate: CustomTableViewCellDelegate?
     var viewModel = CustomCellModel() {
         didSet {
             updateView()
         }
     }
+    
+      //MARK: - Function
     override func awakeFromNib() {
         super.awakeFromNib()
     }

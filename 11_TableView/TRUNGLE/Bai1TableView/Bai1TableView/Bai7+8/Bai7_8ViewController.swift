@@ -9,15 +9,22 @@
 import UIKit
 
 class Bai7_8ViewController: UIViewController {
+    
+      //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
+    
+      //MARK: - Properties
     private var  viewModel = Bai7_8Model()
     private var dataIndex: [String] = []
+    
+      //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         configTableView()
     }
     
+      //MARK: - Function
     func loadData() {
         viewModel.getData()
         dataIndex = ["T", "G", "Đ"]
@@ -29,6 +36,7 @@ class Bai7_8ViewController: UIViewController {
         tableView.dataSource = self
     }
 }
+        //MARK: - Extension
 extension Bai7_8ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowInSection(in: section)

@@ -9,8 +9,11 @@
 import Foundation
 
 final class HomeModel {
+    
+      //MARK: - Properties
     var users: [[User]] = []
     
+      //MARK: - Function
     func numberOfSection() -> Int {
         return users.count
     }

@@ -8,8 +8,11 @@
 
 import Foundation
 final class Bai7_8Model {
+    
+      //MARK: - Properties
     var datas: [[String]] = []
     
+      //MARK: - Function
     func getData() {
         guard let path = Bundle.main.url(forResource: "Data7", withExtension: "plist") else {return}
         guard let data = NSArray(contentsOf: path) else { return }

@@ -9,10 +9,13 @@
 import Foundation
 
 final class User {
+    
+      //MARK: - Properties
     var userName: String
     var imageView: String
     var subTitle: String
     
+      //MARK: - Init
     init(userName: String = "", imageView: String = "", subTitle: String = "") {
         self.userName = userName
         self.imageView = imageView

@@ -8,8 +8,11 @@
 
 import Foundation
 final class Bai4Model {
+    
+      //MARK: - Properties
     var animals: [[String]] = []
     
+      //MARK: - Function
     func getData(){
         guard let path = Bundle.main.url(forResource: "Bai4Data", withExtension: "plist") else { return}
         guard let data = NSArray(contentsOf: path) else { return }
