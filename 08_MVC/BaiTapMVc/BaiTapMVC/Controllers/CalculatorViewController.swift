@@ -14,10 +14,10 @@ final class CalculatorViewController: UIViewController {
     @IBOutlet private weak var displayLabel: UILabel!
 
     // MARK: - Properties
-    var checkMath: Bool = false
-    var previousNumber: Float = 0.0
-    var numberOnScreen: Float = 0.0
-    var numberTag: Int = 0
+    private var checkMath: Bool = false
+    private var previousNumber: Float = 0.0
+    private var numberOnScreen: Float = 0.0
+    private var numberTag: Int = 0
     enum Operand: Int {
         case ac = 11
         case add = 12
@@ -28,7 +28,7 @@ final class CalculatorViewController: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction private func numbers(_ sender: UIButton) {
+    @IBAction private func numbersButtonTouchUpInside(_ sender: UIButton) {
         if checkMath == true {
             displayLabel.text = String(sender.tag - 1)
             guard let temp = displayLabel.text else { return }
@@ -44,34 +44,37 @@ final class CalculatorViewController: UIViewController {
     @IBAction private func procesValue(_ sender: UIButton) {
         let calculator = Calculator(a: previousNumber, b: numberOnScreen)
         if displayLabel.text != "" && sender.tag != Operand.ac.rawValue && sender.tag != Operand.equal.rawValue {
-
             guard let temp = displayLabel.text else { return }
             previousNumber = Float(temp) ?? 0.0
-
-            if sender.tag == Operand.add.rawValue { //Cong
+            guard let operand = Operand(rawValue: sender.tag) else { return }
+            switch operand {
+            case .add:
                 displayLabel.text = "+"
-            } else if sender.tag == Operand.subtract.rawValue { // Tru
+            case .subtract:
                 displayLabel.text = "-"
-            } else if sender.tag == Operand.multiply.rawValue { // Nhan
+            case .multiply:
                 displayLabel.text = "*"
-            } else if sender.tag == Operand.divide.rawValue { // Chia
+            case .divide:
                 displayLabel.text = "/"
+            default:
+                print("Eror")
             }
-
             numberTag = sender.tag
             checkMath = true
         } else if sender.tag == Operand.equal.rawValue {
-
-            if numberTag == Operand.add.rawValue {
+            guard let operand = Operand(rawValue: numberTag) else { return }
+            switch operand {
+            case .add:
                 displayLabel.text = String(calculator.add())
-            } else if numberTag == Operand.subtract.rawValue {
+            case .subtract:
                 displayLabel.text = String(calculator.subtract())
-            } else if numberTag == Operand.multiply.rawValue {
+            case .multiply:
                 displayLabel.text = String(calculator.multiply())
-            } else if numberTag == Operand.divide.rawValue {
+            case .divide:
                 displayLabel.text = String(calculator.divide())
+            default:
+                print("Eror")
             }
-
         } else if sender.tag == Operand.ac.rawValue {
             displayLabel.text = ""
             numberOnScreen = 0.0
