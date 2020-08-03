@@ -12,18 +12,17 @@ final class BaiTap12ViewController: UIViewController {
 
     // MARK: - @IBOulets
     @IBOutlet weak var selectAllButton: UIButton!
-    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var myTableView: UITableView!
 
     // MARK: - Peroperties
     var data: [String] = ["One","Two","Three","Four","Five","Six","Seven", "Eight"]
-    var selectArr: [String] = []
+    var selectArr: [Int] = []
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configtable()
-        selectAllButton.isHidden = true
+        configNavi()
     }
 
     // MARK: - Private functions
@@ -34,13 +33,10 @@ final class BaiTap12ViewController: UIViewController {
         myTableView.allowsMultipleSelectionDuringEditing = true
     }
 
-    func selectCell(tableView: UITableView,indexPath: IndexPath) {
-        selectArr.removeAll()
-        if let arr = tableView.indexPathsForSelectedRows{
-            for index in arr {
-                selectArr.append(data[index.row])
-            }
-        }
+    func configNavi() {
+        title = "Table reorder"
+        handleTurnOnEdit()
+        handleTurnOffEdit()
     }
 
     // MARK: - @IBActions
@@ -51,7 +47,6 @@ final class BaiTap12ViewController: UIViewController {
                 myTableView.selectRow(at: IndexPath(row: row, section: 0), animated: false, scrollPosition: .none)
             }
             sender.isSelected = false
-            selectArr = data
         } else {
             for row in 0..<data.count {
                 myTableView.deselectRow(at:IndexPath(row: row, section: 0), animated: false)
@@ -61,10 +56,9 @@ final class BaiTap12ViewController: UIViewController {
         }
     }
 
-    @IBAction func handleDeleteAllButtonTouchUpInside(_ sender: UIBarButtonItem) {
-        
-        let alert = UIAlertController(title: "Deleta", message: "Are you sure?", preferredStyle: .alert)
-        
+    // MARK: - Objc functions
+    @objc func handleDeleteAllButtonTouchUpInside(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Delete", message: "Are you sure?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (_)in
             self.data.removeAll()
             self.myTableView.reloadData()
@@ -73,16 +67,32 @@ final class BaiTap12ViewController: UIViewController {
         self.present(alert, animated: true)
     }
 
-    @IBAction func handleEditButtonTouchUpInside(_ sender: UIBarButtonItem) {
-        myTableView.isEditing = !myTableView.isEditing
-        switch myTableView.isEditing {
-        case true:
-            editButton.title = "Done"
-            selectAllButton.isHidden = false
-        default:
-            selectAllButton.isHidden = true
-            editButton.title = "Edit"
+    @objc func deleteCellSelected() {
+        if selectArr.count != 0 {
+            for position in selectArr {
+                data.remove(at: position)
+            }
+            myTableView.reloadData()
         }
+        selectArr.removeAll()
+    }
+
+    @objc private func handleTurnOnEdit() {
+        myTableView.isEditing = true
+        selectAllButton.isHidden = false
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(handleTurnOffEdit))
+        let deleteSelectedButton = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(deleteCellSelected))
+        navigationItem.rightBarButtonItem = doneButton
+        navigationItem.leftBarButtonItem = deleteSelectedButton
+    }
+
+    @objc private func handleTurnOffEdit() {
+        myTableView.isEditing = false
+        selectAllButton.isHidden = true
+        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(handleTurnOnEdit))
+        let deleteAllButton = UIBarButtonItem(title: "Delete All", style: .plain, target: self, action: #selector(handleDeleteAllButtonTouchUpInside))
+        navigationItem.rightBarButtonItem = editButton
+        navigationItem.leftBarButtonItem = deleteAllButton
     }
 }
 
@@ -107,8 +117,22 @@ extension BaiTap12ViewController: UITableViewDataSource {
         return true
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         data.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectArr.append(indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let index = selectArr.lastIndex(of: indexPath.row) {
+            selectArr.remove(at: index)
+        }
     }
 }
 
