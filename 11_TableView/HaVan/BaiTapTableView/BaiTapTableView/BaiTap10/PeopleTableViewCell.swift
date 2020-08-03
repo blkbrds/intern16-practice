@@ -9,26 +9,21 @@
 import UIKit
 
 final class PeopleTableViewCell: UITableViewCell {
-
-    // MARK: - IBOutlets
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var phoneLabel: UILabel!
     @IBOutlet private weak var personImageView: UIImageView!
-    // MARK: - Propeties
-    
-    // MARK: - Initialize
     
     // MARK: - Life cycle
-   override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
-           super.setSelected(selected, animated: animated)
-       }
-    // MARK: - Private functions
+        super.setSelected(selected, animated: animated)
+    }
     
     // MARK: - Public functions
     func updateCell(name: String, phone: String) {
@@ -36,8 +31,4 @@ final class PeopleTableViewCell: UITableViewCell {
         phoneLabel.text = phone
         personImageView.image = UIImage(named: "sushi")
     }
-    // MARK: - Objc functions
-    
-    // MARK: - IBActions
-
 }

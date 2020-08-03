@@ -27,11 +27,7 @@ final class ManagementContact {
                 let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
                 do {
                     try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointerIfYouWantToStopEnumerating) in
-                        
-                        print(contact.givenName)
-                        print(contact.familyName)
-                        print(contact.phoneNumbers.first?.value.stringValue ?? "")
-                        self.contactsDictionary[contact.givenName + " " + contact.familyName] = contact.phoneNumbers.first?.value.stringValue ?? ""
+                        self.contactsDictionary[contact.givenName + contact.familyName] = contact.phoneNumbers.first?.value.stringValue ?? ""
                     })
                 } catch let err {
                     print("Failed to enumerate contacts:", err)
@@ -44,12 +40,37 @@ final class ManagementContact {
 }
 
 final class Contact {
-    var listContacts: [[String: String]] = [[String : String]]()
     
-    func arrageContacts(with list: [String]) {
-        var newList = [String]()
-        for index in list {
-            newList.append(index.trimmingCharacters(in: .whitespacesAndNewlines))
+    var sectionCharacter: Set<Character> = Set<Character>()
+    var sectionIndex =  [Character]()
+    
+    func transContacts(with contacts: [String]) -> [[String]] {
+        var tempList: [[String]] = [[String]]()
+        let newContact = contacts.sorted { $0 < $1 }
+        var new = [String]()
+        // trim the leading space of each contact and append it into a new array
+        // then, add the first letter of each contact into a set
+        for contact in newContact {
+            let temp = contact.trimmingCharacters(in: .whitespacesAndNewlines)
+            new.append(temp)
+            if let character = temp.first {
+                sectionCharacter.insert(character)
+            }
         }
+        // sort that set
+        sectionIndex = sectionCharacter.sorted(by: {$0 < $1})
+        // each character in that set, create a array to save contacts have the same first character
+        // then, add all arrays into a array
+        for character in sectionIndex {
+            var temp: [String] = []
+            for contact in new {
+                if contact.first == character {
+                    temp.append(contact)
+                }
+            }
+            tempList.append(temp)
+            temp = [String]()
+        }
+        return tempList
     }
 }

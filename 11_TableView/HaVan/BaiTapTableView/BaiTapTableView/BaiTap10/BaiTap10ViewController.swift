@@ -9,17 +9,20 @@
 import UIKit
 
 final class BaiTap10ViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
-   
+    
     // MARK: - Propeties
     private var keys: [String] = []
     private var values: [String] = []
     let managementContact = ManagementContact()
-    var contacts: [String : String] = [String : String]()
-    var newKeys: [String] = [String]()
+    var contactList: [String : String] = [String : String]()
+    var newSection : [[String]] = [[String]]()
+    let contact = Contact()
+    var sectionIndex = [String]()
+    
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -29,6 +32,7 @@ final class BaiTap10ViewController: UIViewController {
         getKey()
         configTableView()
         configSearchBar()
+        configSectionIndex()
     }
     
     // MARK: - Private functions
@@ -38,16 +42,18 @@ final class BaiTap10ViewController: UIViewController {
     
     private func configData() {
         managementContact.fetchContacts()
-        contacts = managementContact.contactsDictionary
+        contactList = managementContact.contactsDictionary
     }
     
     private func getKey() {
-        keys = Array(contacts.keys)
-        keys = keys.sorted { (a, b) -> Bool in
-                   a < b
+        keys = Array(contactList.keys)
+        newSection = contact.transContacts(with: keys)
+    }
+    
+    private func configSectionIndex() {
+        for char in contact.sectionIndex {
+            sectionIndex.append(String(char))
         }
-        newKeys = keys
-        values = Array(contacts.values)
     }
     
     private func configTableView() {
@@ -61,15 +67,15 @@ final class BaiTap10ViewController: UIViewController {
         searchBar.delegate = self
     }
     
-    func searchKeyWord(keyword: String) {
-        keys = [String]()
-        keys = getContacts(keyword: keyword)
+    private func searchKeyWord(keyword: String) {
+        newSection = [[String]]()
+        newSection = getContacts(keyword: keyword)
         tableView.reloadData()
     }
     
-    func getContacts(keyword: String) -> [String] {
+    private func getContacts(keyword: String) -> [[String]] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
-            return Contacts.contactList
+            return contact.transContacts(with: keys)
         } else {
             var data: [String] = []
             configData()
@@ -78,7 +84,8 @@ final class BaiTap10ViewController: UIViewController {
                     data.append(contact)
                 }
             }
-            return data
+            newSection.append(data)
+            return newSection
         }
     }
 }
@@ -87,17 +94,31 @@ final class BaiTap10ViewController: UIViewController {
 extension BaiTap10ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return newSection.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return newSection[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseContactCell", for: indexPath) as! PeopleTableViewCell
-        cell.updateCell(name: keys[indexPath.row], phone: values[indexPath.row])
+        let name = newSection[indexPath.section][indexPath.row]
+        let phone = contactList[name] ?? ""
+        cell.updateCell(name: name, phone: phone)
         return cell
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sectionIndex
+    }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionIndex[section]
     }
 }
 
@@ -128,10 +149,12 @@ extension BaiTap10ViewController: UISearchBarDelegate {
             return
         }
         searchKeyWord(keyword: searchText)
+        view.endEditing(true)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         searchKeyWord(keyword: "")
+        view.endEditing(true)
     }
 }
