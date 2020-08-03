@@ -45,13 +45,13 @@ final class CalculatorView: UIView {
         if !valueText.isEmpty && sender.tag != Operand.clear.rawValue && sender.tag != Operand.equal.rawValue {
             //devide
             switch sender.tag {
-            case 12:
+            case Operand.divide.rawValue:
                 currentValueFloat.text = "/"
-            case 13:
+            case Operand.multiply.rawValue:
                 currentValueFloat.text = "*"
-            case 14:
+            case Operand.subtract.rawValue:
                 currentValueFloat.text = "-"
-            case 15:
+            case Operand.add.rawValue:
                 currentValueFloat.text = "+"
             default:
                 currentValueFloat.text = "0"
@@ -61,11 +61,11 @@ final class CalculatorView: UIView {
         } else if sender.tag == Operand.equal.rawValue {
             let calculator = Calculator()
             switch operation {
-            case 12:
+            case Operand.divide.rawValue:
                 currentValueFloat.text = String(calculator.divTwoNumber(a: previousNumber, b: numberOnScreen))
-            case 13:
+            case Operand.multiply.rawValue:
                 currentValueFloat.text = String(calculator.mulTwoNumber(a: previousNumber, b: numberOnScreen))
-            case 14:
+            case Operand.subtract.rawValue:
                 currentValueFloat.text = String(calculator.subTwoNumber(a: previousNumber, b: numberOnScreen))
             default:
                 currentValueFloat.text = String(calculator.addTwoNumber(a: numberOnScreen, b: previousNumber))
