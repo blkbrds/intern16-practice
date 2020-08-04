@@ -50,8 +50,7 @@ final class ProfileViewController: UIViewController {
     }
     
     private func backHome() {
-        guard let name = nameTextField.text else { return }
-        guard let index = index else { return }
+        guard let name = nameTextField.text, let index = index else { return }
         delegate?.controller(self, needsPerform: .changeValue(index: index, newName: name))
         navigationController?.popViewController(animated: true)
     }
