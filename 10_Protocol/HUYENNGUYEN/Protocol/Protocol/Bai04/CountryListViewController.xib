@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryListViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="countryTextView" destination="vaP-V2-Uso" id="njj-XJ-IEp"/>
+                <outlet property="searchBar" destination="bQt-fR-Pq0" id="NFb-Cw-RJB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceD-eR-tWZ">
+                    <rect key="frame" x="5" y="74" width="414" height="96"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SC6-24-snN">
+                            <rect key="frame" x="356" y="33" width="48" height="30"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelTouchUpInside:" destination="-1" eventType="touchUpInside" id="OFm-G5-HKw"/>
+                            </connections>
+                        </button>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bQt-fR-Pq0">
+                            <rect key="frame" x="10" y="20" width="336" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="SC6-24-snN" secondAttribute="trailing" constant="10" id="CI6-7h-9N8"/>
+                        <constraint firstItem="bQt-fR-Pq0" firstAttribute="centerY" secondItem="ceD-eR-tWZ" secondAttribute="centerY" id="Ujg-af-ikR"/>
+                        <constraint firstItem="bQt-fR-Pq0" firstAttribute="leading" secondItem="ceD-eR-tWZ" secondAttribute="leading" constant="10" id="VHu-oK-MkO"/>
+                        <constraint firstItem="SC6-24-snN" firstAttribute="leading" secondItem="bQt-fR-Pq0" secondAttribute="trailing" constant="10" id="VUA-se-iuV"/>
+                        <constraint firstItem="SC6-24-snN" firstAttribute="centerY" secondItem="ceD-eR-tWZ" secondAttribute="centerY" id="zsf-Vh-i5y"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vaP-V2-Uso">
+                    <rect key="frame" x="57" y="190" width="300" height="622"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="622" id="Lbz-rC-LS7"/>
+                        <constraint firstAttribute="width" constant="300" id="Urb-DN-SeY"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ceD-eR-tWZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="Cj6-Ne-lhM"/>
+                <constraint firstItem="ceD-eR-tWZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="as9-OG-0yo"/>
+                <constraint firstItem="vaP-V2-Uso" firstAttribute="top" secondItem="ceD-eR-tWZ" secondAttribute="bottom" constant="20" id="iAI-P2-Mnu"/>
+                <constraint firstItem="vaP-V2-Uso" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l03-a4-Y0B"/>
+                <constraint firstItem="ceD-eR-tWZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="5" id="lDc-5I-WsL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vaP-V2-Uso" secondAttribute="bottom" constant="50" id="umC-0K-h5G"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>
