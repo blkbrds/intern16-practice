@@ -15,9 +15,6 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
-    //MARK: - Properties
-    private var count = 0
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +24,6 @@ final class LoginViewController: UIViewController {
         passwordTextField.delegate = self
         errorLabel.isHidden = true
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        count += 1
-//        if count > 1 {
-//            usernameTextField.text = ""
-//            passwordTextField.text = ""
-//        }
-//    }
     
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -65,6 +53,7 @@ final class LoginViewController: UIViewController {
         if checkResult {
             let homeViewController = HomeViewController()
             homeViewController.username = username
+            homeViewController.delegate = self
             navigationController?.pushViewController(homeViewController, animated: true)
         } else {
             errorLabel.isHidden = false
@@ -78,7 +67,20 @@ final class LoginViewController: UIViewController {
     }
 }
 
-//MARK: - UITextFieldDelegate
+// MARK: - HomeViewControllerDelegate
+extension LoginViewController: HomeViewControllerDelegate {
+    
+    func controller(_ controller: HomeViewController, needsPerform action: HomeViewController.Action) {
+        switch action {
+        case .resetTextField:
+            errorLabel.text?.removeAll()
+            usernameTextField.text?.removeAll()
+            passwordTextField.text?.removeAll()
+        }
+    }
+}
+
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -88,13 +90,5 @@ extension LoginViewController: UITextFieldDelegate {
             login()
         }
         return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField === usernameTextField {
-            textField.text?.removeAll()
-        } else {
-            passwordTextField.text?.removeAll()
-        }
     }
 }

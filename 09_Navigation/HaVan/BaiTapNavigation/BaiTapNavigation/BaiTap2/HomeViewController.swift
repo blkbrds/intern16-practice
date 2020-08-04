@@ -8,13 +8,18 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: class {
+    func controller(_ controller: HomeViewController, needsPerform action: HomeViewController.Action)
+}
+
 final class HomeViewController: UIViewController {
-   
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameLabel: UILabel!
     
     // MARK: - Properties
     var username = ""
+    weak var delegate: HomeViewControllerDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -38,6 +43,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Objc functions
     @objc private func backLoginController() {
+        delegate?.controller(self, needsPerform: .resetTextField)
         navigationController?.popViewController(animated: true)
     }
     
@@ -48,7 +54,14 @@ final class HomeViewController: UIViewController {
     }
 }
 
-//MARK: -Extension
+// MARK: - Extension
+extension HomeViewController {
+    enum Action {
+        case resetTextField
+    }
+}
+
+// MARK: - EditViewControllerDelegate
 extension HomeViewController: EditViewControllerDelegate {
     func controller(_ controller: EditViewController, needsPerform action: EditViewController.Action) {
         switch action {
