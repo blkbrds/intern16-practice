@@ -18,9 +18,9 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - IBOulets
-    @IBOutlet weak var informationLabel: UILabel!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet private weak var informationLabel: UILabel!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -38,11 +38,11 @@ final class LoginViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Login"
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(pushHomeViewTouchUpInside))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(pushHomeViewButtonTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc private func pushHomeViewTouchUpInside() {
+    @objc private func pushHomeViewButtonTouchUpInside() {
         if let path = Bundle.main.path(forResource: "data", ofType: "plist") {
             if let dic = NSDictionary(contentsOfFile: path) as? [String:String] {
                 for account in dic {

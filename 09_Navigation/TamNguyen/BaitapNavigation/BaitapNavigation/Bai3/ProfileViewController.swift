@@ -11,8 +11,8 @@ import UIKit
 final class ProfileViewController: UIViewController {
     
     // MARK: - IBOulets
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var avatarImageView: UIImageView!
     
     // MARK: - Properties
     var username: String = ""
@@ -28,13 +28,13 @@ final class ProfileViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Profile"
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(popHomeViewTouchUpInside))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(popHomeViewButtonTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
         nameTextField.text = username
         avatarImageView.image = image
     }
     
-    @objc private func popHomeViewTouchUpInside() {
+    @objc private func popHomeViewButtonTouchUpInside() {
         navigationController?.popToRootViewController(animated: true)
     }
 }

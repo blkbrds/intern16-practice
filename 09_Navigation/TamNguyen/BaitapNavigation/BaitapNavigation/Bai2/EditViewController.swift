@@ -31,13 +31,13 @@ final class EditViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Edit"
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(popLoginTouchUpInside))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(popLoginButtonTouchUpInside))
         navigationItem.leftBarButtonItem = cancelButton
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(popLoginTouchUpInside))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(popLoginButtonTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc private func popLoginTouchUpInside() {
+    @objc private func popLoginButtonTouchUpInside() {
         navigationController?.popViewController(animated: true)
         if let delegate = delegate {
             delegate.updateUser(view: self, user: userNameTextField.text!)

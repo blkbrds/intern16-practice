@@ -22,17 +22,17 @@ final class HomeViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Home"
-        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(popLoginTouchUpInside))
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(popLoginButtonTouchUpInside))
         navigationItem.leftBarButtonItem = logoutButton
-        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(pushEditTouchUpInside))
+        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(pushEditButtonTouchUpInside))
         navigationItem.rightBarButtonItem = editButton
     }
     
-    @objc private func popLoginTouchUpInside() {
+    @objc private func popLoginButtonTouchUpInside() {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc private func pushEditTouchUpInside() {
+    @objc private func pushEditButtonTouchUpInside() {
         let nextEditView = EditViewController()
         nextEditView.delegate = self
         navigationController?.pushViewController(nextEditView, animated: true)
