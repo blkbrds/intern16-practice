@@ -20,7 +20,6 @@ final class BaiTap2ViewController: UIViewController {
     @IBOutlet private weak var usernameTexField: UITextField!
     @IBOutlet private weak var passwordTexField: UITextField!
     @IBOutlet private weak var notificationLabel: UILabel!
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +27,7 @@ final class BaiTap2ViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .red
         configDoneButton()
     }
-
-    // MARK: - Override funtions
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        usernameTexField.text = ""
-        passwordTexField.text = ""
-        notificationLabel.text = ""
-    }
-
+    
     // MARK: - Private functions
     private func configDoneButton() {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(loginView))
@@ -54,9 +45,10 @@ final class BaiTap2ViewController: UIViewController {
                     case ("", _), (_, ""):
                         notificationLabel.text = Suit.onlyemty.rawValue
                     case (account.key, account.value):
-                        let nextUI = HomeViewController()
-                        self.navigationController?.pushViewController(nextUI, animated: true)
-                        nextUI.username = account.key
+                        let nextVC = HomeViewController()
+                        nextVC.delegate = self
+                        self.navigationController?.pushViewController(nextVC, animated: true)
+                        nextVC.username = account.key
                     default:
                         notificationLabel.text = Suit.wrongdata.rawValue
                     }
@@ -68,5 +60,17 @@ final class BaiTap2ViewController: UIViewController {
     // MARK: - Objc funtions
     @objc private func loginView() {
         login()
+    }
+}
+
+// MARK: - HomeViewControllerDelegate
+extension BaiTap2ViewController: HomeViewControllerDelegate {
+    func resetTextField(_ controller: HomeViewController, needsPerform action: HomeViewController.Action) {
+        switch action {
+        case .resetTextField:
+            usernameTexField.text = ""
+            passwordTexField.text = ""
+            notificationLabel.text = ""
+        }
     }
 }

@@ -18,15 +18,15 @@ final class ViewControllerC: UIViewController {
 
     // MARK: - IBActions
     @IBAction private func pushViewTouchUpInside(_ sender: UIButton) {
-        let nextUi = ViewControllerD()
-        self.navigationController?.pushViewController(nextUi, animated: true)
+        let nextVC = ViewControllerD()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 
     @IBAction private func popViewTouchUpInSide(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
     @IBAction private func rootViewTouchUpInSide(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

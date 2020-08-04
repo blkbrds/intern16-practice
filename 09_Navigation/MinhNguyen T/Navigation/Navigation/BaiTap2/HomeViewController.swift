@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: class {
+    func resetTextField(_ controller: HomeViewController, needsPerform action: HomeViewController.Action)
+}
+
 final class HomeViewController: UIViewController {
 
     // MARK: - IBOulets
@@ -15,6 +19,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Preroperties
     var username = ""
+    weak var delegate: HomeViewControllerDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,7 +32,7 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Override functions
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         usenameLabel.text = username
     }
 
@@ -43,23 +48,31 @@ final class HomeViewController: UIViewController {
     }
 
     // MARK: - Objc functions
-    @objc func logoutAction(){
+    @objc private func logoutAction() {
+        delegate?.resetTextField(self, needsPerform: .resetTextField)
         navigationController?.popViewController(animated: true)
     }
 
-    @objc func editAction() {
-        let nextUI = EditViewController()
-        nextUI.delegate = self
-        navigationController?.pushViewController(nextUI, animated: true)
+    @objc private func editAction() {
+        let nextVC = EditViewController()
+        nextVC.delegate = self
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
+
+extension HomeViewController {
+    enum Action {
+        case resetTextField
     }
 }
 
 extension HomeViewController: EditViewControllerDelegate {
     func updateUsename(_ controller: EditViewController, needsPerform action: EditViewController.Action) {
         switch action {
-        case .UpdateName(username: let username):
+        case .updateName(username: let username):
             self.username = username
             usenameLabel.text = username
         }
     }
 }
+

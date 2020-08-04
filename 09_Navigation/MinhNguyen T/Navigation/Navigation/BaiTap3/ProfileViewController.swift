@@ -21,7 +21,7 @@ final class ProfileViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: ProfileViewControllerDelegate?
     var username = ""
-    var nameImage:UIImage?
+    weak var nameImage: UIImage?
     var index: Int = 0
     
     // MARK: - Life Cycle
@@ -41,7 +41,7 @@ final class ProfileViewController: UIViewController {
     }
     
     // MARK: - Objc funtions
-    @objc func clickDoneButton() {
+    @objc private func clickDoneButton() {
         guard let newNameUser = nameUserTextFiled.text else { return }
         delegate?.changeNameUser(self, needsPerfrom: .changNameUser(username: newNameUser , index: index))
         navigationController?.popViewController(animated: true)

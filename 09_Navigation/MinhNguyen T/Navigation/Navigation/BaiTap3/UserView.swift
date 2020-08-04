@@ -16,7 +16,7 @@ final class UserView: UIView {
 
     // MARK: - Properties
     private var userAvartarImageView: UIImageView = UIImageView()
-    var usernameLabel: UILabel = UILabel()
+    lazy var usernameLabel: UILabel = UILabel()
     weak var delegate: UserViewDelegate?
     var nameImage: String = "avartar"
     var index: Int = 0
@@ -61,6 +61,6 @@ final class UserView: UIView {
 // MARK: - Config
 extension UserView {
     enum Action {
-        case didTapImage(nameLabel : String, nameImage: UIImage?, index: Int)
+        case didTapImage(nameLabel: String, nameImage: UIImage?, index: Int)
     }
 }

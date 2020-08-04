@@ -44,14 +44,14 @@ final class EditViewController: UIViewController {
     }
 
     // MARK: - Objc funtions
-    @objc func cancelAction(){
+    @objc private func cancelAction() {
         navigationController?.popViewController(animated: true)
     }
 
-    @objc private func doneAction(){
+    @objc private func doneAction() {
         if newPasswordTextField.text == confirmPasswordTextField.text {
             guard let newName = usernameTextField.text else { return }
-            delegate?.updateUsename(self, needsPerform: .UpdateName(username: newName))
+            delegate?.updateUsename(self, needsPerform: .updateName(username: newName))
             navigationController?.popViewController(animated: true)
         } else {
             notificationLabel.text = "nhap sai password"
@@ -61,7 +61,6 @@ final class EditViewController: UIViewController {
 
 extension EditViewController {
     enum Action {
-        case UpdateName(username : String)
+        case updateName(username : String)
     }
 }
-

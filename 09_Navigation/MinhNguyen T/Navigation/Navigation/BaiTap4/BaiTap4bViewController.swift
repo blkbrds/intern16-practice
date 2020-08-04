@@ -11,7 +11,7 @@ import UIKit
 final class BaiTap4bViewController: UIViewController {
     
     // MARK: - Properties
-    private var searchBar:UISearchBar = UISearchBar()
+    private var searchBar: UISearchBar = UISearchBar()
     
     // MARK: - Life cycle
     override func viewDidLoad() {

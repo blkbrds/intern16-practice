@@ -28,7 +28,5 @@ final class BaiTap4aViewController: UIViewController {
         let addButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: nil)
         navigationController?.navigationBar.tintColor = .systemRed
         navigationItem.rightBarButtonItem = addButton
-        
     }
-    
 }
