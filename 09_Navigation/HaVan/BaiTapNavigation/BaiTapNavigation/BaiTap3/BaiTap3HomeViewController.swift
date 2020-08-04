@@ -13,7 +13,7 @@ final class BaiTap3HomeViewController: UIViewController {
     // MARK: - Properties
     private lazy var scrollView = UIScrollView()
     private var people: [People] = DataPeople.setDataOfPeople()
-    private var index: Int = -1
+    private var index: Int?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -95,6 +95,7 @@ extension BaiTap3HomeViewController: ProfileViewControllerDelegate {
     func controller(_ viewController: ProfileViewController, needsPerform action: ProfileViewController.Action) {
         switch action {
         case .changeValue(index: let i, newName: let name):
+            guard let index = index else { return }
             people[index].username = name
             for (index, view) in scrollView.subviews.enumerated() {
                 if let subView = view as? MyClass, index == i, name == name {

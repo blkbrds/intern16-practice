@@ -15,13 +15,13 @@ protocol ProfileViewControllerDelegate: class {
 final class ProfileViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var personImageView: UIImageView!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet private weak var personImageView: UIImageView!
+    @IBOutlet private weak var nameTextField: UITextField!
     
     // MARK: - Propeties
     var imageName: String = ""
     var name: String = ""
-    var index: Int = -1
+    var index: Int?
     weak var delegate: ProfileViewControllerDelegate?
     
     // MARK: - Life cycle
@@ -51,6 +51,7 @@ final class ProfileViewController: UIViewController {
     
     private func backHome() {
         guard let name = nameTextField.text else { return }
+        guard let index = index else { return }
         delegate?.controller(self, needsPerform: .changeValue(index: index, newName: name))
         navigationController?.popViewController(animated: true)
     }

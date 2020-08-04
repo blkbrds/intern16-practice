@@ -91,24 +91,24 @@ final class EditViewController: UIViewController {
     }
 }
 
-//MARK: -Extension
+//MARK: - Extension
 extension EditViewController {
     enum Action {
         case changeValue(with : String)
     }
 }
 
+//MARK: - UITextFieldDelegate
 extension EditViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === usernameTextField {
             newPasswordTextField.becomeFirstResponder()
-            return true
         } else if textField === newPasswordTextField  {
             confirmNewPasswordTextField.becomeFirstResponder()
-            return true
         } else {
             updateInformation()
-            return true
         }
+        return true
     }
 }

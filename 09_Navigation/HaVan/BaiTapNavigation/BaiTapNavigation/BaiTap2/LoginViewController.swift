@@ -28,17 +28,19 @@ final class LoginViewController: UIViewController {
         errorLabel.isHidden = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        count += 1
-        if count > 1 {
-            usernameTextField.text = ""
-            passwordTextField.text = ""
-        }
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        count += 1
+//        if count > 1 {
+//            usernameTextField.text = ""
+//            passwordTextField.text = ""
+//        }
+//    }
     
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     // MARK: - Private functions
@@ -82,10 +84,17 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === usernameTextField {
             passwordTextField.becomeFirstResponder()
-            return true
         } else {
             login()
-            return true
+        }
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField === usernameTextField {
+            textField.text?.removeAll()
+        } else {
+            passwordTextField.text?.removeAll()
         }
     }
 }

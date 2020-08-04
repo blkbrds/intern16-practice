@@ -14,7 +14,7 @@ struct People {
 }
 
 struct DataPeople {
-    static var listPeople: [People] = [People]()
+    static var listPeople: [People] = []
     
     static func setDataOfPeople() -> [People] {
         var people: [People] = []
