@@ -9,7 +9,6 @@
 import Foundation
 
 struct Message {
-    
     static var messages: [String] = []
     
     static func getMessage() {

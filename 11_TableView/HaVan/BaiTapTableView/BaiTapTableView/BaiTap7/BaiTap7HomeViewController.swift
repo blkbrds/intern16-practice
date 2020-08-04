@@ -73,3 +73,11 @@ extension BaiTap7HomeViewController: UITableViewDataSource {
         return index
     }
 }
+
+// MARK: - UITableViewDelegate
+extension BaiTap7HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+}

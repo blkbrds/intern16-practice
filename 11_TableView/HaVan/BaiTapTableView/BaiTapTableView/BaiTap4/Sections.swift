@@ -9,7 +9,7 @@
 import Foundation
 
 struct Sections {
-    static var sections: [[String]] = [[String]]()
+    static var sections: [[String]] = [[]]
     
     static func loadData(){
         guard let path = Bundle.main.url(forResource: "Sections", withExtension: ".plist")
@@ -18,6 +18,4 @@ struct Sections {
             else { return }
         sections = sectionData
     }
-    
-    
 }

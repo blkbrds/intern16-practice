@@ -15,8 +15,8 @@ final class BaiTap12ViewController: UIViewController {
     
     // MARK: - Propeties
     private var newNumbers = Number()
-    private var selectedPosition: [Int] = [Int]()
-    private var addPosition = -1
+    private var selectedPosition: [Int] = []
+    private var addPosition: Int = -1
     
     // MARK: - Life cycle
     override func viewDidLoad() {

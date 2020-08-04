@@ -14,7 +14,7 @@ final class BaiTap8ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Propeties
-    private var thingIndex: [String] = [String]()
+    private var thingIndex: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -79,5 +79,13 @@ extension BaiTap8ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return index
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension BaiTap8ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

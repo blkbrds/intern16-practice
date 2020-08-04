@@ -23,6 +23,7 @@ final class DetailViewController: UIViewController {
         configName()
     }
     
+    // MARK: - Private functions
     private func configNavigationBar() {
         title = "DETAIL"
     }

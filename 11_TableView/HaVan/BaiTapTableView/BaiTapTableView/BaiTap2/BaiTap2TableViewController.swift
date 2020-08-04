@@ -18,17 +18,18 @@ final class BaiTap2TableViewController: UITableViewController {
     }
     
     // MARK: - Private functions
-    func configTableView() {
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseCell")
     }
     
-    func loadData() {
+    private func loadData() {
         Contacts.loadData()
     }
 }
 
 // MARK: - UITableViewDataSource
 extension BaiTap2TableViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -41,5 +42,13 @@ extension BaiTap2TableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseCell", for: indexPath)
         cell.textLabel?.text = "\(Contacts.contactList[indexPath.row])"
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension BaiTap2TableViewController {
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }

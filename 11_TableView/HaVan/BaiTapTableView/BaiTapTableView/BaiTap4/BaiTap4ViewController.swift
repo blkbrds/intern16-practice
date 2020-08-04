@@ -21,6 +21,7 @@ final class BaiTap4ViewController: UIViewController {
         configTableView()
     }
     
+    // MARK: - Private functions
     private func configNavigationBar() {
         title = "SECTIONS"
     }
@@ -63,5 +64,13 @@ extension BaiTap4ViewController: UITableViewDataSource {
         default:
             return "linh tinh"
         }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension BaiTap4ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

@@ -12,7 +12,7 @@ protocol CustomInsertViewControllerDelegate: class {
     func controller(_ controller : CustomInsertViewController, needsPerform action: CustomInsertViewController.Action)
 }
 
-class CustomInsertViewController: UIViewController {
+final class CustomInsertViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var addTextField: UITextField!
@@ -50,7 +50,7 @@ extension CustomInsertViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - UITextFieldDelegate
 extension CustomInsertViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let textContent = addTextField.text else { return true }

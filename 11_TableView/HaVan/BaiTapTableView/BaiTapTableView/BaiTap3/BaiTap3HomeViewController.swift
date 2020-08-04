@@ -21,6 +21,7 @@ final class BaiTap3HomeViewController: UIViewController {
         loadData()
     }
     
+    // MARK: - Private functions
     private func configNavigationBar() {
         title = "HOME"
     }
@@ -31,7 +32,7 @@ final class BaiTap3HomeViewController: UIViewController {
         tableView.delegate = self
     }
     
-    func loadData() {
+    private func loadData() {
         Contacts.loadData()
     }
 }
@@ -61,5 +62,9 @@ extension BaiTap3HomeViewController: UITableViewDelegate {
         let detailVC = DetailViewController()
         detailVC.name = Contacts.contactList[indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

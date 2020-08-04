@@ -9,7 +9,6 @@
 import Foundation
 
 struct Contacts {
-    
     static var contactList: [String] = []
     
     static func loadData(){

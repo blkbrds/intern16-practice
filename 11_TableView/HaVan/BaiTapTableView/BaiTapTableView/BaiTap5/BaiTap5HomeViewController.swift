@@ -26,6 +26,7 @@ final class BaiTap5HomeViewController: UIViewController {
         configSearchBar()
     }
     
+    // MARK: - Private functions
     private func configNavigationBar() {
         title = "HOME"
     }
@@ -45,13 +46,13 @@ final class BaiTap5HomeViewController: UIViewController {
         searchBar.delegate = self
     }
     
-    func searchKeyWord(keyword: String) {
+    private func searchKeyWord(keyword: String) {
         contacts = [String]()
         contacts = getContacts(keyword: keyword)
         tableView.reloadData()
     }
     
-    func getContacts(keyword: String) -> [String] {
+    private func getContacts(keyword: String) -> [String] {
         if keyword.trimmingCharacters(in: CharacterSet(charactersIn: " ")) == "" {
             return Contacts.contactList
         } else {
@@ -88,6 +89,10 @@ extension BaiTap5HomeViewController: UITableViewDelegate {
         detailVC.name = contacts[indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }
 
 // MARK: - UISearchBarDelegate
@@ -105,14 +110,14 @@ extension BaiTap5HomeViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else {
-            searchBar.text = ""
+            searchBar.text?.removeAll()
             return
         }
         searchKeyWord(keyword: searchText)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
+        searchBar.text?.removeAll()
         searchKeyWord(keyword: "")
     }
 }

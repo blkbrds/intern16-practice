@@ -10,8 +10,7 @@ import Foundation
 import Contacts
 
 final class ManagementContact {
-    
-    var contactsDictionary: [String: String] = [String: String]()
+    var contactsDictionary: [String: String] = [ : ]
     
     func fetchContacts() {
         print("Attempting to fetch contacts today..")
@@ -40,14 +39,13 @@ final class ManagementContact {
 }
 
 final class Contact {
-    
     var sectionCharacter: Set<Character> = Set<Character>()
-    var sectionIndex =  [Character]()
+    var sectionIndex: [Character] = []
     
     func transContacts(with contacts: [String]) -> [[String]] {
-        var tempList: [[String]] = [[String]]()
+        var tempList: [[String]] = [[]]
         let newContact = contacts.sorted { $0 < $1 }
-        var new = [String]()
+        var new: [String] = []
         // trim the leading space of each contact and append it into a new array
         // then, add the first letter of each contact into a set
         for contact in newContact {

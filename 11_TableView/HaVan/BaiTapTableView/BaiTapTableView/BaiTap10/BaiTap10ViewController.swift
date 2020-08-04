@@ -17,11 +17,11 @@ final class BaiTap10ViewController: UIViewController {
     // MARK: - Propeties
     private var keys: [String] = []
     private var values: [String] = []
-    let managementContact = ManagementContact()
-    var contactList: [String : String] = [String : String]()
-    var newSection : [[String]] = [[String]]()
-    let contact = Contact()
-    var sectionIndex = [String]()
+    private let managementContact = ManagementContact()
+    private var contactList: [String : String] = [:]
+    private var newSection : [[String]] = [[]]
+    private let contact = Contact()
+    private var sectionIndex: [String] = []
     
     
     // MARK: - Life cycle
@@ -145,7 +145,7 @@ extension BaiTap10ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else {
-            searchBar.text = ""
+            searchBar.text?.removeAll()
             return
         }
         searchKeyWord(keyword: searchText)
@@ -153,7 +153,7 @@ extension BaiTap10ViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
+        searchBar.text?.removeAll()
         searchKeyWord(keyword: "")
         view.endEditing(true)
     }
