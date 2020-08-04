@@ -37,7 +37,7 @@ final class CalculatorCustomView: UIView {
     private var firstNum: Float?
     private var secondNum: Float?
     private var result: Float = 0
-
+    
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,7 +45,7 @@ final class CalculatorCustomView: UIView {
         configValue()
         setInitialValueLabel()
     }
-
+    
     // MARK: - Private functions
     private func setInitialValueLabel() {
         xValueLabel.isHidden = true
@@ -81,8 +81,8 @@ final class CalculatorCustomView: UIView {
     
     private func changeButtonState(button: UIButton) {
         configButton()
-            button.backgroundColor = .orange
-            button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .orange
+        button.setTitleColor(.white, for: .normal)
     }
     
     private func getXY() -> (x: Float, y: Float)? {
@@ -99,14 +99,14 @@ final class CalculatorCustomView: UIView {
     func configValue() {
         showValueLabel()
         guard let x = getXY()?.x, let y = getXY()?.y else {
-            xValueLabel.text = ""
-            yValueLabel.text = ""
+            xValueLabel.text?.removeAll()
+            yValueLabel.text?.removeAll()
             return
         }
         xValueLabel.text = String(x)
         yValueLabel.text = String(y)
     }
-
+    
     // MARK: - IBActions
     @IBAction private func operatorButtonTouchUpInside(_ sender: UIButton) {
         changeButtonState(button: sender)
@@ -118,9 +118,9 @@ final class CalculatorCustomView: UIView {
     }
     
     @IBAction private func clearButtonTouchUpInside(_ sender: UIButton) {
-        xValueLabel.text = ""
-        yValueLabel.text = ""
-        resultLabel.text = ""
+        xValueLabel.text?.removeAll()
+        yValueLabel.text?.removeAll()
+        resultLabel.text?.removeAll()
         delegate?.view(self, needsPerform: .hiddingView)
         delegate?.view(self, needsPerform: .deleteXY)
     }
@@ -140,6 +140,7 @@ extension CalculatorCustomView {
     enum TransData {
         case transXAndY(x: Float, y: Float)
     }
+    
     enum Action {
         case returnResult(result: Float)
         case hiddingView

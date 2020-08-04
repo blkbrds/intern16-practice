@@ -78,8 +78,8 @@ extension BaiTap5ViewController: CalculatorCustomViewDelegate {
     func view(_ view: CalculatorCustomView, needsPerform action: CalculatorCustomView.Action) {
         switch action {
         case .deleteXY:
-            firstNumberTextField.text = ""
-            secondNumberTextField.text = ""
+            firstNumberTextField.text?.removeAll()
+            secondNumberTextField.text?.removeAll()
         case .hiddingView:
             hideCalculatorView()
         case .returnResult(result: let result):
@@ -97,7 +97,8 @@ extension BaiTap5ViewController: UITextFieldDelegate {
             secondNumberTextField.becomeFirstResponder()
         } else {
             newCalculator.configValue()
-            view.endEditing(true)
+            firstNumberTextField.resignFirstResponder()
+            secondNumberTextField.resignFirstResponder()
         }
         return true
     }

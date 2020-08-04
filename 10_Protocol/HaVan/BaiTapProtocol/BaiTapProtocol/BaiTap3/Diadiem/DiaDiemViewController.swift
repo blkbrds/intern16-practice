@@ -40,6 +40,7 @@ final class DiaDiemViewController: UIViewController {
 
 // MARK: - MienViewControllerDelegate
 extension DiaDiemViewController: MienViewControllerDelegate {
+    
     func controller(_ view: MienViewController, needsPerform action: MienViewController.Action) {
         switch action {
         case .saveMien(tenMien: _):

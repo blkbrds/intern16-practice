@@ -35,14 +35,14 @@ final class BaiTap4ViewController: UIViewController {
     }
     
     private func showData() {
-        tinhThanhTextView.text = ""
+        tinhThanhTextView.text.removeAll()
         for i in 0...translateData.count - 1 {
             tinhThanhTextView.text += "\n - \(translateData[i])"
         }
     }
     
     private func getResultForTextView(with searchText: String) {
-        tinhThanhTextView.text = ""
+        tinhThanhTextView.text.removeAll()
         for i in 0...translateData.count - 1 {
             if translateData[i].contains(searchText) {
                 tinhThanhTextView.text += "\n - \(translateData[i])"
@@ -56,8 +56,8 @@ final class BaiTap4ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func cancelButtonTouchUpInside(_ sender: UIButton) {
-        searchBar.text = ""
+    @IBAction private func cancelButtonTouchUpInside(_ sender: UIButton) {
+        searchBar.text?.removeAll()
         showData()
     }
 }

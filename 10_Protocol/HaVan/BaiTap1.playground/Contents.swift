@@ -184,6 +184,9 @@ bietDiVaBay()
 bietBayVaBoi()
 bietCaBa()
 bietMotTrongBa()
-print(bietMotTrongBa())
+var result = bietMotTrongBa()
+for i in result {
+    print(i.ten())
+}
 
 
