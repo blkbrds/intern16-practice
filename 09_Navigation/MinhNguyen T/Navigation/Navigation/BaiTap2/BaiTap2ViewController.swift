@@ -20,6 +20,7 @@ final class BaiTap2ViewController: UIViewController {
     @IBOutlet private weak var usernameTexField: UITextField!
     @IBOutlet private weak var passwordTexField: UITextField!
     @IBOutlet private weak var notificationLabel: UILabel!
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,7 @@ final class BaiTap2ViewController: UIViewController {
                     case (account.key, account.value):
                         let nextVC = HomeViewController()
                         nextVC.delegate = self
-                        self.navigationController?.pushViewController(nextVC, animated: true)
+                        navigationController?.pushViewController(nextVC, animated: true)
                         nextVC.username = account.key
                     default:
                         notificationLabel.text = Suit.wrongdata.rawValue
