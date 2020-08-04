@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerD" customModule="BaitapNavigation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C8-nc-NoN">
+                    <rect key="frame" x="178" y="475" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="eZ8-oq-uD6"/>
+                        <constraint firstAttribute="height" constant="36" id="wkf-jM-7hC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="B"/>
+                    <connections>
+                        <action selector="popControllerTouchUpInside:" destination="-1" eventType="touchUpInside" id="tps-tX-ZUQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSL-8L-0t6">
+                    <rect key="frame" x="178" y="519.5" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Root"/>
+                    <connections>
+                        <action selector="popRootTouchUpInside:" destination="-1" eventType="touchUpInside" id="las-6L-vFs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoz-WS-iXm">
+                    <rect key="frame" x="178" y="385" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="pushViewTouchUpInside_sender:" destination="-1" eventType="touchUpInside" id="mF8-O2-ycV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHz-r3-S3f">
+                    <rect key="frame" x="178" y="430" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="C"/>
+                    <connections>
+                        <action selector="popCControllerTouchUpInside:" destination="-1" eventType="touchUpInside" id="AWS-3p-01W"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="aSL-8L-0t6" firstAttribute="height" secondItem="eoz-WS-iXm" secondAttribute="height" id="E20-1l-0kJ"/>
+                <constraint firstItem="9C8-nc-NoN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.1" id="FqV-j4-5vH"/>
+                <constraint firstItem="eoz-WS-iXm" firstAttribute="height" secondItem="mHz-r3-S3f" secondAttribute="height" id="Lzj-AK-Jwd"/>
+                <constraint firstItem="9C8-nc-NoN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NhK-DF-oWS"/>
+                <constraint firstItem="eoz-WS-iXm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.9" id="SFz-uw-ssU"/>
+                <constraint firstItem="aSL-8L-0t6" firstAttribute="width" secondItem="eoz-WS-iXm" secondAttribute="width" id="UUh-tx-LqC"/>
+                <constraint firstItem="aSL-8L-0t6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uqa-DQ-xtg"/>
+                <constraint firstItem="9C8-nc-NoN" firstAttribute="height" secondItem="aSL-8L-0t6" secondAttribute="height" id="W7l-5L-AhY"/>
+                <constraint firstItem="mHz-r3-S3f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z6w-gA-HXl"/>
+                <constraint firstItem="mHz-r3-S3f" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bST-Na-Ip3"/>
+                <constraint firstItem="eoz-WS-iXm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bqp-z6-ztX"/>
+                <constraint firstItem="aSL-8L-0t6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.2" id="p2V-RN-aYG"/>
+                <constraint firstItem="9C8-nc-NoN" firstAttribute="width" secondItem="aSL-8L-0t6" secondAttribute="width" id="sFL-HM-D8n"/>
+                <constraint firstItem="eoz-WS-iXm" firstAttribute="width" secondItem="mHz-r3-S3f" secondAttribute="width" id="vwA-M6-duU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+</document>

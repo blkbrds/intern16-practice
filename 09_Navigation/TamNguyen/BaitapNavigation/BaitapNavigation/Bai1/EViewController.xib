@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerE" customModule="BaitapNavigation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7L-le-b1U">
+                    <rect key="frame" x="178" y="202" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="Qzi-fH-fxb"/>
+                        <constraint firstAttribute="height" constant="36" id="bgX-m5-bOM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="C"/>
+                    <connections>
+                        <action selector="popCControllerTouchUpInside:" destination="-1" eventType="touchUpInside" id="Qke-zX-Vvk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0n-DZ-nm5">
+                    <rect key="frame" x="178" y="374" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="D"/>
+                    <connections>
+                        <action selector="popDControllerTouchUpInside:" destination="-1" eventType="touchUpOutside" id="3s9-FS-vID"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrx-nK-Dk9">
+                    <rect key="frame" x="178" y="460" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Root"/>
+                    <connections>
+                        <action selector="popRootTouchUpInside:" destination="-1" eventType="touchUpInside" id="Ncj-9O-6Xw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfv-Zo-BkG">
+                    <rect key="frame" x="178" y="288" width="58" height="36"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="B"/>
+                    <connections>
+                        <action selector="popBControllerTouchUpInside:" destination="-1" eventType="touchUpInside" id="La3-k2-Gwx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="qfv-Zo-BkG" firstAttribute="width" secondItem="T0n-DZ-nm5" secondAttribute="width" id="8I3-Zi-dky"/>
+                <constraint firstItem="qfv-Zo-BkG" firstAttribute="height" secondItem="T0n-DZ-nm5" secondAttribute="height" id="CzF-fc-LKM"/>
+                <constraint firstItem="l7L-le-b1U" firstAttribute="leading" secondItem="T0n-DZ-nm5" secondAttribute="leading" id="DpK-jg-PIU"/>
+                <constraint firstItem="l7L-le-b1U" firstAttribute="leading" secondItem="qfv-Zo-BkG" secondAttribute="leading" id="IyC-FF-9go"/>
+                <constraint firstItem="T0n-DZ-nm5" firstAttribute="height" secondItem="mrx-nK-Dk9" secondAttribute="height" id="KAm-v4-ymc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mrx-nK-Dk9" secondAttribute="bottom" constant="366" id="OhN-GJ-Cng"/>
+                <constraint firstItem="T0n-DZ-nm5" firstAttribute="width" secondItem="mrx-nK-Dk9" secondAttribute="width" id="RlI-vm-gqG"/>
+                <constraint firstItem="qfv-Zo-BkG" firstAttribute="top" secondItem="l7L-le-b1U" secondAttribute="bottom" constant="50" id="S0J-du-qJi"/>
+                <constraint firstItem="l7L-le-b1U" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cdk-08-XHN"/>
+                <constraint firstItem="T0n-DZ-nm5" firstAttribute="top" secondItem="qfv-Zo-BkG" secondAttribute="bottom" constant="50" id="eX7-qH-ikj"/>
+                <constraint firstItem="l7L-le-b1U" firstAttribute="leading" secondItem="mrx-nK-Dk9" secondAttribute="leading" id="lGw-Cb-5c7"/>
+                <constraint firstItem="T0n-DZ-nm5" firstAttribute="top" secondItem="qfv-Zo-BkG" secondAttribute="bottom" constant="50" id="mIE-Ww-Lao"/>
+                <constraint firstItem="l7L-le-b1U" firstAttribute="height" secondItem="qfv-Zo-BkG" secondAttribute="height" id="o1H-En-lnG"/>
+                <constraint firstItem="mrx-nK-Dk9" firstAttribute="top" secondItem="T0n-DZ-nm5" secondAttribute="bottom" constant="50" id="s0R-Ck-r20"/>
+                <constraint firstItem="l7L-le-b1U" firstAttribute="width" secondItem="qfv-Zo-BkG" secondAttribute="width" id="wyl-cd-Ljx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="59" y="38"/>
+        </view>
+    </objects>
+</document>
