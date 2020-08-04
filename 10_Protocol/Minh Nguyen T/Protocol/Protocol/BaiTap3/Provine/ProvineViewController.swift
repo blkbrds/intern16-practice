@@ -16,7 +16,7 @@ protocol ProvineViewControllerDelegate: class {
 final class ProvineViewController: UIViewController {
 
     // MARK: - Properties
-    weak var delegate:ProvineViewControllerDelegate?
+    weak var delegate: ProvineViewControllerDelegate?
     private var titleProvine: String = ""
 
     // MARK: - Life cycle
@@ -33,14 +33,14 @@ final class ProvineViewController: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction func handleProvineButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleProvineButtonTouchUpInside(_ sender: UIButton) {
         guard let nameProvine = sender.titleLabel?.text else { return }
         titleProvine = nameProvine
         sender.backgroundColor = .green
     }
 
     // MARK: - Objc functions
-    @objc func handleToDictrictrovineTouchUpInside() {
+    @objc private func handleToDictrictrovineTouchUpInside() {
         let provineVC = DictrictViewController()
         provineVC.delegate = self
         navigationController?.pushViewController(provineVC, animated: true)

@@ -197,8 +197,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="resultValueLabel" destination="kN5-UK-TAc" id="1AE-Du-2Ng"/>
-                <outlet property="xValueLabel" destination="nff-lg-XYd" id="RMq-vd-1bX"/>
-                <outlet property="yValueLabel" destination="BXg-aC-Tse" id="oPr-B3-dxC"/>
+                <outlet property="xValueLabel" destination="nff-lg-XYd" id="5cf-Xb-NQ0"/>
+                <outlet property="yValueLabel" destination="BXg-aC-Tse" id="pA2-XC-Gbv"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="-43.526785714285715"/>
         </view>

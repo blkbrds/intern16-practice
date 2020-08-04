@@ -33,14 +33,14 @@ final class DomainViewController: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction func handleDomainButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleDomainButtonTouchUpInside(_ sender: UIButton) {
         guard let nameDomain = sender.titleLabel?.text else { return }
         titleDomain = nameDomain
         sender.backgroundColor = .blue
     }
 
     // MARK: - Objc functions
-    @objc func handleToProvineTouchUpInside() {
+    @objc private func handleToProvineTouchUpInside() {
         let provineVC = ProvineViewController()
         provineVC.delegate = self
         navigationController?.pushViewController(provineVC, animated: true)

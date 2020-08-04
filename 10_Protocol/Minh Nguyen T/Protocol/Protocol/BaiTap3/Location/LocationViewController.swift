@@ -11,9 +11,9 @@ import UIKit
 final class LocationViewController: UIViewController {
 
     // MARK: - IBOulets
-    @IBOutlet weak var domainLabel: UILabel!
-    @IBOutlet weak var provineLabel: UILabel!
-    @IBOutlet weak var dictrictLabel: UILabel!
+    @IBOutlet private weak var domainLabel: UILabel!
+    @IBOutlet private weak var provineLabel: UILabel!
+    @IBOutlet private weak var dictrictLabel: UILabel!
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ final class LocationViewController: UIViewController {
     }
 
     // MARK: - Objc functions
-    @objc func handleToDomainTouchUpInside() {
+    @objc private func handleToDomainTouchUpInside() {
         let domainVC = DomainViewController()
         domainVC.delegate = self
         navigationController?.pushViewController(domainVC, animated: true)

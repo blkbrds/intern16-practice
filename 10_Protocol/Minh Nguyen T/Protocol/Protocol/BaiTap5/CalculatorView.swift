@@ -30,7 +30,7 @@ final class CalculatorView: UIView {
     private var result: Double?
 
     // MARK: - Functions
-    func configView() {
+    func configValueView() {
         guard let x = dataSource?.getValueX() , let y = dataSource?.getValueY() else { return }
         xValueLabel.text = String(x)
         yValueLabel.text = String(y)
@@ -38,9 +38,9 @@ final class CalculatorView: UIView {
 
     // MARK: IBActions
     @IBAction private func handleCancelButton(_ sender: UIBarButtonItem) {
-        UIView.animate(withDuration: 1) {
-            self.alpha = 0
-        }
+        UIView.animate(withDuration: 1.0, animations: {
+            self.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 400)
+        })
     }
 
     @IBAction private func handleDoneButton(_ sender: UIBarButtonItem) {

@@ -15,21 +15,35 @@ final class BaiTap5ViewController: UIViewController {
     @IBOutlet private weak var yValueTextField: UITextField!
     @IBOutlet private weak var resultValueLabel: UILabel!
     
+    private var calculatorAction = CalculatorView()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configCalculator()
+        hideCalculator()
     }
     
+    func configCalculator() {
+        guard let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?.first  else { return }
+        calculatorAction = calculator as! CalculatorView
+        calculatorAction.frame = CGRect(x: 0, y: 400, width: UIScreen.main.bounds.width, height: 400)
+        calculatorAction.dataSource = self
+        calculatorAction.delegate = self
+        view.addSubview(calculatorAction)
+    }
+    
+    func hideCalculator() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.calculatorAction.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 400)
+        })
+    }
     // MARK: - IBActions
     @IBAction private func handleDisplayCalculatorTouchUpInside(_ sender: UIButton) {
-        UIView.animate(withDuration: 1) {
-            let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?.first as! CalculatorView
-            calculator.frame = CGRect(x: 0, y: 400, width: UIScreen.main.bounds.width, height: 400)
-            calculator.dataSource = self
-            calculator.delegate = self
-            calculator.configView()
-            self.view.addSubview(calculator)
-        }
+        UIView.animate(withDuration: 1.0, animations: {
+            self.calculatorAction.configValueView()
+            self.calculatorAction.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 400, width: UIScreen.main.bounds.width, height: 400)
+        })
     }
 }
 

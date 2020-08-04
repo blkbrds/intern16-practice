@@ -33,14 +33,14 @@ final class DictrictViewController: UIViewController {
     }
 
     // MARk: - IBActions
-    @IBAction func handleDictritButton(_ sender: UIButton) {
+    @IBAction private func handleDictritButton(_ sender: UIButton) {
         guard let nameDT = sender.titleLabel?.text else { return }
         titleDictrict = nameDT
         sender.backgroundColor = .orange
     }
 
     // MARK: - Objc functions
-    @objc func handleDonectrovineTouchUpInside() {
+    @objc private func handleDonectrovineTouchUpInside() {
         delegate?.getdataDictrict(self, needsPerform: .sendDataDictrict(nameDictrict: titleDictrict))
         navigationController?.popToRootViewController(animated: true)
     }
