@@ -13,7 +13,6 @@ protocol SquareCollectionViewLayoutDelegate: AnyObject {
 }
 
 final class SquareCollectionViewLayout: UICollectionViewLayout {
-    // MARK: - IBOutlets
     
     // MARK: - Propeties
     weak var delegate: SquareCollectionViewLayoutDelegate?

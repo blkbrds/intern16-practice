@@ -13,30 +13,20 @@ final class BaiTap2ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    // MARK: - Propeties
-    
-    // MARK: - Initialize
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
         if let layout = collectionView?.collectionViewLayout as? SquareCollectionViewLayout {
-          layout.delegate = self
+            layout.delegate = self
         }
     }
-    // MARK: - Override functions
     
     // MARK: - Private functions
     private func configCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reusableCell")
         collectionView.dataSource = self
     }
-    // MARK: - Public functions
-    
-    // MARK: - Objc functions
-    
-    // MARK: - IBActions
 }
 
 // MARK: - UICollectionViewDataSource
@@ -52,6 +42,7 @@ extension BaiTap2ViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - SquareCollectionViewLayoutDelegate
 extension BaiTap2ViewController: SquareCollectionViewLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForIndexPath indexPath: IndexPath) -> CGFloat {
         return CGFloat(Float.random(in: Float(indexPath.item)...200))
