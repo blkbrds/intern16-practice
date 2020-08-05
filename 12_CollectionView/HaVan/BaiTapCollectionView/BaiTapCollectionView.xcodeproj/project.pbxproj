@@ -11,6 +11,15 @@
 		52496D7424DA56BB00FACC1C /* FoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52496D7224DA56BB00FACC1C /* FoodCollectionViewCell.xib */; };
 		52496D7C24DA5BC600FACC1C /* FoodHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52496D7A24DA5BC600FACC1C /* FoodHeaderView.swift */; };
 		52496D7D24DA5BC600FACC1C /* FoodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52496D7B24DA5BC600FACC1C /* FoodHeaderView.xib */; };
+		528C5EB724DA69ED00A14B89 /* BaiTap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C5EB524DA69ED00A14B89 /* BaiTap4ViewController.swift */; };
+		528C5EB824DA69ED00A14B89 /* BaiTap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528C5EB624DA69ED00A14B89 /* BaiTap4ViewController.xib */; };
+		528C5EBF24DA6C5100A14B89 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C5EBD24DA6C5100A14B89 /* CustomTableViewCell.swift */; };
+		528C5EC024DA6C5100A14B89 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528C5EBE24DA6C5100A14B89 /* CustomTableViewCell.xib */; };
+		528C5ECF24DA966600A14B89 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C5ECD24DA966600A14B89 /* ImageCell.swift */; };
+		528C5ED024DA966600A14B89 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528C5ECE24DA966600A14B89 /* ImageCell.xib */; };
+		528C5ED324DA986D00A14B89 /* SildeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C5ED224DA986D00A14B89 /* SildeManagement.swift */; };
+		528C5ED524DA9BCB00A14B89 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C5ED424DA9BCB00A14B89 /* SlideView.swift */; };
+		528C5ED724DA9BE000A14B89 /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528C5ED624DA9BE000A14B89 /* SlideView.xib */; };
 		52BD167B24D7C2F5002B36D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD167A24D7C2F5002B36D9 /* AppDelegate.swift */; };
 		52BD167D24D7C2F5002B36D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD167C24D7C2F5002B36D9 /* SceneDelegate.swift */; };
 		52BD168424D7C2FA002B36D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD168324D7C2FA002B36D9 /* Assets.xcassets */; };
@@ -30,6 +39,15 @@
 		52496D7224DA56BB00FACC1C /* FoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCollectionViewCell.xib; sourceTree = "<group>"; };
 		52496D7A24DA5BC600FACC1C /* FoodHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeaderView.swift; sourceTree = "<group>"; };
 		52496D7B24DA5BC600FACC1C /* FoodHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeaderView.xib; sourceTree = "<group>"; };
+		528C5EB524DA69ED00A14B89 /* BaiTap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4ViewController.swift; sourceTree = "<group>"; };
+		528C5EB624DA69ED00A14B89 /* BaiTap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap4ViewController.xib; sourceTree = "<group>"; };
+		528C5EBD24DA6C5100A14B89 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		528C5EBE24DA6C5100A14B89 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		528C5ECD24DA966600A14B89 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		528C5ECE24DA966600A14B89 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		528C5ED224DA986D00A14B89 /* SildeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SildeManagement.swift; sourceTree = "<group>"; };
+		528C5ED424DA9BCB00A14B89 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		528C5ED624DA9BE000A14B89 /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
 		52BD167724D7C2F5002B36D9 /* BaiTapCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD167A24D7C2F5002B36D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BD167C24D7C2F5002B36D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +101,46 @@
 			path = HeaderFooter;
 			sourceTree = "<group>";
 		};
+		528C5EB424DA68EF00A14B89 /* BaiTap4 */ = {
+			isa = PBXGroup;
+			children = (
+				528C5ED124DA985300A14B89 /* Model */,
+				528C5EBA24DA6BF000A14B89 /* UpperView */,
+				528C5EB924DA6BDF00A14B89 /* TableViewCell */,
+				528C5EB524DA69ED00A14B89 /* BaiTap4ViewController.swift */,
+				528C5EB624DA69ED00A14B89 /* BaiTap4ViewController.xib */,
+			);
+			path = BaiTap4;
+			sourceTree = "<group>";
+		};
+		528C5EB924DA6BDF00A14B89 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				528C5EBD24DA6C5100A14B89 /* CustomTableViewCell.swift */,
+				528C5EBE24DA6C5100A14B89 /* CustomTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		528C5EBA24DA6BF000A14B89 /* UpperView */ = {
+			isa = PBXGroup;
+			children = (
+				528C5ECD24DA966600A14B89 /* ImageCell.swift */,
+				528C5ECE24DA966600A14B89 /* ImageCell.xib */,
+				528C5ED424DA9BCB00A14B89 /* SlideView.swift */,
+				528C5ED624DA9BE000A14B89 /* SlideView.xib */,
+			);
+			path = UpperView;
+			sourceTree = "<group>";
+		};
+		528C5ED124DA985300A14B89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				528C5ED224DA986D00A14B89 /* SildeManagement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52BD166E24D7C2F5002B36D9 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +160,7 @@
 		52BD167924D7C2F5002B36D9 /* BaiTapCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				528C5EB424DA68EF00A14B89 /* BaiTap4 */,
 				52BD16B024D946BC002B36D9 /* BaiTap3 */,
 				52BD16AA24D91BED002B36D9 /* BaiTap2 */,
 				52BD16A524D9101E002B36D9 /* BaiTap1 */,
@@ -208,7 +267,11 @@
 				52496D7D24DA5BC600FACC1C /* FoodHeaderView.xib in Resources */,
 				52496D7424DA56BB00FACC1C /* FoodCollectionViewCell.xib in Resources */,
 				52BD168424D7C2FA002B36D9 /* Assets.xcassets in Resources */,
+				528C5ED724DA9BE000A14B89 /* SlideView.xib in Resources */,
+				528C5ED024DA966600A14B89 /* ImageCell.xib in Resources */,
+				528C5EC024DA6C5100A14B89 /* CustomTableViewCell.xib in Resources */,
 				52BD16A924D91035002B36D9 /* BaiTap1ViewController.xib in Resources */,
+				528C5EB824DA69ED00A14B89 /* BaiTap4ViewController.xib in Resources */,
 				52BD16AF24D91C08002B36D9 /* BaiTap2ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,13 +285,18 @@
 			files = (
 				52BD167B24D7C2F5002B36D9 /* AppDelegate.swift in Sources */,
 				52BD16BA24D95CAC002B36D9 /* SquareCollectionViewLayout.swift in Sources */,
+				528C5ED324DA986D00A14B89 /* SildeManagement.swift in Sources */,
+				528C5EBF24DA6C5100A14B89 /* CustomTableViewCell.swift in Sources */,
 				52BD16AE24D91C08002B36D9 /* BaiTap2ViewController.swift in Sources */,
 				52BD167D24D7C2F5002B36D9 /* SceneDelegate.swift in Sources */,
+				528C5EB724DA69ED00A14B89 /* BaiTap4ViewController.swift in Sources */,
 				52BD16B324D946D6002B36D9 /* BaiTap3ViewController.swift in Sources */,
+				528C5ED524DA9BCB00A14B89 /* SlideView.swift in Sources */,
 				52BD169424D7C42F002B36D9 /* FoodData.swift in Sources */,
 				52496D7324DA56BB00FACC1C /* FoodCollectionViewCell.swift in Sources */,
 				52496D7C24DA5BC600FACC1C /* FoodHeaderView.swift in Sources */,
 				52BD16A824D91035002B36D9 /* BaiTap1ViewController.swift in Sources */,
+				528C5ECF24DA966600A14B89 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
