@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeroCollectionReusableView" customModule="ColectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iaO-Ct-FSb">
+                    <rect key="frame" x="5" y="5" width="55" height="55"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyt-NL-ufQ">
+                    <rect key="frame" x="80" y="22" width="220" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="aVa-Pz-WeJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cyt-NL-ufQ" firstAttribute="leading" secondItem="iaO-Ct-FSb" secondAttribute="trailing" constant="20" id="MFB-3S-cNU"/>
+                <constraint firstAttribute="trailing" secondItem="cyt-NL-ufQ" secondAttribute="trailing" constant="20" id="RNE-l9-ALZ"/>
+                <constraint firstItem="iaO-Ct-FSb" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="5" id="dx3-BN-PIw"/>
+                <constraint firstItem="iaO-Ct-FSb" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="kWZ-FZ-9TN"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="iaO-Ct-FSb" secondAttribute="bottom" constant="5" id="rSp-nP-tdt"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="cyt-NL-ufQ" secondAttribute="bottom" constant="22" id="yw2-7F-R8F"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="heroImageView" destination="iaO-Ct-FSb" id="cxO-iB-qZh"/>
+                <outlet property="nameHeroLabel" destination="cyt-NL-ufQ" id="rdF-tV-oyz"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="112.83482142857142"/>
+        </collectionReusableView>
+    </objects>
+</document>

@@ -21,6 +21,15 @@
 		522BA66D24D95EC300739F4F /* BaiTap2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA66B24D95EC300739F4F /* BaiTap2CollectionViewCell.swift */; };
 		522BA66E24D95EC300739F4F /* BaiTap2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA66C24D95EC300739F4F /* BaiTap2CollectionViewCell.xib */; };
 		522BA67024D9640D00739F4F /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA66F24D9640D00739F4F /* PinterestLayout.swift */; };
+		522BA67424D9983900739F4F /* SuperHerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA67224D9983900739F4F /* SuperHerosViewController.swift */; };
+		522BA67524D9983900739F4F /* SuperHerosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA67324D9983900739F4F /* SuperHerosViewController.xib */; };
+		522BA68324D99E3B00739F4F /* TeamFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA68124D99E3B00739F4F /* TeamFooterCollectionReusableView.swift */; };
+		522BA68424D99E3B00739F4F /* TeamFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA68224D99E3B00739F4F /* TeamFooterCollectionReusableView.xib */; };
+		522BA68624D9A1FB00739F4F /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA68524D9A1FB00739F4F /* Members.swift */; };
+		522BA6A824DA8FE900739F4F /* CustomHeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6A624DA8FE900739F4F /* CustomHeroCollectionViewCell.swift */; };
+		522BA6A924DA8FE900739F4F /* CustomHeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6A724DA8FE900739F4F /* CustomHeroCollectionViewCell.xib */; };
+		522BA6AC24DAAB3900739F4F /* HeroCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6AA24DAAB3900739F4F /* HeroCollectionReusableView.swift */; };
+		522BA6AD24DAAB3900739F4F /* HeroCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6AB24DAAB3900739F4F /* HeroCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +49,15 @@
 		522BA66B24D95EC300739F4F /* BaiTap2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2CollectionViewCell.swift; sourceTree = "<group>"; };
 		522BA66C24D95EC300739F4F /* BaiTap2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap2CollectionViewCell.xib; sourceTree = "<group>"; };
 		522BA66F24D9640D00739F4F /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		522BA67224D9983900739F4F /* SuperHerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHerosViewController.swift; sourceTree = "<group>"; };
+		522BA67324D9983900739F4F /* SuperHerosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperHerosViewController.xib; sourceTree = "<group>"; };
+		522BA68124D99E3B00739F4F /* TeamFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		522BA68224D99E3B00739F4F /* TeamFooterCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamFooterCollectionReusableView.xib; sourceTree = "<group>"; };
+		522BA68524D9A1FB00739F4F /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
+		522BA6A624DA8FE900739F4F /* CustomHeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		522BA6A724DA8FE900739F4F /* CustomHeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeroCollectionViewCell.xib; sourceTree = "<group>"; };
+		522BA6AA24DAAB3900739F4F /* HeroCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionReusableView.swift; sourceTree = "<group>"; };
+		522BA6AB24DAAB3900739F4F /* HeroCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,7 @@
 		522BA63924D8FE9A00739F4F /* ColectionView */ = {
 			isa = PBXGroup;
 			children = (
+				522BA67124D997E200739F4F /* BaiTap3 */,
 				522BA66624D95E9100739F4F /* BaiTap2 */,
 				522BA64E24D900B000739F4F /* BaiTap1 */,
 				522BA63A24D8FE9A00739F4F /* AppDelegate.swift */,
@@ -105,6 +124,46 @@
 				522BA66F24D9640D00739F4F /* PinterestLayout.swift */,
 			);
 			path = BaiTap2;
+			sourceTree = "<group>";
+		};
+		522BA67124D997E200739F4F /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+				522BA68024D99E0300739F4F /* footer */,
+				522BA67B24D99A9D00739F4F /* customcell */,
+				522BA67A24D99A9500739F4F /* header */,
+				522BA67224D9983900739F4F /* SuperHerosViewController.swift */,
+				522BA67324D9983900739F4F /* SuperHerosViewController.xib */,
+				522BA68524D9A1FB00739F4F /* Members.swift */,
+			);
+			path = BaiTap3;
+			sourceTree = "<group>";
+		};
+		522BA67A24D99A9500739F4F /* header */ = {
+			isa = PBXGroup;
+			children = (
+				522BA6AA24DAAB3900739F4F /* HeroCollectionReusableView.swift */,
+				522BA6AB24DAAB3900739F4F /* HeroCollectionReusableView.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		522BA67B24D99A9D00739F4F /* customcell */ = {
+			isa = PBXGroup;
+			children = (
+				522BA6A624DA8FE900739F4F /* CustomHeroCollectionViewCell.swift */,
+				522BA6A724DA8FE900739F4F /* CustomHeroCollectionViewCell.xib */,
+			);
+			path = customcell;
+			sourceTree = "<group>";
+		};
+		522BA68024D99E0300739F4F /* footer */ = {
+			isa = PBXGroup;
+			children = (
+				522BA68124D99E3B00739F4F /* TeamFooterCollectionReusableView.swift */,
+				522BA68224D99E3B00739F4F /* TeamFooterCollectionReusableView.xib */,
+			);
+			path = footer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +226,14 @@
 			files = (
 				522BA66E24D95EC300739F4F /* BaiTap2CollectionViewCell.xib in Resources */,
 				522BA66A24D95EA400739F4F /* BaiTap2ViewController.xib in Resources */,
+				522BA6A924DA8FE900739F4F /* CustomHeroCollectionViewCell.xib in Resources */,
+				522BA67524D9983900739F4F /* SuperHerosViewController.xib in Resources */,
 				522BA64724D8FE9C00739F4F /* LaunchScreen.storyboard in Resources */,
+				522BA68424D99E3B00739F4F /* TeamFooterCollectionReusableView.xib in Resources */,
 				522BA65224D900C400739F4F /* BaiTap1ViewController.xib in Resources */,
 				522BA64424D8FE9C00739F4F /* Assets.xcassets in Resources */,
 				522BA65624D901E300739F4F /* CustomCollectionViewCell.xib in Resources */,
+				522BA6AD24DAAB3900739F4F /* HeroCollectionReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,11 +244,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522BA68324D99E3B00739F4F /* TeamFooterCollectionReusableView.swift in Sources */,
 				522BA65824D9069800739F4F /* Number.swift in Sources */,
+				522BA6AC24DAAB3900739F4F /* HeroCollectionReusableView.swift in Sources */,
+				522BA68624D9A1FB00739F4F /* Members.swift in Sources */,
+				522BA67424D9983900739F4F /* SuperHerosViewController.swift in Sources */,
 				522BA65124D900C400739F4F /* BaiTap1ViewController.swift in Sources */,
 				522BA63F24D8FE9A00739F4F /* ViewController.swift in Sources */,
 				522BA66D24D95EC300739F4F /* BaiTap2CollectionViewCell.swift in Sources */,
 				522BA67024D9640D00739F4F /* PinterestLayout.swift in Sources */,
+				522BA6A824DA8FE900739F4F /* CustomHeroCollectionViewCell.swift in Sources */,
 				522BA63B24D8FE9A00739F4F /* AppDelegate.swift in Sources */,
 				522BA66924D95EA400739F4F /* BaiTap2ViewController.swift in Sources */,
 				522BA65524D901E300739F4F /* CustomCollectionViewCell.swift in Sources */,
