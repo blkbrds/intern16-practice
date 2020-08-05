@@ -27,7 +27,7 @@ class Bai1CollectionViewController: UIViewController {
         //2
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: sceenWidth/6, height: (sceenWidth/6) * 5/4)
+        layout.itemSize = CGSize(width: sceenWidth/6, height: (sceenWidth/6) * 6/5)
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5
         //3
