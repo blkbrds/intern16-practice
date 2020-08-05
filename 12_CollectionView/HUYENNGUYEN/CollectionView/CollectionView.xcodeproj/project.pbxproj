@@ -11,6 +11,10 @@
 		832B1EA624DAA01C00F57599 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA524DAA01C00F57599 /* SceneDelegate.swift */; };
 		832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA724DAA01C00F57599 /* ViewController.swift */; };
 		832B1EAD24DAA01D00F57599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EAC24DAA01D00F57599 /* Assets.xcassets */; };
+		832B1EBA24DAB27700F57599 /* Bai01CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EB824DAB27700F57599 /* Bai01CollectionViewCell.swift */; };
+		832B1EBB24DAB27700F57599 /* Bai01CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EB924DAB27700F57599 /* Bai01CollectionViewCell.xib */; };
+		832B1EBE24DAB2BF00F57599 /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EBC24DAB2BF00F57599 /* Bai01ViewController.swift */; };
+		832B1EBF24DAB2BF00F57599 /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		832B1EA724DAA01C00F57599 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		832B1EAC24DAA01D00F57599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832B1EB124DAA01D00F57599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832B1EB824DAB27700F57599 /* Bai01CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01CollectionViewCell.swift; sourceTree = "<group>"; };
+		832B1EB924DAB27700F57599 /* Bai01CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01CollectionViewCell.xib; sourceTree = "<group>"; };
+		832B1EBC24DAB2BF00F57599 /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
+		832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,8 @@
 		832B1EA224DAA01C00F57599 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				832B1EC024DABB8E00F57599 /* Bai 02 */,
+				832B1EB724DAB25600F57599 /* Bai 01 */,
 				832B1EA324DAA01C00F57599 /* AppDelegate.swift */,
 				832B1EA524DAA01C00F57599 /* SceneDelegate.swift */,
 				832B1EA724DAA01C00F57599 /* ViewController.swift */,
@@ -59,6 +69,24 @@
 				832B1EB124DAA01D00F57599 /* Info.plist */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		832B1EB724DAB25600F57599 /* Bai 01 */ = {
+			isa = PBXGroup;
+			children = (
+				832B1EB824DAB27700F57599 /* Bai01CollectionViewCell.swift */,
+				832B1EB924DAB27700F57599 /* Bai01CollectionViewCell.xib */,
+				832B1EBC24DAB2BF00F57599 /* Bai01ViewController.swift */,
+				832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */,
+			);
+			path = "Bai 01";
+			sourceTree = "<group>";
+		};
+		832B1EC024DABB8E00F57599 /* Bai 02 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Bai 02";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +147,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832B1EBB24DAB27700F57599 /* Bai01CollectionViewCell.xib in Resources */,
 				832B1EAD24DAA01D00F57599 /* Assets.xcassets in Resources */,
+				832B1EBF24DAB2BF00F57599 /* Bai01ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832B1EBA24DAB27700F57599 /* Bai01CollectionViewCell.swift in Sources */,
 				832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */,
 				832B1EA424DAA01C00F57599 /* AppDelegate.swift in Sources */,
+				832B1EBE24DAB2BF00F57599 /* Bai01ViewController.swift in Sources */,
 				832B1EA624DAA01C00F57599 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
