@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52496D7324DA56BB00FACC1C /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52496D7124DA56BB00FACC1C /* FoodCollectionViewCell.swift */; };
+		52496D7424DA56BB00FACC1C /* FoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52496D7224DA56BB00FACC1C /* FoodCollectionViewCell.xib */; };
+		52496D7C24DA5BC600FACC1C /* FoodHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52496D7A24DA5BC600FACC1C /* FoodHeaderView.swift */; };
+		52496D7D24DA5BC600FACC1C /* FoodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52496D7B24DA5BC600FACC1C /* FoodHeaderView.xib */; };
 		52BD167B24D7C2F5002B36D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD167A24D7C2F5002B36D9 /* AppDelegate.swift */; };
 		52BD167D24D7C2F5002B36D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD167C24D7C2F5002B36D9 /* SceneDelegate.swift */; };
 		52BD168424D7C2FA002B36D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BD168324D7C2FA002B36D9 /* Assets.xcassets */; };
@@ -18,12 +22,14 @@
 		52BD16AF24D91C08002B36D9 /* BaiTap2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD16AD24D91C08002B36D9 /* BaiTap2ViewController.xib */; };
 		52BD16B324D946D6002B36D9 /* BaiTap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16B124D946D6002B36D9 /* BaiTap3ViewController.swift */; };
 		52BD16B424D946D6002B36D9 /* BaiTap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD16B224D946D6002B36D9 /* BaiTap3ViewController.xib */; };
-		52BD16B724D9476D002B36D9 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16B524D9476D002B36D9 /* FoodCollectionViewCell.swift */; };
-		52BD16B824D9476D002B36D9 /* FoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD16B624D9476D002B36D9 /* FoodCollectionViewCell.xib */; };
 		52BD16BA24D95CAC002B36D9 /* SquareCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16B924D95CAC002B36D9 /* SquareCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52496D7124DA56BB00FACC1C /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		52496D7224DA56BB00FACC1C /* FoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCollectionViewCell.xib; sourceTree = "<group>"; };
+		52496D7A24DA5BC600FACC1C /* FoodHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeaderView.swift; sourceTree = "<group>"; };
+		52496D7B24DA5BC600FACC1C /* FoodHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHeaderView.xib; sourceTree = "<group>"; };
 		52BD167724D7C2F5002B36D9 /* BaiTapCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD167A24D7C2F5002B36D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BD167C24D7C2F5002B36D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,8 +43,6 @@
 		52BD16AD24D91C08002B36D9 /* BaiTap2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap2ViewController.xib; sourceTree = "<group>"; };
 		52BD16B124D946D6002B36D9 /* BaiTap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3ViewController.swift; sourceTree = "<group>"; };
 		52BD16B224D946D6002B36D9 /* BaiTap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiTap3ViewController.xib; sourceTree = "<group>"; };
-		52BD16B524D9476D002B36D9 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
-		52BD16B624D9476D002B36D9 /* FoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCollectionViewCell.xib; sourceTree = "<group>"; };
 		52BD16B924D95CAC002B36D9 /* SquareCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52496D7624DA5B4E00FACC1C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52496D7124DA56BB00FACC1C /* FoodCollectionViewCell.swift */,
+				52496D7224DA56BB00FACC1C /* FoodCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52496D7724DA5B5F00FACC1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52BD169324D7C42F002B36D9 /* FoodData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52496D7824DA5B7300FACC1C /* HeaderFooter */ = {
+			isa = PBXGroup;
+			children = (
+				52496D7A24DA5BC600FACC1C /* FoodHeaderView.swift */,
+				52496D7B24DA5BC600FACC1C /* FoodHeaderView.xib */,
+			);
+			path = HeaderFooter;
+			sourceTree = "<group>";
+		};
 		52BD166E24D7C2F5002B36D9 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +105,6 @@
 				52BD16B024D946BC002B36D9 /* BaiTap3 */,
 				52BD16AA24D91BED002B36D9 /* BaiTap2 */,
 				52BD16A524D9101E002B36D9 /* BaiTap1 */,
-				52BD169224D7C401002B36D9 /* Demo */,
 				52BD167A24D7C2F5002B36D9 /* AppDelegate.swift */,
 				52BD167C24D7C2F5002B36D9 /* SceneDelegate.swift */,
 				52BD168324D7C2FA002B36D9 /* Assets.xcassets */,
@@ -83,14 +112,6 @@
 				52BD168824D7C2FA002B36D9 /* Info.plist */,
 			);
 			path = BaiTapCollectionView;
-			sourceTree = "<group>";
-		};
-		52BD169224D7C401002B36D9 /* Demo */ = {
-			isa = PBXGroup;
-			children = (
-				52BD169324D7C42F002B36D9 /* FoodData.swift */,
-			);
-			path = Demo;
 			sourceTree = "<group>";
 		};
 		52BD16A524D9101E002B36D9 /* BaiTap1 */ = {
@@ -115,10 +136,11 @@
 		52BD16B024D946BC002B36D9 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				52496D7824DA5B7300FACC1C /* HeaderFooter */,
+				52496D7724DA5B5F00FACC1C /* Model */,
+				52496D7624DA5B4E00FACC1C /* Cell */,
 				52BD16B124D946D6002B36D9 /* BaiTap3ViewController.swift */,
 				52BD16B224D946D6002B36D9 /* BaiTap3ViewController.xib */,
-				52BD16B524D9476D002B36D9 /* FoodCollectionViewCell.swift */,
-				52BD16B624D9476D002B36D9 /* FoodCollectionViewCell.xib */,
 			);
 			path = BaiTap3;
 			sourceTree = "<group>";
@@ -183,10 +205,11 @@
 			files = (
 				52BD16B424D946D6002B36D9 /* BaiTap3ViewController.xib in Resources */,
 				52BD168724D7C2FA002B36D9 /* LaunchScreen.storyboard in Resources */,
+				52496D7D24DA5BC600FACC1C /* FoodHeaderView.xib in Resources */,
+				52496D7424DA56BB00FACC1C /* FoodCollectionViewCell.xib in Resources */,
 				52BD168424D7C2FA002B36D9 /* Assets.xcassets in Resources */,
 				52BD16A924D91035002B36D9 /* BaiTap1ViewController.xib in Resources */,
 				52BD16AF24D91C08002B36D9 /* BaiTap2ViewController.xib in Resources */,
-				52BD16B824D9476D002B36D9 /* FoodCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,13 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BD16B724D9476D002B36D9 /* FoodCollectionViewCell.swift in Sources */,
 				52BD167B24D7C2F5002B36D9 /* AppDelegate.swift in Sources */,
 				52BD16BA24D95CAC002B36D9 /* SquareCollectionViewLayout.swift in Sources */,
 				52BD16AE24D91C08002B36D9 /* BaiTap2ViewController.swift in Sources */,
 				52BD167D24D7C2F5002B36D9 /* SceneDelegate.swift in Sources */,
 				52BD16B324D946D6002B36D9 /* BaiTap3ViewController.swift in Sources */,
 				52BD169424D7C42F002B36D9 /* FoodData.swift in Sources */,
+				52496D7324DA56BB00FACC1C /* FoodCollectionViewCell.swift in Sources */,
+				52496D7C24DA5BC600FACC1C /* FoodHeaderView.swift in Sources */,
 				52BD16A824D91035002B36D9 /* BaiTap1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
