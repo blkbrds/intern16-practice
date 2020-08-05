@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="Bai11TableViewCell" customModule="TableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="blV-OS-SED">
+                        <rect key="frame" x="0.0" y="5" width="320" height="130"/>
+                        <mutableString key="text">Bí quyết để sử dụng Self-sizing Table View Cell thật ra không có gì to tác cả, chúng ta chỉ cần sử dụng Auto Layout. Vấn đề ở chỗ chúng ta phải sử dụng đúng các layout cần thiết một cách hợp lý. Khi sử dụng Auto Layout, chúng ta cần thêm các constraint cho nội dung với tất cả các bên của cell. Cụ thể, chúng ta cần thêm leading, top, trailing và bottom constraint cho subview. từ các constraint này, cộng với kích thước nội tại của subview, iOS sẽ tính được ra kích thước cần thiết của Table View Cell.</mutableString>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="blV-OS-SED" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="A41-P1-8Ng"/>
+                    <constraint firstAttribute="trailing" secondItem="blV-OS-SED" secondAttribute="trailing" id="JWS-v3-jEz"/>
+                    <constraint firstItem="blV-OS-SED" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jlc-Uk-K1w"/>
+                    <constraint firstAttribute="bottom" secondItem="blV-OS-SED" secondAttribute="bottom" constant="5" id="X5m-GC-Ylq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentLabel" destination="blV-OS-SED" id="Qux-7S-mzy"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="150.66964285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

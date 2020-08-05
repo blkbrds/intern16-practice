@@ -23,7 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let vc = Bai04ViewController()
 //        let vc = Bai05ViewController()
 //        let vc = Bai07ViewController()
-        let vc = Bai08ViewController()
+//        let vc = Bai08ViewController()
+//        let vc = Bai09ViewController()
+//        let vc = Bai11ViewController()
+        let vc = Bai12ViewController()
 
         let navi = UINavigationController(rootViewController: vc)
         window.rootViewController = navi
