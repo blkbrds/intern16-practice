@@ -30,6 +30,13 @@
 		522BA6A924DA8FE900739F4F /* CustomHeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6A724DA8FE900739F4F /* CustomHeroCollectionViewCell.xib */; };
 		522BA6AC24DAAB3900739F4F /* HeroCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6AA24DAAB3900739F4F /* HeroCollectionReusableView.swift */; };
 		522BA6AD24DAAB3900739F4F /* HeroCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6AB24DAAB3900739F4F /* HeroCollectionReusableView.xib */; };
+		522BA6D924DAF6A200739F4F /* BaiTap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6D724DAF6A200739F4F /* BaiTap4ViewController.swift */; };
+		522BA6DA24DAF6A200739F4F /* BaiTap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6D824DAF6A200739F4F /* BaiTap4ViewController.xib */; };
+		522BA6F224DB9EA500739F4F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6F124DB9EA500739F4F /* Model.swift */; };
+		522BA6F524DBA10600739F4F /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6F324DBA10600739F4F /* MyCollectionViewCell.swift */; };
+		522BA6F624DBA10600739F4F /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6F424DBA10600739F4F /* MyCollectionViewCell.xib */; };
+		522BA6F924DBDB8B00739F4F /* MyCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA6F724DBDB8B00739F4F /* MyCollectionTableViewCell.swift */; };
+		522BA6FA24DBDB8B00739F4F /* MyCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA6F824DBDB8B00739F4F /* MyCollectionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		522BA6A724DA8FE900739F4F /* CustomHeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeroCollectionViewCell.xib; sourceTree = "<group>"; };
 		522BA6AA24DAAB3900739F4F /* HeroCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionReusableView.swift; sourceTree = "<group>"; };
 		522BA6AB24DAAB3900739F4F /* HeroCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionReusableView.xib; sourceTree = "<group>"; };
+		522BA6D724DAF6A200739F4F /* BaiTap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaiTap4ViewController.swift; path = ../../../../../../../DemoMVC/DemoMVC/Model/BaiTap4ViewController.swift; sourceTree = "<group>"; };
+		522BA6D824DAF6A200739F4F /* BaiTap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BaiTap4ViewController.xib; path = ../../../../../../../DemoMVC/DemoMVC/Model/BaiTap4ViewController.xib; sourceTree = "<group>"; };
+		522BA6F124DB9EA500739F4F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ../../../../../../../DemoMVC/DemoMVC/Model/Model.swift; sourceTree = "<group>"; };
+		522BA6F324DBA10600739F4F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionViewCell.swift; path = ../../../../../../../../DemoMVC/DemoMVC/Model/MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		522BA6F424DBA10600739F4F /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyCollectionViewCell.xib; path = ../../../../../../../../DemoMVC/DemoMVC/Model/MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		522BA6F724DBDB8B00739F4F /* MyCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCollectionTableViewCell.swift; path = ../../../../../../../../DemoMVC/DemoMVC/Model/MyCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		522BA6F824DBDB8B00739F4F /* MyCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyCollectionTableViewCell.xib; path = ../../../../../../../../DemoMVC/DemoMVC/Model/MyCollectionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,7 @@
 		522BA63924D8FE9A00739F4F /* ColectionView */ = {
 			isa = PBXGroup;
 			children = (
+				522BA6D624DAF04600739F4F /* BaiTap4 */,
 				522BA67124D997E200739F4F /* BaiTap3 */,
 				522BA66624D95E9100739F4F /* BaiTap2 */,
 				522BA64E24D900B000739F4F /* BaiTap1 */,
@@ -166,6 +181,36 @@
 			path = footer;
 			sourceTree = "<group>";
 		};
+		522BA6D624DAF04600739F4F /* BaiTap4 */ = {
+			isa = PBXGroup;
+			children = (
+				522BA6DC24DAF71600739F4F /* CustomeTableViewCell */,
+				522BA6DB24DAF70500739F4F /* CustomCollectionCell */,
+				522BA6D724DAF6A200739F4F /* BaiTap4ViewController.swift */,
+				522BA6D824DAF6A200739F4F /* BaiTap4ViewController.xib */,
+				522BA6F124DB9EA500739F4F /* Model.swift */,
+			);
+			path = BaiTap4;
+			sourceTree = "<group>";
+		};
+		522BA6DB24DAF70500739F4F /* CustomCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				522BA6F324DBA10600739F4F /* MyCollectionViewCell.swift */,
+				522BA6F424DBA10600739F4F /* MyCollectionViewCell.xib */,
+			);
+			path = CustomCollectionCell;
+			sourceTree = "<group>";
+		};
+		522BA6DC24DAF71600739F4F /* CustomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				522BA6F724DBDB8B00739F4F /* MyCollectionTableViewCell.swift */,
+				522BA6F824DBDB8B00739F4F /* MyCollectionTableViewCell.xib */,
+			);
+			path = CustomeTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,9 +269,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522BA6DA24DAF6A200739F4F /* BaiTap4ViewController.xib in Resources */,
 				522BA66E24D95EC300739F4F /* BaiTap2CollectionViewCell.xib in Resources */,
 				522BA66A24D95EA400739F4F /* BaiTap2ViewController.xib in Resources */,
+				522BA6FA24DBDB8B00739F4F /* MyCollectionTableViewCell.xib in Resources */,
 				522BA6A924DA8FE900739F4F /* CustomHeroCollectionViewCell.xib in Resources */,
+				522BA6F624DBA10600739F4F /* MyCollectionViewCell.xib in Resources */,
 				522BA67524D9983900739F4F /* SuperHerosViewController.xib in Resources */,
 				522BA64724D8FE9C00739F4F /* LaunchScreen.storyboard in Resources */,
 				522BA68424D99E3B00739F4F /* TeamFooterCollectionReusableView.xib in Resources */,
@@ -251,9 +299,13 @@
 				522BA67424D9983900739F4F /* SuperHerosViewController.swift in Sources */,
 				522BA65124D900C400739F4F /* BaiTap1ViewController.swift in Sources */,
 				522BA63F24D8FE9A00739F4F /* ViewController.swift in Sources */,
+				522BA6F224DB9EA500739F4F /* Model.swift in Sources */,
+				522BA6F924DBDB8B00739F4F /* MyCollectionTableViewCell.swift in Sources */,
 				522BA66D24D95EC300739F4F /* BaiTap2CollectionViewCell.swift in Sources */,
+				522BA6D924DAF6A200739F4F /* BaiTap4ViewController.swift in Sources */,
 				522BA67024D9640D00739F4F /* PinterestLayout.swift in Sources */,
 				522BA6A824DA8FE900739F4F /* CustomHeroCollectionViewCell.swift in Sources */,
+				522BA6F524DBA10600739F4F /* MyCollectionViewCell.swift in Sources */,
 				522BA63B24D8FE9A00739F4F /* AppDelegate.swift in Sources */,
 				522BA66924D95EA400739F4F /* BaiTap2ViewController.swift in Sources */,
 				522BA65524D901E300739F4F /* CustomCollectionViewCell.swift in Sources */,
