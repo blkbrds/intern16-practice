@@ -8,17 +8,23 @@
 
 import UIKit
 
-class CalculationView: UIView {
+protocol CalculationViewDelegate: class {
+    func view(_ view: CalculationView, needsPerform action: CalculationView.Action)
+}
+
+protocol CalculationViewDatasource: class {
+    func getResult(_ view: CalculationView) -> String?
+    func getData(_ view: CalculationView) -> String
+}
+
+final class CalculationView: UIView {
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var resultTextfield: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
    
     // MARK: - Properties
-    var fullNum: Int = 0
-    var firstNum: Float = 0
-    var secondNum: Float = 0
-    var op: Operator = .plus
-    var inputNumber: Float = 0
+    weak var delegate: CalculationViewDelegate?
+    weak var datasource: CalculationViewDatasource?
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -27,36 +33,34 @@ class CalculationView: UIView {
    
     // MARK: - IBActions
     @IBAction private func numberButtonTouchUpInside(_ sender: UIButton) {
-        guard let numberString = sender.titleLabel?.text else { return }
-        guard let number = Float(numberString) else { return }
-        inputNumber = inputNumber * 10 + number
-        if inputNumber < 999999 {
-            resultTextfield.text = String(format: "%.0f", inputNumber)
-        }
+        guard let number = sender.titleLabel?.text else { return }
+        delegate?.view(self, needsPerform: .sendNumber(number: number))
+        guard let result  = datasource?.getData(self) else { return }
+        resultLabel.text = result
     }
     
-    @IBAction func operatorButtonTouchUpInside(_ sender: UIButton) {
-        guard let text = resultTextfield.text else { return }
-        firstNum = Float(text) ?? 0.0
-        op = Calculator.thucHienPhepTinh(phepTinh: sender.currentTitle ?? "+")
-        inputNumber = 0
+    @IBAction private func operatorButtonTouchUpInside(_ sender: UIButton) {
+        guard let operation = sender.titleLabel?.text else { return }
+        delegate?.view(self, needsPerform: .sendOperator(operator: operation))
     }
     
-    @IBAction func resultButtonTouchUpInside(_ sender: UIButton) {
-        guard let text = resultTextfield.text else { return }
-        secondNum = Float(text) ?? 0.0
-        let calculator = Calculator(firstNum, secondNum)
-        print(firstNum)
-        print(secondNum)
-        print(calculator)
-        let ketQua = Calculator.ketQua(calculator, op: op)
-        resultTextfield.text = String(format: "%.0f", ketQua)
+    @IBAction private func resultButtonTouchUpInside(_ sender: UIButton) {
+        guard let result = datasource?.getResult(self) else { return }
+        resultLabel.text = result
     }
     
-    @IBAction func deleteButtonTouchUpInside(_ sender: UIButton) {
-        resultTextfield.text = ""
-        inputNumber = 0
-        firstNum = 0
-        secondNum = 0
+    @IBAction private func deleteButtonTouchUpInside(_ sender: UIButton) {
+        resultLabel.text?.removeAll()
+        delegate?.view(self, needsPerform: .deleteNumber)
+        
+    }
+}
+
+// MARK: - Extension
+extension CalculationView {
+    enum Action {
+        case sendOperator(operator: String)
+        case sendNumber(number: String)
+        case deleteNumber
     }
 }

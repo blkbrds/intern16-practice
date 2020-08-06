@@ -17,33 +17,23 @@ enum Operator {
 
 class Calculator {
   
-    // MARK: - Properties
-    private var firstNumber: Float = 0
-    private var secondNumber: Float = 0
-  
-    init(_ firstNumber: Float, _ secondNumber: Float) {
-        self.firstNumber = firstNumber
-        self.secondNumber = secondNumber
-    }
-
-    
-    static func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber + secondNumber
     }
     
-    static func truHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func truHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber - secondNumber
     }
     
-    static func nhanHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func nhanHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber * secondNumber
     }
     
-    static func chiaHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func chiaHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber / secondNumber
     }
     
-    static func thucHienPhepTinh(phepTinh: String) -> Operator {
+    func thucHienPhepTinh(phepTinh: String) -> Operator {
         if phepTinh == "+" {
             return .plus
         } else if phepTinh == "-" {
@@ -55,16 +45,16 @@ class Calculator {
         }
     }
     
-    static func ketQua(_ toanTu: Calculator, op: Operator) -> Float {
+    func ketQua(_ firstNumber: Float, _ secondNumber: Float, op: Operator) -> Float {
         switch op {
         case .plus:
-            return congHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return congHaiSo(firstNumber,secondNumber)
         case .minor:
-            return truHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return truHaiSo(firstNumber, secondNumber)
         case .multiple:
-            return nhanHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return nhanHaiSo(firstNumber, secondNumber)
         case .devide:
-            return chiaHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return chiaHaiSo(firstNumber, secondNumber)
         }
     }
 
