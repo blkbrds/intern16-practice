@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8327E8B524DAFA8100AF961D /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327E8B324DAFA8100AF961D /* CustomCollectionViewCell.swift */; };
+		8327E8B624DAFA8100AF961D /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8327E8B424DAFA8100AF961D /* CustomCollectionViewCell.xib */; };
+		83295ED724DBE1E8003ED329 /* Bai03CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */; };
+		83295ED824DBE1E8003ED329 /* Bai03CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */; };
+		83295EDB24DBE35A003ED329 /* Bai03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83295ED924DBE35A003ED329 /* Bai03ViewController.swift */; };
+		83295EDC24DBE35A003ED329 /* Bai03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */; };
 		832B1EA424DAA01C00F57599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA324DAA01C00F57599 /* AppDelegate.swift */; };
 		832B1EA624DAA01C00F57599 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA524DAA01C00F57599 /* SceneDelegate.swift */; };
 		832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA724DAA01C00F57599 /* ViewController.swift */; };
@@ -15,9 +21,18 @@
 		832B1EBB24DAB27700F57599 /* Bai01CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EB924DAB27700F57599 /* Bai01CollectionViewCell.xib */; };
 		832B1EBE24DAB2BF00F57599 /* Bai01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EBC24DAB2BF00F57599 /* Bai01ViewController.swift */; };
 		832B1EBF24DAB2BF00F57599 /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */; };
+		832B1EC324DABC0000F57599 /* Bai02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EC124DABC0000F57599 /* Bai02ViewController.swift */; };
+		832B1EC424DABC0000F57599 /* Bai02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EC224DABC0000F57599 /* Bai02ViewController.xib */; };
+		832F29AC24DBACCC0023291E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F29AB24DBACCC0023291E /* PinterestLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8327E8B324DAFA8100AF961D /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		8327E8B424DAFA8100AF961D /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03CollectionViewCell.swift; sourceTree = "<group>"; };
+		83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai03CollectionViewCell.xib; sourceTree = "<group>"; };
+		83295ED924DBE35A003ED329 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03ViewController.swift; sourceTree = "<group>"; };
+		83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai03ViewController.xib; sourceTree = "<group>"; };
 		832B1EA024DAA01C00F57599 /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832B1EA324DAA01C00F57599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832B1EA524DAA01C00F57599 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +43,9 @@
 		832B1EB924DAB27700F57599 /* Bai01CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01CollectionViewCell.xib; sourceTree = "<group>"; };
 		832B1EBC24DAB2BF00F57599 /* Bai01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01ViewController.swift; sourceTree = "<group>"; };
 		832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
+		832B1EC124DABC0000F57599 /* Bai02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02ViewController.swift; sourceTree = "<group>"; };
+		832B1EC224DABC0000F57599 /* Bai02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai02ViewController.xib; sourceTree = "<group>"; };
+		832F29AB24DBACCC0023291E /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83295ED424DBE1D1003ED329 /* Bai 03 */ = {
+			isa = PBXGroup;
+			children = (
+				83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */,
+				83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */,
+				83295ED924DBE35A003ED329 /* Bai03ViewController.swift */,
+				83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */,
+			);
+			path = "Bai 03";
+			sourceTree = "<group>";
+		};
 		832B1E9724DAA01C00F57599 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +89,7 @@
 		832B1EA224DAA01C00F57599 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				83295ED424DBE1D1003ED329 /* Bai 03 */,
 				832B1EC024DABB8E00F57599 /* Bai 02 */,
 				832B1EB724DAB25600F57599 /* Bai 01 */,
 				832B1EA324DAA01C00F57599 /* AppDelegate.swift */,
@@ -85,6 +115,11 @@
 		832B1EC024DABB8E00F57599 /* Bai 02 */ = {
 			isa = PBXGroup;
 			children = (
+				832B1EC124DABC0000F57599 /* Bai02ViewController.swift */,
+				832B1EC224DABC0000F57599 /* Bai02ViewController.xib */,
+				8327E8B324DAFA8100AF961D /* CustomCollectionViewCell.swift */,
+				8327E8B424DAFA8100AF961D /* CustomCollectionViewCell.xib */,
+				832F29AB24DBACCC0023291E /* PinterestLayout.swift */,
 			);
 			path = "Bai 02";
 			sourceTree = "<group>";
@@ -147,8 +182,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83295ED824DBE1E8003ED329 /* Bai03CollectionViewCell.xib in Resources */,
 				832B1EBB24DAB27700F57599 /* Bai01CollectionViewCell.xib in Resources */,
+				832B1EC424DABC0000F57599 /* Bai02ViewController.xib in Resources */,
 				832B1EAD24DAA01D00F57599 /* Assets.xcassets in Resources */,
+				83295EDC24DBE35A003ED329 /* Bai03ViewController.xib in Resources */,
+				8327E8B624DAFA8100AF961D /* CustomCollectionViewCell.xib in Resources */,
 				832B1EBF24DAB2BF00F57599 /* Bai01ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,11 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83295EDB24DBE35A003ED329 /* Bai03ViewController.swift in Sources */,
 				832B1EBA24DAB27700F57599 /* Bai01CollectionViewCell.swift in Sources */,
+				8327E8B524DAFA8100AF961D /* CustomCollectionViewCell.swift in Sources */,
 				832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */,
 				832B1EA424DAA01C00F57599 /* AppDelegate.swift in Sources */,
+				832F29AC24DBACCC0023291E /* PinterestLayout.swift in Sources */,
 				832B1EBE24DAB2BF00F57599 /* Bai01ViewController.swift in Sources */,
 				832B1EA624DAA01C00F57599 /* SceneDelegate.swift in Sources */,
+				83295ED724DBE1E8003ED329 /* Bai03CollectionViewCell.swift in Sources */,
+				832B1EC324DABC0000F57599 /* Bai02ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
