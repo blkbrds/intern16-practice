@@ -10,7 +10,6 @@ import UIKit
 
 final class FoodHeaderView: UICollectionReusableView {
     
-    
     // MARK: - IBOutlets
     @IBOutlet private weak var foodNameLabel: UILabel!
     @IBOutlet private weak var foodImageView: UIImageView!

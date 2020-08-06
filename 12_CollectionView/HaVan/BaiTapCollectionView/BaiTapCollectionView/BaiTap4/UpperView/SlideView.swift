@@ -23,8 +23,6 @@ final class SlideView: UIView {
         configSlideCell()
     }
     
-    // MARK: - Override functions
-    
     // MARK: - Private functions
     private func configSlideCell() {
         let nib = UINib(nibName: "ImageCell", bundle: Bundle.main)
@@ -35,21 +33,21 @@ final class SlideView: UIView {
     
     // MARK: - IBActions
     @IBAction private func leftButtonTouchUpInside(_ sender: UIButton) {
-        if index < 0 {
+        if index <= 0 {
             index = 0
         } else {
             index -= 1
         }
-        collectionView.cellForItem(at: IndexPath(item: index, section: 0))
+        collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
     }
     
     @IBAction private func rightButtonTouchUpInside(_ sender: UIButton) {
-        if index == slide.slide.count - 1 {
+        if index >= slide.slide.count - 1 {
             index = slide.slide.count - 1
         } else {
             index += 1
         }
-        collectionView.cellForItem(at: IndexPath(item: index, section: 0))
+        collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
     }
 }
 
@@ -71,6 +69,6 @@ extension SlideView: UICollectionViewDataSource {
 extension SlideView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 300)
+        return CGSize(width: UIScreen.main.bounds.width, height: self.bounds.height - 8)
     }
 }

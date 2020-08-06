@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="680" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bXW-u4-V8K">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bXW-u4-V8K">
                     <rect key="frame" x="0.0" y="0.0" width="680" height="216"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zc7-Ce-iei">
@@ -24,12 +24,12 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEU-iD-LrL">
-                    <rect key="frame" x="5" y="78" width="60" height="60"/>
+                    <rect key="frame" x="5" y="79" width="60" height="57.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="MGc-kF-Dy9"/>
                         <constraint firstAttribute="width" secondItem="VEU-iD-LrL" secondAttribute="height" multiplier="1:1" id="gGO-f9-32j"/>
                     </constraints>
-                    <state key="normal" image="next">
+                    <state key="normal" backgroundImage="arrowshape.turn.up.left.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                     </state>
                     <connections>
@@ -37,11 +37,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFm-x3-iaF">
-                    <rect key="frame" x="615" y="78" width="60" height="60"/>
+                    <rect key="frame" x="615" y="79" width="60" height="57.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="wFm-x3-iaF" secondAttribute="height" multiplier="1:1" id="C4G-8I-nBP"/>
                     </constraints>
-                    <state key="normal" image="next">
+                    <state key="normal" backgroundImage="arrowshape.turn.up.right.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="heavy"/>
                     </state>
                     <connections>
@@ -70,6 +70,7 @@
         </view>
     </objects>
     <resources>
-        <image name="next" width="410" height="418"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
     </resources>
 </document>

@@ -44,21 +44,17 @@ final class SquareCollectionViewLayout: UICollectionViewLayout {
         }
         var column = 0
         var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColum)
-        
         for item in 0..<collectionView.numberOfItems(inSection: 0) {
             let indexPath = IndexPath(item: item, section: 0)
             let squareHeight = delegate?.collectionView(collectionView, heightForIndexPath: indexPath) ?? 180
             let height = cellPadding * 2 + squareHeight
             let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
             let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
-            
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.frame = insetFrame
             cache.append(attributes)
-            
             contentHeight = max(contentHeight, frame.maxY)
             yOffset[column] = yOffset[column] + height
-            
             column = column < (numberOfColum - 1 ) ? (column + 1) : 0
         }
     }
@@ -66,7 +62,6 @@ final class SquareCollectionViewLayout: UICollectionViewLayout {
     override func layoutAttributesForElements(in rect: CGRect)
         -> [UICollectionViewLayoutAttributes]? {
             var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-            
             // Loop through the cache and look for items in the rect
             for attributes in cache {
                 if attributes.frame.intersects(rect) {

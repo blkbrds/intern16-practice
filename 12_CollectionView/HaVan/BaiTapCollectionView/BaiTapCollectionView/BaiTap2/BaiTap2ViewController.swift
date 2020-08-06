@@ -31,6 +31,7 @@ final class BaiTap2ViewController: UIViewController {
 
 // MARK: - UICollectionViewDataSource
 extension BaiTap2ViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
@@ -44,6 +45,7 @@ extension BaiTap2ViewController: UICollectionViewDataSource {
 
 // MARK: - SquareCollectionViewLayoutDelegate
 extension BaiTap2ViewController: SquareCollectionViewLayoutDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, heightForIndexPath indexPath: IndexPath) -> CGFloat {
         return CGFloat(Float.random(in: Float(indexPath.item)...200))
     }
