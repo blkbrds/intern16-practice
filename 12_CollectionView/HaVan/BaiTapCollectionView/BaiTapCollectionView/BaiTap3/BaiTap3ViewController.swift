@@ -16,7 +16,6 @@ final class BaiTap3ViewController: UIViewController {
     // MARK: - Propeties
     private var foodFactory = FoodFacttory()
     private var sectionKey: [String] = []
-    private var sectionValue: [UIImage] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -30,7 +29,6 @@ final class BaiTap3ViewController: UIViewController {
         foodFactory.configData()
         sectionKey = Array(foodFactory.sectionFood.keys)
         sectionKey = sectionKey.sorted(by: {$0 > $1})
-        //sectionValue = Array(foodFactory.sectionFood.values)
     }
     
     private func configCollectionView() {
