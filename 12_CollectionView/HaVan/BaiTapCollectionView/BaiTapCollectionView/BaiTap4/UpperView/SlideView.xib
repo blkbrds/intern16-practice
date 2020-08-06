@@ -29,6 +29,7 @@
                         <constraint firstAttribute="height" constant="60" id="MGc-kF-Dy9"/>
                         <constraint firstAttribute="width" secondItem="VEU-iD-LrL" secondAttribute="height" multiplier="1:1" id="gGO-f9-32j"/>
                     </constraints>
+                    <color key="tintColor" red="0.21429945117298396" green="0.29293202523656059" blue="0.46301951142131981" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" backgroundImage="arrowshape.turn.up.left.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                     </state>
@@ -41,6 +42,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="wFm-x3-iaF" secondAttribute="height" multiplier="1:1" id="C4G-8I-nBP"/>
                     </constraints>
+                    <color key="tintColor" red="0.21429945119999999" green="0.2929320252" blue="0.46301951139999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" backgroundImage="arrowshape.turn.up.right.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="heavy"/>
                     </state>

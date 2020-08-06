@@ -31,6 +31,7 @@ final class BaiTap4ViewController: UIViewController {
     
     private func configSlideView() {
         guard let slide = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as? SlideView else { return }
+        // when we set slide.frame = slideView.frame, the Y origin slide be down a little bit (about 50)
         slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width, height: slideView.bounds.height)
         slideView.addSubview(slide)
     }

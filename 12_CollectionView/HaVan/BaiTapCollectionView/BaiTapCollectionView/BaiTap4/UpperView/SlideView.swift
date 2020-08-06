@@ -69,6 +69,6 @@ extension SlideView: UICollectionViewDataSource {
 extension SlideView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: self.bounds.height - 8)
+        return CGSize(width: UIScreen.main.bounds.width, height: self.bounds.height)
     }
 }
