@@ -24,6 +24,7 @@ final class CustomTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
        
     }
+    
     // MARK: - Private functions
     private func configCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reusableCell")
