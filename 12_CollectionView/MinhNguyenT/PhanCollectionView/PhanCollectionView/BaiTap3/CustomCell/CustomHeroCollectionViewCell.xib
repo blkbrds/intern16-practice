@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CustomHeroCollectionViewCell" customModule="PhanCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="209"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="176" height="209"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H70-Ui-g9E">
+                        <rect key="frame" x="0.0" y="0.0" width="176" height="169"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIg-jL-Fvb">
+                        <rect key="frame" x="0.0" y="169" width="176" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="mqf-IG-MDt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="H70-Ui-g9E" secondAttribute="trailing" id="6Xf-Io-Gxy"/>
+                <constraint firstItem="H70-Ui-g9E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KeK-Rg-eov"/>
+                <constraint firstAttribute="trailing" secondItem="gIg-jL-Fvb" secondAttribute="trailing" id="Nay-RX-xEb"/>
+                <constraint firstItem="gIg-jL-Fvb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eXo-Yb-VSq"/>
+                <constraint firstAttribute="bottom" secondItem="gIg-jL-Fvb" secondAttribute="bottom" id="itv-Zz-aPJ"/>
+                <constraint firstItem="gIg-jL-Fvb" firstAttribute="top" secondItem="H70-Ui-g9E" secondAttribute="bottom" id="kTk-5r-RcQ"/>
+                <constraint firstItem="H70-Ui-g9E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rmk-us-Irw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="176" height="209"/>
+            <connections>
+                <outlet property="nameHeroLabel" destination="gIg-jL-Fvb" id="VeY-DO-jwv"/>
+                <outlet property="nameImageView" destination="H70-Ui-g9E" id="Mv7-SS-lgW"/>
+            </connections>
+            <point key="canvasLocation" x="46.376811594202906" y="179.79910714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>
