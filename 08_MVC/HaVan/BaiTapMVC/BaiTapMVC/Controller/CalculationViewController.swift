@@ -48,8 +48,7 @@ final class CalculationViewController: UIViewController {
         guard let num1String = calculatorFactory.num1, let num2String = calculatorFactory.num2 else { return nil }
         guard let num1 = Float(num1String), let num2 = Float(num2String), let op = calculatorFactory.op else { return nil }
         if op == .devide && num2 == 0 { return "NaN" }
-        let calculator = Calculator()
-        return String(format: "%.2f", calculator.ketQua(num1, num2, op: op))
+        return String(format: "%.2f", Calculator.shared.ketQua(num1, num2, op: op))
     }
     
     private func getData() -> String {

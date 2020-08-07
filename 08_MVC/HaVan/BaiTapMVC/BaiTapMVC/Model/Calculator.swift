@@ -8,15 +8,10 @@
 
 import Foundation
 
-enum Operator {
-    case plus
-    case minor
-    case multiple
-    case devide
-}
-
 final class Calculator {
   
+    static var shared = Calculator()
+    
     func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber + secondNumber
     }

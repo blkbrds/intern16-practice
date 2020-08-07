@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Operator {
+    case plus
+    case minor
+    case multiple
+    case devide
+}
+
 final class CalculatorFactory {
     var num1: String?
     var num2: String?
