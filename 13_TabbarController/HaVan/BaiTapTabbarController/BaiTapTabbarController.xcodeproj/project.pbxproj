@@ -21,6 +21,7 @@
 		528C5F1124DBF32A00A14B89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C5F1024DBF32A00A14B89 /* SceneDelegate.swift */; };
 		528C5F1824DBF32C00A14B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528C5F1724DBF32C00A14B89 /* Assets.xcassets */; };
 		528C5F1B24DBF32C00A14B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528C5F1924DBF32C00A14B89 /* LaunchScreen.storyboard */; };
+		529D8E2424DD3333000CCFC9 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E2324DD3333000CCFC9 /* Information.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		528C5F1724DBF32C00A14B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		528C5F1A24DBF32C00A14B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528C5F1C24DBF32C00A14B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529D8E2324DD3333000CCFC9 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				5263051824DCF3710061BD1D /* Map */,
 				5263051924DCF3770061BD1D /* Favorite */,
 				5263051A24DCF3810061BD1D /* Profile */,
+				529D8E2324DD3333000CCFC9 /* Information.swift */,
 			);
 			path = BaiTap1;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				528C5F0F24DBF32A00A14B89 /* AppDelegate.swift in Sources */,
 				528C5F1124DBF32A00A14B89 /* SceneDelegate.swift in Sources */,
+				529D8E2424DD3333000CCFC9 /* Information.swift in Sources */,
 				5263052224DCF3C40061BD1D /* MapViewController.swift in Sources */,
 				5263052E24DCF4D30061BD1D /* LoginViewController.swift in Sources */,
 				5263052A24DCF3E90061BD1D /* ProfileViewController.swift in Sources */,

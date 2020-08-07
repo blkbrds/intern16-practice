@@ -22,6 +22,5 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - IBAction functions
-    @IBAction private func loginButtonTouchUpInside(_ sender: UIButton) {
-    }
+   
 }
