@@ -21,7 +21,6 @@ enum KindFood {
 }
 
 class FoodManagement {
-    
     var kindName: String?
     var kindImage: UIImage?
     var food: [Food]?
