@@ -12,7 +12,7 @@ final class CalculationViewController: UIViewController {
     
     // MARK: - Properties
     private var calculatorFactory = CalculatorFactory()
-    private var isNum = true
+    private var isFirstNumber = true
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ final class CalculationViewController: UIViewController {
     }
     
     private func saveNumber(with stringNumber: String) {
-        if isNum {
+        if isFirstNumber {
             var num1: String = calculatorFactory.num1 ?? ""
             num1 += stringNumber
             calculatorFactory.num1 = num1
@@ -53,7 +53,7 @@ final class CalculationViewController: UIViewController {
     }
     
     private func getData() -> String {
-        if isNum {
+        if isFirstNumber {
             guard let num1String = calculatorFactory.num1 else { return "" }
             return num1String
         } else {
@@ -70,11 +70,11 @@ extension CalculationViewController: CalculationViewDelegate {
         switch action {
         case .sendOperator(operator: let op):
             calculatorFactory.op = calculatorFactory.thucHienPhepTinh(phepTinh: op)
-            isNum = false
+            isFirstNumber = false
         case .sendNumber(number: let number):
             saveNumber(with: number)
         case .deleteNumber:
-            isNum = true
+            isFirstNumber = true
             deleteNumber()
         }
     }
@@ -84,7 +84,7 @@ extension CalculationViewController: CalculationViewDelegate {
 extension CalculationViewController: CalculationViewDatasource {
     
     func getResult(_ view: CalculationView) -> String? {
-        isNum = true
+        isFirstNumber = true
         let result = returnResult()
         deleteNumber()
         return result
