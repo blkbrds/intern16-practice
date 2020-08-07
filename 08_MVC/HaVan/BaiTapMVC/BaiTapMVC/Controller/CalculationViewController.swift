@@ -11,9 +11,7 @@ import UIKit
 final class CalculationViewController: UIViewController {
     
     // MARK: - Properties
-    private var op: String?
-    private var num1: String?
-    private var num2: String?
+    private var calculatorFactory = CalculatorFactory()
     private var isNum = true
     
     // MARK: - Life cycle
@@ -32,36 +30,35 @@ final class CalculationViewController: UIViewController {
     
     private func saveNumber(with stringNumber: String) {
         if isNum {
-            var num1: String = self.num1 ?? ""
+            var num1: String = calculatorFactory.num1 ?? ""
             num1 += stringNumber
-            self.num1 = num1
+            calculatorFactory.num1 = num1
         } else {
-            var num2: String = self.num2 ?? ""
+            var num2: String = calculatorFactory.num2 ?? ""
             num2 += stringNumber
-            self.num2 = num2
+            calculatorFactory.num2 = num2
         }
     }
     
     private func deleteNumber() {
-        num1 = nil
-        num2 = nil
+        calculatorFactory.num1 = nil
+        calculatorFactory.num2 = nil
     }
     
     private func returnResult() -> String? {
-        guard let num1String = num1, let num2String = num2 else { return nil }
-        guard let num1 = Float(num1String), let num2 = Float(num2String), let op = op else { return nil }
+        guard let num1String = calculatorFactory.num1, let num2String = calculatorFactory.num2 else { return nil }
+        guard let num1 = Float(num1String), let num2 = Float(num2String), let op = calculatorFactory.op else { return nil }
+        if op == .devide && num2 == 0 { return "NaN" }
         let calculator = Calculator()
-        let newOP: Operator = calculator.thucHienPhepTinh(phepTinh: op)
-        if newOP == .devide && num2 == 0 { return "NaN" }
-        return String(format: "%.2f", calculator.ketQua(num1, num2, op: newOP))
+        return String(format: "%.2f", calculator.ketQua(num1, num2, op: op))
     }
     
     private func getData() -> String {
         if isNum {
-            guard let num1String = num1 else { return "" }
+            guard let num1String = calculatorFactory.num1 else { return "" }
             return num1String
         } else {
-            guard let num2String = num2 else { return "" }
+            guard let num2String = calculatorFactory.num2 else { return "" }
             return num2String
         }
     }
@@ -73,7 +70,7 @@ extension CalculationViewController: CalculationViewDelegate {
     func view(_ view: CalculationView, needsPerform action: CalculationView.Action) {
         switch action {
         case .sendOperator(operator: let op):
-            self.op = op
+            calculatorFactory.op = calculatorFactory.thucHienPhepTinh(phepTinh: op)
             isNum = false
         case .sendNumber(number: let number):
             saveNumber(with: number)

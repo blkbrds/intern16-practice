@@ -33,18 +33,6 @@ class Calculator {
         return firstNumber / secondNumber
     }
     
-    func thucHienPhepTinh(phepTinh: String) -> Operator {
-        if phepTinh == "+" {
-            return .plus
-        } else if phepTinh == "-" {
-            return .minor
-        } else if phepTinh == "x" {
-            return .multiple
-        } else {
-            return .devide
-        }
-    }
-    
     func ketQua(_ firstNumber: Float, _ secondNumber: Float, op: Operator) -> Float {
         switch op {
         case .plus:
@@ -57,5 +45,22 @@ class Calculator {
             return chiaHaiSo(firstNumber, secondNumber)
         }
     }
+}
 
+class CalculatorFactory {
+    var num1: String?
+    var num2: String?
+    var op: Operator?
+    
+    func thucHienPhepTinh(phepTinh: String) -> Operator {
+        if phepTinh == "+" {
+            return .plus
+        } else if phepTinh == "-" {
+            return .minor
+        } else if phepTinh == "x" {
+            return .multiple
+        } else {
+            return .devide
+        }
+    }
 }
