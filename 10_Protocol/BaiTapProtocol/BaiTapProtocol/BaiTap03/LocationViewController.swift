@@ -10,6 +10,12 @@ import UIKit
 
 final class LocationViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet private weak var regionLabel: UILabel!
+    @IBOutlet private weak var provinceLabel: UILabel!
+    @IBOutlet private weak var districtLabel: UILabel!
+    
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +31,17 @@ final class LocationViewController: UIViewController {
     // MARK: - Objc
     @objc private func editClick() {
         let vc = RegionViewController()
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
-
-
-
+}
+extension LocationViewController: RegionViewControllerDelegate {
+    func setValueRegionAndProvinceAndDistrict(_ regionViewController: RegionViewController, needperform action: RegionViewController.Action) {
+        switch action {
+        case .sendValueRegionAndProvinceAndDistrict(nameRegion: let nameRegion1, nameProvince: let nameProvince1, nameDistrict: let nameDistrict1):
+            regionLabel.text = nameRegion1
+            provinceLabel.text = nameProvince1
+            districtLabel.text = nameDistrict1
+        }
+    }
 }
