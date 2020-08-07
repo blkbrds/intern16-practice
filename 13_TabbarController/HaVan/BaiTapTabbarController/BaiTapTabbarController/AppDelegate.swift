@@ -8,30 +8,61 @@
 
 import UIKit
 
+enum RootType {
+    case login
+    case tabbar
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var window: UIWindow?
+    static let shared: AppDelegate = {
+        guard let shared = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("Cannot cast `UIApplication.shared.delegate` to `AppDelegate`.")
+        }
+        return shared
+    }()
+        
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        configLogin()
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    func configTabbar() {
+        // Home Navigation Controller
+        let homeNavigationController = UINavigationController(rootViewController: HomeViewController())
+        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "homeFilled"))
+        // Map Navigation Controller
+        let mapNavigationController = UINavigationController(rootViewController: MapViewController())
+        mapNavigationController.tabBarItem = UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "map"), selectedImage: #imageLiteral(resourceName: "mapFilled"))
+        // Favorite Navigation Controller
+        let favoriteNavigationController = UINavigationController(rootViewController: FavoriteViewController())
+        favoriteNavigationController.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favorite"), selectedImage: #imageLiteral(resourceName: "favoriteFilled"))
+        // Profile Navigation Controller
+        let profileNavigationController = UINavigationController(rootViewController: ProfileViewController())
+        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profile"), selectedImage: #imageLiteral(resourceName: "profileFilled"))
+        // Config Tabbar controller
+        let tabbarController = UITabBarController()
+        let viewControllers = [homeNavigationController, mapNavigationController, favoriteNavigationController, profileNavigationController]
+        tabbarController.viewControllers = viewControllers
+        window?.rootViewController = tabbarController
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    func configLogin() {
+        let navigationController = UINavigationController(rootViewController: LoginViewController())
+        window?.rootViewController = navigationController
     }
-
-
+    
+    func changeRoot(rootType: RootType) {
+        switch rootType {
+        case .login:
+            configLogin()
+        case .tabbar:
+            configTabbar()
+        }
+    }
 }
-

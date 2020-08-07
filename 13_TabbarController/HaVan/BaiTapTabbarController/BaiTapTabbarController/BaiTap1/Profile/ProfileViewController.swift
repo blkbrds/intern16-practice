@@ -23,6 +23,6 @@ final class ProfileViewController: UIViewController {
     
     // MARK: - IBAction functions
     @IBAction private func logoutButtonTouchUpInside(_ sender: UIButton) {
-    
+        AppDelegate.shared.changeRoot(rootType: .login)
     }
 }

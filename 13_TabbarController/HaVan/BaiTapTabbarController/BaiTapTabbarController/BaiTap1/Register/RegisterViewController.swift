@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  BaiTapTabbarController
 //
 //  Created by NganHa on 8/7/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LoginViewController: UIViewController {
+final class RegisterViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameTextField: UITextField!
@@ -18,8 +18,8 @@ final class LoginViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTextField()
         errorLabel.isHidden = true
+        configTextField()
     }
     
     // MARK: - Override functions
@@ -29,48 +29,39 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    private func configTextField() {
+    func configTextField() {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
     }
     
-    private func login() {
+    func register() {
         guard let username = usernameTextField.text, let password = passwordTextField.text else {
             errorLabel.text = "You must filled username and password"
             return
         }
-        if InformationFactory.shared.checkInformation(username: username, password: password) {
+        
+        if InformationFactory.shared.createNewAccount(username: username, password: password) {
             AppDelegate.shared.changeRoot(rootType: .tabbar)
         } else {
-            errorLabel.isHidden = false
-            errorLabel.text = "You entered the wrong username or password"
+            errorLabel.isHidden = true
+            errorLabel.text = "the username has already exist"
         }
     }
     
     // MARK: - IBActions
-    @IBAction private func loginButtonTouchUpInside(_ sender: UIButton) {
-        login()
-    }
-    
-    @IBAction private func clickMeButtonTouchUpInside(_ sender: UIButton) {
-        let forgotPasswordVC = ForgotPasswordViewController()
-        navigationController?.pushViewController(forgotPasswordVC, animated: true)
-    }
-    
     @IBAction private func registerButtonTouchUpInside(_ sender: UIButton) {
-        let registerVC = RegisterViewController()
-        navigationController?.pushViewController(registerVC, animated: true)
+        register()
     }
 }
 
 // MARK: - UITextFieldDelegate
-extension LoginViewController: UITextFieldDelegate {
+extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === usernameTextField {
             passwordTextField.becomeFirstResponder()
         } else {
-            login()
+            register()
         }
         return true
     }
