@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SliderTableViewCell" customModule="CollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-vi-FuR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="300" id="jIH-6j-Nw5"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oky-v2-6ci">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j91-m4-9uH">
+                        <rect key="frame" x="16" y="132" width="30" height="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <state key="normal" title="&lt;"/>
+                        <connections>
+                            <action selector="turnLeftTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="raC-8f-KVv"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVz-MN-GJK">
+                        <rect key="frame" x="264" y="132" width="30" height="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <state key="normal" title="&gt;"/>
+                        <connections>
+                            <action selector="turnRightTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YQA-2U-hYT"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j91-m4-9uH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3HD-PE-qKH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KVz-MN-GJK" secondAttribute="trailing" constant="10" id="9Dz-eZ-IeW"/>
+                    <constraint firstAttribute="trailing" secondItem="Eon-vi-FuR" secondAttribute="trailing" id="TP3-JP-2aH"/>
+                    <constraint firstAttribute="bottom" secondItem="Eon-vi-FuR" secondAttribute="bottom" id="c2e-Ml-RVE"/>
+                    <constraint firstItem="Eon-vi-FuR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="h3g-b1-spS"/>
+                    <constraint firstItem="KVz-MN-GJK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lqz-Zt-cVD"/>
+                    <constraint firstItem="j91-m4-9uH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qeI-pw-wZE"/>
+                    <constraint firstItem="Eon-vi-FuR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yot-la-m1I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="sliderCollectionView" destination="Eon-vi-FuR" id="tW6-gM-Zq6"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

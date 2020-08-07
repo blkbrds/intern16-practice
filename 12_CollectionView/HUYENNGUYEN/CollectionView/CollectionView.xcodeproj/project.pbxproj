@@ -23,16 +23,26 @@
 		832B1EBF24DAB2BF00F57599 /* Bai01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */; };
 		832B1EC324DABC0000F57599 /* Bai02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EC124DABC0000F57599 /* Bai02ViewController.swift */; };
 		832B1EC424DABC0000F57599 /* Bai02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EC224DABC0000F57599 /* Bai02ViewController.xib */; };
+		832D783C24DD046600A1E6D3 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D783A24DD046600A1E6D3 /* SliderTableViewCell.swift */; };
+		832D783D24DD046600A1E6D3 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832D783B24DD046600A1E6D3 /* SliderTableViewCell.xib */; };
+		832D784224DD04AC00A1E6D3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D784024DD04AC00A1E6D3 /* MainTableViewCell.swift */; };
+		832D784324DD04AC00A1E6D3 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832D784124DD04AC00A1E6D3 /* MainTableViewCell.xib */; };
 		832F29AC24DBACCC0023291E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F29AB24DBACCC0023291E /* PinterestLayout.swift */; };
+		83304FDB24DBFFA200FDBC06 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83304FD924DBFFA200FDBC06 /* HeaderCollectionReusableView.swift */; };
+		83304FDC24DBFFA200FDBC06 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83304FDA24DBFFA200FDBC06 /* HeaderCollectionReusableView.xib */; };
+		83304FE124DC0A2500FDBC06 /* Bai04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83304FDF24DC0A2500FDBC06 /* Bai04ViewController.swift */; };
+		83304FE224DC0A2500FDBC06 /* Bai04ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83304FE024DC0A2500FDBC06 /* Bai04ViewController.xib */; };
+		83304FE624DC0DA400FDBC06 /* ScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83304FE424DC0DA400FDBC06 /* ScrollCollectionViewCell.swift */; };
+		83304FE724DC0DA400FDBC06 /* ScrollCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83304FE524DC0DA400FDBC06 /* ScrollCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8327E8B324DAFA8100AF961D /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		8327E8B424DAFA8100AF961D /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03CollectionViewCell.swift; sourceTree = "<group>"; };
-		83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai03CollectionViewCell.xib; sourceTree = "<group>"; };
-		83295ED924DBE35A003ED329 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai03ViewController.swift; sourceTree = "<group>"; };
-		83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai03ViewController.xib; sourceTree = "<group>"; };
+		83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai03CollectionViewCell.swift; path = ../Bai03CollectionViewCell.swift; sourceTree = "<group>"; };
+		83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai03CollectionViewCell.xib; path = ../Bai03CollectionViewCell.xib; sourceTree = "<group>"; };
+		83295ED924DBE35A003ED329 /* Bai03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai03ViewController.swift; path = ../Bai03ViewController.swift; sourceTree = "<group>"; };
+		83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai03ViewController.xib; path = ../Bai03ViewController.xib; sourceTree = "<group>"; };
 		832B1EA024DAA01C00F57599 /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832B1EA324DAA01C00F57599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832B1EA524DAA01C00F57599 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +55,17 @@
 		832B1EBD24DAB2BF00F57599 /* Bai01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai01ViewController.xib; sourceTree = "<group>"; };
 		832B1EC124DABC0000F57599 /* Bai02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai02ViewController.swift; sourceTree = "<group>"; };
 		832B1EC224DABC0000F57599 /* Bai02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai02ViewController.xib; sourceTree = "<group>"; };
+		832D783A24DD046600A1E6D3 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		832D783B24DD046600A1E6D3 /* SliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
+		832D784024DD04AC00A1E6D3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		832D784124DD04AC00A1E6D3 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		832F29AB24DBACCC0023291E /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		83304FD924DBFFA200FDBC06 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		83304FDA24DBFFA200FDBC06 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		83304FDF24DC0A2500FDBC06 /* Bai04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai04ViewController.swift; sourceTree = "<group>"; };
+		83304FE024DC0A2500FDBC06 /* Bai04ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai04ViewController.xib; sourceTree = "<group>"; };
+		83304FE424DC0DA400FDBC06 /* ScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollCollectionViewCell.swift; sourceTree = "<group>"; };
+		83304FE524DC0DA400FDBC06 /* ScrollCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +82,9 @@
 		83295ED424DBE1D1003ED329 /* Bai 03 */ = {
 			isa = PBXGroup;
 			children = (
-				83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */,
-				83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */,
-				83295ED924DBE35A003ED329 /* Bai03ViewController.swift */,
-				83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */,
+				83304FD824DBFF7B00FDBC06 /* Header */,
+				83304FD724DBFF6800FDBC06 /* Cell */,
+				83304FD624DBFF5600FDBC06 /* Controller */,
 			);
 			path = "Bai 03";
 			sourceTree = "<group>";
@@ -89,6 +108,7 @@
 		832B1EA224DAA01C00F57599 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				83304FDD24DC09FB00FDBC06 /* Bai 04 */,
 				83295ED424DBE1D1003ED329 /* Bai 03 */,
 				832B1EC024DABB8E00F57599 /* Bai 02 */,
 				832B1EB724DAB25600F57599 /* Bai 01 */,
@@ -122,6 +142,88 @@
 				832F29AB24DBACCC0023291E /* PinterestLayout.swift */,
 			);
 			path = "Bai 02";
+			sourceTree = "<group>";
+		};
+		832D783924DD02F600A1E6D3 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				832D783A24DD046600A1E6D3 /* SliderTableViewCell.swift */,
+				832D783B24DD046600A1E6D3 /* SliderTableViewCell.xib */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		832D783E24DD047600A1E6D3 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				83304FE424DC0DA400FDBC06 /* ScrollCollectionViewCell.swift */,
+				83304FE524DC0DA400FDBC06 /* ScrollCollectionViewCell.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		832D783F24DD048A00A1E6D3 /* Layout main */ = {
+			isa = PBXGroup;
+			children = (
+				832D784024DD04AC00A1E6D3 /* MainTableViewCell.swift */,
+				832D784124DD04AC00A1E6D3 /* MainTableViewCell.xib */,
+			);
+			path = "Layout main";
+			sourceTree = "<group>";
+		};
+		83304FD624DBFF5600FDBC06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83295ED924DBE35A003ED329 /* Bai03ViewController.swift */,
+				83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83304FD724DBFF6800FDBC06 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				83295ED524DBE1E7003ED329 /* Bai03CollectionViewCell.swift */,
+				83295ED624DBE1E7003ED329 /* Bai03CollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		83304FD824DBFF7B00FDBC06 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				83304FD924DBFFA200FDBC06 /* HeaderCollectionReusableView.swift */,
+				83304FDA24DBFFA200FDBC06 /* HeaderCollectionReusableView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		83304FDD24DC09FB00FDBC06 /* Bai 04 */ = {
+			isa = PBXGroup;
+			children = (
+				83304FE324DC0B9600FDBC06 /* View */,
+				83304FDE24DC0A0B00FDBC06 /* Controller */,
+			);
+			path = "Bai 04";
+			sourceTree = "<group>";
+		};
+		83304FDE24DC0A0B00FDBC06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83304FDF24DC0A2500FDBC06 /* Bai04ViewController.swift */,
+				83304FE024DC0A2500FDBC06 /* Bai04ViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83304FE324DC0B9600FDBC06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				832D783E24DD047600A1E6D3 /* Component */,
+				832D783F24DD048A00A1E6D3 /* Layout main */,
+				832D783924DD02F600A1E6D3 /* Slider */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +284,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83304FDC24DBFFA200FDBC06 /* HeaderCollectionReusableView.xib in Resources */,
 				83295ED824DBE1E8003ED329 /* Bai03CollectionViewCell.xib in Resources */,
 				832B1EBB24DAB27700F57599 /* Bai01CollectionViewCell.xib in Resources */,
 				832B1EC424DABC0000F57599 /* Bai02ViewController.xib in Resources */,
+				832D783D24DD046600A1E6D3 /* SliderTableViewCell.xib in Resources */,
+				83304FE224DC0A2500FDBC06 /* Bai04ViewController.xib in Resources */,
+				832D784324DD04AC00A1E6D3 /* MainTableViewCell.xib in Resources */,
+				83304FE724DC0DA400FDBC06 /* ScrollCollectionViewCell.xib in Resources */,
 				832B1EAD24DAA01D00F57599 /* Assets.xcassets in Resources */,
 				83295EDC24DBE35A003ED329 /* Bai03ViewController.xib in Resources */,
 				8327E8B624DAFA8100AF961D /* CustomCollectionViewCell.xib in Resources */,
@@ -200,9 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				83295EDB24DBE35A003ED329 /* Bai03ViewController.swift in Sources */,
+				83304FDB24DBFFA200FDBC06 /* HeaderCollectionReusableView.swift in Sources */,
 				832B1EBA24DAB27700F57599 /* Bai01CollectionViewCell.swift in Sources */,
+				83304FE124DC0A2500FDBC06 /* Bai04ViewController.swift in Sources */,
+				832D784224DD04AC00A1E6D3 /* MainTableViewCell.swift in Sources */,
+				832D783C24DD046600A1E6D3 /* SliderTableViewCell.swift in Sources */,
 				8327E8B524DAFA8100AF961D /* CustomCollectionViewCell.swift in Sources */,
 				832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */,
+				83304FE624DC0DA400FDBC06 /* ScrollCollectionViewCell.swift in Sources */,
 				832B1EA424DAA01C00F57599 /* AppDelegate.swift in Sources */,
 				832F29AC24DBACCC0023291E /* PinterestLayout.swift in Sources */,
 				832B1EBE24DAB2BF00F57599 /* Bai01ViewController.swift in Sources */,
