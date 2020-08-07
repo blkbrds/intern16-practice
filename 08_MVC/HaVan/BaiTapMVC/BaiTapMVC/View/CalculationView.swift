@@ -52,7 +52,6 @@ final class CalculationView: UIView {
     @IBAction private func deleteButtonTouchUpInside(_ sender: UIButton) {
         resultLabel.text?.removeAll()
         delegate?.view(self, needsPerform: .deleteNumber)
-        
     }
 }
 

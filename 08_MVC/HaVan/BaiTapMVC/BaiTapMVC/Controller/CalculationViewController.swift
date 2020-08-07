@@ -41,8 +41,7 @@ final class CalculationViewController: UIViewController {
     }
     
     private func deleteNumber() {
-        calculatorFactory.num1 = nil
-        calculatorFactory.num2 = nil
+        calculatorFactory.deleteNumber()
     }
     
     private func returnResult() -> String? {
@@ -93,6 +92,5 @@ extension CalculationViewController: CalculationViewDatasource {
     
     func getData(_ view: CalculationView) -> String {
         return getData()
-        
     }
 }

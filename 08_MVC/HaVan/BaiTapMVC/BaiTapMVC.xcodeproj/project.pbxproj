@@ -16,6 +16,7 @@
 		529702A824C535EB00AFDC0F /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529702A724C535EB00AFDC0F /* CalculationView.swift */; };
 		529702AA24C5360600AFDC0F /* CalculationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529702A924C5360600AFDC0F /* CalculationView.xib */; };
 		529702AC24C54B2B00AFDC0F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529702AB24C54B2B00AFDC0F /* Calculator.swift */; };
+		529D8E2224DD0927000CCFC9 /* CalculatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E2124DD0927000CCFC9 /* CalculatorFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		529702A724C535EB00AFDC0F /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		529702A924C5360600AFDC0F /* CalculationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculationView.xib; sourceTree = "<group>"; };
 		529702AB24C54B2B00AFDC0F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		529D8E2124DD0927000CCFC9 /* CalculatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				529702AB24C54B2B00AFDC0F /* Calculator.swift */,
+				529D8E2124DD0927000CCFC9 /* CalculatorFactory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				529702A324C535A700AFDC0F /* CalculationViewController.swift in Sources */,
 				529702A824C535EB00AFDC0F /* CalculationView.swift in Sources */,
 				529702AC24C54B2B00AFDC0F /* Calculator.swift in Sources */,
+				529D8E2224DD0927000CCFC9 /* CalculatorFactory.swift in Sources */,
 				5297029024C5338300AFDC0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
