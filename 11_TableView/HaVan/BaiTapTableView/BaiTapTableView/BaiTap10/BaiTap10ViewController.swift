@@ -16,7 +16,6 @@ final class BaiTap10ViewController: UIViewController {
     
     // MARK: - Propeties
     private var keys: [String] = []
-    private var values: [String] = []
     private let managementContact = ManagementContact()
     private var contactList: [String : String] = [:]
     private var newSection : [[String]] = [[]]
@@ -43,11 +42,14 @@ final class BaiTap10ViewController: UIViewController {
     private func configData() {
         managementContact.fetchContacts()
         contactList = managementContact.contactsDictionary
+        
     }
     
     private func getKey() {
+        keys = []
         keys = Array(contactList.keys)
         newSection = contact.transContacts(with: keys)
+        
     }
     
     private func configSectionIndex() {
@@ -118,6 +120,7 @@ extension BaiTap10ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        print(sectionIndex[section])
         return sectionIndex[section]
     }
 }

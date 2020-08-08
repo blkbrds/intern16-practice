@@ -43,15 +43,10 @@ final class Contact {
     var sectionIndex: [Character] = []
     
     func transContacts(with contacts: [String]) -> [[String]] {
-        var tempList: [[String]] = [[]]
+        var tempList: [[String]] = []
         let newContact = contacts.sorted { $0 < $1 }
-        var new: [String] = []
-        // trim the leading space of each contact and append it into a new array
-        // then, add the first letter of each contact into a set
         for contact in newContact {
-            let temp = contact.trimmingCharacters(in: .whitespacesAndNewlines)
-            new.append(temp)
-            if let character = temp.first {
+            if let character = contact.first {
                 sectionCharacter.insert(character)
             }
         }
@@ -61,7 +56,7 @@ final class Contact {
         // then, add all arrays into a array
         for character in sectionIndex {
             var temp: [String] = []
-            for contact in new {
+            for contact in newContact {
                 if contact.first == character {
                     temp.append(contact)
                 }
