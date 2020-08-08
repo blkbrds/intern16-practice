@@ -202,7 +202,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <state key="normal" title="AC"/>
                                             <connections>
-                                                <action selector="calButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="HDI-7d-Tva"/>
+                                                <action selector="handleACButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="18Q-tA-cgF"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBV-uW-8Sb">
@@ -220,7 +220,7 @@
                                             <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="="/>
                                             <connections>
-                                                <action selector="calButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="QR8-Sj-CiG"/>
+                                                <action selector="handleResultButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="wNw-eg-QIX"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvG-K3-D4d">

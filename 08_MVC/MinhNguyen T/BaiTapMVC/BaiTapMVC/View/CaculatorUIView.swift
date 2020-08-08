@@ -8,66 +8,59 @@
 
 import UIKit
 
+protocol CaculatorUIViewDelegate: class {
+    func sendData(_ view: CaculatorUIView, needsPerform action: CaculatorUIView.Action)
+}
+
+protocol CaculatorUIViewDataSource: class {
+    func getValueNumber() -> String
+    func getResult() -> String
+}
+
 final class CaculatorUIView: UIView {
 
     // MARK: - IBOutlet
     @IBOutlet weak var numberResultLabel: UILabel!
+    
     // MARK: - Private properties
-    private var numberOnScreen: Float = 0
-    private var previousNumber: Float = 0
-    private var performMath = false
     private var operation = 0
-
+    weak var delegate: CaculatorUIViewDelegate?
+    weak var datasource: CaculatorUIViewDataSource?
+    
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    // MARK: - Function
+    // MARK: - @IBActions
     @IBAction private func numberButtonTouchUpInside(_ sender: UIButton) {
-        if performMath == true {
-            numberResultLabel.text = String(sender.tag - 1)
-            guard let textNumber = numberResultLabel.text, let newNumber = Float(textNumber) else { return }
-            numberOnScreen = newNumber
-            performMath = false
-        } else {
-            guard let text = numberResultLabel.text, text.isEmpty else { return }
-            numberResultLabel.text = text + String(sender.tag - 1)
-            guard let textNumber = numberResultLabel.text, let newNumber = Float(textNumber) else { return }
-            numberOnScreen = newNumber
-        }
+        guard let number = sender.titleLabel?.text else { return }
+        delegate?.sendData(self, needsPerform: .numBer(number: number))
+        guard let numberOnscreen  = datasource?.getValueNumber() else { return }
+        numberResultLabel.text = numberOnscreen
     }
 
     @IBAction private func calButtonTouchUpInside(_ sender: UIButton) {
-        if numberResultLabel.text != "" && sender.tag != 11 && sender.tag != 12 {
-            previousNumber = Float(numberResultLabel.text!)!
-            if sender.tag == 13 {
-                numberResultLabel.text = "+"
-            } else if sender.tag == 14 {
-                numberResultLabel.text = "-"
-            } else if sender.tag == 15 {
-                numberResultLabel.text = "*"
-            } else if sender.tag == 16 {
-                numberResultLabel.text = "/"
-            }
-            performMath = true
-            operation = sender.tag
-        } else if sender.tag == 12 {
-            let result = Caculator(a: previousNumber, b: numberOnScreen)
-            if operation == 13 {
-                numberResultLabel.text = String(result.sumNumber())
-            } else if operation == 14 {
-                numberResultLabel.text = String(result.subNumber())
-            } else if operation == 15 {
-                numberResultLabel.text = String(result.mulNumber())
-            } else if operation == 16 {
-                numberResultLabel.text = String(result.divNumber())
-            }
-        } else if sender.tag == 11 {
-            numberResultLabel.text = ""
-            previousNumber = 0
-            numberOnScreen = 0
-            operation = 0
-        }
+        guard let action = sender.titleLabel?.text else { return }
+        numberResultLabel.text = action
+        delegate?.sendData(self, needsPerform: .cal(operator: action))
+    }
+
+    @IBAction func handleACButtonTouchUpInside(_ sender: UIButton) {
+        numberResultLabel.text?.removeAll()
+        delegate?.sendData(self, needsPerform: .clear)
+    }
+
+    @IBAction func handleResultButtonTouchUpInside(_ sender: UIButton) {
+        guard let result = datasource?.getResult() else { return }
+        numberResultLabel.text = result
+    }
+}
+
+extension CaculatorUIView {
+    enum Action {
+        case cal(operator: String)
+        case numBer(number: String)
+        case clear
     }
 }

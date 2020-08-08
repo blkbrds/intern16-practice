@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522BA7A124DDAEF200739F4F /* OperatorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA7A024DDAEF200739F4F /* OperatorAction.swift */; };
 		5271553224C5494900CFA579 /* Caculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271553124C5494900CFA579 /* Caculator.swift */; };
 		528871F224C0C0B400067AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528871F124C0C0B400067AD3 /* AppDelegate.swift */; };
 		528871F424C0C0B400067AD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528871F324C0C0B400067AD3 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522BA7A024DDAEF200739F4F /* OperatorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorAction.swift; sourceTree = "<group>"; };
 		5271553124C5494900CFA579 /* Caculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caculator.swift; sourceTree = "<group>"; };
 		528871EE24C0C0B400067AD3 /* BaiTapMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528871F124C0C0B400067AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5271553124C5494900CFA579 /* Caculator.swift */,
+				522BA7A024DDAEF200739F4F /* OperatorAction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				528871F224C0C0B400067AD3 /* AppDelegate.swift in Sources */,
+				522BA7A124DDAEF200739F4F /* OperatorAction.swift in Sources */,
 				528871F424C0C0B400067AD3 /* SceneDelegate.swift in Sources */,
 				5288720924C0C11400067AD3 /* HomeViewController.swift in Sources */,
 				5288720B24C0C18E00067AD3 /* CaculatorUIView.swift in Sources */,

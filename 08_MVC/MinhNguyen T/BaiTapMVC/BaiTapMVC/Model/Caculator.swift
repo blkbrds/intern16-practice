@@ -9,33 +9,42 @@
 import Foundation
 
 final class Caculator {
-
-    // MARK: - Function
-    var a: Float
-    var b: Float
     
-    init(a:Float, b: Float) {
-        self.a = a
-        self.b = b
-    }
+    static let shared = Caculator()
     
-    func sumNumber() -> Float {
-        return a + b
+    // MARK: - Private functons
+    private func sumNumber(num1: Float, num2: Float) -> Float {
+        return num1 + num2
     }
 
-    func subNumber() -> Float {
-        return a - b
+    private func subNumber(num1: Float, num2: Float) -> Float {
+        return num1 - num2
     }
 
-    func mulNumber() -> Float {
-        return a * b
+    private func mulNumber(num1: Float, num2: Float) -> Float {
+        return num1 * num2
     }
 
-    func divNumber() -> Float {
-        if b == 0 {
+    private func divNumber(num1: Float, num2: Float) -> Float {
+        if num2 == 0 {
             return 0
         } else {
-            return a / b
+            return num1 / num2
+        }
+    }
+
+    // MARK: - Public functions
+    func result(num1: Float, num2: Float, operatorAction: Operator) -> Float{
+        switch operatorAction {
+            
+        case .plus:
+            return sumNumber(num1: num1, num2: num2)
+        case .sub:
+            return subNumber(num1: num1, num2: num2)
+        case .mul:
+            return mulNumber(num1: num1, num2: num2)
+        case .div:
+            return divNumber(num1: num1, num2: num2)
         }
     }
 }
