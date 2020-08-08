@@ -5,12 +5,14 @@ import UIKit
 
 class Bai4ViewController: UIViewController {
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Gadient NavigationBar"
         configUI()
     }
     
+    // MARK: - Function
     private func configUI() {
         // Create layer have gradient
         let gradient = CAGradientLayer()
@@ -27,11 +29,8 @@ class Bai4ViewController: UIViewController {
     func getImage(fromLayer layer: CALayer) -> UIImage? {
         UIGraphicsBeginImageContext(layer.frame.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)
-
         let outputImage = UIGraphicsGetImageFromCurrentImageContext()
-
         UIGraphicsEndImageContext()
-
         return outputImage?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
     }
 }

@@ -10,14 +10,16 @@ import UIKit
 
 class Phan2ViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+    
+    // MARK: - Function
     private func configUI(){
         title = "News Feed"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2469934821, green: 0.3686577678, blue: 0.607765615, alpha: 1)
         
         let button1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: self, action: #selector(handleClickEdit))
@@ -28,6 +30,8 @@ class Phan2ViewController: UIViewController {
         navigationItem.leftBarButtonItem = button2
         button2.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
+    
+    // MARK: - Objc
     @objc func handleClickEdit(){}
     @objc func handleClickSearch(){}
 }

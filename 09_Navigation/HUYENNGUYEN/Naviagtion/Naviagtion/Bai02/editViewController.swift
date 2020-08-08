@@ -5,12 +5,14 @@ import UIKit
 
 class EditViewController: UIViewController {
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
     }
     
-    private func configView(){
+    // MARK: - Function
+    private func configView() {
         title = "Edit"
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
@@ -18,10 +20,12 @@ class EditViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancelButton
     }
     
-    @objc func doneTouchUpInside(){
+    // MARK: - Objc
+    @objc func doneTouchUpInside() {
         navigationController?.popViewController(animated: true)
     }
-    @objc func cancelTouchUpInside(){
+    
+    @objc func cancelTouchUpInside() {
         navigationController?.popViewController(animated: true)
     }
 }

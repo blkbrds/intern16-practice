@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileUserViewController" customModule="Naviagtion" customModuleProvider="target">
             <connections>
+                <outlet property="avatarImageView" destination="MUl-lc-uYd" id="Dm5-y4-2Jd"/>
                 <outlet property="usernameTextFiled" destination="yeG-Jr-qkl" id="fam-QO-Ryw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

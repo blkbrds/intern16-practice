@@ -10,10 +10,13 @@ import UIKit
 
 class Phan4ViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+    
+    // MARK: - Function
     private func configUI() {
         title = "Bar Button Test"
 
@@ -24,5 +27,6 @@ class Phan4ViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(navBackgroundImage, for: .default)
     }
     
+    // MARK: - Objc
     @objc func handleClickEdit(){}
 }

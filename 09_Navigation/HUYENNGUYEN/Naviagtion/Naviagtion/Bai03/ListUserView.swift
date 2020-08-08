@@ -4,13 +4,16 @@
 import UIKit
 
 protocol UserViewDelegate: class {
-    func userView(view: UIView, avatar: String)
+    func userView(userName: String, imageView: String, index: Int)
 }
 
 class ListUserView: UIView {
-    // MARK: - Properties private
+    
+    // MARK: - Properties
     private var userAvatarImageView = UIImageView()
     private var userNameLabel = UILabel()
+    var userName: String = ""
+    var imageView: String = "user"
     
     // MARK: - delegate
     weak var delegate: UserViewDelegate?
@@ -18,11 +21,11 @@ class ListUserView: UIView {
     // MARK: - LifeCycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        configUI()
     }
 
     // MARK: - private func
-    private func setupUI() {
+    private func configUI() {
         // Add user avatar
         userAvatarImageView = UIImageView(frame: CGRect(x: 5, y: 10, width: 110, height: 130))
         userAvatarImageView.image = UIImage(named: "user")
@@ -44,7 +47,7 @@ class ListUserView: UIView {
         userNameLabel.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    // MARK: - func public
+    // MARK: - function
     func updateUI(imageName: String = "", name: String) {
         userAvatarImageView.image = UIImage(named: imageName)
         userNameLabel.text = name
@@ -52,10 +55,11 @@ class ListUserView: UIView {
     
     // MARK: - objc
     @objc func tapGesture(_ sender: UITapGestureRecognizer) {
-        delegate?.userView(view: self, avatar: sender.name!)
+        if let delegate = delegate {
+            delegate.userView(userName: userName, imageView: imageView, index: tag)
+        }
     }
 
-    // MARK: - required
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

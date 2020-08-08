@@ -17,13 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
 //        let AViewController = Bai01ViewController()
+        
 //        let AViewController = LoginViewController()
-//        let AViewController = ProfileViewController()
+        
+        let AViewController = ProfileViewController()
+        
 //        let AViewController = Bai4ViewController()
 //        let AViewController = Phan2ViewController()
 //        let AViewController = Phan3ViewController()
 //        let AViewController = Phan4ViewController()
-        let AViewController = Phan5ViewController()
+//        let AViewController = Phan5ViewController()
         
         let naviagtionController = UINavigationController(rootViewController: AViewController)
         window.rootViewController = naviagtionController

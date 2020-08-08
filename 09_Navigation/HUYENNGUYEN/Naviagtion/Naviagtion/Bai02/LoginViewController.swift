@@ -4,10 +4,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
+    // MARK: - Enum
     enum LoginError: String {
         case notEnterData = "Bạn chưa nhập dữ liệu"
         case notEnterUserName = "Bạn chưa nhập username"
@@ -15,18 +17,21 @@ class LoginViewController: UIViewController {
         case errorEnterData = "Nhập sai tên username hoặc password"
     }
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
     }
     
+    // MARK: - Function
     private func configView() {
         title = "LOGIN"
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc func doneTouchUpInside() {
+    // MARK: - Objc
+    @objc private func doneTouchUpInside() {
         if let path = Bundle.main.path(forResource: "dbAccount", ofType: "plist") {
             if let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
                 for account in dic {

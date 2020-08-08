@@ -4,14 +4,19 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - IBOutlet
     @IBOutlet private weak var usernameLabel: UILabel!
-    var name: String? = ""
     
+    // MARK: - Property
+    private var name: String? = ""
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
     }
     
+    // MARK: - Function
     private func configView(){
         title = "Home"
         let editButton = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editTouchUpInside))
@@ -21,10 +26,12 @@ class HomeViewController: UIViewController {
         usernameLabel.text = name
     }
     
+    // MARK: - Objc
     @objc func editTouchUpInside(){
         let editView = EditViewController()
         navigationController?.pushViewController(editView, animated: true)
     }
+    
     @objc func logoutTouchUpInside(){
         navigationController?.popViewController(animated: true)
     }
