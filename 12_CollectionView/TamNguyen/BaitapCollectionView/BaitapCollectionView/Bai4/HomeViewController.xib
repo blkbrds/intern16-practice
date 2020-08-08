@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BaitapCollectionView" customModuleProvider="target">
+            <connections>
+                <outlet property="flagImageView" destination="Yfc-7k-ScA" id="zL5-rM-lgC"/>
+                <outlet property="leftButton" destination="Mi5-Pl-3B8" id="WMs-pK-oFE"/>
+                <outlet property="rightButton" destination="Ip1-lc-lGU" id="DfW-YV-bor"/>
+                <outlet property="tableView" destination="jQG-8y-JDU" id="jqC-MR-xZ5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jQG-8y-JDU">
+                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="L2e-6x-FRV"/>
+                        <outlet property="delegate" destination="-1" id="leF-SU-Mdx"/>
+                    </connections>
+                </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfc-7k-ScA">
+                    <rect key="frame" x="0.0" y="44" width="414" height="192"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi5-Pl-3B8" userLabel="left">
+                    <rect key="frame" x="0.0" y="129" width="46" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25.5" id="1n1-27-fzi"/>
+                        <constraint firstAttribute="width" constant="46" id="h3i-Dy-MtG"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="chevron.left" catalog="system"/>
+                    <connections>
+                        <action selector="leftButtonTouchUpInSideWith_sender:" destination="-1" eventType="touchUpInside" id="XtP-F5-ovP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip1-lc-lGU" userLabel="right">
+                    <rect key="frame" x="368" y="131" width="46" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25.5" id="ecR-EM-uuV"/>
+                        <constraint firstAttribute="width" constant="46" id="w3w-n5-6oh"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="chevron.right" catalog="system"/>
+                    <connections>
+                        <action selector="rightButtonTouchUpInSideWith_sender:" destination="-1" eventType="touchUpInside" id="0V6-r5-qEz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Yfc-7k-ScA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="34j-Ma-Vzq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jQG-8y-JDU" secondAttribute="trailing" id="4Pj-tY-phX"/>
+                <constraint firstItem="Mi5-Pl-3B8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="83" id="7Bd-Yw-2bq"/>
+                <constraint firstItem="Mi5-Pl-3B8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="89S-Sk-MWV"/>
+                <constraint firstItem="Ip1-lc-lGU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FFm-xJ-pm3"/>
+                <constraint firstItem="jQG-8y-JDU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q8p-Qm-5FK"/>
+                <constraint firstItem="Yfc-7k-ScA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eSg-mv-DSe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jQG-8y-JDU" secondAttribute="bottom" id="exB-Pm-2vL"/>
+                <constraint firstItem="Yfc-7k-ScA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="g4r-H6-dMD"/>
+                <constraint firstItem="jQG-8y-JDU" firstAttribute="top" secondItem="Yfc-7k-ScA" secondAttribute="bottom" constant="8" id="mnc-pP-qSb"/>
+                <constraint firstItem="jQG-8y-JDU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="w4Q-Ya-JK3"/>
+                <constraint firstItem="Ip1-lc-lGU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="85" id="y5F-2o-E6a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="i1" width="320" height="160"/>
+    </resources>
+</document>
