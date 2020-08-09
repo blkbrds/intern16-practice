@@ -37,9 +37,6 @@ final class LocalViewController: UIViewController {
         navigationController?.pushViewController(nextViewVC, animated: true)
     }
     
-    // MARK: - Public methods
-    
-    
     // MARK: - IBActions
     @IBAction private func getLocalButtonTouchUpInside(_ sender: UIButton) {
         sender.backgroundColor = .blue
