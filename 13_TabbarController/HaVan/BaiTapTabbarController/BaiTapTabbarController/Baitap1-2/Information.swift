@@ -20,7 +20,6 @@ class Information {
 }
 
 class InformationFactory {
-    
     private var informationList = [Information(username: "abc", password: "12345"),
                         Information(username: "a", password: "12345")]
     
@@ -59,17 +58,12 @@ class InformationFactory {
                     let newUser = Information(username: username, password: newpassword)
                     informationList.remove(at: user)
                     informationList.append(newUser)
-                    for i in informationList {
-                        print(i.username)
-                        print(i.password)
-                    }
                     return true
                 } else {
                     return false
                 }
             }
         }
-       
         return false
     }
 }

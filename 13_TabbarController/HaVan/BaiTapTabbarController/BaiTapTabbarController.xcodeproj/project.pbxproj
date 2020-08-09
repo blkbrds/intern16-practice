@@ -25,6 +25,8 @@
 		529D8E3324DD541C000CCFC9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529D8E3124DD541C000CCFC9 /* RegisterViewController.xib */; };
 		529D8E3724DD5448000CCFC9 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E3524DD5448000CCFC9 /* ForgotPasswordViewController.swift */; };
 		529D8E3824DD5448000CCFC9 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529D8E3624DD5448000CCFC9 /* ForgotPasswordViewController.xib */; };
+		529D8E3B24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E3924DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.swift */; };
+		529D8E3C24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529D8E3A24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		529D8E3124DD541C000CCFC9 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		529D8E3524DD5448000CCFC9 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		529D8E3624DD5448000CCFC9 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		529D8E3924DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaiTap1-2TabbarControllerViewController.swift"; sourceTree = "<group>"; };
+		529D8E3A24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "BaiTap1-2TabbarControllerViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,7 @@
 		528C5F0D24DBF32A00A14B89 /* BaiTapTabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				528C5F2224DBF3AF00A14B89 /* BaiTap1 */,
+				528C5F2224DBF3AF00A14B89 /* Baitap1-2 */,
 				528C5F0E24DBF32A00A14B89 /* AppDelegate.swift */,
 				528C5F1724DBF32C00A14B89 /* Assets.xcassets */,
 				528C5F1924DBF32C00A14B89 /* LaunchScreen.storyboard */,
@@ -134,7 +138,7 @@
 			path = BaiTapTabbarController;
 			sourceTree = "<group>";
 		};
-		528C5F2224DBF3AF00A14B89 /* BaiTap1 */ = {
+		528C5F2224DBF3AF00A14B89 /* Baitap1-2 */ = {
 			isa = PBXGroup;
 			children = (
 				529D8E3424DD5427000CCFC9 /* ForgotPassword */,
@@ -145,8 +149,10 @@
 				5263051924DCF3770061BD1D /* Favorite */,
 				5263051A24DCF3810061BD1D /* Profile */,
 				529D8E2324DD3333000CCFC9 /* Information.swift */,
+				529D8E3924DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.swift */,
+				529D8E3A24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.xib */,
 			);
-			path = BaiTap1;
+			path = "Baitap1-2";
 			sourceTree = "<group>";
 		};
 		529D8E2F24DD5407000CCFC9 /* Register */ = {
@@ -225,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529D8E3C24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.xib in Resources */,
 				5263052F24DCF4D30061BD1D /* LoginViewController.xib in Resources */,
 				5263052B24DCF3E90061BD1D /* ProfileViewController.xib in Resources */,
 				528C5F1B24DBF32C00A14B89 /* LaunchScreen.storyboard in Resources */,
@@ -250,6 +257,7 @@
 				529D8E3224DD541C000CCFC9 /* RegisterViewController.swift in Sources */,
 				5263052E24DCF4D30061BD1D /* LoginViewController.swift in Sources */,
 				529D8E3724DD5448000CCFC9 /* ForgotPasswordViewController.swift in Sources */,
+				529D8E3B24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.swift in Sources */,
 				5263052A24DCF3E90061BD1D /* ProfileViewController.swift in Sources */,
 				5263052624DCF3D70061BD1D /* FavoriteViewController.swift in Sources */,
 				5263051D24DCF3A90061BD1D /* HomeViewController.swift in Sources */,
