@@ -15,7 +15,7 @@ final class LocalViewController: UIViewController {
     @IBOutlet private weak var localButtons: UIButton!
     
     // MARK: - Properties
-    var location: Location = Location()
+    private var location: Location = Location()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,18 +27,21 @@ final class LocalViewController: UIViewController {
     private func configUI() {
         view.backgroundColor = .white
         title = "Miền"
-        let provinceButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(pushToViewTouchUpInside))
+        let provinceButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(pushToViewButtonTouchUpInside))
         navigationItem.rightBarButtonItem = provinceButton
     }
     
-    @objc private func pushToViewTouchUpInside() {
+    @objc private func pushToViewButtonTouchUpInside() {
         let nextViewVC = ProvinceViewController()
         nextViewVC.location = location
         navigationController?.pushViewController(nextViewVC, animated: true)
     }
     
+    // MARK: - Public methods
+    
+    
     // MARK: - IBActions
-    @IBAction private func getLocalButtonTouchInside(_ sender: UIButton) {
+    @IBAction private func getLocalButtonTouchUpInside(_ sender: UIButton) {
         sender.backgroundColor = .blue
         guard let titleText = sender.titleLabel?.text else { return }
         location.local = titleText

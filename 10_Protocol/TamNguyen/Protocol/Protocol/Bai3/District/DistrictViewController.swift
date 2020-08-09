@@ -15,9 +15,9 @@ final class DistrictViewController: UIViewController {
     
     // MARK: - Properties
     var location: Location = Location()
-    var local: String?
-    var province: String?
-    var district: String?
+    private var local: String?
+    private var province: String?
+    private var district: String?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -28,11 +28,11 @@ final class DistrictViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Huyện"
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(pushToRootTouchUpInside))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(pushToRootButtonTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc private func pushToRootTouchUpInside() {
+    @objc private func pushToRootButtonTouchUpInside() {
         district = location.district
         province = location.province
         local = location.local
@@ -41,7 +41,7 @@ final class DistrictViewController: UIViewController {
         for vc in navi.viewControllers where vc is HomeViewController {
             guard let locationVC = vc as? HomeViewController else {return}
             locationVC.dataSource = self
-            locationVC.unwrapOptional()
+            locationVC.updateView()
             navi.popToViewController(locationVC, animated: true)
         }
     }
@@ -54,8 +54,9 @@ final class DistrictViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
-extension DistrictViewController: HomeViewControllerDataSouce {
+// MARK: - Extension HomeViewControllerDataSource
+extension DistrictViewController: HomeViewControllerDataSource {
+    
     func getDistrict() -> String? {
         guard let district = district else { return "" }
         return district

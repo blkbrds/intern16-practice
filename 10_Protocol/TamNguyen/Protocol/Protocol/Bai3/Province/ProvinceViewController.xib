@@ -25,35 +25,35 @@
                             <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
                             <state key="normal" title="Tinh 1"/>
                             <connections>
-                                <action selector="getProvinceTouchUpInside:" destination="-1" eventType="touchUpInside" id="rg8-b5-KOT"/>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="1oT-7R-ls4"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meI-Bl-KLf">
                             <rect key="frame" x="0.0" y="60" width="43" height="30"/>
                             <state key="normal" title="Tinh 2"/>
                             <connections>
-                                <action selector="getProvinceTouchUpInside:" destination="-1" eventType="touchUpInside" id="ZEb-X6-WXA"/>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="s6p-OW-Bvj"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-P6-4JF">
                             <rect key="frame" x="0.0" y="120" width="44" height="30"/>
                             <state key="normal" title="Tinh 3"/>
                             <connections>
-                                <action selector="getProvinceTouchUpInside:" destination="-1" eventType="touchUpInside" id="RA8-yA-WSG"/>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="NFs-LY-6SD"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-Zc-CCl">
                             <rect key="frame" x="0.0" y="180" width="44" height="30"/>
                             <state key="normal" title="Tinh 4"/>
                             <connections>
-                                <action selector="getProvinceTouchUpInside:" destination="-1" eventType="touchUpInside" id="eFq-yf-sUP"/>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="pYK-Fy-czb"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-qW-vtw">
                             <rect key="frame" x="0.0" y="240" width="43" height="30"/>
                             <state key="normal" title="Tinh 5"/>
                             <connections>
-                                <action selector="getProvinceTouchUpInside:" destination="-1" eventType="touchUpInside" id="Ndk-OU-KVq"/>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="OEZ-YX-adO"/>
                             </connections>
                         </button>
                     </subviews>

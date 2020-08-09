@@ -27,11 +27,6 @@
 		31C8451F24CD906C00D4AEF6 /* Bai5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8451D24CD906C00D4AEF6 /* Bai5ViewController.swift */; };
 		31C8452024CD906C00D4AEF6 /* Bai5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8451E24CD906C00D4AEF6 /* Bai5ViewController.xib */; };
 		31C8452324CDB34D00D4AEF6 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8452224CDB34D00D4AEF6 /* CalculatorBrain.swift */; };
-		31C8452A24CED2D400D4AEF6 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8452524CED2D400D4AEF6 /* Bai3ViewController.xib */; };
-		31C8452B24CED2D400D4AEF6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8452624CED2D400D4AEF6 /* ProfileViewController.xib */; };
-		31C8452C24CED2D400D4AEF6 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8452724CED2D400D4AEF6 /* Avatar.swift */; };
-		31C8452D24CED2D400D4AEF6 /* Bai3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8452824CED2D400D4AEF6 /* Bai3ViewController.swift */; };
-		31C8452E24CED2D400D4AEF6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8452924CED2D400D4AEF6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,12 +53,7 @@
 		31C8451D24CD906C00D4AEF6 /* Bai5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai5ViewController.swift; sourceTree = "<group>"; };
 		31C8451E24CD906C00D4AEF6 /* Bai5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai5ViewController.xib; sourceTree = "<group>"; };
 		31C8452224CDB34D00D4AEF6 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
-		31C8452524CED2D400D4AEF6 /* Bai3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bai3ViewController.xib; sourceTree = "<group>"; };
-		31C8452624CED2D400D4AEF6 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		31C8452724CED2D400D4AEF6 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
-		31C8452824CED2D400D4AEF6 /* Bai3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bai3ViewController.swift; sourceTree = "<group>"; };
-		31C8452924CED2D400D4AEF6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		31C8453024CED41C00D4AEF6 /* Animal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Animal.playground; sourceTree = "<group>"; };
+		31C8453024CED41C00D4AEF6 /* Animal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Animal.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				31C8452F24CED38E00D4AEF6 /* Bai1 */,
-				31C8452424CED2D400D4AEF6 /* Bai2 */,
 				31C8451424CD7FB200D4AEF6 /* Bai5 */,
 				31C844F724CC42E300D4AEF6 /* Bai4 */,
 				31C844F624CC426A00D4AEF6 /* Bai3 */,
@@ -196,18 +185,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		31C8452424CED2D400D4AEF6 /* Bai2 */ = {
-			isa = PBXGroup;
-			children = (
-				31C8452524CED2D400D4AEF6 /* Bai3ViewController.xib */,
-				31C8452624CED2D400D4AEF6 /* ProfileViewController.xib */,
-				31C8452724CED2D400D4AEF6 /* Avatar.swift */,
-				31C8452824CED2D400D4AEF6 /* Bai3ViewController.swift */,
-				31C8452924CED2D400D4AEF6 /* ProfileViewController.swift */,
-			);
-			path = Bai2;
-			sourceTree = "<group>";
-		};
 		31C8452F24CED38E00D4AEF6 /* Bai1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,10 +256,8 @@
 				31C844E524CC06A600D4AEF6 /* LocalViewController.xib in Resources */,
 				31C844FB24CC46C000D4AEF6 /* Bai4ViewController.xib in Resources */,
 				31C844E124CC068F00D4AEF6 /* HomeViewController.xib in Resources */,
-				31C8452A24CED2D400D4AEF6 /* Bai3ViewController.xib in Resources */,
 				31C844ED24CC06CD00D4AEF6 /* DistrictViewController.xib in Resources */,
 				31C8451924CD82EE00D4AEF6 /* Calculator.xib in Resources */,
-				31C8452B24CED2D400D4AEF6 /* ProfileViewController.xib in Resources */,
 				31C844E924CC06BA00D4AEF6 /* ProvinceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,11 +277,8 @@
 				31C8451724CD82D200D4AEF6 /* Calculator.swift in Sources */,
 				31C8451B24CD870200D4AEF6 /* RoundButton.swift in Sources */,
 				31C8452324CDB34D00D4AEF6 /* CalculatorBrain.swift in Sources */,
-				31C8452C24CED2D400D4AEF6 /* Avatar.swift in Sources */,
 				31C844E424CC06A600D4AEF6 /* LocalViewController.swift in Sources */,
 				31C844E024CC068F00D4AEF6 /* HomeViewController.swift in Sources */,
-				31C8452D24CED2D400D4AEF6 /* Bai3ViewController.swift in Sources */,
-				31C8452E24CED2D400D4AEF6 /* ProfileViewController.swift in Sources */,
 				31C844E824CC06BA00D4AEF6 /* ProvinceViewController.swift in Sources */,
 				31C844F524CC12F700D4AEF6 /* Location.swift in Sources */,
 			);

@@ -25,35 +25,35 @@
                             <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
                             <state key="normal" title="Mien 1"/>
                             <connections>
-                                <action selector="getLocalButtonTouchInside:" destination="-1" eventType="touchUpInside" id="ykF-Ul-zaY"/>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="mVb-eR-dlN"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCu-OC-CgL">
                             <rect key="frame" x="0.0" y="60" width="47" height="30"/>
                             <state key="normal" title="Mien 2"/>
                             <connections>
-                                <action selector="getLocalButtonTouchInside:" destination="-1" eventType="touchUpInside" id="J8r-Fn-cu7"/>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="4Qt-KM-foP"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-1a-CPW">
                             <rect key="frame" x="0.0" y="120" width="47" height="30"/>
                             <state key="normal" title="Mien 3"/>
                             <connections>
-                                <action selector="getLocalButtonTouchInside:" destination="-1" eventType="touchUpInside" id="3MV-8f-ZEb"/>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="guB-up-4f2"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGS-W4-mdJ">
                             <rect key="frame" x="0.0" y="180" width="47" height="30"/>
                             <state key="normal" title="Mien 4"/>
                             <connections>
-                                <action selector="getLocalButtonTouchInside:" destination="-1" eventType="touchUpInside" id="wEX-yD-BIq"/>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="JWo-oH-e51"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEj-dq-exa">
                             <rect key="frame" x="0.0" y="240" width="47" height="30"/>
                             <state key="normal" title="Mien 5"/>
                             <connections>
-                                <action selector="getLocalButtonTouchInside:" destination="-1" eventType="touchUpInside" id="tw4-0L-3xw"/>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="y3G-z6-ace"/>
                             </connections>
                         </button>
                     </subviews>

@@ -12,6 +12,7 @@ final class ProvinceViewController: UIViewController {
     
     // MARK: - IBOulets
     @IBOutlet private weak var provinceButton: UIButton!
+    
     // MARK: - Properties
     var location: Location = Location()
     
@@ -24,20 +25,20 @@ final class ProvinceViewController: UIViewController {
     // MARK: - Private methods
     private func configUI() {
         title = "Tỉnh"
-        let districtButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(pushToViewTouchUpInside))
+        let districtButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(pushToViewButtonTouchUpInside))
         navigationItem.rightBarButtonItem = districtButton
     }
     
-    @objc private func pushToViewTouchUpInside() {
+    @objc private func pushToViewButtonTouchUpInside() {
         let nextViewVC = DistrictViewController()
         nextViewVC.location = location
         navigationController?.pushViewController(nextViewVC, animated: true)
     }
     
     // MARK: - IBActions
-    @IBAction private func getProvinceTouchUpInside(_ sender: UIButton) {
-            sender.backgroundColor = .green
+    @IBAction private func getProvinceButtonTouchUpInside(_ sender: UIButton) {
+        sender.backgroundColor = .green
         guard let titleText = sender.titleLabel?.text else { return }
-            location.province = titleText
-        }
+        location.province = titleText
     }
+}
