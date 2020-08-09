@@ -9,16 +9,20 @@
 import UIKit
 class Bai11ViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Property
     var text: [String] = []
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
         loadData()
     }
     
+    // MARK: - Function
     private func configTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         let nib = UINib(nibName: "Bai11TableViewCell", bundle: nil)
@@ -35,6 +39,7 @@ class Bai11ViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UITableViewDataSource
 extension Bai11ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return text.count
@@ -49,6 +54,7 @@ extension Bai11ViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Extension Bai11TableViewCellDelegate
 extension Bai11ViewController: Bai11TableViewCellDelegate {
     func viewcell(_ view: Bai11TableViewCell) {
         print("")

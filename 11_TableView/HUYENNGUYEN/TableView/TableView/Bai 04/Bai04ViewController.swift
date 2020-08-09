@@ -10,10 +10,13 @@ import UIKit
 
 class Bai04ViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Property
     var names: [[String]] = [[]]
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "SECTIONS"
@@ -22,11 +25,12 @@ class Bai04ViewController: UIViewController {
         loadData()
     }
     
-    private func configTableView(){
+    // MARK: - Function
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
     
-    func loadData() {
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "DataSection", withExtension: ".plist")
             else { return }
         guard let sectionData = NSArray(contentsOf: path) as? [[String]]
@@ -36,6 +40,7 @@ class Bai04ViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UITableViewDataSource
 extension Bai04ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return names.count
@@ -50,7 +55,7 @@ extension Bai04ViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(names[indexPath.section][indexPath.row])"
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:

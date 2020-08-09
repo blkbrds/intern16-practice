@@ -10,11 +10,14 @@ import UIKit
 
 class Bai08ViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
     var names: [[String]] = [[]]
     var nameIndex: [String] = []
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -22,11 +25,12 @@ class Bai08ViewController: UIViewController {
         loadData()
     }
     
+    // MARK: - Function
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
     
-    func loadData() {
+    private func loadData() {
         guard let path = Bundle.main.url(forResource: "DataSection", withExtension: ".plist")
             else { return }
         guard let sectionData = NSArray(contentsOf: path) as? [[String]]
@@ -36,6 +40,7 @@ class Bai08ViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UITableViewDataSource
 extension Bai08ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return names.count
@@ -47,13 +52,10 @@ extension Bai08ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
         cell.textLabel?.text = "\(names[indexPath.section][indexPath.row])"
-        
         let nameLabel = NameLabel()
         nameLabel.frame = CGRect(x: 40, y: 30, width: 60, height: 20)
         cell.addSubview(nameLabel)
-        
         return cell
     }
     

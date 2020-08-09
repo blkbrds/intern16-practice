@@ -10,10 +10,13 @@ import UIKit
 
 class Bai12ViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Property
     var contacts: [String] = []
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -21,6 +24,7 @@ class Bai12ViewController: UIViewController {
         loadData()
     }
     
+    // MARK: - Function
     private func configNavigation() {
         title = "Table reorder"
         let editButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editTouchUpInside))
@@ -40,6 +44,7 @@ class Bai12ViewController: UIViewController {
         }
     }
     
+    // MARK: - Objc
     @objc private func editTouchUpInside(_ sender: UIBarButtonItem) {
         self.tableView.isEditing = !self.tableView.isEditing
         sender.title = (self.tableView.isEditing) ? "Done": "Edit"
@@ -47,6 +52,7 @@ class Bai12ViewController: UIViewController {
     
 }
 
+// MARK: - Extension
 extension Bai12ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count

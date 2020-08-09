@@ -10,12 +10,15 @@ import UIKit
 
 final class Bai05ViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     
+    // MARK: - Properties
     private var contacts: [String] = []
     private var contactsData: [String] = []
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "HOME"
@@ -24,6 +27,7 @@ final class Bai05ViewController: UIViewController {
         configSearchBar()
     }
     
+    // MARK: - Function
     private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         tableView.dataSource = self
@@ -34,6 +38,7 @@ final class Bai05ViewController: UIViewController {
         if let URL = Bundle.main.url(forResource: "NameList", withExtension: "plist") {
             if let nameFromPlist = NSArray(contentsOf: URL) as? [String] {
                 contacts = nameFromPlist
+                contactsData = nameFromPlist
             }
         }
     }
@@ -62,6 +67,7 @@ final class Bai05ViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UITableViewDataSource, UITableViewDelegate
 extension Bai05ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -81,13 +87,14 @@ extension Bai05ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - Extension UISearchBarDelegate
 extension Bai05ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        var currentText = ""
-        if let searchBarText = searchBar.text {
-            currentText = searchBarText
+        guard let searchText = searchBar.text else {
+            searchName(keyword: "")
+            return true
         }
-        let keyword = (currentText as NSString).replacingCharacters(in: range, with: text)
+        let keyword = (searchText as NSString).replacingCharacters(in: range, with: text)
         searchName(keyword: keyword)
         return true
     }

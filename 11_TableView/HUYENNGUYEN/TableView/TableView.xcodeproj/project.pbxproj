@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8328D8D124D69616008F2CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D8D024D69616008F2CA4 /* AppDelegate.swift */; };
 		8328D8D324D69616008F2CA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D8D224D69616008F2CA4 /* SceneDelegate.swift */; };
-		8328D8D524D69616008F2CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D8D424D69616008F2CA4 /* ViewController.swift */; };
 		8328D8DA24D69617008F2CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8328D8D924D69617008F2CA4 /* Assets.xcassets */; };
 		8328D8F324D6A878008F2CA4 /* DisplayListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328D8F124D6A878008F2CA4 /* DisplayListTableViewController.swift */; };
 		8328D8F424D6A878008F2CA4 /* DisplayListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328D8F224D6A878008F2CA4 /* DisplayListTableViewController.xib */; };
@@ -50,7 +49,6 @@
 		8328D8CD24D69616008F2CA4 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8328D8D024D69616008F2CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8328D8D224D69616008F2CA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8328D8D424D69616008F2CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8328D8D924D69617008F2CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8328D8DE24D69617008F2CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8328D8F124D6A878008F2CA4 /* DisplayListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayListTableViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				833E0E7B24D7FBD3003B87F3 /* Data */,
 				8328D8D024D69616008F2CA4 /* AppDelegate.swift */,
 				8328D8D224D69616008F2CA4 /* SceneDelegate.swift */,
-				8328D8D424D69616008F2CA4 /* ViewController.swift */,
 				8328D8D924D69617008F2CA4 /* Assets.xcassets */,
 				8328D8DE24D69617008F2CA4 /* Info.plist */,
 			);
@@ -341,7 +338,6 @@
 				8328D8F924D6ACBF008F2CA4 /* ListNameTableViewController.swift in Sources */,
 				833E0E7424D7F835003B87F3 /* Bai07ViewController.swift in Sources */,
 				8328D8F324D6A878008F2CA4 /* DisplayListTableViewController.swift in Sources */,
-				8328D8D524D69616008F2CA4 /* ViewController.swift in Sources */,
 				833E0E6B24D7EB85003B87F3 /* Bai05ViewController.swift in Sources */,
 				833E0E6F24D7ED23003B87F3 /* ShowNameViewController.swift in Sources */,
 				832D695124D7B55F00241614 /* Bai04ViewController.swift in Sources */,

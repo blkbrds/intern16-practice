@@ -10,28 +10,37 @@ import UIKit
 
 class MasterViewController: UIViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Property
     var contacts: [String] = []
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title =  "Contact"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-        tableView.dataSource = self
-        tableView.delegate = self
+        title = "Contact"
+        configTableView()
         loadData()
     }
     
-    private func loadData(){
-       if let URL = Bundle.main.url(forResource: "NameList", withExtension: "plist") {
-        if let nameFromPlist = NSArray(contentsOf: URL) as? [String] {
-            contacts = nameFromPlist
-          }
+    // MARK: - Function
+    private func configTableView(){
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    private func loadData() {
+        if let URL = Bundle.main.url(forResource: "NameList", withExtension: "plist") {
+            if let nameFromPlist = NSArray(contentsOf: URL) as? [String] {
+                contacts = nameFromPlist
+            }
         }
     }
 }
 
+// MARK: - Extension UITableViewDataSource
 extension MasterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -44,6 +53,8 @@ extension MasterViewController: UITableViewDataSource {
         return cell
     }
 }
+
+// MARK: - Extension UITableViewDelegate
 extension MasterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
