@@ -10,14 +10,14 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setImage(image: UIImage?) {
-        imageView.image = image
+    func setLabel(name: String) {
+        nameLabel.text = name
     }
 }

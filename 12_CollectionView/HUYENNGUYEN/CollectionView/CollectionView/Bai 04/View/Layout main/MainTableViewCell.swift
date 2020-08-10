@@ -9,16 +9,20 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
-
+    
+    //MARK: - IBOutlet
     @IBOutlet private weak var mainCollectionView: UICollectionView!
 
+    //MARK: - Property
     var numbersOfMain: [Int] = []
     
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()
     }
     
+    //MARK: - Function
     private func configCollectionView() {
         let cellNib = UINib(nibName: "ScrollCollectionViewCell", bundle: Bundle.main)
         mainCollectionView.register(cellNib, forCellWithReuseIdentifier: "ScrollCollectionViewCell")
@@ -32,6 +36,7 @@ class MainTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: - Extension UICollectionViewDataSource
 extension MainTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numbersOfMain.count
@@ -47,6 +52,7 @@ extension MainTableViewCell: UICollectionViewDataSource {
     }
 }
 
+//MARK: - Extension UICollectionViewDelegateFlowLayout
 extension MainTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 100)

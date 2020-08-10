@@ -10,16 +10,20 @@ import UIKit
 
 class SliderTableViewCell: UITableViewCell {
     
+    //MARK: - IBOutlet
     @IBOutlet private weak var sliderCollectionView: UICollectionView!
     
+    //MARK: - Properties
     private var index = 0
     var numbersOfSlider: [Int] = []
     
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configCollectionView()
     }
     
+    //MARK: - Function
     private func configCollectionView() {
         let cellNib = UINib(nibName: "ScrollCollectionViewCell", bundle: Bundle.main)
         sliderCollectionView.register(cellNib, forCellWithReuseIdentifier: "ScrollCollectionViewCell")
@@ -32,12 +36,14 @@ class SliderTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    //MARK: - Action
     @IBAction private func turnLeftTouchUpInside(_ sender: UIButton) {
         if index > 0 {
             index -= 1
             sliderCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
         }
     }
+    
     @IBAction private func turnRightTouchUpInside(_ sender: UIButton) {
         if index < 5 {
             index += 1
@@ -46,6 +52,7 @@ class SliderTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: - Extension UICollectionViewDataSource
 extension SliderTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numbersOfSlider.count
@@ -61,6 +68,7 @@ extension SliderTableViewCell: UICollectionViewDataSource {
     }
 }
 
+//MARK: - Extension UICollectionViewDelegateFlowLayout
 extension SliderTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 300)

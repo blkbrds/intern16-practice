@@ -10,17 +10,21 @@ import UIKit
 
 class Bai03ViewController: UIViewController {
 
+    //MARK: - IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - Properties
     var images: [[String]] = [["image1", "image2", "image3"], ["image4", "image5", "image6"], ["image7", "image8", "image9"]]
     var sections: [String] = []
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addSections()
         configCollectionView()
     }
     
+    //MARK: - Function
     private func configCollectionView() {
         let cellNib = UINib(nibName: "Bai03CollectionViewCell", bundle: Bundle.main)
         collectionView.register(cellNib, forCellWithReuseIdentifier: "Bai03CollectionViewCell")
@@ -39,6 +43,7 @@ class Bai03ViewController: UIViewController {
     }
 }
 
+//MARK: - Extension
 extension Bai03ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
@@ -56,7 +61,6 @@ extension Bai03ViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.backgroundColor = #colorLiteral(red: 0.9433692893, green: 0.7936577309, blue: 0.7139778097, alpha: 1)
         return cell
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 3.5, height: collectionView.frame.width / 3.5)

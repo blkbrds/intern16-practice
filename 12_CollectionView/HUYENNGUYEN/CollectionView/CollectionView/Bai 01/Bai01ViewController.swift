@@ -9,15 +9,18 @@
 import UIKit
 
 class Bai01ViewController: UIViewController {
-
+    
+    //MARK: - IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigation()
         configCollectionView()
     }
     
+    //MARK: - Function
     private func configNavigation() {
         title = "Home"
     }
@@ -30,6 +33,7 @@ class Bai01ViewController: UIViewController {
     }
 }
 
+//MARK: - Extension
 extension Bai01ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
@@ -43,6 +47,4 @@ extension Bai01ViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.setLabel(name: "\(indexPath.item)")
         return cell
     }
-    
-    
 }

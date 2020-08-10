@@ -15,7 +15,6 @@
 		83295EDC24DBE35A003ED329 /* Bai03ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83295EDA24DBE35A003ED329 /* Bai03ViewController.xib */; };
 		832B1EA424DAA01C00F57599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA324DAA01C00F57599 /* AppDelegate.swift */; };
 		832B1EA624DAA01C00F57599 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA524DAA01C00F57599 /* SceneDelegate.swift */; };
-		832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EA724DAA01C00F57599 /* ViewController.swift */; };
 		832B1EAD24DAA01D00F57599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EAC24DAA01D00F57599 /* Assets.xcassets */; };
 		832B1EBA24DAB27700F57599 /* Bai01CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1EB824DAB27700F57599 /* Bai01CollectionViewCell.swift */; };
 		832B1EBB24DAB27700F57599 /* Bai01CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832B1EB924DAB27700F57599 /* Bai01CollectionViewCell.xib */; };
@@ -46,7 +45,6 @@
 		832B1EA024DAA01C00F57599 /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832B1EA324DAA01C00F57599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832B1EA524DAA01C00F57599 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		832B1EA724DAA01C00F57599 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		832B1EAC24DAA01D00F57599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832B1EB124DAA01D00F57599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832B1EB824DAB27700F57599 /* Bai01CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai01CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				832B1EB724DAB25600F57599 /* Bai 01 */,
 				832B1EA324DAA01C00F57599 /* AppDelegate.swift */,
 				832B1EA524DAA01C00F57599 /* SceneDelegate.swift */,
-				832B1EA724DAA01C00F57599 /* ViewController.swift */,
 				832B1EAC24DAA01D00F57599 /* Assets.xcassets */,
 				832B1EB124DAA01D00F57599 /* Info.plist */,
 			);
@@ -313,7 +310,6 @@
 				832D784224DD04AC00A1E6D3 /* MainTableViewCell.swift in Sources */,
 				832D783C24DD046600A1E6D3 /* SliderTableViewCell.swift in Sources */,
 				8327E8B524DAFA8100AF961D /* CustomCollectionViewCell.swift in Sources */,
-				832B1EA824DAA01C00F57599 /* ViewController.swift in Sources */,
 				83304FE624DC0DA400FDBC06 /* ScrollCollectionViewCell.swift in Sources */,
 				832B1EA424DAA01C00F57599 /* AppDelegate.swift in Sources */,
 				832F29AC24DBACCC0023291E /* PinterestLayout.swift in Sources */,

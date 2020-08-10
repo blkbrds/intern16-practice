@@ -14,8 +14,9 @@ protocol PinterestLayoutDelegate {
 
 class PinterestLayout: UICollectionViewLayout {
     
+    //MARK: - Properties
     var delegate: PinterestLayoutDelegate!
-    var numberOfColumns = 3
+    private var numberOfColumns = 3
     private var cache = [UICollectionViewLayoutAttributes]()
     private var contentHeight: CGFloat = 0
     private var width: CGFloat {
@@ -28,11 +29,11 @@ class PinterestLayout: UICollectionViewLayout {
         return CGSize(width: width, height: contentHeight)
     }
     
+    //MARK: -  Function
     override func prepare() {
         super.prepare()
         if cache.isEmpty, let delegate = delegate, let collectionView = collectionView {
             let columnWidth = width / CGFloat(numberOfColumns)
-            
             var xOffsets = [CGFloat]()
             for column in 0 ..< numberOfColumns {
                 xOffsets.append(CGFloat(column) * columnWidth)

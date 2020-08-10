@@ -10,15 +10,19 @@ import UIKit
 
 class Bai04ViewController: UIViewController {
 
+    //MARK: - Property
     private let numbers: [[Int]] = [Array(0...5), Array(0...6), Array(0...7), Array(0...8), Array(0...9)]
     
+    //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
     }
     
+    //MARK: - Function
     private func configCollectionView() {
         let sliderNib = UINib(nibName: "SliderTableViewCell", bundle: Bundle.main)
         tableView.register(sliderNib, forCellReuseIdentifier: "sliderCell")
@@ -31,6 +35,7 @@ class Bai04ViewController: UIViewController {
     }
 }
 
+//MARK: - Extension
 extension Bai04ViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return numbers.count
@@ -63,21 +68,3 @@ extension Bai04ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-
-//extension Bai04ViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: scrollCollectionView.frame.width / 2.5, height: scrollCollectionView.frame.width / 2)
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 5
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ScrollCollectionViewCell", for: indexPath) as? ScrollCollectionViewCell else {
-//            return UICollectionViewCell()
-//        }
-//        cell.backgroundColor = #colorLiteral(red: 0.9433692893, green: 0.7936577309, blue: 0.7139778097, alpha: 1)
-//        return cell
-//    }
-//}
