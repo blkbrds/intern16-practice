@@ -9,68 +9,68 @@
 import UIKit
 
 protocol CustomSliderViewDelegate: class {
-    func view(_ view: CustomSiderView, needsPerform action: CustomSiderView.Action)
+    func view(value: Float)
 }
 
-@IBDesignable
 class CustomSiderView: UIView {
 
     @IBOutlet weak var maxSliderView: UIImageView!
-    
     @IBOutlet weak var minSliderView: UIImageView!
-    
     @IBOutlet weak var thumbButtonView: UIView!
-    
     @IBOutlet weak var thumbButtonLabel: UILabel!
-    
-    var panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer()
+
+    var thumbValue: Float? {
+        didSet {
+            configSlider()
+        }
+    }
     weak var delegate: CustomSliderViewDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // createSlider()
     }
 
-    private func createSlider() {
-//        thumbButtonLabel.text = "50"
-        minSliderView.center.x = maxSliderView.center.x
-        thumbButtonView.center.x = maxSliderView.center.x
-
-        panGesture = UIPanGestureRecognizer(target: self, action: #selector(configThumbButton))
-        thumbButtonView.addGestureRecognizer(panGesture)
-        thumbButtonView.isUserInteractionEnabled = true
-    }
-
-    @objc func configThumbButton(sender: UIPanGestureRecognizer) {
-        let thumbHeight = thumbButtonView.frame.height
-        let maxHeight = maxSliderView.frame.height
-
-        let translate = sender.translation(in: maxSliderView)
-        sender.view?.center = CGPoint(x: maxSliderView.frame.width / 2, y: (sender.view?.center.y)! + translate.y)
-        sender.setTranslation(CGPoint.zero, in: maxSliderView)
-
-        if thumbButtonView.center.y <= 0 {
-            thumbButtonView.center.y = 0
-        }
-        if thumbButtonView.center.y >= maxHeight {
-            thumbButtonView.center.y = maxHeight
-        }
-        minSliderView.frame.origin.y = thumbButtonView.center.y
-
-        let percentage: Float = Float(maxHeight - thumbButtonView.center.y + thumbHeight / 2) / Float(maxHeight)
-
-        if minSliderView.frame.origin.y >= maxHeight {
-            minSliderView.frame.size = CGSize(width: minSliderView.frame.width, height: 0)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let currentLocation = touch.location(in: maxSliderView)
+        if currentLocation.y < maxSliderView.bounds.minY {
+            thumbButtonView.center.y = maxSliderView.bounds.minY
+        } else if currentLocation.y > maxSliderView.bounds.maxY {
+            thumbButtonView.center.y = maxSliderView.bounds.maxY
         } else {
-            minSliderView.frame.size = CGSize(width: minSliderView.frame.width, height: maxSliderView.frame.height - thumbButtonView.center.y)
+            thumbButtonView.center.y = currentLocation.y
         }
-        thumbButtonLabel.text = "\(Int(percentage * 100))"
-        delegate?.view(self, needsPerform: .didChangeThumbValue(thumbValue: Int(percentage * 100)))
+        changeMinSliderView(y: thumbButtonView.center.y)
     }
-}
 
-extension CustomSiderView {
-    enum Action {
-        case didChangeThumbValue(thumbValue: Int)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let currentLocation = touch.location(in: maxSliderView)
+        if currentLocation.y < maxSliderView.bounds.minY {
+            thumbButtonView.center.y = maxSliderView.bounds.minY
+        } else if currentLocation.y > maxSliderView.bounds.maxY {
+            thumbButtonView.center.y = maxSliderView.bounds.maxY
+        } else {
+            thumbButtonView.center.y = currentLocation.y
+        }
+        changeMinSliderView(y: thumbButtonView.center.y)
+    }
+
+    private func changeMinSliderView(y: CGFloat) {
+        let minSliderY = minSliderView.frame.origin.y
+        let minSliderHeight = minSliderView.bounds.height
+        minSliderView.frame = CGRect(x: minSliderView.frame.origin.x, y: y, width: minSliderView.frame.width, height: minSliderHeight + (minSliderY - y))
+        let thumbValue = (minSliderView.frame.height / maxSliderView.frame.height) * 100
+        thumbButtonLabel.text = String(format: "%.0f", thumbValue)
+        delegate?.view(value: Float(thumbValue))
+    }
+
+    private func configSlider() {
+        guard let value = thumbValue else { return }
+        let newMinSliderHeight = (maxSliderView.bounds.height * CGFloat(value)) / 100
+        let newMinSliderY = maxSliderView.bounds.height - newMinSliderHeight
+        minSliderView.frame = CGRect(x: minSliderView.frame.origin.x, y: newMinSliderY, width: minSliderView.frame.width, height: newMinSliderHeight)
+        thumbButtonView.center.y = newMinSliderY
+        thumbButtonLabel.text = String(format: "%.0f", value)
     }
 }
