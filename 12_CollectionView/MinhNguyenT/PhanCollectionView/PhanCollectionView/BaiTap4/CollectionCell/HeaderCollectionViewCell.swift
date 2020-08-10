@@ -11,7 +11,7 @@ import UIKit
 final class HeaderCollectionViewCell: UICollectionViewCell {
 
     // MARK: - @IBOutlets
-    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet private weak var myImageView: UIImageView!
 
     // MARK: - Override functions
     override func awakeFromNib() {

@@ -11,8 +11,8 @@ import UIKit
 final class CustomHeroCollectionViewCell: UICollectionViewCell {
 
     // MARK: _ @IBOutlets
-    @IBOutlet weak var nameImageView: UIImageView!
-    @IBOutlet weak var nameHeroLabel: UILabel!
+    @IBOutlet private weak var nameImageView: UIImageView!
+    @IBOutlet private weak var nameHeroLabel: UILabel!
     
     // MARK: - Override functions
     override func awakeFromNib() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap2CollectionViewCell: UICollectionViewCell {
+final class BaiTap2CollectionViewCell: UICollectionViewCell {
 
     // MARK: - Override functions
     override func awakeFromNib() {

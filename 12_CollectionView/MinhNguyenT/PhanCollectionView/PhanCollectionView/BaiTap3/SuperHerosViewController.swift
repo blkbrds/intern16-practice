@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuperHerosViewController: UIViewController {
+final class SuperHerosViewController: UIViewController {
     
     enum Team: Int{
         case avengers
@@ -45,7 +45,7 @@ class SuperHerosViewController: UIViewController {
     }
     
     // MARK: - @IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
