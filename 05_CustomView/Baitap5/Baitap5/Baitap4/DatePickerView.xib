@@ -10,11 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerView" customModule="Baitap5" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aLj-Hx-c8H">
-                    <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="223"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <date key="minimumDate" timeIntervalSinceReferenceDate="-3187253200">
                         <!--1900-01-01 11:53:20 +0000-->
@@ -46,7 +46,7 @@
                 <outlet property="datePickerView" destination="aLj-Hx-c8H" id="Zht-9M-dO8"/>
                 <outlet property="toolBar" destination="sXa-i7-cew" id="YVw-fj-Q1o"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="300"/>
+            <point key="canvasLocation" x="137.68115942028987" y="297.14673913043481"/>
         </view>
     </objects>
 </document>

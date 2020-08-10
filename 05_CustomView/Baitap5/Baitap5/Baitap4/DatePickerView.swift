@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DatePickerViewDelegate: class {
-    func datePickerView(_ datePickerView: DatePickerView, needsPerform action: DatePickerView.Action)
+    func view(_ datePickerView: DatePickerView, needsPerform action: DatePickerView.Action)
 }
 
 class DatePickerView: UIView {
@@ -23,10 +23,10 @@ class DatePickerView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        toolBar.frame.origin.x = 0
-        toolBar.frame.origin.y = 0
-        datePickerView.frame.origin.x = 0
-        datePickerView.frame.origin.y = toolBar.frame.height
+//        toolBar.frame.origin.x = 0
+//        toolBar.frame.origin.y = 0
+//        datePickerView.frame.origin.x = 0
+//        datePickerView.frame.origin.y = toolBar.frame.height
     }
 
     @IBAction func datePickerViewValuedChanged(_ sender: UIDatePicker) {
@@ -34,15 +34,16 @@ class DatePickerView: UIView {
     }
 
     @IBAction func doneButton(_ sender: UIBarButtonItem) {
+        
         UIView.transition(with: self, duration: 3, options: .transitionCurlDown, animations: {
             self.isHidden = true
-            self.delegate?.datePickerView(self, needsPerform: .selectedDate(selectedDate: self.selectedDate))
+            self.delegate?.datePickerView(self, needsPerform: .didTapDoneButton(selectedDate: self.selectedDate))
         })
     }
 }
 
 extension DatePickerView {
     enum Action {
-        case selectedDate(selectedDate: Date)
+        case didTapDoneButton(selectedDate: Date)
     }
 }

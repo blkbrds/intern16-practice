@@ -82,6 +82,7 @@
 			children = (
 				22BA941524C57D5E00373DF0 /* Baitap1 */,
 				22BA941624C57D9300373DF0 /* Baitap2 */,
+				22F4425224E1981300C9BCF5 /* Baitap4 */,
 				220F42C224B623040059635A /* Supporting file */,
 				220F42A824B61F3C0059635A /* AppDelegate.swift */,
 				220F42AA24B61F3C0059635A /* SceneDelegate.swift */,
@@ -89,10 +90,6 @@
 				220F42B124B61F3D0059635A /* Assets.xcassets */,
 				220F42B324B61F3D0059635A /* LaunchScreen.storyboard */,
 				220F42B624B61F3D0059635A /* Info.plist */,
-				226E707924BEE24900876FB9 /* Baitap4ViewController.swift */,
-				226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */,
-				223F568E24BF44510055779F /* DatePickerView.swift */,
-				223F569224BF51470055779F /* DatePickerView.xib */,
 			);
 			path = Baitap5;
 			sourceTree = "<group>";
@@ -125,6 +122,17 @@
 				22E1725024C47EF40048750A /* CustomSliderView.xib */,
 			);
 			path = Baitap2;
+			sourceTree = "<group>";
+		};
+		22F4425224E1981300C9BCF5 /* Baitap4 */ = {
+			isa = PBXGroup;
+			children = (
+				226E707924BEE24900876FB9 /* Baitap4ViewController.swift */,
+				226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */,
+				223F568E24BF44510055779F /* DatePickerView.swift */,
+				223F569224BF51470055779F /* DatePickerView.xib */,
+			);
+			path = Baitap4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
