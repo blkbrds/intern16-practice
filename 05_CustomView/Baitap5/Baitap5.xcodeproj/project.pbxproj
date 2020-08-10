@@ -24,7 +24,6 @@
 		22E1724824C35AC70048750A /* Baitap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E1724624C35AC70048750A /* Baitap2ViewController.swift */; };
 		22E1724924C35AC70048750A /* Baitap2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E1724724C35AC70048750A /* Baitap2ViewController.xib */; };
 		22E1724B24C35AF10048750A /* CustomSiderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E1724A24C35AF00048750A /* CustomSiderView.swift */; };
-		22E1724F24C43D280048750A /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E1724E24C43D280048750A /* TriangleView.swift */; };
 		22E1725124C47EF40048750A /* CustomSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E1725024C47EF40048750A /* CustomSliderView.xib */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		22E1724624C35AC70048750A /* Baitap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap2ViewController.swift; sourceTree = "<group>"; };
 		22E1724724C35AC70048750A /* Baitap2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap2ViewController.xib; sourceTree = "<group>"; };
 		22E1724A24C35AF00048750A /* CustomSiderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSiderView.swift; sourceTree = "<group>"; };
-		22E1724E24C43D280048750A /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		22E1725024C47EF40048750A /* CustomSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +80,8 @@
 		220F42A724B61F3C0059635A /* Baitap5 */ = {
 			isa = PBXGroup;
 			children = (
+				22BA941524C57D5E00373DF0 /* Baitap1 */,
+				22BA941624C57D9300373DF0 /* Baitap2 */,
 				220F42C224B623040059635A /* Supporting file */,
 				220F42A824B61F3C0059635A /* AppDelegate.swift */,
 				220F42AA24B61F3C0059635A /* SceneDelegate.swift */,
@@ -89,15 +89,6 @@
 				220F42B124B61F3D0059635A /* Assets.xcassets */,
 				220F42B324B61F3D0059635A /* LaunchScreen.storyboard */,
 				220F42B624B61F3D0059635A /* Info.plist */,
-				220F42BC24B61F720059635A /* Baitap1ViewController.swift */,
-				220F42BD24B61F720059635A /* Baitap1ViewController.xib */,
-				226E707524BDF30200876FB9 /* UserInfo.swift */,
-				220F42C024B622000059635A /* UserView.swift */,
-				22E1724624C35AC70048750A /* Baitap2ViewController.swift */,
-				22E1724724C35AC70048750A /* Baitap2ViewController.xib */,
-				22E1724A24C35AF00048750A /* CustomSiderView.swift */,
-				22E1725024C47EF40048750A /* CustomSliderView.xib */,
-				22E1724E24C43D280048750A /* TriangleView.swift */,
 				226E707924BEE24900876FB9 /* Baitap4ViewController.swift */,
 				226E707A24BEE24900876FB9 /* Baitap4ViewController.xib */,
 				223F568E24BF44510055779F /* DatePickerView.swift */,
@@ -112,6 +103,28 @@
 				220F42C324B623380059635A /* avatar.png */,
 			);
 			path = "Supporting file";
+			sourceTree = "<group>";
+		};
+		22BA941524C57D5E00373DF0 /* Baitap1 */ = {
+			isa = PBXGroup;
+			children = (
+				220F42BC24B61F720059635A /* Baitap1ViewController.swift */,
+				220F42BD24B61F720059635A /* Baitap1ViewController.xib */,
+				226E707524BDF30200876FB9 /* UserInfo.swift */,
+				220F42C024B622000059635A /* UserView.swift */,
+			);
+			path = Baitap1;
+			sourceTree = "<group>";
+		};
+		22BA941624C57D9300373DF0 /* Baitap2 */ = {
+			isa = PBXGroup;
+			children = (
+				22E1724624C35AC70048750A /* Baitap2ViewController.swift */,
+				22E1724724C35AC70048750A /* Baitap2ViewController.xib */,
+				22E1724A24C35AF00048750A /* CustomSiderView.swift */,
+				22E1725024C47EF40048750A /* CustomSliderView.xib */,
+			);
+			path = Baitap2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +210,6 @@
 				220F42AD24B61F3C0059635A /* ViewController.swift in Sources */,
 				220F42A924B61F3C0059635A /* AppDelegate.swift in Sources */,
 				220F42C124B622000059635A /* UserView.swift in Sources */,
-				22E1724F24C43D280048750A /* TriangleView.swift in Sources */,
 				220F42AB24B61F3C0059635A /* SceneDelegate.swift in Sources */,
 				223F568F24BF44510055779F /* DatePickerView.swift in Sources */,
 				220F42BE24B61F720059635A /* Baitap1ViewController.swift in Sources */,

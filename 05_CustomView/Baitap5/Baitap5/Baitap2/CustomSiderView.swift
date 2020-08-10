@@ -15,31 +15,26 @@ protocol CustomSliderViewDelegate: class {
 @IBDesignable
 class CustomSiderView: UIView {
 
-    @IBOutlet weak var maxSliderView: TriangleView!
-
-    @IBOutlet weak var minSliderView: TriangleView!
-
+    @IBOutlet weak var maxSliderView: UIImageView!
+    
+    @IBOutlet weak var minSliderView: UIImageView!
+    
     @IBOutlet weak var thumbButtonView: UIView!
-
+    
     @IBOutlet weak var thumbButtonLabel: UILabel!
-
-    var thumbValue: Int = 50
+    
     var panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer()
     weak var delegate: CustomSliderViewDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        createSlider()
+        // createSlider()
     }
 
     private func createSlider() {
-//        maxSliderView.color = #colorLiteral(red: 0.8629845977, green: 0.9938684106, blue: 0.8738953471, alpha: 1)
-//        minSliderView.color = #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 1)
-//        thumbButtonView.addSubview(thumbButtonLabel)
-        thumbButtonLabel.text = "50"
-
-        maxSliderView.addSubview(minSliderView)
-        maxSliderView.addSubview(thumbButtonView)
+//        thumbButtonLabel.text = "50"
+        minSliderView.center.x = maxSliderView.center.x
+        thumbButtonView.center.x = maxSliderView.center.x
 
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(configThumbButton))
         thumbButtonView.addGestureRecognizer(panGesture)
@@ -68,11 +63,9 @@ class CustomSiderView: UIView {
             minSliderView.frame.size = CGSize(width: minSliderView.frame.width, height: 0)
         } else {
             minSliderView.frame.size = CGSize(width: minSliderView.frame.width, height: maxSliderView.frame.height - thumbButtonView.center.y)
-            minSliderView.setMargin = (100 - percentage * 100) / 2
         }
         thumbButtonLabel.text = "\(Int(percentage * 100))"
-        thumbValue = Int(percentage * 100)
-        delegate?.view(self, needsPerform: .didChangeThumbValue(thumbValue: thumbValue))
+        delegate?.view(self, needsPerform: .didChangeThumbValue(thumbValue: Int(percentage * 100)))
     }
 }
 
