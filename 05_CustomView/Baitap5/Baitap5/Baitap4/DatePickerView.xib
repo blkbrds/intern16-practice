@@ -27,24 +27,22 @@
                         <action selector="datePickerViewValuedChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="svq-Hr-oGT"/>
                     </connections>
                 </datePicker>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sXa-i7-cew">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem title="Done" id="fec-eS-qop">
-                            <connections>
-                                <action selector="doneButton:" destination="iN0-l3-epB" id="bIj-1f-LhI"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-VM-tp4">
+                    <rect key="frame" x="0.0" y="6" width="414" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="    Done"/>
+                    <connections>
+                        <action selector="doneButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yh2-8y-9eG"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="datePickerView" destination="aLj-Hx-c8H" id="Zht-9M-dO8"/>
-                <outlet property="toolBar" destination="sXa-i7-cew" id="YVw-fj-Q1o"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="297.14673913043481"/>
         </view>

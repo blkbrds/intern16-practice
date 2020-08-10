@@ -16,48 +16,48 @@ class Baitap4ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        guard let newdatePicker = (Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView) else { return }
-        datePicker = newdatePicker
-
-        view.addSubview(datePicker)
-        datePicker.isHidden = true
-
-        datePicker.frame.origin.y = view.frame.height - datePicker.frame.height
-//        dateInputTextField.inputView = datePicker
-//        dateInputTextField.delegate = self
-        datePicker.delegate = self
-
+        configDatePickerView()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        view.endEditing(true)
-        UIView.transition(with: self.datePicker, duration: 3, options: .transitionCurlDown, animations: {
+        UIView.animate(withDuration: 3, delay: 0, options: .transitionCurlDown, animations: {
             self.datePicker.isHidden = true
             self.view.layoutIfNeeded()
-        })
+        }, completion: nil)
+    }
+
+    private func configDatePickerView() {
+        guard let newdatePicker = (Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView) else { return }
+        datePicker = newdatePicker
+        datePicker.frame = CGRect(x: 0, y: 400, width: view.frame.width, height: 300)
+        view.addSubview(datePicker)
+        datePicker.isHidden = true
+        datePicker.delegate = self
     }
 }
 
 extension Baitap4ViewController: DatePickerViewDelegate {
-    func datePickerView(_ datePickerView: DatePickerView, needsPerform action: DatePickerView.Action) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
+    func view(_ datePickerView: DatePickerView, needsPerform action: DatePickerView.Action) {
         switch action {
-        case .selectedDate(let selectedDate):
-            dateInputTextField.text = dateFormatter.string(from: selectedDate)
+        case .didTapDoneButton(selectedDate: let newDate):
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            dateInputTextField.text = dateFormatter.string(from: newDate)
+            UIView.animate(withDuration: 3, delay: 0, options: .transitionCurlDown, animations: {
+                self.datePicker.isHidden = true
+                self.view.layoutIfNeeded()
+            }, completion: nil)
         }
     }
 }
 
 extension Baitap4ViewController: UITextFieldDelegate {
     func dateInputTextFieldEditingDibBegin(_ textField: UITextField) -> Bool {
-        UIView.transition(with: self.datePicker, duration: 3, options: .transitionCurlUp, animations: {
+        UIView.animate(withDuration: 3, delay: 0, options: .transitionCurlUp, animations: {
             self.datePicker.isHidden = false
             self.view.layoutIfNeeded()
-        })
+        }, completion: nil)
         return false
     }
-
 }

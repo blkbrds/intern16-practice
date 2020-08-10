@@ -15,7 +15,7 @@ protocol DatePickerViewDelegate: class {
 class DatePickerView: UIView {
 
     @IBOutlet weak var datePickerView: UIDatePicker!
-    @IBOutlet weak var toolBar: UIToolbar!
+    
 
     var selectedDate = Date()
 
@@ -23,22 +23,14 @@ class DatePickerView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-//        toolBar.frame.origin.x = 0
-//        toolBar.frame.origin.y = 0
-//        datePickerView.frame.origin.x = 0
-//        datePickerView.frame.origin.y = toolBar.frame.height
     }
 
     @IBAction func datePickerViewValuedChanged(_ sender: UIDatePicker) {
         selectedDate = datePickerView.date
     }
 
-    @IBAction func doneButton(_ sender: UIBarButtonItem) {
-        
-        UIView.transition(with: self, duration: 3, options: .transitionCurlDown, animations: {
-            self.isHidden = true
-            self.delegate?.datePickerView(self, needsPerform: .didTapDoneButton(selectedDate: self.selectedDate))
-        })
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        delegate?.view(self, needsPerform: .didTapDoneButton(selectedDate: selectedDate))
     }
 }
 
