@@ -48,7 +48,7 @@ final class BaiTap1_2TabbarControllerViewController: UITabBarController {
         // set selected background color
         let numberOfItems = CGFloat(items.count)
         let tabBarItemSize = CGSize(width: tabBar.frame.width / numberOfItems, height: tabBar.frame.height)
-        tabBar.selectionIndicatorImage = UIImage.imageWithColor(UIColor.gray, size: tabBarItemSize).resizableImage(withCapInsets: UIEdgeInsets(top: 0.3, left: 0.3, bottom: 0.3, right: 0.3))
+        tabBar.selectionIndicatorImage = UIImage.imageWithColor(UIColor.lightGray, size: tabBarItemSize).resizableImage(withCapInsets: UIEdgeInsets(top: 0.3, left: 0.3, bottom: 0.3, right: 0.3))
     }
 }
 
