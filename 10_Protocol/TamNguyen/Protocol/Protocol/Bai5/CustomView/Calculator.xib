@@ -19,12 +19,12 @@
                         <navigationItem title="Select" id="7d7-gq-1JK">
                             <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="h5k-lh-D7j">
                                 <connections>
-                                    <action selector="cancelTouchUpInside:" destination="iN0-l3-epB" id="ycf-Pj-YIJ"/>
+                                    <action selector="cancelButtonTouchUpInside:" destination="iN0-l3-epB" id="u5Z-fx-7iw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" systemItem="done" id="cMJ-od-pba">
                                 <connections>
-                                    <action selector="doneTouchUpInside:" destination="iN0-l3-epB" id="kmm-sB-AcX"/>
+                                    <action selector="doneButtonTouchUpInside:" destination="iN0-l3-epB" id="Wzr-bN-ckb"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>
@@ -175,7 +175,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="clearTouchUpInside_sender:" destination="iN0-l3-epB" eventType="touchUpInside" id="tMg-Fg-FjU"/>
+                        <action selector="clearButtonTouchUpInside_sender:" destination="iN0-l3-epB" eventType="touchUpInside" id="kWS-Cf-22u"/>
                     </connections>
                 </button>
             </subviews>
@@ -202,7 +202,7 @@
                 <outlet property="numberYLabel" destination="I6S-ma-wsl" id="S8L-p5-HQe"/>
                 <outlet property="resultLabal" destination="d70-Sg-htO" id="YPq-hj-ELJ"/>
             </connections>
-            <point key="canvasLocation" x="154" y="60"/>
+            <point key="canvasLocation" x="27" y="65"/>
         </view>
     </objects>
 </document>

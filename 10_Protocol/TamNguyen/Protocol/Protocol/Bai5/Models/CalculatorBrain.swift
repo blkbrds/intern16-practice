@@ -10,19 +10,19 @@ import Foundation
 
 final class CalculatorBrain {
     
-    func add(a: Float, b: Float) -> Float {
+    func add(a: Float,b: Float) -> Float {
         return a + b
     }
     
-    func sub(a: Float, b: Float) -> Float {
+    func sub(a: Float,b: Float) -> Float {
         return a - b
     }
     
-    func mul(a: Float, b: Float) -> Float {
+    func mul(a: Float,b: Float) -> Float {
         return a * b
     }
     
-    func div(a: Float, b: Float) -> Float {
+    func div(a: Float,b: Float) -> Float {
         if b == 0 {
             return 0
         } else {

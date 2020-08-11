@@ -31,40 +31,42 @@ final class Calculator: UIView {
         case doneButton(resultText: String?, mathText: String?)
         case clearButton(clearText: String?)
     }
+    enum Operand: Int {
+        case add = 1
+        case sub = 2
+        case mul = 3
+        case div = 4
+    }
     let calculatorBrain = CalculatorBrain()
     //tao bien de unwrap cac ham trong trong datasource va gan gia tri voi cac label x,y
     private var x: Float?
     private var y: Float?
     private var result: Float?
     
-    func unwrapOptional() {
-        guard let x = dataSource?.getNumberX(), let y = dataSource?.getNumberY() else { return }
-        numberXLabel.text = String(x)
-        numberYLabel.text = String(y)
-    }
-    
-    // MARK: - Private methods
+    // MARK: - IBActions
     @IBAction private func calculatorButton(_ sender: UIButton) {
         let calculatorBrain = CalculatorBrain()
+        
         guard let x = dataSource?.getNumberX(), let y = dataSource?.getNumberY() else { return }
-        switch sender.tag {
-        case 1:
+        guard let operand = Operand(rawValue: sender.tag) else { return }
+        
+        switch operand {
+        case .add:
             result = calculatorBrain.add(a: Float(x),b: Float(y))
-        case 2:
+        case .sub:
             result = calculatorBrain.sub(a: Float(x),b: Float(y))
-        case 3:
+        case .mul:
             result = calculatorBrain.mul(a: Float(x),b: Float(y))
-        case 4:
+        case .div:
             result = calculatorBrain.div(a: Float(x),b: Float(y))
         default:
             result = 0
         }
-        // unwrap bien result
         guard let result = result else { return }
         resultLabal.text = String(result)
     }
     
-    @IBAction private func clearTouchUpInside(_sender: UIButton) {
+    @IBAction private func clearButtonTouchUpInside(_sender: UIButton) {
         numberXLabel.text = ""
         numberYLabel.text = ""
         resultLabal.text = ""
@@ -73,7 +75,7 @@ final class Calculator: UIView {
         }
     }
     
-    @IBAction private func doneTouchUpInside(_ sender: Any) {
+    @IBAction private func doneButtonTouchUpInside(_ sender: Any) {
         self.isHidden = true
         guard let result = result else { return }
         if let delegate = delegate {
@@ -81,7 +83,14 @@ final class Calculator: UIView {
         }
     }
     
-    @IBAction private func cancelTouchUpInside(_ sender: Any) {
+    @IBAction private func cancelButtonTouchUpInside(_ sender: Any) {
         self.isHidden = true
+    }
+    
+    // MARK: - Public methods
+    func updateView() {
+        guard let x = dataSource?.getNumberX(), let y = dataSource?.getNumberY() else { return }
+        numberXLabel.text = String(x)
+        numberYLabel.text = String(y)
     }
 }

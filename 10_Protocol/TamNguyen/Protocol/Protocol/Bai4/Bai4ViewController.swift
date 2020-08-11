@@ -23,6 +23,7 @@ final class Bai4ViewController: UIViewController {
                                        "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai",
                                        "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Quảng Bình", "Quảng Nam",
                                        "Quảng Ngãi", "Đà Nẵng", "Hải Phòng", "Hà Nội",  "TP.HCM", "Thừa Thiên Huế"]
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +42,9 @@ final class Bai4ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UITableViewDelegate, DataSource, UISearchBarDelegate
 extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchLocations.count
     }
@@ -59,6 +61,7 @@ extension Bai4ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension Bai4ViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let upperText = searchText.uppercased()
         searchLocations = locations.filter { $0.uppercased().hasPrefix(upperText) }

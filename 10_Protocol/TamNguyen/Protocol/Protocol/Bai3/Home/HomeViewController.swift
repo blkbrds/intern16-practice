@@ -50,4 +50,3 @@ final class HomeViewController: UIViewController {
         distrcitLabel.text = districtText
     }
 }
-

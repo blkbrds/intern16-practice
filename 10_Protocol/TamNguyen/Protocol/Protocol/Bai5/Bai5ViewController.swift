@@ -16,26 +16,20 @@ final class Bai5ViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private weak var mathButton: UIButton!
     
-    
-    // MARK: - Properties
-    // MARK: - Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    // MARK: - Private methods
-    @IBAction private func appearTouchUpInside(_sender: UIButton) {
+    // MARK: - IBActions
+    @IBAction private func appearButtonTouchUpInside(_sender: UIButton) {
         guard let calculatorCustom = Bundle.main.loadNibNamed("Calculator", owner: self, options: nil)?.first as? Calculator else { return }
         calculatorCustom.frame = CGRect(x: 20, y: 250, width: 300, height: 300)
         calculatorCustom.dataSource = self
-        calculatorCustom.unwrapOptional()
+        calculatorCustom.updateView()
         calculatorCustom.delegate = self
         view.addSubview(calculatorCustom)
     }
 }
 
-// MARK : - Extension
+// MARK : - Extension CalculatorDataSource, CalculatorDelegate
 extension Bai5ViewController: CalculatorDataSource {
+    
     func getNumberX() -> Int? {
         guard let x = numberXTextField.text else { return 0 }
         return Int(x)
@@ -48,6 +42,7 @@ extension Bai5ViewController: CalculatorDataSource {
 }
 
 extension Bai5ViewController: CalculatorDelegate {
+    
     func updateResult(view: Calculator, need action: Calculator.Action) {
         switch action {
         case .clearButton(let clearText):

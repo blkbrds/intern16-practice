@@ -42,7 +42,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="appearTouchUpInside_sender:" destination="-1" eventType="touchUpInside" id="hSK-wt-52H"/>
+                                <action selector="appearButtonTouchUpInside_sender:" destination="-1" eventType="touchUpInside" id="m5W-ET-VAP"/>
                             </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffw-2A-4Qp">
