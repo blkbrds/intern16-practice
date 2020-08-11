@@ -35,7 +35,6 @@ final class HomeViewController: UIViewController {
         }
         numberSave = numberSave * 10 + Float(sender.tag)
         shareCalculator.calculators[1] = numberSave
-        print(shareCalculator.calculators)
         resultLablel.text = String(Int(numberSave))
     }
     @IBAction private func clear(_ sender: UIButton) {
