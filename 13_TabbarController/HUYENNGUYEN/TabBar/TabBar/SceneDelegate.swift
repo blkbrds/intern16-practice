@@ -11,13 +11,37 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var navigationController: UINavigationController?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        //config tab Home
+        //config navigation
+        let loginVC = LoginViewController()
+        loginVC.delegate = self
+        navigationController = UINavigationController(rootViewController: loginVC)
+        
+        //config window
+        window.rootViewController = navigationController
+        self.window = window
+        window.makeKeyAndVisible()
+    }
+
+    func sceneDidDisconnect(_ scene: UIScene) { }
+
+    func sceneDidBecomeActive(_ scene: UIScene) { }
+
+    func sceneWillResignActive(_ scene: UIScene) { }
+
+    func sceneWillEnterForeground(_ scene: UIScene) { }
+
+    func sceneDidEnterBackground(_ scene: UIScene) { }
+}
+
+extension SceneDelegate: LoginViewControllerDelegate {
+    func login(view: LoginViewController) {
+                //config tab Home
         let homeVC = HomeViewController()
         let homeNavigationController = UINavigationController(rootViewController: homeVC)
         homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "ic-home "), tag: 0)
@@ -42,21 +66,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = viewControllers
         
-        //config window
-        window.rootViewController = tabBarController
-        self.window = window
-        window.makeKeyAndVisible()
-        
+        navigationController = UINavigationController(rootViewController: tabBarController)
+        window?.rootViewController = navigationController
+        navigationController?.isNavigationBarHidden = true
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) { }
-
-    func sceneDidBecomeActive(_ scene: UIScene) { }
-
-    func sceneWillResignActive(_ scene: UIScene) { }
-
-    func sceneWillEnterForeground(_ scene: UIScene) { }
-
-    func sceneDidEnterBackground(_ scene: UIScene) { }
 }
 

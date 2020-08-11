@@ -10,6 +10,9 @@
 		8327154224E0FBD600AA58AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327154124E0FBD600AA58AD /* AppDelegate.swift */; };
 		8327154424E0FBD600AA58AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327154324E0FBD600AA58AD /* SceneDelegate.swift */; };
 		8327154B24E0FBD800AA58AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8327154A24E0FBD800AA58AD /* Assets.xcassets */; };
+		8328251924E2425F00358411 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328251824E2425F00358411 /* LoginViewController.swift */; };
+		8328251B24E2426C00358411 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8328251A24E2426C00358411 /* LoginViewController.xib */; };
+		8328251D24E2427500358411 /* dbAccount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8328251C24E2427500358411 /* dbAccount.plist */; };
 		832EA50224E1504D00319017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EA50024E1504D00319017 /* HomeViewController.swift */; };
 		832EA50324E1504D00319017 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832EA50124E1504D00319017 /* HomeViewController.xib */; };
 		832EA50624E1505A00319017 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EA50424E1505A00319017 /* MapViewController.swift */; };
@@ -26,6 +29,9 @@
 		8327154324E0FBD600AA58AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8327154A24E0FBD800AA58AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8327154F24E0FBD800AA58AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8328251824E2425F00358411 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8328251A24E2426C00358411 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8328251C24E2427500358411 /* dbAccount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dbAccount.plist; sourceTree = "<group>"; };
 		832EA50024E1504D00319017 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		832EA50124E1504D00319017 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		832EA50424E1505A00319017 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -66,24 +72,26 @@
 		8327154024E0FBD600AA58AD /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				832EA4FB24E14FB700319017 /* Bai 01 */,
+				832EA4FB24E14FB700319017 /* Controller */,
 				8327154124E0FBD600AA58AD /* AppDelegate.swift */,
 				8327154324E0FBD600AA58AD /* SceneDelegate.swift */,
+				8328251C24E2427500358411 /* dbAccount.plist */,
 				8327154A24E0FBD800AA58AD /* Assets.xcassets */,
 				8327154F24E0FBD800AA58AD /* Info.plist */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		832EA4FB24E14FB700319017 /* Bai 01 */ = {
+		832EA4FB24E14FB700319017 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83ED382324E232EE0081AA22 /* Login */,
 				832EA4FF24E14FE800319017 /* Profile */,
 				832EA4FE24E14FD500319017 /* Favorite */,
 				832EA4FD24E14FCA00319017 /* Map */,
 				832EA4FC24E14FC300319017 /* Home */,
 			);
-			path = "Bai 01";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		832EA4FC24E14FC300319017 /* Home */ = {
@@ -120,6 +128,15 @@
 				832EA50D24E1507D00319017 /* ProfileViewController.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		83ED382324E232EE0081AA22 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8328251A24E2426C00358411 /* LoginViewController.xib */,
+				8328251824E2425F00358411 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +199,8 @@
 			files = (
 				8327154B24E0FBD800AA58AD /* Assets.xcassets in Resources */,
 				832EA50724E1505A00319017 /* MapViewController.xib in Resources */,
+				8328251B24E2426C00358411 /* LoginViewController.xib in Resources */,
+				8328251D24E2427500358411 /* dbAccount.plist in Resources */,
 				832EA50B24E1506F00319017 /* FavoritesViewController.xib in Resources */,
 				832EA50F24E1507D00319017 /* ProfileViewController.xib in Resources */,
 				832EA50324E1504D00319017 /* HomeViewController.xib in Resources */,
@@ -195,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8328251924E2425F00358411 /* LoginViewController.swift in Sources */,
 				8327154224E0FBD600AA58AD /* AppDelegate.swift in Sources */,
 				8327154424E0FBD600AA58AD /* SceneDelegate.swift in Sources */,
 				832EA50624E1505A00319017 /* MapViewController.swift in Sources */,
