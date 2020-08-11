@@ -22,12 +22,7 @@
                     <rect key="frame" x="51" y="154" width="268" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="abc:" destination="-1" eventType="editingChanged" id="aIe-Ne-v46"/>
-                        <action selector="dateInputTextFieldEditingChanged:" destination="-1" eventType="editingChanged" id="8D2-fX-Iax"/>
-                        <action selector="dateInputTextFieldEditingDibBegin:" destination="-1" eventType="editingDidBegin" id="YnR-Ys-662"/>
-                    </connections>
+                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

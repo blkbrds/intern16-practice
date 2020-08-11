@@ -54,7 +54,7 @@ extension Baitap4ViewController: DatePickerViewDelegate {
 
 extension Baitap4ViewController: UITextFieldDelegate {
     func dateInputTextFieldEditingDibBegin(_ textField: UITextField) -> Bool {
-        UIView.animate(withDuration: 3, delay: 0, options: .transitionCurlUp, animations: {
+        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseIn, animations: {
             self.datePicker.isHidden = false
             self.view.layoutIfNeeded()
         }, completion: nil)
