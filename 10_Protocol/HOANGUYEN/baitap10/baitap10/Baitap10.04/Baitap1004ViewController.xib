@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap1004ViewController" customModule="baitap10" customModuleProvider="target">
+            <connections>
+                <outlet property="provinceTextView" destination="8Yv-HR-rcJ" id="Cpu-9A-sEc"/>
+                <outlet property="searchBar" destination="ATG-9B-fab" id="Vjn-GZ-xri"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search bar" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-9B-fab">
+                    <rect key="frame" x="0.0" y="144" width="344" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcb-cq-9zl">
+                    <rect key="frame" x="349" y="144" width="65" height="56"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="hdo-TC-PCn"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Yv-HR-rcJ">
+                    <rect key="frame" x="5" y="205" width="404" height="652"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kcb-cq-9zl" secondAttribute="trailing" id="5do-kb-6Mh"/>
+                <constraint firstItem="ATG-9B-fab" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6zC-y2-Vnt"/>
+                <constraint firstItem="ATG-9B-fab" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-70" id="E9k-6N-sHc"/>
+                <constraint firstItem="ATG-9B-fab" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="FiB-eq-VcP"/>
+                <constraint firstItem="Kcb-cq-9zl" firstAttribute="leading" secondItem="ATG-9B-fab" secondAttribute="trailing" constant="5" id="KL9-NO-IeY"/>
+                <constraint firstItem="Kcb-cq-9zl" firstAttribute="height" secondItem="ATG-9B-fab" secondAttribute="height" id="XJb-p9-eil"/>
+                <constraint firstItem="8Yv-HR-rcJ" firstAttribute="top" secondItem="ATG-9B-fab" secondAttribute="bottom" constant="5" id="eZ5-zz-5El"/>
+                <constraint firstItem="Kcb-cq-9zl" firstAttribute="top" secondItem="ATG-9B-fab" secondAttribute="top" id="mcX-0V-fWi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8Yv-HR-rcJ" secondAttribute="bottom" constant="5" id="qCf-NB-Trs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Yv-HR-rcJ" secondAttribute="trailing" constant="5" id="qKo-C6-nKU"/>
+                <constraint firstItem="8Yv-HR-rcJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="vii-Wt-bxt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="116"/>
+        </view>
+    </objects>
+</document>
