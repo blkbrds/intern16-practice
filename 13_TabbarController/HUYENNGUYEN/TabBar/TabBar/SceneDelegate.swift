@@ -44,31 +44,44 @@ extension SceneDelegate: LoginViewControllerDelegate {
                 //config tab Home
         let homeVC = HomeViewController()
         let homeNavigationController = UINavigationController(rootViewController: homeVC)
-        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "ic-home "), tag: 0)
+        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "ic-plus "), tag: 0)
+        homeNavigationController.tabBarItem.selectedImage = #imageLiteral(resourceName: "ic-plus-selected ")
         
         //config tab Map
+        
         let mapVC = MapViewController()
         let mapNavigationController = UINavigationController(rootViewController: mapVC)
         mapNavigationController.tabBarItem = UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "ic-map "), tag: 1)
+        mapNavigationController.tabBarItem.selectedImage = #imageLiteral(resourceName: "ic-map-selected ")
+        
+        
+
         
         //config tab Favorite
         let favoriteVC = FavoritesViewController()
         let favoriteNavigationController = UINavigationController(rootViewController: favoriteVC)
-        favoriteNavigationController.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "ic-favorite "), tag: 2)
+        favoriteNavigationController.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "ic-favorite "), tag: 3)
+        favoriteNavigationController.tabBarItem.selectedImage = #imageLiteral(resourceName: "ic-favorite-selected ")
         
         //config tab Profile
-        let profileVC = MapViewController()
+        let profileVC = ProfileViewController()
         let profileNavigationController = UINavigationController(rootViewController: profileVC)
-        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "ic-profile "), tag: 3)
+        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "ic-profile "), tag: 4)
+        profileNavigationController.tabBarItem.selectedImage = #imageLiteral(resourceName: "ic-profile-selected ")
+        
+       
         
         //config tab bar controller
         let viewControllers = [homeNavigationController, mapNavigationController, favoriteNavigationController, profileNavigationController]
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = viewControllers
+        tabBarController.tabBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        tabBarController.tabBar.tintColor = #colorLiteral(red: 0.923362151, green: 0.6216164776, blue: 0.5665037944, alpha: 1)
+        tabBarController.tabBar.layer.borderColor = UIColor.clear.cgColor
+        tabBarController.tabBar.clipsToBounds = true
         
         navigationController = UINavigationController(rootViewController: tabBarController)
         window?.rootViewController = navigationController
         navigationController?.isNavigationBarHidden = true
     }
 }
-

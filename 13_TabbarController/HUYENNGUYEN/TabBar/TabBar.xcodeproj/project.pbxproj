@@ -72,6 +72,7 @@
 		8327154024E0FBD600AA58AD /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				83313EE424E287A000088552 /* Base */,
 				832EA4FB24E14FB700319017 /* Controller */,
 				8327154124E0FBD600AA58AD /* AppDelegate.swift */,
 				8327154324E0FBD600AA58AD /* SceneDelegate.swift */,
@@ -128,6 +129,13 @@
 				832EA50D24E1507D00319017 /* ProfileViewController.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		83313EE424E287A000088552 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		83ED382324E232EE0081AA22 /* Login */ = {
