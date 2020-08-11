@@ -15,7 +15,7 @@ enum RootType {
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     static let shared: AppDelegate = {
         guard let shared = UIApplication.shared.delegate as? AppDelegate else {
@@ -23,10 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return shared
     }()
-        
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        configLogin()
+        let stateUser: Bool =  UserDefaults.standard.bool(forKey: "state")
+        if stateUser {
+            changeRoot(with: true)
+        } else {
+            changeRoot(with: false)
+        }
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         return true
@@ -42,12 +47,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
     }
     
-    func changeRoot(rootType: RootType) {
+    func changeRoot(with user: Bool) {
+        let rootType = chooseRootType(with: user)
         switch rootType {
         case .login:
             configLogin()
         case .tabbar:
             configTabbar()
+        }
+    }
+    
+    func chooseRootType(with user: Bool) -> RootType {
+        if user {
+            return .tabbar
+        } else {
+            return .login
         }
     }
 }

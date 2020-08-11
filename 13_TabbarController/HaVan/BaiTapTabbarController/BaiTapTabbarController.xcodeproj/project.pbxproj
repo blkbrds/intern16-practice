@@ -129,7 +129,7 @@
 		528C5F0D24DBF32A00A14B89 /* BaiTapTabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				528C5F2224DBF3AF00A14B89 /* Baitap1-2 */,
+				528C5F2224DBF3AF00A14B89 /* Baitap1-4 */,
 				528C5F0E24DBF32A00A14B89 /* AppDelegate.swift */,
 				528C5F1724DBF32C00A14B89 /* Assets.xcassets */,
 				528C5F1924DBF32C00A14B89 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			path = BaiTapTabbarController;
 			sourceTree = "<group>";
 		};
-		528C5F2224DBF3AF00A14B89 /* Baitap1-2 */ = {
+		528C5F2224DBF3AF00A14B89 /* Baitap1-4 */ = {
 			isa = PBXGroup;
 			children = (
 				529D8E3424DD5427000CCFC9 /* ForgotPassword */,
@@ -152,7 +152,7 @@
 				529D8E3924DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.swift */,
 				529D8E3A24DEA4FB000CCFC9 /* BaiTap1-2TabbarControllerViewController.xib */,
 			);
-			path = "Baitap1-2";
+			path = "Baitap1-4";
 			sourceTree = "<group>";
 		};
 		529D8E2F24DD5407000CCFC9 /* Register */ = {
