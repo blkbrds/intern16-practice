@@ -8,14 +8,12 @@
 
 import UIKit
 
-
 final class DiaDiemViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var mienLabel: UILabel!
     @IBOutlet private weak var tinhLabel: UILabel!
     @IBOutlet private weak var huyenLabel: UILabel!
-    
     
     // MARK: - Life cycle
     override func viewDidLoad() {

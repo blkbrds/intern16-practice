@@ -5,6 +5,7 @@
 //  Created by NganHa on 7/28/20.
 //  Copyright © 2020 Galaxy. All rights reserved.
 //
+
 import Foundation
 
 enum Operator {
@@ -22,12 +23,13 @@ class Calculator {
     private var firstNumber: Float = 0
     private var secondNumber: Float = 0
     
+    // MARK: - Initialize
     init(_ firstNumber: Float, _ secondNumber: Float) {
         self.firstNumber = firstNumber
         self.secondNumber = secondNumber
     }
     
-    
+    // MARK: - Public functions
     static func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber + secondNumber
     }
