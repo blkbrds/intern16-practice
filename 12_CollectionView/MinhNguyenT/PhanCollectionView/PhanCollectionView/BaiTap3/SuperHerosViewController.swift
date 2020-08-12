@@ -43,17 +43,17 @@ final class SuperHerosViewController: UIViewController {
         }
         static var count: Int { return Team.xmen.rawValue + 1}
     }
-    
+
     // MARK: - @IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Marvel"
         configCollectionView()
     }
-    
+
     // MARK: - Private functions
     private func configCollectionView() {
         let cellNib = UINib(nibName: "CustomHeroCollectionViewCell", bundle: Bundle.main)
@@ -66,7 +66,6 @@ final class SuperHerosViewController: UIViewController {
 }
 
 extension SuperHerosViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let team = Team(rawValue: indexPath.section) else {fatalError("team value is nil")}
         guard indexPath.item < team.member.count else { fatalError("member index is out of bounds")}
@@ -75,16 +74,16 @@ extension SuperHerosViewController: UICollectionViewDataSource {
         cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let team = Team(rawValue: section) else {fatalError("Team value is nil")}
         return team.member.count
     }
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return Team.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
@@ -103,13 +102,12 @@ extension SuperHerosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 3 - 20, height: 180)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 100)
     }
 }
-

@@ -14,7 +14,6 @@ final class BaiTap2ViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
 
     // MARK: - Properties
-    private var numbers: [String] = []
     private var heights: [CGFloat] = []
 
     // MARK: - Life cycle
@@ -35,8 +34,7 @@ final class BaiTap2ViewController: UIViewController {
     }
 
     private func addArrNumber() {
-        for i in 0...50 {
-            numbers.append(String(i))
+        for _ in 0...50 {
             heights.append(CGFloat.random(in: 20..<200))
         }
     }
@@ -45,7 +43,7 @@ final class BaiTap2ViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 extension BaiTap2ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numbers.count
+        return heights.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

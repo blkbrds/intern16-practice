@@ -9,16 +9,16 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    
+
     // MARK: - @IBOutlets
     @IBOutlet private weak var table: UITableView!
     @IBOutlet private weak var collectionView: UICollectionView!
-    
-    // MARK: - Peroperties
-    var datas: [Data] = []
-    var dataHeader: [String] = []
-    var position: Int = 0
-    
+
+    // MARK: - Private peroperties
+    private var datas: [Data] = []
+    private var dataHeader: [String] = []
+    private var position: Int = 0
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,53 +27,53 @@ final class HomeViewController: UIViewController {
         configCollection()
         updateDataHeader()
     }
-    
+
     // MARK: - Private functions
     private func updateData() {
         for i in 1..<10 {
             datas.append(Data(text: "Hinh\(i)", imageName: "h\(i)"))
         }
     }
-    
+
     private func updateDataHeader() {
         for i in 1..<10 {
             dataHeader.append("h\(i)")
         }
     }
-    
+
     private func configTable() {
         let nib = UINib(nibName: "HomeTableViewCell", bundle: .main)
         table.register(nib, forCellReuseIdentifier: "HomeTableViewCell")
         table.dataSource = self
         table.delegate = self
     }
-    
+
     private func configCollection() {
         let nib = UINib(nibName: "HeaderCollectionViewCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "HeaderCollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-    
+
     // MARK: - @IBActions
-    @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
-        guard position >= 1 else { return }
+    @IBAction private func backButtonTouchUpInside(_ sender: UIButton) {
         position -= 1
+        if position < 0 {
+            position = dataHeader.count - 1
+        }
         collectionView.scrollToItem(at: IndexPath(item: position, section: 0), at: .centeredHorizontally, animated: true)
     }
-    
-    @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        if position >= dataHeader.count - 1 {
-            position = dataHeader.count - 1
-        } else {
-            position += 1
+
+    @IBAction private func nextButtonTouchUpInside(_ sender: UIButton) {
+        position += 1
+        if position == dataHeader.count {
+            position = 0
         }
         collectionView.scrollToItem(at: IndexPath(item: position, section: 0), at: .centeredHorizontally, animated: true)
     }
 }
 
 extension HomeViewController: UITableViewDataSource , UITableViewDelegate{
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -100,7 +100,6 @@ extension HomeViewController: UITableViewDataSource , UITableViewDelegate{
 }
 
 extension HomeViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataHeader.count
     }
