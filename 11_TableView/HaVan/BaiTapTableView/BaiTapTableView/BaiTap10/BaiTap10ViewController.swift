@@ -18,7 +18,7 @@ final class BaiTap10ViewController: UIViewController {
     private var keys: [String] = []
     private let managementContact = ManagementContact()
     private var contactList: [String : String] = [:]
-    private var newSection : [[String]] = [[]]
+    private var newSection : [[String]] = []
     private let contact = Contact()
     private var sectionIndex: [String] = []
     
@@ -106,7 +106,7 @@ extension BaiTap10ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseContactCell", for: indexPath) as! PeopleTableViewCell
         let name = newSection[indexPath.section][indexPath.row]
-        let phone = contactList[name] ?? ""
+        guard let phone = contactList[name] else { fatalError("Can not get the phone") }
         cell.updateCell(name: name, phone: phone)
         return cell
     }
@@ -120,7 +120,6 @@ extension BaiTap10ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print(sectionIndex[section])
         return sectionIndex[section]
     }
 }

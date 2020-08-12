@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="519-OR-Esy">
-                        <rect key="frame" x="132" y="61" width="213" height="21"/>
+                        <rect key="frame" x="132" y="61" width="233" height="21"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
@@ -59,18 +59,18 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="519-OR-Esy" firstAttribute="leading" secondItem="d9I-cO-Kra" secondAttribute="trailing" constant="30" id="3wd-Wb-G3e"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="519-OR-Esy" secondAttribute="trailing" constant="20" id="5wT-X1-Xkj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="519-OR-Esy" secondAttribute="bottom" constant="9" id="FMw-gG-N0s"/>
                     <constraint firstItem="d9I-cO-Kra" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="KXi-i2-TrT"/>
                     <constraint firstAttribute="bottom" secondItem="d9I-cO-Kra" secondAttribute="bottom" constant="10" id="Nbn-Sf-CMx"/>
                     <constraint firstItem="PtH-jT-xx3" firstAttribute="leading" secondItem="d9I-cO-Kra" secondAttribute="trailing" constant="30" id="OkM-FY-XO8"/>
+                    <constraint firstItem="PtH-jT-xx3" firstAttribute="trailing" secondItem="519-OR-Esy" secondAttribute="trailing" id="QRu-ps-sQu"/>
                     <constraint firstAttribute="trailing" secondItem="PtH-jT-xx3" secondAttribute="trailing" constant="20" id="TyQ-jd-gGd"/>
                     <constraint firstItem="519-OR-Esy" firstAttribute="top" secondItem="PtH-jT-xx3" secondAttribute="bottom" constant="20" id="vOp-Xd-lFI"/>
-                    <constraint firstAttribute="trailing" secondItem="08i-EW-AbG" secondAttribute="trailing" constant="20" id="xGJ-h1-508"/>
                     <constraint firstItem="PtH-jT-xx3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="xn9-I2-Xfc"/>
                     <constraint firstItem="d9I-cO-Kra" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ydB-cj-sfF"/>
                     <constraint firstItem="08i-EW-AbG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yjH-Sc-li8"/>
+                    <constraint firstItem="PtH-jT-xx3" firstAttribute="leading" secondItem="519-OR-Esy" secondAttribute="leading" id="zG6-pm-SRp"/>
+                    <constraint firstItem="08i-EW-AbG" firstAttribute="trailing" secondItem="519-OR-Esy" secondAttribute="trailing" id="zJV-1g-CFx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

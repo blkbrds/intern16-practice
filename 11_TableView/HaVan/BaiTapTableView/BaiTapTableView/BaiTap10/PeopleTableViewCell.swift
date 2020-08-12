@@ -15,11 +15,6 @@ final class PeopleTableViewCell: UITableViewCell {
     @IBOutlet private weak var phoneLabel: UILabel!
     @IBOutlet private weak var personImageView: UIImageView!
     
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
