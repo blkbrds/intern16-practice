@@ -64,6 +64,7 @@ final class BaiTap5ViewController: UIViewController {
 
 // MARK: - CalculatorCustomViewDatasource
 extension BaiTap5ViewController: CalculatorCustomViewDatasource {
+    
     func getData() -> (x: Float, y: Float)? {
         if let x = firstNumberTextField.text, let y = secondNumberTextField.text, let xResult = Float(x), let yResult = Float(y) {
             return (xResult, yResult)

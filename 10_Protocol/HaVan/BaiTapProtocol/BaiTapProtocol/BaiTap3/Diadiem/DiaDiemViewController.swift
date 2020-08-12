@@ -12,9 +12,9 @@ import UIKit
 final class DiaDiemViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var mienLabel: UILabel!
-    @IBOutlet weak var tinhLabel: UILabel!
-    @IBOutlet weak var huyenLabel: UILabel!
+    @IBOutlet private weak var mienLabel: UILabel!
+    @IBOutlet private weak var tinhLabel: UILabel!
+    @IBOutlet private weak var huyenLabel: UILabel!
     
     
     // MARK: - Life cycle
