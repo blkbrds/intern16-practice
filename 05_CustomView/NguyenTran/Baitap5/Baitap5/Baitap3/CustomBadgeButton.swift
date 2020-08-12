@@ -42,7 +42,6 @@ class CustomBadgeButton: UIView {
         badgeLabel.textAlignment = .center
         badgeLabel.backgroundColor = #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1)
         badgeLabel.clipsToBounds = true
-        
         configBadePosition(position: position)
         if badgeValue == 0 {
             badgeLabel.text = "0"
@@ -97,10 +96,10 @@ class CustomBadgeButton: UIView {
         if ((cString.count) != 6) {
             return UIColor.gray
         }
-        
+
         var rgbValue: UInt64 = 0
         Scanner(string: cString).scanHexInt64(&rgbValue)
-        
+
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
