@@ -20,19 +20,22 @@ class Baitap4ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UIView.animate(withDuration: 3, delay: 0, options: .transitionCurlDown, animations: {
+        view.endEditing(true)
+        UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
             self.datePicker.isHidden = true
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
 
     private func configDatePickerView() {
-        guard let newdatePicker = (Bundle.main.loadNibNamed("DatePickerView", owner: nil, options: nil)?.first as? DatePickerView) else { return }
+        guard let newdatePicker = (Bundle.main.loadNibNamed("DatePickerView", owner: self, options: nil)?.first as? DatePickerView) else { return }
         datePicker = newdatePicker
-        datePicker.frame = CGRect(x: 0, y: 400, width: view.frame.width, height: 300)
+        let screenSize: CGRect = UIScreen.main.bounds
+        datePicker.frame = CGRect(x: 0, y: screenSize.size.height - 300 , width: view.frame.width, height: 300)
         view.addSubview(datePicker)
         datePicker.isHidden = true
         datePicker.delegate = self
+        dateInputTextField.delegate = self
     }
 }
 
@@ -44,7 +47,7 @@ extension Baitap4ViewController: DatePickerViewDelegate {
             dateFormatter.dateStyle = .medium
             dateFormatter.timeStyle = .none
             dateInputTextField.text = dateFormatter.string(from: newDate)
-            UIView.animate(withDuration: 3, delay: 0, options: .transitionCurlDown, animations: {
+            UIView.animate(withDuration: 5.0, delay: 0.0, options: .transitionCurlDown, animations: {
                 self.datePicker.isHidden = true
                 self.view.layoutIfNeeded()
             }, completion: nil)
@@ -53,8 +56,8 @@ extension Baitap4ViewController: DatePickerViewDelegate {
 }
 
 extension Baitap4ViewController: UITextFieldDelegate {
-    func dateInputTextFieldEditingDibBegin(_ textField: UITextField) -> Bool {
-        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseIn, animations: {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        UIView.animate(withDuration: 5.0, delay: 0.0, options: .curveEaseIn, animations: {
             self.datePicker.isHidden = false
             self.view.layoutIfNeeded()
         }, completion: nil)

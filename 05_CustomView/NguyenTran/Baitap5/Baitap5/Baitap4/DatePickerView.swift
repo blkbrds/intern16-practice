@@ -15,7 +15,6 @@ protocol DatePickerViewDelegate: class {
 class DatePickerView: UIView {
 
     @IBOutlet weak var datePickerView: UIDatePicker!
-    
 
     var selectedDate = Date()
 
@@ -25,7 +24,8 @@ class DatePickerView: UIView {
         super.awakeFromNib()
     }
 
-    @IBAction func datePickerViewValuedChanged(_ sender: UIDatePicker) {
+    @IBAction func datePickerViewValueChanged(_ sender: UIDatePicker) {
+        datePickerView.datePickerMode = UIDatePicker.Mode.date
         selectedDate = datePickerView.date
     }
 

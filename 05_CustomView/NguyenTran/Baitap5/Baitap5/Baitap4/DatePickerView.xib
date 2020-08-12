@@ -10,25 +10,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerView" customModule="Baitap5" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aLj-Hx-c8H">
-                    <rect key="frame" x="0.0" y="44" width="414" height="223"/>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="56x-OQ-Rk3">
+                    <rect key="frame" x="0.0" y="44" width="414" height="216"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <date key="minimumDate" timeIntervalSinceReferenceDate="-3187253200">
-                        <!--1900-01-01 11:53:20 +0000-->
-                    </date>
-                    <date key="maximumDate" timeIntervalSinceReferenceDate="3155626800">
-                        <!--2100-12-31 11:00:00 +0000-->
-                    </date>
                     <connections>
-                        <action selector="datePickerViewValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="dSU-1r-W7O"/>
-                        <action selector="datePickerViewValuedChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="svq-Hr-oGT"/>
+                        <action selector="datePickerViewValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="pbx-xq-jBT"/>
                     </connections>
                 </datePicker>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-VM-tp4">
-                    <rect key="frame" x="0.0" y="6" width="414" height="37"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -42,9 +35,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="datePickerView" destination="aLj-Hx-c8H" id="Zht-9M-dO8"/>
+                <outlet property="datePickerView" destination="56x-OQ-Rk3" id="rBO-KY-kQb"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="297.14673913043481"/>
+            <point key="canvasLocation" x="137.68115942028987" y="300"/>
         </view>
     </objects>
 </document>
