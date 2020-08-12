@@ -13,6 +13,6 @@ final class FavoritViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Favorit"
+        navigationItem.title = "Favorit"
     }
 }

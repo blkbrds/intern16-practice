@@ -15,19 +15,20 @@ final class ForgotPasswordViewController: UIViewController {
         case onlyemty = "-> nhap het cac truong"
         case wrongdata = "-> ten dang nhap khong ton tai"
     }
+
     // MARK: - @IBOutlets
     @IBOutlet private weak var usernameTexField: UITextField!
     @IBOutlet private weak var newPassword: UITextField!
     @IBOutlet private weak var confirmNewPassword: UITextField!
     @IBOutlet private weak var notificationLabel: UILabel!
     @IBOutlet private weak var submitButton: UIButton!
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         submitButton.layer.cornerRadius = 10
     }
-    
+
     // MARK: - Private functions
     private func handleSubmit() {
         guard let username = usernameTexField.text, let password = newPassword.text, let confirmpw = confirmNewPassword.text else { return }
@@ -35,9 +36,9 @@ final class ForgotPasswordViewController: UIViewController {
         switch result {
         case ("","",""), (nil, nil, nil):
             notificationLabel.text =  Suit.emty.rawValue
-        case ("", _, ""), (_, "",""),(_,"",""):
+        case ("", _, ""), (_, "",""), (_,"",""):
             notificationLabel.text = Suit.onlyemty.rawValue
-        case (username, password,confirmpw):
+        case (username, password, confirmpw):
             if LoginManager.shared.forgotPassword(username: username, newPass: password, confirmNewPass: confirmpw){
                 AppDelegate.shared.changeRoot(rootType: .login)
             } else {
@@ -47,9 +48,9 @@ final class ForgotPasswordViewController: UIViewController {
             notificationLabel.text = Suit.wrongdata.rawValue
         }
     }
-    
+
     // MARK: @IBActions
-    @IBAction func handleSubmitButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleSubmitButtonTouchUpInside(_ sender: UIButton) {
         handleSubmit()
     }
 }

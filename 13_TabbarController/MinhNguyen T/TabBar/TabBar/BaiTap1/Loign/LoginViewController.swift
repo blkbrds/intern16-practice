@@ -36,8 +36,7 @@ final class LoginViewController: UIViewController {
         case ("", _), (_, ""):
             notificationLabel.text = Suit.onlyemty.rawValue
         case (username, password):
-            if LoginManager.shared.checkAccount(username: username, password: password)
-            {
+            if LoginManager.shared.checkAccount(username: username, password: password) {
                 AppDelegate.shared.changeRoot(rootType: .tabbar)
             }
         default:
@@ -51,12 +50,10 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func handleSignUpButtonTouchUpInside(_ sender: UIButton) {
-        let vc = RegisterViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 
     @IBAction private func handleForgotButtonTouchUpInside(_ sender: UIButton) {
-       let vc = ForgotPasswordViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
     }
 }

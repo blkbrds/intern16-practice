@@ -36,9 +36,9 @@ final class RegisterViewController: UIViewController {
         switch result {
         case ("","",""), (nil, nil, nil):
             notificationLabel.text =  Suit.emty.rawValue
-        case ("", _, ""), (_, "",""),(_,"",""):
+        case ("", _, ""), (_, "",""), (_,"",""):
             notificationLabel.text = Suit.onlyemty.rawValue
-        case (username, password,confirmpw):
+        case (username, password, confirmpw):
             if LoginManager.shared.registerAccount(username: username, password: password, confirmpw: confirmpw){
                 AppDelegate.shared.changeRoot(rootType: .login)
             } else {
@@ -50,7 +50,7 @@ final class RegisterViewController: UIViewController {
     }
     
     // MARK: - @IBActions
-    @IBAction func handleRegisterButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleRegisterButtonTouchUpInside(_ sender: UIButton) {
         handleRegister()
     }
 }

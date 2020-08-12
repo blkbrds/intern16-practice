@@ -14,21 +14,21 @@ struct LoginInformation {
 }
 
 final class LoginManager {
-    
+
     // MARK: - Peroperties
     private var account: [LoginInformation] = [LoginInformation(username: "minh", password: "123")]
     static let shared = LoginManager()
     private(set) var loginInfo: LoginInformation?
-    
+
     // MARK: - Public functions
     func saveData(loginInfo: LoginInformation) {
         self.loginInfo = loginInfo
     }
-    
+
     func deleteData() {
         self.loginInfo = nil
     }
-    
+
     func checkAccount(username: String, password: String) -> Bool {
         for acc in account {
             if acc.username == username && acc.password == password {
@@ -37,7 +37,7 @@ final class LoginManager {
         }
         return false
     }
-    
+
     func registerAccount(username: String, password: String, confirmpw: String) -> Bool {
         let user: [LoginInformation] = [LoginInformation(username: username, password: password)]
         for acc in account {
@@ -52,7 +52,7 @@ final class LoginManager {
         }
         return false
     }
-    
+
     func forgotPassword(username: String, newPass: String, confirmNewPass: String) -> Bool {
         let user: [LoginInformation] = [LoginInformation(username: username, password: newPass)]
         for acc in 0..<account.count {

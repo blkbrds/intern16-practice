@@ -13,11 +13,11 @@ final class ProfileViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Profile"
+        navigationItem.title = "Profile"
     }
-    
+
     // MARK: - @IBAction
-    @IBAction func handleLogoutButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleLogoutButtonTouchUpInside(_ sender: UIButton) {
         AppDelegate.shared.changeRoot(rootType: .login)
     }
 }

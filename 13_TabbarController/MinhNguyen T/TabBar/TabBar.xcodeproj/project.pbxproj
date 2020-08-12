@@ -26,6 +26,9 @@
 		522BA7DA24DE8BDD00739F4F /* FavoritViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA7D824DE8BDD00739F4F /* FavoritViewController.xib */; };
 		522BA7DD24DE8BFD00739F4F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BA7DB24DE8BFD00739F4F /* ProfileViewController.swift */; };
 		522BA7DE24DE8BFD00739F4F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522BA7DC24DE8BFD00739F4F /* ProfileViewController.xib */; };
+		52872EFB24E106A9007DE023 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52872EFA24E106A9007DE023 /* BaseViewController.swift */; };
+		52872F0524E189D8007DE023 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52872F0324E189D8007DE023 /* CameraViewController.swift */; };
+		52872F0624E189D8007DE023 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52872F0424E189D8007DE023 /* CameraViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		522BA7D824DE8BDD00739F4F /* FavoritViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritViewController.xib; sourceTree = "<group>"; };
 		522BA7DB24DE8BFD00739F4F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		522BA7DC24DE8BFD00739F4F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		52872EFA24E106A9007DE023 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		52872F0324E189D8007DE023 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		52872F0424E189D8007DE023 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 				522BA7B724DE822800739F4F /* Assets.xcassets */,
 				522BA7B924DE822800739F4F /* LaunchScreen.storyboard */,
 				522BA7BC24DE822800739F4F /* Info.plist */,
+				52872EFA24E106A9007DE023 /* BaseViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 		522BA7C224DE831F00739F4F /* BaiTap1 */ = {
 			isa = PBXGroup;
 			children = (
+				52872F0224E189B5007DE023 /* Camera */,
 				521F02BA24DFAE3B00D5D34E /* ForgotPassword */,
 				521F026524DEF13200D5D34E /* Register */,
 				522BA7CC24DE8AFB00739F4F /* Model */,
@@ -176,6 +184,15 @@
 				522BA7CD24DE8B1D00739F4F /* Loginmanager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52872F0224E189B5007DE023 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				52872F0324E189D8007DE023 /* CameraViewController.swift */,
+				52872F0424E189D8007DE023 /* CameraViewController.xib */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +262,7 @@
 				522BA7DA24DE8BDD00739F4F /* FavoritViewController.xib in Resources */,
 				522BA7D224DE8BA800739F4F /* HomeViewController.xib in Resources */,
 				521F026924DEF1D000D5D34E /* RegisterViewController.xib in Resources */,
+				52872F0624E189D8007DE023 /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +275,10 @@
 			files = (
 				521F026824DEF1D000D5D34E /* RegisterViewController.swift in Sources */,
 				522BA7D924DE8BDD00739F4F /* FavoritViewController.swift in Sources */,
+				52872EFB24E106A9007DE023 /* BaseViewController.swift in Sources */,
 				522BA7D124DE8BA800739F4F /* HomeViewController.swift in Sources */,
 				522BA7D524DE8BC200739F4F /* MapViewController.swift in Sources */,
+				52872F0524E189D8007DE023 /* CameraViewController.swift in Sources */,
 				522BA7CA24DE85D200739F4F /* LoginViewController.swift in Sources */,
 				522BA7CE24DE8B1D00739F4F /* Loginmanager.swift in Sources */,
 				521F02BD24DFAE7100D5D34E /* ForgotPasswordViewController.swift in Sources */,
