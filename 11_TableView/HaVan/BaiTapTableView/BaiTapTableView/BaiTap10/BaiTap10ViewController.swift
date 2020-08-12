@@ -22,7 +22,6 @@ final class BaiTap10ViewController: UIViewController {
     private let contact = Contact()
     private var sectionIndex: [String] = []
     
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +41,12 @@ final class BaiTap10ViewController: UIViewController {
     private func configData() {
         managementContact.fetchContacts()
         contactList = managementContact.contactsDictionary
-        
     }
     
     private func getKey() {
         keys = []
         keys = Array(contactList.keys)
         newSection = contact.transContacts(with: keys)
-        
     }
     
     private func configSectionIndex() {

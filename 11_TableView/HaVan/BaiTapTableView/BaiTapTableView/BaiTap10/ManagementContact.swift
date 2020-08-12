@@ -10,6 +10,8 @@ import Foundation
 import Contacts
 
 final class ManagementContact {
+    
+    // MARK: - Properties
     var contactsDictionary: [String: String] = [ : ]
     
     func fetchContacts() {
@@ -39,6 +41,8 @@ final class ManagementContact {
 }
 
 final class Contact {
+    
+    // MARK: - Properties
     var sectionCharacter: Set<Character> = Set<Character>()
     var sectionIndex: [Character] = []
     

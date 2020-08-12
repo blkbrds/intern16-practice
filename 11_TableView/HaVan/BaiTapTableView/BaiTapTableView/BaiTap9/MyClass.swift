@@ -9,10 +9,13 @@
 import Foundation
 
 struct MyClass {
+    
+    // MARK: - Propeties
     var avatar: String
     var name: String
     var description: String
     
+    // MARK: - Initialize
     init(avatar: String, name: String, description: String) {
         self.avatar = avatar
         self.name = name
