@@ -11,7 +11,7 @@ import UIKit
 final class BaiTap11ViewController: UIViewController {
 
     // MARK: - @IBOulets
-    @IBOutlet weak var tbView: UITableView!
+    @IBOutlet private weak var tbView: UITableView!
     
     // MARK: - Life cycle
     override func viewDidLoad() {

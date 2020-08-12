@@ -19,25 +19,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dES-G6-1BC">
-                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-VR-HXf">
-                    <rect key="frame" x="0.0" y="35" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="n3D-kd-qyh"/>
-                    </items>
-                </navigationBar>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="8lD-VR-HXf" secondAttribute="top" constant="9" id="7hg-E6-BPA"/>
                 <constraint firstItem="dES-G6-1BC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EyX-Kd-Hwc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dES-G6-1BC" secondAttribute="trailing" id="Gxe-kM-9RM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dES-G6-1BC" secondAttribute="bottom" id="RXb-ZN-nLG"/>
-                <constraint firstItem="dES-G6-1BC" firstAttribute="top" secondItem="8lD-VR-HXf" secondAttribute="bottom" constant="15" id="dps-qp-1EH"/>
-                <constraint firstItem="8lD-VR-HXf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gYL-cR-nTj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8lD-VR-HXf" secondAttribute="trailing" id="pas-vD-CVe"/>
+                <constraint firstItem="dES-G6-1BC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WdD-Le-8AE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>

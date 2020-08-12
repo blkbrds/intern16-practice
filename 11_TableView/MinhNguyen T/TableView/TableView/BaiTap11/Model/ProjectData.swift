@@ -11,7 +11,6 @@ import Foundation
 struct ProjectData {
     
     static var projectData: [String] = []
-    
     static func getData() {
         if let path = Bundle.main.path(forResource: "Project", ofType: "plist"){
             if let myDict = NSArray(contentsOfFile: path){

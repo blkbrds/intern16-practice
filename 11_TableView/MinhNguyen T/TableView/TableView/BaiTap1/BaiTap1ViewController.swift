@@ -19,13 +19,18 @@ final class BaiTap1ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Home"
+        configTable()
+    }
+    
+    // MARK: - Private functions
+    private func configTable() {
         myTableView.dataSource = self
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 }
 
 extension BaiTap1ViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listName.count
     }

@@ -8,31 +8,39 @@
 
 import UIKit
 import Contacts
-class BaiTap10ViewController: UIViewController {
-    
+
+final class BaiTap10ViewController: UIViewController {
+
+    // MARK: @IBOutlets
     @IBOutlet private weak var tabelView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    var contactStore = CNContactStore()
-    var myContact: [Contact] = []
-    var contact: [Contact] = []
+    @IBOutlet private weak var searchBar: UISearchBar!
+
+    // MARK: - Private functions
+    private var contactStore = CNContactStore()
+    private var myContact: [Contact] = []
+    private var contact: [Contact] = []
     private var searh = false
+
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Contact"
+        cofigTable()
+        navigationItem.title = "Contact"
+    }
+
+    // MARK: - Privte functions
+    private func cofigTable() {
         tabelView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         contactStore.requestAccess(for: .contacts) { (success, error) in
-            if success {
-                //print("success")
-            }
+            if success {}
         }
         fetchContact()
         tabelView.dataSource = self
         tabelView.delegate = self
         searchBar.delegate = self
     }
-    
-    func fetchContact() {
+
+    private func fetchContact() {
         let key = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
         let request = CNContactFetchRequest(keysToFetch: key)
         try! contactStore.enumerateContacts(with: request) { (contact, stop) in
@@ -79,5 +87,9 @@ extension BaiTap10ViewController: UISearchBarDelegate {
             searh = true
         }
         tabelView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

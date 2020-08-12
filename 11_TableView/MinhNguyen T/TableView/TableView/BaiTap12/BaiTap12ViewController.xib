@@ -10,7 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiTap12ViewController" customModule="TableView" customModuleProvider="target">
             <connections>
                 <outlet property="myTableView" destination="BDv-gZ-QH6" id="SpX-fL-oAf"/>
-                <outlet property="selectAllButton" destination="QbZ-1o-CRy" id="zs9-To-0CA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,36 +19,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-gZ-QH6">
-                    <rect key="frame" x="0.0" y="44" width="414" height="822"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="She-rF-Bt6">
-                    <rect key="frame" x="0.0" y="816" width="414" height="50"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbZ-1o-CRy">
-                            <rect key="frame" x="14" y="10" width="65" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Select All"/>
-                            <connections>
-                                <action selector="selectAllButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="kG1-NF-jGp"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="fGq-6E-cKa"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="BDv-gZ-QH6" firstAttribute="bottom" secondItem="She-rF-Bt6" secondAttribute="bottom" id="21U-m5-2NN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BDv-gZ-QH6" secondAttribute="trailing" id="Dan-ZY-1uA"/>
-                <constraint firstAttribute="bottom" secondItem="She-rF-Bt6" secondAttribute="bottom" constant="30" id="Fqh-rn-Xr3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="She-rF-Bt6" secondAttribute="trailing" id="NdH-xt-7qd"/>
-                <constraint firstItem="She-rF-Bt6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hNW-ut-l34"/>
-                <constraint firstItem="BDv-gZ-QH6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="inR-NG-cEg"/>
-                <constraint firstItem="BDv-gZ-QH6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="n5O-PP-Cxl"/>
+                <constraint firstItem="BDv-gZ-QH6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8oR-ZX-Yzh"/>
+                <constraint firstItem="BDv-gZ-QH6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NkZ-AA-8fF"/>
+                <constraint firstItem="BDv-gZ-QH6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Zsc-BH-dc2"/>
+                <constraint firstAttribute="bottom" secondItem="BDv-gZ-QH6" secondAttribute="bottom" id="uGh-wc-zQi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="554" y="-136"/>

@@ -20,23 +20,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LtR-vq-bRr">
-                    <rect key="frame" x="0.0" y="162" width="414" height="700"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="700" id="nlc-bA-Xlq"/>
-                    </constraints>
                 </tableView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-0n-exs">
-                    <rect key="frame" x="0.0" y="86" width="414" height="56"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="LtR-vq-bRr" firstAttribute="top" secondItem="xHv-0n-exs" secondAttribute="bottom" constant="20" id="7JQ-DS-BTB"/>
+                <constraint firstItem="LtR-vq-bRr" firstAttribute="top" secondItem="xHv-0n-exs" secondAttribute="bottom" id="7JQ-DS-BTB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LtR-vq-bRr" secondAttribute="bottom" id="7zJ-bj-Psr"/>
                 <constraint firstItem="xHv-0n-exs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WKh-5X-9ic"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LtR-vq-bRr" secondAttribute="trailing" id="XjZ-4i-vwA"/>
+                <constraint firstItem="xHv-0n-exs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bDz-oj-Aet"/>
                 <constraint firstItem="xHv-0n-exs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="deO-xn-ueO"/>
                 <constraint firstItem="LtR-vq-bRr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rv9-KW-GNL"/>
             </constraints>

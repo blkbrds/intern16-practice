@@ -13,7 +13,7 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
     // MARK: - IBOulets
     @IBOutlet private weak var myTableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
-    
+
     // MARK: - Peropeties
     private var listPeople: [String] = []
     private var newData: [String] = []
@@ -22,7 +22,12 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        navigationItem.title = "Home"
+        configTable()
+    }
+
+    // MARK: - Private functions
+    private func configTable() {
         myTableView.dataSource = self
         myTableView.delegate = self
         searchBar.delegate = self
@@ -30,7 +35,6 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
         getData()
     }
 
-    // MARK: - Private functions
     private func getData() {
         if let path = Bundle.main.path(forResource: "Data", ofType: "plist"){
             if let myDict = NSArray(contentsOfFile: path){
@@ -41,7 +45,6 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
 }
 
 extension BaiTap2ViewController: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searh {
             return newData.count
@@ -53,17 +56,22 @@ extension BaiTap2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if searh {
-                cell.textLabel?.text = newData[indexPath.row]
+            cell.textLabel?.text = newData[indexPath.row]
         } else {
-                cell.textLabel?.text = listPeople[indexPath.row]
+            cell.textLabel?.text = listPeople[indexPath.row]
         }
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        vc.name = listPeople[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        if searh {
+            vc.name = newData[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            vc.name = listPeople[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -76,5 +84,9 @@ extension BaiTap2ViewController: UISearchBarDelegate {
             searh = true
         }
         myTableView.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
