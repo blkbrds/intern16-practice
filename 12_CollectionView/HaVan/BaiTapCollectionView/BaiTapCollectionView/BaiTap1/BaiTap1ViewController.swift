@@ -33,7 +33,8 @@ final class BaiTap1ViewController: UIViewController {
     private func configCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reusableCell")
+        let nib = UINib(nibName: "SquareNumberCell", bundle: Bundle.main)
+        collectionView.register(nib, forCellWithReuseIdentifier: "SquareNumberCell")
     }
 }
 
@@ -45,12 +46,9 @@ extension BaiTap1ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reusableCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareNumberCell", for: indexPath) as! SquareNumberCell
         cell.backgroundColor = .blue
-        let label = UILabel(frame: CGRect(x: cell.bounds.width - cell.bounds.width / 2 - 10, y: cell.bounds.height - cell.bounds.height / 2 - 10, width: cell.bounds.width / 2, height: cell.bounds.height / 2))
-        label.text = String(listNumber[indexPath.item])
-        label.textColor = .white
-        cell.addSubview(label)
+        cell.getNumber(with: String(listNumber[indexPath.item]))
         return cell
     }
 }
@@ -71,7 +69,7 @@ extension BaiTap1ViewController: UICollectionViewDelegateFlowLayout {
         return 8
     }
     
-    private func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, maximumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 3
     }
 }

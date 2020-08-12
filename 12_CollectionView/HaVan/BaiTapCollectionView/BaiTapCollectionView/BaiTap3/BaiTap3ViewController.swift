@@ -67,7 +67,6 @@ extension BaiTap3ViewController: UICollectionViewDataSource {
         header.updateFood(with: image, name: name)
         return header
     }
-    
 }
 
 // MARK: - UICollectionViewFlowLayout
