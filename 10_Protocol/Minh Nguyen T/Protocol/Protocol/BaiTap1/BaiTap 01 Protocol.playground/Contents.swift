@@ -1,5 +1,3 @@
-import UIKit
-
 protocol DongVat {}
 
 protocol Thu: DongVat {
@@ -17,7 +15,7 @@ protocol Ca: DongVat {
     func ten() -> String
 }
 
-class CaChuon: Ca , Chim {
+final class CaChuon: Ca , Chim {
     var isBay: Bool { return true }
     var isBoi: Bool { return true }
     
@@ -26,7 +24,7 @@ class CaChuon: Ca , Chim {
     }
 }
 
-class Bo: Thu {
+final class Bo: Thu {
     var isDi: Bool { return true }
     
     func ten() -> String {
@@ -34,7 +32,7 @@ class Bo: Thu {
     }
 }
 
-class Ga: Chim {
+final class Ga: Chim {
     var isBay: Bool { return false }
     
     func ten() -> String {
@@ -43,7 +41,7 @@ class Ga: Chim {
     
 }
 
-class Vit: Chim, Ca, Thu {
+final class Vit: Chim, Ca, Thu {
     var isBoi: Bool { return true }
     var isDi: Bool { return true }
     var isBay: Bool { return true }
@@ -53,7 +51,7 @@ class Vit: Chim, Ca, Thu {
     }
 }
 
-class CaMap: Ca {
+final class CaMap: Ca {
     var isBoi: Bool { return true }
     
     func ten() -> String {
@@ -61,7 +59,7 @@ class CaMap: Ca {
     }
 }
 
-class Heo: Thu {
+final class Heo: Thu {
     var isDi: Bool { return true }
     
     func ten() -> String {
@@ -69,7 +67,7 @@ class Heo: Thu {
     }
 }
 
-class HaiCau: Thu, Ca {
+final class HaiCau: Thu, Ca {
     var isBoi: Bool { return true }
     var isDi: Bool { return false }
     
@@ -78,7 +76,7 @@ class HaiCau: Thu, Ca {
     }
 }
 
-class Doi: Thu, Chim {
+final class Doi: Thu, Chim {
     var isBay: Bool { return true }
     var isDi: Bool { return true }
     
@@ -87,12 +85,9 @@ class Doi: Thu, Chim {
     }
 }
 
-class CaSau: Thu, Ca {
+final class CaSau: Thu, Ca {
     var isBoi: Bool { return true }
-    
-    var isDi: Bool {
-        return true
-    }
+    var isDi: Bool { return true }
     
     func ten() -> String {
         return "Ca Sau"
