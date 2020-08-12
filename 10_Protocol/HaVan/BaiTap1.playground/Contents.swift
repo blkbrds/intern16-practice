@@ -1,8 +1,8 @@
-import UIKit
 
 protocol DongVat {
     func ten() -> String
 }
+
 protocol Thu: DongVat {
     var isDi: Bool {get set}
 }
@@ -15,81 +15,86 @@ protocol Ca: DongVat {
     var isBoi: Bool {get set}
 }
 
-class Bo: Thu {
+final class Bo: Thu {
+    var isDi: Bool = true
+    
     func ten() -> String {
         return "Bo"
     }
-    var isDi: Bool = true
 }
 
-class Heo: Thu {
+final class Heo: Thu {
+    var isDi: Bool = true
+    
     func ten() -> String {
         return "Heo"
     }
-    var isDi: Bool = true
 }
 
-class HaiCau: Thu, Ca {
+final class HaiCau: Thu, Ca {
+    var isDi: Bool = true
+    var isBoi: Bool = true
+    
     func ten() -> String {
         return "Hai Cau"
     }
-    var isDi: Bool = true
-    var isBoi: Bool = true
-    
 }
 
-class Doi: Thu, Chim {
+final class Doi: Thu, Chim {
+    var isDi: Bool = true
+    var isBay: Bool = true
+    
     func ten() -> String {
         return "Dơi"
     }
-    var isDi: Bool = true
-    var isBay: Bool = true
 }
 
-class CaSau: Thu, Chim {
+final class CaSau: Thu, Chim {
+    var isDi: Bool = true
+    var isBay: Bool = true
+    
     func ten() -> String {
         return "Cá Sấu"
     }
-    var isDi: Bool = true
-    var isBay: Bool = true
 }
 
-class Ga: Chim {
+final class Ga: Chim {
+    var isBay: Bool = true
+    
     func ten() -> String {
         return "Gà"
     }
-    
-    var isBay: Bool = true
 }
 
-class Vit: Chim, Ca {
+final class Vit: Chim, Ca {
+    var isBay: Bool = true
+    var isBoi: Bool = true
+    
     func ten() -> String {
         return "Vit"
     }
-    
-    var isBay: Bool = true
-    var isBoi: Bool = true
 }
 
-class CaChuon: Ca, Chim {
+final class CaChuon: Ca, Chim {
+    var isBoi: Bool = true
+    var isBay: Bool = true
+    
     func ten() -> String {
         return "Ca chuon"
     }
-    
-    var isBoi: Bool = true
-    var isBay: Bool = true
-    
 }
 
-class CaMap: Ca {
+final class CaMap: Ca {
+    var isBoi: Bool = true
+    
     func ten() -> String {
         return "Ca Map"
     }
-    var isBoi: Bool = true
 }
 
-class DanhSachDongVat {
-    var danhSachDongVat : [DongVat] = [DongVat]()
+final class DanhSachDongVat {
+    var danhSachDongVat : [DongVat] = []
+    
     func capNhatDanhSach() {
         let caChuon = CaChuon()
         let bo = Bo()
@@ -120,14 +125,14 @@ var motTrongBa: [DongVat] = []
 // Viết function
 func bietBay()  {
     for i in 0...array.count - 1 where array[i] is Chim {
-            bay.append(array[i])
+        bay.append(array[i])
     }
 }
 
 func bietBoi() {
     for i in 0...array.count - 1 where array[i] is Ca {
         boi.append(array[i])
-        }
+    }
 }
 
 func bietDi() {
@@ -169,7 +174,7 @@ func bietCaBa() {
 }
 
 func bietMotTrongBa() -> [DongVat] {
-    var tempArray = [DongVat]()
+    var tempArray : [DongVat] = []
     for i in 0...array.count - 1 {
         if (array[i] is Ca && !(array[i] is Chim) && !(array[i] is Thu)) || (array[i] is Chim && !(array[i] is Ca) && !(array[i] is Thu))
             || array[i] is Thu && !(array[i] is Ca) && !(array[i] is Chim) {
@@ -177,8 +182,8 @@ func bietMotTrongBa() -> [DongVat] {
         }
     }
     return tempArray
-    
 }
+
 bietBoiVaDi()
 bietDiVaBay()
 bietBayVaBoi()
@@ -188,5 +193,3 @@ var result = bietMotTrongBa()
 for i in result {
     print(i.ten())
 }
-
-
