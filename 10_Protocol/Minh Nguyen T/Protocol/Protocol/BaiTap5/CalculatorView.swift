@@ -47,9 +47,9 @@ final class CalculatorView: UIView {
         guard let resultFinal = result else { return }
         resultValueLabel.text = String(resultFinal)
         delegate?.sendResult(self, needsPerform: .getResult(resultValue: String(resultFinal)))
-        UIView.animate(withDuration: 0.1) {
-            self.alpha = 0
-        }
+        UIView.animate(withDuration: 1.0, animations: {
+            self.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 400)
+        })
     }
 
     @IBAction private func handleCalculatorButton(_ sender: UIButton) {

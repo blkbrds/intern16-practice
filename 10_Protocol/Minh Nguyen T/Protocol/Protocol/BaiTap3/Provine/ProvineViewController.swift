@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - ProvineViewControllerDelegate
 protocol ProvineViewControllerDelegate: class {
-    func getDataProvine(_ controller: ProvineViewController, needsPreform action: ProvineViewController.Action )
+    func getDataProvine(_ controller: ProvineViewController, needsPreform action: ProvineViewController.Action)
 }
 
 final class ProvineViewController: UIViewController {

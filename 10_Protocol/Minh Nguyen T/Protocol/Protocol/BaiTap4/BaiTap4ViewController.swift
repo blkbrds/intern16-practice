@@ -101,10 +101,9 @@ final class BaiTap4ViewController: UIViewController {
         searchBar.text = ""
         getData(data: dataList)
     }
-    
 }
 
-extension BaiTap4ViewController : UISearchBarDelegate, UITextFieldDelegate {
+extension BaiTap4ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let newList: [String] = dataList.filter{$0.contains(searchText)}
         if newList.count == 0 {

@@ -20,11 +20,19 @@ final class BaiTap5ViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configCalculator()
-        hideCalculator()
+        configView()
     }
     
-    func configCalculator() {
+    // MARK: - Private functions
+    private func configView() {
+        configCalculator()
+        hideCalculator()
+        calculatorAction.isHidden = true
+        xValueTextField.delegate = self
+        yValueTextField.delegate = self
+    }
+    
+    private func configCalculator() {
         guard let calculator = Bundle.main.loadNibNamed("CalculatorView", owner: self, options: nil)?.first  else { return }
         calculatorAction = calculator as! CalculatorView
         calculatorAction.frame = CGRect(x: 0, y: 400, width: UIScreen.main.bounds.width, height: 400)
@@ -33,13 +41,15 @@ final class BaiTap5ViewController: UIViewController {
         view.addSubview(calculatorAction)
     }
     
-    func hideCalculator() {
+    private func hideCalculator() {
         UIView.animate(withDuration: 1.0, animations: {
             self.calculatorAction.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 400)
         })
     }
+    
     // MARK: - IBActions
     @IBAction private func handleDisplayCalculatorTouchUpInside(_ sender: UIButton) {
+        calculatorAction.isHidden = false
         UIView.animate(withDuration: 1.0, animations: {
             self.calculatorAction.configValueView()
             self.calculatorAction.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 400, width: UIScreen.main.bounds.width, height: 400)
@@ -59,13 +69,18 @@ extension BaiTap5ViewController: CalculatorViewDataSourcs {
     }
 }
 
-extension BaiTap5ViewController : CalculatorViewDelegate {
+extension BaiTap5ViewController: CalculatorViewDelegate {
     func sendResult(_ controller: CalculatorView, needsPerform action: CalculatorView.Action) {
         switch action {
         case .getResult(resultValue: let resultValue):
             resultValueLabel.text = resultValue
         }
     }
-    
-    
+}
+
+extension BaiTap5ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
