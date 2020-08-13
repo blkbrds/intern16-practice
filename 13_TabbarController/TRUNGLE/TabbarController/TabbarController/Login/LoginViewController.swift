@@ -8,23 +8,22 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: MainTabbarController {
+    //MARK: - IBoutlet
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    
+    //MARK: - Properties
+    private let userName = "trung"
+    private let passWord = "123"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction private func loginPressed(_ sender: UIButton) {
+        guard let checkUserName = userNameTextField.text, userName == checkUserName,
+            let checkPassWord = passwordTextField.text, passWord == checkPassWord else { return }
+        UserDefaults.standard.set(userName, forKey: "userName")
+        SceneDelegate.shared.configRootView(with: .login)
     }
-    */
-
 }

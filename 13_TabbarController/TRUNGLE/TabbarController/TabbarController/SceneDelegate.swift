@@ -9,21 +9,57 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    enum AppStatus {
+        case login
+        case logOut
+    }
+    
+    func configRootView(with status: AppStatus) {
+        switch status {
+        case .login:
+            login()
+        case .logOut:
+            logOut()
+        }
+    }
+    
+    func login() {
+        let tabbarController = MainTabbarController()
+        window?.rootViewController = tabbarController
+    }
+    
+    func logOut() {
+        let loginVC = LoginViewController()
+        let navi = UINavigationController(rootViewController: loginVC)
+        window?.rootViewController = navi
+    }
+    static var shared: SceneDelegate {
+        guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else  {
+            fatalError("Loi SceneDelegate")
+        }
+          print("Dang o sceneDelegate: \(sceneDelegate)")
+        return sceneDelegate
+    }
+    
+    private override init() {
+        super.init()
+    }
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        let vc = MainTabbarController()
-        let navi = UINavigationController(rootViewController: vc)
-        window.rootViewController = navi
-        self.window = window
-        window.makeKeyAndVisible()
+        window = UIWindow(windowScene: windowScene)
+        if UserDefaults.standard.value(forKey: "userName") != nil {
+            configRootView(with: .login)
+        } else {
+            configRootView(with: .logOut)
+        }
+        window?.makeKeyAndVisible()
+//        let vc = MainTabbarController()
+//        let navi = UINavigationController(rootViewController: vc)
+//        window.rootViewController = navi
+//        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

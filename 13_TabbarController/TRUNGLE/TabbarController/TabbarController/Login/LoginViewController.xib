@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="TabbarController" customModuleProvider="target">
             <connections>
+                <outlet property="passwordTextField" destination="Vlw-gk-ouy" id="2vi-U2-ZPw"/>
+                <outlet property="userNameTextField" destination="sJe-go-hcH" id="mrz-at-lTq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +32,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-Bh-l3V">
                     <rect key="frame" x="160" y="352" width="95" height="30"/>
                     <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="v6R-Z3-E6r"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -18,6 +18,8 @@ class ProfileViewController: UIViewController {
 
 
     @IBAction func logoutPressed(_ sender: Any) {
+        UserDefaults.standard.set(nil,forKey: "userName")
+        SceneDelegate.shared.configRootView(with: .logOut)
     }
     
 }
