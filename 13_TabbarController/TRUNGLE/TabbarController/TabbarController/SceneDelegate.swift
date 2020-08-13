@@ -56,10 +56,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             configRootView(with: .logOut)
         }
         window?.makeKeyAndVisible()
-//        let vc = MainTabbarController()
-//        let navi = UINavigationController(rootViewController: vc)
-//        window.rootViewController = navi
-//        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
