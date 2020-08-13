@@ -116,4 +116,8 @@ extension BaiTap4ViewController: UISearchBarDelegate {
             getData(data: newList)
         }
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
