@@ -82,9 +82,9 @@ final class CalculatorView: UIView {
         xValueLabel.text = ""
         yValueLabel.text = ""
         resultValueLabel.text = ""
-        UIView.animate(withDuration: 0.1) {
-            self.alpha = 0
-        }
+        UIView.animate(withDuration: 1.0, animations: {
+            self.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 400)
+        })
     }
 }
 

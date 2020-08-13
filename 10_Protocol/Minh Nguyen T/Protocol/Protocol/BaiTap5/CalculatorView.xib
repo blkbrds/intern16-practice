@@ -200,7 +200,7 @@
                 <outlet property="xValueLabel" destination="nff-lg-XYd" id="5cf-Xb-NQ0"/>
                 <outlet property="yValueLabel" destination="BXg-aC-Tse" id="pA2-XC-Gbv"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="-43.526785714285715"/>
+            <point key="canvasLocation" x="74" y="-17"/>
         </view>
     </objects>
 </document>
