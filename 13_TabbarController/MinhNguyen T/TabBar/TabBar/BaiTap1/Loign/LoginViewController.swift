@@ -24,6 +24,8 @@ final class LoginViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     // MARK: - Private functions
@@ -55,5 +57,12 @@ final class LoginViewController: UIViewController {
 
     @IBAction private func handleForgotButtonTouchUpInside(_ sender: UIButton) {
         navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
