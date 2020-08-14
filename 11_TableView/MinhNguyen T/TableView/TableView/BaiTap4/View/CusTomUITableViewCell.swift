@@ -12,26 +12,24 @@ protocol CusTomUITableViewCellDelegate: class {
     func getNameObject(_ controller: CusTomUITableViewCell, needsPerform action: CusTomUITableViewCell.Action)
 }
 
-class CusTomUITableViewCell: UITableViewCell {
+final class CusTomUITableViewCell: UITableViewCell {
 
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var imageCell: UIImageView!
-    var nameItem: String = ""
+    // MARK: - @IBOutlets
+    @IBOutlet private weak var subtitleLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var imageCell: UIImageView!
+
+    // MARK: - Properties
+    private var nameItem: String = ""
     private var indexrow : Int = 0
     weak var delegate: CusTomUITableViewCellDelegate?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
+    // MARK: - Initialize
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
+
+    // MARK: - Public functions
     func configCell(image: UIImage?, namelb: String, titlelb: String, index: Int) {
         imageCell.image = image
         nameLabel.text = namelb
@@ -39,11 +37,13 @@ class CusTomUITableViewCell: UITableViewCell {
         indexrow = index
         nameItem = namelb
     }
-    
-    @IBAction func tapMeButtonTouchUpInside(_ sender: UIButton) {
+
+    // MARK: - @IBActions
+    @IBAction private func tapMeButtonTouchUpInside(_ sender: UIButton) {
         delegate?.getNameObject(self, needsPerform: .getNameObject(nameObject: nameItem, index: indexrow))
     }
 }
+
 extension CusTomUITableViewCell {
     enum Action {
         case getNameObject(nameObject: String, index: Int)

@@ -35,17 +35,17 @@ final class BaiTap4ViewController: UIViewController {
         myTable.dataSource = self
         myTable.delegate = self
     }
-    
+
     private func getData() {
         if let path = Bundle.main.path(forResource: "ListData", ofType: "plist") {
-            if let arr = NSArray(contentsOfFile: path) {
+            if let arr = NSArray(contentsOfFile: path) as? [String] {
                 for i in 0...arr.count - 1 {
                     if i < 2 {
-                        arrFood.append(arr[i] as! String)
+                        arrFood.append(arr[i])
                     } else if i >= 2 && i <= 8 {
-                        arrAnimal.append(arr[i] as! String)
+                        arrAnimal.append(arr[i])
                     } else {
-                        arrHome.append(arr[i] as! String)
+                        arrHome.append(arr[i])
                     }
                 }
                 arrData = [arrFood,arrAnimal,arrHome]
@@ -64,7 +64,7 @@ extension BaiTap4ViewController: UITableViewDataSource , UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CusTomUITableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CusTomUITableViewCell else {return UITableViewCell() }
         cell.configCell(image: UIImage(named: "ga"), namelb: arrData[indexPath.section][indexPath.row], titlelb: "sub title", index: indexPath.row)
         cell.selectionStyle = .none
         cell.delegate = self

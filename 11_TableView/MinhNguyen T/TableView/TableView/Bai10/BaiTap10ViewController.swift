@@ -56,11 +56,7 @@ final class BaiTap10ViewController: UIViewController {
 
 extension BaiTap10ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searh {
-            return contact.count
-        } else {
-            return myContact.count
-        }
+        return searh == true ? contact.count: myContact.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,15 +76,11 @@ extension BaiTap10ViewController : UITableViewDelegate, UITableViewDataSource {
 
 extension BaiTap10ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        contact = myContact.filter{$0.familyName.contains(searchText) || $0.lastName.contains(searchText)}
-        if searchText.isEmpty {
-            searh = false
-        } else {
-            searh = true
-        }
+        contact = myContact.filter{$0.familyName.contains(searchText) || $0.lastName.contains(searchText) }
+        searh = searchText.isEmpty ? false : true
         tabelView.reloadData()
     }
-    
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }

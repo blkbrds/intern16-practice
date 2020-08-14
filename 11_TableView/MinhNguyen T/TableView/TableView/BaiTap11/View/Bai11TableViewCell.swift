@@ -11,13 +11,9 @@ import UIKit
 final class Bai11TableViewCell: UITableViewCell {
 
     // MARK: - @IBOulets
-    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet private weak var commentLabel: UILabel!
     
     // MARK: - Override functions
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

@@ -13,8 +13,8 @@ struct ProjectData {
     static var projectData: [String] = []
     static func getData() {
         if let path = Bundle.main.path(forResource: "Project", ofType: "plist"){
-            if let myDict = NSArray(contentsOfFile: path){
-                projectData = myDict as! [String]
+            if let myDict = NSArray(contentsOfFile: path) as? [String] {
+                projectData = myDict
             }
         }
     }

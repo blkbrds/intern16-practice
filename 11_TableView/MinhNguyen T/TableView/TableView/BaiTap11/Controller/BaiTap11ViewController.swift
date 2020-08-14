@@ -38,7 +38,7 @@ extension BaiTap11ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Bai11TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Bai11TableViewCell else { return UITableViewCell() }
         cell.getComment(comment: ProjectData.projectData[indexPath.row])
         return cell
     }

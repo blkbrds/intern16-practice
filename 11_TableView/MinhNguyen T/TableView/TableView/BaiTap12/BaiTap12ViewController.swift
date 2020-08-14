@@ -50,7 +50,6 @@ final class BaiTap12ViewController: UIViewController {
     }
 
     @objc private func deleteCellSelected() {
-        selectArr.sort()
         if selectArr.count != 0 {
             for index in selectArr.reversed() {
                 data.remove(at: index)

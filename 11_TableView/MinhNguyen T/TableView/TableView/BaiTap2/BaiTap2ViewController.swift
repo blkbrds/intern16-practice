@@ -46,11 +46,7 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
 
 extension BaiTap2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searh {
-            return newData.count
-        } else {
-            return listPeople.count
-        }
+        return searh == true ? newData.count : listPeople.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,11 +74,7 @@ extension BaiTap2ViewController: UITableViewDataSource {
 extension BaiTap2ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         newData = listPeople.filter{$0.contains(searchText)}
-        if searchText.isEmpty {
-            searh = false
-        } else {
-            searh = true
-        }
+        searh = searchText.isEmpty ? false : true
         myTableView.reloadData()
     }
 
