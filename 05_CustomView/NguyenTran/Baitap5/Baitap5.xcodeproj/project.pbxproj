@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		220F42A924B61F3C0059635A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F42A824B61F3C0059635A /* AppDelegate.swift */; };
 		220F42AB24B61F3C0059635A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F42AA24B61F3C0059635A /* SceneDelegate.swift */; };
-		220F42AD24B61F3C0059635A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F42AC24B61F3C0059635A /* ViewController.swift */; };
 		220F42B224B61F3D0059635A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220F42B124B61F3D0059635A /* Assets.xcassets */; };
 		220F42B524B61F3D0059635A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220F42B324B61F3D0059635A /* LaunchScreen.storyboard */; };
 		220F42BE24B61F720059635A /* Baitap1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F42BC24B61F720059635A /* Baitap1ViewController.swift */; };
@@ -35,7 +34,6 @@
 		220F42A524B61F3C0059635A /* Baitap5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitap5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220F42A824B61F3C0059635A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220F42AA24B61F3C0059635A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		220F42AC24B61F3C0059635A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		220F42B124B61F3D0059635A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220F42B424B61F3D0059635A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		220F42B624B61F3D0059635A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				220F42C224B623040059635A /* Supporting file */,
 				220F42A824B61F3C0059635A /* AppDelegate.swift */,
 				220F42AA24B61F3C0059635A /* SceneDelegate.swift */,
-				220F42AC24B61F3C0059635A /* ViewController.swift */,
 				220F42B124B61F3D0059635A /* Assets.xcassets */,
 				220F42B324B61F3D0059635A /* LaunchScreen.storyboard */,
 				220F42B624B61F3D0059635A /* Info.plist */,
@@ -239,7 +236,6 @@
 				223050C524E3B84600E2B0B0 /* Baitap3ViewController.swift in Sources */,
 				223050BE24E2F61D00E2B0B0 /* CustomBadgeButton.swift in Sources */,
 				22E1724B24C35AF10048750A /* CustomSiderView.swift in Sources */,
-				220F42AD24B61F3C0059635A /* ViewController.swift in Sources */,
 				220F42A924B61F3C0059635A /* AppDelegate.swift in Sources */,
 				220F42C124B622000059635A /* UserView.swift in Sources */,
 				220F42AB24B61F3C0059635A /* SceneDelegate.swift in Sources */,
