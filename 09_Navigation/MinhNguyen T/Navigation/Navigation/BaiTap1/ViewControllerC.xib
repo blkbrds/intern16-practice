@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerC" customModule="Navigation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGd-On-rGl">
+                    <rect key="frame" x="157" y="423" width="100" height="50"/>
+                    <color key="backgroundColor" red="0.19647859079999999" green="0.60689171720000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Pre">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="popViewTouchUpInSide:" destination="-1" eventType="touchUpInside" id="Ee6-XA-XYY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-UR-2SJ">
+                    <rect key="frame" x="157" y="512.5" width="100" height="50"/>
+                    <color key="backgroundColor" red="0.19647859079999999" green="0.60689171720000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Root">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="rootViewTouchUpInSide:" destination="-1" eventType="touchUpInside" id="1Ud-5Q-Vea"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-BA-FF5">
+                    <rect key="frame" x="157" y="333.5" width="100" height="50"/>
+                    <color key="backgroundColor" red="0.19647859079999999" green="0.60689171720000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3pQ-x4-KQX"/>
+                        <constraint firstAttribute="width" constant="100" id="kT9-Zd-Umu"/>
+                    </constraints>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="pushViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="fXd-LT-liD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="EMw-UR-2SJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1c0-Gy-jJ5"/>
+                <constraint firstItem="qGd-On-rGl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Chj-Yl-eft"/>
+                <constraint firstItem="qGd-On-rGl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FxG-bT-FD6"/>
+                <constraint firstItem="EMw-UR-2SJ" firstAttribute="height" secondItem="l2g-BA-FF5" secondAttribute="height" id="YJ9-UR-Ib8"/>
+                <constraint firstItem="EMw-UR-2SJ" firstAttribute="width" secondItem="l2g-BA-FF5" secondAttribute="width" id="Zvz-k7-MXC"/>
+                <constraint firstItem="l2g-BA-FF5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="4/5" id="jNY-6F-hAa"/>
+                <constraint firstItem="qGd-On-rGl" firstAttribute="width" secondItem="l2g-BA-FF5" secondAttribute="width" id="l02-DG-0Yz"/>
+                <constraint firstItem="l2g-BA-FF5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uzl-9c-WDp"/>
+                <constraint firstItem="qGd-On-rGl" firstAttribute="height" secondItem="l2g-BA-FF5" secondAttribute="height" id="w0I-FK-J2P"/>
+                <constraint firstItem="EMw-UR-2SJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="6/5" id="wgI-Qg-7na"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </view>
+    </objects>
+</document>
