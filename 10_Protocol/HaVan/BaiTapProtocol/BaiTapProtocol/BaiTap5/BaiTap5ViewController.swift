@@ -18,6 +18,7 @@ final class BaiTap5ViewController: UIViewController {
     
     // MARK: - Propeties
     private var newCalculator = CalculatorCustomView()
+    private var state = CalculatorState()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,6 +26,12 @@ final class BaiTap5ViewController: UIViewController {
         configCalculatorCustomView()
         configTextFieldAndLabel()
         configQuestionMarkButton()
+    }
+    
+    // MARK: - Override functions
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        firstNumberTextField.resignFirstResponder()
+        secondNumberTextField.resignFirstResponder()
     }
     
     // MARK: - Private functions
@@ -51,14 +58,27 @@ final class BaiTap5ViewController: UIViewController {
     private func hideCalculatorView() {
         UIView.animate(withDuration: 1.0, animations: {
             self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 350)
-        })
+        }) { _ in
+            self.firstNumberTextField.isEnabled = true
+            self.secondNumberTextField.isEnabled = true
+        }
     }
     
     // MARK: - IBActions
     @IBAction private func questionMarkButtonTouchUpInside(_ sender: UIButton) {
+        firstNumberTextField.resignFirstResponder()
+        secondNumberTextField.resignFirstResponder()
+        if let x = firstNumberTextField.text, let y = secondNumberTextField.text, let xResult = Float(x), let yResult = Float(y) {
+            state.setFirstNumber(number: xResult)
+            state.setSecondNumber(number: yResult)
+        }
         UIView.animate(withDuration: 1.0, animations: {
             self.newCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 350, width: UIScreen.main.bounds.width, height: 350)
-        })
+        }) { _ in
+            self.firstNumberTextField.isEnabled = false
+            self.secondNumberTextField.isEnabled = false
+            self.newCalculator.configValue()
+        }
     }
 }
 
@@ -79,13 +99,19 @@ extension BaiTap5ViewController: CalculatorCustomViewDelegate {
     func view(_ view: CalculatorCustomView, needsPerform action: CalculatorCustomView.Action) {
         switch action {
         case .deleteXY:
+            state.setFirstNumber(number: nil)
+            state.setSecondNumber(number: nil)
             firstNumberTextField.text?.removeAll()
             secondNumberTextField.text?.removeAll()
         case .hiddingView:
             hideCalculatorView()
         case .returnResult(result: let result):
             finalResultLabel.isHidden = false
-            finalResultLabel.text = String(format: "%.2f", result)
+            if let finalResult = result {
+                finalResultLabel.text = String(finalResult)
+            } else {
+                finalResultLabel.text = "Not found"
+            }
         }
     }
 }

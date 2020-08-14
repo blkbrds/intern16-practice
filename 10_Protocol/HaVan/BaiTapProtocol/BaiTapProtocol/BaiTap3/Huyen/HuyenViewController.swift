@@ -12,7 +12,7 @@ protocol HuyenViewControllerDelegate: class {
     func controller(_ controller: HuyenViewController, needsPerform action: HuyenViewController.Action)
 }
 
-final class HuyenViewController: UIViewController {
+final class HuyenViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var huyen1Button: UIButton!
@@ -34,7 +34,33 @@ final class HuyenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
-        configButton()
+        configButtons()
+    }
+    
+    // MARK: - Override functions
+    override func configButtons() {
+        configButton(button: huyen1Button)
+        configButton(button: huyen2Button)
+        configButton(button: huyen3Button)
+        configButton(button: huyen4Button)
+        configButton(button: huyen5Button)
+        configButton(button: huyen6Button)
+        configButton(button: huyen7Button)
+        configButton(button: huyen8Button)
+        configButton(button: huyen9Button)
+        configButton(button: huyen10Button)
+    }
+    
+    override func configButton(button: UIButton) {
+        super.configButton(button: button)
+        button.layer.borderColor = .init(srgbRed: 0.9, green: 0.1, blue: 0, alpha: 1)
+    }
+    
+    override func changeButtonState(button: UIButton) {
+        super.changeButtonState(button: button)
+        button.backgroundColor = .init(red: 0.9, green: 0.1, blue: 0, alpha: 1)
+        guard let title = button.currentTitle else { return }
+        tenHuyen = title
     }
     
     // MARK: - Private functions
@@ -42,33 +68,6 @@ final class HuyenViewController: UIViewController {
         title = "Huyện"
         let rightBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(backToDiaDiem))
         navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    private func configButton() {
-        initButton(button: huyen1Button)
-        initButton(button: huyen2Button)
-        initButton(button: huyen3Button)
-        initButton(button: huyen4Button)
-        initButton(button: huyen5Button)
-        initButton(button: huyen6Button)
-        initButton(button: huyen7Button)
-        initButton(button: huyen8Button)
-        initButton(button: huyen9Button)
-        initButton(button: huyen10Button)
-    }
-    
-    private func initButton(button: UIButton) {
-        button.layer.borderWidth = 1
-        button.layer.borderColor = .init(srgbRed: 0.9, green: 0.1, blue: 0, alpha: 1)
-        button.layer.cornerRadius = 15
-        button.clipsToBounds = true
-    }
-    
-    private func changeButtonState(button: UIButton) {
-        button.backgroundColor = .init(red: 0.9, green: 0.1, blue: 0, alpha: 1)
-        button.setTitleColor(.white, for: .normal)
-        guard let title = button.currentTitle else { return }
-        tenHuyen = title
     }
     
     private func setUAllButtonState(button: UIButton) {

@@ -27,6 +27,11 @@ final class BaiTap4ViewController: UIViewController {
         searchBar.delegate = self
     }
     
+    // MARK: - Override functions
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        searchBar.resignFirstResponder()
+    }
+    
     // MARK: - Private functions
     private func transData() {
         for data in TinhThanh.danhSachTinhThanh {
@@ -54,22 +59,26 @@ final class BaiTap4ViewController: UIViewController {
         tinhThanhTextView.font = UIFont(name: "Arial", size: 20)
         tinhThanhTextView.isEditable = false
     }
-    
-    // MARK: - IBActions
-    @IBAction private func cancelButtonTouchUpInside(_ sender: UIButton) {
-        searchBar.text?.removeAll()
-        showData()
-    }
 }
 
 // MARK: - UISearchBarDelegate
 extension BaiTap4ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
+        if searchText.isEmpty || searchText.contains(" "){
             showData()
         } else {
             getResultForTextView(with: searchText)
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.text?.removeAll()
+        showData()
     }
 }

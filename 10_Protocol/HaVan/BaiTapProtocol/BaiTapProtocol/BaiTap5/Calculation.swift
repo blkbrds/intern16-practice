@@ -8,53 +8,37 @@
 
 import Foundation
 
-enum Operator {
-    case plus
-    case minor
-    case multiple
-    case devide
-    case percent
-    case power
-}
-
-class Calculator {
+final class Calculator {
     
     // MARK: - Properties
-    private var firstNumber: Float = 0
-    private var secondNumber: Float = 0
-    
-    // MARK: - Initialize
-    init(_ firstNumber: Float, _ secondNumber: Float) {
-        self.firstNumber = firstNumber
-        self.secondNumber = secondNumber
-    }
+    static var shared = Calculator()
     
     // MARK: - Public functions
-    static func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func congHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber + secondNumber
     }
     
-    static func truHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func truHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber - secondNumber
     }
     
-    static func nhanHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func nhanHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber * secondNumber
     }
     
-    static func chiaHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func chiaHaiSo(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return firstNumber / secondNumber
     }
     
-    static func phanTram(_ number: Float) -> Float {
+    func phanTram(_ number: Float) -> Float {
         return number / 100
     }
     
-    static func luyThua(_ firstNumber: Float, _ secondNumber: Float) -> Float {
+    func luyThua(_ firstNumber: Float, _ secondNumber: Float) -> Float {
         return powf(firstNumber, secondNumber)
     }
     
-    static func thucHienPhepTinh(phepTinh: String) -> Operator {
+    func thucHienPhepTinh(phepTinh: String) -> Operator {
         if phepTinh == "+" {
             return .plus
         } else if phepTinh == "-" {
@@ -70,20 +54,23 @@ class Calculator {
         }
     }
     
-    static func ketQua(_ toanTu: Calculator, op: Operator) -> Float {
+    func ketQua(firstNumber: Float, secondNumber: Float, result: Float?, op: Operator) -> Float? {
         switch op {
         case .plus:
-            return congHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return congHaiSo(firstNumber, secondNumber)
         case .minor:
-            return truHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return truHaiSo(firstNumber, secondNumber)
         case .multiple:
-            return nhanHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return nhanHaiSo(firstNumber, secondNumber)
         case .devide:
-            return chiaHaiSo(toanTu.firstNumber, toanTu.secondNumber)
+            return chiaHaiSo(firstNumber, secondNumber)
         case .percent:
-            return phanTram(toanTu.firstNumber)
+            guard let ketQua = result else {
+                return nil
+            }
+            return phanTram(ketQua)
         case .power:
-            return luyThua(toanTu.firstNumber, toanTu.secondNumber)
+            return luyThua(firstNumber, secondNumber)
         }
     }
 }

@@ -41,8 +41,6 @@ extension DiaDiemViewController: MienViewControllerDelegate {
     
     func controller(_ view: MienViewController, needsPerform action: MienViewController.Action) {
         switch action {
-        case .saveMien(tenMien: _):
-            break
         case .saveMienAndTinhAndHuyen(tenMien: let mien, tenTinh: let tinh, tenHuyen: let huyen):
             tinhLabel.text = tinh
             mienLabel.text = mien

@@ -12,7 +12,7 @@ protocol TinhViewControllerDelegate: class {
     func controller(_ controller: TinhViewController, needsPerform action: TinhViewController.Action)
 }
 
-final class TinhViewController: UIViewController {
+final class TinhViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var tinh1Button: UIButton!
@@ -35,7 +35,33 @@ final class TinhViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
-        configButton()
+        configButtons()
+    }
+    
+    // MARK: - Override functions
+    override func configButtons() {
+        configButton(button: tinh1Button)
+        configButton(button: tinh2Button)
+        configButton(button: tinh3Button)
+        configButton(button: tinh4Button)
+        configButton(button: tinh5Button)
+        configButton(button: tinh6Button)
+        configButton(button: tinh7Button)
+        configButton(button: tinh8Button)
+        configButton(button: tinh9Button)
+        configButton(button: tinh10Button)
+    }
+    
+    override func changeButtonState(button: UIButton) {
+        super.changeButtonState(button: button)
+        button.backgroundColor = .init(red: 0, green: 0.8, blue: 0.2, alpha: 1)
+        guard let title = button.currentTitle else { return }
+        tenTinh = title
+    }
+    
+    override func configButton(button: UIButton) {
+        super.configButton(button: button)
+        button.layer.borderColor = .init(srgbRed: 0, green: 0.8, blue: 0.2, alpha: 1)
     }
     
     // MARK: - Private functions
@@ -43,33 +69,6 @@ final class TinhViewController: UIViewController {
         title = "Tỉnh"
         let rightBarButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(turnToTinhViewController))
         navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    private func configButton() {
-        initButton(button: tinh1Button)
-        initButton(button: tinh2Button)
-        initButton(button: tinh3Button)
-        initButton(button: tinh4Button)
-        initButton(button: tinh5Button)
-        initButton(button: tinh6Button)
-        initButton(button: tinh7Button)
-        initButton(button: tinh8Button)
-        initButton(button: tinh9Button)
-        initButton(button: tinh10Button)
-    }
-    
-    private func initButton(button: UIButton) {
-        button.layer.borderWidth = 1
-        button.layer.borderColor = .init(srgbRed: 0, green: 0.8, blue: 0.2, alpha: 1)
-        button.layer.cornerRadius = 15
-        button.clipsToBounds = true
-    }
-    
-    private func changeButtonState(button: UIButton) {
-        button.backgroundColor = .init(red: 0, green: 0.8, blue: 0.2, alpha: 1)
-        button.setTitleColor(.white, for: .normal)
-        guard let title = button.currentTitle else { return }
-        tenTinh = title
     }
     
     private func setUAllButtonState(button: UIButton) {
@@ -112,7 +111,6 @@ final class TinhViewController: UIViewController {
 // MARK: - Extension
 extension TinhViewController {
     enum Action {
-        case saveTinh(tenTinh: String)
         case saveHuyenAndTinh(tenTinh: String, tenHuyen: String)
     }
 }

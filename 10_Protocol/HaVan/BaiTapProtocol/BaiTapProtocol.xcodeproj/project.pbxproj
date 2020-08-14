@@ -15,6 +15,9 @@
 		5272606F24CD7F2600F28539 /* CalculatorCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272606E24CD7F2600F28539 /* CalculatorCustomView.swift */; };
 		5272607124CD7F3600F28539 /* CalculatorCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5272607024CD7F3600F28539 /* CalculatorCustomView.xib */; };
 		5272607324CFC29F00F28539 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272607224CFC29F00F28539 /* Calculation.swift */; };
+		529D8E6724E4D954000CCFC9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E6524E4D954000CCFC9 /* BaseViewController.swift */; };
+		529D8E6824E4D954000CCFC9 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529D8E6624E4D954000CCFC9 /* BaseViewController.xib */; };
+		529D8E6A24E67C94000CCFC9 /* CalculatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E6924E67C94000CCFC9 /* CalculatorState.swift */; };
 		52EBD2B524C97174000B8FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBD2B424C97174000B8FB9 /* AppDelegate.swift */; };
 		52EBD2B724C97174000B8FB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBD2B624C97174000B8FB9 /* SceneDelegate.swift */; };
 		52EBD2BE24C97177000B8FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EBD2BD24C97177000B8FB9 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		5272606E24CD7F2600F28539 /* CalculatorCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCustomView.swift; sourceTree = "<group>"; };
 		5272607024CD7F3600F28539 /* CalculatorCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorCustomView.xib; sourceTree = "<group>"; };
 		5272607224CFC29F00F28539 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
+		529D8E6524E4D954000CCFC9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		529D8E6624E4D954000CCFC9 /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		529D8E6924E67C94000CCFC9 /* CalculatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorState.swift; sourceTree = "<group>"; };
 		52EBD2B124C97174000B8FB9 /* BaiTapProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EBD2B424C97174000B8FB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52EBD2B624C97174000B8FB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 				5272606E24CD7F2600F28539 /* CalculatorCustomView.swift */,
 				5272607024CD7F3600F28539 /* CalculatorCustomView.xib */,
 				5272607224CFC29F00F28539 /* Calculation.swift */,
+				529D8E6924E67C94000CCFC9 /* CalculatorState.swift */,
 			);
 			path = BaiTap5;
 			sourceTree = "<group>";
@@ -161,6 +168,8 @@
 				52E6AC5E24CC7DC60071FBC0 /* Mien */,
 				52E6AC5F24CC7DD20071FBC0 /* Tinh */,
 				52E6AC6024CC7DDF0071FBC0 /* Huyen */,
+				529D8E6524E4D954000CCFC9 /* BaseViewController.swift */,
+				529D8E6624E4D954000CCFC9 /* BaseViewController.xib */,
 			);
 			path = BaiTap3;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EBD2DA24C972DC000B8FB9 /* HuyenViewController.xib in Resources */,
+				529D8E6824E4D954000CCFC9 /* BaseViewController.xib in Resources */,
 				52EBD2C124C97177000B8FB9 /* LaunchScreen.storyboard in Resources */,
 				5272606224CD38FD00F28539 /* BaiTap4ViewController.xib in Resources */,
 				52EBD2D624C972C5000B8FB9 /* TinhViewController.xib in Resources */,
@@ -245,8 +255,10 @@
 				52EBD2CD24C97291000B8FB9 /* DiaDiemViewController.swift in Sources */,
 				5272606124CD38FD00F28539 /* BaiTap4ViewController.swift in Sources */,
 				5272607324CFC29F00F28539 /* Calculation.swift in Sources */,
+				529D8E6A24E67C94000CCFC9 /* CalculatorState.swift in Sources */,
 				5272606424CD392700F28539 /* TenTinhThanh.swift in Sources */,
 				52EBD2B524C97174000B8FB9 /* AppDelegate.swift in Sources */,
+				529D8E6724E4D954000CCFC9 /* BaseViewController.swift in Sources */,
 				52EBD2D924C972DC000B8FB9 /* HuyenViewController.swift in Sources */,
 				5272606F24CD7F2600F28539 /* CalculatorCustomView.swift in Sources */,
 				52EBD2D524C972C5000B8FB9 /* TinhViewController.swift in Sources */,

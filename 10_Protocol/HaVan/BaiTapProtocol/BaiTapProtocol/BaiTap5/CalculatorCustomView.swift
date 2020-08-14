@@ -36,7 +36,7 @@ final class CalculatorCustomView: UIView {
     weak var delegate: CalculatorCustomViewDelegate?
     private var firstNum: Float?
     private var secondNum: Float?
-    private var result: Float = 0
+    private var result: Float?
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -90,9 +90,8 @@ final class CalculatorCustomView: UIView {
         return (result.x, result.y)
     }
     
-    private func calculate(buttonName: String, firstNumber: Float, secondNumber: Float) -> Float {
-        let toantu = Calculator(firstNumber, secondNumber)
-        return Calculator.ketQua(toantu, op: Calculator.thucHienPhepTinh(phepTinh: buttonName))
+    private func calculate(buttonName: String, firstNumber: Float, secondNumber: Float, result: Float?) -> Float? {
+        return Calculator.shared.ketQua(firstNumber: firstNumber, secondNumber: secondNumber, result: result, op: Calculator.shared.thucHienPhepTinh(phepTinh: buttonName))
     }
     
     // MARK: - Public functions
@@ -112,9 +111,14 @@ final class CalculatorCustomView: UIView {
         changeButtonState(button: sender)
         guard let getXY = datasource?.getData() else { return }
         guard let phepTinh = sender.currentTitle else { return }
-        result = calculate(buttonName: phepTinh, firstNumber: getXY.x, secondNumber: getXY.y)
         resultLabel.isHidden = false
-        resultLabel.text = String(format: "%.2f", result)
+        let finalResult: Float? = calculate(buttonName: phepTinh, firstNumber: getXY.x, secondNumber: getXY.y, result: result)
+        self.result = finalResult
+        if let final = finalResult {
+            resultLabel.text = String(final)
+        } else {
+            resultLabel.text = "Not found"
+        }
     }
     
     @IBAction private func clearButtonTouchUpInside(_ sender: UIButton) {
@@ -123,6 +127,7 @@ final class CalculatorCustomView: UIView {
         resultLabel.text?.removeAll()
         delegate?.view(self, needsPerform: .hiddingView)
         delegate?.view(self, needsPerform: .deleteXY)
+        delegate?.view(self, needsPerform: .returnResult(result: nil))
     }
     
     @IBAction private func doneButtonTouchUpInside(_ sender: UIButton) {
@@ -142,7 +147,7 @@ extension CalculatorCustomView {
     }
     
     enum Action {
-        case returnResult(result: Float)
+        case returnResult(result: Float?)
         case hiddingView
         case deleteXY
     }

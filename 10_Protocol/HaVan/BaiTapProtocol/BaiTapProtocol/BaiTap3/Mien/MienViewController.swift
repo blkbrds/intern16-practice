@@ -12,7 +12,7 @@ protocol MienViewControllerDelegate: class {
     func controller(_ view: MienViewController, needsPerform action: MienViewController.Action)
 }
 
-final class MienViewController: UIViewController {
+final class MienViewController: BaseViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var mien1Button: UIButton!
@@ -36,7 +36,33 @@ final class MienViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
-        configButton()
+        configButtons()
+    }
+    
+    // MARK: - Override functions
+    override func configButtons() {
+        configButton(button: mien1Button)
+        configButton(button: mien2Button)
+        configButton(button: mien3Button)
+        configButton(button: mien4Button)
+        configButton(button: mien5Button)
+        configButton(button: mien6Button)
+        configButton(button: mien7Button)
+        configButton(button: mien8Button)
+        configButton(button: mien9Button)
+        configButton(button: mien10Button)
+    }
+    
+    override func configButton(button: UIButton) {
+        super.configButton(button: button)
+        button.layer.borderColor = .init(srgbRed: 0, green: 0.2, blue: 1.0, alpha: 1)
+    }
+    
+    override func changeButtonState(button: UIButton) {
+        super.changeButtonState(button: button)
+        button.backgroundColor = .init(red: 0, green: 0.2, blue: 1.0, alpha: 1)
+        guard let title = button.currentTitle else { return }
+        tenMien = title
     }
     
     // MARK: - Private functions
@@ -44,33 +70,6 @@ final class MienViewController: UIViewController {
         title = "Miền"
         let rightBarButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(turnToTinhViewController))
         navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    private func configButton() {
-        initButton(button: mien1Button)
-        initButton(button: mien2Button)
-        initButton(button: mien3Button)
-        initButton(button: mien4Button)
-        initButton(button: mien5Button)
-        initButton(button: mien6Button)
-        initButton(button: mien7Button)
-        initButton(button: mien8Button)
-        initButton(button: mien9Button)
-        initButton(button: mien10Button)
-    }
-    
-    private func initButton(button: UIButton) {
-        button.layer.cornerRadius = 15
-        button.layer.borderColor = .init(srgbRed: 0, green: 0.2, blue: 1.0, alpha: 1)
-        button.layer.borderWidth = 1
-        button.clipsToBounds = true
-    }
-    
-    private func changeButtonState(button: UIButton) {
-        button.backgroundColor = .init(red: 0, green: 0.2, blue: 1.0, alpha: 1)
-        button.setTitleColor(.white, for: .normal)
-        guard let title = button.currentTitle else { return }
-        tenMien = title
     }
     
     private func setUAllButtonState(button: UIButton) {
@@ -113,7 +112,6 @@ final class MienViewController: UIViewController {
 // MARK: - Extension
 extension MienViewController {
     enum Action {
-        case saveMien(tenMien: String)
         case saveMienAndTinhAndHuyen(tenMien: String, tenTinh: String, tenHuyen: String)
     }
 }
@@ -123,8 +121,6 @@ extension MienViewController: TinhViewControllerDelegate {
     
     func controller(_ controller: TinhViewController, needsPerform action: TinhViewController.Action) {
         switch action {
-        case .saveTinh(tenTinh: _):
-            break
         case .saveHuyenAndTinh(tenTinh: let tinh, tenHuyen: let huyen):
             delegate?.controller(self, needsPerform: .saveMienAndTinhAndHuyen(tenMien: tenMien, tenTinh: tinh, tenHuyen: huyen))
         }
