@@ -15,6 +15,7 @@ final class Bai11ViewController: UIViewController {
     
     // MARK: - Properties
     private var poemManager = PoemManager()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,19 +36,20 @@ final class Bai11ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UITableViewDataSoure
 extension Bai11ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return poemManager.numberOfSection()
         
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return poemManager.numberOfRowInSection(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Bai11CustomTableViewCell", for: indexPath) as! Bai11CustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Bai11CustomTableViewCell", for: indexPath) as? Bai11CustomTableViewCell else { return UITableViewCell() }
         cell.poemForCell = poemManager.viewModelForCell(at: indexPath)
         return cell
     }

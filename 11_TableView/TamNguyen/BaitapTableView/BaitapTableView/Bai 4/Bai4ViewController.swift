@@ -36,12 +36,13 @@ final class Bai4ViewController: UIViewController {
     }
 }
 
-// MARK : - Extension
+// MARK : - Extension UITableViewDataSource
 extension Bai4ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return getData.numberOfSections()
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return getData.numberOfSections()
     }

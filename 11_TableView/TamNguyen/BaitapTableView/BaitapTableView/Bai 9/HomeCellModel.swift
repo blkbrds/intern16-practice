@@ -13,7 +13,7 @@ final class HomeCellModel {
     //MARK: - Properties
     var user: User = User()
     
-    //MARK: - Init
+    //MARK: - Initial
     init(user: User = User()) {
         self.user = user
     }

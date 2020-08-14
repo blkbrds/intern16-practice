@@ -15,7 +15,7 @@ final class UserContact {
     var nameUser: String
     var numberUser: String
     
-    //MARK: - Init
+    //MARK: - Initial
     init(avatarUser: String = "", nameUser:String = "", numberUser: String = "") {
         self.avatarUser = avatarUser
         self.nameUser = nameUser

@@ -18,7 +18,7 @@ final class Bai5ViewController: UIViewController {
     private var searchList: [String] = []
     private let cellIdentifier: String = "cell"
     private var getDataContacts = GetDataContacts()
-   
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ final class Bai5ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UITableViewDelegate, UITableViewDataSource, UISearchBarDeleGate
 extension Bai5ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

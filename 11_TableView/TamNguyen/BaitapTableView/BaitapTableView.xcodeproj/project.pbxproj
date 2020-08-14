@@ -30,8 +30,8 @@
 		31C8457C24D139BE00D4AEF6 /* Bai7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8457A24D139BE00D4AEF6 /* Bai7ViewController.swift */; };
 		31C8457D24D139BE00D4AEF6 /* Bai7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8457B24D139BE00D4AEF6 /* Bai7ViewController.xib */; };
 		31C8457F24D15B1100D4AEF6 /* GetDataFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8457E24D15B1100D4AEF6 /* GetDataFriends.swift */; };
-		31C8458324D16E4800D4AEF6 /* HomelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8458124D16E4800D4AEF6 /* HomelTableViewCell.swift */; };
-		31C8458424D16E4800D4AEF6 /* HomelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8458224D16E4800D4AEF6 /* HomelTableViewCell.xib */; };
+		31C8458324D16E4800D4AEF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8458124D16E4800D4AEF6 /* HomeTableViewCell.swift */; };
+		31C8458424D16E4800D4AEF6 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8458224D16E4800D4AEF6 /* HomeTableViewCell.xib */; };
 		31C8458724D1857C00D4AEF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8458524D1857C00D4AEF6 /* HomeViewController.swift */; };
 		31C8458824D1857C00D4AEF6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8458624D1857C00D4AEF6 /* HomeViewController.xib */; };
 		31C8458A24D26CED00D4AEF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8458924D26CED00D4AEF6 /* User.swift */; };
@@ -83,8 +83,8 @@
 		31C8457A24D139BE00D4AEF6 /* Bai7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai7ViewController.swift; sourceTree = "<group>"; };
 		31C8457B24D139BE00D4AEF6 /* Bai7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Bai7ViewController.xib; sourceTree = "<group>"; };
 		31C8457E24D15B1100D4AEF6 /* GetDataFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFriends.swift; sourceTree = "<group>"; };
-		31C8458124D16E4800D4AEF6 /* HomelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomelTableViewCell.swift; sourceTree = "<group>"; };
-		31C8458224D16E4800D4AEF6 /* HomelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomelTableViewCell.xib; sourceTree = "<group>"; };
+		31C8458124D16E4800D4AEF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		31C8458224D16E4800D4AEF6 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		31C8458524D1857C00D4AEF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		31C8458624D1857C00D4AEF6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		31C8458924D26CED00D4AEF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		31C8458024D1695400D4AEF6 /* Bai 9 */ = {
 			isa = PBXGroup;
 			children = (
-				31C8458124D16E4800D4AEF6 /* HomelTableViewCell.swift */,
-				31C8458224D16E4800D4AEF6 /* HomelTableViewCell.xib */,
+				31C8458124D16E4800D4AEF6 /* HomeTableViewCell.swift */,
+				31C8458224D16E4800D4AEF6 /* HomeTableViewCell.xib */,
 				31C8458524D1857C00D4AEF6 /* HomeViewController.swift */,
 				31C8458624D1857C00D4AEF6 /* HomeViewController.xib */,
 				31C8458924D26CED00D4AEF6 /* User.swift */,
@@ -344,7 +344,7 @@
 				31C845BF24D45B6900D4AEF6 /* Bai11CustomTableViewCell.xib in Resources */,
 				31C8459924D3D4D500D4AEF6 /* CustomTableViewCell.xib in Resources */,
 				31C8459524D3D47A00D4AEF6 /* Bai10ViewController.xib in Resources */,
-				31C8458424D16E4800D4AEF6 /* HomelTableViewCell.xib in Resources */,
+				31C8458424D16E4800D4AEF6 /* HomeTableViewCell.xib in Resources */,
 				31C845C324D512D500D4AEF6 /* Poems.plist in Resources */,
 				31C8457D24D139BE00D4AEF6 /* Bai7ViewController.xib in Resources */,
 				31C8455C24D00BCE00D4AEF6 /* Contacts.plist in Resources */,
@@ -374,7 +374,7 @@
 				31C845C524D5131C00D4AEF6 /* PoemManager.swift in Sources */,
 				31C8459824D3D4D500D4AEF6 /* CustomTableViewCell.swift in Sources */,
 				31C8458724D1857C00D4AEF6 /* HomeViewController.swift in Sources */,
-				31C8458324D16E4800D4AEF6 /* HomelTableViewCell.swift in Sources */,
+				31C8458324D16E4800D4AEF6 /* HomeTableViewCell.swift in Sources */,
 				31C8457C24D139BE00D4AEF6 /* Bai7ViewController.swift in Sources */,
 				31C845A124D3E96600D4AEF6 /* UserContact.swift in Sources */,
 				31C8457324D114D100D4AEF6 /* Bai5ViewController.swift in Sources */,

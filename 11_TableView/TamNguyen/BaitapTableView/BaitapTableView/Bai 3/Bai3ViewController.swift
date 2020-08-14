@@ -39,7 +39,7 @@ final class Bai3ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UITableViewDataSource
 extension Bai3ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

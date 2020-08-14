@@ -15,13 +15,9 @@ final class GetData {
     
     // MARK: - Function
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "Friends", withExtension: "plist") else {
-            return
-        }
-        guard let data = NSArray(contentsOf: path) else {
-            return
-        }
-        friends = data as! [[String]]
+        guard let path = Bundle.main.url(forResource: "Friends", withExtension: "plist") else { return }
+        guard let data = NSArray(contentsOf: path) as? [[String]] else { return }
+        friends = data 
     }
     
     func numberOfSections() -> Int {

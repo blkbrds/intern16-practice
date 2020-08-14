@@ -14,7 +14,6 @@ final class PoemManager {
     var poems: [Poem] = []
     
     // MARK: - Fuctions
-    
     func numberOfSection() -> Int {
         return 1
     }
@@ -33,6 +32,7 @@ final class PoemManager {
         var poems: [Poem] = []
         guard let path = Bundle.main.url(forResource: "Poems", withExtension: "plist") else { return }
         guard let data = NSArray(contentsOf: path) as? [String] else { return }
+        
         for index1 in 0 ..< data.count {
             var poemName = [Poem]()
             let poem = Poem(contentPoem: data[index1])

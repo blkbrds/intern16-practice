@@ -9,17 +9,19 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
+    
     // MARK: - IBOulets
     @IBOutlet private weak var nameLabel: UILabel!
     
     // MARK: - Properties
     var contactName: String?
-    // MARK: - Life cycle
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+    
     // MARK: - Private methods
     private func configUI() {
         title = "DETAIL"

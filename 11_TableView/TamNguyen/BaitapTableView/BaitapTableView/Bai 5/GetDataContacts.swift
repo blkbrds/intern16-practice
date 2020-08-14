@@ -10,18 +10,14 @@ import Foundation
 
 final class GetDataContacts {
     
- // MARK: - Properties
+    // MARK: - Properties
     var contacts: [String] = []
     
     // MARK: - Function
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else {
-            return
-        }
-        guard let data = NSArray(contentsOf: path) else {
-            return
-        }
-        contacts = data as! [String]
+        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else { return }
+        guard let data = NSArray(contentsOf: path) as? [String] else { return }
+        contacts = data
     }
     
     func numberOfSections() -> Int {

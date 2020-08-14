@@ -36,11 +36,10 @@ final class Bai10ViewController: UIViewController {
         let nib = UINib(nibName: "CustomTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
         tableView.dataSource = self
-        //searchBar.delegate = self
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UITableViewDataSource
 extension Bai10ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,24 +51,8 @@ extension Bai10ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
         cell.userInCell = prepareData.viewModelForCell(at: indexPath)
         return cell
     }
 }
-
-//extension Bai10ViewController: UISearchBarDelegate {
- //   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-  //      let upperText = searchText.uppercased()
-   //     searchList = prepareData.getUser().filter { $0.uppercased().hasPrefix(upperText)
-    //    }
-     //   tableView.reloadData()
-    //}
-    
-    
-    //func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-     //   searchList = prepareData.users
-      //  searchBar.searchTextField.text = nil
-       // tableView.reloadData()
-    //}
-//}

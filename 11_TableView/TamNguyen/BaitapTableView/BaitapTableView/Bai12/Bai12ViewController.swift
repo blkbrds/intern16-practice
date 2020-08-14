@@ -9,7 +9,7 @@
 import UIKit
 
 final class Bai12ViewController: UIViewController {
-
+    
     // MARK: - IBOulets
     @IBOutlet private weak var tableView: UITableView!
     
@@ -43,12 +43,13 @@ final class Bai12ViewController: UIViewController {
         tableView.endUpdates()
     }
 }
-// MARK: - Extension
+// MARK: - Extension UITableVIewDelegate, UiTableViewDataSource
 extension Bai12ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }

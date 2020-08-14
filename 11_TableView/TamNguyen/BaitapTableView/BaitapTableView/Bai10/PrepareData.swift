@@ -14,7 +14,6 @@ final class PrepareData {
     var users: [[UserContact]] = []
     
     // MARK: - Functions
-    
     func numberOfSection() -> Int {
         return users.count
     }
@@ -37,6 +36,7 @@ final class PrepareData {
         guard let data = NSArray(contentsOf: path) as? [[[String]]] else {
             return
         }
+        
         for index1 in 0 ..< data.count {
             var userNames = [UserContact]()
             for index2 in 0 ..< data[index1].count {

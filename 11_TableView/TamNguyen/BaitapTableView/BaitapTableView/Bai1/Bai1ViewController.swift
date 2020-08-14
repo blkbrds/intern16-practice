@@ -33,7 +33,7 @@ final class Bai1ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension methods
+// MARK: - Extension UITableViewDelegate, UITableViewDataSource
 extension Bai1ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

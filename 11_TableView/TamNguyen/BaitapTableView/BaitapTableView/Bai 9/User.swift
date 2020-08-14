@@ -15,7 +15,7 @@ final class User {
     var imageUser: String
     var subTitle: String
     
-    // MARK: - Init
+    // MARK: - Initial
     init(nameUser: String = "", imageUser: String = "", subTitle: String = "") {
         self.nameUser = nameUser
         self.imageUser = imageUser

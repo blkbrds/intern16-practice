@@ -9,6 +9,7 @@
 import UIKit
 
 final class Bai2ViewController: UIViewController {
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ final class Bai2ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UItableViewDataSource
 extension Bai2ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

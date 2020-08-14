@@ -16,7 +16,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Properties
     private var loadUser = LoadUser()
     private var sectionIndexs: [String] = []
-    private var homeTableViewCell = HomelTableViewCell()
+    private var homeTableViewCell = HomeTableViewCell()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -33,13 +33,13 @@ final class HomeViewController: UIViewController {
     
     private func configTableView() {
         title = "List"
-        let nib = UINib(nibName: "HomelTableViewCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "HomelTableViewCell")
+        let nib = UINib(nibName: "HomeTableViewCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: "HomeTableViewCell")
         tableView.dataSource = self
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,7 +51,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomelTableViewCell", for: indexPath) as! HomelTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         cell.viewModel = loadUser.viewModelForCell(at: indexPath)
         cell.delegate = self
         cell.section = indexPath.section
@@ -83,7 +83,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: HomeTableViewCellDelegate {
-    func tap(view: HomelTableViewCell) {
+    func tap(view: HomeTableViewCell) {
         print("hihi")
     }
 }

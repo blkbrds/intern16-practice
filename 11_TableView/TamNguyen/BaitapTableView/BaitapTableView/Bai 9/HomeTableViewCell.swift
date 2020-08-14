@@ -9,10 +9,10 @@
 import UIKit
 
 protocol HomeTableViewCellDelegate: class {
-    func tap(view: HomelTableViewCell)
+    func tap(view: HomeTableViewCell)
 }
 
-final class HomelTableViewCell: UITableViewCell {
+final class HomeTableViewCell: UITableViewCell {
     
     // MARK: - IBOulets
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -28,16 +28,6 @@ final class HomelTableViewCell: UITableViewCell {
         didSet {
             updateView()
         }
-    }
-    
-    // MARk: - Override methods
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
     
     // MARK: - Private methods
