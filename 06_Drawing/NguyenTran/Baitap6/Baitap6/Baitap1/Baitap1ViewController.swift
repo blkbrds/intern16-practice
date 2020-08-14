@@ -76,7 +76,7 @@ class Baitap1ViewController: UIViewController {
 
     private func createChart(data: [CGFloat]) {
         var finalData = configPointData(data: data)
-        finalData.append(CGPoint(x: barChart.frame.size.width - 30, y: barChart.frame.size.height - 40))
+        finalData.append(CGPoint(x: barChart.frame.size.width - 35, y: barChart.frame.size.height - 40))
         finalData.append(CGPoint(x: 40, y: 310))
         barChart.drawChart(pointValue: finalData)
     }
