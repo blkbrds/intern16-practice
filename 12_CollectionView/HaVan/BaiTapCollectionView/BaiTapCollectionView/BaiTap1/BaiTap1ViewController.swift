@@ -46,7 +46,7 @@ extension BaiTap1ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareNumberCell", for: indexPath) as! SquareNumberCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareNumberCell", for: indexPath) as? SquareNumberCell else { fatalError("Can't load SquareNumberCell") }
         cell.backgroundColor = .blue
         cell.getNumber(with: String(listNumber[indexPath.item]))
         return cell

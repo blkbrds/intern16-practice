@@ -59,7 +59,7 @@ extension SlideView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reusableCell", for: indexPath) as! ImageCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reusableCell", for: indexPath) as? ImageCell else { fatalError("Can't load ImageCell") }
         cell.configImageCell(image: slide.slide[indexPath.item])
         return cell
     }

@@ -45,7 +45,7 @@ extension BaiTap4ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath) as! CustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath) as? CustomTableViewCell else { fatalError("Can't load CustomTableViewCell") }
         cell.backgroundColor = .lightGray
         return cell
     }

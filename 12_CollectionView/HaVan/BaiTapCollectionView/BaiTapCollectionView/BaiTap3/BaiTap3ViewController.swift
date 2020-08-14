@@ -54,14 +54,14 @@ extension BaiTap3ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reusableCell", for: indexPath) as! FoodCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reusableCell", for: indexPath) as? FoodCollectionViewCell else { fatalError("Can't load FoodCollectionViewCell") }
         let food = foodFactory.foodFactory[indexPath.section][indexPath.row]
         cell.updateFood(with: food.image, name: food.name)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "reusablelHeader", for: indexPath) as! FoodHeaderView
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "reusablelHeader", for: indexPath) as? FoodHeaderView else { fatalError("Can't load FoodHeaderView") }
         let name = sectionKey[indexPath.section]
         guard let image = foodFactory.sectionFood[name] else { fatalError()}
         header.updateFood(with: image, name: name)
