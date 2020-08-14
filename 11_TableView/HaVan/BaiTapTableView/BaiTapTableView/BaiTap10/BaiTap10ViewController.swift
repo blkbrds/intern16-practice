@@ -33,6 +33,12 @@ final class BaiTap10ViewController: UIViewController {
         configSectionIndex()
     }
     
+    // MARK: - Override functions
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        searchBar.resignFirstResponder()
+    }
+    
     // MARK: - Private functions
     private func configNavigationBar() {
         title = "CONTACTS"
@@ -101,7 +107,7 @@ extension BaiTap10ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseContactCell", for: indexPath) as! PeopleTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseContactCell", for: indexPath) as? PeopleTableViewCell else { fatalError("Can't load PeopleTableViewCell") }
         let name = newSection[indexPath.section][indexPath.row]
         guard let phone = contactList[name] else { fatalError("Can not get the phone") }
         cell.updateCell(name: name, phone: phone)
@@ -148,12 +154,12 @@ extension BaiTap10ViewController: UISearchBarDelegate {
             return
         }
         searchKeyWord(keyword: searchText)
-        view.endEditing(true)
+        searchBar.resignFirstResponder()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text?.removeAll()
         searchKeyWord(keyword: "")
-        view.endEditing(true)
+        searchBar.resignFirstResponder()
     }
 }

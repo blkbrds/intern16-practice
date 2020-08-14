@@ -54,7 +54,7 @@ extension BaiTap9ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? CustomTableViewCell else { fatalError("Can't load CustomTableViewCell") }
         let newObject = MyClass(avatar: "sushi", name: Sections.sections[indexPath.section][indexPath.row], description: "subtitle")
         cell.updateTableCell(thing: newObject)
         cell.row = indexPath.row

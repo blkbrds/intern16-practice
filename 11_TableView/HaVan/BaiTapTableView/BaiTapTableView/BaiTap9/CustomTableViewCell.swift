@@ -24,11 +24,6 @@ final class CustomTableViewCell: UITableViewCell {
     var section: Int?
     var row: Int?
     
-    // MARK: - Life cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -51,7 +51,7 @@ extension BaiTap11ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageTableViewCell else { fatalError("Can't load MessageTableViewCell") }
         cell.setMessage(with: Message.messages[indexPath.row])
         return cell
     }

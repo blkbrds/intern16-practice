@@ -52,6 +52,7 @@ extension CustomInsertViewController {
 
 // MARK: - UITextFieldDelegate
 extension CustomInsertViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let textContent = addTextField.text else { return true }
         textField.resignFirstResponder()
