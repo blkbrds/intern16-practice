@@ -93,7 +93,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! Bai4TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? Bai4TableViewCell else { return UITableViewCell() }
         cell.updateTableView(with: models)
         return cell
     }

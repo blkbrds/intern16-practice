@@ -28,7 +28,7 @@ final class PinterestLayout: UICollectionViewLayout {
         return collectionView.bounds.width - (insets.left + insets.right)
     }
     
-    // MARK: - Override
+    // MARK: - Override methods
     override var collectionViewContentSize: CGSize {
         return CGSize(width: contentWidth, height: contentHeight)
     }
@@ -37,9 +37,7 @@ final class PinterestLayout: UICollectionViewLayout {
         guard
             cache.isEmpty,
             let collectionView = collectionView
-            else {
-                return
-        }
+            else { return }
         
         let columnWidth = contentWidth / CGFloat(numberOfColumns)
         var xOffset: [CGFloat] = []

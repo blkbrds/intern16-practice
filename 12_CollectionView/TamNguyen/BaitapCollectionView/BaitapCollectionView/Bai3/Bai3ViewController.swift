@@ -11,7 +11,7 @@ import UIKit
 final class Bai3ViewController: UIViewController {
     
     // MARK: - IBOulets
-    @IBOutlet weak private var homeCollectionView: UICollectionView!
+    @IBOutlet private weak var homeCollectionView: UICollectionView!
     
     // MARK: - Properties
     private var flowers: [String] = ["download", "download", "download", "download", "download", "download", "download"]
@@ -52,7 +52,7 @@ extension Bai3ViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Bai3CollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Bai3CollectionViewCell else { return UICollectionViewCell() }
         let nameFlower = flowers[indexPath.row]
         guard let imageFlower = UIImage(named: nameFlower) else { return cell }
         cell.updateCell(with: imageFlower)
@@ -67,7 +67,7 @@ extension Bai3ViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as! Bai3HeaderView
+            guard let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as? Bai3HeaderView else { return UICollectionReusableView() }
             
             let header = sections[indexPath.row]
             reusableview.updateHeader(with: header, total: String(sections.count))

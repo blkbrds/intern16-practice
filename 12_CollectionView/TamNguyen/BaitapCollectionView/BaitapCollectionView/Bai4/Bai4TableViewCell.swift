@@ -45,7 +45,7 @@ extension Bai4TableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! Bai4CollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? Bai4CollectionViewCell else { return UICollectionViewCell() }
         cell.updateCollectonView(with: models[indexPath.row])
         return cell
     }

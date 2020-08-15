@@ -11,11 +11,10 @@ import UIKit
 final class Bai3CollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOulets
-    @IBOutlet private  weak var flowerImage: UIImageView!
+    @IBOutlet private weak var flowerImage: UIImageView!
     
     // MARK: - Public methods
     func updateCell(with image: UIImage) {
         flowerImage.image = image
     }
 }
-
