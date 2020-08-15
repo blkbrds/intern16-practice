@@ -49,8 +49,11 @@ final class LoginViewController: UIViewController {
         if checkInformation() {
             AppDelegate.shared.changeRootViewController(changeRoot: .tabbar)
         }
-        //check error
-        switch (usernameTextField.text, passwordTextField.text) {
+    }
+    
+    private func checkError(username: String, password: String) {
+        guard let username = usernameTextField.text, let password = passwordTextField.text else { return }
+        switch (username, password) {
         case ("", ""):
             createAlert(title: "Error", message: Error.fullEmpty.rawValue)
             usernameTextField.becomeFirstResponder()
@@ -71,7 +74,9 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func loginButtonTouchUpInside(_ sender: UIButton) {
+        guard let username = usernameTextField.text, let password = passwordTextField.text else { return }
         clickLogin()
+        checkError(username: username, password: password)
         usernameTextField.text = ""
         passwordTextField.text = ""
         usernameTextField.becomeFirstResponder()
@@ -82,9 +87,10 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             passwordTextField.becomeFirstResponder()
-        } else {
+        default:
             clickLogin()
         }
         return true

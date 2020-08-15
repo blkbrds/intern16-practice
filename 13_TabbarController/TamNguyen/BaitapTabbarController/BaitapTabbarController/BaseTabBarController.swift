@@ -26,13 +26,12 @@ final class BaseTabBarController: UITabBarController {
     // MARK: - Private methods
     private func configTabBar() {
         tabBar.tintColor = .red
-
+        
         let appearance = UITabBarAppearance()
         appearance.backgroundColor = .brown
         tabBar.standardAppearance = appearance
-        
     }
-
+    
     private func configViewController() {
         homeNavi.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "icons8-home-32.png"), tag: 0)
         mapNavi.tabBarItem = UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "icons8-map-marker-50.png"), tag: 1)

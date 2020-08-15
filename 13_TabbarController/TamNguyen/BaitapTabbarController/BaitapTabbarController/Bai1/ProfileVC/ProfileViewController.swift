@@ -9,7 +9,7 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,7 @@ final class ProfileViewController: UIViewController {
     private func configUI() {
         title = "Profile"
         let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutButtonTouchUpInside))
-        
         let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
-        
         navigationItem.rightBarButtonItem = logoutButton
         navigationItem.leftBarButtonItem = editButton
     }
