@@ -19,7 +19,6 @@ class Baitap2ViewController: UIViewController {
 
     func createPieChart(inputData: [Int]) {
         let pieChart = CustomPieChart(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
-        pieChart.backgroundColor = .brown
 
         //configData
         let newData = inputData.sorted()
