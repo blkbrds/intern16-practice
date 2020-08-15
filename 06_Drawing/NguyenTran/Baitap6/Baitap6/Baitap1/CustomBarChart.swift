@@ -24,12 +24,12 @@ class GraphicsDraw: UIView {
         line.addLine(to: end)
         line.close()
 
-        let layer = CAShapeLayer()
-        layer.strokeColor = UIColor.darkGray.cgColor
-        layer.lineWidth = 1.0
-        layer.path = line.cgPath
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = UIColor.darkGray.cgColor
+        shapeLayer.lineWidth = 1.0
+        shapeLayer.path = line.cgPath
 
-        self.layer.addSublayer(layer)
+        self.layer.addSublayer(shapeLayer)
     }
 
     func addLabel(position: CGPoint, text: String, fontSize: Float) {
@@ -57,13 +57,13 @@ class GraphicsDraw: UIView {
         path.addLine(to: pointValue[0])
         path.close()
         
-        let layer = CAShapeLayer()
-        layer.fillColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-        layer.lineWidth = 0
-        layer.strokeColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-        layer.path = path.cgPath
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.fillColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        shapeLayer.lineWidth = 0
+        shapeLayer.strokeColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        shapeLayer.path = path.cgPath
         
-        self.layer.addSublayer(layer)
+        self.layer.addSublayer(shapeLayer)
     }
     
     func addCirclePoint(position: CGPoint) {

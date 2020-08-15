@@ -13,8 +13,9 @@
 		220F28C724E43B8F0087A1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220F28C624E43B8F0087A1C7 /* Assets.xcassets */; };
 		220F28CA24E43B8F0087A1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220F28C824E43B8F0087A1C7 /* LaunchScreen.storyboard */; };
 		220F28D424E43C340087A1C7 /* Baitap1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F28D224E43C340087A1C7 /* Baitap1ViewController.swift */; };
-		220F28D524E43C340087A1C7 /* Baitap1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220F28D324E43C340087A1C7 /* Baitap1ViewController.xib */; };
 		220F28D724E43C510087A1C7 /* CustomBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F28D624E43C510087A1C7 /* CustomBarChart.swift */; };
+		220F28DA24E6C2880087A1C7 /* CustomPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F28D924E6C2880087A1C7 /* CustomPieChart.swift */; };
+		220F28DD24E6C2BA0087A1C7 /* Baitap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F28DB24E6C2BA0087A1C7 /* Baitap2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		220F28C924E43B8F0087A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		220F28CB24E43B8F0087A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		220F28D224E43C340087A1C7 /* Baitap1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap1ViewController.swift; sourceTree = "<group>"; };
-		220F28D324E43C340087A1C7 /* Baitap1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap1ViewController.xib; sourceTree = "<group>"; };
 		220F28D624E43C510087A1C7 /* CustomBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarChart.swift; sourceTree = "<group>"; };
+		220F28D924E6C2880087A1C7 /* CustomPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPieChart.swift; sourceTree = "<group>"; };
+		220F28DB24E6C2BA0087A1C7 /* Baitap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				220F28BF24E43B890087A1C7 /* SceneDelegate.swift */,
 				220F28C124E43B890087A1C7 /* ViewController.swift */,
 				220F28D124E43C1F0087A1C7 /* Baitap1 */,
+				220F28D824E6C22C0087A1C7 /* Baitap2 */,
 				220F28C624E43B8F0087A1C7 /* Assets.xcassets */,
 				220F28C824E43B8F0087A1C7 /* LaunchScreen.storyboard */,
 				220F28CB24E43B8F0087A1C7 /* Info.plist */,
@@ -75,10 +78,18 @@
 			isa = PBXGroup;
 			children = (
 				220F28D224E43C340087A1C7 /* Baitap1ViewController.swift */,
-				220F28D324E43C340087A1C7 /* Baitap1ViewController.xib */,
 				220F28D624E43C510087A1C7 /* CustomBarChart.swift */,
 			);
 			path = Baitap1;
+			sourceTree = "<group>";
+		};
+		220F28D824E6C22C0087A1C7 /* Baitap2 */ = {
+			isa = PBXGroup;
+			children = (
+				220F28D924E6C2880087A1C7 /* CustomPieChart.swift */,
+				220F28DB24E6C2BA0087A1C7 /* Baitap2ViewController.swift */,
+			);
+			path = Baitap2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +152,6 @@
 			files = (
 				220F28CA24E43B8F0087A1C7 /* LaunchScreen.storyboard in Resources */,
 				220F28C724E43B8F0087A1C7 /* Assets.xcassets in Resources */,
-				220F28D524E43C340087A1C7 /* Baitap1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +164,10 @@
 			files = (
 				220F28C224E43B890087A1C7 /* ViewController.swift in Sources */,
 				220F28BE24E43B890087A1C7 /* AppDelegate.swift in Sources */,
+				220F28DA24E6C2880087A1C7 /* CustomPieChart.swift in Sources */,
 				220F28D724E43C510087A1C7 /* CustomBarChart.swift in Sources */,
 				220F28C024E43B890087A1C7 /* SceneDelegate.swift in Sources */,
+				220F28DD24E6C2BA0087A1C7 /* Baitap2ViewController.swift in Sources */,
 				220F28D424E43C340087A1C7 /* Baitap1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

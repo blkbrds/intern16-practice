@@ -18,8 +18,8 @@ class Baitap1ViewController: UIViewController {
 
     var barChart = GraphicsDraw()
     let dateData = ["今日", "2021/01/01"]
-    let yValueData = YValueData(startValue: 500, gap: 50)
-    let pointData: Array<CGFloat> = [500, 510, 530, 557, 568, 590, 600]
+    let yValueData = YValueData(startValue: 500, gap: 200)
+    let pointData: Array<CGFloat> = [500, 510, 530, 557, 568, 590, 750]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,6 @@ class Baitap1ViewController: UIViewController {
 
     private func createPoint(data: [CGFloat]) {
         let finalData = configPointData(data: data)
-        print(finalData)
         for i in 0...finalData.count - 1 {
             barChart.addCirclePoint(position: CGPoint(x: finalData[i].x - 8, y: finalData[i].y - 8))
         }
