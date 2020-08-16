@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TinhViewController" customModule="BaiTapProtocol" customModuleProvider="target">
+            <connections>
+                <outlet property="tinh10Button" destination="gEJ-9N-19n" id="Hjh-4f-jTM"/>
+                <outlet property="tinh1Button" destination="Akz-DA-1Qs" id="DR1-tI-Qxc"/>
+                <outlet property="tinh2Button" destination="M13-pp-7qn" id="qpp-Lj-vxy"/>
+                <outlet property="tinh3Button" destination="ez6-LJ-du2" id="Ogv-Kk-1Ly"/>
+                <outlet property="tinh4Button" destination="bv9-br-571" id="SZM-ja-Hot"/>
+                <outlet property="tinh5Button" destination="uQH-pa-YTa" id="6yS-Tt-BsL"/>
+                <outlet property="tinh6Button" destination="fCI-Xm-FJQ" id="di5-Jf-Vsi"/>
+                <outlet property="tinh7Button" destination="GyG-wZ-nnp" id="icF-xX-yAB"/>
+                <outlet property="tinh8Button" destination="ONy-9y-0mD" id="ZJk-pc-1P9"/>
+                <outlet property="tinh9Button" destination="i93-a8-Zny" id="dqP-UP-rr5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElE-dz-XaB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nDZ-gY-gsH">
+                            <rect key="frame" x="0.0" y="50" width="414" height="580"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-DA-1Qs">
+                                    <rect key="frame" x="40" y="0.0" width="334" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="4zV-mc-1kw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 1">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="2dV-wx-aDM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M13-pp-7qn">
+                                    <rect key="frame" x="40" y="60" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 2">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="fNM-TI-E5k"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez6-LJ-du2">
+                                    <rect key="frame" x="40" y="120" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 3">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="ltc-Zc-aqJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bv9-br-571">
+                                    <rect key="frame" x="40" y="180" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 4">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="Xyn-X8-RJu"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQH-pa-YTa">
+                                    <rect key="frame" x="40" y="240" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 5">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="QXP-Y5-cda"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-Xm-FJQ">
+                                    <rect key="frame" x="40" y="300" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 6">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="o0P-VX-aLb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyG-wZ-nnp">
+                                    <rect key="frame" x="40" y="360" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 7">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="KDa-6p-w87"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONy-9y-0mD">
+                                    <rect key="frame" x="40" y="420" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 8">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="4p5-R2-Tvh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i93-a8-Zny">
+                                    <rect key="frame" x="40" y="480" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 9">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="o7H-Qu-anH"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEJ-9N-19n">
+                                    <rect key="frame" x="40" y="540" width="334" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Tỉnh 10">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="U7O-qE-DWZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ez6-LJ-du2" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="08J-ut-qfZ"/>
+                                <constraint firstItem="M13-pp-7qn" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="4Y3-tn-FDR"/>
+                                <constraint firstItem="fCI-Xm-FJQ" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="6Bv-DP-FwR"/>
+                                <constraint firstItem="ONy-9y-0mD" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="8nR-Ey-lCa"/>
+                                <constraint firstAttribute="trailing" secondItem="Akz-DA-1Qs" secondAttribute="trailing" constant="40" id="SnZ-Ry-4cf"/>
+                                <constraint firstItem="uQH-pa-YTa" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="W3n-ZD-ItR"/>
+                                <constraint firstItem="uQH-pa-YTa" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="Y7u-Bu-gzX"/>
+                                <constraint firstItem="gEJ-9N-19n" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="cdS-aA-Bfl"/>
+                                <constraint firstItem="i93-a8-Zny" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="dIo-aU-blV"/>
+                                <constraint firstItem="bv9-br-571" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="dds-UQ-mhd"/>
+                                <constraint firstItem="M13-pp-7qn" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="fPg-fM-CKS"/>
+                                <constraint firstItem="ez6-LJ-du2" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="gxd-D8-Pe6"/>
+                                <constraint firstItem="Akz-DA-1Qs" firstAttribute="leading" secondItem="nDZ-gY-gsH" secondAttribute="leading" constant="40" id="imc-Ci-1jI"/>
+                                <constraint firstItem="ONy-9y-0mD" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="m3e-Fg-hlE"/>
+                                <constraint firstItem="gEJ-9N-19n" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="mEl-hY-4uc"/>
+                                <constraint firstItem="bv9-br-571" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="qgb-TM-Xip"/>
+                                <constraint firstItem="fCI-Xm-FJQ" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="qk9-h2-pXY"/>
+                                <constraint firstItem="GyG-wZ-nnp" firstAttribute="width" secondItem="Akz-DA-1Qs" secondAttribute="width" id="uVc-V9-pPe"/>
+                                <constraint firstItem="GyG-wZ-nnp" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="uyV-3m-Jxu"/>
+                                <constraint firstItem="i93-a8-Zny" firstAttribute="height" secondItem="Akz-DA-1Qs" secondAttribute="height" id="yPd-lX-Sup"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="nDZ-gY-gsH" firstAttribute="bottom" secondItem="91p-mt-EgM" secondAttribute="bottom" id="I1s-fx-X2j"/>
+                        <constraint firstItem="nDZ-gY-gsH" firstAttribute="trailing" secondItem="91p-mt-EgM" secondAttribute="trailing" id="IOH-Tp-njY"/>
+                        <constraint firstItem="91p-mt-EgM" firstAttribute="top" secondItem="nDZ-gY-gsH" secondAttribute="top" constant="-50" id="Q0G-j2-ZYx"/>
+                        <constraint firstItem="91p-mt-EgM" firstAttribute="leading" secondItem="nDZ-gY-gsH" secondAttribute="leading" id="dcJ-hV-UqF"/>
+                        <constraint firstItem="rHj-zf-xOk" firstAttribute="width" secondItem="nDZ-gY-gsH" secondAttribute="width" id="k8U-nE-40f"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="91p-mt-EgM"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="rHj-zf-xOk"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ElE-dz-XaB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="33H-cj-uxj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ElE-dz-XaB" secondAttribute="trailing" id="FQd-kj-hoU"/>
+                <constraint firstItem="ElE-dz-XaB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Vif-UZ-8k7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ElE-dz-XaB" secondAttribute="bottom" id="Xtk-4C-cqG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="145"/>
+        </view>
+    </objects>
+</document>
