@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="KGk-i7-Jjw" customClass="Home2TableViewCell" customModule="BaitapMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="j7a-L2-b4J">
+                        <rect key="frame" x="0.0" y="5" width="121" height="121"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="121" id="j3E-jY-ref"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v9O-ct-sSl">
+                        <rect key="frame" x="136" y="10" width="125" height="111"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="siq-cP-QU0">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="23.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 Ngo Quyen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-ub-89z">
+                                <rect key="frame" x="0.0" y="43.5" width="125" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCm-Ju-GCS">
+                                <rect key="frame" x="0.0" y="87.5" width="125" height="23.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOH-IM-5t8">
+                        <rect key="frame" x="276" y="15" width="25" height="25"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="icons8-star-50 (1)"/>
+                        <connections>
+                            <action selector="favoritesButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="O3E-82-BTe"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0i-V5-8bY">
+                        <rect key="frame" x="276" y="100.5" width="33.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="j7a-L2-b4J" secondAttribute="bottom" constant="5" id="1tq-Hi-XiS"/>
+                    <constraint firstItem="j7a-L2-b4J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DtP-IF-gWJ"/>
+                    <constraint firstItem="hOH-IM-5t8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="GlC-ks-puw"/>
+                    <constraint firstItem="v9O-ct-sSl" firstAttribute="leading" secondItem="j7a-L2-b4J" secondAttribute="trailing" constant="15" id="LVz-e3-tmf"/>
+                    <constraint firstItem="x0i-V5-8bY" firstAttribute="leading" secondItem="hOH-IM-5t8" secondAttribute="leading" id="NEd-QR-DwS"/>
+                    <constraint firstItem="x0i-V5-8bY" firstAttribute="bottom" secondItem="JCm-Ju-GCS" secondAttribute="bottom" id="QQY-wk-PuW"/>
+                    <constraint firstAttribute="bottom" secondItem="v9O-ct-sSl" secondAttribute="bottom" constant="10" id="UzT-P0-UTV"/>
+                    <constraint firstItem="hOH-IM-5t8" firstAttribute="leading" secondItem="v9O-ct-sSl" secondAttribute="trailing" constant="15" id="Xbm-16-D4o"/>
+                    <constraint firstItem="j7a-L2-b4J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iqO-Ug-hFn"/>
+                    <constraint firstItem="v9O-ct-sSl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="nXk-u0-iqY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="bzx-ub-89z" id="hcJ-DG-eDa"/>
+                <outlet property="cafeImageView" destination="j7a-L2-b4J" id="dYu-Fl-QE2"/>
+                <outlet property="distanceLabel" destination="JCm-Ju-GCS" id="xEx-d4-JXx"/>
+                <outlet property="favoritesButton" destination="hOH-IM-5t8" id="CKV-qS-nL7"/>
+                <outlet property="ratingLabel" destination="JCm-Ju-GCS" id="Z6C-zj-9M1"/>
+                <outlet property="titleLabel" destination="siq-cP-QU0" id="QYl-a2-g9C"/>
+            </connections>
+            <point key="canvasLocation" x="-296" y="95"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="i1" width="288" height="165"/>
+        <image name="icons8-star-50 (1)" width="25" height="25"/>
+    </resources>
+</document>
