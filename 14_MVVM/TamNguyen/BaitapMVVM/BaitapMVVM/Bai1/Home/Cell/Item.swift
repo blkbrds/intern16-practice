@@ -15,14 +15,12 @@ final class Item {
     var address: String
     var rate: String
     var distance: String
-    var status: Int
     
     // MARK: - Initial
-    init(nameCafe: String = "", address: String = "", rate: String = "", distance: String = "", status: Int = 0) {
+    init(nameCafe: String = "", address: String = "", rate: String = "", distance: String = "") {
         self.nameCafe = nameCafe
         self.address = address
         self.rate = rate
         self.distance = distance
-        self.status = status
     }
 }

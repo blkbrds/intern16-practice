@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Cong Cafe</string>
+		<string>35 Ngo Quyen</string>
+		<string>6/10</string>
+		<string>2km</string>
+	</array>
+	<array>
+		<string>Anh Kafe</string>
+		<string>34 Dinh Tien Hoang</string>
+		<string>9/10</string>
+		<string>1km</string>
+	</array>
+	<array>
+		<string>Goc Cafe</string>
+		<string>23 Le Loi</string>
+		<string>3/10</string>
+		<string>5km</string>
+	</array>
+	<array>
+		<string>Love Cafe</string>
+		<string>30 Ton Duc Thang</string>
+		<string>8/10</string>
+		<string>4km</string>
+	</array>
+	<array>
+		<string>Hate Cafe</string>
+		<string>34 Ngo Si Lien</string>
+		<string>5/10</string>
+		<string>1km</string>
+	</array>
+</array>
+</plist>

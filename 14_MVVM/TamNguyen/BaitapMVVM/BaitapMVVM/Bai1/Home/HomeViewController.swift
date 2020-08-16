@@ -19,32 +19,38 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private var numberImage: Int = 1
+    private var viewModel = HomeViewModel()
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
         configPageControl()
+        loadData()
         configUI()
 }
     
     // MARK: - Private methods
     private func configTableView() {
         title = "Home"
-        let nib = UINib(nibName: "HomeTableViewCell", bundle: .main)
+        let nib = UINib(nibName: "HomeCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "tableCell")
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    private func configUI() {
+        let collectionButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-table-50.png"), style: .plain, target: self, action: #selector(switchButtonTouchUpInside))
+        navigationItem.rightBarButtonItem = collectionButton
+    }
+    
+    private func loadData() {
+        viewModel.getData()
+    }
+    
     private func configPageControl() {
         pageControl.numberOfPages = 3
         pageControl.currentPage = 0
-    }
-    
-    private func configUI() {
-        let collectionButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-menu-50.png"), style: .plain, target: self, action: #selector(switchButtonTouchUpInside))
-        navigationItem.rightBarButtonItem = collectionButton
     }
     
     private func slideShow() {
@@ -63,8 +69,7 @@ final class HomeViewController: UIViewController {
     }
     
     @objc private func switchButtonTouchUpInside() {
-        let vc = Home2ViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        tableView.isHidden = true
     }
     
     // MARK: - IBActions
@@ -85,19 +90,20 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return viewModel.numberOfSection()
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberRowInSection(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as? HomeTableViewCell else { return HomeTableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as? HomeCell else { return UITableViewCell() }
+        cell.viewModel = viewModel.viewModelForCell(at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
-    
 }
