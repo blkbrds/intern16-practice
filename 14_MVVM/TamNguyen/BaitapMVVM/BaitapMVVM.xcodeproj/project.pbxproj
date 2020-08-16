@@ -20,18 +20,9 @@
 		31F199EC24E41C5B00554DF6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199EA24E41C5B00554DF6 /* ProfileViewController.swift */; };
 		31F199ED24E41C5B00554DF6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F199EB24E41C5B00554DF6 /* ProfileViewController.xib */; };
 		31F199EF24E41CAE00554DF6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199EE24E41CAE00554DF6 /* BaseTabBarController.swift */; };
-		31F199F224E4D6DD00554DF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199F024E4D6DD00554DF6 /* HomeTableViewCell.swift */; };
-		31F199F324E4D6DD00554DF6 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F199F124E4D6DD00554DF6 /* HomeTableViewCell.xib */; };
-		31F199F724E4DA1100554DF6 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199F524E4DA1100554DF6 /* HomeCollectionViewCell.swift */; };
-		31F199F824E4DA1100554DF6 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F199F624E4DA1100554DF6 /* HomeCollectionViewCell.xib */; };
 		31F199FB24E5349D00554DF6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199FA24E5349D00554DF6 /* LoginViewModel.swift */; };
 		31F199FD24E567E200554DF6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199FC24E567E200554DF6 /* Item.swift */; };
-		31F199FF24E56BA200554DF6 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F199FE24E56BA200554DF6 /* CollectionViewModel.swift */; };
-		31F19A0224E581B100554DF6 /* CollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F19A0124E581B100554DF6 /* CollectionCellModel.swift */; };
-		31F19A0F24E82BB300554DF6 /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F19A0D24E82BB300554DF6 /* Home2ViewController.swift */; };
-		31F19A1024E82BB300554DF6 /* Home2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F19A0E24E82BB300554DF6 /* Home2ViewController.xib */; };
-		31F19A1324E8B6A800554DF6 /* Home2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F19A1124E8B6A800554DF6 /* Home2TableViewCell.swift */; };
-		31F19A1424E8B6A800554DF6 /* Home2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F19A1224E8B6A800554DF6 /* Home2TableViewCell.xib */; };
+		31F19A0224E581B100554DF6 /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F19A0124E581B100554DF6 /* HomeCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,18 +41,9 @@
 		31F199EA24E41C5B00554DF6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31F199EB24E41C5B00554DF6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		31F199EE24E41CAE00554DF6 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		31F199F024E4D6DD00554DF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		31F199F124E4D6DD00554DF6 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
-		31F199F524E4DA1100554DF6 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		31F199F624E4DA1100554DF6 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		31F199FA24E5349D00554DF6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		31F199FC24E567E200554DF6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		31F199FE24E56BA200554DF6 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
-		31F19A0124E581B100554DF6 /* CollectionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellModel.swift; sourceTree = "<group>"; };
-		31F19A0D24E82BB300554DF6 /* Home2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home2ViewController.swift; sourceTree = "<group>"; };
-		31F19A0E24E82BB300554DF6 /* Home2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home2ViewController.xib; sourceTree = "<group>"; };
-		31F19A1124E8B6A800554DF6 /* Home2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home2TableViewCell.swift; sourceTree = "<group>"; };
-		31F19A1224E8B6A800554DF6 /* Home2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home2TableViewCell.xib; sourceTree = "<group>"; };
+		31F19A0124E581B100554DF6 /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +114,6 @@
 				31F199F424E4D9C700554DF6 /* Cell */,
 				31F199DE24E41C1C00554DF6 /* HomeViewController.swift */,
 				31F199DF24E41C1C00554DF6 /* HomeViewController.xib */,
-				31F19A0D24E82BB300554DF6 /* Home2ViewController.swift */,
-				31F19A0E24E82BB300554DF6 /* Home2ViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -168,15 +148,8 @@
 		31F199F424E4D9C700554DF6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				31F199F124E4D6DD00554DF6 /* HomeTableViewCell.xib */,
-				31F199F024E4D6DD00554DF6 /* HomeTableViewCell.swift */,
-				31F199F524E4DA1100554DF6 /* HomeCollectionViewCell.swift */,
-				31F199F624E4DA1100554DF6 /* HomeCollectionViewCell.xib */,
 				31F199FC24E567E200554DF6 /* Item.swift */,
-				31F199FE24E56BA200554DF6 /* CollectionViewModel.swift */,
-				31F19A0124E581B100554DF6 /* CollectionCellModel.swift */,
-				31F19A1124E8B6A800554DF6 /* Home2TableViewCell.swift */,
-				31F19A1224E8B6A800554DF6 /* Home2TableViewCell.xib */,
+				31F19A0124E581B100554DF6 /* HomeCellModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -263,15 +236,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				31F199ED24E41C5B00554DF6 /* ProfileViewController.xib in Resources */,
-				31F199F324E4D6DD00554DF6 /* HomeTableViewCell.xib in Resources */,
 				31F199DD24E4131F00554DF6 /* LoginViewController.xib in Resources */,
-				31F199F824E4DA1100554DF6 /* HomeCollectionViewCell.xib in Resources */,
 				31F199CA24E4123200554DF6 /* Assets.xcassets in Resources */,
 				31F199E124E41C1C00554DF6 /* HomeViewController.xib in Resources */,
 				31F199E924E41C4700554DF6 /* FavoritesViewController.xib in Resources */,
 				31F199E524E41C3400554DF6 /* MapViewController.xib in Resources */,
-				31F19A1024E82BB300554DF6 /* Home2ViewController.xib in Resources */,
-				31F19A1424E8B6A800554DF6 /* Home2TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,18 +252,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				31F199EF24E41CAE00554DF6 /* BaseTabBarController.swift in Sources */,
-				31F19A1324E8B6A800554DF6 /* Home2TableViewCell.swift in Sources */,
 				31F199DC24E4131F00554DF6 /* LoginViewController.swift in Sources */,
 				31F199FB24E5349D00554DF6 /* LoginViewModel.swift in Sources */,
 				31F199C124E4122F00554DF6 /* AppDelegate.swift in Sources */,
-				31F19A0224E581B100554DF6 /* CollectionCellModel.swift in Sources */,
+				31F19A0224E581B100554DF6 /* HomeCellModel.swift in Sources */,
 				31F199E424E41C3400554DF6 /* MapViewController.swift in Sources */,
-				31F199F724E4DA1100554DF6 /* HomeCollectionViewCell.swift in Sources */,
 				31F199FD24E567E200554DF6 /* Item.swift in Sources */,
-				31F19A0F24E82BB300554DF6 /* Home2ViewController.swift in Sources */,
-				31F199FF24E56BA200554DF6 /* CollectionViewModel.swift in Sources */,
 				31F199EC24E41C5B00554DF6 /* ProfileViewController.swift in Sources */,
-				31F199F224E4D6DD00554DF6 /* HomeTableViewCell.swift in Sources */,
 				31F199E824E41C4700554DF6 /* FavoritesViewController.swift in Sources */,
 				31F199E024E41C1C00554DF6 /* HomeViewController.swift in Sources */,
 			);

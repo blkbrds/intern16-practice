@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class CollectionCellModel {
+final class HomeCellModel {
     
     // MARK: - Properties
     var item: Item = Item()
