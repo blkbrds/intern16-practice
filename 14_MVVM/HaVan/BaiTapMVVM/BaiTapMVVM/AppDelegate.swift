@@ -29,9 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let isLogined: Bool = UserDefaults.standard.bool(forKey: "state")
         if isLogined {
-            configLogin()
-        } else {
             configTabbar()
+        } else {
+            configLogin()
         }
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()

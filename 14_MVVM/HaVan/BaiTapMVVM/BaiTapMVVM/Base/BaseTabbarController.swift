@@ -20,7 +20,7 @@ final class BaseTabbarController: UITabBarController {
     // MARK: - Private functions
     private func configTabbar() {
         // Home Navigation Controller
-        let homeNavigationController = UINavigationController(rootViewController: HomeViewController())
+        let homeNavigationController = UINavigationController(rootViewController: Home1ViewController())
         homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "homeFilled"))
         // Map Navigation Controller
         let mapNavigationController = UINavigationController(rootViewController: MapViewController())

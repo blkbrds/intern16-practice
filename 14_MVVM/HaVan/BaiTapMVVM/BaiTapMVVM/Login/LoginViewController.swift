@@ -23,6 +23,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         configTextField()
         errorLabel.isHidden = true
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
     // MARK: - Override functions

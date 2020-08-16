@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Coffee5</key>
+	<dict>
+		<key>name</key>
+		<string>Kitty Coffee</string>
+		<key>address</key>
+		<string>15 Hoang Dieu</string>
+		<key>rate</key>
+		<string>8</string>
+		<key>favorite</key>
+		<false/>
+	</dict>
+	<key>Coffee4</key>
+	<dict>
+		<key>name</key>
+		<string>CONG</string>
+		<key>address</key>
+		<string>145 NguyenTrai</string>
+		<key>rate</key>
+		<integer>8</integer>
+		<key>favorite</key>
+		<false/>
+	</dict>
+	<key>Coffee3</key>
+	<dict>
+		<key>name</key>
+		<string>Highland</string>
+		<key>address</key>
+		<string>05 Ly Thai To</string>
+		<key>favorite</key>
+		<false/>
+		<key>rate</key>
+		<integer>7</integer>
+	</dict>
+	<key>Coffee2</key>
+	<dict>
+		<key>rate</key>
+		<integer>6</integer>
+		<key>favorite</key>
+		<false/>
+		<key>address</key>
+		<string>12 Dinh Tien Hoang</string>
+		<key>name</key>
+		<string>Mua Coffee</string>
+	</dict>
+	<key>Coffee1</key>
+	<dict>
+		<key>rate</key>
+		<integer>7</integer>
+		<key>favorite</key>
+		<false/>
+		<key>address</key>
+		<string>09 Triệu Nữ Vương</string>
+		<key>name</key>
+		<string>The Coffee House</string>
+	</dict>
+</dict>
+</plist>
