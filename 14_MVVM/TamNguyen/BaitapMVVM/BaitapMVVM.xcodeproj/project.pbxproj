@@ -27,6 +27,8 @@
 		31F19A1824E9193000554DF6 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F19A1624E9193000554DF6 /* HomeCell.xib */; };
 		31F19A1B24E91E6F00554DF6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F19A1A24E91E6F00554DF6 /* HomeViewModel.swift */; };
 		31F19A1D24E9236E00554DF6 /* cafe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31F19A1C24E9236E00554DF6 /* cafe.plist */; };
+		31F19A2624E957AB00554DF6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F19A2424E957AB00554DF6 /* CollectionViewCell.swift */; };
+		31F19A2724E957AB00554DF6 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F19A2524E957AB00554DF6 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		31F19A1624E9193000554DF6 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		31F19A1A24E91E6F00554DF6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		31F19A1C24E9236E00554DF6 /* cafe.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = cafe.plist; sourceTree = "<group>"; };
+		31F19A2424E957AB00554DF6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		31F19A2524E957AB00554DF6 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 				31F19A1524E9193000554DF6 /* HomeCell.swift */,
 				31F19A1624E9193000554DF6 /* HomeCell.xib */,
 				31F19A1A24E91E6F00554DF6 /* HomeViewModel.swift */,
+				31F19A2424E957AB00554DF6 /* CollectionViewCell.swift */,
+				31F19A2524E957AB00554DF6 /* CollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 				31F199E124E41C1C00554DF6 /* HomeViewController.xib in Resources */,
 				31F199E924E41C4700554DF6 /* FavoritesViewController.xib in Resources */,
 				31F199E524E41C3400554DF6 /* MapViewController.xib in Resources */,
+				31F19A2724E957AB00554DF6 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +280,7 @@
 				31F19A0224E581B100554DF6 /* HomeCellModel.swift in Sources */,
 				31F199E424E41C3400554DF6 /* MapViewController.swift in Sources */,
 				31F19A1B24E91E6F00554DF6 /* HomeViewModel.swift in Sources */,
+				31F19A2624E957AB00554DF6 /* CollectionViewCell.swift in Sources */,
 				31F199FD24E567E200554DF6 /* Item.swift in Sources */,
 				31F199EC24E41C5B00554DF6 /* ProfileViewController.swift in Sources */,
 				31F199E824E41C4700554DF6 /* FavoritesViewController.swift in Sources */,

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BaitapMVVM" customModuleProvider="target">
             <connections>
                 <outlet property="cafeImageView" destination="CR1-3G-Q3a" id="t1T-N7-kty"/>
+                <outlet property="collectionView" destination="trG-ag-Iee" id="exR-j1-xJh"/>
                 <outlet property="leftButton" destination="QKp-wR-aNf" id="ixe-gM-hef"/>
                 <outlet property="pageControl" destination="9DW-Vw-EHV" id="SgE-eE-kvK"/>
                 <outlet property="rightButton" destination="IVp-8i-Iv8" id="sRp-vk-4Ts"/>
@@ -54,17 +55,35 @@
                     <color key="pageIndicatorTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="trG-ag-Iee">
+                    <rect key="frame" x="0.0" y="239" width="414" height="623"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xdW-Gm-8I8">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qkK-03-BO8"/>
+                        <outlet property="delegate" destination="-1" id="USf-2h-vm3"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CR1-3G-Q3a" secondAttribute="trailing" id="1T4-Lg-SC2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9fh-UH-bTM" secondAttribute="trailing" id="1Ti-B0-AKt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="trG-ag-Iee" secondAttribute="trailing" id="2J2-Gu-ARP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="trG-ag-Iee" secondAttribute="bottom" id="9UZ-0j-0Cj"/>
                 <constraint firstItem="QKp-wR-aNf" firstAttribute="top" secondItem="IVp-8i-Iv8" secondAttribute="top" id="E4m-ln-9hC"/>
+                <constraint firstItem="trG-ag-Iee" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H7s-Eu-K9F"/>
                 <constraint firstItem="QKp-wR-aNf" firstAttribute="bottom" secondItem="IVp-8i-Iv8" secondAttribute="bottom" id="ImT-zF-aZw"/>
                 <constraint firstItem="QKp-wR-aNf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="82" id="J2T-FG-PrR"/>
                 <constraint firstItem="9fh-UH-bTM" firstAttribute="top" secondItem="CR1-3G-Q3a" secondAttribute="bottom" constant="5" id="O8v-Op-vgh"/>
                 <constraint firstItem="9DW-Vw-EHV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SFA-hZ-4WP"/>
                 <constraint firstItem="CR1-3G-Q3a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZgC-O3-Uo3"/>
+                <constraint firstItem="trG-ag-Iee" firstAttribute="top" secondItem="CR1-3G-Q3a" secondAttribute="bottom" id="c59-dT-Tul"/>
                 <constraint firstItem="QKp-wR-aNf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e9d-gc-ez8"/>
                 <constraint firstItem="9fh-UH-bTM" firstAttribute="top" secondItem="9DW-Vw-EHV" secondAttribute="bottom" constant="15" id="flC-4O-K2h"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVp-8i-Iv8" secondAttribute="trailing" constant="20" id="fs1-AY-YKh"/>

@@ -1,5 +1,5 @@
 //
-//  HomeCell.swift
+//  CollectionViewCell.swift
 //  BaitapMVVM
 //
 //  Created by PCI0001 on 8/16/20.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-final class HomeCell: UITableViewCell {
-    
+final class CollectionViewCell: UICollectionViewCell {
+
     // MARK: - IBOulets
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
@@ -19,19 +19,19 @@ final class HomeCell: UITableViewCell {
     
     // MARK: - Properties
     private var flagFavoriteButton: Int = 1
-    var viewModel = HomeCellModel() {
+    var viewmodel2 = HomeCellModel() {
         didSet {
             updateView()
         }
     }
     enum Display: Int {
-        case like = 1
         case unlike = 0
+        case like = 1
     }
     
     // MARK: - Private methods
     private func updateView() {
-        let item = viewModel.item
+        let item = viewmodel2.item
         titleLabel.text = item.nameCafe
         addressLabel.text = item.address
         ratingLabel.text = item.rate
@@ -39,7 +39,7 @@ final class HomeCell: UITableViewCell {
     }
     
     // MARK: - IBActions
-    @IBAction private func favoritesButtonTouchUpInSide(_sender: UIButton) {
+    @IBAction private func favoritesButtonTouchUpInside(_sender: UIButton) {
         guard let display = Display(rawValue: flagFavoriteButton) else { return }
         switch display {
         case .like:

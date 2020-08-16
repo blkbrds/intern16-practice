@@ -76,6 +76,7 @@
                     <constraint firstItem="S7s-wT-tLy" firstAttribute="trailing" secondItem="d0J-cJ-gBJ" secondAttribute="trailing" id="xNC-3W-X2l"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addressLabel" destination="h3H-Iu-ATY" id="BRZ-hG-j2H"/>

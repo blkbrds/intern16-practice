@@ -12,23 +12,26 @@ final class HomeViewController: UIViewController {
     
     // MARK: - IBOulets
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var cafeImageView: UIImageView!
     @IBOutlet private weak var leftButton: UIButton!
     @IBOutlet private weak var rightButton: UIButton!
     @IBOutlet private weak var pageControl: UIPageControl!
     
     // MARK: - Properties
+    private var flagDisplay: Int = 1
     private var numberImage: Int = 1
     private var viewModel = HomeViewModel()
-
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        configCollectionView()
         configPageControl()
         loadData()
         configUI()
-}
+    }
     
     // MARK: - Private methods
     private func configTableView() {
@@ -39,8 +42,16 @@ final class HomeViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    private func configCollectionView() {
+        let nib = UINib(nibName: "CollectionViewCell", bundle: .main)
+        collectionView.register(nib, forCellWithReuseIdentifier: "collectionCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
     private func configUI() {
-        let collectionButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-table-50.png"), style: .plain, target: self, action: #selector(switchButtonTouchUpInside))
+        
+        let collectionButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-table-50.png"), style: .plain, target: self, action: #selector(switchCollectionButtonTouchUpInside))
         navigationItem.rightBarButtonItem = collectionButton
     }
     
@@ -68,8 +79,17 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    @objc private func switchButtonTouchUpInside() {
-        tableView.isHidden = true
+    @objc private func switchCollectionButtonTouchUpInside() {
+        switch flagDisplay {
+        case 0:
+            tableView.isHidden = true
+            collectionView.isHidden = false
+            flagDisplay = 1
+        default:
+            tableView.isHidden = false
+            collectionView.isHidden = true
+            flagDisplay = 0
+        }
     }
     
     // MARK: - IBActions
@@ -86,7 +106,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - Extension UITableViewDelegate, UITableViewDataSource
+// MARK: - Extension UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSoure
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -105,5 +125,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+}
+
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberRowInSection(in: section)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+        cell.viewmodel2 = viewModel.viewModelForCell(at: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 370, height: 170)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }
