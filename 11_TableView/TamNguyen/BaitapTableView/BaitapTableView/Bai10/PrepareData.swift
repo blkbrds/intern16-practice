@@ -30,12 +30,8 @@ final class PrepareData {
     
     func getUser() {
         var users: [[UserContact]] = []
-        guard let path = Bundle.main.url(forResource: "Contact", withExtension: "plist") else {
-            return
-        }
-        guard let data = NSArray(contentsOf: path) as? [[[String]]] else {
-            return
-        }
+        guard let path = Bundle.main.url(forResource: "Contact", withExtension: "plist") else { return }
+        guard let data = NSArray(contentsOf: path) as? [[[String]]] else { return }
         
         for index1 in 0 ..< data.count {
             var userNames = [UserContact]()

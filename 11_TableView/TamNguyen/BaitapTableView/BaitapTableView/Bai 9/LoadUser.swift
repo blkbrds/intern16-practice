@@ -30,11 +30,8 @@ final class LoadUser {
     
     func getUser() {
         var users: [[User]] = []
-        guard let path = Bundle.main.url(forResource: "Friends", withExtension: "plist") else {
-            return         }
-        guard let data = NSArray(contentsOf: path) as? [[String]] else {
-            return
-        }
+        guard let path = Bundle.main.url(forResource: "Friends", withExtension: "plist") else { return }
+        guard let data = NSArray(contentsOf: path) as? [[String]] else { return }
         
         for index1 in 0 ..< data.count {
             var userNames = [User]()
