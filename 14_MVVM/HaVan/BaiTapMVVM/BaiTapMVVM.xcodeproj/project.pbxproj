@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526A632E24EA3C6E00AE7FF4 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A632C24EA3C6E00AE7FF4 /* SlideCell.swift */; };
+		526A632F24EA3C6E00AE7FF4 /* SlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526A632D24EA3C6E00AE7FF4 /* SlideCell.xib */; };
+		526A633124EA3CA200AE7FF4 /* SlideCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633024EA3CA200AE7FF4 /* SlideCellViewModel.swift */; };
+		526A633524EA42A100AE7FF4 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633424EA42A100AE7FF4 /* SlideView.swift */; };
+		526A633724EA42BE00AE7FF4 /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526A633624EA42BE00AE7FF4 /* SlideView.xib */; };
+		526A633924EA430B00AE7FF4 /* SlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633824EA430B00AE7FF4 /* SlideViewModel.swift */; };
 		5293D9F224E6E1ED007475D5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293D9F024E6E1ED007475D5 /* LoginViewController.xib */; };
 		5293D9F324E6E1ED007475D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293D9F124E6E1ED007475D5 /* LoginViewController.swift */; };
 		5293D9F724E6E1F7007475D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293D9F524E6E1F7007475D5 /* MapViewController.swift */; };
@@ -17,8 +23,8 @@
 		5293DA0224E6E206007475D5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293DA0024E6E206007475D5 /* RegisterViewController.swift */; };
 		5293DA0624E6E20D007475D5 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293DA0424E6E20D007475D5 /* ForgotPasswordViewController.swift */; };
 		5293DA0724E6E20D007475D5 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293DA0524E6E20D007475D5 /* ForgotPasswordViewController.xib */; };
-		5293DA0B24E6E21D007475D5 /* Home1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293DA0924E6E21D007475D5 /* Home1ViewController.xib */; };
-		5293DA0C24E6E21D007475D5 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293DA0A24E6E21D007475D5 /* Home1ViewController.swift */; };
+		5293DA0B24E6E21D007475D5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293DA0924E6E21D007475D5 /* HomeViewController.xib */; };
+		5293DA0C24E6E21D007475D5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293DA0A24E6E21D007475D5 /* HomeViewController.swift */; };
 		5293DA1024E6E22B007475D5 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293DA0E24E6E22B007475D5 /* FavoriteViewController.swift */; };
 		5293DA1124E6E22B007475D5 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293DA0F24E6E22B007475D5 /* FavoriteViewController.xib */; };
 		5293DA1524E6E250007475D5 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293DA1424E6E250007475D5 /* BaseTabbarController.swift */; };
@@ -32,17 +38,23 @@
 		52A84D6E24E8D829006F5885 /* CoffeeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A84D6D24E8D829006F5885 /* CoffeeList.plist */; };
 		52A84D7024E8DFB3006F5885 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D6F24E8DFB3006F5885 /* Coffee.swift */; };
 		52A84D7624E8E588006F5885 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D7524E8E588006F5885 /* HomeViewModel.swift */; };
-		52A84D7D24E9182C006F5885 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D7B24E9182C006F5885 /* HomeTableViewController.swift */; };
-		52A84D7E24E9182C006F5885 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A84D7C24E9182C006F5885 /* HomeTableViewController.xib */; };
 		52A84D8124E9195A006F5885 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D7F24E9195A006F5885 /* HomeTableViewCell.swift */; };
 		52A84D8224E9195A006F5885 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A84D8024E9195A006F5885 /* HomeTableViewCell.xib */; };
 		52A84D8424E9210D006F5885 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D8324E9210D006F5885 /* HomeCellViewModel.swift */; };
+		52C00E8A24EA2BD00015EDB2 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C00E8824EA2BD00015EDB2 /* HomeCollectionViewCell.swift */; };
+		52C00E8B24EA2BD00015EDB2 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C00E8924EA2BD00015EDB2 /* HomeCollectionViewCell.xib */; };
 		52C0774124E7CD51000C1649 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0774024E7CD51000C1649 /* RegisterViewModel.swift */; };
 		52C0774324E7D66A000C1649 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0774224E7D66A000C1649 /* LoginViewModel.swift */; };
 		52C0774524E7D9FB000C1649 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0774424E7D9FB000C1649 /* ForgotPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		526A632C24EA3C6E00AE7FF4 /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
+		526A632D24EA3C6E00AE7FF4 /* SlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCell.xib; sourceTree = "<group>"; };
+		526A633024EA3CA200AE7FF4 /* SlideCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCellViewModel.swift; sourceTree = "<group>"; };
+		526A633424EA42A100AE7FF4 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		526A633624EA42BE00AE7FF4 /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
+		526A633824EA430B00AE7FF4 /* SlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewModel.swift; sourceTree = "<group>"; };
 		5293D9F024E6E1ED007475D5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5293D9F124E6E1ED007475D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5293D9F524E6E1F7007475D5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -53,8 +65,8 @@
 		5293DA0024E6E206007475D5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5293DA0424E6E20D007475D5 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5293DA0524E6E20D007475D5 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
-		5293DA0924E6E21D007475D5 /* Home1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home1ViewController.xib; sourceTree = "<group>"; };
-		5293DA0A24E6E21D007475D5 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
+		5293DA0924E6E21D007475D5 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		5293DA0A24E6E21D007475D5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5293DA0E24E6E22B007475D5 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		5293DA0F24E6E22B007475D5 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		5293DA1424E6E250007475D5 /* BaseTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
@@ -70,11 +82,11 @@
 		52A84D6D24E8D829006F5885 /* CoffeeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CoffeeList.plist; sourceTree = "<group>"; };
 		52A84D6F24E8DFB3006F5885 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		52A84D7524E8E588006F5885 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		52A84D7B24E9182C006F5885 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		52A84D7C24E9182C006F5885 /* HomeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		52A84D7F24E9195A006F5885 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		52A84D8024E9195A006F5885 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		52A84D8324E9210D006F5885 /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		52C00E8824EA2BD00015EDB2 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		52C00E8924EA2BD00015EDB2 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		52C0774024E7CD51000C1649 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		52C0774224E7D66A000C1649 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		52C0774424E7D9FB000C1649 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -142,11 +154,13 @@
 		5293DA0824E6E21D007475D5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				52C00E8724EA2BAD0015EDB2 /* CollectionView */,
 				52A84D7424E8E557006F5885 /* TableView */,
 				52A84D7324E8E54B006F5885 /* SlideCell */,
-				5293DA0924E6E21D007475D5 /* Home1ViewController.xib */,
-				5293DA0A24E6E21D007475D5 /* Home1ViewController.swift */,
+				5293DA0924E6E21D007475D5 /* HomeViewController.xib */,
+				5293DA0A24E6E21D007475D5 /* HomeViewController.swift */,
 				52A84D7524E8E588006F5885 /* HomeViewModel.swift */,
+				52A84D8324E9210D006F5885 /* HomeCellViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -219,6 +233,12 @@
 		52A84D7324E8E54B006F5885 /* SlideCell */ = {
 			isa = PBXGroup;
 			children = (
+				526A632C24EA3C6E00AE7FF4 /* SlideCell.swift */,
+				526A632D24EA3C6E00AE7FF4 /* SlideCell.xib */,
+				526A633024EA3CA200AE7FF4 /* SlideCellViewModel.swift */,
+				526A633424EA42A100AE7FF4 /* SlideView.swift */,
+				526A633624EA42BE00AE7FF4 /* SlideView.xib */,
+				526A633824EA430B00AE7FF4 /* SlideViewModel.swift */,
 			);
 			path = SlideCell;
 			sourceTree = "<group>";
@@ -226,21 +246,19 @@
 		52A84D7424E8E557006F5885 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				52A84D8524E926DE006F5885 /* Cell */,
-				52A84D7B24E9182C006F5885 /* HomeTableViewController.swift */,
-				52A84D7C24E9182C006F5885 /* HomeTableViewController.xib */,
+				52A84D7F24E9195A006F5885 /* HomeTableViewCell.swift */,
+				52A84D8024E9195A006F5885 /* HomeTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		52A84D8524E926DE006F5885 /* Cell */ = {
+		52C00E8724EA2BAD0015EDB2 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				52A84D7F24E9195A006F5885 /* HomeTableViewCell.swift */,
-				52A84D8024E9195A006F5885 /* HomeTableViewCell.xib */,
-				52A84D8324E9210D006F5885 /* HomeCellViewModel.swift */,
+				52C00E8824EA2BD00015EDB2 /* HomeCollectionViewCell.swift */,
+				52C00E8924EA2BD00015EDB2 /* HomeCollectionViewCell.xib */,
 			);
-			path = Cell;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		52C0773F24E77AFB000C1649 /* Base */ = {
@@ -313,15 +331,17 @@
 				5293DA1724E6E258007475D5 /* BaseTabbarController.xib in Resources */,
 				529D8E8924E6DDB1000CCFC9 /* LaunchScreen.storyboard in Resources */,
 				529D8E8624E6DDB1000CCFC9 /* Assets.xcassets in Resources */,
+				526A632F24EA3C6E00AE7FF4 /* SlideCell.xib in Resources */,
+				526A633724EA42BE00AE7FF4 /* SlideView.xib in Resources */,
 				5293DA0724E6E20D007475D5 /* ForgotPasswordViewController.xib in Resources */,
-				52A84D7E24E9182C006F5885 /* HomeTableViewController.xib in Resources */,
 				52A84D6E24E8D829006F5885 /* CoffeeList.plist in Resources */,
 				5293D9F224E6E1ED007475D5 /* LoginViewController.xib in Resources */,
 				5293D9FC24E6E1FF007475D5 /* ProfileViewController.xib in Resources */,
 				52A84D8224E9195A006F5885 /* HomeTableViewCell.xib in Resources */,
 				5293D9F824E6E1F7007475D5 /* MapViewController.xib in Resources */,
 				5293DA0124E6E206007475D5 /* RegisterViewController.xib in Resources */,
-				5293DA0B24E6E21D007475D5 /* Home1ViewController.xib in Resources */,
+				5293DA0B24E6E21D007475D5 /* HomeViewController.xib in Resources */,
+				52C00E8B24EA2BD00015EDB2 /* HomeCollectionViewCell.xib in Resources */,
 				5293DA1124E6E22B007475D5 /* FavoriteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,18 +357,22 @@
 				5293D9F724E6E1F7007475D5 /* MapViewController.swift in Sources */,
 				52A84D7624E8E588006F5885 /* HomeViewModel.swift in Sources */,
 				52C0774524E7D9FB000C1649 /* ForgotPasswordViewModel.swift in Sources */,
+				526A633924EA430B00AE7FF4 /* SlideViewModel.swift in Sources */,
 				52A84D8424E9210D006F5885 /* HomeCellViewModel.swift in Sources */,
 				5293DA3124E7742C007475D5 /* User+CoreDataClass.swift in Sources */,
 				529D8E7A24E6DDAC000CCFC9 /* AppDelegate.swift in Sources */,
 				52A84D8124E9195A006F5885 /* HomeTableViewCell.swift in Sources */,
-				52A84D7D24E9182C006F5885 /* HomeTableViewController.swift in Sources */,
+				526A633524EA42A100AE7FF4 /* SlideView.swift in Sources */,
 				5293DA0224E6E206007475D5 /* RegisterViewController.swift in Sources */,
 				529D8E8424E6DDAC000CCFC9 /* BaiTapMVVM.xcdatamodeld in Sources */,
+				526A633124EA3CA200AE7FF4 /* SlideCellViewModel.swift in Sources */,
 				52C0774124E7CD51000C1649 /* RegisterViewModel.swift in Sources */,
-				5293DA0C24E6E21D007475D5 /* Home1ViewController.swift in Sources */,
+				5293DA0C24E6E21D007475D5 /* HomeViewController.swift in Sources */,
 				5293DA0624E6E20D007475D5 /* ForgotPasswordViewController.swift in Sources */,
+				526A632E24EA3C6E00AE7FF4 /* SlideCell.swift in Sources */,
 				5293DA3224E7742C007475D5 /* User+CoreDataProperties.swift in Sources */,
 				5293DA1524E6E250007475D5 /* BaseTabbarController.swift in Sources */,
+				52C00E8A24EA2BD00015EDB2 /* HomeCollectionViewCell.swift in Sources */,
 				5293D9FD24E6E1FF007475D5 /* ProfileViewController.swift in Sources */,
 				5293D9F324E6E1ED007475D5 /* LoginViewController.swift in Sources */,
 				52C0774324E7D66A000C1649 /* LoginViewModel.swift in Sources */,

@@ -26,8 +26,4 @@ final class HomeCellViewModel {
         self.distance = distance
         self.favorite = favorite
     }
-    
-    func changeState(fav: Bool) {
-        favorite = fav
-    }
 }
