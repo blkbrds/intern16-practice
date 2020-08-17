@@ -22,6 +22,10 @@ final class HomeViewController: UIViewController {
     private var flagDisplay: Int = 1
     private var numberImage: Int = 1
     private var viewModel = HomeViewModel()
+    enum Display: Int {
+        case appear = 1
+        case hidden = 0
+    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -80,8 +84,9 @@ final class HomeViewController: UIViewController {
     }
     
     @objc private func switchCollectionButtonTouchUpInside() {
-        switch flagDisplay {
-        case 0:
+        guard let display = Display(rawValue: flagDisplay) else { return }
+        switch display {
+        case .hidden:
             tableView.isHidden = true
             collectionView.isHidden = false
             flagDisplay = 1
@@ -125,6 +130,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
 
