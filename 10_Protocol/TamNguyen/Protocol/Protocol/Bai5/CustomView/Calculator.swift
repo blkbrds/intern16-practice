@@ -86,11 +86,4 @@ final class Calculator: UIView {
     @IBAction private func cancelButtonTouchUpInside(_ sender: Any) {
         self.isHidden = true
     }
-    
-    // MARK: - Public methods
-    func updateView() {
-        guard let x = dataSource?.getNumberX(), let y = dataSource?.getNumberY() else { return }
-        numberXLabel.text = String(x)
-        numberYLabel.text = String(y)
-    }
 }

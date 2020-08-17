@@ -21,7 +21,6 @@ final class Bai5ViewController: UIViewController {
         guard let calculatorCustom = Bundle.main.loadNibNamed("Calculator", owner: self, options: nil)?.first as? Calculator else { return }
         calculatorCustom.frame = CGRect(x: 20, y: 250, width: 300, height: 300)
         calculatorCustom.dataSource = self
-        calculatorCustom.updateView()
         calculatorCustom.delegate = self
         view.addSubview(calculatorCustom)
     }

@@ -10,7 +10,7 @@ import UIKit
 
 final class DistrictViewController: UIViewController {
     
-    //MARK: - IBOulets
+    // MARK: - IBOulets
     @IBOutlet private weak var districtButton: UIButton!
     
     // MARK: - Properties

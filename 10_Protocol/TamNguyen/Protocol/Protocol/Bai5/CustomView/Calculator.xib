@@ -30,31 +30,14 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eny-Vu-nhA">
-                    <rect key="frame" x="38" y="77" width="18" height="56"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atT-3K-wTe">
-                            <rect key="frame" x="0.0" y="0.0" width="18" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6S-ma-wsl">
-                            <rect key="frame" x="0.0" y="35.5" width="18" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d70-Sg-htO">
-                    <rect key="frame" x="231.5" y="77" width="67" height="20.5"/>
+                    <rect key="frame" x="208" y="77" width="67" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="rzd-0N-crP">
-                    <rect key="frame" x="38" y="156" width="300" height="38"/>
+                    <rect key="frame" x="38" y="120.5" width="300" height="38"/>
                     <subviews>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCo-Ld-yq8" customClass="RoundButton" customModule="Protocol" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
@@ -123,7 +106,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="mJt-yT-JQg">
-                    <rect key="frame" x="38" y="209" width="120" height="38"/>
+                    <rect key="frame" x="38" y="173.5" width="120" height="38"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-4h-k1H" customClass="RoundButton" customModule="Protocol" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
@@ -160,7 +143,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTS-15-PcR" customClass="RoundButton" customModule="Protocol" customModuleProvider="target">
-                    <rect key="frame" x="220" y="209" width="118" height="38"/>
+                    <rect key="frame" x="220" y="173.5" width="118" height="38"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="118" id="In1-K1-N4p"/>
                         <constraint firstAttribute="height" constant="38" id="zPO-lg-ibW"/>
@@ -181,25 +164,21 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="eny-Vu-nhA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="33r-xp-2y3"/>
                 <constraint firstItem="mJt-yT-JQg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="AUZ-0L-KcW"/>
+                <constraint firstItem="d70-Sg-htO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CFj-ZZ-e9B"/>
                 <constraint firstItem="aTS-15-PcR" firstAttribute="top" secondItem="rzd-0N-crP" secondAttribute="bottom" constant="15" id="HDI-l0-o8Y"/>
                 <constraint firstItem="rzd-0N-crP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="HvO-3U-6lC"/>
-                <constraint firstItem="eny-Vu-nhA" firstAttribute="top" secondItem="ux6-I9-lcc" secondAttribute="bottom" constant="33" id="Kqz-JM-gjV"/>
+                <constraint firstItem="rzd-0N-crP" firstAttribute="top" secondItem="d70-Sg-htO" secondAttribute="bottom" constant="23" id="JWJ-dl-iDc"/>
                 <constraint firstItem="d70-Sg-htO" firstAttribute="top" secondItem="ux6-I9-lcc" secondAttribute="bottom" constant="33" id="V3f-cU-io1"/>
                 <constraint firstAttribute="trailing" secondItem="ux6-I9-lcc" secondAttribute="trailing" id="fY5-ua-vCg"/>
                 <constraint firstItem="ux6-I9-lcc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jE0-ht-PyJ"/>
                 <constraint firstItem="aTS-15-PcR" firstAttribute="leading" secondItem="mJt-yT-JQg" secondAttribute="trailing" constant="62" id="lD6-eh-zp3"/>
                 <constraint firstItem="mJt-yT-JQg" firstAttribute="top" secondItem="rzd-0N-crP" secondAttribute="bottom" constant="15" id="rD7-tQ-1ad"/>
-                <constraint firstItem="rzd-0N-crP" firstAttribute="top" secondItem="eny-Vu-nhA" secondAttribute="bottom" constant="23" id="rfk-db-G6A"/>
-                <constraint firstItem="d70-Sg-htO" firstAttribute="leading" secondItem="eny-Vu-nhA" secondAttribute="trailing" constant="175.5" id="tHp-xX-hfS"/>
                 <constraint firstItem="ux6-I9-lcc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wsR-8f-GJn"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="numberXLabel" destination="atT-3K-wTe" id="xyx-qV-EgS"/>
-                <outlet property="numberYLabel" destination="I6S-ma-wsl" id="S8L-p5-HQe"/>
                 <outlet property="resultLabal" destination="d70-Sg-htO" id="YPq-hj-ELJ"/>
             </connections>
             <point key="canvasLocation" x="27" y="65"/>
