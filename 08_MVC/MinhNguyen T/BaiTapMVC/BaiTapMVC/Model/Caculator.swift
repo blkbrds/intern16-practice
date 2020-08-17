@@ -34,9 +34,8 @@ final class Caculator {
     }
 
     // MARK: - Public functions
-    func result(num1: Float, num2: Float, operatorAction: Operator) -> Float{
+    func result(num1: Float,num2: Float,operatorAction: Operator) -> Float {
         switch operatorAction {
-            
         case .plus:
             return sumNumber(num1: num1, num2: num2)
         case .sub:

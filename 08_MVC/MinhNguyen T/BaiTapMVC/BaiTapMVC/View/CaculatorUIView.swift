@@ -20,7 +20,7 @@ protocol CaculatorUIViewDataSource: class {
 final class CaculatorUIView: UIView {
 
     // MARK: - IBOutlet
-    @IBOutlet weak var numberResultLabel: UILabel!
+    @IBOutlet private weak var numberResultLabel: UILabel!
     
     // MARK: - Private properties
     private var operation = 0
@@ -46,12 +46,12 @@ final class CaculatorUIView: UIView {
         delegate?.sendData(self, needsPerform: .cal(operator: action))
     }
 
-    @IBAction func handleACButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleACButtonTouchUpInside(_ sender: UIButton) {
         numberResultLabel.text?.removeAll()
         delegate?.sendData(self, needsPerform: .clear)
     }
 
-    @IBAction func handleResultButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func handleResultButtonTouchUpInside(_ sender: UIButton) {
         guard let result = datasource?.getResult() else { return }
         numberResultLabel.text = result
     }

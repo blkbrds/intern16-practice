@@ -10,8 +10,8 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    var calculatorAction = OperatorAction()
-    var performMath = true
+    private var calculatorAction = OperatorAction()
+    private var performMath = true
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -62,6 +62,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - CaculatorUIViewDataSource
 extension HomeViewController: CaculatorUIViewDataSource {
     func getValueNumber() -> String {
         return getNumber()
@@ -73,6 +74,7 @@ extension HomeViewController: CaculatorUIViewDataSource {
     }
 }
 
+// MARK: - CaculatorUIViewDelegate
 extension HomeViewController: CaculatorUIViewDelegate {
     func sendData(_ view: CaculatorUIView, needsPerform action: CaculatorUIView.Action) {
         switch action {
