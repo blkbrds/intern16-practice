@@ -25,8 +25,8 @@ final class HomeViewController: UIViewController {
         configNavigation()
         configTableView()
         configCollectionView()
-        configSlideView()
         tableViewState()
+        configSlideView()
     }
     // MARK: - Override functions
     
@@ -42,6 +42,7 @@ final class HomeViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "HomeTableViewCell")
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
+
     }
     
     private func configCollectionView() {
@@ -53,7 +54,7 @@ final class HomeViewController: UIViewController {
     
     private func configSlideView() {
         guard let slide = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as? SlideView else { return }
-        slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width, height: slideView.bounds.height)
+        slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width - 10, height: slideView.bounds.height - 10)
         slideView.addSubview(slide)
     }
     // MARK: - Public functions
@@ -63,7 +64,7 @@ final class HomeViewController: UIViewController {
         let rightItem = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(tableViewState))
         rightItem.tintColor = #colorLiteral(red: 0.9103992581, green: 0.4987511039, blue: 0.4610315561, alpha: 1)
         navigationItem.rightBarButtonItem = rightItem
-        self.tableView.alpha = 0
+        tableView.alpha = 0
         collectionView.alpha = 1
     }
     

@@ -27,10 +27,10 @@ final class SlideView: UIView {
     
     // MARK: - Private functions
     private func configSildeView() {
-        collection.delegate = self
-        collection.dataSource = self
         let nib = UINib(nibName: "SlideCell", bundle: Bundle.main)
         collection.register(nib, forCellWithReuseIdentifier: "SlideCell")
+        collection.delegate = self
+        collection.dataSource = self
     }
     // MARK: - Public functions
     
@@ -42,6 +42,7 @@ final class SlideView: UIView {
 
 // MARK: - UIcollectionViewDataSource
 extension SlideView: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItem()
     }
@@ -59,7 +60,7 @@ extension SlideView: UICollectionViewDataSource {
 extension SlideView: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.bounds.width, height: self.bounds.height)
+        return CGSize(width: self.bounds.width - 10 , height: self.bounds.height - 5)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

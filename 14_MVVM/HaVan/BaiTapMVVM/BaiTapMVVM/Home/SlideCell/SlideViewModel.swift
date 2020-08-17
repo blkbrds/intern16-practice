@@ -19,6 +19,7 @@ final class SlideViewModel {
     
     func getSlideCellViewModel(atIndexPath indexPath: IndexPath) -> SlideCellViewModel? {
         guard 0 <= indexPath.row && indexPath.row < listImage.count else { return nil }
+        print(listImage.count)
         return SlideCellViewModel(image: listImage[indexPath.row])
     }
 }
