@@ -9,22 +9,64 @@
 import UIKit
 
 final class SlideView: UIView {
+    
     // MARK: - IBOutlets
+    @IBOutlet private weak var collection: UICollectionView!
+    
     
     // MARK: - Propeties
-    
-    // MARK: - Initialize
+    private var viewModel =  SlideViewModel()
     
     // MARK: - Life cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configSildeView()
+    }
     
     // MARK: - Override functions
     
     // MARK: - Private functions
-    
+    private func configSildeView() {
+        collection.delegate = self
+        collection.dataSource = self
+        let nib = UINib(nibName: "SlideCell", bundle: Bundle.main)
+        collection.register(nib, forCellWithReuseIdentifier: "SlideCell")
+    }
     // MARK: - Public functions
     
     // MARK: - Objc functions
     
     // MARK: - IBActions
 
+}
+
+// MARK: - UIcollectionViewDataSource
+extension SlideView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfItem()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SlideCell", for: indexPath) as? SlideCell else {
+            return UICollectionViewCell()
+        }
+        cell.viewModel = viewModel.getSlideCellViewModel(atIndexPath: indexPath)
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension SlideView: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.bounds.width, height: self.bounds.height)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
 }

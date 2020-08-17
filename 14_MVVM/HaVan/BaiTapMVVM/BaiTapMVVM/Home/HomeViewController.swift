@@ -11,7 +11,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var slideView: UICollectionView!
+    @IBOutlet private weak var slideView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var pageControl: UIPageControl!
@@ -52,24 +52,24 @@ final class HomeViewController: UIViewController {
     }
     
     private func configSlideView() {
-        slideView.delegate = self
-        slideView.dataSource = self
-        let nib = UINib(nibName: "SlideCell", bundle: Bundle.main)
-        slideView.register(nib, forCellWithReuseIdentifier: "SlideCell")
+        guard let slide = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as? SlideView else { return }
+        slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width, height: slideView.bounds.height)
+        slideView.addSubview(slide)
     }
     // MARK: - Public functions
     
     // MARK: - Objc functions
     @objc private func collectionViewState() {
         let rightItem = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(tableViewState))
+        rightItem.tintColor = #colorLiteral(red: 0.9103992581, green: 0.4987511039, blue: 0.4610315561, alpha: 1)
         navigationItem.rightBarButtonItem = rightItem
-        
         self.tableView.alpha = 0
         collectionView.alpha = 1
     }
     
     @objc private func tableViewState() {
         let rightItem = UIBarButtonItem(image: UIImage(systemName: "rectangle.grid.2x2.fill"), style: .plain, target: self, action: #selector(collectionViewState))
+        rightItem.tintColor = #colorLiteral(red: 0.9103992581, green: 0.4987511039, blue: 0.4610315561, alpha: 1)
         navigationItem.rightBarButtonItem = rightItem
         tableView.alpha = 1
         collectionView.alpha = 0
@@ -186,6 +186,3 @@ extension HomeViewController: HomeCollectionViewCellDelegate {
         }
     }
 }
-
-// MARK: - Slide
-

@@ -7,16 +7,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideView" customModule="BaiTapMVVM" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideView" customModule="BaiTapMVVM" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="eIY-Vg-dXE" id="eWN-v9-rFf"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SlideView" customModule="BaiTapMVVM" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="621" height="265"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HiY-zd-oz8">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Vg-dXE">
                     <rect key="frame" x="0.0" y="0.0" width="621" height="265"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EIq-zc-YoY">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xNZ-uC-9df">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -26,10 +30,10 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="HiY-zd-oz8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6Uz-9g-O0u"/>
-                <constraint firstAttribute="bottom" secondItem="HiY-zd-oz8" secondAttribute="bottom" id="WXJ-Rh-lTe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HiY-zd-oz8" secondAttribute="trailing" id="hqp-Lo-SkO"/>
-                <constraint firstItem="HiY-zd-oz8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ifP-j1-gSL"/>
+                <constraint firstItem="eIY-Vg-dXE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jfk-E1-aJY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eIY-Vg-dXE" secondAttribute="trailing" id="YgQ-1f-Au7"/>
+                <constraint firstAttribute="bottom" secondItem="eIY-Vg-dXE" secondAttribute="bottom" id="iPu-93-oqC"/>
+                <constraint firstItem="eIY-Vg-dXE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uaR-Zm-B3s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

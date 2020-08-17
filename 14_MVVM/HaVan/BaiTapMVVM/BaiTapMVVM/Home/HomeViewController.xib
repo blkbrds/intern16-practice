@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="collectionView" destination="fMo-Cr-UU2" id="IVh-GK-4ik"/>
                 <outlet property="pageControl" destination="GLS-oB-pY6" id="HYe-Y6-O6e"/>
-                <outlet property="slideView" destination="Yfj-YK-4x2" id="PZj-K8-558"/>
+                <outlet property="slideView" destination="3m1-7P-V7o" id="oZB-7m-HED"/>
                 <outlet property="tableView" destination="nWE-YL-bJK" id="Plx-Jp-Byi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,19 +21,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-YK-4x2" userLabel="slide">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-7P-V7o">
                     <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="MMB-hB-S2e"/>
+                        <constraint firstAttribute="height" constant="200" id="0GH-k3-5fZ"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TBv-z5-dcm">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-r3-yLK" userLabel="rightButton">
                     <rect key="frame" x="359" y="116.5" width="55" height="55"/>
                     <constraints>
@@ -78,29 +72,30 @@
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-oB-pY6">
                     <rect key="frame" x="171.5" y="202" width="71" height="37"/>
                     <color key="tintColor" red="0.85567555969999998" green="0.51956974840000003" blue="0.4764721677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="currentPageIndicatorTintColor" red="0.85567555969999998" green="0.51956974840000003" blue="0.4764721677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="CFp-Pc-msh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="22H-kT-Iwk"/>
-                <constraint firstItem="yjs-r3-yLK" firstAttribute="centerY" secondItem="Yfj-YK-4x2" secondAttribute="centerY" id="3sC-Xs-Ydh"/>
+                <constraint firstItem="fMo-Cr-UU2" firstAttribute="top" secondItem="3m1-7P-V7o" secondAttribute="bottom" id="7HW-ND-OGj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nWE-YL-bJK" secondAttribute="trailing" id="APC-Aa-ZIj"/>
+                <constraint firstItem="3m1-7P-V7o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DWb-A8-egZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fMo-Cr-UU2" secondAttribute="trailing" id="DlX-wf-7wn"/>
-                <constraint firstItem="Yfj-YK-4x2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JvJ-8R-xqV"/>
-                <constraint firstItem="nWE-YL-bJK" firstAttribute="top" secondItem="Yfj-YK-4x2" secondAttribute="bottom" id="Mr6-zS-Bzp"/>
+                <constraint firstItem="3m1-7P-V7o" firstAttribute="bottom" secondItem="GLS-oB-pY6" secondAttribute="bottom" constant="5" id="E0W-8v-UJJ"/>
+                <constraint firstItem="CFp-Pc-msh" firstAttribute="top" secondItem="yjs-r3-yLK" secondAttribute="top" id="IK4-ac-ccv"/>
+                <constraint firstItem="3m1-7P-V7o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Q8y-06-1c6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3m1-7P-V7o" secondAttribute="trailing" id="VJz-p8-7Ub"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nWE-YL-bJK" secondAttribute="bottom" id="XAe-es-vry"/>
-                <constraint firstItem="fMo-Cr-UU2" firstAttribute="top" secondItem="Yfj-YK-4x2" secondAttribute="bottom" id="Xf5-w8-ePi"/>
                 <constraint firstItem="nWE-YL-bJK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bmM-yG-g9A"/>
                 <constraint firstItem="yjs-r3-yLK" firstAttribute="width" secondItem="CFp-Pc-msh" secondAttribute="width" id="czI-6e-g4n"/>
-                <constraint firstItem="CFp-Pc-msh" firstAttribute="centerY" secondItem="Yfj-YK-4x2" secondAttribute="centerY" id="dXa-6A-Tk0"/>
                 <constraint firstItem="yjs-r3-yLK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="glk-Cq-4mu"/>
-                <constraint firstItem="fMo-Cr-UU2" firstAttribute="top" secondItem="GLS-oB-pY6" secondAttribute="bottom" constant="5" id="gvA-q0-6RN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fMo-Cr-UU2" secondAttribute="bottom" id="hfL-sV-JNq"/>
                 <constraint firstItem="fMo-Cr-UU2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ig2-29-YRK"/>
-                <constraint firstItem="Yfj-YK-4x2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m4P-gg-6XY"/>
-                <constraint firstItem="Yfj-YK-4x2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oWG-qL-loM"/>
+                <constraint firstItem="nWE-YL-bJK" firstAttribute="top" secondItem="3m1-7P-V7o" secondAttribute="bottom" id="pBY-tw-IYs"/>
                 <constraint firstItem="GLS-oB-pY6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pfX-wy-Fae"/>
+                <constraint firstItem="yjs-r3-yLK" firstAttribute="centerY" secondItem="3m1-7P-V7o" secondAttribute="centerY" id="xj5-pp-5xX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="105.79710144927537" y="130.58035714285714"/>
