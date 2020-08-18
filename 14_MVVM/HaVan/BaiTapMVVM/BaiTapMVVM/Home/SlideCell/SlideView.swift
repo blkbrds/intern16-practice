@@ -60,7 +60,7 @@ extension SlideView: UICollectionViewDataSource {
 extension SlideView: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.bounds.width - 5 , height: self.bounds.height - 10)
+        return CGSize(width: self.bounds.width , height: self.bounds.height - 10)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -17,11 +17,12 @@ final class Coffee {
     var favorite: Bool
     var distance: Float
     var thumbnail: UIImage
-    var image: [UIImage: String]
+    var image: [UIImage]
+    var description: String
     var comment: [String: String]
     var location: CLLocationCoordinate2D
     
-    init(name: String, address: String, rate: Int, favorite: Bool, thumbnail: UIImage, distance: Float, image: [UIImage: String], comment: [String: String], location: CLLocationCoordinate2D) {
+    init(name: String, address: String, rate: Int, favorite: Bool, thumbnail: UIImage, distance: Float, image: [UIImage], description: String, comment: [String: String], location: CLLocationCoordinate2D) {
         self.name = name
         self.address = address
         self.rate = rate
@@ -29,6 +30,7 @@ final class Coffee {
         self.distance = distance
         self.thumbnail = thumbnail
         self.image = image
+        self.description = description
         self.comment = comment
         self.location = location
     }

@@ -29,7 +29,7 @@ extension HomeViewModel {
     
     func getSlideDetail(atIndexPath indexPath: IndexPath) -> SlideDetailViewModel? {
         guard 0 <= indexPath.row && indexPath.row <= HomeViewModel.shared.listCoffee.count else { return nil }
-        let imageList: [UIImage] = Array(HomeViewModel.shared.listCoffee[indexPath.row].image.keys)
+        let imageList: [UIImage] = HomeViewModel.shared.listCoffee[indexPath.row].image
         return SlideDetailViewModel(imageList: imageList)
     }
 }

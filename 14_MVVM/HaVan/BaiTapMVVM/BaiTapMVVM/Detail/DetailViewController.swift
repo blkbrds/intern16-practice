@@ -12,6 +12,7 @@ import MapKit
 final class DetailViewController: UIViewController {
     
     // MARK: - IBOutlets
+    @IBOutlet private weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var pageControl: UIPageControl!
@@ -24,13 +25,21 @@ final class DetailViewController: UIViewController {
             setTitle()
         }
     }
+    var timer: Timer = Timer()
     var rightButton = UIBarButtonItem()
     var viewModelComment: CommentViewModel?
     var viewModelSlideDetail: SlideDetailViewModel?
-    private var count = 0
-    private var countDetail = 0
+    private var count = -1
     
     // MARK: - Life cycle
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tableView.removeObserver(self, forKeyPath: "contentSize")
+        tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
@@ -39,6 +48,22 @@ final class DetailViewController: UIViewController {
         firstState()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+    
+    // MARK: - Override functions
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentSize" {
+            if object is UITableView {
+                if let newValue = change?[.newKey] {
+                    if let newSize = newValue as? CGSize {
+                        tableViewHeightConstraint.constant = newSize.height + 10
+                    }
+                }
+            }
+        }
+    }
     // MARK: - Private functions
     private func configTableView() {
         let nib = UINib(nibName: "CommentCell", bundle: Bundle.main)
@@ -49,14 +74,7 @@ final class DetailViewController: UIViewController {
     }
     
     private func updateDetailImageAndLocation() {
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { (timer) in
-            self.countDetail += 1
-            guard let max = self.viewModelDetail?.numberOfImgage() else { return }
-            if self.countDetail >= max {
-                self.countDetail = 0
-            }
-            self.descriptionLabel.text = self.viewModelDetail?.imageDetail[self.countDetail]
-        }
+        descriptionLabel.text = viewModelDetail?.description
         guard let location = viewModelDetail?.location else { return }
         let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         let region = MKCoordinateRegion(center: location, span: span)
@@ -79,7 +97,7 @@ final class DetailViewController: UIViewController {
         collectionView.dataSource = self
         let nib = UINib(nibName: "SlideCell", bundle: Bundle.main)
         collectionView.register(nib, forCellWithReuseIdentifier: "SlideCell")
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { (timer) in
             self.count += 1
             guard let max = self.viewModelSlideDetail?.numberOfItemsInSection() else { return }
             if self.count >= max {
@@ -88,6 +106,7 @@ final class DetailViewController: UIViewController {
             self.collectionView.scrollToItem(at: IndexPath(item: self.count, section: 0), at: .right, animated: true)
             self.pageControl.currentPage = self.count
         }
+        
     }
     
     // MARK: - Objc functions
