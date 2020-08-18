@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="Collection_View" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-G8-ez2">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgS-Wg-PA7">
+                            <rect key="frame" x="16" y="4" width="300" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="pXg-9E-nE4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="qgS-Wg-PA7" firstAttribute="leading" secondItem="Nqa-G8-ez2" secondAttribute="leading" constant="16" id="JhM-BD-CvH"/>
+                        <constraint firstItem="qgS-Wg-PA7" firstAttribute="centerY" secondItem="Nqa-G8-ez2" secondAttribute="centerY" id="hQf-mx-fLK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Nqa-G8-ez2" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="Iqs-6w-97H"/>
+                <constraint firstItem="Nqa-G8-ez2" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="WDf-ry-ehs"/>
+                <constraint firstItem="Nqa-G8-ez2" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Z2Q-8u-T42"/>
+                <constraint firstItem="Nqa-G8-ez2" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="pCs-CO-bqS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="headerLabel" destination="qgS-Wg-PA7" id="WMQ-6W-7Rc"/>
+                <outlet property="headerView" destination="qgS-Wg-PA7" id="VS3-tc-oui"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="98.772321428571431"/>
+        </collectionReusableView>
+    </objects>
+</document>
