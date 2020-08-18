@@ -19,13 +19,8 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var pageControl: UIPageControl!
     
     // MARK: - Properties
-    private var flagDisplay: Int = 1
     private var numberImage: Int = 1
     private var viewModel = HomeViewModel()
-    enum Display: Int {
-        case appear = 1
-        case hidden = 0
-    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -34,7 +29,7 @@ final class HomeViewController: UIViewController {
         configCollectionView()
         configPageControl()
         loadData()
-        configUI()
+        switchCollectionButtonTouchUpInside()
     }
     
     // MARK: - Private methods
@@ -51,12 +46,6 @@ final class HomeViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: "collectionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-    
-    private func configUI() {
-        
-        let collectionButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-table-50.png"), style: .plain, target: self, action: #selector(switchCollectionButtonTouchUpInside))
-        navigationItem.rightBarButtonItem = collectionButton
     }
     
     private func loadData() {
@@ -84,17 +73,17 @@ final class HomeViewController: UIViewController {
     }
     
     @objc private func switchCollectionButtonTouchUpInside() {
-        guard let display = Display(rawValue: flagDisplay) else { return }
-        switch display {
-        case .hidden:
-            tableView.isHidden = true
-            collectionView.isHidden = false
-            flagDisplay = 1
-        default:
-            tableView.isHidden = false
-            collectionView.isHidden = true
-            flagDisplay = 0
-        }
+        let collectionButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-table-50.png"), style: .plain, target: self, action: #selector(switchTableButtonTouchUpInside))
+        navigationItem.rightBarButtonItem = collectionButton
+        tableView.isHidden = true
+        collectionView.isHidden = false
+    }
+    
+    @objc private func switchTableButtonTouchUpInside() {
+        let tableButton = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-menu-50.png"), style: .plain, target: self, action: #selector(switchCollectionButtonTouchUpInside))
+        navigationItem.rightBarButtonItem = tableButton
+        tableView.isHidden = false
+        collectionView.isHidden = true
     }
     
     // MARK: - IBActions
@@ -133,7 +122,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc = DetailViewController()
+        vc.title = viewModel.getNameCafe(at: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -154,10 +145,20 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 370, height: 170)
+        return CGSize(width: collectionView.bounds.width / 2 - 5, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.title = viewModel.getNameCafe(at: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

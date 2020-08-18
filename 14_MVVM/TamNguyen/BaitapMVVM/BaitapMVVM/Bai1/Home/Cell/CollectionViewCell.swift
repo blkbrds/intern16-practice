@@ -29,7 +29,18 @@ final class CollectionViewCell: UICollectionViewCell {
         case like = 1
     }
     
+    // MARK: - Life cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configCell()
+    }
+
     // MARK: - Private methods
+    private func configCell() {
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.blue.cgColor
+    }
+    
     private func updateView() {
         let item = viewmodel2.item
         titleLabel.text = item.nameCafe

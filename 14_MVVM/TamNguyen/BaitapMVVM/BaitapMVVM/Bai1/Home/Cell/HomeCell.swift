@@ -19,6 +19,7 @@ final class HomeCell: UITableViewCell {
     
     // MARK: - Properties
     private var flagFavoriteButton: Int = 1
+
     var viewModel = HomeCellModel() {
         didSet {
             updateView()
@@ -29,7 +30,18 @@ final class HomeCell: UITableViewCell {
         case unlike = 0
     }
     
+    // MARK: - Life cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configCell()
+    }
+    
     // MARK: - Private methods
+    private func configCell() {
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.blue.cgColor
+    }
+    
     private func updateView() {
         let item = viewModel.item
         titleLabel.text = item.nameCafe
@@ -44,10 +56,10 @@ final class HomeCell: UITableViewCell {
         switch display {
         case .like:
             favoritesButton.tintColor = .yellow
-            flagFavoriteButton = 0
+            flagFavoriteButton = Display.unlike.rawValue
         default:
             favoritesButton.tintColor = .systemBlue
-            flagFavoriteButton = 1
+            flagFavoriteButton = Display.like.rawValue
         }
     }
 }

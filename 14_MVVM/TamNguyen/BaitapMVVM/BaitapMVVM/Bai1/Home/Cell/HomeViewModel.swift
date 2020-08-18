@@ -37,4 +37,10 @@ final class HomeViewModel {
         cafes.append(Item(nameCafe: "Cong Cafe", address: "45 Ngo Quyen", rate: "6/10", distance: "3km"))
         datas = cafes
     }
+    
+    func getNameCafe(at indexpath: IndexPath) -> String {
+        let item = datas[indexpath.row]
+        let nameCafe = item.nameCafe
+        return nameCafe
+    }
 }

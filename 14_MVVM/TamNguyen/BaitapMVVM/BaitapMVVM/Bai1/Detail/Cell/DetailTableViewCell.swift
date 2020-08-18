@@ -22,6 +22,13 @@ final class DetailTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - Life cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.blue.cgColor
+    }
+
     // MARK: - Private methods
     private func updateView() {
         let item = viewModel.item

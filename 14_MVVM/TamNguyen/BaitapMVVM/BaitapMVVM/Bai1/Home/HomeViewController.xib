@@ -56,7 +56,7 @@
                     <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="trG-ag-Iee">
-                    <rect key="frame" x="0.0" y="239" width="414" height="623"/>
+                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xdW-Gm-8I8">
                         <size key="itemSize" width="128" height="128"/>
@@ -83,7 +83,7 @@
                 <constraint firstItem="9fh-UH-bTM" firstAttribute="top" secondItem="CR1-3G-Q3a" secondAttribute="bottom" constant="5" id="O8v-Op-vgh"/>
                 <constraint firstItem="9DW-Vw-EHV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SFA-hZ-4WP"/>
                 <constraint firstItem="CR1-3G-Q3a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZgC-O3-Uo3"/>
-                <constraint firstItem="trG-ag-Iee" firstAttribute="top" secondItem="CR1-3G-Q3a" secondAttribute="bottom" id="c59-dT-Tul"/>
+                <constraint firstItem="trG-ag-Iee" firstAttribute="top" secondItem="CR1-3G-Q3a" secondAttribute="bottom" constant="5" id="c59-dT-Tul"/>
                 <constraint firstItem="QKp-wR-aNf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e9d-gc-ez8"/>
                 <constraint firstItem="9fh-UH-bTM" firstAttribute="top" secondItem="9DW-Vw-EHV" secondAttribute="bottom" constant="15" id="flC-4O-K2h"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVp-8i-Iv8" secondAttribute="trailing" constant="20" id="fs1-AY-YKh"/>

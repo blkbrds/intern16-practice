@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="BaitapMVVM" customModuleProvider="target">
             <connections>
+                <outlet property="cafeMapView" destination="gFT-K1-MHy" id="3C4-O4-yCH"/>
+                <outlet property="contentLabel" destination="GAr-Ng-1nf" id="L0Y-lr-gcu"/>
                 <outlet property="tableView" destination="hIl-vU-fCh" id="hvv-Ee-Bl2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -67,20 +69,20 @@
                     </constraints>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAr-Ng-1nf">
-                    <rect key="frame" x="0.0" y="214" width="414" height="95.5"/>
+                    <rect key="frame" x="0.0" y="199" width="414" height="95.5"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labort. Duis aute irure dolor in repreh</string>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gFT-K1-MHy">
-                    <rect key="frame" x="0.0" y="319.5" width="414" height="150"/>
+                    <rect key="frame" x="0.0" y="304.5" width="414" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="hV0-F1-5sg"/>
                     </constraints>
                 </mapView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hIl-vU-fCh">
-                    <rect key="frame" x="0.0" y="474.5" width="414" height="387.5"/>
+                    <rect key="frame" x="0.0" y="459.5" width="414" height="402.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Tqj-VR-Rgb"/>
@@ -103,12 +105,12 @@
                 <constraint firstItem="GAr-Ng-1nf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xsb-KO-D5n"/>
                 <constraint firstItem="hIl-vU-fCh" firstAttribute="top" secondItem="gFT-K1-MHy" secondAttribute="bottom" constant="5" id="hog-D4-Xsx"/>
                 <constraint firstItem="gFT-K1-MHy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kyu-Ns-hul"/>
-                <constraint firstItem="GAr-Ng-1nf" firstAttribute="top" secondItem="hUi-ya-vh5" secondAttribute="bottom" constant="20" id="lrt-ZC-vwU"/>
+                <constraint firstItem="GAr-Ng-1nf" firstAttribute="top" secondItem="hUi-ya-vh5" secondAttribute="bottom" constant="5" id="lrt-ZC-vwU"/>
                 <constraint firstItem="hUi-ya-vh5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wlF-P3-QHL"/>
                 <constraint firstItem="Lxh-sw-00K" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ySp-4h-fBb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="4376.811594202899" y="-741.29464285714278"/>
+            <point key="canvasLocation" x="3071" y="-805"/>
         </view>
     </objects>
     <resources>
