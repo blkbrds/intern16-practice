@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5226A83E24EB8E97006E2E78 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A83C24EB8E97006E2E78 /* CommentCell.swift */; };
+		5226A83F24EB8E97006E2E78 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5226A83D24EB8E97006E2E78 /* CommentCell.xib */; };
+		5226A84224EB92C4006E2E78 /* SlideDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A84124EB92C4006E2E78 /* SlideDetailViewModel.swift */; };
 		526A632E24EA3C6E00AE7FF4 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A632C24EA3C6E00AE7FF4 /* SlideCell.swift */; };
 		526A632F24EA3C6E00AE7FF4 /* SlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526A632D24EA3C6E00AE7FF4 /* SlideCell.xib */; };
 		526A633124EA3CA200AE7FF4 /* SlideCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633024EA3CA200AE7FF4 /* SlideCellViewModel.swift */; };
 		526A633524EA42A100AE7FF4 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633424EA42A100AE7FF4 /* SlideView.swift */; };
 		526A633724EA42BE00AE7FF4 /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526A633624EA42BE00AE7FF4 /* SlideView.xib */; };
 		526A633924EA430B00AE7FF4 /* SlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633824EA430B00AE7FF4 /* SlideViewModel.swift */; };
+		526A633E24EA79FE00AE7FF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A633C24EA79FE00AE7FF4 /* DetailViewController.swift */; };
+		526A633F24EA79FE00AE7FF4 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526A633D24EA79FE00AE7FF4 /* DetailViewController.xib */; };
+		526A634124EAD48E00AE7FF4 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A634024EAD48E00AE7FF4 /* DetailViewModel.swift */; };
+		526A634324EB743A00AE7FF4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A634224EB743A00AE7FF4 /* CommentViewModel.swift */; };
+		526A634A24EB7BCB00AE7FF4 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A634924EB7BCB00AE7FF4 /* CommentCellViewModel.swift */; };
 		5293D9F224E6E1ED007475D5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5293D9F024E6E1ED007475D5 /* LoginViewController.xib */; };
 		5293D9F324E6E1ED007475D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293D9F124E6E1ED007475D5 /* LoginViewController.swift */; };
 		5293D9F724E6E1F7007475D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293D9F524E6E1F7007475D5 /* MapViewController.swift */; };
@@ -49,12 +57,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5226A83C24EB8E97006E2E78 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		5226A83D24EB8E97006E2E78 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		5226A84124EB92C4006E2E78 /* SlideDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDetailViewModel.swift; sourceTree = "<group>"; };
 		526A632C24EA3C6E00AE7FF4 /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
 		526A632D24EA3C6E00AE7FF4 /* SlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCell.xib; sourceTree = "<group>"; };
 		526A633024EA3CA200AE7FF4 /* SlideCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCellViewModel.swift; sourceTree = "<group>"; };
 		526A633424EA42A100AE7FF4 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		526A633624EA42BE00AE7FF4 /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
 		526A633824EA430B00AE7FF4 /* SlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewModel.swift; sourceTree = "<group>"; };
+		526A633C24EA79FE00AE7FF4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		526A633D24EA79FE00AE7FF4 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		526A634024EAD48E00AE7FF4 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		526A634224EB743A00AE7FF4 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		526A634924EB7BCB00AE7FF4 /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
 		5293D9F024E6E1ED007475D5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5293D9F124E6E1ED007475D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5293D9F524E6E1F7007475D5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +119,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5226A84024EB924A006E2E78 /* SlideCollection */ = {
+			isa = PBXGroup;
+			children = (
+				5226A84124EB92C4006E2E78 /* SlideDetailViewModel.swift */,
+			);
+			path = SlideCollection;
+			sourceTree = "<group>";
+		};
+		526A633A24EA79D200AE7FF4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5226A84024EB924A006E2E78 /* SlideCollection */,
+				526A634424EB7B8F00AE7FF4 /* CommentTable */,
+				526A633C24EA79FE00AE7FF4 /* DetailViewController.swift */,
+				526A633D24EA79FE00AE7FF4 /* DetailViewController.xib */,
+				526A634024EAD48E00AE7FF4 /* DetailViewModel.swift */,
+				526A634224EB743A00AE7FF4 /* CommentViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		526A634424EB7B8F00AE7FF4 /* CommentTable */ = {
+			isa = PBXGroup;
+			children = (
+				526A634924EB7BCB00AE7FF4 /* CommentCellViewModel.swift */,
+				5226A83C24EB8E97006E2E78 /* CommentCell.swift */,
+				5226A83D24EB8E97006E2E78 /* CommentCell.xib */,
+			);
+			path = CommentTable;
+			sourceTree = "<group>";
+		};
 		5293D9EF24E6E1ED007475D5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +255,7 @@
 				5293DA3924E77432007475D5 /* Model */,
 				5293DA0D24E6E22B007475D5 /* Favorite */,
 				5293DA0824E6E21D007475D5 /* Home */,
+				526A633A24EA79D200AE7FF4 /* Detail */,
 				5293DA0324E6E20D007475D5 /* ForgotPassword */,
 				5293D9FE24E6E206007475D5 /* Register */,
 				5293D9F924E6E1FF007475D5 /* Profile */,
@@ -339,8 +387,10 @@
 				5293D9FC24E6E1FF007475D5 /* ProfileViewController.xib in Resources */,
 				52A84D8224E9195A006F5885 /* HomeTableViewCell.xib in Resources */,
 				5293D9F824E6E1F7007475D5 /* MapViewController.xib in Resources */,
+				526A633F24EA79FE00AE7FF4 /* DetailViewController.xib in Resources */,
 				5293DA0124E6E206007475D5 /* RegisterViewController.xib in Resources */,
 				5293DA0B24E6E21D007475D5 /* HomeViewController.xib in Resources */,
+				5226A83F24EB8E97006E2E78 /* CommentCell.xib in Resources */,
 				52C00E8B24EA2BD00015EDB2 /* HomeCollectionViewCell.xib in Resources */,
 				5293DA1124E6E22B007475D5 /* FavoriteViewController.xib in Resources */,
 			);
@@ -355,13 +405,17 @@
 			files = (
 				5293DA1024E6E22B007475D5 /* FavoriteViewController.swift in Sources */,
 				5293D9F724E6E1F7007475D5 /* MapViewController.swift in Sources */,
+				526A633E24EA79FE00AE7FF4 /* DetailViewController.swift in Sources */,
 				52A84D7624E8E588006F5885 /* HomeViewModel.swift in Sources */,
 				52C0774524E7D9FB000C1649 /* ForgotPasswordViewModel.swift in Sources */,
+				5226A83E24EB8E97006E2E78 /* CommentCell.swift in Sources */,
 				526A633924EA430B00AE7FF4 /* SlideViewModel.swift in Sources */,
 				52A84D8424E9210D006F5885 /* HomeCellViewModel.swift in Sources */,
 				5293DA3124E7742C007475D5 /* User+CoreDataClass.swift in Sources */,
 				529D8E7A24E6DDAC000CCFC9 /* AppDelegate.swift in Sources */,
+				526A634124EAD48E00AE7FF4 /* DetailViewModel.swift in Sources */,
 				52A84D8124E9195A006F5885 /* HomeTableViewCell.swift in Sources */,
+				5226A84224EB92C4006E2E78 /* SlideDetailViewModel.swift in Sources */,
 				526A633524EA42A100AE7FF4 /* SlideView.swift in Sources */,
 				5293DA0224E6E206007475D5 /* RegisterViewController.swift in Sources */,
 				529D8E8424E6DDAC000CCFC9 /* BaiTapMVVM.xcdatamodeld in Sources */,
@@ -369,8 +423,10 @@
 				52C0774124E7CD51000C1649 /* RegisterViewModel.swift in Sources */,
 				5293DA0C24E6E21D007475D5 /* HomeViewController.swift in Sources */,
 				5293DA0624E6E20D007475D5 /* ForgotPasswordViewController.swift in Sources */,
+				526A634324EB743A00AE7FF4 /* CommentViewModel.swift in Sources */,
 				526A632E24EA3C6E00AE7FF4 /* SlideCell.swift in Sources */,
 				5293DA3224E7742C007475D5 /* User+CoreDataProperties.swift in Sources */,
+				526A634A24EB7BCB00AE7FF4 /* CommentCellViewModel.swift in Sources */,
 				5293DA1524E6E250007475D5 /* BaseTabbarController.swift in Sources */,
 				52C00E8A24EA2BD00015EDB2 /* HomeCollectionViewCell.swift in Sources */,
 				5293D9FD24E6E1FF007475D5 /* ProfileViewController.swift in Sources */,

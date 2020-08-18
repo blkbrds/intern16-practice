@@ -15,21 +15,27 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var pageControl: UIPageControl!
+    
     // MARK: - Propeties
     private var viewModel = HomeViewModel()
     private var count: Int = -1
     
     // MARK: - Life cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        collectionView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigation()
         configTableView()
         configCollectionView()
         tableViewState()
-        configSlideView()
+        //configSlideView()
     }
-    // MARK: - Override functions
-    
+
     // MARK: - Private functions
     private func configNavigation() {
         title = "HOME"
@@ -42,7 +48,6 @@ final class HomeViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "HomeTableViewCell")
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
-
     }
     
     private func configCollectionView() {
@@ -54,7 +59,7 @@ final class HomeViewController: UIViewController {
     
     private func configSlideView() {
         guard let slide = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as? SlideView else { return }
-        slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width - 10, height: slideView.bounds.height - 10)
+        slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width, height: slideView.bounds.height)
         slideView.addSubview(slide)
     }
     // MARK: - Public functions
@@ -64,16 +69,18 @@ final class HomeViewController: UIViewController {
         let rightItem = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(tableViewState))
         rightItem.tintColor = #colorLiteral(red: 0.9103992581, green: 0.4987511039, blue: 0.4610315561, alpha: 1)
         navigationItem.rightBarButtonItem = rightItem
-        tableView.alpha = 0
-        collectionView.alpha = 1
+        tableView.isHidden = true
+        collectionView.isHidden = false
+        slideView.isHidden = false
     }
     
     @objc private func tableViewState() {
         let rightItem = UIBarButtonItem(image: UIImage(systemName: "rectangle.grid.2x2.fill"), style: .plain, target: self, action: #selector(collectionViewState))
         rightItem.tintColor = #colorLiteral(red: 0.9103992581, green: 0.4987511039, blue: 0.4610315561, alpha: 1)
         navigationItem.rightBarButtonItem = rightItem
-        tableView.alpha = 1
-        collectionView.alpha = 0
+        tableView.isHidden = false
+        collectionView.isHidden = true
+        slideView.isHidden = false
     }
     
     // MARK: - IBActions
@@ -126,6 +133,14 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        detailViewController.viewModelDetail = viewModel.getDetailModel(atIndexPath: indexPath)
+        detailViewController.viewModelComment = viewModel.getComment(atIndexPath: indexPath)
+        detailViewController.viewModelSlideDetail = viewModel.getSlideDetail(atIndexPath: indexPath)
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
 // MARK: - HomeTableViewCellDelegate
@@ -173,6 +188,14 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        detailViewController.viewModelDetail = viewModel.getDetailModel(atIndexPath: indexPath)
+        detailViewController.viewModelComment = viewModel.getComment(atIndexPath: indexPath)
+        detailViewController.viewModelSlideDetail = viewModel.getSlideDetail(atIndexPath: indexPath)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
