@@ -19,9 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.backgroundColor = .white
 //        window.rootViewController = Baitap1ViewController()
-        window.rootViewController = Baitap1_1ViewController()
+//        window.rootViewController = Baitap1_1ViewController()
 //        window.rootViewController = Baitap2ViewController()
 //        window.rootViewController = Baitap2_2ViewController()
+//        window.rootViewController = Baitap3ViewController()
+//        window.rootViewController = Baitap3_1ViewController()
+        window.rootViewController = Baitap3_2ViewController()
         window.makeKeyAndVisible()
     }
     func sceneDidDisconnect(_ scene: UIScene) {

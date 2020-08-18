@@ -1,5 +1,5 @@
 //
-//  Baitap1_1ViewController.swift
+//  Baitap3_2ViewController.swift
 //  Baitap7Autolayout
 //
 //  Created by MBA0245P on 8/17/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Baitap1_1ViewController: UIViewController {
+class Baitap3_2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

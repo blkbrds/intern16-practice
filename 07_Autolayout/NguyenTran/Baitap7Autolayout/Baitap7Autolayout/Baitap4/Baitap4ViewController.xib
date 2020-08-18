@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap3ViewController" customModule="Baitap7Autolayout" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap4ViewController" customModule="Baitap7Autolayout" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,32 +17,34 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqf-DR-38k" userLabel="GreenView">
-                    <rect key="frame" x="57" y="398" width="100" height="100"/>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MjZ-eY-LQx" userLabel="GreenView">
+                    <rect key="frame" x="46" y="413" width="70" height="70"/>
                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="8Za-dW-KyN"/>
-                        <constraint firstAttribute="width" constant="100" id="RD4-bT-ZSA"/>
+                        <constraint firstAttribute="width" constant="70" id="RVb-51-gbU"/>
+                        <constraint firstAttribute="height" constant="70" id="zSE-xd-Nah"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-7z-1rV" userLabel="PurpleView">
-                    <rect key="frame" x="257" y="398" width="100" height="100"/>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-9N-IgA" userLabel="PurpleView">
+                    <rect key="frame" x="172" y="413" width="70" height="70"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="WOa-wl-4Hw"/>
-                        <constraint firstAttribute="height" constant="100" id="orO-cR-vzq"/>
+                        <constraint firstAttribute="height" constant="70" id="PJA-2L-xj5"/>
+                        <constraint firstAttribute="width" constant="70" id="zEX-Pf-s8p"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTd-Ik-VzW" userLabel="YellowView">
+                    <rect key="frame" x="300" y="413" width="70" height="70"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="c1V-Gb-VNW"/>
+                        <constraint firstAttribute="width" constant="70" id="zCQ-Y1-YFw"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <constraints>
-                <constraint firstItem="Pof-7z-1rV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4PM-Qg-zhf"/>
-                <constraint firstItem="zqf-DR-38k" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="-50" id="f42-FJ-ucO"/>
-                <constraint firstItem="zqf-DR-38k" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kxh-fT-md3"/>
-                <constraint firstItem="Pof-7z-1rV" firstAttribute="leading" secondItem="zqf-DR-38k" secondAttribute="trailing" constant="100" id="u6N-nQ-ACp"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="126"/>
+            <point key="canvasLocation" x="139" y="106"/>
         </view>
     </objects>
 </document>
