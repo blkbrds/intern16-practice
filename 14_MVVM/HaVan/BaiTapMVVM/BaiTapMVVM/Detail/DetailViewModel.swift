@@ -9,6 +9,12 @@
 import Foundation
 import MapKit
 
+enum SectionType {
+    case description
+    case mapView
+    case comment
+}
+
 final class DetailViewModel {
     
     // MARK: - Properties
@@ -90,5 +96,18 @@ final class DetailViewModel {
     
     func numberOfItemsInSection() -> Int {
         return imageList.count
+    }
+    
+    func chooseSectionType(section: Int) -> SectionType {
+        switch section {
+        case 0:
+            return .description
+        case 1:
+            return .mapView
+        case 2:
+            return .comment
+        default:
+            return .comment
+        }
     }
 }

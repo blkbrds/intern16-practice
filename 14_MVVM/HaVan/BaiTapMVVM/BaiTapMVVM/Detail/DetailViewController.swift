@@ -145,27 +145,27 @@ extension DetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = indexPath.section
-        switch section {
-        case 0:
+        let sectionType = viewModelDetail?.chooseSectionType(section: indexPath.section)
+        switch sectionType {
+        case .description:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as? DescriptionTableViewCell else {
                 return UITableViewCell()
             }
             cell.viewModel = viewModelDetail?.getDescriptionCell(atIndexPath: indexPath)
             return cell
-        case 1:
+        case .mapView:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MapTableViewCell", for: indexPath) as? MapTableViewCell else {
                 return UITableViewCell()
             }
             cell.viewModel = viewModelDetail?.getMapViewCell(atIndexPath: indexPath)
             return cell
-        case 2:
+        case .comment:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentCell else {
                 return UITableViewCell()
             }
             cell.viewModel = viewModelDetail?.getCommentViewCell(atIndexPath: indexPath)
             return cell
-        default:
+        case .none:
             return UITableViewCell()
         }
     }
