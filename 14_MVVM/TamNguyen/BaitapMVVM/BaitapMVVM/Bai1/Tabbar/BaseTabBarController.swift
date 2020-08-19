@@ -33,6 +33,12 @@ final class BaseTabBarController: UITabBarController {
         setViewControllers([homeNavi, mapNavi, favoritesNavi, profileNavi], animated: true)
         tabBar.barTintColor = .white
         tabBar.tintColor = .black
+        tabBar.unselectedItemTintColor = .magenta
+        tabBar.layer.cornerRadius = 10
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        tabBar.layer.masksToBounds = true
+        tabBar.layer.borderWidth = 0.5
+        tabBar.layer.borderColor = UIColor.black.cgColor
     }
     
     private func customTabbar() {
