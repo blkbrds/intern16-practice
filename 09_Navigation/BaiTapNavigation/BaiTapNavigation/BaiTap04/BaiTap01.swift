@@ -10,10 +10,15 @@ import UIKit
 
 final class BaiTap01: UIViewController {
 
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "Gradient Navigation"
+    }
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Gradient Navigation"
+        title = Configure.titleName
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "img_color"), for: .default)
     }
 }

@@ -16,24 +16,33 @@ final class ViewControllerD: UIViewController {
     @IBOutlet private weak var viewControllerBButton: UIButton!
     @IBOutlet private weak var rootButton: UIButton!
 
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "View Controller D"
+    }
+
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "View Controller D"
+        title = Configure.titleName
     }
 
-    @IBAction func nextTouchUpInside(_ sender: Any) {
+    // MARK: - IBAction
+    @IBAction private func nextTouchUpInside(_ sender: Any) {
         let viewControllerE = ViewControllerE()
-        self.navigationController?.pushViewController(viewControllerE, animated: true)
-    }
-    @IBAction func nextCTouchUpInside(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @IBAction func nextBTouchUpInside(_ sender: Any) {
-        guard let viewControllerB = self.navigationController?.viewControllers.first(where: { $0 is ViewControllerB }) else { return }
-        self.navigationController?.popToViewController(viewControllerB, animated: true)
+        navigationController?.pushViewController(viewControllerE, animated: true)
     }
 
-    @IBAction func rootTouchUpInside(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+    @IBAction private func nextCTouchUpInside(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func nextBTouchUpInside(_ sender: Any) {
+        guard let viewControllerB = self.navigationController?.viewControllers.first(where: { $0 is ViewControllerB }) else { return }
+        navigationController?.popToViewController(viewControllerB, animated: true)
+    }
+
+    @IBAction private func rootTouchUpInside(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

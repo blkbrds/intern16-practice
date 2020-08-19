@@ -22,13 +22,13 @@ final class CustomAvatarView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        // add user avatar
+        // Add user avatar
         avatarImageView = UIImageView(image: UIImage(named: "img_avatar_01"))
         avatarImageView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height * 4 / 5)
         avatarImageView.contentMode = .scaleAspectFit
         self.addSubview(avatarImageView)
 
-        // add user name
+        // Add user name
         usernameLabel = UILabel(frame: CGRect(x: 0, y: frame.size.height * 4 / 5, width: frame.size.width, height: frame.size.height / 5))
         usernameLabel.text = "Fx Studio"
         usernameLabel.backgroundColor = .lightGray
@@ -36,7 +36,7 @@ final class CustomAvatarView: UIView {
         usernameLabel.textColor = .blue
         self.addSubview(usernameLabel)
 
-        // add button
+        // Add button
         let clickButton = UIButton(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         clickButton.backgroundColor = .clear
         clickButton.addTarget(self, action: #selector(changeValue), for: .touchUpInside)

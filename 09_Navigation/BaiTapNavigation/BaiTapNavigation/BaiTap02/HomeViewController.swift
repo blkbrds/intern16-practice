@@ -13,13 +13,18 @@ final class HomeViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameLabel: UILabel!
 
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "Home"
+    }
+
     // MARK: - Properties
     var username: String = ""
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        title = Configure.titleName
         configUI()
     }
 
@@ -38,13 +43,14 @@ final class HomeViewController: UIViewController {
 
     @objc private func processEdit() {
         let editViewController = EditViewController()
-        navigationController?.pushViewController(editViewController, animated: true)
         editViewController.delegate = self
+        navigationController?.pushViewController(editViewController, animated: true)
     }
-
 }
+
+// MARK: - EditViewControllerDelegate
 extension HomeViewController: EditViewControllerDelegate {
-    func setValue(_ editViewController: EditViewController, needsperform action: EditViewController.Action) {
+    func setValue(_ viewController: EditViewController, needsPerform action: EditViewController.Action) {
         switch action {
         case .setName(name: let name):
             self.username = name

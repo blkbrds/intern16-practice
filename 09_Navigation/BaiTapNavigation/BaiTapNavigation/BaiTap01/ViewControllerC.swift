@@ -15,23 +15,28 @@ final class ViewControllerC: UIViewController {
     @IBOutlet private weak var previousButton: UIButton!
     @IBOutlet private weak var rootButton: UIButton!
 
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "View Controller C"
+    }
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "View Controller C"
+        title = Configure.titleName
     }
 
-    @IBAction func nextTouchUpInside(_ sender: Any) {
+    // MARK: - IBAction
+    @IBAction private func nextTouchUpInside(_ sender: Any) {
         let viewControllerD = ViewControllerD()
-        self.navigationController?.pushViewController(viewControllerD, animated: true)
+        navigationController?.pushViewController(viewControllerD, animated: true)
     }
 
-    @IBAction func previousTouchUpInside(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction private func previousTouchUpInside(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 
-    @IBAction func rootTouchUpInside(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+    @IBAction private func rootTouchUpInside(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
-
 }

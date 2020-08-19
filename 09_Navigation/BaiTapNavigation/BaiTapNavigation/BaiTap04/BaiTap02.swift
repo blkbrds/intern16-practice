@@ -10,10 +10,15 @@ import UIKit
 
 final class BaiTap02: UIViewController {
 
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "News feed"
+    }
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "News feed"
+        title = Configure.titleName
         searchButton()
         rightButton()
         configUI()

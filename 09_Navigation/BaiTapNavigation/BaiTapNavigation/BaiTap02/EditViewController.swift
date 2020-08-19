@@ -9,7 +9,7 @@
 import UIKit
 
 protocol EditViewControllerDelegate: class {
-    func setValue(_ editViewController: EditViewController, needsperform action: EditViewController.Action)
+    func setValue(_ viewController: EditViewController, needsPerform action: EditViewController.Action)
 }
 
 final class EditViewController: UIViewController {
@@ -18,12 +18,19 @@ final class EditViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var newPasswordTextField: UITextField!
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
+
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "Edit"
+    }
+
+    // MARK: - Properties
     weak var delegate: EditViewControllerDelegate?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Edit"
+        title = Configure.titleName
         configUI()
     }
 
@@ -35,17 +42,20 @@ final class EditViewController: UIViewController {
             let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(processDone))
             navigationItem.rightBarButtonItem = doneButton
         } else {
-            print("Eror")
+            print("Error")
         }
     }
 
     @objc private func processDone() {
         guard let username = usernameTextField.text else { return }
-        delegate?.setValue(self, needsperform: .setName(name: username))
-        navigationController?.popViewController(animated: true)
+        if let delegate = delegate {
+            delegate.setValue(self, needsPerform: .setName(name: username))
+            navigationController?.popViewController(animated: true)
+        }
     }
 }
 
+// MARK: - Extension
 extension EditViewController {
     enum Action {
         case setName(name: String)

@@ -40,23 +40,25 @@ final class AvatarViewController: UIViewController {
         Avatar(name: "1", imageName: "img_avatar_01")
     ]
 
-// MARK: - Properties
+    // MARK: - Properties
     var x: CGFloat = 40
     var y: CGFloat = 70
     var customAvatar = CustomAvatarView()
     let profile = ProfileViewController()
 
-// MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Home"
-
-        configUI()
-
-
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "Home"
     }
 
-// MARK: - Private Functions
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = Configure.titleName
+        configUI()
+    }
+
+    // MARK: - Private Functions
     private func configUI() {
         let screenSize = UIScreen.main.bounds
         let widthScreen = screenSize.width
@@ -70,7 +72,6 @@ final class AvatarViewController: UIViewController {
         for index in 1...avatars.count {
             customAvatar = CustomAvatarView(frame: CGRect(x: x, y: y, width: 100, height: 125))
             customAvatar.delegate = self
-            profile.delegate = self
             customAvatar.avatarImageView = UIImageView(image: UIImage(named: avatars[index - 1].imageName))
             customAvatar.usernameLabel.text = avatars[index - 1].name
             scrollView.addSubview(customAvatar)
@@ -82,6 +83,8 @@ final class AvatarViewController: UIViewController {
         }
     }
 }
+
+// MARK: - CustomAvatarDelegate, ProfileViewControllerDelegate
 extension AvatarViewController: CustomAvatarViewDelegate {
     func setValue(_ customAvatarView: CustomAvatarView, setValueAvatar action: CustomAvatarView.Action) {
         var temp: Int = 0
@@ -90,16 +93,15 @@ extension AvatarViewController: CustomAvatarViewDelegate {
             let profile = ProfileViewController()
             profile.name = username
             profile.imageName = imageView
-            for index in 1...avatars.count {
-                if username == avatars[index - 1].name {
-                    temp = index - 1
-                }
+            for index in 1...avatars.count where username == avatars[index - 1].name {
+                temp = index - 1
             }
             profile.index = temp
             navigationController?.pushViewController(profile, animated: true)
         }
     }
 }
+
 extension AvatarViewController: ProfileViewControllerDelegate {
     func changeUser(_ profile: ProfileViewController, changeName action: ProfileViewController.Action) {
         switch action {

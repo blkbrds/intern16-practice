@@ -23,6 +23,11 @@ final class ProfileViewController: UIViewController {
     var imageName: UIImage?
     var index: Int = 0
     var delegate: ProfileViewControllerDelegate?
+    
+    // MARK: - Configure
+    private struct Configure {
+        static let titleDoneButton = "Done"
+    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -32,12 +37,12 @@ final class ProfileViewController: UIViewController {
 
     // MARK: - Private Function
     private func configUI() {
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(processDone))
+        let doneButton = UIBarButtonItem(title: Configure.titleDoneButton, style: .done, target: self, action: #selector(processDone))
         navigationItem.rightBarButtonItem = doneButton
         nameTextField.text = name
         avatarImageView.image = imageName
-        print(index)
     }
+    
     @objc private func processDone() {
         guard let username = nameTextField.text else { return }
         delegate?.changeUser(self, changeName: .changeName(username, index))

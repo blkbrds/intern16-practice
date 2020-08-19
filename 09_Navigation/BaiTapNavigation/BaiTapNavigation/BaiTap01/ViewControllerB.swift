@@ -14,19 +14,24 @@ final class ViewControllerB: UIViewController {
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var previousButton: UIButton!
 
+    // MARK: - Configure
+    private struct Configure {
+        static let titleName = "View Controller B"
+    }
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "View Controller B"
+        title = Configure.titleName
     }
 
     // MARK: IBActions
-    @IBAction func pushTouchUpInside(_ sender: Any) {
+    @IBAction private func pushTouchUpInside(_ sender: Any) {
         let viewControllerC = ViewControllerC()
         self.navigationController?.pushViewController(viewControllerC, animated: true)
     }
-    @IBAction func popTouchUpInside(_ sender: Any) {
+    
+    @IBAction private func popTouchUpInside(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-
 }
