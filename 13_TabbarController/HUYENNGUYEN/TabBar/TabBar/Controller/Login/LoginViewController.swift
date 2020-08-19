@@ -51,7 +51,6 @@ class LoginViewController: BaseViewController {
                     case (_, ""):
                         errorLabel.text = LoginError.notEnterPassword.rawValue
                     case (account.key, account.value):
-                        UserDefaults.standard.set(account.key, forKey: "userName")
                         SceneDelegate.shared.changeRootViewController(changeRoot: .tabbar)
                     default:
                         errorLabel.text = LoginError.errorEnterData.rawValue

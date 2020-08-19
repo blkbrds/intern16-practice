@@ -29,12 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        if UserDefaults.standard.value(forKey: "userName")
-            != nil {
-            changeRootViewController(changeRoot: .login)
-        } else {
-            changeRootViewController(changeRoot: .tabbar)
-        }
+        changeRootViewController(changeRoot: .login)
         window.makeKeyAndVisible()
     }
     
