@@ -19,18 +19,10 @@ final class BaseTabBarController: UITabBarController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTabBar()
         configViewController()
     }
     
     // MARK: - Private methods
-    private func configTabBar() {
-        tabBar.tintColor = .red
-        
-        let appearance = UITabBarAppearance()
-        appearance.backgroundColor = .brown
-        tabBar.standardAppearance = appearance
-    }
     
     private func configViewController() {
         homeNavi.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "icons8-home-32.png"), tag: 0)
