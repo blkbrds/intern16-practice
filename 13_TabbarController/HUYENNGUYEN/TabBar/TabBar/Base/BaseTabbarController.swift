@@ -10,6 +10,7 @@ import UIKit
 
 class BaseTabbarController: UITabBarController {
     
+    //MARK: - Properties
     static weak var shared: BaseTabbarController?
     
     private var homeNavigationController = UINavigationController(rootViewController: HomeViewController())
@@ -17,11 +18,14 @@ class BaseTabbarController: UITabBarController {
     private var favoritesNavigationController = UINavigationController(rootViewController: FavoritesViewController())
     private var profileNavigationController = UINavigationController(rootViewController: ProfileViewController())
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         BaseTabbarController.shared = self
         configViewController()
     }
+    
+    //MARK: - Function
     private func configViewController() {
         //config tab Home
         homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "ic-plus "), tag: 0)

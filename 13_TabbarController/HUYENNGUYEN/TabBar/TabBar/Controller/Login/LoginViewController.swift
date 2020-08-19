@@ -21,8 +21,9 @@ class LoginViewController: BaseViewController {
         case errorEnterData = "Nhập sai tên username hoặc password"
     }
     
+    // MARK: - Delegate
     weak var delegate: LoginViewControllerDelegate?
-
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,5 @@ class LoginViewController: BaseViewController {
                 }
             }
         }
-        
     }
 }
-
