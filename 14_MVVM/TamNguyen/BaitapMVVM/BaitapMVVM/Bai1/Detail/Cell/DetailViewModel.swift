@@ -30,8 +30,8 @@ final class DetailViewModel {
     
     func getData() {
         var comments: [DetailModel] = []
-        comments.append(DetailModel(name: "Thien Tam", comment: "Co con chim non nho nho", time: " 16 phut truoc"))
-        comments.append(DetailModel(name: "Tien Le", comment: "Quan an rat ngon . Nhan vien phuc vu chu dao, do an sach se", time: " 16 phut truoc"))
+        comments.append(DetailModel(name: "Thien Tam", comment: "Co con chim non nho nhoaedkfkafkaefkaefakfkfawekmfakefewkfkwaefkmfewkmewkfmwekfmfekmkwemfwkmfwkemfkwemfkwemfkwemfkwmfkwemfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", time: " 16 phut truoc"))
+        comments.append(DetailModel(name: "Tien Le", comment: "Quan an rat ngon .", time: " 16 phut truoc"))
         comments.append(DetailModel(name: "Trung Le", comment:"Viet Nam vo dich, Viet Nam vo doi, remote chan qua, em yeu anh, anh yeu em", time: " 16 phut truoc"))
         datas = comments
     }

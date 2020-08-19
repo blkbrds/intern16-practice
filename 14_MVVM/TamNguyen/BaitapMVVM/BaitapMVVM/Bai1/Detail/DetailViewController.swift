@@ -38,6 +38,8 @@ final class DetailViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "tablecell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 150
     }
     
     private func loadData() {
@@ -59,9 +61,5 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSection()
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
     }
 }
