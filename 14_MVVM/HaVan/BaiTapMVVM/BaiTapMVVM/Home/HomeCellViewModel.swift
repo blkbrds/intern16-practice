@@ -11,6 +11,7 @@ import UIKit
 
 final class HomeCellViewModel {
     
+    // MARK: - Properties
     private(set) var name: String
     private(set) var image: UIImage
     private(set) var rate: Int
@@ -18,6 +19,7 @@ final class HomeCellViewModel {
     private(set) var distance: Float
     private(set) var favorite: Bool
     
+    // MARK: - Initialize
     init(name: String, image: UIImage, rate: Int, address: String, distance: Float, favorite: Bool) {
         self.name = name
         self.image = image

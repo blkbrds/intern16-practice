@@ -10,8 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BaiTapMVVM" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="fMo-Cr-UU2" id="IVh-GK-4ik"/>
-                <outlet property="pageControl" destination="GLS-oB-pY6" id="HYe-Y6-O6e"/>
-                <outlet property="slideView" destination="3m1-7P-V7o" id="oZB-7m-HED"/>
                 <outlet property="tableView" destination="nWE-YL-bJK" id="Plx-Jp-Byi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,42 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-7P-V7o">
-                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="0GH-k3-5fZ"/>
-                    </constraints>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-r3-yLK" userLabel="rightButton">
-                    <rect key="frame" x="359" y="116.5" width="55" height="55"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="yjs-r3-yLK" secondAttribute="height" id="gzx-vU-6FH"/>
-                    </constraints>
-                    <color key="tintColor" red="0.90774816270000003" green="0.49893134830000002" blue="0.46272867919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system">
-                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="heavy"/>
-                    </state>
-                    <connections>
-                        <action selector="rightButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="bhy-iQ-15T"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFp-Pc-msh" userLabel="leftButton">
-                    <rect key="frame" x="0.0" y="116.5" width="55" height="55"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="55" id="ZWb-gQ-Mc5"/>
-                        <constraint firstAttribute="width" secondItem="CFp-Pc-msh" secondAttribute="height" id="bU5-EF-IVs"/>
-                    </constraints>
-                    <color key="tintColor" red="0.85567555969999998" green="0.51956974840000003" blue="0.4764721677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system">
-                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="heavy"/>
-                    </state>
-                    <connections>
-                        <action selector="leftButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="gmT-Tw-780"/>
-                    </connections>
-                </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fMo-Cr-UU2">
-                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hsE-fP-WRM">
                         <size key="itemSize" width="128" height="128"/>
@@ -66,43 +30,23 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nWE-YL-bJK">
-                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-oB-pY6">
-                    <rect key="frame" x="171.5" y="202" width="71" height="37"/>
-                    <color key="tintColor" red="0.85567555969999998" green="0.51956974840000003" blue="0.4764721677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="currentPageIndicatorTintColor" red="0.85567555969999998" green="0.51956974840000003" blue="0.4764721677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                </pageControl>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="CFp-Pc-msh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="22H-kT-Iwk"/>
-                <constraint firstItem="fMo-Cr-UU2" firstAttribute="top" secondItem="3m1-7P-V7o" secondAttribute="bottom" id="7HW-ND-OGj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nWE-YL-bJK" secondAttribute="trailing" id="APC-Aa-ZIj"/>
-                <constraint firstItem="3m1-7P-V7o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DWb-A8-egZ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fMo-Cr-UU2" secondAttribute="trailing" id="DlX-wf-7wn"/>
-                <constraint firstItem="3m1-7P-V7o" firstAttribute="bottom" secondItem="GLS-oB-pY6" secondAttribute="bottom" constant="5" id="E0W-8v-UJJ"/>
-                <constraint firstItem="CFp-Pc-msh" firstAttribute="top" secondItem="yjs-r3-yLK" secondAttribute="top" id="IK4-ac-ccv"/>
-                <constraint firstItem="3m1-7P-V7o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Q8y-06-1c6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3m1-7P-V7o" secondAttribute="trailing" id="VJz-p8-7Ub"/>
+                <constraint firstItem="fMo-Cr-UU2" firstAttribute="trailing" secondItem="nWE-YL-bJK" secondAttribute="trailing" id="Lyh-dq-UjY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nWE-YL-bJK" secondAttribute="bottom" id="XAe-es-vry"/>
                 <constraint firstItem="nWE-YL-bJK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bmM-yG-g9A"/>
-                <constraint firstItem="yjs-r3-yLK" firstAttribute="width" secondItem="CFp-Pc-msh" secondAttribute="width" id="czI-6e-g4n"/>
-                <constraint firstItem="yjs-r3-yLK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="glk-Cq-4mu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fMo-Cr-UU2" secondAttribute="bottom" id="hfL-sV-JNq"/>
-                <constraint firstItem="fMo-Cr-UU2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ig2-29-YRK"/>
-                <constraint firstItem="nWE-YL-bJK" firstAttribute="top" secondItem="3m1-7P-V7o" secondAttribute="bottom" id="pBY-tw-IYs"/>
-                <constraint firstItem="GLS-oB-pY6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pfX-wy-Fae"/>
-                <constraint firstItem="yjs-r3-yLK" firstAttribute="centerY" secondItem="3m1-7P-V7o" secondAttribute="centerY" id="xj5-pp-5xX"/>
+                <constraint firstItem="fMo-Cr-UU2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cCd-Ri-oHp"/>
+                <constraint firstItem="nWE-YL-bJK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dxf-DJ-7Qc"/>
+                <constraint firstItem="fMo-Cr-UU2" firstAttribute="bottom" secondItem="nWE-YL-bJK" secondAttribute="bottom" id="yoL-u9-GPT"/>
+                <constraint firstItem="fMo-Cr-UU2" firstAttribute="leading" secondItem="nWE-YL-bJK" secondAttribute="leading" id="ziE-oN-VPx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="105.79710144927537" y="130.58035714285714"/>
         </view>
     </objects>
-    <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
-        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
-    </resources>
 </document>

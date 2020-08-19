@@ -2,7 +2,7 @@
 //  SlideViewModel.swift
 //  BaiTapMVVM
 //
-//  Created by NganHa on 8/17/20.
+//  Created by NganHa on 8/19/20.
 //  Copyright © 2020 Galaxy. All rights reserved.
 //
 
@@ -11,9 +11,11 @@ import UIKit
 
 final class SlideViewModel {
     
+    // MARK: - Properties
     var listImage: [UIImage] = [#imageLiteral(resourceName: "slide3"), #imageLiteral(resourceName: "slide4"), #imageLiteral(resourceName: "slide1"), #imageLiteral(resourceName: "slide5"), #imageLiteral(resourceName: "slide2")]
     
-    func numberOfItem() -> Int {
+    // MARK: - Public functions
+    func numberOfImageSlideItem() -> Int {
         return listImage.count
     }
     

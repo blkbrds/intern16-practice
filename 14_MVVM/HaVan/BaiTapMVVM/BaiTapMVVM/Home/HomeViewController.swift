@@ -11,58 +11,44 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var slideView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var pageControl: UIPageControl!
     
     // MARK: - Propeties
     private var viewModel = HomeViewModel()
-    private var count: Int = -1
     
     // MARK: - Life cycle
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-        collectionView.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigation()
         configTableView()
         configCollectionView()
         tableViewState()
-        //configSlideView()
     }
-
+    
     // MARK: - Private functions
     private func configNavigation() {
         title = "HOME"
     }
     
     private func configTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
         let nib = UINib(nibName: "HomeTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "HomeTableViewCell")
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 150
+        guard let slider = Bundle.main.loadNibNamed("SlideReusableView", owner: self, options: nil)?.first as? SlideReusableView else { return }
+        slider.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 200)
+        tableView.tableHeaderView = slider
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     private func configCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
         let nib = UINib(nibName: "HomeCollectionViewCell", bundle: Bundle.main)
         collectionView.register(nib, forCellWithReuseIdentifier: "HomeCollectionViewCell")
+        let slider = UINib(nibName: "SlideReusableView", bundle: Bundle.main)
+        collectionView.register(slider, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SlideReusableView")
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
-    
-    private func configSlideView() {
-        guard let slide = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as? SlideView else { return }
-        slide.frame = CGRect(x: 0, y: 0, width: slideView.bounds.width, height: slideView.bounds.height)
-        slideView.addSubview(slide)
-    }
-    // MARK: - Public functions
     
     // MARK: - Objc functions
     @objc private func collectionViewState() {
@@ -71,7 +57,6 @@ final class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightItem
         tableView.isHidden = true
         collectionView.isHidden = false
-        slideView.isHidden = false
     }
     
     @objc private func tableViewState() {
@@ -80,28 +65,6 @@ final class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightItem
         tableView.isHidden = false
         collectionView.isHidden = true
-        slideView.isHidden = false
-    }
-    
-    // MARK: - IBActions
-    @IBAction private func rightButtonTouchUpInside(_ sender: UIButton) {
-        count += 1
-        if count <= 5 {
-            
-        } else {
-            count = 0
-        }
-        pageControl.currentPage = count
-    }
-    
-    @IBAction private func leftButtonTouchUpInside(_ sender: UIButton) {
-        count -= 1
-        if count >= 0 {
-            
-        } else {
-            count = 5
-        }
-        pageControl.currentPage = count
     }
 }
 
@@ -137,8 +100,6 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
         detailViewController.viewModelDetail = viewModel.getDetailModel(atIndexPath: indexPath)
-        detailViewController.viewModelComment = viewModel.getComment(atIndexPath: indexPath)
-        detailViewController.viewModelSlideDetail = viewModel.getSlideDetail(atIndexPath: indexPath)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
@@ -164,18 +125,33 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
         cell.viewModel = viewModel.getHomeCellViewModel(atIndexPath: indexPath)
         cell.position = indexPath.row
         cell.delegate = self
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SlideReusableView", for: indexPath) as? SlideReusableView else { return UICollectionReusableView() }
+            return header
+        default:
+            return UICollectionReusableView()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 200)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / 2 - 8, height: 300)
+        return CGSize(width: self.collectionView.bounds.width / 2 - 8, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -187,20 +163,19 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
         detailViewController.viewModelDetail = viewModel.getDetailModel(atIndexPath: indexPath)
-        detailViewController.viewModelComment = viewModel.getComment(atIndexPath: indexPath)
-        detailViewController.viewModelSlideDetail = viewModel.getSlideDetail(atIndexPath: indexPath)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
 // MARK: - HomeCollectionViewCellDelegate
 extension HomeViewController: HomeCollectionViewCellDelegate {
+    
     func view(_ view: HomeCollectionViewCell, needsPerfom action: HomeCollectionViewCell.Action) {
         switch action {
         case .changeFavoriteState(position: let position, with: let fav):

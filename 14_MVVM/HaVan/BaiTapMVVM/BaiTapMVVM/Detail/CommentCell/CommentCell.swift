@@ -22,6 +22,11 @@ final class CommentCell: UITableViewCell {
         }
     }
     
+    // MARK: - Life cycle
+    override func awakeFromNib() {
+        superview?.awakeFromNib()
+    }
+    
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

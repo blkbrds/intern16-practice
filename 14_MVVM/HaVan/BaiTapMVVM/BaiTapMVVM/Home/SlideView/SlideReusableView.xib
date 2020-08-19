@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideReusableView" customModule="BaiTapMVVM" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="SlideReusableView" customModule="BaiTapMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="127"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sHz-C7-lvc">
+                    <rect key="frame" x="0.0" y="0.0" width="342" height="127"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zBo-BL-x32">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtD-V0-pya">
+                    <rect key="frame" x="302" y="46" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WtD-V0-pya" secondAttribute="height" id="D6r-KG-Zvz"/>
+                    </constraints>
+                    <color key="tintColor" red="0.74117647060000003" green="0.1960784314" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="medium"/>
+                    </state>
+                    <connections>
+                        <action selector="rightButtonTouchUpInside:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="WtT-4H-eWI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-z4-Vp7">
+                    <rect key="frame" x="5" y="46" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="D7c-z4-Vp7" secondAttribute="height" id="Wua-e3-I6B"/>
+                        <constraint firstAttribute="height" constant="35" id="sLt-5o-4EM"/>
+                    </constraints>
+                    <color key="tintColor" red="0.74117647060000003" green="0.1960784314" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="medium"/>
+                    </state>
+                    <connections>
+                        <action selector="leftButtonTouchUpInside:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="3Qh-9v-chU"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="MZI-Jo-Ayn">
+                    <rect key="frame" x="135.5" y="85" width="71" height="37"/>
+                    <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.74117647060000003" green="0.1960784314" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sHz-C7-lvc" secondAttribute="trailing" id="04p-dc-VZL"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="MZI-Jo-Ayn" secondAttribute="bottom" constant="5" id="8EL-YT-yxT"/>
+                <constraint firstItem="sHz-C7-lvc" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="8jf-i2-juC"/>
+                <constraint firstItem="sHz-C7-lvc" firstAttribute="bottom" secondItem="U6b-Vx-4bR" secondAttribute="bottom" id="90G-F5-JhL"/>
+                <constraint firstItem="MZI-Jo-Ayn" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="AP4-28-Thc"/>
+                <constraint firstItem="sHz-C7-lvc" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Hq4-Sn-kcp"/>
+                <constraint firstItem="D7c-z4-Vp7" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="J9e-SA-5QU"/>
+                <constraint firstItem="D7c-z4-Vp7" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="5" id="NKg-Ca-A3F"/>
+                <constraint firstItem="WtD-V0-pya" firstAttribute="top" secondItem="D7c-z4-Vp7" secondAttribute="top" id="YA3-VE-CZk"/>
+                <constraint firstItem="WtD-V0-pya" firstAttribute="width" secondItem="D7c-z4-Vp7" secondAttribute="width" id="ptr-cd-A0Z"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="WtD-V0-pya" secondAttribute="trailing" constant="5" id="qiX-cA-ZOj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="collectionView" destination="sHz-C7-lvc" id="iO6-va-3Dd"/>
+                <outlet property="pageControl" destination="MZI-Jo-Ayn" id="0xO-Gf-8Av"/>
+            </connections>
+            <point key="canvasLocation" x="153.62318840579712" y="76.674107142857139"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+    </resources>
+</document>

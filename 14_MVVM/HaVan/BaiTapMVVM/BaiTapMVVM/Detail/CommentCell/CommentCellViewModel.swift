@@ -9,10 +9,13 @@
 import Foundation
 
 final class CommentCellViewModel {
+    
+    // MARK: - Properties
     private(set) var name: String
     private(set) var comment: String
     private(set) var date: String
     
+    // MARK: - Initialize
     init(name: String, comment: String, date: String) {
         self.name = name
         self.comment = comment
