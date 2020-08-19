@@ -6,7 +6,7 @@ protocol LoginViewControllerDelegate: class {
     func login(view: LoginViewController)
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     // MARK: - IBOutlet
     @IBOutlet private weak var usernameTextField: UITextField!
@@ -50,17 +50,15 @@ class LoginViewController: UIViewController {
                     case (_, ""):
                         errorLabel.text = LoginError.notEnterPassword.rawValue
                     case (account.key, account.value):
-                        let homeViewController = HomeViewController()
-                        navigationController?.pushViewController(homeViewController, animated: true)
-                        if let delegate = delegate {
-                            delegate.login(view: self)
-                        }
+                        UserDefaults.standard.set(account.key, forKey: "userName")
+                        SceneDelegate.shared.changeRootViewController(changeRoot: .tabbar)
                     default:
                         errorLabel.text = LoginError.errorEnterData.rawValue
                     }
                 }
-                
             }
         }
+        
     }
 }
+
