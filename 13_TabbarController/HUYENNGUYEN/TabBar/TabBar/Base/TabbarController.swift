@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BaseTabbarController: UITabBarController {
+class TabbarController: UITabBarController {
     
     //MARK: - Properties
-    static weak var shared: BaseTabbarController?
+    static weak var shared: TabbarController?
     
     private var homeNavigationController = UINavigationController(rootViewController: HomeViewController())
     private var mapNavigationController = UINavigationController(rootViewController: MapViewController())
@@ -21,7 +21,7 @@ class BaseTabbarController: UITabBarController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        BaseTabbarController.shared = self
+        TabbarController.shared = self
         configViewController()
     }
     

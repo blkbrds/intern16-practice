@@ -10,7 +10,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    enum root {
+    enum Screen {
         case login
         case tabbar
     }
@@ -29,18 +29,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        changeRootViewController(changeRoot: .login)
+        changeRoot(screen: .login)
         window.makeKeyAndVisible()
     }
     
-    func changeRootViewController(changeRoot: root) {
-        switch changeRoot {
+    func changeRoot(screen: Screen) {
+        switch screen {
         case .login:
             let loginVC = LoginViewController()
-            let loginNavigationcontroller = UINavigationController(rootViewController: loginVC)
-            window?.rootViewController = loginNavigationcontroller
+            let loginNC = UINavigationController(rootViewController: loginVC)
+            window?.rootViewController = loginNC
         case .tabbar:
-            window?.rootViewController = BaseTabbarController()
+            window?.rootViewController = TabbarController()
         }
     }
     

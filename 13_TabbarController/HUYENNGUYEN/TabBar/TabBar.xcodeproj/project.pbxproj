@@ -21,8 +21,7 @@
 		832EA50B24E1506F00319017 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832EA50924E1506F00319017 /* FavoritesViewController.xib */; };
 		832EA50E24E1507D00319017 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EA50C24E1507D00319017 /* ProfileViewController.swift */; };
 		832EA50F24E1507D00319017 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832EA50D24E1507D00319017 /* ProfileViewController.xib */; };
-		832EEF6D24E4E20A00C6EB6B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EEF6C24E4E20A00C6EB6B /* BaseViewController.swift */; };
-		832EEF6F24E4E2A800C6EB6B /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EEF6E24E4E2A800C6EB6B /* BaseTabbarController.swift */; };
+		832EEF6F24E4E2A800C6EB6B /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EEF6E24E4E2A800C6EB6B /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +41,7 @@
 		832EA50924E1506F00319017 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		832EA50C24E1507D00319017 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		832EA50D24E1507D00319017 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		832EEF6C24E4E20A00C6EB6B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		832EEF6E24E4E2A800C6EB6B /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		832EEF6E24E4E2A800C6EB6B /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +135,7 @@
 		83313EE424E287A000088552 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				832EEF6C24E4E20A00C6EB6B /* BaseViewController.swift */,
-				832EEF6E24E4E2A800C6EB6B /* BaseTabbarController.swift */,
+				832EEF6E24E4E2A800C6EB6B /* TabbarController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -241,8 +238,7 @@
 				8327154424E0FBD600AA58AD /* SceneDelegate.swift in Sources */,
 				832EA50624E1505A00319017 /* MapViewController.swift in Sources */,
 				832EA50E24E1507D00319017 /* ProfileViewController.swift in Sources */,
-				832EEF6F24E4E2A800C6EB6B /* BaseTabbarController.swift in Sources */,
-				832EEF6D24E4E20A00C6EB6B /* BaseViewController.swift in Sources */,
+				832EEF6F24E4E2A800C6EB6B /* TabbarController.swift in Sources */,
 				832EA50A24E1506F00319017 /* FavoritesViewController.swift in Sources */,
 				832EA50224E1504D00319017 /* HomeViewController.swift in Sources */,
 			);
