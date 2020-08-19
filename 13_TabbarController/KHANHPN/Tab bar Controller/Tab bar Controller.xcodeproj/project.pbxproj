@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002E9BBC24EA6C7E005A3658 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9BBA24EA6C7E005A3658 /* HomeViewController.swift */; };
+		002E9BBD24EA6C7E005A3658 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E9BBB24EA6C7E005A3658 /* HomeViewController.xib */; };
+		002E9BC124EA6CA5005A3658 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9BBF24EA6CA5005A3658 /* MapViewController.swift */; };
+		002E9BC224EA6CA5005A3658 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E9BC024EA6CA5005A3658 /* MapViewController.xib */; };
+		002E9BC724EA6CF2005A3658 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9BC524EA6CF2005A3658 /* FavouriteViewController.swift */; };
+		002E9BC824EA6CF2005A3658 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E9BC624EA6CF2005A3658 /* FavouriteViewController.xib */; };
+		002E9BCB24EA6D02005A3658 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9BC924EA6D02005A3658 /* ProfileViewController.swift */; };
+		002E9BCC24EA6D02005A3658 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E9BCA24EA6D02005A3658 /* ProfileViewController.xib */; };
+		002E9BD024EA798B005A3658 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9BCE24EA798B005A3658 /* LoginViewController.swift */; };
+		002E9BD124EA798B005A3658 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E9BCF24EA798B005A3658 /* LoginViewController.xib */; };
+		002E9BD524EA7AC3005A3658 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9BD324EA7AC3005A3658 /* RegisterViewController.swift */; };
+		002E9BD624EA7AC3005A3658 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002E9BD424EA7AC3005A3658 /* RegisterViewController.xib */; };
+		005BF37324EAD9FB006000E6 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 005BF37224EAD9FB006000E6 /* Data.plist */; };
+		00CC26B924E99F680001816C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC26B824E99F680001816C /* AppDelegate.swift */; };
+		00CC26BB24E99F680001816C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC26BA24E99F680001816C /* SceneDelegate.swift */; };
+		00CC26C224E99F6A0001816C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CC26C124E99F6A0001816C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		002E9BBA24EA6C7E005A3658 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		002E9BBB24EA6C7E005A3658 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		002E9BBF24EA6CA5005A3658 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		002E9BC024EA6CA5005A3658 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		002E9BC524EA6CF2005A3658 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		002E9BC624EA6CF2005A3658 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
+		002E9BC924EA6D02005A3658 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		002E9BCA24EA6D02005A3658 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		002E9BCE24EA798B005A3658 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		002E9BCF24EA798B005A3658 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		002E9BD324EA7AC3005A3658 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		002E9BD424EA7AC3005A3658 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		005BF37224EAD9FB006000E6 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		00CC26B524E99F680001816C /* Tab bar Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab bar Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CC26B824E99F680001816C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00CC26BA24E99F680001816C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		00CC26C124E99F6A0001816C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00CC26C624E99F6A0001816C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00CC26B224E99F680001816C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		002E9BB924EA6C44005A3658 /* Home VC */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BBA24EA6C7E005A3658 /* HomeViewController.swift */,
+				002E9BBB24EA6C7E005A3658 /* HomeViewController.xib */,
+			);
+			path = "Home VC";
+			sourceTree = "<group>";
+		};
+		002E9BBE24EA6C93005A3658 /* Map VC */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BBF24EA6CA5005A3658 /* MapViewController.swift */,
+				002E9BC024EA6CA5005A3658 /* MapViewController.xib */,
+			);
+			path = "Map VC";
+			sourceTree = "<group>";
+		};
+		002E9BC324EA6CD6005A3658 /* Favoutite VC */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BC524EA6CF2005A3658 /* FavouriteViewController.swift */,
+				002E9BC624EA6CF2005A3658 /* FavouriteViewController.xib */,
+			);
+			path = "Favoutite VC";
+			sourceTree = "<group>";
+		};
+		002E9BC424EA6CDF005A3658 /* Profile VC */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BC924EA6D02005A3658 /* ProfileViewController.swift */,
+				002E9BCA24EA6D02005A3658 /* ProfileViewController.xib */,
+			);
+			path = "Profile VC";
+			sourceTree = "<group>";
+		};
+		002E9BCD24EA7974005A3658 /* Login VC */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BCE24EA798B005A3658 /* LoginViewController.swift */,
+				002E9BCF24EA798B005A3658 /* LoginViewController.xib */,
+			);
+			path = "Login VC";
+			sourceTree = "<group>";
+		};
+		002E9BD224EA7AAC005A3658 /* Register VC */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BD324EA7AC3005A3658 /* RegisterViewController.swift */,
+				002E9BD424EA7AC3005A3658 /* RegisterViewController.xib */,
+			);
+			path = "Register VC";
+			sourceTree = "<group>";
+		};
+		00CC26AC24E99F680001816C = {
+			isa = PBXGroup;
+			children = (
+				00CC26B724E99F680001816C /* Tab bar Controller */,
+				00CC26B624E99F680001816C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00CC26B624E99F680001816C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00CC26B524E99F680001816C /* Tab bar Controller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00CC26B724E99F680001816C /* Tab bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				002E9BD224EA7AAC005A3658 /* Register VC */,
+				002E9BCD24EA7974005A3658 /* Login VC */,
+				002E9BC424EA6CDF005A3658 /* Profile VC */,
+				002E9BC324EA6CD6005A3658 /* Favoutite VC */,
+				002E9BBE24EA6C93005A3658 /* Map VC */,
+				002E9BB924EA6C44005A3658 /* Home VC */,
+				00CC26B824E99F680001816C /* AppDelegate.swift */,
+				00CC26BA24E99F680001816C /* SceneDelegate.swift */,
+				00CC26C124E99F6A0001816C /* Assets.xcassets */,
+				00CC26C624E99F6A0001816C /* Info.plist */,
+				005BF37224EAD9FB006000E6 /* Data.plist */,
+			);
+			path = "Tab bar Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00CC26B424E99F680001816C /* Tab bar Controller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00CC26C924E99F6A0001816C /* Build configuration list for PBXNativeTarget "Tab bar Controller" */;
+			buildPhases = (
+				00CC26B124E99F680001816C /* Sources */,
+				00CC26B224E99F680001816C /* Frameworks */,
+				00CC26B324E99F680001816C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tab bar Controller";
+			productName = "Tab bar Controller";
+			productReference = 00CC26B524E99F680001816C /* Tab bar Controller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00CC26AD24E99F680001816C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Ngoc Khanh Phan";
+				TargetAttributes = {
+					00CC26B424E99F680001816C = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 00CC26B024E99F680001816C /* Build configuration list for PBXProject "Tab bar Controller" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00CC26AC24E99F680001816C;
+			productRefGroup = 00CC26B624E99F680001816C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00CC26B424E99F680001816C /* Tab bar Controller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00CC26B324E99F680001816C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002E9BC824EA6CF2005A3658 /* FavouriteViewController.xib in Resources */,
+				00CC26C224E99F6A0001816C /* Assets.xcassets in Resources */,
+				002E9BD624EA7AC3005A3658 /* RegisterViewController.xib in Resources */,
+				002E9BD124EA798B005A3658 /* LoginViewController.xib in Resources */,
+				002E9BC224EA6CA5005A3658 /* MapViewController.xib in Resources */,
+				002E9BCC24EA6D02005A3658 /* ProfileViewController.xib in Resources */,
+				005BF37324EAD9FB006000E6 /* Data.plist in Resources */,
+				002E9BBD24EA6C7E005A3658 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00CC26B124E99F680001816C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002E9BD024EA798B005A3658 /* LoginViewController.swift in Sources */,
+				002E9BCB24EA6D02005A3658 /* ProfileViewController.swift in Sources */,
+				00CC26B924E99F680001816C /* AppDelegate.swift in Sources */,
+				002E9BD524EA7AC3005A3658 /* RegisterViewController.swift in Sources */,
+				00CC26BB24E99F680001816C /* SceneDelegate.swift in Sources */,
+				002E9BBC24EA6C7E005A3658 /* HomeViewController.swift in Sources */,
+				002E9BC724EA6CF2005A3658 /* FavouriteViewController.swift in Sources */,
+				002E9BC124EA6CA5005A3658 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		00CC26C724E99F6A0001816C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00CC26C824E99F6A0001816C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00CC26CA24E99F6A0001816C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tab bar Controller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chipuscu.Tab-bar-Controller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00CC26CB24E99F6A0001816C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tab bar Controller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chipuscu.Tab-bar-Controller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00CC26B024E99F680001816C /* Build configuration list for PBXProject "Tab bar Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CC26C724E99F6A0001816C /* Debug */,
+				00CC26C824E99F6A0001816C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00CC26C924E99F6A0001816C /* Build configuration list for PBXNativeTarget "Tab bar Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CC26CA24E99F6A0001816C /* Debug */,
+				00CC26CB24E99F6A0001816C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00CC26AD24E99F680001816C /* Project object */;
+}
