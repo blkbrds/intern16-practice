@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 final class LocalViewController: UIViewController {
     
     // MARK: - IBOulets
