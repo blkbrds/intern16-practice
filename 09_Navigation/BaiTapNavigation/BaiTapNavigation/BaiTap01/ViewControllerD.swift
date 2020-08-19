@@ -8,6 +8,11 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "View Controller D"
+}
+
 final class ViewControllerD: UIViewController {
 
     // MARK: - IBOutlets
@@ -15,11 +20,6 @@ final class ViewControllerD: UIViewController {
     @IBOutlet private weak var viewControllerCButton: UIButton!
     @IBOutlet private weak var viewControllerBButton: UIButton!
     @IBOutlet private weak var rootButton: UIButton!
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "View Controller D"
-    }
 
     // MARK: - Life cycle
     override func viewDidLoad() {

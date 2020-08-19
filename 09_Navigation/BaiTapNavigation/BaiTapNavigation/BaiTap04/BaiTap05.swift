@@ -8,15 +8,15 @@
 
 import UIKit
 
-final class BaiTap05: UIViewController {
+// MARK: - Configure
+private struct Configure {
+    static let titleBackButton = "Left"
+    static let titleMid1Button = "Mid1"
+    static let titleMid2Button = "Mid2"
+    static let titleRightButton = "Right"
+}
 
-    // MARK: - Configure
-    private struct Configure {
-        static let titleBackButton = "Left"
-        static let titleMid1Button = "Mid1"
-        static let titleMid2Button = "Mid2"
-        static let titleRightButton = "Right"
-    }
+final class BaiTap05: UIViewController {
 
     // MARK: - Life cycle
     override func viewDidLoad() {

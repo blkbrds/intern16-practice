@@ -8,6 +8,11 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleDoneButton = "Done"
+}
+
 protocol ProfileViewControllerDelegate {
     func changeUser(_ profile: ProfileViewController, changeName action: ProfileViewController.Action)
 }
@@ -23,11 +28,6 @@ final class ProfileViewController: UIViewController {
     var imageName: UIImage?
     var index: Int = 0
     var delegate: ProfileViewControllerDelegate?
-    
-    // MARK: - Configure
-    private struct Configure {
-        static let titleDoneButton = "Done"
-    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ final class ProfileViewController: UIViewController {
         nameTextField.text = name
         avatarImageView.image = imageName
     }
-    
+
     @objc private func processDone() {
         guard let username = nameTextField.text else { return }
         delegate?.changeUser(self, changeName: .changeName(username, index))

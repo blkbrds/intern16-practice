@@ -8,13 +8,13 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Bar Button Test"
+}
+
 final class BaiTap04: UIViewController {
 
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "Bar Button Test"
-    }
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

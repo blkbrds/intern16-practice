@@ -8,13 +8,13 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Gradient Navigation"
+}
+
 final class BaiTap01: UIViewController {
 
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "Gradient Navigation"
-    }
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

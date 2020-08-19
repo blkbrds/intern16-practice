@@ -8,15 +8,15 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Home"
+}
+
 final class HomeViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var usernameLabel: UILabel!
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "Home"
-    }
 
     // MARK: - Properties
     var username: String = ""

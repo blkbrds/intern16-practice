@@ -8,17 +8,17 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "View Controller C"
+}
+
 final class ViewControllerC: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var previousButton: UIButton!
     @IBOutlet private weak var rootButton: UIButton!
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "View Controller C"
-    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {

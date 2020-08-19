@@ -8,18 +8,18 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Login"
+    static let titleDoneButton = "Done"
+    static let titleLogoutButton = "Logout"
+}
+
 final class LoginViewController: UIViewController {
 
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var erorLabel: UILabel!
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "Login"
-        static let titleDoneButton = "Done"
-        static let titleLogoutButton = "Logout"
-    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {

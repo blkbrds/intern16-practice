@@ -8,6 +8,11 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Home"
+}
+
 final class AvatarViewController: UIViewController {
 
     // MARK: - Properties
@@ -45,11 +50,6 @@ final class AvatarViewController: UIViewController {
     var y: CGFloat = 70
     var customAvatar = CustomAvatarView()
     let profile = ProfileViewController()
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "Home"
-    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {

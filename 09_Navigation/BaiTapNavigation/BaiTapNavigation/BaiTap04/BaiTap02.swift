@@ -8,12 +8,12 @@
 
 import UIKit
 
-final class BaiTap02: UIViewController {
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "News feed"
+}
 
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "News feed"
-    }
+final class BaiTap02: UIViewController {
 
     // MARK: - Life cycle
     override func viewDidLoad() {

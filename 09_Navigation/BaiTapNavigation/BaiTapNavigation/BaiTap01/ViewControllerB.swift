@@ -8,16 +8,16 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "View Controller B"
+}
+
 final class ViewControllerB: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var previousButton: UIButton!
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "View Controller B"
-    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -28,10 +28,10 @@ final class ViewControllerB: UIViewController {
     // MARK: IBActions
     @IBAction private func pushTouchUpInside(_ sender: Any) {
         let viewControllerC = ViewControllerC()
-        self.navigationController?.pushViewController(viewControllerC, animated: true)
+        navigationController?.pushViewController(viewControllerC, animated: true)
     }
-    
+
     @IBAction private func popTouchUpInside(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }

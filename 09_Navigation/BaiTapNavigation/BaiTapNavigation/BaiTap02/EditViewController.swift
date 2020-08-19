@@ -8,6 +8,12 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Edit"
+}
+
+
 protocol EditViewControllerDelegate: class {
     func setValue(_ viewController: EditViewController, needsPerform action: EditViewController.Action)
 }
@@ -18,11 +24,6 @@ final class EditViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var newPasswordTextField: UITextField!
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
-
-    // MARK: - Configure
-    private struct Configure {
-        static let titleName = "Edit"
-    }
 
     // MARK: - Properties
     weak var delegate: EditViewControllerDelegate?

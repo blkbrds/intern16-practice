@@ -14,6 +14,7 @@ protocol CustomAvatarViewDelegate {
 
 final class CustomAvatarView: UIView {
 
+    // MARK:: - Properties
     var avatarImageView: UIImageView = UIImageView()
     var usernameLabel: UILabel = UILabel()
     var delegate: CustomAvatarViewDelegate?
