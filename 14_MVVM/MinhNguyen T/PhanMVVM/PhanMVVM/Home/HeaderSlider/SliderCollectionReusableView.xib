@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="SliderCollectionReusableView" customModule="PhanMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="41t-Rx-R2Y">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Y0-eo-1z7">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiO-VV-qZl">
+                    <rect key="frame" x="10" y="36.5" width="12.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" backgroundImage="chevron.left" catalog="system"/>
+                    <connections>
+                        <action selector="backButtonTouchUpInside:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="9KU-Io-t2z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-JB-xEL">
+                    <rect key="frame" x="297.5" y="36.5" width="12.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" backgroundImage="chevron.right" catalog="system"/>
+                    <connections>
+                        <action selector="nextButtonTouchUpInside:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="7wa-1Q-u3f"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fN4-GS-Hl2">
+                    <rect key="frame" x="135" y="65" width="50" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="CDr-rd-oY8"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fN4-GS-Hl2" secondAttribute="bottom" id="0wB-qm-asO"/>
+                <constraint firstItem="kiO-VV-qZl" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="10" id="1ds-kF-JtO"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="41t-Rx-R2Y" secondAttribute="trailing" id="1lL-BB-gJb"/>
+                <constraint firstAttribute="bottom" secondItem="41t-Rx-R2Y" secondAttribute="bottom" id="9xW-BC-ji0"/>
+                <constraint firstItem="fN4-GS-Hl2" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="H81-Aw-3fq"/>
+                <constraint firstItem="41t-Rx-R2Y" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Jjo-rW-QKa"/>
+                <constraint firstItem="kiO-VV-qZl" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Xsw-bI-3dg"/>
+                <constraint firstItem="rfj-JB-xEL" firstAttribute="centerY" secondItem="kiO-VV-qZl" secondAttribute="centerY" id="nW7-ZB-pZD"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="rfj-JB-xEL" secondAttribute="trailing" constant="10" id="sKX-1k-pxu"/>
+                <constraint firstItem="41t-Rx-R2Y" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="w9a-aW-U0W"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="collectionView" destination="41t-Rx-R2Y" id="QyS-QD-hLR"/>
+                <outlet property="pageControl" destination="fN4-GS-Hl2" id="vpr-Oc-TjA"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+    </resources>
+</document>
