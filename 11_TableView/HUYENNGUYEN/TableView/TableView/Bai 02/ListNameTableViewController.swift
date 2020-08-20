@@ -9,30 +9,28 @@
 import UIKit
 
 class ListNameTableViewController: UITableViewController {
-
+    var nameArray: [String] = []
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        
+        //get data from plist
+        if let URL = Bundle.main.url(forResource: "NameList", withExtension: "plist") {
+            if let nameFromPlist = NSArray(contentsOf: URL) as? [String] {
+                nameArray = nameFromPlist
+            }
+        }
     }
-
+    
     // MARK: - Function
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return nameArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        var nameArray: [String] = []
-        if let URL = Bundle.main.url(forResource: "NameList", withExtension: "plist") {
-            if let nameFromPlist = NSArray(contentsOf: URL) as? [String] {
-                nameArray = nameFromPlist
-              }
-            }
         cell.textLabel?.text = "\(nameArray[indexPath.row])"
         return cell
     }

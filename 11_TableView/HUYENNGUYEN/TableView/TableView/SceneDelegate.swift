@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
 //        let vc = DisplayListTableViewController()
-//        let vc = ListNameTableViewController()
+        let vc = ListNameTableViewController()
 //        let vc = MasterViewController()
 //        let vc = Bai04ViewController()
 //        let vc = Bai05ViewController()
@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let vc = Bai08ViewController()
 //        let vc = Bai09ViewController()
 //        let vc = Bai11ViewController()
-        let vc = Bai12ViewController()
+//        let vc = Bai12ViewController()
 
         let navi = UINavigationController(rootViewController: vc)
         window.rootViewController = navi
