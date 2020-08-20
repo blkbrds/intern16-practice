@@ -2,10 +2,6 @@
 //  Naviagtion
 import UIKit
 
-protocol LoginViewControllerDelegate: class {
-    func login(view: LoginViewController)
-}
-
 class LoginViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -20,9 +16,6 @@ class LoginViewController: UIViewController {
         case notEnterPassword = "Bạn chưa nhập password"
         case errorEnterData = "Nhập sai tên username hoặc password"
     }
-    
-    // MARK: - Delegate
-    weak var delegate: LoginViewControllerDelegate?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -39,22 +32,21 @@ class LoginViewController: UIViewController {
     
     // MARK: - Objc
     @objc private func doneTouchUpInside() {
-        if let path = Bundle.main.path(forResource: "dbAccount", ofType: "plist") {
-            if let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
-                for account in dic {
-                    let result: (String?, String?) = (usernameTextField.text, passwordTextField.text)
-                    switch result {
-                    case ("", ""), (nil, nil):
-                        errorLabel.text = LoginError.notEnterData.rawValue
-                    case ("", _):
-                        errorLabel.text = LoginError.notEnterUserName.rawValue
-                    case (_, ""):
-                        errorLabel.text = LoginError.notEnterPassword.rawValue
-                    case (account.key, account.value):
-                        SceneDelegate.shared.changeRoot(screen: .tabbar)
-                    default:
-                        errorLabel.text = LoginError.errorEnterData.rawValue
-                    }
+        if let path = Bundle.main.path(forResource: "DBAccount", ofType: "plist"),
+            let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
+            for account in dic {
+                let result: (String?, String?) = (usernameTextField.text, passwordTextField.text)
+                switch result {
+                case ("", ""), (nil, nil):
+                    errorLabel.text = LoginError.notEnterData.rawValue
+                case ("", _):
+                    errorLabel.text = LoginError.notEnterUserName.rawValue
+                case (_, ""):
+                    errorLabel.text = LoginError.notEnterPassword.rawValue
+                case (account.key, account.value):
+                    SceneDelegate.shared.changeRoot(screen: .tabbar)
+                default:
+                    errorLabel.text = LoginError.errorEnterData.rawValue
                 }
             }
         }
