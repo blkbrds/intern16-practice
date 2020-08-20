@@ -27,11 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let stateUser: Bool =  UserDefaults.standard.bool(forKey: "state")
-        if stateUser {
-            changeRoot(with: true)
-        } else {
-            changeRoot(with: false)
-        }
+        let root: RootType = stateUser ? .tabbar : .login
+        changeRoot(rootType: root)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         return true
@@ -47,21 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
     }
     
-    func changeRoot(with user: Bool) {
-        let rootType = chooseRootType(with: user)
+    func changeRoot(rootType: RootType) {
         switch rootType {
         case .login:
             configLogin()
         case .tabbar:
             configTabbar()
-        }
-    }
-    
-    func chooseRootType(with user: Bool) -> RootType {
-        if user {
-            return .tabbar
-        } else {
-            return .login
         }
     }
 }

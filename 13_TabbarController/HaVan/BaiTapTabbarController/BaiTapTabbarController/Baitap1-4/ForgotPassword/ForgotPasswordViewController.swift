@@ -23,11 +23,17 @@ final class ForgotPasswordViewController: UIViewController {
         configTextField()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        usernameTextField.text?.removeAll()
+        newPasswordTextField.text?.removeAll()
+        confirmNewPasswordTextField.text?.removeAll()
+    }
+    
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameTextField.resignFirstResponder()
-        newPasswordTextField.resignFirstResponder()
-        confirmNewPasswordTextField.resignFirstResponder()
+        super.touchesBegan(touches, with: event)
+        getKeyboardDown()
     }
     
     // MARK: - Private functions
@@ -44,15 +50,19 @@ final class ForgotPasswordViewController: UIViewController {
                 errorLabel.text = "You need to filled all the textfields"
                 return
         }
-        if !InformationFactory.shared.checkPassword(newpassword: password, confirmNewPassword: confirmPassword) {
-            errorLabel.isHidden = false
-            errorLabel.text = "The new password and confirm new password have to be the same"
-        } else if InformationFactory.shared.changePassword(username: username, newpassword: password, confirmNewPassword: confirmPassword) {
-            navigationController?.popToRootViewController(animated: true)
-        } else {
-            errorLabel.isHidden = false
-            errorLabel.text = "The username doesn't exist"
+        guard let resultError = InformationFactory.shared.changePassword(username: username, newpassword: password, confirmNewPassword: confirmPassword) else {
+            navigationController?.popViewController(animated: true)
+            return
         }
+        errorLabel.isHidden = false
+        errorLabel.text = resultError
+        getKeyboardDown()
+    }
+    
+    private func getKeyboardDown() {
+        usernameTextField.resignFirstResponder()
+        newPasswordTextField.resignFirstResponder()
+        confirmNewPasswordTextField.resignFirstResponder()
     }
     
     // MARK: - IBActions
@@ -65,11 +75,12 @@ final class ForgotPasswordViewController: UIViewController {
 extension ForgotPasswordViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             newPasswordTextField.becomeFirstResponder()
-        } else if textField === newPasswordTextField {
+        case newPasswordTextField:
             confirmNewPasswordTextField.becomeFirstResponder()
-        } else {
+        default:
             resetPassword()
         }
         return true

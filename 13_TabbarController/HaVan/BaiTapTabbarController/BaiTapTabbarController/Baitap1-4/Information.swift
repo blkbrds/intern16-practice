@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Information {
-
+final class Information {
+    
     private(set) var username: String
     private(set) var password: String
     
@@ -19,51 +19,44 @@ class Information {
     }
 }
 
-class InformationFactory {
+final class InformationFactory {
     private var informationList = [Information(username: "abc", password: "12345"),
-                        Information(username: "a", password: "12345")]
+                                   Information(username: "a", password: "12345")]
     
     static var shared = InformationFactory()
     
-    func checkInformation(username: String, password: String) -> Bool {
+    func checkInformation(username: String, password: String) -> String? {
         for user in informationList {
             if user.username == username && user.password == password {
-                return true
+                return nil
             }
         }
-        return false
+        return "You entered the wrong username or password"
     }
     
-    func createNewAccount(username: String, password: String) -> Bool {
+    func createNewAccount(username: String, password: String) -> String? {
         for user in informationList {
             if user.username == username {
-                return false
+                return "the username has already exist"
             }
         }
-            informationList.append(Information(username: username, password: password))
-            return true
-        }
-    
-    func checkPassword(newpassword: String, confirmNewPassword: String) -> Bool {
-        if newpassword == confirmNewPassword {
-            return true
-        }
-        return false
+        informationList.append(Information(username: username, password: password))
+        return nil
     }
     
-    func changePassword(username: String, newpassword: String, confirmNewPassword: String) -> Bool {
-        for user in 0...informationList.count - 1 {
-            if informationList[user].username == username {
-                if checkPassword(newpassword: newpassword, confirmNewPassword: confirmNewPassword) {
+    func changePassword(username: String, newpassword: String, confirmNewPassword:String) -> String? {
+        if newpassword != confirmNewPassword {
+            return "The new password and confirm new password have to be the same"
+        } else {
+            for user in 0...informationList.count - 1 {
+                if informationList[user].username == username {
                     let newUser = Information(username: username, password: newpassword)
                     informationList.remove(at: user)
                     informationList.append(newUser)
-                    return true
-                } else {
-                    return false
+                    return nil
                 }
             }
+            return "The username doesn't exist"
         }
-        return false
     }
 }

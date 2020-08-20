@@ -17,7 +17,7 @@ final class MapViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    func configNavigation() {
+    private func configNavigation() {
         title = "MAP"
     }
 }

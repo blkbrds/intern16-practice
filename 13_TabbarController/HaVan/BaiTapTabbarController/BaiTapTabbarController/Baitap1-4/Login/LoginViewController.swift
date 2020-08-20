@@ -22,10 +22,16 @@ final class LoginViewController: UIViewController {
         errorLabel.isHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        usernameTextField.text?.removeAll()
+        passwordTextField.text?.removeAll()
+    }
+    
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
+        super.touchesBegan(touches, with: event)
+        getKeyboardDown()
     }
     
     // MARK: - Private functions
@@ -39,13 +45,19 @@ final class LoginViewController: UIViewController {
             errorLabel.text = "You must filled username and password"
             return
         }
-        if InformationFactory.shared.checkInformation(username: username, password: password) {
-           UserDefaults.standard.set(true, forKey: "state")
-            AppDelegate.shared.changeRoot(with: UserDefaults.standard.bool(forKey: "state"))
-        } else {
-            errorLabel.isHidden = false
-            errorLabel.text = "You entered the wrong username or password"
+        guard let resultError = InformationFactory.shared.checkInformation(username: username, password: password) else {
+            UserDefaults.standard.set(true, forKey: "state")
+            AppDelegate.shared.changeRoot(rootType: .tabbar)
+            return
         }
+        errorLabel.isHidden = false
+        errorLabel.text = resultError
+        getKeyboardDown()
+    }
+    
+    private func getKeyboardDown() {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     // MARK: - IBActions
@@ -68,9 +80,10 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             passwordTextField.becomeFirstResponder()
-        } else {
+        default:
             login()
         }
         return true

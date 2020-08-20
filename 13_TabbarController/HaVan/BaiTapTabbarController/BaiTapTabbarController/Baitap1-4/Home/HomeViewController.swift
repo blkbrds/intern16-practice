@@ -17,10 +17,7 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    func configNavigation() {
+    private func configNavigation() {
         title = "HOME"
     }
-    
-    // MARK: - IBAction functions
-   
 }

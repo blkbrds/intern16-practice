@@ -17,7 +17,7 @@ final class FavoriteViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    func configNavigation() {
+    private func configNavigation() {
         title = "FAVORITE"
     }
 }

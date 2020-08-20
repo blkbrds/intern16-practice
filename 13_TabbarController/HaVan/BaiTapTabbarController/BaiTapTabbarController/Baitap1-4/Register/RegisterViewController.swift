@@ -22,31 +22,42 @@ final class RegisterViewController: UIViewController {
         configTextField()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        usernameTextField.text?.removeAll()
+        passwordTextField.text?.removeAll()
+    }
+    
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
+        super.touchesBegan(touches, with: event)
+        getKeyboardDown()
     }
     
     // MARK: - Private functions
-    func configTextField() {
+    private func configTextField() {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
     }
     
-    func register() {
+    private func register() {
         guard let username = usernameTextField.text, let password = passwordTextField.text else {
             errorLabel.text = "You must filled username and password"
             return
         }
-        
-        if InformationFactory.shared.createNewAccount(username: username, password: password) {
+        guard let resultError = InformationFactory.shared.createNewAccount(username: username, password: password) else {
             UserDefaults.standard.set(true, forKey: "state")
-            AppDelegate.shared.changeRoot(with: UserDefaults.standard.bool(forKey: "state"))
-        } else {
-            errorLabel.isHidden = true
-            errorLabel.text = "the username has already exist"
+            AppDelegate.shared.changeRoot(rootType: .tabbar)
+            return
         }
+        errorLabel.isHidden = false
+        errorLabel.text = resultError
+        getKeyboardDown()
+    }
+    
+    private func getKeyboardDown() {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     // MARK: - IBActions
@@ -59,9 +70,10 @@ final class RegisterViewController: UIViewController {
 extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             passwordTextField.becomeFirstResponder()
-        } else {
+        default:
             register()
         }
         return true
