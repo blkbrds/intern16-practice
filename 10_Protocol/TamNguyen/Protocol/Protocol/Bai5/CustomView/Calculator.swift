@@ -75,15 +75,15 @@ final class Calculator: UIView {
         }
     }
     
-    @IBAction private func doneButtonTouchUpInside(_ sender: Any) {
-        self.isHidden = true
+    @IBAction private func doneButtonTouchUpInside(_ sender: UIButton) {
+        sender.isHidden = true
         guard let result = result else { return }
         if let delegate = delegate {
             delegate.updateResult(view: self, need: .doneButton(resultText: String(result), mathText: "Hihi"))
         }
     }
     
-    @IBAction private func cancelButtonTouchUpInside(_ sender: Any) {
-        self.isHidden = true
+    @IBAction private func cancelButtonTouchUpInside(_ sender: UIButton) {
+        sender.isHidden = true
     }
 }
