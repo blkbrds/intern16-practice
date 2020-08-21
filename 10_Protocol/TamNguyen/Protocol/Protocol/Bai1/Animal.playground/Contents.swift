@@ -175,97 +175,80 @@ enum Instintct {
     
     func getListAnimals() -> [Animal] {
         //Khai bao cac mang liet ke
-        var canFly: [Animal] = []
-        var canSwim: [Animal] = []
-        var canWalk: [Animal] = []
-        var bothFlySwim: [Animal] = []
-        var bothWalkFly: [Animal] = []
-        var bothSwimFly: [Animal] = []
-        var bothSwimWalk: [Animal] = []
-        var bothAll: [Animal] = []
-        var onlyOne: [Animal] = []
+        var canFlys: [Animal] = []
+        var canSwims: [Animal] = []
+        var canWalks: [Animal] = []
+        var bothFlySwims: [Animal] = []
+        var bothWalkFlys: [Animal] = []
+        var bothSwimFlys: [Animal] = []
+        var bothSwimWalks: [Animal] = []
+        var bothAlls: [Animal] = []
+        var onlyOnes: [Animal] = []
         switch self {
         case .canWalk :
             for index in animals {
-                if let index = index as? Mammal {
-                    if index.isWalking {
-                        canWalk.append(index)
-                    }
+                if let index = index as? Mammal, index.isWalking {
+                    canWalks.append(index)
                 }
             }
-            return canWalk
+            return canWalks
         case .canFly :
             for index in animals {
-                if let index = index as? Bird {
-                    if index.isFlying {
-                        canWalk.append(index)
-                    }
+                if let index = index as? Bird, index.isFlying {
+                    canWalks.append(index)
                 }
             }
-            return canWalk
+            return canWalks
         case .canSwim:
             for index in animals {
-                if let index = index as? Fish {
-                    if index.isSwimming {
-                        canSwim.append(index)
-                    }
+                if let index = index as? Fish, index.isSwimming {
+                    canSwims.append(index)
                 }
             }
-            return canSwim
+            return canSwims
         case .bothFlySwim:
             for index in animals {
-                if let index = index as? Bird & Fish {
-                    if index.isFlying && index.isSwimming {
-                        bothFlySwim.append(index)
-                    }
+                if let index = index as? Bird & Fish, index.isSwimming, index.isSwimming {
+                    bothFlySwims.append(index)
                 }
             }
-            return bothFlySwim
+            return bothFlySwims
         case .bothWalkFly:
             for index in animals {
-                if let index = index as? Mammal & Bird {
-                    if index.isFlying && index.isWalking {
-                        bothWalkFly.append(index)
-                    }
+                if let index = index as? Mammal & Bird, index.isFlying, index.isWalking {
+                    bothWalkFlys.append(index)
                 }
             }
-            return bothWalkFly
+            return bothWalkFlys
         case .bothSwimFly:
             for index in animals {
-                if let index = index as? Fish & Bird {
-                    if index.isFlying && index.isSwimming {
-                        bothSwimFly.append(index)
-                    }
+                if let index = index as? Fish & Bird, index.isFlying, index.isSwimming {
+                    bothSwimFlys.append(index)
                 }
             }
-            return bothSwimFly
+            return bothSwimFlys
         case .bothSwimWalk:
             for index in animals {
-                if let index = index as? Fish & Mammal {
-                    if index.isSwimming && index.isWalking {
-                        bothSwimWalk.append(index)
-                    }
+                if let index = index as? Fish & Mammal, index.isSwimming, index.isWalking {
+                    bothSwimWalks.append(index)
                 }
             }
-            return bothSwimWalk
+            return bothSwimWalks
         case .bothAll:
             for index in animals {
-                if let index = index as? Mammal & Bird & Fish {
-                    if index.isFlying && index.isSwimming && index.isWalking {
-                        bothAll.append(index)
+                if let index = index as? Mammal & Bird & Fish, index.isSwimming, index.isWalking, index.isFlying {
+                    index.isWalking {
+                        bothAlls.append(index)
                     }
                 }
-            }
-            return bothAll
-        case .onlyOne:
-            for index in animals {
-                if let index = index as? Mammal & Bird & Fish {
-                    if index.isFlying || index.isSwimming || index.isWalking {
-                        onlyOne.append(index)
+                return bothAlls
+                case .onlyOne:
+                for index in animals {
+                    if let index = index as? Mammal & Bird & Fish, index.isFlying || index.isSwimming || index.isWalking {
+                        onlyOnes.append(index)
                     }
                 }
+                return onlyOnes
             }
-            return onlyOne
         }
-    }
 }

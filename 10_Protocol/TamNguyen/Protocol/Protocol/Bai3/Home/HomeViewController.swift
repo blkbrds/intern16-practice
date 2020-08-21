@@ -44,9 +44,10 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Public methods
     func updateView() {
-        guard let localText = dataSource?.getLocal(), let provinceText = dataSource?.getProvince(), let districtText = dataSource?.getDistrict() else { return }
-        localLabel.text = localText
-        provinceLabel.text = provinceText
-        distrcitLabel.text = districtText
+        if let localText = dataSource?.getLocal(), let provinceText = dataSource?.getProvince(), let districtText = dataSource?.getDistrict() {
+            localLabel.text = localText
+            provinceLabel.text = provinceText
+            distrcitLabel.text = districtText
+        }
     }
 }
