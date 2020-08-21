@@ -32,6 +32,15 @@ class MainTabbarController: UITabBarController {
         favoriteController.tabBarItem.image = UIImage(named: "favorite_b")
         favoriteController.tabBarItem.selectedImage = UIImage(named: "favorite_w")
         
-        viewControllers  = [homeController,mapController,profileController,favoriteController]
+        setViewControllers([homeController, mapController, profileController, favoriteController], animated: true)
+        // con cai setView nay them animation thoi ha? 
+    }
+    
+    func setupUI() {
+        
+    }
+    
+    func setupData() {
+        
     }
 }

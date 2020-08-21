@@ -33,19 +33,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navi = UINavigationController(rootViewController: loginVC)
         window?.rootViewController = navi
     }
-    static var shared: SceneDelegate {
+    static var shared: SceneDelegate = {
         guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else  {
             fatalError("Loi SceneDelegate")
         }
           print("Dang o sceneDelegate: \(sceneDelegate)")
         return sceneDelegate
-    }
-    
-    private override init() {
-        super.init()
-    }
+    }()
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
