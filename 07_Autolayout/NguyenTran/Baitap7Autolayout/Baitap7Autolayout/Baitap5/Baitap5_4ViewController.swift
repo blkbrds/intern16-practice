@@ -1,5 +1,5 @@
 //
-//  Baitap5_2ViewController.swift
+//  Baitap5_4ViewController.swift
 //  Baitap7Autolayout
 //
 //  Created by MBA0245P on 8/21/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Baitap5_2ViewController: UIViewController {
+class Baitap5_4ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

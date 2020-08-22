@@ -2,13 +2,13 @@
 //  Baitap5_2ViewController.swift
 //  Baitap7Autolayout
 //
-//  Created by MBA0245P on 8/21/20.
+//  Created by MBA0245P on 8/20/20.
 //  Copyright © 2020 Tran Thao Nguyen. All rights reserved.
 //
 
 import UIKit
 
-class Baitap5_2ViewController: UIViewController {
+class Baitap5_3ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
