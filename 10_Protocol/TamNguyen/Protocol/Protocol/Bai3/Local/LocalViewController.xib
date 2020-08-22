@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocalViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="localButtons" destination="tEj-dq-exa" id="deB-8a-6K2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-4V-UnZ">
+                    <rect key="frame" x="183.5" y="151" width="47" height="270"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-fk-s3T">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
+                            <state key="normal" title="Mien 1"/>
+                            <connections>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="mVb-eR-dlN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCu-OC-CgL">
+                            <rect key="frame" x="0.0" y="60" width="47" height="30"/>
+                            <state key="normal" title="Mien 2"/>
+                            <connections>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="4Qt-KM-foP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-1a-CPW">
+                            <rect key="frame" x="0.0" y="120" width="47" height="30"/>
+                            <state key="normal" title="Mien 3"/>
+                            <connections>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="guB-up-4f2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGS-W4-mdJ">
+                            <rect key="frame" x="0.0" y="180" width="47" height="30"/>
+                            <state key="normal" title="Mien 4"/>
+                            <connections>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="JWo-oH-e51"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEj-dq-exa">
+                            <rect key="frame" x="0.0" y="240" width="47" height="30"/>
+                            <state key="normal" title="Mien 5"/>
+                            <connections>
+                                <action selector="getLocalButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="y3G-z6-ace"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="e7e-4V-UnZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0n2-4G-0qt"/>
+                <constraint firstItem="e7e-4V-UnZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="107" id="6pb-C8-as9"/>
+                <constraint firstItem="e7e-4V-UnZ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.301339" id="ood-kb-cim"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

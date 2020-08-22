@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProvinceViewController" customModule="Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="provinceButton" destination="ebi-qW-vtw" id="F26-mM-uXL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gw3-wr-ZEE">
+                    <rect key="frame" x="185" y="151" width="44" height="270"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WW1-Qm-Uzz">
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+                            <state key="normal" title="Tinh 1"/>
+                            <connections>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="1oT-7R-ls4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meI-Bl-KLf">
+                            <rect key="frame" x="0.0" y="60" width="43" height="30"/>
+                            <state key="normal" title="Tinh 2"/>
+                            <connections>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="s6p-OW-Bvj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-P6-4JF">
+                            <rect key="frame" x="0.0" y="120" width="44" height="30"/>
+                            <state key="normal" title="Tinh 3"/>
+                            <connections>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="NFs-LY-6SD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-Zc-CCl">
+                            <rect key="frame" x="0.0" y="180" width="44" height="30"/>
+                            <state key="normal" title="Tinh 4"/>
+                            <connections>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="pYK-Fy-czb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-qW-vtw">
+                            <rect key="frame" x="0.0" y="240" width="43" height="30"/>
+                            <state key="normal" title="Tinh 5"/>
+                            <connections>
+                                <action selector="getProvinceButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="OEZ-YX-adO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="gw3-wr-ZEE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="107" id="Lqh-ZB-2RN"/>
+                <constraint firstItem="gw3-wr-ZEE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.301339" id="lbv-6Z-5pH"/>
+                <constraint firstItem="gw3-wr-ZEE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nJY-Wa-yBP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="82.608695652173921" y="67.633928571428569"/>
+        </view>
+    </objects>
+</document>
