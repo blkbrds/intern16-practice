@@ -41,7 +41,7 @@ final class DomainViewController: UIViewController {
 
     // MARK: - Objc functions
     @objc private func handleToProvineTouchUpInside() {
-        let provineVC = ProvineViewController()
+        let provineVC = ProvinceViewController()
         provineVC.delegate = self
         navigationController?.pushViewController(provineVC, animated: true)
     }
@@ -54,10 +54,9 @@ extension DomainViewController {
     }
 }
 
-extension DomainViewController: ProvineViewControllerDelegate {
-    func getDataProvine(_ controller: ProvineViewController, needsPreform action: ProvineViewController.Action) {
+extension DomainViewController: ProvinceViewControllerDelegate {
+    func getDataProvine(_ controller: ProvinceViewController, needsPreform action: ProvinceViewController.Action) {
         switch action {
-            
         case .sendDataProvine(nameProvine: _):
             break
         case .sendDictrictAndProvine(nameDictrict: let nameDictrict, nameProvine: let nameProvine):

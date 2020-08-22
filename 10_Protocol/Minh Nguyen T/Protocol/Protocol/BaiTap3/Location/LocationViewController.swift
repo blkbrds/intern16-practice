@@ -12,7 +12,7 @@ final class LocationViewController: UIViewController {
 
     // MARK: - IBOulets
     @IBOutlet private weak var domainLabel: UILabel!
-    @IBOutlet private weak var provineLabel: UILabel!
+    @IBOutlet private weak var provinceLabel: UILabel!
     @IBOutlet private weak var dictrictLabel: UILabel!
 
     // MARK: - Life cycle
@@ -25,7 +25,7 @@ final class LocationViewController: UIViewController {
     // MARK: - Private functions
     private func cofigLabel() {
         domainLabel.textColor = .blue
-        provineLabel.textColor = .green
+        provinceLabel.textColor = .green
         dictrictLabel.textColor = .orange
     }
 
@@ -50,7 +50,7 @@ extension LocationViewController: DomainViewControllerDelegate {
             break
         case .sendDataDomainProvineDictrict(nameDictrict: let nameDictrict, nameProvine: let nameProvine, nameDomain: let nameDomain):
             domainLabel.text = nameDomain
-            provineLabel.text = nameProvine
+            provinceLabel.text = nameProvine
             dictrictLabel.text = nameDictrict
         }
     }

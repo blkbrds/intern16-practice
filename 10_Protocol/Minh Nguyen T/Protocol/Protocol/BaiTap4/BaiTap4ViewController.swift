@@ -84,7 +84,6 @@ final class BaiTap4ViewController: UIViewController {
         super.viewDidLoad()
         searchBar.delegate = self
         getData(data: dataList)
-        
     }
     
     // MARK: - Private funtions

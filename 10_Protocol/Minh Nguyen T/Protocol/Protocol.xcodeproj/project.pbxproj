@@ -13,8 +13,8 @@
 		526F5EC324CD6EF40095718F /* DomainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526F5EC124CD6EF40095718F /* DomainViewController.xib */; };
 		526F5EC624CD6F0B0095718F /* DictrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F5EC424CD6F0B0095718F /* DictrictViewController.swift */; };
 		526F5EC724CD6F0B0095718F /* DictrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526F5EC524CD6F0B0095718F /* DictrictViewController.xib */; };
-		526F5ECA24CD6F200095718F /* ProvineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F5EC824CD6F200095718F /* ProvineViewController.swift */; };
-		526F5ECB24CD6F200095718F /* ProvineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526F5EC924CD6F200095718F /* ProvineViewController.xib */; };
+		526F5ECA24CD6F200095718F /* ProvinceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F5EC824CD6F200095718F /* ProvinceViewController.swift */; };
+		526F5ECB24CD6F200095718F /* ProvinceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526F5EC924CD6F200095718F /* ProvinceViewController.xib */; };
 		526F5ED824CDA9E60095718F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F5ED624CDA9E60095718F /* LocationViewController.swift */; };
 		526F5ED924CDA9E60095718F /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526F5ED724CDA9E60095718F /* LocationViewController.xib */; };
 		526F5EDF24CDE2D70095718F /* BaiTap5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F5EDD24CDE2D70095718F /* BaiTap5ViewController.swift */; };
@@ -34,8 +34,8 @@
 		526F5EC124CD6EF40095718F /* DomainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DomainViewController.xib; sourceTree = "<group>"; };
 		526F5EC424CD6F0B0095718F /* DictrictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictrictViewController.swift; sourceTree = "<group>"; };
 		526F5EC524CD6F0B0095718F /* DictrictViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictrictViewController.xib; sourceTree = "<group>"; };
-		526F5EC824CD6F200095718F /* ProvineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvineViewController.swift; sourceTree = "<group>"; };
-		526F5EC924CD6F200095718F /* ProvineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProvineViewController.xib; sourceTree = "<group>"; };
+		526F5EC824CD6F200095718F /* ProvinceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceViewController.swift; sourceTree = "<group>"; };
+		526F5EC924CD6F200095718F /* ProvinceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProvinceViewController.xib; sourceTree = "<group>"; };
 		526F5ED624CDA9E60095718F /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		526F5ED724CDA9E60095718F /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		526F5EDB24CDB31B0095718F /* BaiTap 01 Protocol.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "BaiTap 01 Protocol.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -85,8 +85,8 @@
 		526F5EBD24CD6EC80095718F /* Provine */ = {
 			isa = PBXGroup;
 			children = (
-				526F5EC824CD6F200095718F /* ProvineViewController.swift */,
-				526F5EC924CD6F200095718F /* ProvineViewController.xib */,
+				526F5EC824CD6F200095718F /* ProvinceViewController.swift */,
+				526F5EC924CD6F200095718F /* ProvinceViewController.xib */,
 			);
 			path = Provine;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				526F5ECB24CD6F200095718F /* ProvineViewController.xib in Resources */,
+				526F5ECB24CD6F200095718F /* ProvinceViewController.xib in Resources */,
 				526F5EE424CDE3BC0095718F /* CalculatorView.xib in Resources */,
 				526F5EC724CD6F0B0095718F /* DictrictViewController.xib in Resources */,
 				526F5EC324CD6EF40095718F /* DomainViewController.xib in Resources */,
@@ -252,7 +252,7 @@
 				526F5EDF24CDE2D70095718F /* BaiTap5ViewController.swift in Sources */,
 				529200CE24CB159300E06982 /* ViewController.swift in Sources */,
 				526F5EC624CD6F0B0095718F /* DictrictViewController.swift in Sources */,
-				526F5ECA24CD6F200095718F /* ProvineViewController.swift in Sources */,
+				526F5ECA24CD6F200095718F /* ProvinceViewController.swift in Sources */,
 				526F5EE224CDE3A90095718F /* CalculatorView.swift in Sources */,
 				529200CA24CB159300E06982 /* AppDelegate.swift in Sources */,
 			);

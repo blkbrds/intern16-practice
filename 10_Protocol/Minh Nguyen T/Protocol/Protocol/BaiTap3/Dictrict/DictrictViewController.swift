@@ -28,7 +28,7 @@ final class DictrictViewController: UIViewController {
     // MARK: - Private functions
     private func configNavigationBar() {
         title = "Huyện"
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(handleDonectrovineTouchUpInside))
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(handleDoneButtonTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
     }
 
@@ -40,7 +40,7 @@ final class DictrictViewController: UIViewController {
     }
 
     // MARK: - Objc functions
-    @objc private func handleDonectrovineTouchUpInside() {
+    @objc private func handleDoneButtonTouchUpInside() {
         delegate?.getdataDictrict(self, needsPerform: .sendDataDictrict(nameDictrict: titleDictrict))
         navigationController?.popToRootViewController(animated: true)
     }

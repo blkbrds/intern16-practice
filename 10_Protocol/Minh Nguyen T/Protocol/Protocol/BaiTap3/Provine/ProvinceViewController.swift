@@ -9,15 +9,15 @@
 import UIKit
 
 // MARK: - ProvineViewControllerDelegate
-protocol ProvineViewControllerDelegate: class {
-    func getDataProvine(_ controller: ProvineViewController, needsPreform action: ProvineViewController.Action)
+protocol ProvinceViewControllerDelegate: class {
+    func getDataProvine(_ controller: ProvinceViewController, needsPreform action: ProvinceViewController.Action)
 }
 
-final class ProvineViewController: UIViewController {
+final class ProvinceViewController: UIViewController {
 
     // MARK: - Properties
-    weak var delegate: ProvineViewControllerDelegate?
-    private var titleProvine: String = ""
+    weak var delegate: ProvinceViewControllerDelegate?
+    private var titleProvince: String = ""
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ final class ProvineViewController: UIViewController {
     // MARK: - IBActions
     @IBAction private func handleProvineButtonTouchUpInside(_ sender: UIButton) {
         guard let nameProvine = sender.titleLabel?.text else { return }
-        titleProvine = nameProvine
+        titleProvince = nameProvine
         sender.backgroundColor = .green
     }
 
@@ -47,18 +47,18 @@ final class ProvineViewController: UIViewController {
     }
 }
 
-extension ProvineViewController {
+extension ProvinceViewController {
     enum Action {
         case sendDataProvine(nameProvine: String)
         case sendDictrictAndProvine(nameDictrict: String, nameProvine: String)
     }
 }
 
-extension ProvineViewController: DictrictViewControllerDelegate {
+extension ProvinceViewController: DictrictViewControllerDelegate {
     func getdataDictrict(_ controller: DictrictViewController, needsPerform action: DictrictViewController.Action) {
         switch action {
         case .sendDataDictrict(nameDictrict: let nameDictict):
-            delegate?.getDataProvine(self, needsPreform: .sendDictrictAndProvine(nameDictrict: nameDictict, nameProvine: titleProvine))
+            delegate?.getDataProvine(self, needsPreform: .sendDictrictAndProvine(nameDictrict: nameDictict, nameProvine: titleProvince))
         }
     }
 }
