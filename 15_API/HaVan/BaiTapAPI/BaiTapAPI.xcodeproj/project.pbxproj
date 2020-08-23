@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52140CAD24EE806A000E9BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CAC24EE806A000E9BED /* AppDelegate.swift */; };
+		52140CAF24EE806A000E9BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CAE24EE806A000E9BED /* SceneDelegate.swift */; };
+		52140CB124EE806A000E9BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CB024EE806A000E9BED /* ViewController.swift */; };
+		52140CB624EE806F000E9BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52140CB524EE806F000E9BED /* Assets.xcassets */; };
+		52140CB924EE806F000E9BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52140CB724EE806F000E9BED /* LaunchScreen.storyboard */; };
+		52140CDE24F24A18000E9BED /* AudioBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CDC24F24A18000E9BED /* AudioBookViewController.swift */; };
+		52140CDF24F24A18000E9BED /* AudioBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52140CDD24F24A18000E9BED /* AudioBookViewController.xib */; };
+		52140CE124F24A36000E9BED /* AudioBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE024F24A36000E9BED /* AudioBookViewModel.swift */; };
+		52140CE424F24A7C000E9BED /* AudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE224F24A7C000E9BED /* AudioBookCell.swift */; };
+		52140CE524F24A7C000E9BED /* AudioBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52140CE324F24A7C000E9BED /* AudioBookCell.xib */; };
+		52140CE724F24AAD000E9BED /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE624F24AAD000E9BED /* Networking.swift */; };
+		52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE824F24ABE000E9BED /* AudioBook.swift */; };
+		52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52140CA924EE806A000E9BED /* BaiTapAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52140CAC24EE806A000E9BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52140CAE24EE806A000E9BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52140CB024EE806A000E9BED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52140CB524EE806F000E9BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52140CB824EE806F000E9BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52140CBA24EE806F000E9BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52140CDC24F24A18000E9BED /* AudioBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookViewController.swift; sourceTree = "<group>"; };
+		52140CDD24F24A18000E9BED /* AudioBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioBookViewController.xib; sourceTree = "<group>"; };
+		52140CE024F24A36000E9BED /* AudioBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookViewModel.swift; sourceTree = "<group>"; };
+		52140CE224F24A7C000E9BED /* AudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookCell.swift; sourceTree = "<group>"; };
+		52140CE324F24A7C000E9BED /* AudioBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioBookCell.xib; sourceTree = "<group>"; };
+		52140CE624F24AAD000E9BED /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		52140CE824F24ABE000E9BED /* AudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
+		52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookCellViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52140CA624EE806A000E9BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52140CA024EE806A000E9BED = {
+			isa = PBXGroup;
+			children = (
+				52140CAB24EE806A000E9BED /* BaiTapAPI */,
+				52140CAA24EE806A000E9BED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52140CAA24EE806A000E9BED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52140CA924EE806A000E9BED /* BaiTapAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52140CAB24EE806A000E9BED /* BaiTapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				52140CC524EE8188000E9BED /* AudioBook */,
+				52140CC024EE80DB000E9BED /* Model */,
+				52140CAC24EE806A000E9BED /* AppDelegate.swift */,
+				52140CAE24EE806A000E9BED /* SceneDelegate.swift */,
+				52140CB024EE806A000E9BED /* ViewController.swift */,
+				52140CB524EE806F000E9BED /* Assets.xcassets */,
+				52140CB724EE806F000E9BED /* LaunchScreen.storyboard */,
+				52140CBA24EE806F000E9BED /* Info.plist */,
+			);
+			path = BaiTapAPI;
+			sourceTree = "<group>";
+		};
+		52140CC024EE80DB000E9BED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52140CE624F24AAD000E9BED /* Networking.swift */,
+				52140CE824F24ABE000E9BED /* AudioBook.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52140CC524EE8188000E9BED /* AudioBook */ = {
+			isa = PBXGroup;
+			children = (
+				52140CDC24F24A18000E9BED /* AudioBookViewController.swift */,
+				52140CDD24F24A18000E9BED /* AudioBookViewController.xib */,
+				52140CE024F24A36000E9BED /* AudioBookViewModel.swift */,
+				52140CE224F24A7C000E9BED /* AudioBookCell.swift */,
+				52140CE324F24A7C000E9BED /* AudioBookCell.xib */,
+				52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */,
+			);
+			path = AudioBook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52140CA824EE806A000E9BED /* BaiTapAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52140CBD24EE806F000E9BED /* Build configuration list for PBXNativeTarget "BaiTapAPI" */;
+			buildPhases = (
+				52140CA524EE806A000E9BED /* Sources */,
+				52140CA624EE806A000E9BED /* Frameworks */,
+				52140CA724EE806A000E9BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiTapAPI;
+			productName = BaiTapAPI;
+			productReference = 52140CA924EE806A000E9BED /* BaiTapAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52140CA124EE806A000E9BED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Galaxy;
+				TargetAttributes = {
+					52140CA824EE806A000E9BED = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 52140CA424EE806A000E9BED /* Build configuration list for PBXProject "BaiTapAPI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52140CA024EE806A000E9BED;
+			productRefGroup = 52140CAA24EE806A000E9BED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52140CA824EE806A000E9BED /* BaiTapAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52140CA724EE806A000E9BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52140CB924EE806F000E9BED /* LaunchScreen.storyboard in Resources */,
+				52140CB624EE806F000E9BED /* Assets.xcassets in Resources */,
+				52140CDF24F24A18000E9BED /* AudioBookViewController.xib in Resources */,
+				52140CE524F24A7C000E9BED /* AudioBookCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52140CA524EE806A000E9BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52140CDE24F24A18000E9BED /* AudioBookViewController.swift in Sources */,
+				52140CE124F24A36000E9BED /* AudioBookViewModel.swift in Sources */,
+				52140CB124EE806A000E9BED /* ViewController.swift in Sources */,
+				52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */,
+				52140CAD24EE806A000E9BED /* AppDelegate.swift in Sources */,
+				52140CAF24EE806A000E9BED /* SceneDelegate.swift in Sources */,
+				52140CE424F24A7C000E9BED /* AudioBookCell.swift in Sources */,
+				52140CE724F24AAD000E9BED /* Networking.swift in Sources */,
+				52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52140CB724EE806F000E9BED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52140CB824EE806F000E9BED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52140CBB24EE806F000E9BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52140CBC24EE806F000E9BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52140CBE24EE806F000E9BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SUB6RGC6PM;
+				INFOPLIST_FILE = BaiTapAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.BaiTapAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52140CBF24EE806F000E9BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SUB6RGC6PM;
+				INFOPLIST_FILE = BaiTapAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.BaiTapAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52140CA424EE806A000E9BED /* Build configuration list for PBXProject "BaiTapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52140CBB24EE806F000E9BED /* Debug */,
+				52140CBC24EE806F000E9BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52140CBD24EE806F000E9BED /* Build configuration list for PBXNativeTarget "BaiTapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52140CBE24EE806F000E9BED /* Debug */,
+				52140CBF24EE806F000E9BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52140CA124EE806A000E9BED /* Project object */;
+}
