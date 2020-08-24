@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>345606309180-4cpfi4p6u0b1fr4jaa5deo4b18up832l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.345606309180-4cpfi4p6u0b1fr4jaa5deo4b18up832l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDxoMGIPLA4j4QVtdOuxjrsXGeOhx-RZCI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>345606309180</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.galaxy.BaiTapAPI</string>
+	<key>PROJECT_ID</key>
+	<string>baitapapi</string>
+	<key>STORAGE_BUCKET</key>
+	<string>baitapapi.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:345606309180:ios:542031ae73e10ed1614a39</string>
+	<key>DATABASE_URL</key>
+	<string>https://baitapapi.firebaseio.com</string>
+</dict>
+</plist>

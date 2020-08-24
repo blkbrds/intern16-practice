@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FCD7EBA44AE90823D909908 /* Pods_BaiTapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86755830988159F0472731B /* Pods_BaiTapAPI.framework */; };
 		52140CAD24EE806A000E9BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CAC24EE806A000E9BED /* AppDelegate.swift */; };
-		52140CAF24EE806A000E9BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CAE24EE806A000E9BED /* SceneDelegate.swift */; };
 		52140CB124EE806A000E9BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CB024EE806A000E9BED /* ViewController.swift */; };
 		52140CB624EE806F000E9BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52140CB524EE806F000E9BED /* Assets.xcassets */; };
 		52140CB924EE806F000E9BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52140CB724EE806F000E9BED /* LaunchScreen.storyboard */; };
@@ -20,12 +20,19 @@
 		52140CE724F24AAD000E9BED /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE624F24AAD000E9BED /* Networking.swift */; };
 		52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE824F24ABE000E9BED /* AudioBook.swift */; };
 		52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */; };
+		52140CF024F35A86000E9BED /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CEE24F35A86000E9BED /* YoutubeViewController.swift */; };
+		52140CF124F35A86000E9BED /* YoutubeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52140CEF24F35A86000E9BED /* YoutubeViewController.xib */; };
+		52140CF324F35AA6000E9BED /* YoutubeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CF224F35AA6000E9BED /* YoutubeViewModel.swift */; };
+		52140CF824F35B24000E9BED /* YoutubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CF624F35B24000E9BED /* YoutubeCell.swift */; };
+		52140CF924F35B24000E9BED /* YoutubeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52140CF724F35B24000E9BED /* YoutubeCell.xib */; };
+		52140CFC24F35B60000E9BED /* YoutubeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CFB24F35B60000E9BED /* YoutubeCellViewModel.swift */; };
+		52E7D76224F376C4000584A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52E7D76124F376C4000584A0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		231BE80DF99170B8FEBEE13C /* Pods-BaiTapAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapAPI.release.xcconfig"; path = "Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI.release.xcconfig"; sourceTree = "<group>"; };
 		52140CA924EE806A000E9BED /* BaiTapAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52140CAC24EE806A000E9BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52140CAE24EE806A000E9BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52140CB024EE806A000E9BED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52140CB524EE806F000E9BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52140CB824EE806F000E9BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +45,15 @@
 		52140CE624F24AAD000E9BED /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		52140CE824F24ABE000E9BED /* AudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookCellViewModel.swift; sourceTree = "<group>"; };
+		52140CEE24F35A86000E9BED /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
+		52140CEF24F35A86000E9BED /* YoutubeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutubeViewController.xib; sourceTree = "<group>"; };
+		52140CF224F35AA6000E9BED /* YoutubeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewModel.swift; sourceTree = "<group>"; };
+		52140CF624F35B24000E9BED /* YoutubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeCell.swift; sourceTree = "<group>"; };
+		52140CF724F35B24000E9BED /* YoutubeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutubeCell.xib; sourceTree = "<group>"; };
+		52140CFB24F35B60000E9BED /* YoutubeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeCellViewModel.swift; sourceTree = "<group>"; };
+		52E7D76124F376C4000584A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		830F96B1C6D18FE2D6387A5C /* Pods-BaiTapAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapAPI.debug.xcconfig"; path = "Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		A86755830988159F0472731B /* Pods_BaiTapAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaiTapAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCD7EBA44AE90823D909908 /* Pods_BaiTapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +73,8 @@
 			children = (
 				52140CAB24EE806A000E9BED /* BaiTapAPI */,
 				52140CAA24EE806A000E9BED /* Products */,
+				F2BCB6F4929934984CBF7422 /* Pods */,
+				C4154D4D7CB1B5879C29ACAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,13 +89,14 @@
 		52140CAB24EE806A000E9BED /* BaiTapAPI */ = {
 			isa = PBXGroup;
 			children = (
-				52140CC524EE8188000E9BED /* AudioBook */,
-				52140CC024EE80DB000E9BED /* Model */,
+				52140CED24F35A4E000E9BED /* BaiTap3 */,
+				52140CEC24F35A36000E9BED /* BaiTap1-2 */,
+				52140CE624F24AAD000E9BED /* Networking.swift */,
 				52140CAC24EE806A000E9BED /* AppDelegate.swift */,
-				52140CAE24EE806A000E9BED /* SceneDelegate.swift */,
 				52140CB024EE806A000E9BED /* ViewController.swift */,
 				52140CB524EE806F000E9BED /* Assets.xcassets */,
 				52140CB724EE806F000E9BED /* LaunchScreen.storyboard */,
+				52E7D76124F376C4000584A0 /* GoogleService-Info.plist */,
 				52140CBA24EE806F000E9BED /* Info.plist */,
 			);
 			path = BaiTapAPI;
@@ -85,23 +105,77 @@
 		52140CC024EE80DB000E9BED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				52140CE624F24AAD000E9BED /* Networking.swift */,
 				52140CE824F24ABE000E9BED /* AudioBook.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		52140CC524EE8188000E9BED /* AudioBook */ = {
+		52140CC524EE8188000E9BED /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				52140CDC24F24A18000E9BED /* AudioBookViewController.swift */,
-				52140CDD24F24A18000E9BED /* AudioBookViewController.xib */,
-				52140CE024F24A36000E9BED /* AudioBookViewModel.swift */,
 				52140CE224F24A7C000E9BED /* AudioBookCell.swift */,
 				52140CE324F24A7C000E9BED /* AudioBookCell.xib */,
 				52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */,
 			);
-			path = AudioBook;
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		52140CEC24F35A36000E9BED /* BaiTap1-2 */ = {
+			isa = PBXGroup;
+			children = (
+				52140CC524EE8188000E9BED /* TableViewCell */,
+				52140CC024EE80DB000E9BED /* Model */,
+				52140CDC24F24A18000E9BED /* AudioBookViewController.swift */,
+				52140CDD24F24A18000E9BED /* AudioBookViewController.xib */,
+				52140CE024F24A36000E9BED /* AudioBookViewModel.swift */,
+			);
+			path = "BaiTap1-2";
+			sourceTree = "<group>";
+		};
+		52140CED24F35A4E000E9BED /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+				52140CF524F35AD6000E9BED /* TableViewCell */,
+				52140CF424F35AC5000E9BED /* Model */,
+				52140CEE24F35A86000E9BED /* YoutubeViewController.swift */,
+				52140CEF24F35A86000E9BED /* YoutubeViewController.xib */,
+				52140CF224F35AA6000E9BED /* YoutubeViewModel.swift */,
+			);
+			path = BaiTap3;
+			sourceTree = "<group>";
+		};
+		52140CF424F35AC5000E9BED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52140CF524F35AD6000E9BED /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				52140CF624F35B24000E9BED /* YoutubeCell.swift */,
+				52140CF724F35B24000E9BED /* YoutubeCell.xib */,
+				52140CFB24F35B60000E9BED /* YoutubeCellViewModel.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C4154D4D7CB1B5879C29ACAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A86755830988159F0472731B /* Pods_BaiTapAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2BCB6F4929934984CBF7422 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				830F96B1C6D18FE2D6387A5C /* Pods-BaiTapAPI.debug.xcconfig */,
+				231BE80DF99170B8FEBEE13C /* Pods-BaiTapAPI.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52140CBD24EE806F000E9BED /* Build configuration list for PBXNativeTarget "BaiTapAPI" */;
 			buildPhases = (
+				8C2F88AFE6F596540B1BF4CE /* [CP] Check Pods Manifest.lock */,
 				52140CA524EE806A000E9BED /* Sources */,
 				52140CA624EE806A000E9BED /* Frameworks */,
 				52140CA724EE806A000E9BED /* Resources */,
+				C2855F55A417ED380BCBB783 /* [CP] Embed Pods Frameworks */,
+				80E398DC61DD66F078D9EDCF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,14 +239,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52140CF124F35A86000E9BED /* YoutubeViewController.xib in Resources */,
+				52140CF924F35B24000E9BED /* YoutubeCell.xib in Resources */,
 				52140CB924EE806F000E9BED /* LaunchScreen.storyboard in Resources */,
 				52140CB624EE806F000E9BED /* Assets.xcassets in Resources */,
 				52140CDF24F24A18000E9BED /* AudioBookViewController.xib in Resources */,
 				52140CE524F24A7C000E9BED /* AudioBookCell.xib in Resources */,
+				52E7D76224F376C4000584A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80E398DC61DD66F078D9EDCF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C2F88AFE6F596540B1BF4CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaiTapAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2855F55A417ED380BCBB783 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52140CA524EE806A000E9BED /* Sources */ = {
@@ -178,10 +317,13 @@
 			files = (
 				52140CDE24F24A18000E9BED /* AudioBookViewController.swift in Sources */,
 				52140CE124F24A36000E9BED /* AudioBookViewModel.swift in Sources */,
+				52140CF024F35A86000E9BED /* YoutubeViewController.swift in Sources */,
 				52140CB124EE806A000E9BED /* ViewController.swift in Sources */,
 				52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */,
+				52140CF824F35B24000E9BED /* YoutubeCell.swift in Sources */,
 				52140CAD24EE806A000E9BED /* AppDelegate.swift in Sources */,
-				52140CAF24EE806A000E9BED /* SceneDelegate.swift in Sources */,
+				52140CFC24F35B60000E9BED /* YoutubeCellViewModel.swift in Sources */,
+				52140CF324F35AA6000E9BED /* YoutubeViewModel.swift in Sources */,
 				52140CE424F24A7C000E9BED /* AudioBookCell.swift in Sources */,
 				52140CE724F24AAD000E9BED /* Networking.swift in Sources */,
 				52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */,
@@ -318,6 +460,7 @@
 		};
 		52140CBE24EE806F000E9BED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830F96B1C6D18FE2D6387A5C /* Pods-BaiTapAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +479,7 @@
 		};
 		52140CBF24EE806F000E9BED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 231BE80DF99170B8FEBEE13C /* Pods-BaiTapAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
