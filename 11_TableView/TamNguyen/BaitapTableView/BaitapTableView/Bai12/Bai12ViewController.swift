@@ -27,7 +27,6 @@ final class Bai12ViewController: UIViewController {
     private func configTableView() {
         title = "Delete and Add cell"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.delegate = self
         tableView.dataSource = self
     }
     
@@ -43,8 +42,9 @@ final class Bai12ViewController: UIViewController {
         tableView.endUpdates()
     }
 }
-// MARK: - Extension UITableVIewDelegate, UiTableViewDataSource
-extension Bai12ViewController: UITableViewDelegate, UITableViewDataSource {
+
+// MARK: - Extension UITableViewDataSource
+extension Bai12ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

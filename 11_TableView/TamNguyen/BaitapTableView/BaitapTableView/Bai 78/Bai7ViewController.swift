@@ -43,6 +43,7 @@ extension Bai7ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return getDataFriends.numberOfSections()
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return getDataFriends.numberOfRowsInSection(in: section)
     }
@@ -69,4 +70,3 @@ extension Bai7ViewController: UITableViewDataSource {
         return index
     }
 }
-

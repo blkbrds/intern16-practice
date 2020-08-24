@@ -10,15 +10,15 @@ import UIKit
 
 final class Bai3ViewController: UIViewController {
     
+    // MARK: - IBOulets
+    @IBOutlet private weak var tableView: UITableView!
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         configTableView()
     }
-    
-    // MARK: - IBOulets
-    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     private var contacts: [String] = []
@@ -57,6 +57,7 @@ extension Bai3ViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Extension UITableViewDelegate
 extension Bai3ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

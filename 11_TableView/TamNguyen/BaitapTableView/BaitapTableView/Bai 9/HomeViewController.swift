@@ -82,6 +82,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Extension HomeTableViewCellDelegate
 extension HomeViewController: HomeTableViewCellDelegate {
     func tap(view: HomeTableViewCell) {
         print("hihi")

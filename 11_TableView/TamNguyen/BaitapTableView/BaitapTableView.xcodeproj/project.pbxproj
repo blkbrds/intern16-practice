@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		31C8453E24CFDAFD00D4AEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8453D24CFDAFD00D4AEF6 /* AppDelegate.swift */; };
 		31C8454024CFDAFD00D4AEF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8453F24CFDAFD00D4AEF6 /* SceneDelegate.swift */; };
-		31C8454224CFDAFD00D4AEF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8454124CFDAFD00D4AEF6 /* ViewController.swift */; };
 		31C8454724CFDAFF00D4AEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C8454624CFDAFF00D4AEF6 /* Assets.xcassets */; };
 		31C8455424CFDC4E00D4AEF6 /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8455224CFDC4E00D4AEF6 /* Bai1ViewController.swift */; };
 		31C8455524CFDC4E00D4AEF6 /* Bai1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8455324CFDC4E00D4AEF6 /* Bai1ViewController.xib */; };
@@ -61,7 +60,6 @@
 		31C8453A24CFDAFD00D4AEF6 /* BaitapTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaitapTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C8453D24CFDAFD00D4AEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C8453F24CFDAFD00D4AEF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31C8454124CFDAFD00D4AEF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		31C8454624CFDAFF00D4AEF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31C8454B24CFDAFF00D4AEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C8455224CFDC4E00D4AEF6 /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai1ViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				31C8453D24CFDAFD00D4AEF6 /* AppDelegate.swift */,
 				31C8458F24D3BE5700D4AEF6 /* Contact.plist */,
 				31C8455B24D00BCE00D4AEF6 /* Contacts.plist */,
-				31C8454124CFDAFD00D4AEF6 /* ViewController.swift */,
 				31C8454624CFDAFF00D4AEF6 /* Assets.xcassets */,
 				31C8454B24CFDAFF00D4AEF6 /* Info.plist */,
 				31C8456C24D02D9C00D4AEF6 /* Friends.plist */,
@@ -360,7 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31C8454224CFDAFD00D4AEF6 /* ViewController.swift in Sources */,
 				31C845BA24D45ABA00D4AEF6 /* Bai11ViewController.swift in Sources */,
 				31C8459D24D3D9F600D4AEF6 /* PrepareData.swift in Sources */,
 				31C8456124D015EC00D4AEF6 /* Bai3ViewController.swift in Sources */,

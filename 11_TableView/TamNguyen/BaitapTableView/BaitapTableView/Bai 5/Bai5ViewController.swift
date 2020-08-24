@@ -42,8 +42,8 @@ final class Bai5ViewController: UIViewController {
     }
 }
 
-// MARK: - Extension UITableViewDelegate, UITableViewDataSource, UISearchBarDeleGate
-extension Bai5ViewController: UITableViewDelegate, UITableViewDataSource {
+// MARK: - Extension UITableViewDataSource
+extension Bai5ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -58,13 +58,19 @@ extension Bai5ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = getDataContacts.viewModelForCell(at: indexPath)
         return cell
     }
+}
+
+// MARK: - Extension UITableViewDelegate
+extension Bai5ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
 }
 
+// MARK: - Extension UISearchBarDelegate
 extension Bai5ViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let upperText = searchText.uppercased()
         searchList = getDataContacts.contacts.filter { $0.uppercased().hasPrefix(upperText) }
@@ -77,3 +83,4 @@ extension Bai5ViewController: UISearchBarDelegate {
         friendsTableView.reloadData()
     }
 }
+

@@ -10,15 +10,15 @@ import UIKit
 
 final class Bai2ViewController: UIViewController {
     
+    // MARK: - IBOulets
+    @IBOutlet private weak var tableView: UITableView!
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         configTableView()
     }
-    
-    // MARK: - IBOulets
-    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     private var contacts: [String] = []
