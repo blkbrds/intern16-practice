@@ -17,6 +17,7 @@ final class Bai7ViewController: UIViewController {
     private var getDataFriends = GetDataFriends()
     private var titles: [String] = ["Intern", "Rained Sister", "Old Girl Friends", "New Girl Friends"]
     private var sectionIndexs: [String] = ["I", "R", "O", "N"]
+    private var homeTitle: String = "Girl Friends"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ final class Bai7ViewController: UIViewController {
     }
     
     private func configTableView() {
-        title = "Girl Friends"
+        title = homeTitle
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
     }

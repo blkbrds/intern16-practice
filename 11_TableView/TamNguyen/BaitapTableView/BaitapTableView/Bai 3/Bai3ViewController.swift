@@ -22,6 +22,7 @@ final class Bai3ViewController: UIViewController {
     
     // MARK: - Properties
     private var contacts: [String] = []
+    private var homeTitle: String = "Contacts"
     
     // MARK: - Private methods
     private func loadData() {
@@ -31,7 +32,7 @@ final class Bai3ViewController: UIViewController {
     }
     
     private func configTableView() {
-        title = "Contacts"
+        title = homeTitle
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewSCell")
         //dataSource, delegate
         tableView.dataSource = self

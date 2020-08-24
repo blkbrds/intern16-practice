@@ -18,6 +18,8 @@ final class Bai10ViewController: UIViewController {
     private var prepareData = PrepareData()
     private var customTableViewCell = CustomTableViewCell()
     private var searchList: [[String]] = []
+    private var cellIdentifier: String = "CustomTableViewCell"
+    private var homeTitle: String = "Contact"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -28,13 +30,13 @@ final class Bai10ViewController: UIViewController {
     
     // MARK: - Private methods
     private func loadData() {
-        title = "Contact"
+        title = homeTitle
         prepareData.getUser()
     }
     
     private func configTableView() {
         let nib = UINib(nibName: "CustomTableViewCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
     }
 }
@@ -51,7 +53,7 @@ extension Bai10ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
         cell.userInCell = prepareData.viewModelForCell(at: indexPath)
         return cell
     }

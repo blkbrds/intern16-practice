@@ -17,6 +17,8 @@ final class HomeViewController: UIViewController {
     private var loadUser = LoadUser()
     private var sectionIndexs: [String] = []
     private var homeTableViewCell = HomeTableViewCell()
+    private var cellIdentifier: String = "HomeTableViewCell"
+    private var homeTitle: String = "List"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -32,9 +34,9 @@ final class HomeViewController: UIViewController {
     }
     
     private func configTableView() {
-        title = "List"
+        title = homeTitle
         let nib = UINib(nibName: "HomeTableViewCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
     }
 }
@@ -51,7 +53,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         cell.viewModel = loadUser.viewModelForCell(at: indexPath)
         cell.delegate = self
         cell.section = indexPath.section

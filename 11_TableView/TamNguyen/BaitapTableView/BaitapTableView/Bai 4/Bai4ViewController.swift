@@ -30,7 +30,6 @@ final class Bai4ViewController: UIViewController {
     }
     
     private func configTableView() {
-        title = "Girl Friends"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
     }

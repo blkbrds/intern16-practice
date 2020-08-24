@@ -15,6 +15,8 @@ final class Bai11ViewController: UIViewController {
     
     // MARK: - Properties
     private var poemManager = PoemManager()
+    private var cellIdentifier: String = "Bai11CustomTableViewCell"
+    private var homeTitle: String = "Poem"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,13 +27,13 @@ final class Bai11ViewController: UIViewController {
     
     // MARK: - Private methods
     private func loadData() {
-        title = "Poem"
+        title = homeTitle
         poemManager.getPoem()
     }
     
     private func configTableView() {
         let nib = UINib(nibName: "Bai11CustomTableViewCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "Bai11CustomTableViewCell")
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
     }
 }
@@ -49,7 +51,7 @@ extension Bai11ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Bai11CustomTableViewCell", for: indexPath) as? Bai11CustomTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? Bai11CustomTableViewCell else { return UITableViewCell() }
         cell.poemForCell = poemManager.viewModelForCell(at: indexPath)
         return cell
     }

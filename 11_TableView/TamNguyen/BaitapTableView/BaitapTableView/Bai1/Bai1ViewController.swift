@@ -14,7 +14,8 @@ final class Bai1ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    var names: [String] = ["Tam", "Lam", "Messi", "Ronaldo", "Trung", "Trin"]
+    private var names: [String] = ["Tam", "Lam", "Messi", "Ronaldo", "Trung", "Trin"]
+    private var homeTitle: String = "Friend List"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ final class Bai1ViewController: UIViewController {
     
     // MARK: - Private methods
     private func configUI() {
-        title = "Friend List"
+        title = homeTitle
         // register
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         // delegate va datasource

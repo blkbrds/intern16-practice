@@ -15,6 +15,7 @@ final class Bai12ViewController: UIViewController {
     
     // MARK: - Properties
     private var list: [String] = ["one", "two", "three", "four"]
+    private var cellIdentifier: String = "cell"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,8 +26,7 @@ final class Bai12ViewController: UIViewController {
     
     // MARK: - Private methods
     private func configTableView() {
-        title = "Delete and Add cell"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
     }
     
@@ -55,7 +55,7 @@ extension Bai12ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         cell.textLabel?.text = list[indexPath.row]
         return cell
     }

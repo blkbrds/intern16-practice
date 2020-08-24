@@ -18,6 +18,7 @@ final class Bai5ViewController: UIViewController {
     private var searchList: [String] = []
     private let cellIdentifier: String = "cell"
     private var getDataContacts = GetDataContacts()
+    private var homeTitle: String = "Home"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ final class Bai5ViewController: UIViewController {
     }
     
     private func configTableView() {
-        title = "Home"
+        title = homeTitle
         friendsTableView.delegate = self
         friendsTableView.dataSource = self
         friendsTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
@@ -83,4 +84,3 @@ extension Bai5ViewController: UISearchBarDelegate {
         friendsTableView.reloadData()
     }
 }
-
