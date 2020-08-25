@@ -26,8 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = Baitap3_1ViewController()
 //        window.rootViewController = Baitap3_2ViewController()
 //        window.rootViewController = Baitap4ViewController()
-        window.rootViewController = Baitap4_1ViewController()
+//        window.rootViewController = Baitap4_1ViewController()
 //        window.rootViewController = Baitap4_2ViewController()
+        window.rootViewController = Baitap9_1ViewController()
         window.makeKeyAndVisible()
     }
     func sceneDidDisconnect(_ scene: UIScene) {
