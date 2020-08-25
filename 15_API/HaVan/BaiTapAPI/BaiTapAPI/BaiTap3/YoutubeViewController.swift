@@ -9,7 +9,7 @@
 import UIKit
 
 final class YoutubeViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
@@ -17,18 +17,16 @@ final class YoutubeViewController: UIViewController {
     // MARK: - Propeties
     var viewModel = YoutubeViewModel()
     var pageToken = ""
-    var offsetY = 0
-    // MARK: - Initialize
-    
+    var stringKey = ""
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         configTableView()
-        loadData(withString: "", withNextPage: pageToken)
+        loadData(withString: stringKey, withNextPage: pageToken)
     }
-    // MARK: - Override functions
-    
+
     // MARK: - Private functions
     private func configTableView() {
         tableView.delegate = self
@@ -42,22 +40,34 @@ final class YoutubeViewController: UIViewController {
             if done {
                 self.pageToken = nextPage
                 DispatchQueue.main.async {
-                     self.tableView.reloadData()
+                    self.tableView.reloadData()
                 }
             } else {
-                print(error)
+                DispatchQueue.main.async {
+                    self.createAlert(with: error)
+                }
             }
         }
     }
-    // MARK: - Public functions
     
-    // MARK: - Objc functions
+    private func createAlert(with error: String) {
+        let alert = UIAlertController(title: "You can't view the videos", message: error, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
     
-    // MARK: - IBActions
+    private func couldLoadMore() -> Bool {
+        guard tableView.contentSize.height > 0 else { return false }
+        let collectionHeight = tableView.bounds.size.height
+        let distanceToBottom = tableView.contentSize.height - tableView.contentOffset.y
+        return distanceToBottom <= collectionHeight
+    }
 }
 
+// MARK: - UITableViewDataSource
 extension YoutubeViewController: UITableViewDataSource {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowInSection()
     }
@@ -69,6 +79,7 @@ extension YoutubeViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension YoutubeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -76,28 +87,28 @@ extension YoutubeViewController: UITableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y == 130 * 24 {
-            offsetY += 130 * 24
-            loadData(withString: "", withNextPage: pageToken)
+        if couldLoadMore() && scrollView.contentOffset.y > 0 {
+            loadData(withString: stringKey, withNextPage: pageToken)
         }
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension YoutubeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        stringKey = searchText
         viewModel.videos = []
-        pageToken = ""
-        loadData(withString: searchText, withNextPage: pageToken)
+        loadData(withString: stringKey, withNextPage: pageToken)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { searchBar.text = ""
-                   return }
-               viewModel.videos = []
-            pageToken = ""
-               loadData(withString: text, withNextPage: pageToken)
-               searchBar.resignFirstResponder()
+            return }
+        stringKey = text
+        viewModel.videos = []
+        loadData(withString: stringKey, withNextPage: pageToken)
+        searchBar.resignFirstResponder()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

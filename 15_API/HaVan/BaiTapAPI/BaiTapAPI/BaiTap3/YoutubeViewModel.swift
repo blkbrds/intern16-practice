@@ -16,20 +16,24 @@ final class YoutubeViewModel {
     
     func loadAPI(withString keyString: String, nextPage: String, completion: @escaping YoutubeCallBack) {
         
-        let urlString = "https://www.googleapis.com/youtube/v3/search?pageToken=" + nextPage + "&part=snippet&maxResults=25&order=relevance&q=" + keyString + "&key=AIzaSyDxoMGIPLA4j4QVtdOuxjrsXGeOhx-RZCI"
+        let urlString = "https://www.googleapis.com/youtube/v3/search?pageToken=" + nextPage + "&part=snippet&maxResults=5&order=relevance&q=" + keyString + "&key=AIzaSyDHrM8IShRVy_9vkMZy7Rmkq47GT31-RXA"
         Networking.shared().request(with: urlString) { (data, error) in
             if let error = error {
                 completion(false, "" ,error.localizedDescription)
             } else {
                 if let data = data {
                     let json = data.toJSON()
-                    let nextPageToken = json["nextPageToken"] as? String ?? ""
-                    guard let items = json["items"] as? [JSON] else { fatalError("can't get item") }
-                    for item in items {
-                        let video = Video(json: item)
-                        self.videos.append(video)
+                    if let _ = json["error"] as? JSON {
+                        completion(false,"","limit request")
+                    } else {
+                        let nextPageToken = json["nextPageToken"] as? String ?? ""
+                        guard let items = json["items"] as? [JSON] else { fatalError("can't get item") }
+                        for item in items {
+                            let video = Video(json: item)
+                            self.videos.append(video)
+                        }
+                        completion(true,"\(nextPageToken)", "")
                     }
-                    completion(true,"\(nextPageToken)", "")
                 } else {
                     completion(false,"","data is error")
                 }
