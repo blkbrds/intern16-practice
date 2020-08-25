@@ -9,28 +9,40 @@
 import UIKit
 
 final class YoutubeCell: UITableViewCell {
-
+    
     // MARK: - IBOutlets
+    @IBOutlet private weak var publishedAtLabel: UILabel!
+    @IBOutlet private weak var channelLabel: UILabel!
+    @IBOutlet private weak var thumbnailImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     // MARK: - Propeties
-    
-    // MARK: - Initialize
+    var viewModel : YoutubeCellViewModel? {
+        didSet {
+            updateUI()
+        }
+    }
     
     // MARK: - Life cycle
-     override func awakeFromNib() {
-           super.awakeFromNib()
-       }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     // MARK: - Private functions
-    
+    private func updateUI() {
+        publishedAtLabel.text = viewModel?.publishedAt
+        channelLabel.text = viewModel?.channel
+        titleLabel.text = viewModel?.title
+        thumbnailImage.image = viewModel?.thumbnail
+    }
     // MARK: - Public functions
     
     // MARK: - Objc functions
     
     // MARK: - IBActions
-
     
 }

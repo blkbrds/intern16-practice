@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        let audioBookViewController = AudioBookViewController()
-        window?.rootViewController = UINavigationController(rootViewController: audioBookViewController)
+        let youtubeViewController = YoutubeViewController()
+        window?.rootViewController = UINavigationController(rootViewController: youtubeViewController)
         window?.makeKeyAndVisible()
         GIDSignIn.sharedInstance()?.clientID = "345606309180-4cpfi4p6u0b1fr4jaa5deo4b18up832l.apps.googleusercontent.com"
         return true
