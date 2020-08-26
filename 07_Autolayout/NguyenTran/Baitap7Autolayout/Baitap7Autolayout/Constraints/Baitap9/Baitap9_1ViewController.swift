@@ -33,7 +33,7 @@ class Baitap9_1ViewController: UIViewController {
     }
 
     func configView() {
-        UIView.animate(withDuration: 3.0, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 3.0, delay: 0, options: .transitionFlipFromRight, animations: {
             self.photoScrollView.setContentOffset(CGPoint(x: CGFloat(self.order) * self.photoScrollView.bounds.width, y: 0), animated: true)
         }, completion: nil)
         pagingLabel.text = "\(order + 1)/5"
