@@ -17,7 +17,6 @@
 		52140CE124F24A36000E9BED /* AudioBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE024F24A36000E9BED /* AudioBookViewModel.swift */; };
 		52140CE424F24A7C000E9BED /* AudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE224F24A7C000E9BED /* AudioBookCell.swift */; };
 		52140CE524F24A7C000E9BED /* AudioBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52140CE324F24A7C000E9BED /* AudioBookCell.xib */; };
-		52140CE724F24AAD000E9BED /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE624F24AAD000E9BED /* Networking.swift */; };
 		52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CE824F24ABE000E9BED /* AudioBook.swift */; };
 		52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */; };
 		52140CF024F35A86000E9BED /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CEE24F35A86000E9BED /* YoutubeViewController.swift */; };
@@ -30,6 +29,8 @@
 		523E067C24F497A400ECE54C /* API.Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E067B24F497A400ECE54C /* API.Request.swift */; };
 		523E067E24F4983800ECE54C /* API.Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E067D24F4983800ECE54C /* API.Manager.swift */; };
 		523E068024F499BE00ECE54C /* API.Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E067F24F499BE00ECE54C /* API.Video.swift */; };
+		526CB20224F6030000A37F75 /* API.Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CB20124F6030000A37F75 /* API.Audio.swift */; };
+		526CB20424F6085B00A37F75 /* Data.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CB20324F6085B00A37F75 /* Data.ext.swift */; };
 		52E7D76224F376C4000584A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52E7D76124F376C4000584A0 /* GoogleService-Info.plist */; };
 		52E7D76624F3B0DE000584A0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7D76524F3B0DE000584A0 /* Video.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +48,6 @@
 		52140CE024F24A36000E9BED /* AudioBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookViewModel.swift; sourceTree = "<group>"; };
 		52140CE224F24A7C000E9BED /* AudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookCell.swift; sourceTree = "<group>"; };
 		52140CE324F24A7C000E9BED /* AudioBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioBookCell.xib; sourceTree = "<group>"; };
-		52140CE624F24AAD000E9BED /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		52140CE824F24ABE000E9BED /* AudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		52140CEA24F258C1000E9BED /* AudioBookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookCellViewModel.swift; sourceTree = "<group>"; };
 		52140CEE24F35A86000E9BED /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		523E067B24F497A400ECE54C /* API.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Request.swift; sourceTree = "<group>"; };
 		523E067D24F4983800ECE54C /* API.Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Manager.swift; sourceTree = "<group>"; };
 		523E067F24F499BE00ECE54C /* API.Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Video.swift; sourceTree = "<group>"; };
+		526CB20124F6030000A37F75 /* API.Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Audio.swift; sourceTree = "<group>"; };
+		526CB20324F6085B00A37F75 /* Data.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.ext.swift; sourceTree = "<group>"; };
 		52E7D76124F376C4000584A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52E7D76524F3B0DE000584A0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		830F96B1C6D18FE2D6387A5C /* Pods-BaiTapAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapAPI.debug.xcconfig"; path = "Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				523E067824F4969D00ECE54C /* CoreAPI */,
-				52140CED24F35A4E000E9BED /* BaiTap3 */,
+				52140CED24F35A4E000E9BED /* BaiTap3-5 */,
 				52140CEC24F35A36000E9BED /* BaiTap1-2 */,
 				52140CAC24EE806A000E9BED /* AppDelegate.swift */,
 				52140CB024EE806A000E9BED /* ViewController.swift */,
@@ -116,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				52140CE824F24ABE000E9BED /* AudioBook.swift */,
-				52140CE624F24AAD000E9BED /* Networking.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,7 +144,7 @@
 			path = "BaiTap1-2";
 			sourceTree = "<group>";
 		};
-		52140CED24F35A4E000E9BED /* BaiTap3 */ = {
+		52140CED24F35A4E000E9BED /* BaiTap3-5 */ = {
 			isa = PBXGroup;
 			children = (
 				52140CF524F35AD6000E9BED /* TableViewCell */,
@@ -152,7 +153,7 @@
 				52140CEF24F35A86000E9BED /* YoutubeViewController.xib */,
 				52140CF224F35AA6000E9BED /* YoutubeViewModel.swift */,
 			);
-			path = BaiTap3;
+			path = "BaiTap3-5";
 			sourceTree = "<group>";
 		};
 		52140CF424F35AC5000E9BED /* Model */ = {
@@ -180,6 +181,8 @@
 				523E067B24F497A400ECE54C /* API.Request.swift */,
 				523E067D24F4983800ECE54C /* API.Manager.swift */,
 				523E067F24F499BE00ECE54C /* API.Video.swift */,
+				526CB20124F6030000A37F75 /* API.Audio.swift */,
+				526CB20324F6085B00A37F75 /* Data.ext.swift */,
 			);
 			path = CoreAPI;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				52140CDE24F24A18000E9BED /* AudioBookViewController.swift in Sources */,
 				52140CE124F24A36000E9BED /* AudioBookViewModel.swift in Sources */,
 				52140CF024F35A86000E9BED /* YoutubeViewController.swift in Sources */,
+				526CB20424F6085B00A37F75 /* Data.ext.swift in Sources */,
 				523E067C24F497A400ECE54C /* API.Request.swift in Sources */,
 				52140CB124EE806A000E9BED /* ViewController.swift in Sources */,
 				52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */,
@@ -350,9 +354,9 @@
 				52140CAD24EE806A000E9BED /* AppDelegate.swift in Sources */,
 				52140CFC24F35B60000E9BED /* YoutubeCellViewModel.swift in Sources */,
 				52140CF324F35AA6000E9BED /* YoutubeViewModel.swift in Sources */,
+				526CB20224F6030000A37F75 /* API.Audio.swift in Sources */,
 				52E7D76624F3B0DE000584A0 /* Video.swift in Sources */,
 				52140CE424F24A7C000E9BED /* AudioBookCell.swift in Sources */,
-				52140CE724F24AAD000E9BED /* Networking.swift in Sources */,
 				52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */,
 				523E067E24F4983800ECE54C /* API.Manager.swift in Sources */,
 			);

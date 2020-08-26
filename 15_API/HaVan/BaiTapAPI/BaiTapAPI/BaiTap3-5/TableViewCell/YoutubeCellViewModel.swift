@@ -11,11 +11,13 @@ import UIKit
 
 final class YoutubeCellViewModel {
     
+    // MARK: - Properties
     private(set) var title: String
     private(set) var thumbnail: UIImage
     private(set) var channel: String
     private(set) var publishedAt: String
     
+    // MARK: - Initialize
     init(title: String, thumbnail: String, channel: String, publishedAt: String) {
         self.title = title
         guard let urlString = URL(string: thumbnail) else { fatalError("can't get url string image") }

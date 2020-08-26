@@ -39,10 +39,4 @@ final class YoutubeCell: UITableViewCell {
         titleLabel.text = viewModel?.title
         thumbnailImage.image = viewModel?.thumbnail
     }
-    // MARK: - Public functions
-    
-    // MARK: - Objc functions
-    
-    // MARK: - IBActions
-    
 }

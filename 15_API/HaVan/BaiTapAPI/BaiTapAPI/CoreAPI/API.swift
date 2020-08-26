@@ -27,7 +27,7 @@ enum APIErrors: Error {
 
 enum APIResult {
     case success(Data?)
-    case failure(APIError)
+    case failure(APIErrors)
 }
 
 struct API {

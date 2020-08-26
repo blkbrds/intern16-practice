@@ -15,7 +15,6 @@ extension API {
         guard let url = URL(string: urlString) else {
                 return
             }
-            
             let config = URLSessionConfiguration.ephemeral
             config.waitsForConnectivity = true
             let session = URLSession.shared

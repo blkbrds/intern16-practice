@@ -16,7 +16,7 @@ final class YoutubeViewController: UIViewController {
     
     // MARK: - Propeties
     var viewModel = YoutubeViewModel()
-    var pageToken = ""
+    var nextPageToken = ""
     var stringKey = ""
 
     // MARK: - Life cycle
@@ -24,7 +24,7 @@ final class YoutubeViewController: UIViewController {
         super.viewDidLoad()
         searchBar.delegate = self
         configTableView()
-        loadData(withString: stringKey, withNextPage: pageToken)
+        loadData(withString: stringKey, withNextPage: nextPageToken)
     }
 
     // MARK: - Private functions
@@ -36,9 +36,9 @@ final class YoutubeViewController: UIViewController {
     }
     
     private func loadData(withString key: String, withNextPage nextPage: String) {
-        viewModel.loadAPI(withString: key, nextPage: nextPage) { (done, nextPage, error) in
+        viewModel.loadAPI(withString: key, nextPage: nextPage) { (done, error, next) in
             if done {
-                self.pageToken = nextPage
+                self.nextPageToken = next
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -51,7 +51,7 @@ final class YoutubeViewController: UIViewController {
     }
     
     private func createAlert(with error: String) {
-        let alert = UIAlertController(title: "You can't view the videos", message: error, preferredStyle: .alert)
+        let alert = UIAlertController(title: "You can't get the videos", message: error, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
@@ -88,7 +88,7 @@ extension YoutubeViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if couldLoadMore() && scrollView.contentOffset.y > 0 {
-            loadData(withString: stringKey, withNextPage: pageToken)
+            loadData(withString: stringKey, withNextPage: nextPageToken)
         }
     }
 }
@@ -99,7 +99,7 @@ extension YoutubeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         stringKey = searchText
         viewModel.videos = []
-        loadData(withString: stringKey, withNextPage: pageToken)
+        loadData(withString: stringKey, withNextPage: nextPageToken)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -107,7 +107,7 @@ extension YoutubeViewController: UISearchBarDelegate {
             return }
         stringKey = text
         viewModel.videos = []
-        loadData(withString: stringKey, withNextPage: pageToken)
+        loadData(withString: stringKey, withNextPage: nextPageToken)
         searchBar.resignFirstResponder()
     }
     
