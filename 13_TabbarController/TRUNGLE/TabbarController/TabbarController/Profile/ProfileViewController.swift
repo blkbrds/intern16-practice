@@ -14,12 +14,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         title = "PROFILE"
     }
-
-
-
+    
     @IBAction func logoutPressed(_ sender: Any) {
         UserDefaults.standard.set(nil,forKey: "userName")
-        SceneDelegate.shared.changeScreen(with: .logOut)
+        SceneDelegate.shared.logOut()
     }
-    
 }
