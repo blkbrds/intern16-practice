@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4FCD7EBA44AE90823D909908 /* Pods_BaiTapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86755830988159F0472731B /* Pods_BaiTapAPI.framework */; };
 		52140CAD24EE806A000E9BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CAC24EE806A000E9BED /* AppDelegate.swift */; };
-		52140CB124EE806A000E9BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CB024EE806A000E9BED /* ViewController.swift */; };
 		52140CB624EE806F000E9BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52140CB524EE806F000E9BED /* Assets.xcassets */; };
 		52140CB924EE806F000E9BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52140CB724EE806F000E9BED /* LaunchScreen.storyboard */; };
 		52140CDE24F24A18000E9BED /* AudioBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52140CDC24F24A18000E9BED /* AudioBookViewController.swift */; };
@@ -29,6 +28,7 @@
 		523E067C24F497A400ECE54C /* API.Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E067B24F497A400ECE54C /* API.Request.swift */; };
 		523E067E24F4983800ECE54C /* API.Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E067D24F4983800ECE54C /* API.Manager.swift */; };
 		523E068024F499BE00ECE54C /* API.Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E067F24F499BE00ECE54C /* API.Video.swift */; };
+		525C41EC24F897A300027213 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C41EB24F897A300027213 /* Item.swift */; };
 		526CB20224F6030000A37F75 /* API.Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CB20124F6030000A37F75 /* API.Audio.swift */; };
 		526CB20424F6085B00A37F75 /* Data.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CB20324F6085B00A37F75 /* Data.ext.swift */; };
 		52E7D76224F376C4000584A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52E7D76124F376C4000584A0 /* GoogleService-Info.plist */; };
@@ -39,7 +39,6 @@
 		231BE80DF99170B8FEBEE13C /* Pods-BaiTapAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapAPI.release.xcconfig"; path = "Target Support Files/Pods-BaiTapAPI/Pods-BaiTapAPI.release.xcconfig"; sourceTree = "<group>"; };
 		52140CA924EE806A000E9BED /* BaiTapAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52140CAC24EE806A000E9BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52140CB024EE806A000E9BED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52140CB524EE806F000E9BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52140CB824EE806F000E9BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52140CBA24EE806F000E9BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		523E067B24F497A400ECE54C /* API.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Request.swift; sourceTree = "<group>"; };
 		523E067D24F4983800ECE54C /* API.Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Manager.swift; sourceTree = "<group>"; };
 		523E067F24F499BE00ECE54C /* API.Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Video.swift; sourceTree = "<group>"; };
+		525C41EB24F897A300027213 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		526CB20124F6030000A37F75 /* API.Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Audio.swift; sourceTree = "<group>"; };
 		526CB20324F6085B00A37F75 /* Data.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.ext.swift; sourceTree = "<group>"; };
 		52E7D76124F376C4000584A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -105,7 +105,6 @@
 				52140CED24F35A4E000E9BED /* BaiTap3-5 */,
 				52140CEC24F35A36000E9BED /* BaiTap1-2 */,
 				52140CAC24EE806A000E9BED /* AppDelegate.swift */,
-				52140CB024EE806A000E9BED /* ViewController.swift */,
 				52140CB524EE806F000E9BED /* Assets.xcassets */,
 				52140CB724EE806F000E9BED /* LaunchScreen.storyboard */,
 				52E7D76124F376C4000584A0 /* GoogleService-Info.plist */,
@@ -160,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				52E7D76524F3B0DE000584A0 /* Video.swift */,
+				525C41EB24F897A300027213 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				523E067924F496CD00ECE54C /* API.swift */,
-				523E067B24F497A400ECE54C /* API.Request.swift */,
 				523E067D24F4983800ECE54C /* API.Manager.swift */,
+				523E067B24F497A400ECE54C /* API.Request.swift */,
 				523E067F24F499BE00ECE54C /* API.Video.swift */,
 				526CB20124F6030000A37F75 /* API.Audio.swift */,
 				526CB20324F6085B00A37F75 /* Data.ext.swift */,
@@ -346,7 +346,6 @@
 				52140CF024F35A86000E9BED /* YoutubeViewController.swift in Sources */,
 				526CB20424F6085B00A37F75 /* Data.ext.swift in Sources */,
 				523E067C24F497A400ECE54C /* API.Request.swift in Sources */,
-				52140CB124EE806A000E9BED /* ViewController.swift in Sources */,
 				52140CEB24F258C1000E9BED /* AudioBookCellViewModel.swift in Sources */,
 				52140CF824F35B24000E9BED /* YoutubeCell.swift in Sources */,
 				523E068024F499BE00ECE54C /* API.Video.swift in Sources */,
@@ -355,6 +354,7 @@
 				52140CFC24F35B60000E9BED /* YoutubeCellViewModel.swift in Sources */,
 				52140CF324F35AA6000E9BED /* YoutubeViewModel.swift in Sources */,
 				526CB20224F6030000A37F75 /* API.Audio.swift in Sources */,
+				525C41EC24F897A300027213 /* Item.swift in Sources */,
 				52E7D76624F3B0DE000584A0 /* Video.swift in Sources */,
 				52140CE424F24A7C000E9BED /* AudioBookCell.swift in Sources */,
 				52140CE924F24ABE000E9BED /* AudioBook.swift in Sources */,

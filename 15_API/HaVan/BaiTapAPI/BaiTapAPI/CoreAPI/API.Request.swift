@@ -13,24 +13,27 @@ extension API {
     //with url string
     func request(urlString: String, completion: @escaping (APIResult) -> Void) {
         guard let url = URL(string: urlString) else {
-                return
-            }
-            let config = URLSessionConfiguration.ephemeral
-            config.waitsForConnectivity = true
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: url) { (data, _, error) in
-                DispatchQueue.main.async {
-                    if let error = error {
-                        completion(.failure(.error(error.localizedDescription)))
+            return
+        }
+        let config = URLSessionConfiguration.ephemeral
+        config.waitsForConnectivity = true
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url) { (data, _, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    completion(.failure(.error(error.localizedDescription)))
+                } else {
+                    if let data = data {
+                        let newData = data.toJSON()
+                        completion(.success(newData))
                     } else {
-                        if let data = data {
-                            completion(.success(data))
-                        }
+                        completion(.failure(.error("can't get data")))
                     }
                 }
             }
-            dataTask.resume()
         }
+        dataTask.resume()
+    }
     
     //with url
     func request(url: URL, completion: @escaping (APIResult) -> Void) {
@@ -43,7 +46,8 @@ extension API {
                     completion(.failure(.error(error.localizedDescription)))
                 } else {
                     if let data = data {
-                        completion(.success(data))
+                        let newData = data.toJSON()
+                        completion(.success(newData))
                     }
                 }
             }
@@ -62,7 +66,8 @@ extension API {
                     completion(.failure(.error(error.localizedDescription)))
                 } else {
                     if let data = data {
-                        completion(.success(data))
+                        let newData = data.toJSON()
+                        completion(.success(newData))
                     }
                 }
             }

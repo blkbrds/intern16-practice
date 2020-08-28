@@ -15,9 +15,10 @@ final class YoutubeViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Propeties
-    var viewModel = YoutubeViewModel()
-    var nextPageToken = ""
-    var stringKey = ""
+    private let refreshControl = UIRefreshControl()
+    private var nextPageToken = ""
+    private var stringKey = ""
+    private var viewModel = YoutubeViewModel()
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ final class YoutubeViewController: UIViewController {
         searchBar.delegate = self
         configTableView()
         loadData(withString: stringKey, withNextPage: nextPageToken)
+        configRefreshControl()
     }
 
     // MARK: - Private functions
@@ -63,6 +65,28 @@ final class YoutubeViewController: UIViewController {
         let distanceToBottom = tableView.contentSize.height - tableView.contentOffset.y
         return distanceToBottom <= collectionHeight
     }
+    
+    private func configRefreshControl() {
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        refreshControl.tintColor = #colorLiteral(red: 0.7957783341, green: 0.2827578783, blue: 0.3437477648, alpha: 1)
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Video Data ...", attributes: .none)
+        refreshControl.addTarget(self, action: #selector(refreshVideoData(_:)), for: .valueChanged)
+    }
+    
+    // MARK: - Objc functions
+    @objc private func refreshVideoData(_ sender: Any) {
+        searchBar.text?.removeAll()
+        stringKey = ""
+        nextPageToken = ""
+        loadData(withString: stringKey, withNextPage: nextPageToken)
+        refreshControl.endRefreshing()
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.stopAnimating()
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -98,7 +122,7 @@ extension YoutubeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         stringKey = searchText
-        viewModel.videos = []
+        viewModel.items = []
         loadData(withString: stringKey, withNextPage: nextPageToken)
     }
     
@@ -106,7 +130,7 @@ extension YoutubeViewController: UISearchBarDelegate {
         guard let text = searchBar.text else { searchBar.text = ""
             return }
         stringKey = text
-        viewModel.videos = []
+        viewModel.items = []
         loadData(withString: stringKey, withNextPage: nextPageToken)
         searchBar.resignFirstResponder()
     }

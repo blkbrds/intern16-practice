@@ -7,13 +7,13 @@
 //
 
 import Foundation
-typealias JSON = [String: Any]
 
 extension Data {
-    func toJSON() -> JSON {
+    
+    func toJSON() -> JSONObject {
         var json: [String: Any] = [:]
         do {
-            if let jsonObj = try JSONSerialization.jsonObject(with: self, options: .mutableContainers) as? JSON {
+            if let jsonObj = try JSONSerialization.jsonObject(with: self, options: .mutableContainers) as? JSONObject {
                 json = jsonObj
             }
         } catch {

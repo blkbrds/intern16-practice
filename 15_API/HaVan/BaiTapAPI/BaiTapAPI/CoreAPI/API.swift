@@ -8,9 +8,6 @@
 
 import Foundation
 
-typealias APICompletion<T> = (Result<T, APIErrors>) -> Void
-
-//MARK: - Defines
 enum APIErrors: Error {
     case error(String)
     case errorURL
@@ -26,21 +23,23 @@ enum APIErrors: Error {
 }
 
 enum APIResult {
-    case success(Data?)
+    case success(JSONObject)
     case failure(APIErrors)
 }
 
 struct API {
-    //singleton
+    
+    // MARK: - Properties
     private static var shareAPI: API = {
         let shareAPI = API()
         return shareAPI
     }()
     
+    // MARK: - Initialize
+    private init() {}
+    
+    // MARK: - Public functions
     static func shared() -> API {
         return shareAPI
     }
-    
-    //init
-    private init() {}
 }

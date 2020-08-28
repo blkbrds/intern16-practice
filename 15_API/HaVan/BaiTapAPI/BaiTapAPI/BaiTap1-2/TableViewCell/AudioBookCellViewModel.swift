@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 final class AudioBookCellViewModel {
+    
     // MARK: - Properties
     private(set) var title: String
     private(set) var price: String

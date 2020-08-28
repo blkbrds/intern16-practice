@@ -32,6 +32,7 @@ final class YoutubeCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
     // MARK: - Private functions
     private func updateUI() {
         publishedAtLabel.text = viewModel?.publishedAt

@@ -31,19 +31,16 @@ extension APIManager.Audio {
             case .failure(let error):
                 completion(.failure(error))
             case .success(let data):
-                if let data = data {
-                    let json = data.toJSON()
-                    guard let feed = json["feed"] as? JSON else { fatalError("can't get feed") }
-                    guard let entry = feed["entry"] as? [JSON] else { fatalError("can't get entry") }
-                    var audios: [AudioBook] = []
-                    for audioBook in entry {
-                        let book = AudioBook(json: audioBook)
-                        audios.append(book)
-                    }
-                    completion(.success(AudioResult(audio: audios)))
-                } else {
+                guard let feed = data["feed"] as? JSONObject, let entry = feed["entry"] as? [JSONObject] else {
                     completion(.failure(.error("can't get audio, the data has trouble")))
+                    return
                 }
+                var audios: [AudioBook] = []
+                for audioBook in entry {
+                    let book = AudioBook(json: audioBook)
+                    audios.append(book)
+                }
+                completion(.success(AudioResult(audio: audios)))
             }
         }
     }
