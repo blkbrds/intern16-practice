@@ -8,51 +8,62 @@
 
 import UIKit
 
-class BaiTap01: UIViewController {
-
-    // MARK: - Outlet
-    @IBOutlet weak var viewGrid: UIView!
-    var data:[Int] = [98, 95, 103, 102, 99, 97, 98]
+final class BaiTap01: UIViewController {
     
+    // MARK: - Properties
+    private var graphs = GraphicsDraw()
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        configView()
+        createLineBase()
+        createColumnAndValue()
+        view.addSubview(graphs)
     }
     
-    // MARK: - Function
-    func drawLine(color: UIColor, view: UIView, value: Int, pointX0: Int) {
-        let x0: Int = pointX0
-        let y0: Int = Int(view.frame.size.height)
-        let width: Int = 25
-        let height = y0 - Int(y0) / 15 * (value - 90)
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: x0, y: y0))
-        path.addLine(to: CGPoint(x: x0, y: height))
-        path.addLine(to: CGPoint(x: x0 + width, y: height))
-        path.addLine(to: CGPoint(x: x0 + width, y: y0))
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        shapeLayer.fillColor = color.cgColor
-        shapeLayer.lineWidth = 1.0
-
-        view.layer.addSublayer(shapeLayer)
-    }
-    
-    func configView() {
-        var x0 = 0
-        var colorView:UIColor?
-        for i in 0..<data.count {
-            if data[i] > 100 {
-                colorView = .red
-            } else if data[i] > 95 && data[i] < 100 {
-                colorView = .green
-            } else {
-                colorView = .orange
-            }
-            drawLine(color: colorView!, view: viewGrid, value: data[i], pointX0: x0)
-            x0 = x0 + 45
+    // MARK: - Private functions
+    private func createLineBase() {
+        graphs = GraphicsDraw(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 800))
+        let xLine: Int = 60
+        var yLine: Int = 50
+        var nameLabel: Int = 105
+        for _ in 1...4 {
+            graphs.drawLine(start: CGPoint(x: xLine, y: yLine), end: CGPoint(x: Int(UIScreen.main.bounds.width) - 70, y: yLine))
+            graphs.addLabel(position: CGPoint(x: xLine - 50, y: yLine - 25), name: String(nameLabel))
+            nameLabel -= 5
+            yLine += 100
         }
+    }
+    
+    private func createData() -> [(key: String, value: Int)] {
+        return [("Tue", 20), ("Wed", 92), ("Thu", 59), ("Fri", 68), ("Sat", 50), ("Sun", 70), ("Today", 85)]
+    }
+    
+    private func createColumnAndValue() {
+        var xCol: Int = 60
+        let dataArray = createData()
+        var maxWidth: CGFloat = 0
+        for data in dataArray {
+            if maxWidth < data.key.contentWidth(font: UIFont.systemFont(ofSize: 17)) {
+                maxWidth = data.key.contentWidth(font: UIFont.systemFont(ofSize: 17))
+            }
+        }
+        let labelFrameRealWidth: CGFloat = 25
+        let maxScale = labelFrameRealWidth / maxWidth
+        let newFontSize = min(17, (17 * maxScale).rounded(.down))
+        for data in dataArray {
+            let height = data.value * 300 / 100
+            graphs.createRectangle(position: CGPoint(x: xCol, y: 350 - height), height: Float(height))
+            graphs.addLabel(position: CGPoint(x: xCol, y: 350), name: data.key, fontSize: newFontSize)
+            xCol += 40
+        }
+    }
+}
+
+// MARK: Extensions
+extension String {
+    func contentWidth(font: UIFont) -> CGFloat {
+        let size = (self as NSString).size(withAttributes: [.font: font])
+        return size.width
     }
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0078793D24FA54E400915108 /* GraphicsDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0078793C24FA54E400915108 /* GraphicsDraw.swift */; };
 		F0458AAD24B5CDD600F9FA72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AAC24B5CDD600F9FA72 /* AppDelegate.swift */; };
 		F0458AAF24B5CDD600F9FA72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AAE24B5CDD600F9FA72 /* SceneDelegate.swift */; };
-		F0458AB124B5CDD600F9FA72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0458AB024B5CDD600F9FA72 /* ViewController.swift */; };
 		F0458AB624B5CDD900F9FA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0458AB524B5CDD900F9FA72 /* Assets.xcassets */; };
 		F08900F724B6AD4F00A49E02 /* BaiTap01.xib in Resources */ = {isa = PBXBuildFile; fileRef = F08900F624B6AD4E00A49E02 /* BaiTap01.xib */; };
 		F08900F924B6AD5700A49E02 /* BaiTap01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08900F824B6AD5700A49E02 /* BaiTap01.swift */; };
@@ -18,10 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0078793C24FA54E400915108 /* GraphicsDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsDraw.swift; sourceTree = "<group>"; };
 		F0458AA924B5CDD600F9FA72 /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0458AAC24B5CDD600F9FA72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0458AAE24B5CDD600F9FA72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0458AB024B5CDD600F9FA72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0458AB524B5CDD900F9FA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0458ABA24B5CDD900F9FA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08900F624B6AD4E00A49E02 /* BaiTap01.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiTap01.xib; sourceTree = "<group>"; };
@@ -64,7 +64,6 @@
 				F0458AC024B5CE6000F9FA72 /* BaiTap01 */,
 				F0458AAC24B5CDD600F9FA72 /* AppDelegate.swift */,
 				F0458AAE24B5CDD600F9FA72 /* SceneDelegate.swift */,
-				F0458AB024B5CDD600F9FA72 /* ViewController.swift */,
 				F0458AB524B5CDD900F9FA72 /* Assets.xcassets */,
 				F0458ABA24B5CDD900F9FA72 /* Info.plist */,
 			);
@@ -76,6 +75,7 @@
 			children = (
 				F08900F824B6AD5700A49E02 /* BaiTap01.swift */,
 				F08900F624B6AD4E00A49E02 /* BaiTap01.xib */,
+				0078793C24FA54E400915108 /* GraphicsDraw.swift */,
 			);
 			path = BaiTap01;
 			sourceTree = "<group>";
@@ -160,8 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0458AB124B5CDD600F9FA72 /* ViewController.swift in Sources */,
 				F0458AAD24B5CDD600F9FA72 /* AppDelegate.swift in Sources */,
+				0078793D24FA54E400915108 /* GraphicsDraw.swift in Sources */,
 				F08900F924B6AD5700A49E02 /* BaiTap01.swift in Sources */,
 				F0458AAF24B5CDD600F9FA72 /* SceneDelegate.swift in Sources */,
 				F08900FB24B6AD6000A49E02 /* BaiTap02.swift in Sources */,
