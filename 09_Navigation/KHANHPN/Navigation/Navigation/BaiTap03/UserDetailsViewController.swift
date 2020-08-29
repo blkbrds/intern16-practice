@@ -8,10 +8,15 @@
 
 import UIKit
 
-class UserDetailsViewController: UIViewController {
+final class UserDetailsViewController: UIViewController {
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var editNameTextField: UITextField!
+    
+    // MARK: - Properties
     var userName:String = "user name"
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail"
@@ -19,7 +24,8 @@ class UserDetailsViewController: UIViewController {
         editNameTextField.text = userName
     }
     
-    @objc func finishExit() {
+    // MARK: - Private function
+    @objc private func finishExit() {
         let viewControllers = navigationController?.viewControllers
         for vc in viewControllers! {
             if let profilesViewController = vc as? UserProfileViewController {

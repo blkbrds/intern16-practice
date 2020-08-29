@@ -8,10 +8,15 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
+    
+    // MARK: -IBOutlet
     @IBOutlet weak var welcomeLabel: UILabel!
+    
+    // MARK: - Properties
     var name: String = ""
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
@@ -19,18 +24,19 @@ class HomeViewController: UIViewController {
         welcomeLabel.text = name
     }
     
-    func setupBarButton() {
+    // MARK: - Private functions
+    private func setupBarButton() {
         let logoutButton = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutTouchUpInside))
         navigationItem.leftBarButtonItem = logoutButton
         let editButton = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editTouchUpInside))
         navigationItem.rightBarButtonItem = editButton
     }
 
-    @IBAction func logoutTouchUpInside(_ sender: UIBarButtonItem) {
+    @IBAction private func logoutTouchUpInside(_ sender: UIBarButtonItem) {
             self.navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func editTouchUpInside(_ sender: UIBarButtonItem) {
+    @IBAction private func editTouchUpInside(_ sender: UIBarButtonItem) {
             let editView = EditViewController()
             self.navigationController?.pushViewController(editView, animated: true)
     }

@@ -8,13 +8,16 @@
 
 import UIKit
 
-class MultipleItemsVC: UIViewController {
+final class MultipleItemsVC: UIViewController {
+    
+    // MARK: - Liffe cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         customBar()
     }
     
-    func customBar() {
+    // MARK: - Private function
+    private func customBar() {
         let midButton1 = UIBarButtonItem(title: "Mid 1", style: .plain, target: self, action: nil)
         let midButton2 = UIBarButtonItem(title: "Mid 2", style: .plain, target: self, action: nil)
         navigationItem.leftBarButtonItems = [midButton1, midButton2]

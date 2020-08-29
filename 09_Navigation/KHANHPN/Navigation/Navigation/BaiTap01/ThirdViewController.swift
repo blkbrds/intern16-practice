@@ -8,19 +8,19 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+final class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Third View"
     }
     
-    @IBAction func push(_ sender: UIButton) {
+    @IBAction func pushVC(_ sender: UIButton) {
         let next = FourthViewController()
             self.navigationController?.pushViewController(next, animated: true)
     }
     
-    @IBAction func pop(_ sender: Any) {
+    @IBAction func popVC(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     

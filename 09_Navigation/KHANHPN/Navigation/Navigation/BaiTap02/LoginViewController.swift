@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -16,10 +16,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Login"
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTouchUpInside))
-        navigationItem.rightBarButtonItem = doneButton
-        dismissKey()
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,8 +24,15 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
         wrongLabel.isHidden = true
     }
+    
+    private func setupView() {
+        title = "Login"
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTouchUpInside))
+        navigationItem.rightBarButtonItem = doneButton
+        dismissKey()
+    }
 
-    @IBAction func doneTouchUpInside(_ sender: UIBarButtonItem) {
+    @IBAction private func doneTouchUpInside(_ sender: UIBarButtonItem) {
         let homeView = HomeViewController()
         if let path = Bundle.main.path(forResource: "Data", ofType: "plist") {
             if let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
@@ -46,13 +50,13 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func dismissKey() {
+    private func dismissKey() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard() {
+    @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
 }

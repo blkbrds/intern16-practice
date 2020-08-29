@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaiTap01: UIViewController {
+final class BaiTap01: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

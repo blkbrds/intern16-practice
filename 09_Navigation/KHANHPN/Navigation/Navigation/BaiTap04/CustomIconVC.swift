@@ -8,13 +8,16 @@
 
 import UIKit
 
-class CustomIcon: UIViewController {
+final class CustomIcon: UIViewController {
+    
+    // MARK: - Liffe cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         customBar()
     }
     
-    func customBar() {
+    // MARK: - Private funcion
+    private func customBar() {
         title = "Bar Button Test"
         let img = UIImage(named: "sw-rebel-48")!.withRenderingMode(.alwaysOriginal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: nil)

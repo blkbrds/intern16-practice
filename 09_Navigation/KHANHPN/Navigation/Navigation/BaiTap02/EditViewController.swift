@@ -8,14 +8,15 @@
 
 import UIKit
 
-class EditViewController: UIViewController {
+final class EditViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmTextField: UITextField!
     @IBOutlet weak var wrongLabel: UILabel!
     
-    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Edit"
@@ -23,18 +24,19 @@ class EditViewController: UIViewController {
         dismissKey()
     }
     
-    func setupEditFunction() {
+    // MARK: - Private function
+    private func setupEditFunction() {
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelTouchUpInside))
         navigationItem.leftBarButtonItem = cancelButton
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneEditingTouchUpInside))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @IBAction func cancelTouchUpInside(_ sender: UIBarButtonItem) {
+    @IBAction private func cancelTouchUpInside(_ sender: UIBarButtonItem) {
             self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func doneEditingTouchUpInside(_ sender: UIBarButtonItem) {
+    @IBAction private func doneEditingTouchUpInside(_ sender: UIBarButtonItem) {
         if let path = Bundle.main.path(forResource: "Data", ofType: "plist") {
             if let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
                 for user in dic {
@@ -60,13 +62,13 @@ class EditViewController: UIViewController {
         }
     }
     
-    func dismissKey() {
+    private func dismissKey() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard() {
+    @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
 }

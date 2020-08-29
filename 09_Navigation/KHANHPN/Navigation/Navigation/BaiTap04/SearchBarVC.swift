@@ -8,13 +8,16 @@
 
 import UIKit
 
-class SearchBarVC: UIViewController {
+final class SearchBarVC: UIViewController {
+    
+    // MARK: - Liffe cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         customBar()
     }
     
-    func customBar() {
+    // MARK: - Private function
+    private func customBar() {
         let searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 300, height: 20))
         searchBar.placeholder = "Muốn gì?"
         let leftNavBarButton = UIBarButtonItem(customView:searchBar)

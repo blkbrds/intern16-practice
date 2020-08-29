@@ -22,7 +22,7 @@ final class UserView: UIView {
         super.awakeFromNib()
     }
 
-    @IBAction func userButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func userButtonTouchUpInside(_ sender: UIButton) {
         delegate?.pushViewController(self, (sender.titleLabel?.text)!, index: 9)
     }
 }

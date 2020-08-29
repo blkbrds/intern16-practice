@@ -13,7 +13,9 @@ struct Data {
     var image: UIImage?
 }
 
-class UserProfileViewController: UIViewController {
+final class UserProfileViewController: UIViewController {
+    
+    // MARK: - Properties
     var datas: [Data] = [
         Data(name: "User 1", image: UIImage(named: "img-avatar")),
         Data(name: "User 2", image: UIImage(named: "img-avatar")),
@@ -46,7 +48,9 @@ class UserProfileViewController: UIViewController {
         Data(name: "UserwetDFGg 2", image: UIImage(named: "img-avatar")),
         Data(name: "UserweWrgtthj 2", image: UIImage(named: "img-avatar"))
     ]
-
+    let scrollView = UIScrollView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -55,12 +59,10 @@ class UserProfileViewController: UIViewController {
         title = "Home"
         customHomeVC()
     }
-
-    let scrollView = UIScrollView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
     
-    func customHomeVC() {
+    // MARK: - Private functions
+    private func customHomeVC() {
         var scrollHeight: CGFloat = 180
-
         var x = 32
         var y = 0
         for i in 0..<datas.count {
@@ -82,6 +84,7 @@ class UserProfileViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension UserProfileViewController: UserViewDelegate {
     func pushViewController(_ personView: UserView, _ name: String, index: Int) {
         let userDetailsViewController = UserDetailsViewController()

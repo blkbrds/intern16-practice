@@ -8,14 +8,17 @@
 
 import UIKit
 
-class TincolorVC: UIViewController {
+final class TincolorVC: UIViewController {
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "New Feed"
         customBar()
     }
     
-    func customBar() {
+    // MARK: - Private function
+    private func customBar() {
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.231372549, green: 0.3490196078, blue: 0.5960784314, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

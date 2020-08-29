@@ -8,14 +8,17 @@
 
 import UIKit
 
-class GradientNavigationVC: UIViewController {
+final class GradientNavigationVC: UIViewController {
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Gradient Navigation"
         customBar()
     }
     
-    func customBar() {
+    // MARK: - Private func
+    private func customBar() {
         if let image = UIImage(named: "gradient") {
             navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: .zero, resizingMode: .stretch), for: .default)
         }
