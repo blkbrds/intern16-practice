@@ -14,7 +14,6 @@ protocol SliderViewDelegate: class {
 }
 
 final class SliderView: UIView {
-    
     // MARK: - Outlets
     @IBOutlet weak var blueImageView: UIImageView!
     @IBOutlet weak var grayImageView: UIImageView!

@@ -8,15 +8,20 @@
 
 import UIKit
 
-class BaiTap04: UIViewController, UITextFieldDelegate {
+final class BaiTap04: UIViewController, UITextFieldDelegate {
     // MARK: - Outlet
     @IBOutlet weak var dateTextField: UITextField!
 
     let picker = Bundle.main.loadNibNamed("MyDatePickerView", owner: self, options: nil)?.first as? MyDatePickerView
     
-    // MARK: - 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    // MARK: - Functions
+    private func setupView() {
         view.addSubview(picker!)
         picker?.delegate = self
         dateTextField.delegate = self

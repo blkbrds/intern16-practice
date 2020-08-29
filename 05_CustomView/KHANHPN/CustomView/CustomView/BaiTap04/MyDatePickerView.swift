@@ -12,11 +12,13 @@ protocol PickerViewDelegate: class {
     func pickerView(_ pickerView: MyDatePickerView , didSelect date: Date)
 }
 
-class MyDatePickerView: UIView {
+final class MyDatePickerView: UIView {
     
     // MARK: - Outlet:
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var doneToolbarView: UIToolbar!
+    
+    // MARK: - Properties
     weak var delegate: PickerViewDelegate?
     var dateString: String = ""
 
@@ -27,6 +29,7 @@ class MyDatePickerView: UIView {
         isHidden = true
     }
     
+    // MARK: - IBActions
     @IBAction func datePickerView(_ sender: UIDatePicker) { }
     
     @IBAction func doneButtonTouchUpInside(_ sender: UIBarButtonItem) {

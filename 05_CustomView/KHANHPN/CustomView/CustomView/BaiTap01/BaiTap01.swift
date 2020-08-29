@@ -37,9 +37,6 @@ final class BaiTap01: UIViewController {
             } else if i % 3 != 0 {
                 x += 130
             }
-//            let avatarView = AvatarView(frame: CGRect(x: x, y: y, width: 100, height: 130), name: userNames[i], image: userImages[i])
-//            avatarView.delegate = self
-//            scrollView.addSubview(avatarView)
         }
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: scrollHeight)
         view.addSubview(scrollView)
