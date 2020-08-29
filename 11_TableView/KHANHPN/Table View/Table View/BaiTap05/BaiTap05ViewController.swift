@@ -11,33 +11,29 @@ import UIKit
 final class BaiTap05ViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
     
     // MARK: - Properties
     var contactData: [String] = []
     var originalData: [String] = []
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configView()
+        configTableView()
         loadData()
         configSearchBar()
     }
 
     // MARK: - Private functions
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else {
-            return
-        }
-        guard let contactDatas = NSArray(contentsOf: path) as? [String] else {
-            return
-        }
+        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist"), let contactDatas = NSArray(contentsOf: path) as? [String] else { return }
         contactData = contactDatas
         originalData = contactDatas
     }
     
-    private func configView() {
+    private func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
         tableView.delegate = self

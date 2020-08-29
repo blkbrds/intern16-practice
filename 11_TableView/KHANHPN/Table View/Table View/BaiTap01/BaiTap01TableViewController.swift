@@ -16,6 +16,11 @@ final class BaiTap01TableViewController: UITableViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
+    }
+    
+    // MARK: - Private functions
+    private func configTableView() {
         title = "Home"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }

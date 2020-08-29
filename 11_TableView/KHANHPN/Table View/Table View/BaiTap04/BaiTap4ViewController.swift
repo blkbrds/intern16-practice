@@ -26,16 +26,17 @@ final class BaiTap4ViewController: UIViewController {
     // MARK: - Private functions
     private func loadData() {
         guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else { return }
-        guard let contactData = NSArray(contentsOf: path) as? [String] else {
-            return
-        }
+        guard let contactData = NSArray(contentsOf: path) as? [String] else { return }
         for i in 0..<contactData.count {
-            if i >= 0 && i <= 4 {
+            switch i {
+            case 0...4:
                 back.append(contactData[i])
-            } else if i > 4 && i < 8 {
+            case 5...7:
                 midfielders.append(contactData[i])
-            } else if i >= 8 && i < 11 {
+            case 8...10:
                 forward.append(contactData[i])
+            default:
+                return
             }
         }
         players = [back, midfielders, forward]

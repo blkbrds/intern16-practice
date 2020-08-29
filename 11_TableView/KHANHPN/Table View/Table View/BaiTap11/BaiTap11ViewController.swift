@@ -11,15 +11,12 @@ import UIKit
 final class BaiTap11ViewController: UIViewController {
     
     // MARK: - Properties
-    
     var data: [String] = []
     
     // MARK: - IBOutlet
-    
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
@@ -28,7 +25,6 @@ final class BaiTap11ViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    
     private func configNavigationBar() {
         title = "News"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -42,18 +38,12 @@ final class BaiTap11ViewController: UIViewController {
     }
     
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "Contents", withExtension: "plist") else {
-            return
-        }
-        guard let textData = NSArray(contentsOf: path) as? [String] else {
-            return
-        }
+        guard let path = Bundle.main.url(forResource: "Contents", withExtension: "plist"), let textData = NSArray(contentsOf: path) as? [String] else { return }
         data = textData
     }
 }
 
 // MARK: - Extensions
-
 extension BaiTap11ViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

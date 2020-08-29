@@ -11,7 +11,7 @@ import UIKit
 final class BaiTap09ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     var dataIndex: [String] = []
@@ -33,12 +33,7 @@ final class BaiTap09ViewController: UIViewController {
     
     // MARK: - Private functions
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else {
-            return
-        }
-        guard let contactData = NSArray(contentsOf: path) as? [String] else {
-            return
-        }
+        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist"), let contactData = NSArray(contentsOf: path) as? [String] else { return }
         for i in 0..<contactData.count {
             if i >= 0 && i <= 4 {
                 back.append(contactData[i])

@@ -11,7 +11,7 @@ import UIKit
 final class BaiTap12ViewController: UIViewController {
     
     // MARK: - IBOutlet
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     var contacts: [String] = []
@@ -26,12 +26,7 @@ final class BaiTap12ViewController: UIViewController {
     
     //MARK: - Private functions
     private func loadData() {
-        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist") else {
-            return
-        }
-        guard let data = NSArray(contentsOf: path) as? [String] else {
-            return
-        }
+        guard let path = Bundle.main.url(forResource: "Contacts", withExtension: "plist"),let data = NSArray(contentsOf: path) as? [String] else { return }
         contacts = data
     }
     
@@ -62,7 +57,7 @@ final class BaiTap12ViewController: UIViewController {
         navigationItem.leftBarButtonItem = .none
     }
     
-    @IBAction func onAddTapped() {
+    @IBAction private func onAddTapped() {
         let alert = UIAlertController(title: "Add contact", message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (contactTextField) in
             contactTextField.placeholder = "Enter contact name"
@@ -77,7 +72,6 @@ final class BaiTap12ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    // Add new cell
     private func add(_ name: String) {
         let index = 0
         contacts.insert(name, at: index)
