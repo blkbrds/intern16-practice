@@ -20,10 +20,6 @@ final class BaiTap1TableViewConroller: UITableViewController {
 // MARK: - UITableViewDataSource
 extension BaiTap1TableViewConroller {
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }

@@ -13,11 +13,6 @@ final class MessageTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var messageLabel: UILabel!
     
-    // MARK: - Override functions
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     // MARK: - Public functions
     func setMessage(with message: String) {
         messageLabel.text = message

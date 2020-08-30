@@ -50,7 +50,7 @@ final class BaiTap10ViewController: UIViewController {
     }
     
     private func getKey() {
-        keys = []
+        keys.removeAll()
         keys = Array(contactList.keys)
         newSection = contact.transContacts(with: keys)
     }

@@ -42,10 +42,6 @@ final class BaiTap11ViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension BaiTap11ViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Message.messages.count
     }

@@ -87,6 +87,7 @@ extension BaiTap5HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
         detailVC.name = contacts[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(detailVC, animated: true)
     }
     

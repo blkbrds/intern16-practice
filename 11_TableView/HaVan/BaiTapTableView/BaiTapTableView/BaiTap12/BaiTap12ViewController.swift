@@ -134,10 +134,6 @@ extension BaiTap12ViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension BaiTap12ViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         newNumbers.listOfNumber.count
     }

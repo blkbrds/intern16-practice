@@ -9,7 +9,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.backgroundColor = .white
-       let navigationController = UINavigationController(rootViewController: BaiTap4ViewController())
-         window.rootViewController = navigationController
+        let navigationController = UINavigationController(rootViewController: BaiTap4ViewController())
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }

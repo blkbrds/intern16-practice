@@ -44,10 +44,6 @@ extension BaiTap3HomeViewController: UITableViewDataSource {
         return Contacts.contactList.count
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseCell", for: indexPath)
         cell.textLabel?.text = Contacts.contactList[indexPath.row]
@@ -61,6 +57,7 @@ extension BaiTap3HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
         detailVC.name = Contacts.contactList[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
