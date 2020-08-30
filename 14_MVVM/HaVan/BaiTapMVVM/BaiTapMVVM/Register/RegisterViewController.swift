@@ -16,7 +16,7 @@ final class RegisterViewController: UIViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     
     // MARK: - Properties
-    var viewModel = RegisterViewModel()
+    private var viewModel = RegisterViewModel()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,17 +27,18 @@ final class RegisterViewController: UIViewController {
     
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
     
     // MARK: - Private functions
-    func configTextField() {
+    private func configTextField() {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
     }
     
-    func register() {
+    private func register() {
         guard let username = usernameTextField.text, let password = passwordTextField.text else {
             errorLabel.isHidden = false
             errorLabel.text = "You must filled username and password"
@@ -57,7 +58,6 @@ final class RegisterViewController: UIViewController {
         })
     }
     
-    
     // MARK: - IBActions
     @IBAction private func registerButtonTouchUpInside(_ sender: UIButton) {
         register()
@@ -68,9 +68,10 @@ final class RegisterViewController: UIViewController {
 extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             passwordTextField.becomeFirstResponder()
-        } else {
+        default:
             usernameTextField.resignFirstResponder()
             passwordTextField.resignFirstResponder()
             register()

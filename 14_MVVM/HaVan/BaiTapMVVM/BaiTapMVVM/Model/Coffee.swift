@@ -11,6 +11,8 @@ import UIKit
 import MapKit
 
 final class Coffee {
+    
+    // MARK: - Properties
     var name: String
     var address: String
     var rate: Int
@@ -22,6 +24,7 @@ final class Coffee {
     var comment: [String: String]
     var location: CLLocationCoordinate2D
     
+    // MARK: - Initialize
     init(name: String, address: String, rate: Int, favorite: Bool, thumbnail: UIImage, distance: Float, image: [UIImage], description: String, comment: [String: String], location: CLLocationCoordinate2D) {
         self.name = name
         self.address = address

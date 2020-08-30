@@ -12,6 +12,7 @@ protocol HomeCollectionViewCellDelegate: class {
     
     func view(_ view: HomeCollectionViewCell, needsPerfom action: HomeCollectionViewCell.Action)
 }
+
 final class HomeCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
@@ -37,7 +38,6 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.blue.cgColor
     }
-    // MARK: - Override functions
     
     // MARK: - Private functions
     private func updateView() {
@@ -60,20 +60,15 @@ final class HomeCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    // MARK: - Public functions
-    
-    // MARK: - Objc functions
-    
     // MARK: - IBActions
-    
-    @IBAction func favoriteButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func favoriteButtonTouchUpInside(_ sender: UIButton) {
         if let favorite = viewModel?.favorite, let position = position {
             delegate?.view(self, needsPerfom: .changeFavoriteState(position: position, with: !favorite))
         }
     }
-    
 }
 
+// MARK: Extension
 extension HomeCollectionViewCell {
     enum Action {
         case changeFavoriteState(position: Int, with: Bool)

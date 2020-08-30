@@ -71,10 +71,6 @@ final class HomeViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.listCoffee.count
     }
@@ -180,8 +176,10 @@ extension HomeViewController: HomeCollectionViewCellDelegate {
         switch action {
         case .changeFavoriteState(position: let position, with: let fav):
             viewModel.changeState(position: position, favorite: fav)
-            collectionView.reloadData()
-            tableView.reloadData()
+            collectionView.reloadItems(at: [IndexPath(item: position, section: 0)])
+            if let cells = tableView.visibleCells as? [HomeTableViewCell] {
+                cells[position].viewModel = viewModel.getHomeCellViewModel(atIndexPath: IndexPath(row: position, section: 0))
+            }
         }
     }
 }

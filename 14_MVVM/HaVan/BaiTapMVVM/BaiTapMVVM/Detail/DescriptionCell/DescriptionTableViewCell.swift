@@ -20,11 +20,6 @@ final class DescriptionTableViewCell: UITableViewCell {
         }
     }
     
-    // MARK: - Override functions
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     // MARK: - Private functions
     private func updateDescription() {
         descriptionLabel.text = viewModel?.description

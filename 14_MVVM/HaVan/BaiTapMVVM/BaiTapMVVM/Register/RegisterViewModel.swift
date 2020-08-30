@@ -7,13 +7,16 @@
 //
 
 import Foundation
+
 typealias Callback = (Bool) -> Void
 
-class RegisterViewModel {
+final class RegisterViewModel {
     
+    // MARK: - Properties
     var items: [User]?
     let context = AppDelegate.shared.persistentContainer.viewContext
-
+    
+    // MARK: - Public functions
     func save(username: String, password: String, completion: Callback) {
         if isValidated(username: username) {
             let newUser = User(context: context)

@@ -17,7 +17,7 @@ final class ForgotPasswordViewController: UIViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     
     // MARK: - Properties
-    var viewModel = ForgotPasswordViewModel()
+    private var viewModel = ForgotPasswordViewModel()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ final class ForgotPasswordViewController: UIViewController {
     
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         usernameTextField.resignFirstResponder()
         newPasswordTextField.resignFirstResponder()
         confirmNewPasswordTextField.resignFirstResponder()
@@ -73,11 +74,12 @@ final class ForgotPasswordViewController: UIViewController {
 extension ForgotPasswordViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             newPasswordTextField.becomeFirstResponder()
-        } else if textField === newPasswordTextField {
+        case newPasswordTextField:
             confirmNewPasswordTextField.becomeFirstResponder()
-        } else {
+        default:
             resetPassword()
         }
         return true

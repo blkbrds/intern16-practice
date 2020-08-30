@@ -34,7 +34,9 @@ final class DetailViewController: UIViewController {
         firstState()
     }
     
+    // MARK: - Override functions
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         timer.invalidate()
     }
     
@@ -175,6 +177,7 @@ extension DetailViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension DetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -16,18 +16,18 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     
     // MARK: - Properties
-    var viewModel = LoginViewModel()
+    private var viewModel = LoginViewModel()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTextField()
         errorLabel.isHidden = true
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
     // MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
@@ -49,7 +49,7 @@ final class LoginViewController: UIViewController {
                 UserDefaults.standard.set(true, forKey: "state")
                 let isLogined = UserDefaults.standard.bool(forKey: "state")
                 let rootType: RootType = isLogined ? . tabbar : . login
-                 AppDelegate.shared.changeRoot(rootType: rootType)
+                AppDelegate.shared.changeRoot(rootType: rootType)
             } else {
                 errorLabel.isHidden = false
                 errorLabel.text = "You entered the wrong username or password"
@@ -77,9 +77,10 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === usernameTextField {
+        switch textField {
+        case usernameTextField:
             passwordTextField.becomeFirstResponder()
-        } else {
+        default:
             login()
         }
         return true

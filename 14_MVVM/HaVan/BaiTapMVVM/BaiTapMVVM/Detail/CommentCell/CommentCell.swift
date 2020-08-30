@@ -27,11 +27,6 @@ final class CommentCell: UITableViewCell {
         superview?.awakeFromNib()
     }
     
-    // MARK: - Override functions
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     // MARK: - Private functions
     private func updateCell() {
         commentLabel.text = viewModel?.comment

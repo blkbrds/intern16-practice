@@ -8,10 +8,13 @@
 
 import Foundation
 
-class LoginViewModel {
+final class LoginViewModel {
+    
+    // MARK: - Properties
     var items: [User]?
     let context = AppDelegate.shared.persistentContainer.viewContext
     
+    // MARK: - Public functions
     func fetchUser() {
         do {
             items = try context.fetch(User.fetchRequest())

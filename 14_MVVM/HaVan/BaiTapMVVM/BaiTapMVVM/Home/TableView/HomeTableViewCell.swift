@@ -14,7 +14,7 @@ protocol HomeTableViewCellDelegate: class {
 }
 
 final class HomeTableViewCell: UITableViewCell {
-   
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var coffeeImage: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -32,15 +32,10 @@ final class HomeTableViewCell: UITableViewCell {
     weak var delegate: HomeTableViewCellDelegate?
     var position: Int?
     
-    // MARK: - Life cycle
-   override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Override functions
     override func setSelected(_ selected: Bool, animated: Bool) {
-           super.setSelected(selected, animated: animated)
-       }
+        super.setSelected(selected, animated: animated)
+    }
     
     // MARK: - Private functions
     private func updateView() {
@@ -56,11 +51,11 @@ final class HomeTableViewCell: UITableViewCell {
             if favorite {
                 favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
             } else {
-               favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+                favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
             }
         }
     }
-
+    
     // MARK: - IBActions
     @IBAction private func favoriteButtonTouchUpInside(_ sender: UIButton) {
         if let favorite = viewModel?.favorite, let position = position {

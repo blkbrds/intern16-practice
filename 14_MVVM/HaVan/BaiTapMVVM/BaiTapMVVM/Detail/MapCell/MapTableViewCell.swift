@@ -21,11 +21,6 @@ final class MapTableViewCell: UITableViewCell {
         }
     }
     
-    // MARK: - Override functions
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     // MARK: - Private functions
     private func updateMap() {
         guard let location = viewModel?.location else { return }
