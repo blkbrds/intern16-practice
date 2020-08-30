@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="MVVM" customModuleProvider="target">
+            <connections>
+                <outlet property="pageControl" destination="rC1-ey-Ieo" id="cuF-MM-Eyd"/>
+                <outlet property="sliderCollectionView" destination="Cs9-3Q-pXN" id="ncF-ua-ldv"/>
+                <outlet property="tableView" destination="9Di-M1-ufV" id="GGt-E0-IXH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Di-M1-ufV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="eC9-YY-hDu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-3Q-pXN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LLS-Tp-Pmk">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-Ww-rtk">
+                                <rect key="frame" x="10" y="126.5" width="30" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="m2j-Hb-0wR"/>
+                                    <constraint firstAttribute="height" constant="50" id="tZU-Vn-UzJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.compact.left" catalog="system"/>
+                                <connections>
+                                    <action selector="turnLeftButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="A1E-x3-frw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sf-p4-ocV">
+                                <rect key="frame" x="374" y="126.5" width="30" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="GFt-c1-YYq"/>
+                                    <constraint firstAttribute="height" constant="50" id="sdP-3d-aW1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.compact.right" catalog="system"/>
+                                <connections>
+                                    <action selector="turnRightButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="KUS-8k-Ci8"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-ey-Ieo">
+                                <rect key="frame" x="187.5" y="253" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Cs9-3Q-pXN" secondAttribute="bottom" id="56Q-7V-GoB"/>
+                            <constraint firstItem="Cs9-3Q-pXN" firstAttribute="leading" secondItem="eC9-YY-hDu" secondAttribute="leading" id="8cG-fH-Xtm"/>
+                            <constraint firstItem="rC1-ey-Ieo" firstAttribute="bottom" secondItem="Cs9-3Q-pXN" secondAttribute="bottom" constant="-10" id="CaD-oa-JMd"/>
+                            <constraint firstItem="Cs9-3Q-pXN" firstAttribute="top" secondItem="eC9-YY-hDu" secondAttribute="top" id="LaH-P8-W9S"/>
+                            <constraint firstItem="CNd-Ww-rtk" firstAttribute="centerY" secondItem="Cs9-3Q-pXN" secondAttribute="centerY" id="REj-go-MA0"/>
+                            <constraint firstItem="6sf-p4-ocV" firstAttribute="centerY" secondItem="Cs9-3Q-pXN" secondAttribute="centerY" id="bA6-3A-xj3"/>
+                            <constraint firstItem="rC1-ey-Ieo" firstAttribute="centerX" secondItem="eC9-YY-hDu" secondAttribute="centerX" id="bE3-Mq-V0V"/>
+                            <constraint firstAttribute="trailing" secondItem="Cs9-3Q-pXN" secondAttribute="trailing" id="mqz-XH-KA0"/>
+                            <constraint firstItem="CNd-Ww-rtk" firstAttribute="leading" secondItem="eC9-YY-hDu" secondAttribute="leading" constant="10" id="oQf-f5-VTl"/>
+                            <constraint firstAttribute="trailing" secondItem="6sf-p4-ocV" secondAttribute="trailing" constant="10" id="oZm-J4-qq4"/>
+                        </constraints>
+                    </view>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="9Di-M1-ufV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="U9f-2t-Q5w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9Di-M1-ufV" secondAttribute="bottom" id="eZq-xY-Yo5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Di-M1-ufV" secondAttribute="trailing" id="kDQ-Ya-ub4"/>
+                <constraint firstItem="9Di-M1-ufV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sfc-bq-nrN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="159"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.compact.left" catalog="system" width="64" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+    </resources>
+</document>
