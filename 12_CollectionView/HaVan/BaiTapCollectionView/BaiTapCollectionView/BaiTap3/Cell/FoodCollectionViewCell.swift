@@ -32,6 +32,7 @@ final class FoodCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 20
         self.clipsToBounds = true
     }
+    
     // MARK: - Public functions
     func updateFood(with image: UIImage, name: String) {
         foodNameLabel.text = name

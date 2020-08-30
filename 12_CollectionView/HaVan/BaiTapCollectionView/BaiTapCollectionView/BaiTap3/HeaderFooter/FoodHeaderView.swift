@@ -20,7 +20,7 @@ final class FoodHeaderView: UICollectionReusableView {
         configHeader()
     }
     
-    // MARK: - Override functions
+    // MARK: - Private functions
     private func configHeader() {
         foodImageView.layer.cornerRadius = 35
         foodImageView.clipsToBounds = true

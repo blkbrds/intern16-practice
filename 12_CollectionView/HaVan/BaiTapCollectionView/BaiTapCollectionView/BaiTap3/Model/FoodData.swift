@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 struct Food {
+    
+    // MARK: - Properties
     var name: String
     var image: UIImage
 }
@@ -21,10 +23,13 @@ enum KindFood {
 }
 
 final class FoodManagement {
+    
+    // MARK: - Properties
     var kindName: String?
     var kindImage: UIImage?
     var food: [Food]?
     
+    // MARK: - Public functions
     func createKindFood(with kindFood: KindFood) {
         switch kindFood {
         case .eggs(name: let name):
