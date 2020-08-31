@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Trung</string>
+		<string>Ha</string>
+		<string>Trin</string>
+		<string>Thinh</string>
+	</array>
+	<array>
+		<string>Hua</string>
+		<string>Lan</string>
+		<string>Ngoc</string>
+		<string>Ninh</string>
+		<string>Duong</string>
+	</array>
+	<array>
+		<string>Ho</string>
+		<string>Ngoc</string>
+		<string>Ha</string>
+		<string>Ronaldo</string>
+		<string>Messi</string>
+	</array>
+	<array>
+		<string>Tien</string>
+		<string>Trinh</string>
+		<string>nym3</string>
+		<string>nym4</string>
+		<string>nym5</string>
+	</array>
+</array>
+</plist>
