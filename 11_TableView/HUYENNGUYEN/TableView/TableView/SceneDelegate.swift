@@ -18,9 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
 //        let vc = DisplayListTableViewController()
-        let vc = ListNameTableViewController()
+//        let vc = ListNameTableViewController()
 //        let vc = MasterViewController()
-//        let vc = Bai04ViewController()
+        let vc = Bai04ViewController()
 //        let vc = Bai05ViewController()
 //        let vc = Bai07ViewController()
 //        let vc = Bai08ViewController()

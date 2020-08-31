@@ -10,6 +10,24 @@ import UIKit
 
 class Bai04ViewController: UIViewController {
     
+    // MARK: - Enum
+    enum Section: Int {
+        case food = 0
+        case animal
+        case tools
+        
+        var description: String? {
+            switch self {
+            case .food:
+                return "Thức ăn"
+            case .animal:
+                return "Động vật"
+            case .tools:
+                return "Dụng cụ"
+            }
+        }
+    }
+    
     // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
@@ -57,13 +75,14 @@ extension Bai04ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Thức ăn"
-        case 1:
-            return "Động vật"
-        default:
-            return "Dụng cụ"
+        guard let secion = Section.init(rawValue: section) else { return "" }
+        switch secion {
+        case .animal:
+            return secion.description
+        case .food:
+            return secion.description
+        case .tools:
+            return secion.description
         }
     }
 }
