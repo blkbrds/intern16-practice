@@ -76,13 +76,6 @@ extension Bai04ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let secion = Section.init(rawValue: section) else { return "" }
-        switch secion {
-        case .animal:
-            return secion.description
-        case .food:
-            return secion.description
-        case .tools:
-            return secion.description
-        }
+        return secion.description
     }
 }
