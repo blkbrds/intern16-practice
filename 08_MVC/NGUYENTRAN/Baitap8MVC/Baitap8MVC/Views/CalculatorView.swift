@@ -8,16 +8,20 @@
 
 import UIKit
 
+protocol CalculatorViewDelegate: class {
+    func view(_ view: CalculatorView, needPerform action: CalculatorView.Action)
+}
+
+protocol CalculatorViewDatasource: class {
+    func getResult(_view: CalculatorView) -> String?
+}
+
 class CalculatorView: UIView {
 
     @IBOutlet weak var resultLabel: UILabel!
-
-    var runningNumber = ""
-    var currentResult = ""
-    var leftValue = ""
-    var rightValue = ""
-    var currentOperation: Operation = .null
-    var calculator = Calculator()
+    
+    weak var delegate: CalculatorViewDelegate?
+    weak var datasource: CalculatorViewDatasource?
 
     var result: String = "" {
         didSet {
@@ -29,93 +33,72 @@ class CalculatorView: UIView {
         }
     }
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        resultLabel.text = "0"
+        resultLabel.clipsToBounds = true
+        resultLabel.adjustsFontSizeToFitWidth = true
     }
 
-
     @IBAction func numberButtonTouchUpInside(_ sender: RoundButton) {
-        if runningNumber.count <= 8 {
-            if runningNumber == "0" {
-                runningNumber = "\(sender.tag)"
-            } else {
-                runningNumber += "\(sender.tag)"
-            }
-            currentResult = runningNumber
-            result = currentResult
-        }
+        let number = "\(sender.tag)"
+        delegate?.view(self, needPerform: .sendNumber(number: number))
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
 
     @IBAction func clearButtonTouchUpInside(_ sender: RoundButton) {
-        runningNumber = ""
-        leftValue = ""
-        rightValue = ""
-        result = ""
-        currentResult = ""
-        currentOperation = .null
+        delegate?.view(self, needPerform: .clear)
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+               result = newResult
     }
 
     @IBAction func dotButtonTouchUpInside(_ sender: RoundButton) {
-        if runningNumber.contains(".") {
-
-        } else {
-            if runningNumber.count <= 7 {
-                runningNumber += "."
-                currentResult = runningNumber
-                result = currentResult
-            }
-        }
+        delegate?.view(self, needPerform: .sendDot)
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
 
     @IBAction func equalButtonTouchUpInside(_ sender: RoundButton) {
-        operation(operation: currentOperation)
+        let operation: Operation = .null
+        delegate?.view(self, needPerform: .sendOperation(operation: operation))
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
 
     @IBAction func addButtonTouchUpInside(_ sender: RoundButton) {
-        operation(operation: .add)
+        let operation: Operation = .add
+        delegate?.view(self, needPerform: .sendOperation(operation: operation))
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
 
     @IBAction func subtractButtonTouchUpInside(_ sender: RoundButton) {
-        operation(operation: .subtract)
+        let operation: Operation = .subtract
+        delegate?.view(self, needPerform: .sendOperation(operation: operation))
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
 
     @IBAction func multiplyButtonTouchUpInside(_ sender: RoundButton) {
-        operation(operation: .multiply)
+        let operation: Operation = .multiply
+        delegate?.view(self, needPerform: .sendOperation(operation: operation))
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
 
     @IBAction func divideButtonTouchUpInside(_ sender: RoundButton) {
-        operation(operation: .divide)
+        let operation: Operation = .divide
+        delegate?.view(self, needPerform: .sendOperation(operation: operation))
+        guard let newResult = datasource?.getResult(_view: self) else {return}
+        result = newResult
     }
+}
 
-    func operation(operation: Operation) {
-        if currentOperation != .null {
-            if runningNumber != "" {
-                rightValue = runningNumber
-                currentResult = runningNumber
-                runningNumber = ""
-
-                if currentOperation == .add {
-                    result = "\(Float(leftValue)! + Float(rightValue)!)"
-                } else if currentOperation == .subtract {
-                    result = "\(Float(leftValue)! - Float(rightValue)!)"
-                } else if currentOperation == .multiply {
-                    result = "\(Float(leftValue)! * Float(rightValue)!)"
-                } else if currentOperation == .divide {
-                    result = "\(Float(leftValue)! / Float(rightValue)!)"
-                }
-                    leftValue = result
-                if (Float(result)!.truncatingRemainder(dividingBy: 1) == 0) {
-                    result = "\(Int(Float(result)!))"
-                }
-                currentOperation = operation
-            }
-        } else {
-            leftValue = runningNumber
-            runningNumber = ""
-            currentOperation = operation
-        }
+extension CalculatorView {
+    enum Action {
+        case sendOperation(operation: Operation)
+        case sendNumber(number: String)
+        case sendDot
+        case clear
     }
-
 }

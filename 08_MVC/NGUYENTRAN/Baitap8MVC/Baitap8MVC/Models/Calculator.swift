@@ -16,24 +16,35 @@ enum Operation: String {
     case null = "null"
 }
 
-final class Calculator {
-    func add(a: Float, b: Float) -> Float {
-        return a + b
+class Calculator {
+    
+    func add(a: String, b: String) -> String {
+        let result = a.floatValue + b.floatValue
+        return String(result)
     }
     
-    func sub(a: Float, b: Float) -> Float {
-        return a - b
+    func sub(a: String, b: String) -> String {
+        let result = a.floatValue - b.floatValue
+        return String(result)
     }
     
-    func mul(a: Float, b: Float) -> Float {
-        return a * b
+    func mul(a: String, b: String) -> String {
+        let result = a.floatValue * b.floatValue
+        return String(result)
     }
     
-    func div(a: Float, b: Float) -> Float {
-        if b == 0 {
-            return 0
+    func div(a: String, b: String) -> String {
+        if b.floatValue == 0 {
+            return "0"
         } else {
-            return a / b
+            let result = a.floatValue / b.floatValue
+            return String(result)
         }
+    }
+}
+
+extension String {
+    var floatValue: Float {
+        return (self as NSString).floatValue
     }
 }
