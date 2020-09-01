@@ -17,7 +17,7 @@ final class BaiTap01: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createLineBase()
-        createColumnAndValue()
+        createColumn()
         view.addSubview(graphs)
     }
     
@@ -39,8 +39,8 @@ final class BaiTap01: UIViewController {
         return [("Tue", 20), ("Wed", 92), ("Thu", 59), ("Fri", 68), ("Sat", 50), ("Sun", 70), ("Today", 85)]
     }
     
-    private func createColumnAndValue() {
-        var xCol: Int = 60
+    private func createColumn() {
+        var verticalColumn: Int = 60
         let dataArray = createData()
         var maxWidth: CGFloat = 0
         for data in dataArray {
@@ -53,14 +53,14 @@ final class BaiTap01: UIViewController {
         let newFontSize = min(17, (17 * maxScale).rounded(.down))
         for data in dataArray {
             let height = data.value * 300 / 100
-            graphs.createRectangle(position: CGPoint(x: xCol, y: 350 - height), height: Float(height))
-            graphs.addLabel(position: CGPoint(x: xCol, y: 350), name: data.key, fontSize: newFontSize)
-            xCol += 40
+            graphs.createRectangle(position: CGPoint(x: verticalColumn, y: 350 - height), height: Float(height))
+            graphs.addLabel(position: CGPoint(x: verticalColumn, y: 350), name: data.key, fontSize: newFontSize)
+            verticalColumn += 40
         }
     }
 }
 
-// MARK: Extensions
+// MARK: -Extensions
 extension String {
     func contentWidth(font: UIFont) -> CGFloat {
         let size = (self as NSString).size(withAttributes: [.font: font])
