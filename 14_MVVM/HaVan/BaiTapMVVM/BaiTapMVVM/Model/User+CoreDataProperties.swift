@@ -11,12 +11,13 @@ import Foundation
 import CoreData
 
 extension User {
-
+    
+    // MARK: - Properties
+    @NSManaged public var username: String?
+    @NSManaged public var password: String?
+    
+    // MARK: Public functions
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
     }
-
-    @NSManaged public var username: String?
-    @NSManaged public var password: String?
-
 }

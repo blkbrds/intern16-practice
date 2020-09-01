@@ -17,15 +17,13 @@ final class ProfileViewController: UIViewController {
     }
     
     // MARK: - Private functions
-    func configNavigation() {
+    private func configNavigation() {
         title = "PROFILE"
     }
     
     // MARK: - IBAction functions
     @IBAction private func logoutButtonTouchUpInside(_ sender: UIButton) {
-       UserDefaults.standard.set(false, forKey: "state")
-       let isLogined = UserDefaults.standard.bool(forKey: "state")
-       let rootType: RootType = isLogined ? . tabbar : . login
-        AppDelegate.shared.changeRoot(rootType: rootType)
+        UserDefaults.standard.set(false, forKey: "state")
+        AppDelegate.shared.changeRoot(rootType: .login)
     }
 }

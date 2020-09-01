@@ -26,6 +26,12 @@ final class HomeViewController: UIViewController {
         tableViewState()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+        collectionView.reloadData()
+    }
+    
     // MARK: - Private functions
     private func configNavigation() {
         title = "HOME"
@@ -107,8 +113,8 @@ extension HomeViewController: HomeTableViewCellDelegate {
         switch action {
         case .changeFavoriteState(position: let position, with: let fav):
             viewModel.changeState(position: position, favorite: fav)
-            collectionView.reloadData()
-            tableView.reloadData()
+            collectionView.reloadItems(at: [IndexPath(item: position, section: 0)])
+            tableView.reloadRows(at: [IndexPath(row: position, section: 0)], with: .none)
         }
     }
 }

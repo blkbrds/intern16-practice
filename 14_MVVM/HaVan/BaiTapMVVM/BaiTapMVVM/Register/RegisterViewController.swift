@@ -48,9 +48,7 @@ final class RegisterViewController: UIViewController {
         viewModel.save(username: username, password: password, completion: { result in
             if result {
                 UserDefaults.standard.set(true, forKey: "state")
-                let state: Bool = UserDefaults.standard.bool(forKey: "state")
-                let rootType: RootType = state ? .login : .tabbar
-                AppDelegate.shared.changeRoot(rootType: rootType)
+                AppDelegate.shared.changeRoot(rootType: .tabbar)
             } else {
                 errorLabel.isHidden = false
                 errorLabel.text = "the username has already exist"

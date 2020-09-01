@@ -47,7 +47,6 @@
 		529D8E8424E6DDAC000CCFC9 /* BaiTapMVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 529D8E8224E6DDAC000CCFC9 /* BaiTapMVVM.xcdatamodeld */; };
 		529D8E8624E6DDB1000CCFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D8E8524E6DDB1000CCFC9 /* Assets.xcassets */; };
 		529D8E8924E6DDB1000CCFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D8E8724E6DDB1000CCFC9 /* LaunchScreen.storyboard */; };
-		52A84D6E24E8D829006F5885 /* CoffeeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A84D6D24E8D829006F5885 /* CoffeeList.plist */; };
 		52A84D7024E8DFB3006F5885 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D6F24E8DFB3006F5885 /* Coffee.swift */; };
 		52A84D7624E8E588006F5885 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D7524E8E588006F5885 /* HomeViewModel.swift */; };
 		52A84D8124E9195A006F5885 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A84D7F24E9195A006F5885 /* HomeTableViewCell.swift */; };
@@ -103,7 +102,6 @@
 		529D8E8524E6DDB1000CCFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		529D8E8824E6DDB1000CCFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		529D8E8A24E6DDB1000CCFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52A84D6D24E8D829006F5885 /* CoffeeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CoffeeList.plist; sourceTree = "<group>"; };
 		52A84D6F24E8DFB3006F5885 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		52A84D7524E8E588006F5885 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52A84D7F24E9195A006F5885 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -303,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				529D8E8224E6DDAC000CCFC9 /* BaiTapMVVM.xcdatamodeld */,
-				52A84D6D24E8D829006F5885 /* CoffeeList.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -409,7 +406,6 @@
 				529D8E8624E6DDB1000CCFC9 /* Assets.xcassets in Resources */,
 				5263CD0424ED1FBE0086DF03 /* SlideCell.xib in Resources */,
 				5293DA0724E6E20D007475D5 /* ForgotPasswordViewController.xib in Resources */,
-				52A84D6E24E8D829006F5885 /* CoffeeList.plist in Resources */,
 				5293D9F224E6E1ED007475D5 /* LoginViewController.xib in Resources */,
 				5293D9FC24E6E1FF007475D5 /* ProfileViewController.xib in Resources */,
 				52A84D8224E9195A006F5885 /* HomeTableViewCell.xib in Resources */,

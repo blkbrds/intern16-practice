@@ -47,9 +47,7 @@ final class LoginViewController: UIViewController {
         viewModel.login(username: username, password: password) { result in
             if result {
                 UserDefaults.standard.set(true, forKey: "state")
-                let isLogined = UserDefaults.standard.bool(forKey: "state")
-                let rootType: RootType = isLogined ? . tabbar : . login
-                AppDelegate.shared.changeRoot(rootType: rootType)
+                AppDelegate.shared.changeRoot(rootType: .tabbar)
             } else {
                 errorLabel.isHidden = false
                 errorLabel.text = "You entered the wrong username or password"
