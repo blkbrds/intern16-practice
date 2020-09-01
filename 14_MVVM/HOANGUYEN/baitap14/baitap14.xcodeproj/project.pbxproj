@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC041614A8D376833B72D391 /* Pods_baitap14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C891D73DA5D6269D0F5374 /* Pods_baitap14.framework */; };
+		F31BC18524F2505A00F2A972 /* CommentTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31BC18424F2505A00F2A972 /* CommentTableViewCellViewModel.swift */; };
+		F31BC18724F2517000F2A972 /* CommentTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31BC18624F2517000F2A972 /* CommentTableViewViewModel.swift */; };
+		F355224324E676AA00E563BE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F355224124E676AA00E563BE /* DetailsViewController.swift */; };
+		F355224424E676AA00E563BE /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F355224224E676AA00E563BE /* DetailsViewController.xib */; };
+		F355224624E7C66B00E563BE /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F355224524E7C66A00E563BE /* HomeCellViewModel.swift */; };
+		F355224A24E8F70100E563BE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F355224824E8F70100E563BE /* CollectionViewCell.swift */; };
+		F355224B24E8F70100E563BE /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F355224924E8F70100E563BE /* CollectionViewCell.xib */; };
+		F355225724E9646A00E563BE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F355225524E9646A00E563BE /* CommentTableViewCell.swift */; };
+		F355225824E9646A00E563BE /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F355225624E9646A00E563BE /* CommentTableViewCell.xib */; };
+		F36B14D824EA938F00ECE85E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3913F9124E65B800043C181 /* HomeViewModel.swift */; };
+		F36B14DD24EAE53B00ECE85E /* DetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B14DB24EAE53B00ECE85E /* DetailsCollectionViewCell.swift */; };
+		F36B14DE24EAE53B00ECE85E /* DetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36B14DC24EAE53B00ECE85E /* DetailsCollectionViewCell.xib */; };
+		F36B14E024EAE91800ECE85E /* DetailsCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B14DF24EAE91800ECE85E /* DetailsCollectionViewViewModel.swift */; };
+		F36B14E224EAEA9D00ECE85E /* DetailsCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B14E124EAEA9D00ECE85E /* DetailsCollectionViewCellViewModel.swift */; };
+		F3913F8F24E659000043C181 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3913F8D24E659000043C181 /* HomeTableViewCell.swift */; };
+		F3913F9024E659000043C181 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3913F8E24E659000043C181 /* HomeTableViewCell.xib */; };
+		F3913F9424E65C000043C181 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3913F9324E65C000043C181 /* CoffeeShop.swift */; };
+		F3B5294424EEF10A000C09E9 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5294324EEF10A000C09E9 /* DetailsViewModel.swift */; };
+		F3FD12E124E43B0D00FDC677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD12E024E43B0D00FDC677 /* AppDelegate.swift */; };
+		F3FD12E324E43B0D00FDC677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD12E224E43B0D00FDC677 /* SceneDelegate.swift */; };
+		F3FD130A24E43BBE00FDC677 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FD12F724E43BBE00FDC677 /* LoginViewController.xib */; };
+		F3FD130B24E43BBE00FDC677 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD12F824E43BBE00FDC677 /* LoginViewController.swift */; };
+		F3FD130C24E43BBE00FDC677 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD12FA24E43BBE00FDC677 /* BaseTabbarController.swift */; };
+		F3FD130D24E43BBE00FDC677 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD12FB24E43BBE00FDC677 /* BaseViewController.swift */; };
+		F3FD130E24E43BBE00FDC677 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD12FC24E43BBE00FDC677 /* BaseNavigationController.swift */; };
+		F3FD131024E43BBE00FDC677 /* Home01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD130024E43BBE00FDC677 /* Home01ViewController.swift */; };
+		F3FD131124E43BBE00FDC677 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD130224E43BBE00FDC677 /* FavoritesViewController.swift */; };
+		F3FD131224E43BBE00FDC677 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FD130324E43BBE00FDC677 /* FavoritesViewController.xib */; };
+		F3FD131324E43BBE00FDC677 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD130524E43BBE00FDC677 /* MapViewController.swift */; };
+		F3FD131424E43BBE00FDC677 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FD130624E43BBE00FDC677 /* MapViewController.xib */; };
+		F3FD131524E43BBE00FDC677 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FD130824E43BBE00FDC677 /* ProfileViewController.xib */; };
+		F3FD131624E43BBE00FDC677 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD130924E43BBE00FDC677 /* ProfileViewController.swift */; };
+		F3FD131824E43CAB00FDC677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3FD131724E43CAB00FDC677 /* Assets.xcassets */; };
+		F3FD131B24E43CF900FDC677 /* users.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FD131A24E43CF900FDC677 /* users.plist */; };
+		F3FD131D24E43DB300FDC677 /* ImageCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD131C24E43DB300FDC677 /* ImageCollectionViewViewModel.swift */; };
+		F3FD132024E4490300FDC677 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD131E24E4490300FDC677 /* ImageCollectionViewCell.swift */; };
+		F3FD132324E45E4C00FDC677 /* ImageCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD132224E45E4C00FDC677 /* ImageCollectionViewCellViewModel.swift */; };
+		F3FD132A24E596D000FDC677 /* Home01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FD132924E596D000FDC677 /* Home01ViewController.xib */; };
+		F3FD133224E59AB900FDC677 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FD133024E59AB800FDC677 /* ImageCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19132F71720486499366C280 /* Pods-baitap14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baitap14.debug.xcconfig"; path = "Target Support Files/Pods-baitap14/Pods-baitap14.debug.xcconfig"; sourceTree = "<group>"; };
+		7EACA43754122E4256C7F650 /* Pods-baitap14.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baitap14.release.xcconfig"; path = "Target Support Files/Pods-baitap14/Pods-baitap14.release.xcconfig"; sourceTree = "<group>"; };
+		97C891D73DA5D6269D0F5374 /* Pods_baitap14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_baitap14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31BC18424F2505A00F2A972 /* CommentTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F31BC18624F2517000F2A972 /* CommentTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewViewModel.swift; sourceTree = "<group>"; };
+		F355224124E676AA00E563BE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F355224224E676AA00E563BE /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		F355224524E7C66A00E563BE /* HomeCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		F355224824E8F70100E563BE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F355224924E8F70100E563BE /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		F355225524E9646A00E563BE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		F355225624E9646A00E563BE /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		F36B14DB24EAE53B00ECE85E /* DetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F36B14DC24EAE53B00ECE85E /* DetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCollectionViewCell.xib; sourceTree = "<group>"; };
+		F36B14DF24EAE91800ECE85E /* DetailsCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewViewModel.swift; sourceTree = "<group>"; };
+		F36B14E124EAEA9D00ECE85E /* DetailsCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		F3913F8D24E659000043C181 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		F3913F8E24E659000043C181 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		F3913F9124E65B800043C181 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F3913F9324E65C000043C181 /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
+		F3B5294324EEF10A000C09E9 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		F3FD12DD24E43B0D00FDC677 /* baitap14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baitap14.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FD12E024E43B0D00FDC677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3FD12E224E43B0D00FDC677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F3FD12EE24E43B1000FDC677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FD12F724E43BBE00FDC677 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F3FD12F824E43BBE00FDC677 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3FD12FA24E43BBE00FDC677 /* BaseTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		F3FD12FB24E43BBE00FDC677 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F3FD12FC24E43BBE00FDC677 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		F3FD130024E43BBE00FDC677 /* Home01ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home01ViewController.swift; sourceTree = "<group>"; };
+		F3FD130224E43BBE00FDC677 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		F3FD130324E43BBE00FDC677 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		F3FD130524E43BBE00FDC677 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F3FD130624E43BBE00FDC677 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		F3FD130824E43BBE00FDC677 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		F3FD130924E43BBE00FDC677 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F3FD131724E43CAB00FDC677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3FD131A24E43CF900FDC677 /* users.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = users.plist; sourceTree = "<group>"; };
+		F3FD131C24E43DB300FDC677 /* ImageCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewViewModel.swift; sourceTree = "<group>"; };
+		F3FD131E24E4490300FDC677 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3FD132224E45E4C00FDC677 /* ImageCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		F3FD132924E596D000FDC677 /* Home01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home01ViewController.xib; sourceTree = "<group>"; };
+		F3FD133024E59AB800FDC677 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3FD12DA24E43B0D00FDC677 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC041614A8D376833B72D391 /* Pods_baitap14.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FAC996229D2EDDCC0684244 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19132F71720486499366C280 /* Pods-baitap14.debug.xcconfig */,
+				7EACA43754122E4256C7F650 /* Pods-baitap14.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3672D5E7CE4FB7D07833F244 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97C891D73DA5D6269D0F5374 /* Pods_baitap14.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F355224724E8F6E100E563BE /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F3B5294024EED8E4000C09E9 /* CollectionViewCell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		F355224C24E8FAF200E563BE /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				F3913F9324E65C000043C181 /* CoffeeShop.swift */,
+				F355224524E7C66A00E563BE /* HomeCellViewModel.swift */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		F355224F24E9311500E563BE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F3B5294324EEF10A000C09E9 /* DetailsViewModel.swift */,
+				F355224124E676AA00E563BE /* DetailsViewController.swift */,
+				F355224224E676AA00E563BE /* DetailsViewController.xib */,
+				F36B14DA24EAE50300ECE85E /* DetailsCollectionView */,
+				F355225424E9642D00E563BE /* CommentTableView */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		F355225424E9642D00E563BE /* CommentTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F31BC18624F2517000F2A972 /* CommentTableViewViewModel.swift */,
+				F3B5293E24EED837000C09E9 /* CommentTableViewCell */,
+			);
+			path = CommentTableView;
+			sourceTree = "<group>";
+		};
+		F36B14D924EAE01600ECE85E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD132924E596D000FDC677 /* Home01ViewController.xib */,
+				F3FD130024E43BBE00FDC677 /* Home01ViewController.swift */,
+				F3913F9124E65B800043C181 /* HomeViewModel.swift */,
+				F3FD132424E45E5600FDC677 /* ImageCollectionView */,
+				F355224724E8F6E100E563BE /* CollectionView */,
+				F3913F8C24E658C20043C181 /* TableView */,
+				F355224C24E8FAF200E563BE /* HomeCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F36B14DA24EAE50300ECE85E /* DetailsCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F36B14DF24EAE91800ECE85E /* DetailsCollectionViewViewModel.swift */,
+				F3B5293D24EED63D000C09E9 /* DetailsCollectionViewCell */,
+			);
+			path = DetailsCollectionView;
+			sourceTree = "<group>";
+		};
+		F3913F8C24E658C20043C181 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F3B5293F24EED8CD000C09E9 /* HomeTableViewCell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F3B5293C24EED52C000C09E9 /* ImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD131E24E4490300FDC677 /* ImageCollectionViewCell.swift */,
+				F3FD133024E59AB800FDC677 /* ImageCollectionViewCell.xib */,
+				F3FD132224E45E4C00FDC677 /* ImageCollectionViewCellViewModel.swift */,
+			);
+			path = ImageCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F3B5293D24EED63D000C09E9 /* DetailsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F36B14E124EAEA9D00ECE85E /* DetailsCollectionViewCellViewModel.swift */,
+				F36B14DB24EAE53B00ECE85E /* DetailsCollectionViewCell.swift */,
+				F36B14DC24EAE53B00ECE85E /* DetailsCollectionViewCell.xib */,
+			);
+			path = DetailsCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F3B5293E24EED837000C09E9 /* CommentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F355225524E9646A00E563BE /* CommentTableViewCell.swift */,
+				F355225624E9646A00E563BE /* CommentTableViewCell.xib */,
+				F31BC18424F2505A00F2A972 /* CommentTableViewCellViewModel.swift */,
+			);
+			path = CommentTableViewCell;
+			sourceTree = "<group>";
+		};
+		F3B5293F24EED8CD000C09E9 /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F3913F8D24E659000043C181 /* HomeTableViewCell.swift */,
+				F3913F8E24E659000043C181 /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		F3B5294024EED8E4000C09E9 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F355224924E8F70100E563BE /* CollectionViewCell.xib */,
+				F355224824E8F70100E563BE /* CollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F3FD12D424E43B0D00FDC677 = {
+			isa = PBXGroup;
+			children = (
+				F3FD12DF24E43B0D00FDC677 /* baitap14 */,
+				F3FD12DE24E43B0D00FDC677 /* Products */,
+				0FAC996229D2EDDCC0684244 /* Pods */,
+				3672D5E7CE4FB7D07833F244 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3FD12DE24E43B0D00FDC677 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD12DD24E43B0D00FDC677 /* baitap14.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3FD12DF24E43B0D00FDC677 /* baitap14 */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD131924E43CDB00FDC677 /* Data */,
+				F3FD12F424E43BBE00FDC677 /* HomeScreen */,
+				F3FD131724E43CAB00FDC677 /* Assets.xcassets */,
+				F3FD12E024E43B0D00FDC677 /* AppDelegate.swift */,
+				F3FD12E224E43B0D00FDC677 /* SceneDelegate.swift */,
+				F3FD12EE24E43B1000FDC677 /* Info.plist */,
+			);
+			path = baitap14;
+			sourceTree = "<group>";
+		};
+		F3FD12F424E43BBE00FDC677 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD12F524E43BBE00FDC677 /* NavigationController */,
+				F3FD12F924E43BBE00FDC677 /* Base */,
+				F3FD12FD24E43BBE00FDC677 /* TabbarController */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		F3FD12F524E43BBE00FDC677 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD12F624E43BBE00FDC677 /* Login */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		F3FD12F624E43BBE00FDC677 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD12F724E43BBE00FDC677 /* LoginViewController.xib */,
+				F3FD12F824E43BBE00FDC677 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F3FD12F924E43BBE00FDC677 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD12FA24E43BBE00FDC677 /* BaseTabbarController.swift */,
+				F3FD12FB24E43BBE00FDC677 /* BaseViewController.swift */,
+				F3FD12FC24E43BBE00FDC677 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F3FD12FD24E43BBE00FDC677 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD12FE24E43BBE00FDC677 /* HomePage */,
+				F3FD130124E43BBE00FDC677 /* Favorites */,
+				F3FD130424E43BBE00FDC677 /* Map */,
+				F3FD130724E43BBE00FDC677 /* Profile */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		F3FD12FE24E43BBE00FDC677 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				F36B14D924EAE01600ECE85E /* Home */,
+				F355224F24E9311500E563BE /* Details */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		F3FD130124E43BBE00FDC677 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD130224E43BBE00FDC677 /* FavoritesViewController.swift */,
+				F3FD130324E43BBE00FDC677 /* FavoritesViewController.xib */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F3FD130424E43BBE00FDC677 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD130524E43BBE00FDC677 /* MapViewController.swift */,
+				F3FD130624E43BBE00FDC677 /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F3FD130724E43BBE00FDC677 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD130824E43BBE00FDC677 /* ProfileViewController.xib */,
+				F3FD130924E43BBE00FDC677 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F3FD131924E43CDB00FDC677 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD131A24E43CF900FDC677 /* users.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F3FD132424E45E5600FDC677 /* ImageCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F3FD131C24E43DB300FDC677 /* ImageCollectionViewViewModel.swift */,
+				F3B5293C24EED52C000C09E9 /* ImageCollectionViewCell */,
+			);
+			path = ImageCollectionView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3FD12DC24E43B0D00FDC677 /* baitap14 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FD12F124E43B1000FDC677 /* Build configuration list for PBXNativeTarget "baitap14" */;
+			buildPhases = (
+				25A4A7C0E6FC2A6B157445AA /* [CP] Check Pods Manifest.lock */,
+				F3FD12D924E43B0D00FDC677 /* Sources */,
+				F3FD12DA24E43B0D00FDC677 /* Frameworks */,
+				F3FD12DB24E43B0D00FDC677 /* Resources */,
+				70362C2AFE4F4136A8B5AFCC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = baitap14;
+			productName = baitap14;
+			productReference = F3FD12DD24E43B0D00FDC677 /* baitap14.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3FD12D524E43B0D00FDC677 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = NXH;
+				TargetAttributes = {
+					F3FD12DC24E43B0D00FDC677 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = F3FD12D824E43B0D00FDC677 /* Build configuration list for PBXProject "baitap14" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3FD12D424E43B0D00FDC677;
+			productRefGroup = F3FD12DE24E43B0D00FDC677 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3FD12DC24E43B0D00FDC677 /* baitap14 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3FD12DB24E43B0D00FDC677 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FD133224E59AB900FDC677 /* ImageCollectionViewCell.xib in Resources */,
+				F3FD131524E43BBE00FDC677 /* ProfileViewController.xib in Resources */,
+				F355224B24E8F70100E563BE /* CollectionViewCell.xib in Resources */,
+				F3FD130A24E43BBE00FDC677 /* LoginViewController.xib in Resources */,
+				F3FD132A24E596D000FDC677 /* Home01ViewController.xib in Resources */,
+				F3913F9024E659000043C181 /* HomeTableViewCell.xib in Resources */,
+				F3FD131B24E43CF900FDC677 /* users.plist in Resources */,
+				F355225824E9646A00E563BE /* CommentTableViewCell.xib in Resources */,
+				F36B14DE24EAE53B00ECE85E /* DetailsCollectionViewCell.xib in Resources */,
+				F3FD131224E43BBE00FDC677 /* FavoritesViewController.xib in Resources */,
+				F355224424E676AA00E563BE /* DetailsViewController.xib in Resources */,
+				F3FD131824E43CAB00FDC677 /* Assets.xcassets in Resources */,
+				F3FD131424E43BBE00FDC677 /* MapViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25A4A7C0E6FC2A6B157445AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-baitap14-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70362C2AFE4F4136A8B5AFCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-baitap14/Pods-baitap14-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-baitap14/Pods-baitap14-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-baitap14/Pods-baitap14-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3FD12D924E43B0D00FDC677 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FD130D24E43BBE00FDC677 /* BaseViewController.swift in Sources */,
+				F3FD130C24E43BBE00FDC677 /* BaseTabbarController.swift in Sources */,
+				F36B14E024EAE91800ECE85E /* DetailsCollectionViewViewModel.swift in Sources */,
+				F3913F8F24E659000043C181 /* HomeTableViewCell.swift in Sources */,
+				F3FD132324E45E4C00FDC677 /* ImageCollectionViewCellViewModel.swift in Sources */,
+				F3FD132024E4490300FDC677 /* ImageCollectionViewCell.swift in Sources */,
+				F36B14E224EAEA9D00ECE85E /* DetailsCollectionViewCellViewModel.swift in Sources */,
+				F3FD131624E43BBE00FDC677 /* ProfileViewController.swift in Sources */,
+				F31BC18524F2505A00F2A972 /* CommentTableViewCellViewModel.swift in Sources */,
+				F355225724E9646A00E563BE /* CommentTableViewCell.swift in Sources */,
+				F36B14D824EA938F00ECE85E /* HomeViewModel.swift in Sources */,
+				F3FD131124E43BBE00FDC677 /* FavoritesViewController.swift in Sources */,
+				F3B5294424EEF10A000C09E9 /* DetailsViewModel.swift in Sources */,
+				F3FD130E24E43BBE00FDC677 /* BaseNavigationController.swift in Sources */,
+				F3FD131324E43BBE00FDC677 /* MapViewController.swift in Sources */,
+				F355224A24E8F70100E563BE /* CollectionViewCell.swift in Sources */,
+				F355224624E7C66B00E563BE /* HomeCellViewModel.swift in Sources */,
+				F355224324E676AA00E563BE /* DetailsViewController.swift in Sources */,
+				F31BC18724F2517000F2A972 /* CommentTableViewViewModel.swift in Sources */,
+				F3FD131D24E43DB300FDC677 /* ImageCollectionViewViewModel.swift in Sources */,
+				F3FD130B24E43BBE00FDC677 /* LoginViewController.swift in Sources */,
+				F3FD12E124E43B0D00FDC677 /* AppDelegate.swift in Sources */,
+				F3913F9424E65C000043C181 /* CoffeeShop.swift in Sources */,
+				F3FD12E324E43B0D00FDC677 /* SceneDelegate.swift in Sources */,
+				F3FD131024E43BBE00FDC677 /* Home01ViewController.swift in Sources */,
+				F36B14DD24EAE53B00ECE85E /* DetailsCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F3FD12EF24E43B1000FDC677 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3FD12F024E43B1000FDC677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3FD12F224E43B1000FDC677 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19132F71720486499366C280 /* Pods-baitap14.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = baitap14/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nxh.baitap14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3FD12F324E43B1000FDC677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EACA43754122E4256C7F650 /* Pods-baitap14.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = baitap14/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nxh.baitap14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3FD12D824E43B0D00FDC677 /* Build configuration list for PBXProject "baitap14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FD12EF24E43B1000FDC677 /* Debug */,
+				F3FD12F024E43B1000FDC677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FD12F124E43B1000FDC677 /* Build configuration list for PBXNativeTarget "baitap14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FD12F224E43B1000FDC677 /* Debug */,
+				F3FD12F324E43B1000FDC677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3FD12D524E43B0D00FDC677 /* Project object */;
+}

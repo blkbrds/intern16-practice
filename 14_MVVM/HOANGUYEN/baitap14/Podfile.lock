@@ -1,0 +1,16 @@
+PODS:
+  - MVVM-Swift (5.0.1)
+
+DEPENDENCIES:
+  - MVVM-Swift
+
+SPEC REPOS:
+  trunk:
+    - MVVM-Swift
+
+SPEC CHECKSUMS:
+  MVVM-Swift: 0333cd8a16abfe0e93a1423bfddb49b8c11065e1
+
+PODFILE CHECKSUM: 480b5c54e86ac66718519bccadcb6f2fa03f3adb
+
+COCOAPODS: 1.9.1
