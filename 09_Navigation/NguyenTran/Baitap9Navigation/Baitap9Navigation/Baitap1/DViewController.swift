@@ -21,18 +21,17 @@ class DViewController: UIViewController {
         let viewControllerE = EViewController()
         navigationController?.pushViewController(viewControllerE, animated: true)
     }
-    
+
     @IBAction func cButtonTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
+
     @IBAction func bButtonTouchUpInside(_ sender: UIButton) {
         guard let viewControllerB = navigationController?.viewControllers.first(where: { $0 is BViewController }) else { return }
         navigationController?.popToViewController(viewControllerB, animated: true)
     }
-    
+
     @IBAction func rootButtonTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
 }

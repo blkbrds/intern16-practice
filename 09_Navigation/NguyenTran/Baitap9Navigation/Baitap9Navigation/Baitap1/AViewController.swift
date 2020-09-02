@@ -17,14 +17,9 @@ class AViewController: UIViewController {
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
         navigationItem.backBarButtonItem = backButton
     }
-    
+
     @IBAction func nextButtonTouchUpInside(_ sender: Any) {
         let viewControllerB = BViewController()
         self.navigationController?.pushViewController(viewControllerB, animated: true)
     }
-    
-
-
-
-
 }

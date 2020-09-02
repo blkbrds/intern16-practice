@@ -21,13 +21,12 @@ class CViewController: UIViewController {
         let viewControllerD = DViewController()
         navigationController?.pushViewController(viewControllerD, animated: true)
     }
-    
+
     @IBAction func previousButtonTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
+
     @IBAction func rootButtonTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
 }
