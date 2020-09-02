@@ -31,9 +31,7 @@ final class BaiTap10ViewController: UIViewController {
     // MARK: - Privte functions
     private func cofigTable() {
         tabelView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        contactStore.requestAccess(for: .contacts) { (success, error) in
-            if success {}
-        }
+        contactStore.requestAccess(for: .contacts) { (success, error) in }
         fetchContact()
         tabelView.dataSource = self
         tabelView.delegate = self
@@ -47,7 +45,7 @@ final class BaiTap10ViewController: UIViewController {
             let lastname = contact.givenName
             let familyname = contact.familyName
             let phonenumber = contact.phoneNumbers.first?.value.stringValue
-            let contactAppend = Contact(lastName: lastname, familyName: familyname, phoneNumber: phonenumber!)
+            let contactAppend = Contact(lastName: lastname, familyName: familyname, phoneNumber: phonenumber ?? "")
             self.myContact.append(contactAppend)
         }
         tabelView.reloadData()

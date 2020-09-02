@@ -24,6 +24,7 @@ final class BaiTap4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        getData()
     }
 
     // MARK: - Private functions
@@ -31,7 +32,6 @@ final class BaiTap4ViewController: UIViewController {
         navigationItem.title = "SECTIONS"
         let nib = UINib(nibName: "CusTomUITableViewCell", bundle: .main)
         myTable.register(nib, forCellReuseIdentifier: "cell")
-        getData()
         myTable.dataSource = self
         myTable.delegate = self
     }

@@ -14,7 +14,7 @@ final class BaiTap1ViewController: UIViewController {
     @IBOutlet private weak var myTableView: UITableView!
     
     // MARK: - Private peroperties
-    private var listName: [String] = ["Name1","Name2","Name3","Name4","Name5","Name6","Name7","Name8","Name9","Name10"]
+    private let listName: [String] = ["Name1","Name2","Name3","Name4","Name5","Name6","Name7","Name8","Name9","Name10"]
     
     // MARK: - Life cycle
     override func viewDidLoad() {

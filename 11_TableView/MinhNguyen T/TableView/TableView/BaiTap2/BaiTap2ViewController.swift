@@ -17,7 +17,7 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
     // MARK: - Peropeties
     private var listPeople: [String] = []
     private var newData: [String] = []
-    private var searh = false
+    private var isSearching: Bool = false
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -46,12 +46,12 @@ final class BaiTap2ViewController: UIViewController, UITableViewDelegate {
 
 extension BaiTap2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searh == true ? newData.count : listPeople.count
+        return isSearching == true ? newData.count : listPeople.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if searh {
+        if isSearching {
             cell.textLabel?.text = newData[indexPath.row]
         } else {
             cell.textLabel?.text = listPeople[indexPath.row]
@@ -61,7 +61,7 @@ extension BaiTap2ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        if searh {
+        if isSearching {
             vc.name = newData[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         } else {
@@ -74,7 +74,7 @@ extension BaiTap2ViewController: UITableViewDataSource {
 extension BaiTap2ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         newData = listPeople.filter{$0.contains(searchText)}
-        searh = searchText.isEmpty ? false : true
+        isSearching = searchText.isEmpty ? false : true
         myTableView.reloadData()
     }
 
