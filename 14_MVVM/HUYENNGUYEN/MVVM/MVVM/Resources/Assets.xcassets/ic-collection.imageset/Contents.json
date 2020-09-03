@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "ic-collection.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic-table-24 @2x.png",
+      "filename" : "ic-collection-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "ic-collection-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -8,23 +8,25 @@
 
 import UIKit
 
-class CommentTableViewCell: UITableViewCell {
+final class CommentTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlet
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var commentLabel: UILabel!
     
+    // MARK: - Properties
     var viewModel: CommentTableViewCellViewModel? {
         didSet {
             updateView()
         }
     }
     
+    // MARK: - Function
     private func updateView() {
         guard let viewModel = viewModel else { return }
-        let comment = viewModel.dataDetailCell
-        avatarImageView.image = UIImage(named: comment.imageName)
-        nameLabel.text = comment.name
-        commentLabel.text = comment.comment
+        avatarImageView.image = UIImage(named: viewModel.imageName)
+        nameLabel.text = viewModel.name
+        commentLabel.text = viewModel.comment
     }
 }

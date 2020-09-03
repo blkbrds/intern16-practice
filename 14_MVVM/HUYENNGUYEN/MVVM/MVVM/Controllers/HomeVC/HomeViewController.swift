@@ -10,22 +10,27 @@ import UIKit
 
 let kScreenWidth = UIScreen.main.bounds.width
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
+    // MARK: - Struct
     struct Identifiers {
+        static let sliderCell = "SliderCollectionViewCell"
         static let collectionCell = "HomeCollectionViewCell"
         static let tableCell = "Home2CollectionViewCell"
     }
-
+    
+    // MARK: - IBOutlet
     @IBOutlet private weak var sliderCollectionView: UICollectionView!
     @IBOutlet private weak var listItemCollectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
     
+    // MARK: - Properties
     private var index = 0
     var viewModel = HomeViewModel()
     private var timer: Timer?
     var typeView = Identifiers.collectionCell
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
@@ -41,6 +46,7 @@ class HomeViewController: UIViewController {
         timer = nil
     }
     
+    // MARK: - Function
     private func fetchData() {
         viewModel.getImages()
         viewModel.getListCoffee()
@@ -48,15 +54,15 @@ class HomeViewController: UIViewController {
     
     private func configNavigation() {
         if typeView == Identifiers.collectionCell {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic-table-24 "), style: .plain, target: self, action: #selector(showViewCollection))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic-table"), style: .plain, target: self, action: #selector(showViewCollection))
         } else {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic-menu-30"), style: .plain, target: self, action: #selector(showViewCollection))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic-collection"), style: .plain, target: self, action: #selector(showViewCollection))
         }
     }
     
     private func configSlider() {
-        let sliderNib = UINib(nibName: "SliderCollectionViewCell", bundle: Bundle.main)
-        sliderCollectionView.register(sliderNib, forCellWithReuseIdentifier: "SliderCollectionViewCell")
+        let sliderNib = UINib(nibName: Identifiers.sliderCell, bundle: Bundle.main)
+        sliderCollectionView.register(sliderNib, forCellWithReuseIdentifier: Identifiers.sliderCell)
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
     }
@@ -78,6 +84,7 @@ class HomeViewController: UIViewController {
         listItemCollectionView.delegate = self
     }
     
+    // MARK: - Objc
     @objc private func showViewCollection() {
         if typeView == Identifiers.collectionCell {
             typeView = Identifiers.tableCell
@@ -92,6 +99,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // MARK: - Action
     @IBAction private func turnLeftButtonTouchUpInside(_ sender: UIButton) {
         if index > 0 {
             index -= 1
@@ -117,6 +125,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -124,14 +133,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case sliderCollectionView:
             return viewModel.sliderImages.count
         default:
-            return viewModel.numberOfRowInSection()
+            return viewModel.numberOfRows(inSection: section)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case sliderCollectionView:
-            guard let cellSlide = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as? SliderCollectionViewCell else { return UICollectionViewCell() }
+            guard let cellSlide = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.sliderCell, for: indexPath) as? SliderCollectionViewCell else { return UICollectionViewCell() }
+            cellSlide.viewModel = viewModel.viewModelForSlider(at: indexPath)
             return cellSlide
         default:
             if typeView == Identifiers.collectionCell {
@@ -160,6 +170,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
+// MARK: - Extension HomeTableCellDelegate
 extension HomeViewController: HomeTableCellDelegate {
     func cell(_ cell: HomeCollectionViewCell, needsPerform action: HomeCollectionViewCell.Action) {
         switch action {
@@ -171,9 +182,14 @@ extension HomeViewController: HomeTableCellDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let information = viewModel.getCoffeeAt(indexPath) else { return }
-        let detailVC = DetailViewController()
-        detailVC.viewModel = DetailViewModel(information: information)
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        switch collectionView {
+        case listItemCollectionView:
+            guard let information = viewModel.getCoffeeAt(indexPath) else { return }
+            let detailVC = DetailViewController()
+            detailVC.viewModel = DetailViewModel(information: information)
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        default:
+            return
+        }
     }
 }

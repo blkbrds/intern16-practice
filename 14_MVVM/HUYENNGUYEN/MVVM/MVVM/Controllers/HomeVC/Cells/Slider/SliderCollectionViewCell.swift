@@ -8,17 +8,21 @@
 
 import UIKit
 
-class SliderCollectionViewCell: UICollectionViewCell {
+final class SliderCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - IBOutlet
     @IBOutlet weak var sliderImageView: UIImageView!
-
-    override func  awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    func setImage(image: UIImage?) {
-        sliderImageView.image = image
-    }
     
+    // MARK: - Properties
+    var viewModel: SliderViewModel? {
+        didSet {
+            updateView()
+        }
+    }
+
+    // MARK: - Function
+    private func updateView() {
+        guard let viewModel = viewModel else { return }
+        sliderImageView.image = UIImage(named: viewModel.image)
+    }
 }

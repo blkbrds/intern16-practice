@@ -8,13 +8,13 @@
 
 import Foundation
 
-class ContentTableViewCellViewModel {
+final class ContentTableViewCellViewModel {
     
+    // MARK: - Property
     let content: String
     
+    // MARK: - Initalization
     init(content: String) {
         self.content = content
     }
-       
-    
 }

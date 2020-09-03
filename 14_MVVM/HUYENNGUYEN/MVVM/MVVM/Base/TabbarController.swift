@@ -9,7 +9,7 @@
 import UIKit
 
 final class TabbarController: UITabBarController {
-    
+    // MARK: - Enum
     enum TabType: Int {
         case home = 0, map, favorites, profile
         
@@ -29,26 +29,26 @@ final class TabbarController: UITabBarController {
         var image: UIImage? {
             switch self {
             case .home:
-                return UIImage(named: "ic-home")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-home ")
             case .map:
-                return UIImage(named: "ic-map")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-map ")
             case .favorites:
-                return UIImage(named: "ic-favorite")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-favorite")
             case .profile:
-                return UIImage(named: "ic-profile")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-profile ")
             }
         }
         
         var selectedImage: UIImage? {
             switch self {
             case .home:
-                return UIImage(named: "ic-home-selected")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-home-selected")
             case .map:
-                return UIImage(named: "ic-map-selected")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-map-selected ")
             case .favorites:
-                return UIImage(named: "ic-favorite-selected")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-favorite-selected ")
             case .profile:
-                return UIImage(named: "ic-profile-selected")?.withRenderingMode(.alwaysOriginal)
+                return #imageLiteral(resourceName: "ic-profile-selected ")
             }
         }
         
@@ -65,25 +65,25 @@ final class TabbarController: UITabBarController {
             }
         }
     }
+    
+    // MARK: - Properties
     private lazy var homeNC: UINavigationController = { return createTab(for: .home) }()
     private lazy var mapNC: UINavigationController = { return createTab(for: .map) }()
     private lazy var favoritesNC: UINavigationController = { return createTab(for: .favorites) }()
     private lazy var profileNC: UINavigationController = { return createTab(for: .profile) }()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewControllers([homeNC, mapNC, favoritesNC, profileNC], animated: true)
     }
 
+    // MARK: - Function
     private func createTab(for type: TabType) -> UINavigationController {
         let nc: UINavigationController = type.navigationController
         let tabBarItem: UITabBarItem = UITabBarItem(title: type.title, image: type.image, selectedImage: type.selectedImage)
         tabBarItem.tag = type.rawValue
         nc.tabBarItem = tabBarItem
         return nc
-    }
-    
-    private func openTab(type: TabType) {
-        selectedIndex = type.rawValue
     }
 }

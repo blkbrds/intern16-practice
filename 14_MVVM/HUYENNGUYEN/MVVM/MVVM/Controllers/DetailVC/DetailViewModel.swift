@@ -10,6 +10,7 @@ import Foundation
 
 final class DetailViewModel {
     
+    // MARK: - Enum
     enum Section: Int, CaseIterable {
         case content = 0
         case map
@@ -24,8 +25,13 @@ final class DetailViewModel {
         self.information = information
     }
     
+    // MARK: - Function
     func numberOfSections() -> Int {
         return Section.allCases.count
+    }
+    
+    func numberOfItemsForCollection(inSection section: Int) -> Int {
+        return information.imageNames.count
     }
     
     func numberOfRows(inSection section: Int) -> Int {
@@ -40,15 +46,13 @@ final class DetailViewModel {
     
     func cellForItem(at indexPath: IndexPath) -> Any? {
         guard let type = DetailViewModel.Section(rawValue: indexPath.section) else { return nil }
-        switch  type {
+        switch type {
         case .content:
             return ContentTableViewCellViewModel(content: information.introduction)
         case .map:
             return nil
         case .comment:
-            guard information.comments.count > indexPath.row else {
-                return nil
-            }
+            guard information.comments.count > indexPath.row else { return nil }
             let comment = information.comments[indexPath.row]
             return CommentTableViewCellViewModel(dataDetailCell: comment)
         }

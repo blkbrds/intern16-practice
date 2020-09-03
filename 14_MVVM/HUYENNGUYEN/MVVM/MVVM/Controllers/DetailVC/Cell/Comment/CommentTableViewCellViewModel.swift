@@ -9,10 +9,21 @@
 import Foundation
 
 final class CommentTableViewCellViewModel {
-    var dataDetailCell: Comment
     
+    // MARK: - Properties
+    var comments: Comment
+    var imageName: String {
+        return comments.imageName
+    }
+    var name: String {
+        return comments.name
+    }
+    var comment: String {
+        return comments.comment
+    }
+    
+    // MARK: - Initalization
     init(dataDetailCell: Comment) {
-        self.dataDetailCell = dataDetailCell
+        self.comments = dataDetailCell
     }
 }
-

@@ -9,21 +9,25 @@
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController {
-    
-    @IBOutlet private weak var sliderCollectionView: UICollectionView!
-    @IBOutlet private weak var pageControl: UIPageControl!
-    @IBOutlet private weak var tableView: UITableView!
-
+final class DetailViewController: UIViewController {
+    // MARK: - Struct
     struct Identifiers {
         static let sliderCell = "SliderCollectionViewCell"
         static let contentCell = "ContentTableViewCell"
         static let commentCell = "CommentTableViewCell"
         static let mapCell = "MapTableViewCell"
     }
+    
+    // MARK: - IBOutlet
+    @IBOutlet private weak var sliderCollectionView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: -  Properties
     private var index = 0
     var viewModel: DetailViewModel?
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
@@ -31,6 +35,7 @@ class DetailViewController: UIViewController {
         configTableView()
     }
 
+    // MARK: - Function
     private func configCollectionView() {
         let sliderNib = UINib(nibName: Identifiers.sliderCell, bundle: Bundle.main)
         sliderCollectionView.register(sliderNib, forCellWithReuseIdentifier: Identifiers.sliderCell)
@@ -47,18 +52,19 @@ class DetailViewController: UIViewController {
     private func configTableView() {
         let contentNib = UINib(nibName: Identifiers.contentCell, bundle: Bundle.main)
         tableView.register(contentNib, forCellReuseIdentifier: Identifiers.contentCell)
-        
+
         let commentNib = UINib(nibName: Identifiers.commentCell, bundle: Bundle.main)
         tableView.register(commentNib, forCellReuseIdentifier: Identifiers.commentCell)
-        
+
         let mapNib = UINib(nibName: Identifiers.mapCell, bundle: Bundle.main)
         tableView.register(mapNib, forCellReuseIdentifier: Identifiers.mapCell)
-        
+
         tableView.dataSource = self
         tableView.delegate = self
     }
 
-    @IBAction func turnLeftButtonTouchUpInside(_ sender: UIButton) {
+    // MARK: - Action
+    @IBAction private func turnLeftButtonTouchUpInside(_ sender: UIButton) {
         if index > 0 {
             index -= 1
             sliderCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
@@ -71,7 +77,7 @@ class DetailViewController: UIViewController {
         }
     }
 
-    @IBAction func turnRightButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction private func turnRightButtonTouchUpInside(_ sender: UIButton) {
         guard let viewModel = viewModel else { return }
         if index < viewModel.information.imageNames.count {
             index += 1
@@ -85,11 +91,12 @@ class DetailViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UICollectionViewDataSource
 extension DetailViewController: UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
-        return viewModel.information.imageNames.count
+        return viewModel.numberOfItemsForCollection(inSection: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -98,25 +105,25 @@ extension DetailViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - Extension UICollectionViewDelegateFlowLayout
 extension DetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: kScreenWidth, height: 300)
     }
 }
 
-extension DetailViewController: UICollectionViewDelegate { }
-
+// MARK: - Extension UITableViewDataSource
 extension DetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let viewModel = viewModel else { return 0 }
         return viewModel.numberOfSections()
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
         return viewModel.numberOfRows(inSection: section)
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let viewModel = viewModel, let type = DetailViewModel.Section(rawValue: indexPath.section) else { return UITableViewCell() }
         switch type {
@@ -135,6 +142,7 @@ extension DetailViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Extension UITableViewDelegate
 extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let type = DetailViewModel.Section(rawValue: indexPath.section) else { return 0 }

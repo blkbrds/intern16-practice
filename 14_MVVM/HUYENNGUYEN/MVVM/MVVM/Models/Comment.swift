@@ -9,6 +9,7 @@
 import Foundation
 
 final class Comment {
+    
     var id: Int
     var imageName: String
     var name: String

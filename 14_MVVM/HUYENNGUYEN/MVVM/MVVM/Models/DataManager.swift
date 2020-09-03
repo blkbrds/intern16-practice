@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataManager {
+final class DataManager {
     
     var id: Int
     var title: String

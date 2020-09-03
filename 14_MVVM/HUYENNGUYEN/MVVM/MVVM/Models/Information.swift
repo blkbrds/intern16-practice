@@ -23,5 +23,4 @@ final class Information {
         self.introduction = introduction
         self.comments = comments
     }
-    
 }

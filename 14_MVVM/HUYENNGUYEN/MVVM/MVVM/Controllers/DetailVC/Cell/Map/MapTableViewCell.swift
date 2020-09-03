@@ -9,10 +9,9 @@
 import UIKit
 import MapKit
 
-class MapTableViewCell: UITableViewCell {
+final class MapTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 }

@@ -8,31 +8,35 @@
 
 import UIKit
 
-class  HomeViewModel {
+final class HomeViewModel {
     
-    private(set) var sliderImages: [UIImage?] = []
+    // MARK: - Properties
+    private(set) var sliderImages: [Slider] = []
     private(set) var listCoffee: [DataManager] = []
     
-    func numberOfRowInSection() -> Int {
+    // MARK: - Function
+    func numberOfRows(inSection section: Int) -> Int {
         return listCoffee.count
     }
-
-    func viewModelForItem(at indexPath: IndexPath) -> ListCellViewModel? {
+    
+    func viewModelForItem(at indexPath: IndexPath) -> HomeCollectionViewCellViewModel? {
         guard listCoffee.count > indexPath.row else { return nil }
         let coffee = listCoffee[indexPath.row]
-        return ListCellViewModel(datas: coffee)
+        return HomeCollectionViewCellViewModel(data: coffee)
+    }
+    
+    func viewModelForSlider(at indexPath: IndexPath) -> SliderViewModel? {
+        guard sliderImages.count > indexPath.row else { return nil }
+        let slideImage = sliderImages[indexPath.row]
+        return SliderViewModel(sliderImages: slideImage)
     }
     
     func getImages() {
-        let images = Datas.listCoffee()
-        for name in images {
-            let image = UIImage(named: "\(name)")
-            sliderImages.append(image)
-        }
+        sliderImages = Data.sliderImage()
     }
     
     func getListCoffee() {
-        listCoffee = Datas.listCoffee()
+        listCoffee = Data.listCoffee()
     }
     
     func changeFavorite(at indexPath: IndexPath, isFavorite: Bool) {
@@ -40,14 +44,8 @@ class  HomeViewModel {
     }
     
     func getCoffeeAt(_ indexPath: IndexPath) -> Information? {
-        let data = Datas.coffeeInformation()
+        let data = Data.coffeeInformation()
         guard data.count > indexPath.row else { return nil }
         return data[indexPath.row]
     }
-    
-//    func getValueForCell(at indexPath: IndexPath) -> HomeCellModel {
-//        let viewModel = listData[indexPath.row]
-//        return viewModel
-//    }
-  
 }

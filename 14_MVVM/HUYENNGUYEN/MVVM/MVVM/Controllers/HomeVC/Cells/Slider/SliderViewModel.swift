@@ -9,9 +9,15 @@
 import Foundation
 
 class SliderViewModel {
-    private var sliderImages: [String]
     
-    init(sliderImages: [String]) {
+    // MARK: - Properties
+    var sliderImages: Slider
+    var image: String {
+        return sliderImages.image
+    }
+    
+    // MARK: - Initialization
+    init(sliderImages: Slider) {
         self.sliderImages = sliderImages
     }
 }

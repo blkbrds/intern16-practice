@@ -8,16 +8,19 @@
 
 import UIKit
 
-class ContentTableViewCell: UITableViewCell {
+final class ContentTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlet
     @IBOutlet private weak var contentLabel: UILabel!
     
+    // MARK: - Properties
     var viewModel: ContentTableViewCellViewModel? {
         didSet {
             updateView()
         }
     }
     
+    // MARK: - Function
     private func updateView()  {
         guard let viewModel = viewModel else { return }
         contentLabel.text = viewModel.content

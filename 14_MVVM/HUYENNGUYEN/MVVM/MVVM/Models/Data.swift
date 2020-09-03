@@ -8,9 +8,10 @@
 
 import Foundation
 
-class Datas {
-    static func sliderImage() -> [String] {
-        return ["image1", "image2", "image3", "image4", "image5"]
+final class Data {
+    static func sliderImage() -> [Slider] {
+        let images: [Slider] = [Slider(image: "image1"), Slider(image: "image2"), Slider(image: "image3"), Slider(image: "image4")]
+        return images
     }
     
     static func listCoffee() -> [DataManager] {
@@ -26,7 +27,7 @@ class Datas {
     }
     
     static func coffeeInformation() -> [Information] {
-        let information: [Information]  = [
+        let information: [Information] = [
             Information(id: 0, imageNames: ["image1", "image2", "image3", "image4", "image5"], introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", comments: [Comment(id: 0, imageName: "user", name: "Nguyen Van A", comment: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.")])
         ]
         return information
