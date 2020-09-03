@@ -10,6 +10,7 @@ import UIKit
 
 final class Bai5HomeViewController: UIViewController {
     
+    //MARK: - IBOutlet
     @IBOutlet weak var valueXTextField: UITextField!
     @IBOutlet var valueYTextField: UITextField!
     @IBOutlet var resultLabel: UILabel!
@@ -18,6 +19,8 @@ final class Bai5HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    //MARK: - Function
     @IBAction func calPressed(_ sender: Any) {
         guard let calculaterView = Bundle.main.loadNibNamed("CalculatorViewController", owner: self, options: nil)?.first as? CalculatorViewController else { return }
         calculaterView.frame = CGRect(x: 32, y: 300, width: 350, height: 300)
@@ -27,7 +30,7 @@ final class Bai5HomeViewController: UIViewController {
         view.addSubview(calculaterView)
     }
 }
-
+    //MARK: - Extension
 extension Bai5HomeViewController: CalculatorViewControllerDataSource{
     func getValueX() -> Int? {
         guard let x = valueXTextField.text else { return 0 }

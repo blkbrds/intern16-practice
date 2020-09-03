@@ -19,23 +19,26 @@ protocol CalculatorViewControllerDelegate: class {
 }
 
 final class CalculatorViewController: UIView {
-    
+
+    //MARK: - Properties
     weak var dataSource: CalculatorViewControllerDataSource?
     weak var delegate: CalculatorViewControllerDelegate?
-    
-    enum action {
-        case doneAction(resultText: String?)
-        case clearAction(clearText: String?)
-    }
-    @IBOutlet weak var xResultLabel: UILabel!
-    @IBOutlet weak var yResultLabel: UILabel!
-    @IBOutlet weak var resultLabel: UILabel!
-    
-    
     private var x: Int?
     private var y: Int?
     private var result: Double?
     
+    //MARK: - Enum
+    enum action {
+        case doneAction(resultText: String?)
+        case clearAction(clearText: String?)
+    }
+    
+    //MARK: - IBoutlet
+    @IBOutlet weak var xResultLabel: UILabel!
+    @IBOutlet weak var yResultLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    //MARK: - Function
     func configView() {
         guard let x = dataSource?.getValueX(), let y = dataSource?.getValueY() else { return }
         xResultLabel.text = String(x)

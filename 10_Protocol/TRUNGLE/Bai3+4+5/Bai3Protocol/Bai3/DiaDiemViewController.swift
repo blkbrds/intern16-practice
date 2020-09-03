@@ -13,16 +13,23 @@ protocol DiaDiemViewControllerDelegate {
     func getHuyen() -> String
 }
 class DiaDiemViewController: UIViewController {
-    var diaDiemViewControllerDelegate : DiaDiemViewControllerDelegate?
+    
+    //MARK: - Properties
+    var delegate : DiaDiemViewControllerDelegate?
+    
+    //MARK: - IBOutlet
     @IBOutlet weak var MienTextField: UITextField!
     @IBOutlet weak var tinh1TextField: UITextField!
     @IBOutlet weak var HuyenTextField: UITextField!
     
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Địa Điểm"
         configNaviBar()
     }
+    
+    //MARK: - Function
     func configNaviBar() {
         let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonUpSide))
         navigationItem.rightBarButtonItem = editButton
@@ -33,9 +40,10 @@ class DiaDiemViewController: UIViewController {
         setUpUI()
     }
     func setUpUI() {
-        MienTextField.text = diaDiemViewControllerDelegate?.getMien()
-        tinh1TextField.text = diaDiemViewControllerDelegate?.getTinh()
-        HuyenTextField.text = diaDiemViewControllerDelegate?.getHuyen()
+        guard let huyenText = delegate?.getHuyen(), let tinhText = delegate?.getTinh(), let mienText = delegate?.getMien() else { return }
+        MienTextField.text = mienText
+        tinh1TextField.text = tinhText
+        HuyenTextField.text = huyenText
     }
     
     @objc func editButtonUpSide() {

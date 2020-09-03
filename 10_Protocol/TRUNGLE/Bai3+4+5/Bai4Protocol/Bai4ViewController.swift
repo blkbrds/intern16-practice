@@ -28,7 +28,7 @@ class Bai4ViewController: UIViewController {
         searchName = DataSource.listData
     }
 }
-
+    //MARK: - Extension
 extension Bai4ViewController: UITableViewDataSource, UITableViewDelegate     {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchName.count

@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5107AA5C24D128330055205F /* MienViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5107AA5B24D128330055205F /* MienViewController.xib */; };
-		5107AA6024D1593C0055205F /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5107AA5E24D1593C0055205F /* Bai4ViewController.swift */; };
-		5107AA6124D1593C0055205F /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5107AA5F24D1593C0055205F /* Bai4ViewController.xib */; };
-		5107AA6324D1595B0055205F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5107AA6224D1595B0055205F /* DataSource.swift */; };
-		51504FDC24D1F26100F285E8 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51504FDA24D1F26100F285E8 /* CalculatorViewController.swift */; };
-		51504FDD24D1F26200F285E8 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51504FDB24D1F26100F285E8 /* CalculatorViewController.xib */; };
-		51504FE024D1F27000F285E8 /* Bai5HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51504FDE24D1F27000F285E8 /* Bai5HomeViewController.swift */; };
-		51504FE124D1F27000F285E8 /* Bai5HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51504FDF24D1F27000F285E8 /* Bai5HomeViewController.xib */; };
+		512A36D92500B1280084ECB8 /* Bai5HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36D72500B1280084ECB8 /* Bai5HomeViewController.swift */; };
+		512A36DA2500B1280084ECB8 /* Bai5HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A36D82500B1280084ECB8 /* Bai5HomeViewController.xib */; };
+		512A36DD2500B1460084ECB8 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A36DB2500B1460084ECB8 /* CalculatorViewController.xib */; };
+		512A36DE2500B1460084ECB8 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36DC2500B1460084ECB8 /* CalculatorViewController.swift */; };
+		512A36E22500B1520084ECB8 /* Bai4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A36DF2500B1520084ECB8 /* Bai4ViewController.xib */; };
+		512A36E32500B1520084ECB8 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36E02500B1520084ECB8 /* DataSource.swift */; };
+		512A36E42500B1520084ECB8 /* Bai4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36E12500B1520084ECB8 /* Bai4ViewController.swift */; };
+		512A36F82500C2FC0084ECB8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36F12500C2FC0084ECB8 /* BaseViewController.swift */; };
+		512A36F92500C2FC0084ECB8 /* MienViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A36F22500C2FC0084ECB8 /* MienViewController.xib */; };
+		512A36FA2500C2FC0084ECB8 /* TinhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36F32500C2FC0084ECB8 /* TinhViewController.swift */; };
+		512A36FB2500C2FC0084ECB8 /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A36F42500C2FC0084ECB8 /* HuyenViewController.xib */; };
+		512A36FC2500C2FC0084ECB8 /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36F52500C2FC0084ECB8 /* HuyenViewController.swift */; };
+		512A36FD2500C2FC0084ECB8 /* MienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A36F62500C2FC0084ECB8 /* MienViewController.swift */; };
+		512A36FE2500C2FC0084ECB8 /* TinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512A36F72500C2FC0084ECB8 /* TinhViewController.xib */; };
 		B0A3A94724CABB4D0083ACBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A94624CABB4D0083ACBF /* AppDelegate.swift */; };
 		B0A3A94924CABB4D0083ACBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A94824CABB4D0083ACBF /* SceneDelegate.swift */; };
 		B0A3A94B24CABB4D0083ACBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A94A24CABB4D0083ACBF /* ViewController.swift */; };
@@ -23,22 +29,23 @@
 		B0A3A95324CABB4F0083ACBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A3A95124CABB4F0083ACBF /* LaunchScreen.storyboard */; };
 		B0A3A95C24CAE5350083ACBF /* DiaDiemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A95A24CAE5350083ACBF /* DiaDiemViewController.swift */; };
 		B0A3A95D24CAE5350083ACBF /* DiaDiemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A3A95B24CAE5350083ACBF /* DiaDiemViewController.xib */; };
-		B0A3A96024CAE5450083ACBF /* MienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A95E24CAE5450083ACBF /* MienViewController.swift */; };
-		B0A3A96424CAE5560083ACBF /* TinhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A96224CAE5560083ACBF /* TinhViewController.swift */; };
-		B0A3A96524CAE5560083ACBF /* TinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A3A96324CAE5560083ACBF /* TinhViewController.xib */; };
-		B0A3A96824CAE5600083ACBF /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3A96624CAE5600083ACBF /* HuyenViewController.swift */; };
-		B0A3A96924CAE5600083ACBF /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A3A96724CAE5600083ACBF /* HuyenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5107AA5B24D128330055205F /* MienViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MienViewController.xib; sourceTree = "<group>"; };
-		5107AA5E24D1593C0055205F /* Bai4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai4ViewController.swift; path = "../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai4Protocol/Bai4ViewController.swift"; sourceTree = "<group>"; };
-		5107AA5F24D1593C0055205F /* Bai4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai4ViewController.xib; path = "../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai4Protocol/Bai4ViewController.xib"; sourceTree = "<group>"; };
-		5107AA6224D1595B0055205F /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataSource.swift; path = "../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai4Protocol/DataSource.swift"; sourceTree = "<group>"; };
-		51504FDA24D1F26100F285E8 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculatorViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai5.protocol/Custom/CalculatorViewController.swift"; sourceTree = "<group>"; };
-		51504FDB24D1F26100F285E8 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CalculatorViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai5.protocol/Custom/CalculatorViewController.xib"; sourceTree = "<group>"; };
-		51504FDE24D1F27000F285E8 /* Bai5HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai5HomeViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai5.protocol/Home/Bai5HomeViewController.swift"; sourceTree = "<group>"; };
-		51504FDF24D1F27000F285E8 /* Bai5HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai5HomeViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3Protocol/Bai5.protocol/Home/Bai5HomeViewController.xib"; sourceTree = "<group>"; };
+		512A36D72500B1280084ECB8 /* Bai5HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai5HomeViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai5.protocol/Home/Bai5HomeViewController.swift"; sourceTree = "<group>"; };
+		512A36D82500B1280084ECB8 /* Bai5HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai5HomeViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai5.protocol/Home/Bai5HomeViewController.xib"; sourceTree = "<group>"; };
+		512A36DB2500B1460084ECB8 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalculatorViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai5.protocol/Custom/CalculatorViewController.xib"; sourceTree = "<group>"; };
+		512A36DC2500B1460084ECB8 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculatorViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai5.protocol/Custom/CalculatorViewController.swift"; sourceTree = "<group>"; };
+		512A36DF2500B1520084ECB8 /* Bai4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai4ViewController.xib; path = "../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai4Protocol/Bai4ViewController.xib"; sourceTree = "<group>"; };
+		512A36E02500B1520084ECB8 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSource.swift; path = "../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai4Protocol/DataSource.swift"; sourceTree = "<group>"; };
+		512A36E12500B1520084ECB8 /* Bai4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai4ViewController.swift; path = "../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai4Protocol/Bai4ViewController.swift"; sourceTree = "<group>"; };
+		512A36F12500C2FC0084ECB8 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/BaseViewController.swift"; sourceTree = "<group>"; };
+		512A36F22500C2FC0084ECB8 /* MienViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MienViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/MienViewController.xib"; sourceTree = "<group>"; };
+		512A36F32500C2FC0084ECB8 /* TinhViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TinhViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/TinhViewController.swift"; sourceTree = "<group>"; };
+		512A36F42500C2FC0084ECB8 /* HuyenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HuyenViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/HuyenViewController.xib"; sourceTree = "<group>"; };
+		512A36F52500C2FC0084ECB8 /* HuyenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HuyenViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/HuyenViewController.swift"; sourceTree = "<group>"; };
+		512A36F62500C2FC0084ECB8 /* MienViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MienViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/MienViewController.swift"; sourceTree = "<group>"; };
+		512A36F72500C2FC0084ECB8 /* TinhViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TinhViewController.xib; path = "../../../../../../../../trungld/iOS/intern16-practice/10_Protocol/TRUNGLE/Bai3+4+5/Bai3Protocol/Bai3/TinhViewController.xib"; sourceTree = "<group>"; };
 		B0A3A94324CABB4D0083ACBF /* Bai3Protocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bai3Protocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A3A94624CABB4D0083ACBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A3A94824CABB4D0083ACBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,11 +56,6 @@
 		B0A3A95424CABB4F0083ACBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A3A95A24CAE5350083ACBF /* DiaDiemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDiemViewController.swift; sourceTree = "<group>"; };
 		B0A3A95B24CAE5350083ACBF /* DiaDiemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaDiemViewController.xib; sourceTree = "<group>"; };
-		B0A3A95E24CAE5450083ACBF /* MienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MienViewController.swift; sourceTree = "<group>"; };
-		B0A3A96224CAE5560083ACBF /* TinhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhViewController.swift; sourceTree = "<group>"; };
-		B0A3A96324CAE5560083ACBF /* TinhViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhViewController.xib; sourceTree = "<group>"; };
-		B0A3A96624CAE5600083ACBF /* HuyenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuyenViewController.swift; sourceTree = "<group>"; };
-		B0A3A96724CAE5600083ACBF /* HuyenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuyenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +72,27 @@
 		5107AA5D24D129F10055205F /* Bai4Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				5107AA5E24D1593C0055205F /* Bai4ViewController.swift */,
-				5107AA5F24D1593C0055205F /* Bai4ViewController.xib */,
-				5107AA6224D1595B0055205F /* DataSource.swift */,
+				512A36E12500B1520084ECB8 /* Bai4ViewController.swift */,
+				512A36DF2500B1520084ECB8 /* Bai4ViewController.xib */,
+				512A36E02500B1520084ECB8 /* DataSource.swift */,
 			);
 			path = Bai4Protocol;
+			sourceTree = "<group>";
+		};
+		512A36D02500AD930084ECB8 /* Bai3 */ = {
+			isa = PBXGroup;
+			children = (
+				512A36F12500C2FC0084ECB8 /* BaseViewController.swift */,
+				512A36F52500C2FC0084ECB8 /* HuyenViewController.swift */,
+				512A36F42500C2FC0084ECB8 /* HuyenViewController.xib */,
+				512A36F62500C2FC0084ECB8 /* MienViewController.swift */,
+				512A36F22500C2FC0084ECB8 /* MienViewController.xib */,
+				512A36F32500C2FC0084ECB8 /* TinhViewController.swift */,
+				512A36F72500C2FC0084ECB8 /* TinhViewController.xib */,
+				B0A3A95A24CAE5350083ACBF /* DiaDiemViewController.swift */,
+				B0A3A95B24CAE5350083ACBF /* DiaDiemViewController.xib */,
+			);
+			path = Bai3;
 			sourceTree = "<group>";
 		};
 		51504FD724D1F23300F285E8 /* Bai5.protocol */ = {
@@ -89,8 +107,8 @@
 		51504FD824D1F24600F285E8 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				51504FDA24D1F26100F285E8 /* CalculatorViewController.swift */,
-				51504FDB24D1F26100F285E8 /* CalculatorViewController.xib */,
+				512A36DC2500B1460084ECB8 /* CalculatorViewController.swift */,
+				512A36DB2500B1460084ECB8 /* CalculatorViewController.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -98,8 +116,8 @@
 		51504FD924D1F25100F285E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				51504FDE24D1F27000F285E8 /* Bai5HomeViewController.swift */,
-				51504FDF24D1F27000F285E8 /* Bai5HomeViewController.xib */,
+				512A36D72500B1280084ECB8 /* Bai5HomeViewController.swift */,
+				512A36D82500B1280084ECB8 /* Bai5HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -125,7 +143,7 @@
 		B0A3A94524CABB4D0083ACBF /* Bai3Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				5107AA5B24D128330055205F /* MienViewController.xib */,
+				512A36D02500AD930084ECB8 /* Bai3 */,
 				B0A3A94624CABB4D0083ACBF /* AppDelegate.swift */,
 				B0A3A94824CABB4D0083ACBF /* SceneDelegate.swift */,
 				B0A3A94A24CABB4D0083ACBF /* ViewController.swift */,
@@ -133,13 +151,6 @@
 				B0A3A94F24CABB4F0083ACBF /* Assets.xcassets */,
 				B0A3A95124CABB4F0083ACBF /* LaunchScreen.storyboard */,
 				B0A3A95424CABB4F0083ACBF /* Info.plist */,
-				B0A3A95A24CAE5350083ACBF /* DiaDiemViewController.swift */,
-				B0A3A95B24CAE5350083ACBF /* DiaDiemViewController.xib */,
-				B0A3A95E24CAE5450083ACBF /* MienViewController.swift */,
-				B0A3A96224CAE5560083ACBF /* TinhViewController.swift */,
-				B0A3A96324CAE5560083ACBF /* TinhViewController.xib */,
-				B0A3A96624CAE5600083ACBF /* HuyenViewController.swift */,
-				B0A3A96724CAE5600083ACBF /* HuyenViewController.xib */,
 			);
 			path = Bai3Protocol;
 			sourceTree = "<group>";
@@ -202,16 +213,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512A36FE2500C2FC0084ECB8 /* TinhViewController.xib in Resources */,
+				512A36FB2500C2FC0084ECB8 /* HuyenViewController.xib in Resources */,
 				B0A3A95324CABB4F0083ACBF /* LaunchScreen.storyboard in Resources */,
-				B0A3A96924CAE5600083ACBF /* HuyenViewController.xib in Resources */,
+				512A36E22500B1520084ECB8 /* Bai4ViewController.xib in Resources */,
 				B0A3A95024CABB4F0083ACBF /* Assets.xcassets in Resources */,
-				B0A3A96524CAE5560083ACBF /* TinhViewController.xib in Resources */,
-				51504FDD24D1F26200F285E8 /* CalculatorViewController.xib in Resources */,
 				B0A3A95D24CAE5350083ACBF /* DiaDiemViewController.xib in Resources */,
 				B0A3A94E24CABB4D0083ACBF /* Main.storyboard in Resources */,
-				51504FE124D1F27000F285E8 /* Bai5HomeViewController.xib in Resources */,
-				5107AA6124D1593C0055205F /* Bai4ViewController.xib in Resources */,
-				5107AA5C24D128330055205F /* MienViewController.xib in Resources */,
+				512A36DA2500B1280084ECB8 /* Bai5HomeViewController.xib in Resources */,
+				512A36F92500C2FC0084ECB8 /* MienViewController.xib in Resources */,
+				512A36DD2500B1460084ECB8 /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,17 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A3A96824CAE5600083ACBF /* HuyenViewController.swift in Sources */,
-				51504FE024D1F27000F285E8 /* Bai5HomeViewController.swift in Sources */,
+				512A36F82500C2FC0084ECB8 /* BaseViewController.swift in Sources */,
+				512A36E42500B1520084ECB8 /* Bai4ViewController.swift in Sources */,
+				512A36E32500B1520084ECB8 /* DataSource.swift in Sources */,
+				512A36D92500B1280084ECB8 /* Bai5HomeViewController.swift in Sources */,
+				512A36FA2500C2FC0084ECB8 /* TinhViewController.swift in Sources */,
 				B0A3A94B24CABB4D0083ACBF /* ViewController.swift in Sources */,
-				5107AA6024D1593C0055205F /* Bai4ViewController.swift in Sources */,
+				512A36FC2500C2FC0084ECB8 /* HuyenViewController.swift in Sources */,
 				B0A3A94724CABB4D0083ACBF /* AppDelegate.swift in Sources */,
 				B0A3A95C24CAE5350083ACBF /* DiaDiemViewController.swift in Sources */,
-				B0A3A96024CAE5450083ACBF /* MienViewController.swift in Sources */,
+				512A36FD2500C2FC0084ECB8 /* MienViewController.swift in Sources */,
 				B0A3A94924CABB4D0083ACBF /* SceneDelegate.swift in Sources */,
-				5107AA6324D1595B0055205F /* DataSource.swift in Sources */,
-				51504FDC24D1F26100F285E8 /* CalculatorViewController.swift in Sources */,
-				B0A3A96424CAE5560083ACBF /* TinhViewController.swift in Sources */,
+				512A36DE2500B1460084ECB8 /* CalculatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
