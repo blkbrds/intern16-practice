@@ -10,7 +10,7 @@ import Foundation
 
 final class Data {
     static func sliderImage() -> [Slider] {
-        let images: [Slider] = [Slider(image: "image1"), Slider(image: "image2"), Slider(image: "image3"), Slider(image: "image4")]
+        let images: [Slider] = [Slider(imageName: "image1"), Slider(imageName: "image2"), Slider(imageName: "image3"), Slider(imageName: "image4")]
         return images
     }
     

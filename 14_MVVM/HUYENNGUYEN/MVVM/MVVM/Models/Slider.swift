@@ -9,8 +9,8 @@
 import Foundation
 
 final class Slider {
-    var image: String
-    init(image: String = "") {
-        self.image = image
+    var imageName: String
+    init(imageName: String = "") {
+        self.imageName = imageName
     }
 }

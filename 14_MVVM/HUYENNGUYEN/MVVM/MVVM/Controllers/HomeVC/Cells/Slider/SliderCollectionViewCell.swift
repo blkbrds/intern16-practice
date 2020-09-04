@@ -23,6 +23,6 @@ final class SliderCollectionViewCell: UICollectionViewCell {
     // MARK: - Function
     private func updateView() {
         guard let viewModel = viewModel else { return }
-        sliderImageView.image = UIImage(named: viewModel.image)
+        sliderImageView.image = UIImage(named: viewModel.imageName)
     }
 }

@@ -12,8 +12,8 @@ class SliderViewModel {
     
     // MARK: - Properties
     var sliderImages: Slider
-    var image: String {
-        return sliderImages.image
+    var imageName: String {
+        return sliderImages.imageName
     }
     
     // MARK: - Initialization
