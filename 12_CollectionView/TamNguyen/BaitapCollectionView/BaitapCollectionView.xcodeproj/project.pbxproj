@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		31C845EE24D9044100D4AEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C845ED24D9044100D4AEF6 /* AppDelegate.swift */; };
 		31C845F024D9044100D4AEF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C845EF24D9044100D4AEF6 /* SceneDelegate.swift */; };
-		31C845F224D9044100D4AEF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C845F124D9044100D4AEF6 /* ViewController.swift */; };
 		31C845F724D9044500D4AEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C845F624D9044500D4AEF6 /* Assets.xcassets */; };
 		31C8460424D9056900D4AEF6 /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C8460224D9056900D4AEF6 /* Bai1ViewController.swift */; };
 		31C8460524D9056900D4AEF6 /* Bai1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C8460324D9056900D4AEF6 /* Bai1ViewController.xib */; };
@@ -42,7 +41,6 @@
 		31C845EA24D9044100D4AEF6 /* BaitapCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaitapCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C845ED24D9044100D4AEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C845EF24D9044100D4AEF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31C845F124D9044100D4AEF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		31C845F624D9044500D4AEF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31C845FB24D9044500D4AEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C8460224D9056900D4AEF6 /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bai1ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				31C8460124D9053100D4AEF6 /* Bai1 */,
 				31C845ED24D9044100D4AEF6 /* AppDelegate.swift */,
 				31C845EF24D9044100D4AEF6 /* SceneDelegate.swift */,
-				31C845F124D9044100D4AEF6 /* ViewController.swift */,
 				31C845F624D9044500D4AEF6 /* Assets.xcassets */,
 				31C845FB24D9044500D4AEF6 /* Info.plist */,
 			);
@@ -260,7 +257,6 @@
 				31C8464824DAA01A00D4AEF6 /* Bai3ViewController.swift in Sources */,
 				31C8463B24DA409A00D4AEF6 /* Bai2ViewController.swift in Sources */,
 				31C8460724D9082F00D4AEF6 /* Item.swift in Sources */,
-				31C845F224D9044100D4AEF6 /* ViewController.swift in Sources */,
 				31C845EE24D9044100D4AEF6 /* AppDelegate.swift in Sources */,
 				31C845F024D9044100D4AEF6 /* SceneDelegate.swift in Sources */,
 				31C8464424DA4C3D00D4AEF6 /* PinterestLayout.swift in Sources */,
