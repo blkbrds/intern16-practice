@@ -15,6 +15,7 @@ final class Bai4TableViewCell: UITableViewCell {
     
     // MARK: - Properties
     private var models = [Model]()
+    private var identifier: String = "collectionCell"
     
     // MARK: - Life cycle
     override func awakeFromNib() {
@@ -25,7 +26,7 @@ final class Bai4TableViewCell: UITableViewCell {
     // MARK: - Private methods
     private func configCollectionView() {
         let nib = UINib(nibName: "Bai4CollectionViewCell", bundle: .main)
-        collectonView.register(nib, forCellWithReuseIdentifier: "collectionCell")
+        collectonView.register(nib, forCellWithReuseIdentifier: identifier)
         collectonView.dataSource = self
         collectonView.delegate = self
     }
@@ -37,19 +38,21 @@ final class Bai4TableViewCell: UITableViewCell {
     }
 }
 
-// MARK: - Extension UICollectionViewDataSource, UICollectionDelegate
-extension Bai4TableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+// MARK: - Extension UICollectionViewDataSource
+extension Bai4TableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? Bai4CollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? Bai4CollectionViewCell else { return UICollectionViewCell() }
         cell.updateCollectonView(with: models[indexPath.row])
         return cell
     }
-    
+}
+// MARK: - Extension UICollectionDelegateViewLayout
+extension Bai4TableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 120, height: 120)
     }

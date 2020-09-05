@@ -16,6 +16,8 @@ final class Bai3ViewController: UIViewController {
     // MARK: - Properties
     private var flowers: [String] = ["download", "download", "download", "download", "download", "download", "download"]
     private var sections: [String] = ["Loại 1", "Loại 2", "Loại 3", "Loại 4", "Loại 5", "Loại 6", "Loại 7"]
+    private var cellIdentifier: String = "cell"
+    private var reuseIdentifier: String = "header"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -27,12 +29,12 @@ final class Bai3ViewController: UIViewController {
     // MARK: - Private methods
     private func loadNib() {
         let nib = UINib(nibName: "Bai3CollectionViewCell", bundle: .main)
-        homeCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
+        homeCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
     private func loadHeader() {
         let headerNib = UINib(nibName: "Bai3HeaderView", bundle: .main)
-        homeCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
+        homeCollectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
         let layout = UICollectionViewFlowLayout()
         
         layout.headerReferenceSize = CGSize(width: 0, height: 40)
@@ -52,7 +54,7 @@ extension Bai3ViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Bai3CollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? Bai3CollectionViewCell else { return UICollectionViewCell() }
         let nameFlower = flowers[indexPath.row]
         guard let imageFlower = UIImage(named: nameFlower) else { return cell }
         cell.updateCell(with: imageFlower)
@@ -67,7 +69,7 @@ extension Bai3ViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as? Bai3HeaderView else { return UICollectionReusableView() }
+            guard let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier, for: indexPath) as? Bai3HeaderView else { return UICollectionReusableView() }
             
             let header = sections[indexPath.row]
             reusableview.updateHeader(with: header, total: String(sections.count))

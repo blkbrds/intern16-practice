@@ -19,6 +19,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Properties
     private var models = [Model]()
     private var imageNumber: Int = 0
+    private var cellIdentifier: String = "tableCell"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -64,7 +65,7 @@ final class HomeViewController: UIViewController {
     
     private func configTableView() {
         let nib = UINib(nibName: "Bai4TableViewCell", bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: "tableCell")
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -81,7 +82,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - Extension UITableViewDataSource, Delegate
+// MARK: - Extension UITableViewDataSource
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,7 +94,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? Bai4TableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? Bai4TableViewCell else { return UITableViewCell() }
         cell.updateTableView(with: models)
         return cell
     }
