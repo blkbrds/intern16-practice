@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD3545231111AF8AC308E725 /* Pods_baitap15.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784BB99981ED103616F98FB5 /* Pods_baitap15.framework */; };
+		F35B9ECA24FE008A003A3187 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B9EC924FE008A003A3187 /* Items.swift */; };
+		F35B9ECC24FE0814003A3187 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B9ECB24FE0814003A3187 /* HomeViewModel.swift */; };
+		F35B9ECF24FE0B90003A3187 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B9ECE24FE0B90003A3187 /* CellViewModel.swift */; };
+		F35B9ED224FE0BD8003A3187 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B9ED024FE0BD8003A3187 /* CustomTableViewCell.swift */; };
+		F35B9ED324FE0BD8003A3187 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B9ED124FE0BD8003A3187 /* CustomTableViewCell.xib */; };
+		F36B14F024EB73EB00ECE85E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B14EF24EB73EB00ECE85E /* AppDelegate.swift */; };
+		F36B14F224EB73EB00ECE85E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B14F124EB73EB00ECE85E /* SceneDelegate.swift */; };
+		F36B14F424EB73EB00ECE85E /* Baitap01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B14F324EB73EB00ECE85E /* Baitap01ViewController.swift */; };
+		F36B14F924EB73ED00ECE85E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36B14F824EB73ED00ECE85E /* Assets.xcassets */; };
+		F36B150924EB83E100ECE85E /* Baitap02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B150724EB83E100ECE85E /* Baitap02ViewController.swift */; };
+		F36B150A24EB83E100ECE85E /* Baitap02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36B150824EB83E100ECE85E /* Baitap02ViewController.xib */; };
+		F36B150C24EB866A00ECE85E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B150B24EB866A00ECE85E /* Entry.swift */; };
+		F3A30A1F24FDE44000142E30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A1D24FDE44000142E30 /* HomeViewController.swift */; };
+		F3A30A2024FDE44000142E30 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A30A1E24FDE44000142E30 /* HomeViewController.xib */; };
+		F3A30A2224FDE6B900142E30 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A2124FDE6B900142E30 /* API.swift */; };
+		F3A30A2424FDE97200142E30 /* API.Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A2324FDE97200142E30 /* API.Request.swift */; };
+		F3A30A2624FDE9F300142E30 /* Data.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A2524FDE9F300142E30 /* Data.Ext.swift */; };
+		F3A30A2924FDED2700142E30 /* API.Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A2824FDED2700142E30 /* API.Manager.swift */; };
+		F3A30A2B24FDF97C00142E30 /* API.Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A2A24FDF97C00142E30 /* API.Video.swift */; };
+		F3A30A2E24FDFA5E00142E30 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A30A2D24FDFA5E00142E30 /* Video.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EF0F39677C0CE9C7C32755A /* Pods-baitap15.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baitap15.debug.xcconfig"; path = "Target Support Files/Pods-baitap15/Pods-baitap15.debug.xcconfig"; sourceTree = "<group>"; };
+		6E6E824819F4FBB9B706BCAB /* Pods-baitap15.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baitap15.release.xcconfig"; path = "Target Support Files/Pods-baitap15/Pods-baitap15.release.xcconfig"; sourceTree = "<group>"; };
+		784BB99981ED103616F98FB5 /* Pods_baitap15.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_baitap15.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35B9EC924FE008A003A3187 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		F35B9ECB24FE0814003A3187 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F35B9ECE24FE0B90003A3187 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		F35B9ED024FE0BD8003A3187 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		F35B9ED124FE0BD8003A3187 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		F36B14EC24EB73EB00ECE85E /* baitap15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baitap15.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36B14EF24EB73EB00ECE85E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F36B14F124EB73EB00ECE85E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F36B14F324EB73EB00ECE85E /* Baitap01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap01ViewController.swift; sourceTree = "<group>"; };
+		F36B14F824EB73ED00ECE85E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F36B14FD24EB73ED00ECE85E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F36B150724EB83E100ECE85E /* Baitap02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap02ViewController.swift; sourceTree = "<group>"; };
+		F36B150824EB83E100ECE85E /* Baitap02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap02ViewController.xib; sourceTree = "<group>"; };
+		F36B150B24EB866A00ECE85E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		F3A30A1D24FDE44000142E30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F3A30A1E24FDE44000142E30 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F3A30A2124FDE6B900142E30 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F3A30A2324FDE97200142E30 /* API.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Request.swift; sourceTree = "<group>"; };
+		F3A30A2524FDE9F300142E30 /* Data.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Ext.swift; sourceTree = "<group>"; };
+		F3A30A2824FDED2700142E30 /* API.Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Manager.swift; sourceTree = "<group>"; };
+		F3A30A2A24FDF97C00142E30 /* API.Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Video.swift; sourceTree = "<group>"; };
+		F3A30A2D24FDFA5E00142E30 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F36B14E924EB73EB00ECE85E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3545231111AF8AC308E725 /* Pods_baitap15.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C9B42DFDA7283D958C120B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				784BB99981ED103616F98FB5 /* Pods_baitap15.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		420C07FD7BB0A41171B4F304 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EF0F39677C0CE9C7C32755A /* Pods-baitap15.debug.xcconfig */,
+				6E6E824819F4FBB9B706BCAB /* Pods-baitap15.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F35B9ECD24FE0B7F003A3187 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F35B9ECE24FE0B90003A3187 /* CellViewModel.swift */,
+				F35B9ED024FE0BD8003A3187 /* CustomTableViewCell.swift */,
+				F35B9ED124FE0BD8003A3187 /* CustomTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F36B14E324EB73EB00ECE85E = {
+			isa = PBXGroup;
+			children = (
+				F36B14EE24EB73EB00ECE85E /* baitap15 */,
+				F36B14ED24EB73EB00ECE85E /* Products */,
+				420C07FD7BB0A41171B4F304 /* Pods */,
+				04C9B42DFDA7283D958C120B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F36B14ED24EB73EB00ECE85E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F36B14EC24EB73EB00ECE85E /* baitap15.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F36B14EE24EB73EB00ECE85E /* baitap15 */ = {
+			isa = PBXGroup;
+			children = (
+				F3A30A1B24FDE3C100142E30 /* Baitap3-5 */,
+				F36B150624EB83BC00ECE85E /* Baitap02 */,
+				F36B150524EB83AC00ECE85E /* Baitap01 */,
+				F36B14EF24EB73EB00ECE85E /* AppDelegate.swift */,
+				F36B14F124EB73EB00ECE85E /* SceneDelegate.swift */,
+				F36B14F824EB73ED00ECE85E /* Assets.xcassets */,
+				F36B14FD24EB73ED00ECE85E /* Info.plist */,
+				F36B150B24EB866A00ECE85E /* Entry.swift */,
+			);
+			path = baitap15;
+			sourceTree = "<group>";
+		};
+		F36B150524EB83AC00ECE85E /* Baitap01 */ = {
+			isa = PBXGroup;
+			children = (
+				F36B14F324EB73EB00ECE85E /* Baitap01ViewController.swift */,
+			);
+			path = Baitap01;
+			sourceTree = "<group>";
+		};
+		F36B150624EB83BC00ECE85E /* Baitap02 */ = {
+			isa = PBXGroup;
+			children = (
+				F36B150724EB83E100ECE85E /* Baitap02ViewController.swift */,
+				F36B150824EB83E100ECE85E /* Baitap02ViewController.xib */,
+			);
+			path = Baitap02;
+			sourceTree = "<group>";
+		};
+		F3A30A1B24FDE3C100142E30 /* Baitap3-5 */ = {
+			isa = PBXGroup;
+			children = (
+				F35B9ECD24FE0B7F003A3187 /* Cell */,
+				F3A30A2C24FDFA4F00142E30 /* Model */,
+				F3A30A1C24FDE3FA00142E30 /* API Model */,
+				F3A30A1D24FDE44000142E30 /* HomeViewController.swift */,
+				F3A30A1E24FDE44000142E30 /* HomeViewController.xib */,
+				F35B9ECB24FE0814003A3187 /* HomeViewModel.swift */,
+			);
+			path = "Baitap3-5";
+			sourceTree = "<group>";
+		};
+		F3A30A1C24FDE3FA00142E30 /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3A30A2124FDE6B900142E30 /* API.swift */,
+				F3A30A2324FDE97200142E30 /* API.Request.swift */,
+				F3A30A2524FDE9F300142E30 /* Data.Ext.swift */,
+				F3A30A2824FDED2700142E30 /* API.Manager.swift */,
+				F3A30A2A24FDF97C00142E30 /* API.Video.swift */,
+			);
+			path = "API Model";
+			sourceTree = "<group>";
+		};
+		F3A30A2C24FDFA4F00142E30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3A30A2D24FDFA5E00142E30 /* Video.swift */,
+				F35B9EC924FE008A003A3187 /* Items.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F36B14EB24EB73EB00ECE85E /* baitap15 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F36B150024EB73ED00ECE85E /* Build configuration list for PBXNativeTarget "baitap15" */;
+			buildPhases = (
+				B702188F410560616FD840D1 /* [CP] Check Pods Manifest.lock */,
+				F36B14E824EB73EB00ECE85E /* Sources */,
+				F36B14E924EB73EB00ECE85E /* Frameworks */,
+				F36B14EA24EB73EB00ECE85E /* Resources */,
+				D63C3FE1D9F285A23C95EDD6 /* [CP] Embed Pods Frameworks */,
+				2AE29D947906C55ADE452E58 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = baitap15;
+			productName = baitap15;
+			productReference = F36B14EC24EB73EB00ECE85E /* baitap15.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F36B14E424EB73EB00ECE85E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = NXH;
+				TargetAttributes = {
+					F36B14EB24EB73EB00ECE85E = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = F36B14E724EB73EB00ECE85E /* Build configuration list for PBXProject "baitap15" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F36B14E324EB73EB00ECE85E;
+			productRefGroup = F36B14ED24EB73EB00ECE85E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F36B14EB24EB73EB00ECE85E /* baitap15 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F36B14EA24EB73EB00ECE85E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36B14F924EB73ED00ECE85E /* Assets.xcassets in Resources */,
+				F36B150A24EB83E100ECE85E /* Baitap02ViewController.xib in Resources */,
+				F35B9ED324FE0BD8003A3187 /* CustomTableViewCell.xib in Resources */,
+				F3A30A2024FDE44000142E30 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AE29D947906C55ADE452E58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-baitap15/Pods-baitap15-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-baitap15/Pods-baitap15-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-baitap15/Pods-baitap15-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B702188F410560616FD840D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-baitap15-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D63C3FE1D9F285A23C95EDD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-baitap15/Pods-baitap15-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-baitap15/Pods-baitap15-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-baitap15/Pods-baitap15-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F36B14E824EB73EB00ECE85E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36B150C24EB866A00ECE85E /* Entry.swift in Sources */,
+				F3A30A2E24FDFA5E00142E30 /* Video.swift in Sources */,
+				F35B9ED224FE0BD8003A3187 /* CustomTableViewCell.swift in Sources */,
+				F36B14F424EB73EB00ECE85E /* Baitap01ViewController.swift in Sources */,
+				F36B150924EB83E100ECE85E /* Baitap02ViewController.swift in Sources */,
+				F36B14F024EB73EB00ECE85E /* AppDelegate.swift in Sources */,
+				F3A30A2624FDE9F300142E30 /* Data.Ext.swift in Sources */,
+				F35B9ECA24FE008A003A3187 /* Items.swift in Sources */,
+				F36B14F224EB73EB00ECE85E /* SceneDelegate.swift in Sources */,
+				F35B9ECF24FE0B90003A3187 /* CellViewModel.swift in Sources */,
+				F3A30A2424FDE97200142E30 /* API.Request.swift in Sources */,
+				F35B9ECC24FE0814003A3187 /* HomeViewModel.swift in Sources */,
+				F3A30A1F24FDE44000142E30 /* HomeViewController.swift in Sources */,
+				F3A30A2224FDE6B900142E30 /* API.swift in Sources */,
+				F3A30A2B24FDF97C00142E30 /* API.Video.swift in Sources */,
+				F3A30A2924FDED2700142E30 /* API.Manager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F36B14FE24EB73ED00ECE85E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F36B14FF24EB73ED00ECE85E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F36B150124EB73ED00ECE85E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF0F39677C0CE9C7C32755A /* Pods-baitap15.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = baitap15/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nxh.baitap15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F36B150224EB73ED00ECE85E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6E824819F4FBB9B706BCAB /* Pods-baitap15.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = baitap15/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nxh.baitap15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F36B14E724EB73EB00ECE85E /* Build configuration list for PBXProject "baitap15" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F36B14FE24EB73ED00ECE85E /* Debug */,
+				F36B14FF24EB73ED00ECE85E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F36B150024EB73ED00ECE85E /* Build configuration list for PBXNativeTarget "baitap15" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F36B150124EB73ED00ECE85E /* Debug */,
+				F36B150224EB73ED00ECE85E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F36B14E424EB73EB00ECE85E /* Project object */;
+}
