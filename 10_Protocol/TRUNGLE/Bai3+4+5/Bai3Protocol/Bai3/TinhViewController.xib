@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TinhViewController" customModule="Bai3Protocol" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="tinhButton" destination="eiB-mB-vYJ" collectionClass="NSMutableArray" id="skM-Dq-cUI"/>
+                <outletCollection property="tinhButton" destination="Uxn-ga-wq6" collectionClass="NSMutableArray" id="5Qd-5A-h0u"/>
+                <outletCollection property="tinhButton" destination="WLH-dg-pBY" collectionClass="NSMutableArray" id="aga-c4-gHK"/>
+                <outletCollection property="tinhButton" destination="2ap-mf-h0f" collectionClass="NSMutableArray" id="7Wu-mE-j18"/>
+                <outletCollection property="tinhButton" destination="snE-sa-YZc" collectionClass="NSMutableArray" id="xQG-62-1fT"/>
+                <outletCollection property="tinhButton" destination="5E6-jb-YBk" collectionClass="NSMutableArray" id="0zR-HZ-mfg"/>
+                <outletCollection property="tinhButton" destination="ebL-it-geq" collectionClass="NSMutableArray" id="nNo-DM-NNL"/>
+                <outletCollection property="tinhButton" destination="72a-1U-3CA" collectionClass="NSMutableArray" id="fTc-f4-aUI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pn7-WB-kS3">
+                    <rect key="frame" x="40" y="84" width="334" height="738"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiB-mB-vYJ">
+                            <rect key="frame" x="146.5" y="0.0" width="41" height="92.5"/>
+                            <state key="normal" title="Tỉnh 1"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="5wR-Lw-8Xd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-ga-wq6">
+                            <rect key="frame" x="145.5" y="92.5" width="43" height="92"/>
+                            <state key="normal" title="Tỉnh 2"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="jSN-nL-nSe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-dg-pBY">
+                            <rect key="frame" x="145" y="184.5" width="44" height="92.5"/>
+                            <state key="normal" title="Tỉnh 3"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="jYh-jc-le9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ap-mf-h0f">
+                            <rect key="frame" x="145" y="277" width="44" height="92"/>
+                            <state key="normal" title="Tỉnh 4"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="QWK-Vj-Sse"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snE-sa-YZc">
+                            <rect key="frame" x="145.5" y="369" width="43" height="92.5"/>
+                            <state key="normal" title="Tỉnh 5"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="WqE-xP-kPv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-jb-YBk">
+                            <rect key="frame" x="145" y="461.5" width="44" height="92"/>
+                            <state key="normal" title="Tỉnh 6"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="1pS-iF-UCV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebL-it-geq">
+                            <rect key="frame" x="145.5" y="553.5" width="43" height="92.5"/>
+                            <state key="normal" title="Tỉnh 7"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="f0b-O2-jct"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72a-1U-3CA">
+                            <rect key="frame" x="145" y="646" width="44" height="92"/>
+                            <state key="normal" title="Tỉnh 8"/>
+                            <connections>
+                                <action selector="tinhPressed:" destination="-1" eventType="touchUpInside" id="USG-mS-b14"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Pn7-WB-kS3" secondAttribute="bottom" constant="40" id="3cY-kx-jKV"/>
+                <constraint firstItem="Pn7-WB-kS3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="5X3-2P-No8"/>
+                <constraint firstItem="Pn7-WB-kS3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Cgz-st-Joc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pn7-WB-kS3" secondAttribute="trailing" constant="40" id="azU-y4-FHU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="127"/>
+        </view>
+    </objects>
+</document>
