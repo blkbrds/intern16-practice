@@ -37,7 +37,7 @@ final class ProvinceViewController: UIViewController {
 
     // MARK: - Private Functions
     private func editRightButton() {
-        let editButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(editDistrictClick))
+        let editButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(editDistricTouchUpInside))
         navigationItem.rightBarButtonItem = editButton
     }
 
@@ -49,7 +49,7 @@ final class ProvinceViewController: UIViewController {
     }
 
     // MARK: - Objc Private Functions
-    @objc private func editDistrictClick() {
+    @objc private func editDistricTouchUpInside() {
         let vc = DistrictViewController()
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)

@@ -30,7 +30,6 @@ final class DistrictViewController: UIViewController {
     var getProvince: String = ""
     var nameDistrict: String = ""
 
-
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
