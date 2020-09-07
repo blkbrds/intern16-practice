@@ -8,56 +8,62 @@
 
 import UIKit
 
-protocol RegionViewControllerDelegate {
-    func setValueRegionAndProvinceAndDistrict(_ regionViewController: RegionViewController, needperform action: RegionViewController.Action)
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Miền"
+}
+
+protocol RegionViewControllerDelegate: class {
+    func setValueRegionAndProvinceAndDistrict(_ viewController: RegionViewController, needPerform action: RegionViewController.Action)
 }
 
 final class RegionViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet private weak var mienButton: UIButton!
+
     // MARK: - Properties
     var nameRegion: String = ""
-    var delegate: RegionViewControllerDelegate?
+    weak var delegate: RegionViewControllerDelegate?
+
+    enum Action {
+        case sendValueRegionAndProvinceAndDistrict(nameRegion: String, nameProvince: String, nameDistrict: String)
+    }
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Miền"
+        title = Configure.titleName
         editRightButton()
     }
 
     // MARK: - Private Functions
     private func editRightButton() {
-        let editButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(editProvinceClick))
+        let editButton = UIBarButtonItem(title: "Tỉnh", style: .plain, target: self, action: #selector(editProvinceTouchUpInside))
         navigationItem.rightBarButtonItem = editButton
     }
 
-
-    @IBAction func chooseTouchUpInside(_ sender: UIButton) {
-        
-        guard let nameRegion1 = sender.titleLabel?.text else { return }
-        nameRegion = nameRegion1
-        sender.backgroundColor = .blue
+    @IBAction private func chooseTouchUpInside(_ sender: UIButton) {
+        if let nameRegion1 = sender.titleLabel?.text {
+            nameRegion = nameRegion1
+            sender.backgroundColor = .blue
+        }
     }
 
     // MARK: - Objc
-    @objc private func editProvinceClick() {
+    @objc private func editProvinceTouchUpInside() {
         let vc = ProvinceViewController()
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-extension RegionViewController {
-    enum Action {
-        case sendValueRegionAndProvinceAndDistrict(nameRegion: String, nameProvince: String, nameDistrict: String)
-    }
-}
+
+// MARK: - ProvinceViewControllerDelegate
 extension RegionViewController: ProvinceViewControllerDelegate {
-    func setValueProvinceAndDistrict(_ provinceViewController: ProvinceViewController, needperform action: ProvinceViewController.Action) {
+    func setValueProvinceAndDistrict(_ provinceViewController: ProvinceViewController, needPerform action: ProvinceViewController.Action) {
         switch action {
         case .sendValueProvinceAndDistrict(nameProvince: let nameProvince1, nameDistrict: let nameDistrict1):
-            delegate?.setValueRegionAndProvinceAndDistrict(self, needperform: .sendValueRegionAndProvinceAndDistrict(nameRegion: nameRegion, nameProvince: nameProvince1, nameDistrict: nameDistrict1))
+            delegate?.setValueRegionAndProvinceAndDistrict(self, needPerform: .sendValueRegionAndProvinceAndDistrict(nameRegion: nameRegion, nameProvince: nameProvince1, nameDistrict: nameDistrict1))
         }
 
     }

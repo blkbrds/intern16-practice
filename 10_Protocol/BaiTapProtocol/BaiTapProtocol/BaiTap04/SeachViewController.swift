@@ -15,7 +15,6 @@ final class SeachViewController: UIViewController {
     @IBOutlet private weak var valueTextView: UITextView!
 
     // MARK: - Properties
-    
     private var provinceList: [String] = ["An Giang",
         "Bà Rịa - Vũng Tàu",
         "Bắc Giang",
@@ -83,7 +82,6 @@ final class SeachViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         searchBar.delegate = self
         getData(list: provinceList)
     }

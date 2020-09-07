@@ -8,20 +8,30 @@
 
 import UIKit
 
-protocol ProvinceViewControllerDelegate {
-    func setValueProvinceAndDistrict(_ provinceViewController: ProvinceViewController, needperform action: ProvinceViewController.Action)
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Tỉnh"
 }
+
+protocol ProvinceViewControllerDelegate: class {
+    func setValueProvinceAndDistrict(_ viewController: ProvinceViewController, needPerform action: ProvinceViewController.Action)
+}
+
 final class ProvinceViewController: UIViewController {
 
     // MARK: - Properties
     var getRegion: String = ""
     var nameProvince: String = ""
-    var delegate: ProvinceViewControllerDelegate?
+    weak var delegate: ProvinceViewControllerDelegate?
+
+    enum Action {
+        case sendValueProvinceAndDistrict(nameProvince: String, nameDistrict: String)
+    }
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tỉnh"
+        title = Configure.titleName
         editRightButton()
     }
 
@@ -31,29 +41,29 @@ final class ProvinceViewController: UIViewController {
         navigationItem.rightBarButtonItem = editButton
     }
 
-    @IBAction func chooseProvinceTouchUpInside(_ sender: UIButton) {
-        guard let nameProvince1 = sender.titleLabel?.text else { return }
-        nameProvince = nameProvince1
-        sender.backgroundColor = .green
-
+    @IBAction private func chooseProvinceTouchUpInside(_ sender: UIButton) {
+        if let nameProvince1 = sender.titleLabel?.text {
+            nameProvince = nameProvince1
+            sender.backgroundColor = .green
+        }
     }
-    // MARK: - Objc
+
+    // MARK: - Objc Private Functions
     @objc private func editDistrictClick() {
         let vc = DistrictViewController()
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-extension ProvinceViewController {
-    enum Action {
-        case sendValueProvinceAndDistrict(nameProvince: String, nameDistrict: String)
-    }
-}
+
+// MARK: - DistrictViewControllerDelegate
 extension ProvinceViewController: DistrictViewControllerDelegate {
-    func setValueDistrict(_ districtViewController: DistrictViewController, needperform action: DistrictViewController.Action) {
+    func setValueDistrict(_ districtViewController: DistrictViewController, needPerform action: DistrictViewController.Action) {
         switch action {
         case .sendValueDistrict(nameDistrict: let nameDistrict1):
-            delegate?.setValueProvinceAndDistrict(self, needperform: .sendValueProvinceAndDistrict(nameProvince: nameProvince, nameDistrict: nameDistrict1))
+            if let delegate = delegate {
+                delegate.setValueProvinceAndDistrict(self, needPerform: .sendValueProvinceAndDistrict(nameProvince: nameProvince, nameDistrict: nameDistrict1))
+            }
         }
     }
 }

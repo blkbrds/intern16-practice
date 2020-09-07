@@ -18,6 +18,7 @@
 		703574E224CAE7FB0090EE23 /* ProvinceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703574E024CAE7FB0090EE23 /* ProvinceViewController.xib */; };
 		703574E524CAE8160090EE23 /* DistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703574E324CAE8160090EE23 /* DistrictViewController.swift */; };
 		703574E624CAE8160090EE23 /* DistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703574E424CAE8160090EE23 /* DistrictViewController.xib */; };
+		703A959D2504096900BFE407 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A959C2504096900BFE407 /* Calculator.swift */; };
 		70C89B1224D2C442008C7126 /* SeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C89B1024D2C442008C7126 /* SeachViewController.swift */; };
 		70C89B1324D2C442008C7126 /* SeachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70C89B1124D2C442008C7126 /* SeachViewController.xib */; };
 		70C89B1624D90427008C7126 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C89B1424D90427008C7126 /* CalculateViewController.swift */; };
@@ -40,6 +41,7 @@
 		703574E024CAE7FB0090EE23 /* ProvinceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProvinceViewController.xib; sourceTree = "<group>"; };
 		703574E324CAE8160090EE23 /* DistrictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictViewController.swift; sourceTree = "<group>"; };
 		703574E424CAE8160090EE23 /* DistrictViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistrictViewController.xib; sourceTree = "<group>"; };
+		703A959C2504096900BFE407 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		70C89B1024D2C442008C7126 /* SeachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachViewController.swift; sourceTree = "<group>"; };
 		70C89B1124D2C442008C7126 /* SeachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeachViewController.xib; sourceTree = "<group>"; };
 		70C89B1424D90427008C7126 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				70C89B1524D90427008C7126 /* CalculateViewController.xib */,
 				70C89B1824D9046F008C7126 /* CustomViewCalculate.swift */,
 				70C89B1B24D90548008C7126 /* CustomViewCalculate.xib */,
+				703A959C2504096900BFE407 /* Calculator.swift */,
 			);
 			path = BaiTap05;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				703574DD24CAE72C0090EE23 /* RegionViewController.swift in Sources */,
 				70C89B1924D9046F008C7126 /* CustomViewCalculate.swift in Sources */,
 				70C89B1224D2C442008C7126 /* SeachViewController.swift in Sources */,
+				703A959D2504096900BFE407 /* Calculator.swift in Sources */,
 				703574D924CAE6FA0090EE23 /* LocationViewController.swift in Sources */,
 				703574E524CAE8160090EE23 /* DistrictViewController.swift in Sources */,
 				703574C124CA7D5B0090EE23 /* AppDelegate.swift in Sources */,

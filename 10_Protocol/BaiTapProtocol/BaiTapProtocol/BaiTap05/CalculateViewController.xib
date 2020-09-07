@@ -1,22 +1,76 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateViewController" customModule="BaiTapProtocol" customModuleProvider="target">
             <connections>
+                <outlet property="mathButton" destination="nUf-57-S2d" id="9Q2-aO-wGa"/>
+                <outlet property="numberXTextField" destination="5jH-oO-agf" id="aXP-cQ-Kgd"/>
+                <outlet property="numberYTextField" destination="etT-6c-rkO" id="Szk-xF-qcL"/>
+                <outlet property="resultLabel" destination="SKq-T4-jIP" id="hh8-d6-a7T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-mT-yif">
+                    <rect key="frame" x="52" y="124" width="310" height="42"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-oO-agf">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="FAq-C4-3hI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUf-57-S2d">
+                            <rect key="frame" x="120" y="0.0" width="70" height="42"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <state key="normal" title="?"/>
+                            <connections>
+                                <action selector="mathButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="2pv-x7-YUZ"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etT-6c-rkO">
+                            <rect key="frame" x="210" y="0.0" width="100" height="42"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="etT-6c-rkO" firstAttribute="width" secondItem="5jH-oO-agf" secondAttribute="width" id="1EC-Hw-ZEh"/>
+                        <constraint firstItem="nUf-57-S2d" firstAttribute="width" secondItem="5jH-oO-agf" secondAttribute="width" multiplier="0.7" id="Awm-rm-9yM"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKq-T4-jIP">
+                    <rect key="frame" x="132" y="196" width="150" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="zwU-1H-LV3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="SKq-T4-jIP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5b1-KC-3uL"/>
+                <constraint firstItem="gl5-mT-yif" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="Y7s-kz-XEw"/>
+                <constraint firstItem="SKq-T4-jIP" firstAttribute="top" secondItem="gl5-mT-yif" secondAttribute="bottom" constant="30" id="a91-CP-hPA"/>
+                <constraint firstItem="gl5-mT-yif" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ix4-Vq-2Uy"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="132"/>
         </view>
     </objects>
 </document>

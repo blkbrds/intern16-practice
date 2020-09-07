@@ -8,15 +8,24 @@
 
 import UIKit
 
+// MARK: - Configure
+private struct Configure {
+    static let titleName = "Huyện"
+}
+
 // MARK: - Protocol
-protocol DistrictViewControllerDelegate {
-    func setValueDistrict(_ districtViewController: DistrictViewController, needperform action: DistrictViewController.Action)
+protocol DistrictViewControllerDelegate: class {
+    func setValueDistrict(_ viewController: DistrictViewController, needPerform action: DistrictViewController.Action)
 }
 
 final class DistrictViewController: UIViewController {
 
     // MARK: - Properties
-    var delegate: DistrictViewControllerDelegate?
+    enum Action {
+        case sendValueDistrict(nameDistrict: String)
+    }
+
+    weak var delegate: DistrictViewControllerDelegate?
     var getRegion: String = ""
     var getProvince: String = ""
     var nameDistrict: String = ""
@@ -25,7 +34,7 @@ final class DistrictViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Huyện"
+        title = Configure.titleName
         editRightButton()
     }
 
@@ -34,21 +43,19 @@ final class DistrictViewController: UIViewController {
         let editButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneClick))
         navigationItem.rightBarButtonItem = editButton
     }
-    @IBAction func chooseDistrictTouchUpInside(_ sender: UIButton) {
-        guard let nameDistrict1 = sender.titleLabel?.text else { return }
-        nameDistrict = nameDistrict1
-        sender.backgroundColor = .orange
+
+    @IBAction private func chooseDistrictTouchUpInside(_ sender: UIButton) {
+        if let nameDistrict1 = sender.titleLabel?.text {
+            nameDistrict = nameDistrict1
+            sender.backgroundColor = .orange
+        }
     }
 
-    // MARK: - Objc
+    // MARK: - Objc Private Functions
     @objc private func doneClick() {
-        delegate?.setValueDistrict(self, needperform: .sendValueDistrict(nameDistrict: nameDistrict))
-        navigationController?.popToRootViewController(animated: true)
+        if let delegate = delegate {
+            delegate.setValueDistrict(self, needPerform: .sendValueDistrict(nameDistrict: nameDistrict))
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
-extension DistrictViewController {
-    enum Action {
-        case sendValueDistrict(nameDistrict: String)
-    }
-}
-
