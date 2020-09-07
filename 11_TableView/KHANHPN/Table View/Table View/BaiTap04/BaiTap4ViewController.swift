@@ -11,10 +11,10 @@ import UIKit
 final class BaiTap4ViewController: UIViewController {
     
     // MARK: - Properties
-    var back: [String] = []
-    var midfielders: [String] = []
-    var forward: [String] = []
-    var players: [[String]] = [[]]
+    private var back: [String] = []
+    private var midfielders: [String] = []
+    private var forward: [String] = []
+    private var players: [[String]] = [[]]
     
     // MARK: - Life cycle
     override func viewDidLoad() {

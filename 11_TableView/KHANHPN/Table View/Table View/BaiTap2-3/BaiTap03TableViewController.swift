@@ -11,7 +11,7 @@ import UIKit
 final class BaiTap03TableViewController: UITableViewController {
     
     // MARK: - Properties
-    var data: [String] = []
+    private var data: [String] = []
     
     // MARK: - Life cycle
     override func viewDidLoad() {

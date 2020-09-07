@@ -57,6 +57,14 @@ final class BaiTap12ViewController: UIViewController {
         navigationItem.leftBarButtonItem = .none
     }
     
+    private func add(_ name: String) {
+        let index = 0
+        contacts.insert(name, at: index)
+        let indexPath = IndexPath(row: index, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
+    // MARK: - IBAction
     @IBAction private func onAddTapped() {
         let alert = UIAlertController(title: "Add contact", message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (contactTextField) in
@@ -70,13 +78,6 @@ final class BaiTap12ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-    }
-    
-    private func add(_ name: String) {
-        let index = 0
-        contacts.insert(name, at: index)
-        let indexPath = IndexPath(row: index, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
     }
 }
 

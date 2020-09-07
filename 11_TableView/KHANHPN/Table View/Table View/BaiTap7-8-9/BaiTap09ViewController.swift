@@ -14,15 +14,15 @@ final class BaiTap09ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    var dataIndex: [String] = []
-    var back: [String] = []
-    var midfielders: [String] = []
-    var forward: [String] = []
-    var players: [[String]] = [[]]
-    let backImg: [UIImage?] = [UIImage(named: "casilas"), UIImage(named: "ramos"), UIImage(named: "pepe"), UIImage(named: "carvajal"), UIImage(named: "marcelo")]
-    let midfieldersImg: [UIImage?] = [UIImage(named: "alonso"), UIImage(named: "kroos"), UIImage(named: "rooney")]
-    let fowardImg: [UIImage?] = [UIImage(named: "kaka"), UIImage(named: "asensio"), UIImage(named: "ronaldo")]
-    var images: [[UIImage?]] = [[]]
+    private var dataIndex: [String] = []
+    private var back: [String] = []
+    private var midfielders: [String] = []
+    private var forward: [String] = []
+    private var players: [[String]] = [[]]
+    private let backImg: [UIImage?] = [UIImage(named: "casilas"), UIImage(named: "ramos"), UIImage(named: "pepe"), UIImage(named: "carvajal"), UIImage(named: "marcelo")]
+    private let midfieldersImg: [UIImage?] = [UIImage(named: "alonso"), UIImage(named: "kroos"), UIImage(named: "rooney")]
+    private let fowardImg: [UIImage?] = [UIImage(named: "kaka"), UIImage(named: "asensio"), UIImage(named: "ronaldo")]
+    private var images: [[UIImage?]] = [[]]
     
     // MARK: - Life cycle
     override func viewDidLoad() {
