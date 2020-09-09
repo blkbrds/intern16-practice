@@ -61,7 +61,7 @@
                         </constraints>
                         <state key="normal" title="Button" image="heart" catalog="system"/>
                         <connections>
-                            <action selector="favoriteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="i53-FM-l9V"/>
+                            <action selector="favoritePressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="r7B-WN-qsq"/>
                         </connections>
                     </button>
                 </subviews>
@@ -90,7 +90,7 @@
             <connections>
                 <outlet property="addressLabel" destination="DxZ-ju-ES6" id="ebp-hs-TGw"/>
                 <outlet property="distanceLabel" destination="iEQ-pg-itO" id="16p-hp-aXl"/>
-                <outlet property="favoriteButton" destination="wDI-Ec-71e" id="F7G-Ny-hTB"/>
+                <outlet property="favoriteButton" destination="wDI-Ec-71e" id="xTa-Wm-pHH"/>
                 <outlet property="imageView" destination="Ocw-oN-U1X" id="OsL-FJ-m8e"/>
                 <outlet property="nameLabel" destination="GXb-Ma-h2s" id="sw5-x4-WUi"/>
                 <outlet property="rateLabel" destination="p13-6P-w1Y" id="QI6-7J-qJi"/>

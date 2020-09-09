@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
     
     func configNavigation() {
         title = "Detail"
-        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "star.fill"), style: .plain, target: self, action: #selector(favoriteButton))
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "star.fill"), style: .plain, target: self, action: #selector(favoriteTapped))
         if isFavorite {
             rightBarButton.tintColor = .systemYellow
         } else {
@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightBarButton
     }
     
-    @objc func favoriteButton() {
+    @objc func favoriteTapped() {
         if self.isFavorite {
             isFavorite = false
         } else {
@@ -88,14 +88,5 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier:"DetailTableViewCell" , for: indexPath) as! DetailTableViewCell
         cell.viewModel = viewModel.viewModelForCell(at: indexPath)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.alpha = 0
-        cell.transform = CGAffineTransform(translationX: 0, y: 200)
-        UIView.animate(withDuration: 1) {
-            cell.alpha = 1
-            cell.transform = .identity
-        }
     }
 }

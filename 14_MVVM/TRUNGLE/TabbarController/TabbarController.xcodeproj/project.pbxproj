@@ -19,7 +19,7 @@
 		5128C3972504DA18007ED7B6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128C3952504DA18007ED7B6 /* DetailTableViewCell.swift */; };
 		5128C3982504DA18007ED7B6 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5128C3962504DA18007ED7B6 /* DetailTableViewCell.xib */; };
 		5128C39A2504DA38007ED7B6 /* DetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128C3992504DA38007ED7B6 /* DetailCellViewModel.swift */; };
-		5128C39C2504DB78007ED7B6 /* DataDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128C39B2504DB77007ED7B6 /* DataDetail.swift */; };
+		5128C39C2504DB78007ED7B6 /* DataCellDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128C39B2504DB77007ED7B6 /* DataCellDetail.swift */; };
 		5134529324F839FF0010A32E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5134529124F839FF0010A32E /* LoginViewController.xib */; };
 		5134529424F839FF0010A32E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134529224F839FF0010A32E /* LoginViewController.swift */; };
 		5134529624F83A090010A32E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134529524F83A090010A32E /* MainTabbarController.swift */; };
@@ -33,7 +33,7 @@
 		513452A624F83A310010A32E /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 513452A424F83A310010A32E /* FavoriteViewController.xib */; };
 		513452A824F83A7C0010A32E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513452A724F83A7C0010A32E /* LoginViewModel.swift */; };
 		513452AA24F83AB60010A32E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513452A924F83AB60010A32E /* BaseViewController.swift */; };
-		513452AD24F83CC10010A32E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513452AC24F83CC10010A32E /* DataManager.swift */; };
+		513452AD24F83CC10010A32E /* DataUser_CoffeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513452AC24F83CC10010A32E /* DataUser_CoffeManager.swift */; };
 		5153D00D24E0DEC9005264AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153D00C24E0DEC9005264AE /* AppDelegate.swift */; };
 		5153D00F24E0DEC9005264AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153D00E24E0DEC9005264AE /* SceneDelegate.swift */; };
 		5153D01124E0DEC9005264AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153D01024E0DEC9005264AE /* ViewController.swift */; };
@@ -55,7 +55,7 @@
 		5128C3952504DA18007ED7B6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailTableViewCell.swift; path = ../../../../../../trungld/Desktop/TabbarController/TabbarController/Detail/DetailCell/DetailTableViewCell.swift; sourceTree = "<group>"; };
 		5128C3962504DA18007ED7B6 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailTableViewCell.xib; path = ../../../../../../trungld/Desktop/TabbarController/TabbarController/Detail/DetailCell/DetailTableViewCell.xib; sourceTree = "<group>"; };
 		5128C3992504DA38007ED7B6 /* DetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailCellViewModel.swift; path = ../../../../../../trungld/Desktop/TabbarController/TabbarController/Detail/DetailCell/DetailCellViewModel.swift; sourceTree = "<group>"; };
-		5128C39B2504DB77007ED7B6 /* DataDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataDetail.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Data/DataDetail.swift; sourceTree = "<group>"; };
+		5128C39B2504DB77007ED7B6 /* DataCellDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataCellDetail.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Data/DataCellDetail.swift; sourceTree = "<group>"; };
 		5134529124F839FF0010A32E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Login/LoginViewController.xib; sourceTree = "<group>"; };
 		5134529224F839FF0010A32E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		5134529524F83A090010A32E /* MainTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabbarController.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/MainBarController/MainTabbarController.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		513452A424F83A310010A32E /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FavoriteViewController.xib; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Favorties/FavoriteViewController.xib; sourceTree = "<group>"; };
 		513452A724F83A7C0010A32E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Login/LoginViewModel.swift; sourceTree = "<group>"; };
 		513452A924F83AB60010A32E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/MainBarController/BaseViewController.swift; sourceTree = "<group>"; };
-		513452AC24F83CC10010A32E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Data/DataManager.swift; sourceTree = "<group>"; };
+		513452AC24F83CC10010A32E /* DataUser_CoffeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataUser_CoffeManager.swift; path = ../../../../../trungld/Desktop/TabbarController/TabbarController/Data/DataUser_CoffeManager.swift; sourceTree = "<group>"; };
 		5153D00924E0DEC9005264AE /* TabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5153D00C24E0DEC9005264AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5153D00E24E0DEC9005264AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		513452AB24F83CB20010A32E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				513452AC24F83CC10010A32E /* DataManager.swift */,
-				5128C39B2504DB77007ED7B6 /* DataDetail.swift */,
+				513452AC24F83CC10010A32E /* DataUser_CoffeManager.swift */,
+				5128C39B2504DB77007ED7B6 /* DataCellDetail.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			files = (
 				5134529624F83A090010A32E /* MainTabbarController.swift in Sources */,
 				5106DECF24FCF12E004DFB41 /* DetailViewController.swift in Sources */,
-				513452AD24F83CC10010A32E /* DataManager.swift in Sources */,
+				513452AD24F83CC10010A32E /* DataUser_CoffeManager.swift in Sources */,
 				5153D01124E0DEC9005264AE /* ViewController.swift in Sources */,
 				513452AA24F83AB60010A32E /* BaseViewController.swift in Sources */,
 				513452A124F83A270010A32E /* ProfileViewController.swift in Sources */,
@@ -334,7 +334,7 @@
 				513452A824F83A7C0010A32E /* LoginViewModel.swift in Sources */,
 				5106DECA24FCDE26004DFB41 /* HomeTableViewCell.swift in Sources */,
 				5153D00F24E0DEC9005264AE /* SceneDelegate.swift in Sources */,
-				5128C39C2504DB78007ED7B6 /* DataDetail.swift in Sources */,
+				5128C39C2504DB78007ED7B6 /* DataCellDetail.swift in Sources */,
 				5128C3972504DA18007ED7B6 /* DetailTableViewCell.swift in Sources */,
 				5128C39A2504DA38007ED7B6 /* DetailCellViewModel.swift in Sources */,
 			);

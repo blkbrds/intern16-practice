@@ -7,7 +7,7 @@
 //
 
 import Foundation
-final class DataDetail {
+final class DataCellDetail {
     //MARK: - Properties
     var name: String
     var image: String

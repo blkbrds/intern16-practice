@@ -42,15 +42,20 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     //MARK: -IBAction
-    @IBAction func favoriteButton(_ sender: Any) {
+    
+    @IBAction func favoritePressed(_ sender: UIButton) {
         if favoriteButton.isSelected {
             favoriteButton.tintColor = .systemYellow
             favoriteButton.isSelected = false
-            viewModel!.favorite = true
+            if let viewModel = viewModel {
+                viewModel.favorite = true
+            } else { return }
         } else {
             favoriteButton.tintColor = .black
             favoriteButton.isSelected = true
-            viewModel!.favorite = false
+             if let viewModel = viewModel {
+                viewModel.favorite = false
+             } else { return }
         }
     }
     

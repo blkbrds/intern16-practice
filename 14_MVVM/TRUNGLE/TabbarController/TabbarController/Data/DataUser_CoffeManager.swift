@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class DataManager {
+class DataUser_CoffeManager {
     
     // MARK: - Properties
     var name: String
@@ -27,17 +27,17 @@ class DataManager {
         self.favorite = favorite
     }
     //singleton
-    private static var sharedDataManager: DataManager = {
-        let dataManager = DataManager()
+    private static var sharedDataManager: DataUser_CoffeManager = {
+        let dataManager = DataUser_CoffeManager()
         return dataManager
     }()
     
-    class func shared() -> DataManager {
+    class func shared() -> DataUser_CoffeManager {
         return sharedDataManager
     }
     
     //open database
-    func read() -> (String, String) {
+    func getUser() -> (String, String) {
         let email = UserDefaults.standard.string(forKey: "email") ?? ""
         let password = UserDefaults.standard.string(forKey: "password") ?? ""
         return (email, password)
@@ -47,6 +47,5 @@ class DataManager {
     func save(email: String, password: String) {
         UserDefaults.standard.set(email, forKey: "email")
         UserDefaults.standard.set(password, forKey: "password")
-        UserDefaults.standard.synchronize()
     }
 }

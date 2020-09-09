@@ -36,21 +36,27 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     //MARK: - IBAction
-    @IBAction func favoriteButton(_ sender: Any) {
+    @IBAction func favoritePressed(_ sender: UIButton) {
         if favoriteButton.isSelected {
             favoriteButton.tintColor = .systemYellow
             favoriteButton.isSelected = false
-            viewModel!.favorite = true
+            if let viewModel = viewModel {
+                viewModel.favorite = true
+            } else { return }
         } else {
             favoriteButton.tintColor = .black
             favoriteButton.isSelected = true
-            viewModel!.favorite = false
+             if let viewModel = viewModel {
+                viewModel.favorite = false
+             } else { return }
         }
     }
-    
+
     //MARK: - Function
     func updateView() {
-        imageView.image = UIImage(named: viewModel!.image)
+        if let viewModel = viewModel {
+            imageView.image = UIImage(named: viewModel.image)
+        } else { return }
         nameLabel.text = viewModel?.name
         addressLabel.text = viewModel?.address
         rateLabel.text = viewModel?.rate

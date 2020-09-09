@@ -11,9 +11,9 @@ final class HomeViewModel {
     
     //MARK: - Properties:
     static var shared = HomeViewModel()
-    var datas: [DataManager] = []
+    var datas: [DataUser_CoffeManager] = []
     let images: [String] = ["pic1","pic2","pic3","pic4","pic5","pic6"]
-    var coffeList: [DataManager] = [DataManager(name: "The Coffe House", image: "pic1", address: "123 Nguyễn Văn Linh", distance: "2km", rate: "8/10", favorite: true),DataManager(name: "Highland", image: "pic2", address: "213 Trần Phú", distance: "1km", rate: "8/10", favorite: false),DataManager(name: "abc", image: "pic3", address: "128 Ngô Quyền", distance: "3km", rate: "9/10", favorite: false),DataManager(name: "sinhvien", image: "pic4", address: "128 Phạm Phú Thứ", distance: "5km", rate: "7/10", favorite: false),DataManager(name: "Học SInh", image: "pic5", address: "977 Ngũ Hành Sơn", distance: "6km", rate: "6/10", favorite: false),DataManager(name: "Phụ Huynh", image: "pic6", address: "12 Lê Đại Hành", distance: "10km", rate: "8/10", favorite: true)]
+    var coffeList: [DataUser_CoffeManager] = [DataUser_CoffeManager(name: "The Coffe House", image: "pic1", address: "123 Nguyễn Văn Linh", distance: "2km", rate: "8/10", favorite: true),DataUser_CoffeManager(name: "Highland", image: "pic2", address: "213 Trần Phú", distance: "1km", rate: "8/10", favorite: false),DataUser_CoffeManager(name: "abc", image: "pic3", address: "128 Ngô Quyền", distance: "3km", rate: "9/10", favorite: false),DataUser_CoffeManager(name: "sinhvien", image: "pic4", address: "128 Phạm Phú Thứ", distance: "5km", rate: "7/10", favorite: false),DataUser_CoffeManager(name: "Học SInh", image: "pic5", address: "977 Ngũ Hành Sơn", distance: "6km", rate: "6/10", favorite: false),DataUser_CoffeManager(name: "Phụ Huynh", image: "pic6", address: "12 Lê Đại Hành", distance: "10km", rate: "8/10", favorite: true)]
    
     //MARK: - Function
     func changeState(postion: Int, favorite: Bool) {
