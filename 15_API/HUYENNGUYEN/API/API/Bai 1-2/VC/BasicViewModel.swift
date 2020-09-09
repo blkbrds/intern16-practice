@@ -24,4 +24,13 @@ class BasicViewModel {
             }
         }
     }
+    
+    func numberOfRows(inSection section: Int) -> Int {
+        return audios.count
+    }
+    
+    func viewModelForItem(at indexPath: IndexPath) -> ImageTableViewCellViewModel? {
+        let item = audios[indexPath.row]
+        return ImageTableViewCellViewModel(audio: item)
+    }
 }

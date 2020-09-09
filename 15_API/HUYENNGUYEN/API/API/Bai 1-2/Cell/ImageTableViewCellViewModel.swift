@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+final class ImageTableViewCellViewModel {
+    var audio: Audio
+    var imageName: String? {
+        return audio.imageName
+    }
+    
+    init(audio: Audio) {
+        self.audio = audio
+    }
+}

@@ -11,7 +11,7 @@ import Foundation
 extension APIManager.Image {
     struct QueryString {
         func hotAudio(limit: Int) -> String {
-            return APIManager.Path.base_domain + APIManager.Path.base_path + APIManager.Path.audio_path + APIManager.Path.audio_hot
+            return APIManager.Path.baseDomain + APIManager.Path.basePath + APIManager.Path.audioPath + APIManager.Path.audioHot
         }
     }
     
