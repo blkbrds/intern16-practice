@@ -9,26 +9,21 @@
 import UIKit
 
 class YoutubeTableViewCell: UITableViewCell {
-
+    
+    // MARK: - Outlets
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var chanelLabel: UILabel!
     @IBOutlet weak var publishedLabel: UILabel!
     
-    
+    // MARK: - Properties
     var viewModel: YoutubeTableViewCellViewModel? {
         didSet {
             updateView()
         }
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
+    //MARK: - Function
     private func updateView() {
         guard let viewModel = viewModel else { return }
         if let imageURL = viewModel.thumbnailImageName {

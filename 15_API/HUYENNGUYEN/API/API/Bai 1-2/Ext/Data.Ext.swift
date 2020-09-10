@@ -8,8 +8,10 @@
 
 import Foundation
 
+//MARK: - Typealias
 typealias JSON = [String: Any]
 
+//MARK: - Extension
 extension Data {
     func toJSON() -> JSON {
         var json: [String: Any] = [:]

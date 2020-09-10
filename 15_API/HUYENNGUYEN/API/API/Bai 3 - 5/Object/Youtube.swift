@@ -9,12 +9,14 @@
 import UIKit
 
 final class Youtube {
+    //MARK: - Properties
     var videoID: String = ""
     var titleVideo: String?
     var chanelTitle: String?
     var publishedAt: String?
     var thumbnailImage: String?
     
+    //MARK: - Initialization
     init(json: JSON) {
         if let id = json["id"] as? JSON, let videoID = id["videoID"] as? String {
             self.videoID = videoID

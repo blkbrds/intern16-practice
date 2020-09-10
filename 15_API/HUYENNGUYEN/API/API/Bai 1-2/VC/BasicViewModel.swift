@@ -8,11 +8,15 @@
 
 import Foundation
 
+// MARK: - Typealias
 typealias Completion = (Bool, String) -> Void
 
-class BasicViewModel {
-    var audios: [Audio] = []
+final class BasicViewModel {
     
+    // MARK: - Properties
+    private var audios: [Audio] = []
+    
+    // MARK: - Function
     func loadAPI(completion: @escaping Completion) {
         APIManager.Image.getHotAudio { (result) in
             switch result {

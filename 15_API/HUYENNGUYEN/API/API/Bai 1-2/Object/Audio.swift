@@ -9,8 +9,11 @@
 import UIKit
 
 final class Audio {
+    
+    //MARK: - Property
     var imageName: String?
     
+    //MARK: - Initialization
     init(json: JSON) {
         if let imageNames = json["im:image"] as? [JSON], !imageNames.isEmpty {
             imageName = imageNames[0]["label"] as? String

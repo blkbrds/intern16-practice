@@ -8,15 +8,22 @@
 
 import Foundation
 
-class MasterViewModel {
+final class MasterViewModel {
+    
+    //MARK: - Properties
     var youtubes: [Youtube] = []
     var nextPage: String?
     
-    func loadAPI(completion: @escaping Completion) {
+    //MARK: - Functions
+    func loadAPI(isRefresh: Bool, completion: @escaping Completion) {
         APIManager.Youtube.getHotYoutube(pageToken: nextPage, keyword: "lactroi") { (result) in
             switch result {
             case .success(let data):
-                self.youtubes.append(contentsOf: data.youtubes)
+                if isRefresh {
+                    self.youtubes = data.youtubes
+                } else {
+                    self.youtubes.append(contentsOf: data.youtubes)
+                }
                 self.nextPage = data.nextPage
                 completion(true, "")
             case .failure(let error):

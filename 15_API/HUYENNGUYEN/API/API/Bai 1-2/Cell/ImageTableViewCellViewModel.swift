@@ -9,11 +9,14 @@
 import Foundation
 
 final class ImageTableViewCellViewModel {
+    
+    //MARK: - Properties
     var audio: Audio
     var imageName: String? {
         return audio.imageName
     }
     
+    //MARK: - Initialization
     init(audio: Audio) {
         self.audio = audio
     }

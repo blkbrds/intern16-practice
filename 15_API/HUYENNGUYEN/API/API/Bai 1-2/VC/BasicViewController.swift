@@ -8,11 +8,15 @@
 
 import UIKit
 
-class BasicViewController: UIViewController {
+final class BasicViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    var viewModel = BasicViewModel()
-        
+    // MARK: - Outlet
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Property
+    private var viewModel = BasicViewModel()
+     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
@@ -20,6 +24,7 @@ class BasicViewController: UIViewController {
         loadAPI()
     }
     
+    // MARK: - Function
     private func configTableView() {
         let nib = UINib(nibName: "ImageTableViewCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "ImageTableViewCell")
@@ -38,6 +43,7 @@ class BasicViewController: UIViewController {
     }
 }
 
+// MARK: - Extension UITableViewDataSource
 extension BasicViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRows(inSection: section)
@@ -51,6 +57,7 @@ extension BasicViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Extension UITableViewDelegate
 extension BasicViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200

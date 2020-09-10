@@ -9,24 +9,23 @@
 import UIKit
 
 class ImageTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var showImageView: UIImageView!
     
+    //MARK: - Outlet
+    @IBOutlet private weak var showImageView: UIImageView!
+    
+    //MARK: - Property
     var viewModel: ImageTableViewCellViewModel? {
         didSet {
             updateView()
         }
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
+    //MARK: - Function
     private func updateView() {
         guard let viewModel = viewModel else { return }
         if let imageURL = viewModel.imageName {
-            API.shared().dowloadImage(url: imageURL) { [weak self] (image) in
-                guard let this = self else { return }
-                this.showImageView.image = image
+            API.shared().dowloadImage(url: imageURL) { (image) in
+                self.showImageView.image = image
             }
         } else {
             showImageView.image = nil

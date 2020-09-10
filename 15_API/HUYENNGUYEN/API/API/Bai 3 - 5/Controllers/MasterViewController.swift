@@ -8,22 +8,28 @@
 
 import UIKit
 
-class MasterViewController: UIViewController {
-
+final class MasterViewController: UIViewController {
+    
+    //MARK: - Outlet
     @IBOutlet private weak var tableView: UITableView!
     
+    //MARK: - Properties
     private lazy var searchController = UISearchController(searchResultsController: nil)
-    var viewModel = MasterViewModel()
-    var isLoading: Bool = false
-
+    private var viewModel = MasterViewModel()
+    private var isLoading: Bool = false
+    private let refreshControl = UIRefreshControl()
+    
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Search"
         navigationItem.searchController = searchController
         configTableView()
-        loadAPI()
+        loadAPI(isRefresh: false)
+        configRefeshControl()
     }
     
+    //MARK: - Function
     private func configTableView() {
         let nib = UINib(nibName: "YoutubeTableViewCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "YoutubeTableViewCell")
@@ -31,19 +37,32 @@ class MasterViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    private func loadAPI() {
+    private func configRefeshControl() {
+        refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    private func loadAPI(isRefresh: Bool) {
         isLoading = true
-        viewModel.loadAPI { (done, message) in
+        viewModel.loadAPI(isRefresh: isRefresh) { (done, message) in
             if done {
                 self.tableView.reloadData()
             } else {
                 print("API ERROR: \(message)")
             }
             self.isLoading = false
+            self.refreshControl.endRefreshing()
         }
+    }
+    
+    //MARK: - Objc
+    @objc private func updateData() {
+        loadAPI(isRefresh: true)
+        print("fsd")
     }
 }
 
+//MARK: - Extension UITableViewDataSource
 extension MasterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.youtubes.count
@@ -56,6 +75,7 @@ extension MasterViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - UITableViewDelegate
 extension MasterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
@@ -68,9 +88,9 @@ extension MasterViewController: UITableViewDelegate {
         let inset = scrollView.contentInset
         let y = offset.y + bounds.size.height - inset.bottom
         let h = size.height
-        let reload_distance:CGFloat = 10.0
+        let reload_distance: CGFloat = 10.0
         if y > (h + reload_distance), viewModel.nextPage != "", !isLoading {
-            loadAPI()
+            loadAPI(isRefresh: false)
         }
     }
 }
