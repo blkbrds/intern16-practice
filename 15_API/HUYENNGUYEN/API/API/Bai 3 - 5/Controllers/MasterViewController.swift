@@ -58,7 +58,6 @@ final class MasterViewController: UIViewController {
     //MARK: - Objc
     @objc private func updateData() {
         loadAPI(isRefresh: true)
-        print("fsd")
     }
 }
 
