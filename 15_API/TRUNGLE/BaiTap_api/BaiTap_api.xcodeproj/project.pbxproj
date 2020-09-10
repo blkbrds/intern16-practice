@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		517645A72509BD0D007A53F9 /* Bai1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517645A62509BD0D007A53F9 /* Bai1ViewController.swift */; };
+		5184AFC7250A0C1F0063911E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFC6250A0C1F0063911E /* API.swift */; };
+		5184AFC9250A0C320063911E /* API.Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFC8250A0C320063911E /* API.Request.swift */; };
+		5184AFCB250A0C400063911E /* API.Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFCA250A0C400063911E /* API.Manager.swift */; };
+		5184AFCD250A0C710063911E /* Data.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFCC250A0C710063911E /* Data.Ext.swift */; };
+		5184AFCF250A0CA00063911E /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFCE250A0CA00063911E /* Music.swift */; };
+		5184AFD6250A0D1C0063911E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5184AFD4250A0D1C0063911E /* HomeViewController.xib */; };
+		5184AFD7250A0D1C0063911E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFD5250A0D1C0063911E /* HomeViewController.swift */; };
+		5184AFD9250A0D340063911E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFD8250A0D340063911E /* HomeViewModel.swift */; };
+		5184AFDD250A0D8F0063911E /* Bai2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFDB250A0D8F0063911E /* Bai2TableViewCell.swift */; };
+		5184AFDE250A0D8F0063911E /* Bai2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5184AFDC250A0D8F0063911E /* Bai2TableViewCell.xib */; };
+		5184AFE0250A0DAB0063911E /* Bai2CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFDF250A0DAB0063911E /* Bai2CellViewModel.swift */; };
+		5184AFE2250A28CF0063911E /* API.Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFE1250A28CF0063911E /* API.Image.swift */; };
 		51A34E0B25088DC200E94CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A34E0A25088DC200E94CA7 /* AppDelegate.swift */; };
 		51A34E0D25088DC200E94CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A34E0C25088DC200E94CA7 /* SceneDelegate.swift */; };
 		51A34E0F25088DC200E94CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A34E0E25088DC200E94CA7 /* ViewController.swift */; };
@@ -17,7 +28,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		517645A62509BD0D007A53F9 /* Bai1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai1ViewController.swift; path = "../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Bai1/Bai1ViewController.swift"; sourceTree = "<group>"; };
+		5184AFC6250A0C1F0063911E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.swift"; sourceTree = "<group>"; };
+		5184AFC8250A0C320063911E /* API.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.Request.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.Request.swift"; sourceTree = "<group>"; };
+		5184AFCA250A0C400063911E /* API.Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.Manager.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.Manager.swift"; sourceTree = "<group>"; };
+		5184AFCC250A0C710063911E /* Data.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Data.Ext.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/Ext/Data.Ext.swift"; sourceTree = "<group>"; };
+		5184AFCE250A0CA00063911E /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Music.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/Objects/Music.swift"; sourceTree = "<group>"; };
+		5184AFD4250A0D1C0063911E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/HomeViewController.xib"; sourceTree = "<group>"; };
+		5184AFD5250A0D1C0063911E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/HomeViewController.swift"; sourceTree = "<group>"; };
+		5184AFD8250A0D340063911E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/HomeViewModel.swift"; sourceTree = "<group>"; };
+		5184AFDB250A0D8F0063911E /* Bai2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai2TableViewCell.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Cell/Bai2TableViewCell.swift"; sourceTree = "<group>"; };
+		5184AFDC250A0D8F0063911E /* Bai2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai2TableViewCell.xib; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Cell/Bai2TableViewCell.xib"; sourceTree = "<group>"; };
+		5184AFDF250A0DAB0063911E /* Bai2CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai2CellViewModel.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Cell/Bai2CellViewModel.swift"; sourceTree = "<group>"; };
+		5184AFE1250A28CF0063911E /* API.Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.Image.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.Image.swift"; sourceTree = "<group>"; };
 		51A34E0725088DC200E94CA7 /* BaiTap_api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap_api.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A34E0A25088DC200E94CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A34E0C25088DC200E94CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +61,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		517645A52509BCF9007A53F9 /* Bai1 */ = {
+		5184AFBB250A09A50063911E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				517645A62509BD0D007A53F9 /* Bai1ViewController.swift */,
+				5184AFDA250A0D460063911E /* Cell */,
+				5184AFBD250A09EB0063911E /* Bai1_2 */,
 			);
-			path = Bai1;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5184AFBD250A09EB0063911E /* Bai1_2 */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFD5250A0D1C0063911E /* HomeViewController.swift */,
+				5184AFD4250A0D1C0063911E /* HomeViewController.xib */,
+				5184AFD8250A0D340063911E /* HomeViewModel.swift */,
+			);
+			path = Bai1_2;
+			sourceTree = "<group>";
+		};
+		5184AFBE250A09F90063911E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFC2250A0A1E0063911E /* APIManager */,
+				5184AFC1250A0A150063911E /* Objects */,
+				5184AFC0250A0A100063911E /* Ext */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5184AFC0250A0A100063911E /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFCC250A0C710063911E /* Data.Ext.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		5184AFC1250A0A150063911E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFCE250A0CA00063911E /* Music.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		5184AFC2250A0A1E0063911E /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFC3250A0A2B0063911E /* Core */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		5184AFC3250A0A2B0063911E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFC6250A0C1F0063911E /* API.swift */,
+				5184AFC8250A0C320063911E /* API.Request.swift */,
+				5184AFCA250A0C400063911E /* API.Manager.swift */,
+				5184AFE1250A28CF0063911E /* API.Image.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5184AFDA250A0D460063911E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5184AFDB250A0D8F0063911E /* Bai2TableViewCell.swift */,
+				5184AFDC250A0D8F0063911E /* Bai2TableViewCell.xib */,
+				5184AFDF250A0DAB0063911E /* Bai2CellViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		51A34DFE25088DC100E94CA7 = {
@@ -66,7 +154,8 @@
 		51A34E0925088DC200E94CA7 /* BaiTap_api */ = {
 			isa = PBXGroup;
 			children = (
-				517645A52509BCF9007A53F9 /* Bai1 */,
+				5184AFBE250A09F90063911E /* Model */,
+				5184AFBB250A09A50063911E /* Controller */,
 				51A34E0A25088DC200E94CA7 /* AppDelegate.swift */,
 				51A34E0C25088DC200E94CA7 /* SceneDelegate.swift */,
 				51A34E0E25088DC200E94CA7 /* ViewController.swift */,
@@ -137,7 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A34E1725088DC500E94CA7 /* LaunchScreen.storyboard in Resources */,
+				5184AFDE250A0D8F0063911E /* Bai2TableViewCell.xib in Resources */,
 				51A34E1425088DC500E94CA7 /* Assets.xcassets in Resources */,
+				5184AFD6250A0D1C0063911E /* HomeViewController.xib in Resources */,
 				51A34E1225088DC200E94CA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,10 +240,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5184AFE0250A0DAB0063911E /* Bai2CellViewModel.swift in Sources */,
 				51A34E0F25088DC200E94CA7 /* ViewController.swift in Sources */,
 				51A34E0B25088DC200E94CA7 /* AppDelegate.swift in Sources */,
+				5184AFC7250A0C1F0063911E /* API.swift in Sources */,
+				5184AFD9250A0D340063911E /* HomeViewModel.swift in Sources */,
+				5184AFE2250A28CF0063911E /* API.Image.swift in Sources */,
+				5184AFDD250A0D8F0063911E /* Bai2TableViewCell.swift in Sources */,
 				51A34E0D25088DC200E94CA7 /* SceneDelegate.swift in Sources */,
-				517645A72509BD0D007A53F9 /* Bai1ViewController.swift in Sources */,
+				5184AFCD250A0C710063911E /* Data.Ext.swift in Sources */,
+				5184AFD7250A0D1C0063911E /* HomeViewController.swift in Sources */,
+				5184AFC9250A0C320063911E /* API.Request.swift in Sources */,
+				5184AFCB250A0C400063911E /* API.Manager.swift in Sources */,
+				5184AFCF250A0CA00063911E /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
