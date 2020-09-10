@@ -15,8 +15,7 @@ extension APIManager.Image {
         }
     }
     
-    struct QueryParam {
-    }
+    struct QueryParam { }
         
     static func getHotAudio(limit: Int = 10, completion: @escaping APICompletion<[Audio]>) {
         let urlString = QueryString().hotAudio(limit: limit)
