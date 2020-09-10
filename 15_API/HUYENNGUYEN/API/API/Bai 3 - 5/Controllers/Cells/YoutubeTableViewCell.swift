@@ -27,10 +27,7 @@ class YoutubeTableViewCell: UITableViewCell {
     private func updateView() {
         guard let viewModel = viewModel else { return }
         if let imageURL = viewModel.thumbnailImageName {
-            API.shared().dowloadImage(url: imageURL) { [weak self] (image) in
-                guard let this = self else { return }
-                this.thumbnailImageView.image = image
-            }
+            thumbnailImageView.setImage(from: imageURL)
         } else {
             thumbnailImageView.image = nil
         }

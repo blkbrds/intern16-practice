@@ -21,6 +21,7 @@
 		832DF873250789A400FC95D5 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DF871250789A400FC95D5 /* MasterViewController.xib */; };
 		832DF87B2507955A00FC95D5 /* YoutubeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832DF8792507955A00FC95D5 /* YoutubeTableViewCell.swift */; };
 		832DF87C2507955A00FC95D5 /* YoutubeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DF87A2507955A00FC95D5 /* YoutubeTableViewCell.xib */; };
+		832F0716250A0CAA0069F6B6 /* UIImageView.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F0715250A0CAA0069F6B6 /* UIImageView.Ext.swift */; };
 		834DA08C2508B6E0004AFE7C /* YoutubeTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834DA08B2508B6E0004AFE7C /* YoutubeTableViewCellViewModel.swift */; };
 		83BD7FB42508729900C786A2 /* API.Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BD7FB32508729900C786A2 /* API.Youtube.swift */; };
 		83BD7FB82508784400C786A2 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BD7FB72508784400C786A2 /* Youtube.swift */; };
@@ -49,6 +50,7 @@
 		832DF871250789A400FC95D5 /* MasterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
 		832DF8792507955A00FC95D5 /* YoutubeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTableViewCell.swift; sourceTree = "<group>"; };
 		832DF87A2507955A00FC95D5 /* YoutubeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutubeTableViewCell.xib; sourceTree = "<group>"; };
+		832F0715250A0CAA0069F6B6 /* UIImageView.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.Ext.swift; sourceTree = "<group>"; };
 		834DA08B2508B6E0004AFE7C /* YoutubeTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		83BD7FB32508729900C786A2 /* API.Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Youtube.swift; sourceTree = "<group>"; };
 		83BD7FB72508784400C786A2 /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		832828CF24FDF59400FEF268 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				83C798E72505EF94003B336B /* Ext */,
 				83C798DB2505CE15003B336B /* CoreAPI */,
 				832DF86E2507888C00FC95D5 /* Bai 3 - 5 */,
 				832828E524FE27E800FEF268 /* Bai 1-2 */,
@@ -112,7 +115,6 @@
 		832828E524FE27E800FEF268 /* Bai 1-2 */ = {
 			isa = PBXGroup;
 			children = (
-				83C798E72505EF94003B336B /* Ext */,
 				83C798E42505EF08003B336B /* Object */,
 				832828EF24FE4B3D00FEF268 /* Cell */,
 				832828EE24FE4B3500FEF268 /* VC */,
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				83C798E82505EFAB003B336B /* Data.Ext.swift */,
+				832F0715250A0CAA0069F6B6 /* UIImageView.Ext.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				832828F324FE4B8E00FEF268 /* ImageTableViewCellViewModel.swift in Sources */,
 				83C798DF2505DD68003B336B /* API.Request.swift in Sources */,
 				832828F124FE4B6000FEF268 /* BasicViewModel.swift in Sources */,
+				832F0716250A0CAA0069F6B6 /* UIImageView.Ext.swift in Sources */,
 				83C798E92505EFAB003B336B /* Data.Ext.swift in Sources */,
 				832DF87B2507955A00FC95D5 /* YoutubeTableViewCell.swift in Sources */,
 				83C798DD2505CE35003B336B /* API.swift in Sources */,

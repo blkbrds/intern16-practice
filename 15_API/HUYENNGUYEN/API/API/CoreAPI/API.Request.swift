@@ -9,6 +9,7 @@
 import UIKit
 
 extension API {
+
     //with url string
     func request(urlString: String, completion: @escaping (APIResult) -> Void) {
         guard let url = URL(string: urlString) else { return }
@@ -72,6 +73,10 @@ extension API {
             completion(nil)
             return
         }
+        if let cachedImage = CacheImage.shared.cache.object(forKey: url.absoluteString as NSString)  {
+            completion(cachedImage)
+            return
+        }
         let config = URLSessionConfiguration.default
         config.waitsForConnectivity = true
         let session = URLSession(configuration: config)
@@ -80,8 +85,8 @@ extension API {
                 if let _ = error {
                     completion(nil)
                 } else {
-                    if let data = data {
-                        let image = UIImage(data: data)
+                    if let data = data, let image = UIImage(data: data) {
+                        CacheImage.shared.cache.setObject(image, forKey: url.absoluteString as NSString)
                         completion(image)
                     } else {
                         completion(nil)

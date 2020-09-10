@@ -24,9 +24,7 @@ class ImageTableViewCell: UITableViewCell {
     private func updateView() {
         guard let viewModel = viewModel else { return }
         if let imageURL = viewModel.imageName {
-            API.shared().dowloadImage(url: imageURL) { (image) in
-                self.showImageView.image = image
-            }
+            showImageView.setImage(from: imageURL)
         } else {
             showImageView.image = nil
         }

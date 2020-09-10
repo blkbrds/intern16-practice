@@ -6,7 +6,7 @@
 //  Copyright © 2020 bu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //MARK: - Defines
 enum APIError: Error {
@@ -41,6 +41,13 @@ struct API {
     static func shared() -> API {
         return shareAPI
     }
+    
+    private init() {}
+}
+
+class CacheImage {
+    static let shared = CacheImage()
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
 }

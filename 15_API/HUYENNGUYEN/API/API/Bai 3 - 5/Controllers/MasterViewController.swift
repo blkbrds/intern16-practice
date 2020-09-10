@@ -57,6 +57,7 @@ final class MasterViewController: UIViewController {
     
     //MARK: - Objc
     @objc private func updateData() {
+        viewModel.nextPage = nil
         loadAPI(isRefresh: true)
     }
 }
