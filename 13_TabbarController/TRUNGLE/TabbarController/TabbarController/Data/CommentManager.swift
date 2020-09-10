@@ -7,7 +7,7 @@
 //
 
 import Foundation
-final class DataCellDetail {
+final class CommentManager {
     //MARK: - Properties
     var name: String
     var image: String
