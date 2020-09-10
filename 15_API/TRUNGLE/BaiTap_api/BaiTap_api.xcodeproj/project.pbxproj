@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,6 @@
 		5184AFD6250A0D1C0063911E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5184AFD4250A0D1C0063911E /* HomeViewController.xib */; };
 		5184AFD7250A0D1C0063911E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFD5250A0D1C0063911E /* HomeViewController.swift */; };
 		5184AFD9250A0D340063911E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFD8250A0D340063911E /* HomeViewModel.swift */; };
-		5184AFDD250A0D8F0063911E /* Bai2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFDB250A0D8F0063911E /* Bai2TableViewCell.swift */; };
-		5184AFDE250A0D8F0063911E /* Bai2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5184AFDC250A0D8F0063911E /* Bai2TableViewCell.xib */; };
-		5184AFE0250A0DAB0063911E /* Bai2CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFDF250A0DAB0063911E /* Bai2CellViewModel.swift */; };
 		5184AFE2250A28CF0063911E /* API.Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184AFE1250A28CF0063911E /* API.Image.swift */; };
 		51A34E0B25088DC200E94CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A34E0A25088DC200E94CA7 /* AppDelegate.swift */; };
 		51A34E0D25088DC200E94CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A34E0C25088DC200E94CA7 /* SceneDelegate.swift */; };
@@ -25,9 +22,23 @@
 		51A34E1225088DC200E94CA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A34E1025088DC200E94CA7 /* Main.storyboard */; };
 		51A34E1425088DC500E94CA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A34E1325088DC500E94CA7 /* Assets.xcassets */; };
 		51A34E1725088DC500E94CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A34E1525088DC500E94CA7 /* LaunchScreen.storyboard */; };
+		51B6F266250A8A6900512062 /* VideosYouTube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F265250A8A6900512062 /* VideosYouTube.swift */; };
+		51B6F26A250A8ABB00512062 /* Bai2CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F267250A8ABB00512062 /* Bai2CellViewModel.swift */; };
+		51B6F26B250A8ABB00512062 /* Bai2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B6F268250A8ABB00512062 /* Bai2TableViewCell.xib */; };
+		51B6F26C250A8ABB00512062 /* Bai2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F269250A8ABB00512062 /* Bai2TableViewCell.swift */; };
+		51B6F26E250A90B400512062 /* NextPageYoutube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F26D250A90B400512062 /* NextPageYoutube.swift */; };
+		51B6F271250A91AE00512062 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F26F250A91AE00512062 /* VideoTableViewCell.swift */; };
+		51B6F272250A91AE00512062 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B6F270250A91AE00512062 /* VideoTableViewCell.xib */; };
+		51B6F274250A91C800512062 /* VideoTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F273250A91C800512062 /* VideoTableCellViewModel.swift */; };
+		51B6F276250A973900512062 /* API.VideoYoutube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F275250A973900512062 /* API.VideoYoutube.swift */; };
+		51B6F279250A9C3200512062 /* Bai3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F277250A9C3200512062 /* Bai3ViewController.swift */; };
+		51B6F27A250A9C3200512062 /* Bai3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B6F278250A9C3200512062 /* Bai3ViewController.xib */; };
+		51B6F27C250A9C4A00512062 /* Bai3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6F27B250A9C4A00512062 /* Bai3ViewModel.swift */; };
+		9E0F8E6208FA35C1F16289FD /* Pods_BaiTap_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA158496D870BD00C274C627 /* Pods_BaiTap_api.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129600BFEC73FB9CF3F20A67 /* Pods-BaiTap_api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTap_api.release.xcconfig"; path = "Target Support Files/Pods-BaiTap_api/Pods-BaiTap_api.release.xcconfig"; sourceTree = "<group>"; };
 		5184AFC6250A0C1F0063911E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.swift"; sourceTree = "<group>"; };
 		5184AFC8250A0C320063911E /* API.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.Request.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.Request.swift"; sourceTree = "<group>"; };
 		5184AFCA250A0C400063911E /* API.Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.Manager.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.Manager.swift"; sourceTree = "<group>"; };
@@ -36,9 +47,6 @@
 		5184AFD4250A0D1C0063911E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/HomeViewController.xib"; sourceTree = "<group>"; };
 		5184AFD5250A0D1C0063911E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/HomeViewController.swift"; sourceTree = "<group>"; };
 		5184AFD8250A0D340063911E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/HomeViewModel.swift"; sourceTree = "<group>"; };
-		5184AFDB250A0D8F0063911E /* Bai2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai2TableViewCell.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Cell/Bai2TableViewCell.swift"; sourceTree = "<group>"; };
-		5184AFDC250A0D8F0063911E /* Bai2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai2TableViewCell.xib; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Cell/Bai2TableViewCell.xib"; sourceTree = "<group>"; };
-		5184AFDF250A0DAB0063911E /* Bai2CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai2CellViewModel.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Cell/Bai2CellViewModel.swift"; sourceTree = "<group>"; };
 		5184AFE1250A28CF0063911E /* API.Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.Image.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.Image.swift"; sourceTree = "<group>"; };
 		51A34E0725088DC200E94CA7 /* BaiTap_api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap_api.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A34E0A25088DC200E94CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +56,20 @@
 		51A34E1325088DC500E94CA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51A34E1625088DC500E94CA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51A34E1825088DC500E94CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51B6F265250A8A6900512062 /* VideosYouTube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideosYouTube.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/ObjectMapper/VideosYouTube.swift"; sourceTree = "<group>"; };
+		51B6F267250A8ABB00512062 /* Bai2CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai2CellViewModel.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/Cell/Bai2CellViewModel.swift"; sourceTree = "<group>"; };
+		51B6F268250A8ABB00512062 /* Bai2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Bai2TableViewCell.xib; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/Cell/Bai2TableViewCell.xib"; sourceTree = "<group>"; };
+		51B6F269250A8ABB00512062 /* Bai2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bai2TableViewCell.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai1_2/Cell/Bai2TableViewCell.swift"; sourceTree = "<group>"; };
+		51B6F26D250A90B400512062 /* NextPageYoutube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextPageYoutube.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/ObjectMapper/NextPageYoutube.swift"; sourceTree = "<group>"; };
+		51B6F26F250A91AE00512062 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoTableViewCell.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai3_4_5/Cell/VideoTableViewCell.swift"; sourceTree = "<group>"; };
+		51B6F270250A91AE00512062 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VideoTableViewCell.xib; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai3_4_5/Cell/VideoTableViewCell.xib"; sourceTree = "<group>"; };
+		51B6F273250A91C800512062 /* VideoTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoTableCellViewModel.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai3_4_5/Cell/VideoTableCellViewModel.swift"; sourceTree = "<group>"; };
+		51B6F275250A973900512062 /* API.VideoYoutube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.VideoYoutube.swift; path = "../../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Model/APIManager/Core/API.VideoYoutube.swift"; sourceTree = "<group>"; };
+		51B6F277250A9C3200512062 /* Bai3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai3ViewController.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai3_4_5/Bai3ViewController.swift"; sourceTree = "<group>"; };
+		51B6F278250A9C3200512062 /* Bai3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Bai3ViewController.xib; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai3_4_5/Bai3ViewController.xib"; sourceTree = "<group>"; };
+		51B6F27B250A9C4A00512062 /* Bai3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bai3ViewModel.swift; path = "../../../../../../../../../trungld/iOS/intern16-practice/15_API/TRUNGLE/BaiTap_api/BaiTap_api/Controller/Bai3_4_5/Bai3ViewModel.swift"; sourceTree = "<group>"; };
+		A38E2F26BD435EEEF5768778 /* Pods-BaiTap_api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTap_api.debug.xcconfig"; path = "Target Support Files/Pods-BaiTap_api/Pods-BaiTap_api.debug.xcconfig"; sourceTree = "<group>"; };
+		CA158496D870BD00C274C627 /* Pods_BaiTap_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaiTap_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0F8E6208FA35C1F16289FD /* Pods_BaiTap_api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +87,7 @@
 		5184AFBB250A09A50063911E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5184AFDA250A0D460063911E /* Cell */,
+				51B6F262250A89F500512062 /* Bai3_4_5 */,
 				5184AFBD250A09EB0063911E /* Bai1_2 */,
 			);
 			path = Controller;
@@ -73,6 +96,7 @@
 		5184AFBD250A09EB0063911E /* Bai1_2 */ = {
 			isa = PBXGroup;
 			children = (
+				5184AFDA250A0D460063911E /* Cell */,
 				5184AFD5250A0D1C0063911E /* HomeViewController.swift */,
 				5184AFD4250A0D1C0063911E /* HomeViewController.xib */,
 				5184AFD8250A0D340063911E /* HomeViewModel.swift */,
@@ -83,6 +107,7 @@
 		5184AFBE250A09F90063911E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				51B6F264250A8A3000512062 /* ObjectMapper */,
 				5184AFC2250A0A1E0063911E /* APIManager */,
 				5184AFC1250A0A150063911E /* Objects */,
 				5184AFC0250A0A100063911E /* Ext */,
@@ -121,6 +146,7 @@
 				5184AFC8250A0C320063911E /* API.Request.swift */,
 				5184AFCA250A0C400063911E /* API.Manager.swift */,
 				5184AFE1250A28CF0063911E /* API.Image.swift */,
+				51B6F275250A973900512062 /* API.VideoYoutube.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -128,9 +154,9 @@
 		5184AFDA250A0D460063911E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5184AFDB250A0D8F0063911E /* Bai2TableViewCell.swift */,
-				5184AFDC250A0D8F0063911E /* Bai2TableViewCell.xib */,
-				5184AFDF250A0DAB0063911E /* Bai2CellViewModel.swift */,
+				51B6F267250A8ABB00512062 /* Bai2CellViewModel.swift */,
+				51B6F269250A8ABB00512062 /* Bai2TableViewCell.swift */,
+				51B6F268250A8ABB00512062 /* Bai2TableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -140,6 +166,8 @@
 			children = (
 				51A34E0925088DC200E94CA7 /* BaiTap_api */,
 				51A34E0825088DC200E94CA7 /* Products */,
+				6C42DBF4952966C4F805821C /* Pods */,
+				DE2E1C0471F7CD8BCEC4686D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +195,53 @@
 			path = BaiTap_api;
 			sourceTree = "<group>";
 		};
+		51B6F262250A89F500512062 /* Bai3_4_5 */ = {
+			isa = PBXGroup;
+			children = (
+				51B6F263250A8A0200512062 /* Cell */,
+				51B6F277250A9C3200512062 /* Bai3ViewController.swift */,
+				51B6F278250A9C3200512062 /* Bai3ViewController.xib */,
+				51B6F27B250A9C4A00512062 /* Bai3ViewModel.swift */,
+			);
+			path = Bai3_4_5;
+			sourceTree = "<group>";
+		};
+		51B6F263250A8A0200512062 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51B6F26F250A91AE00512062 /* VideoTableViewCell.swift */,
+				51B6F270250A91AE00512062 /* VideoTableViewCell.xib */,
+				51B6F273250A91C800512062 /* VideoTableCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		51B6F264250A8A3000512062 /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				51B6F265250A8A6900512062 /* VideosYouTube.swift */,
+				51B6F26D250A90B400512062 /* NextPageYoutube.swift */,
+			);
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		6C42DBF4952966C4F805821C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A38E2F26BD435EEEF5768778 /* Pods-BaiTap_api.debug.xcconfig */,
+				129600BFEC73FB9CF3F20A67 /* Pods-BaiTap_api.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE2E1C0471F7CD8BCEC4686D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA158496D870BD00C274C627 /* Pods_BaiTap_api.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51A34E1B25088DC500E94CA7 /* Build configuration list for PBXNativeTarget "BaiTap_api" */;
 			buildPhases = (
+				4DC49E9B3351890C7C8A5720 /* [CP] Check Pods Manifest.lock */,
 				51A34E0325088DC200E94CA7 /* Sources */,
 				51A34E0425088DC200E94CA7 /* Frameworks */,
 				51A34E0525088DC200E94CA7 /* Resources */,
+				19A624A14703671C8DBDF997 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,31 +303,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A34E1725088DC500E94CA7 /* LaunchScreen.storyboard in Resources */,
-				5184AFDE250A0D8F0063911E /* Bai2TableViewCell.xib in Resources */,
 				51A34E1425088DC500E94CA7 /* Assets.xcassets in Resources */,
+				51B6F26B250A8ABB00512062 /* Bai2TableViewCell.xib in Resources */,
+				51B6F27A250A9C3200512062 /* Bai3ViewController.xib in Resources */,
 				5184AFD6250A0D1C0063911E /* HomeViewController.xib in Resources */,
 				51A34E1225088DC200E94CA7 /* Main.storyboard in Resources */,
+				51B6F272250A91AE00512062 /* VideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19A624A14703671C8DBDF997 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTap_api/Pods-BaiTap_api-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTap_api/Pods-BaiTap_api-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaiTap_api/Pods-BaiTap_api-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DC49E9B3351890C7C8A5720 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaiTap_api-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51A34E0325088DC200E94CA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5184AFE0250A0DAB0063911E /* Bai2CellViewModel.swift in Sources */,
+				51B6F266250A8A6900512062 /* VideosYouTube.swift in Sources */,
+				51B6F276250A973900512062 /* API.VideoYoutube.swift in Sources */,
 				51A34E0F25088DC200E94CA7 /* ViewController.swift in Sources */,
+				51B6F279250A9C3200512062 /* Bai3ViewController.swift in Sources */,
+				51B6F26C250A8ABB00512062 /* Bai2TableViewCell.swift in Sources */,
 				51A34E0B25088DC200E94CA7 /* AppDelegate.swift in Sources */,
 				5184AFC7250A0C1F0063911E /* API.swift in Sources */,
 				5184AFD9250A0D340063911E /* HomeViewModel.swift in Sources */,
 				5184AFE2250A28CF0063911E /* API.Image.swift in Sources */,
-				5184AFDD250A0D8F0063911E /* Bai2TableViewCell.swift in Sources */,
+				51B6F26E250A90B400512062 /* NextPageYoutube.swift in Sources */,
 				51A34E0D25088DC200E94CA7 /* SceneDelegate.swift in Sources */,
 				5184AFCD250A0C710063911E /* Data.Ext.swift in Sources */,
 				5184AFD7250A0D1C0063911E /* HomeViewController.swift in Sources */,
 				5184AFC9250A0C320063911E /* API.Request.swift in Sources */,
+				51B6F274250A91C800512062 /* VideoTableCellViewModel.swift in Sources */,
+				51B6F26A250A8ABB00512062 /* Bai2CellViewModel.swift in Sources */,
+				51B6F271250A91AE00512062 /* VideoTableViewCell.swift in Sources */,
+				51B6F27C250A9C4A00512062 /* Bai3ViewModel.swift in Sources */,
 				5184AFCB250A0C400063911E /* API.Manager.swift in Sources */,
 				5184AFCF250A0CA00063911E /* Music.swift in Sources */,
 			);
@@ -394,10 +522,12 @@
 		};
 		51A34E1C25088DC500E94CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A38E2F26BD435EEEF5768778 /* Pods-BaiTap_api.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BaiTap_api/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,10 +541,12 @@
 		};
 		51A34E1D25088DC500E94CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129600BFEC73FB9CF3F20A67 /* Pods-BaiTap_api.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BaiTap_api/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

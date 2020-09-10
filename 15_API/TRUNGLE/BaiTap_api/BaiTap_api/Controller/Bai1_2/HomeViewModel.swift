@@ -23,6 +23,7 @@ final class HomeViewModel {
             case .success(let musicResult):
                 self.music.append(contentsOf: musicResult)
                 completion(true,"")
+                print(musicResult)
             }
         }
     }
