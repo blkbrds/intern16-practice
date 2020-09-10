@@ -10,10 +10,10 @@ import Foundation
 final class DetailCellViewModel {
     
     //MARK: - Properties
-    var dataCellDetail: DataCellDetail = DataCellDetail()
+    var commentManager: CommentManager = CommentManager()
     
     //MARK: - Init
-    init(dataCellDetail: DataCellDetail = DataCellDetail()) {
-        self.dataCellDetail = dataCellDetail
+    init(commentManager: CommentManager = CommentManager()) {
+        self.commentManager = commentManager
     }
 }

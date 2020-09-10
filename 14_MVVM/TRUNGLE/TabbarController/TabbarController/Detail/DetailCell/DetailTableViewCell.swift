@@ -34,7 +34,7 @@ class DetailTableViewCell: UITableViewCell {
     
     //MARK: - Function
     func updateView() {
-        let dataDetail = viewModel.dataCellDetail
+        let dataDetail = viewModel.commentManager
         imageView1.image = UIImage(named: dataDetail.image)
         nameLabel.text = dataDetail.name
         commentLabel.text = dataDetail.comment
