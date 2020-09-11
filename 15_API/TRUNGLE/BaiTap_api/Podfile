@@ -7,5 +7,4 @@ target 'BaiTap_api' do
 
   # Pods for BaiTap_api
   pod 'ObjectMapper', '~> 3.5' 
-
 end

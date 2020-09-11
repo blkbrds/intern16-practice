@@ -18,7 +18,6 @@ class Bai3ViewController: UIViewController {
     var viewModel = Bai3ViewModel()
     var nextPageToken = ""
     var searchKey = ""
-    var stringKey = ""
     let refreshTable = UIRefreshControl()
     
     //MARK: - Life cycle
@@ -71,9 +70,9 @@ class Bai3ViewController: UIViewController {
     
     @objc func refreshVideoData(_ sender: Any) {
         searchBar.text?.removeAll()
-        stringKey = ""
+        searchKey = ""
         nextPageToken = ""
-        loadAPI(pageToken: nextPageToken, searchKey: stringKey)
+        loadAPI(pageToken: nextPageToken, searchKey: searchKey)
         refreshTable.endRefreshing()
         let activityIndicatorView = UIActivityIndicatorView()
         activityIndicatorView.stopAnimating()
@@ -100,7 +99,7 @@ extension Bai3ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if loadMore() && scrollView.contentOffset.y > 0 {
-            loadAPI(pageToken: nextPageToken, searchKey: stringKey)
+            loadAPI(pageToken: nextPageToken, searchKey: searchKey)
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -112,17 +111,17 @@ extension Bai3ViewController: UITableViewDelegate, UITableViewDataSource {
 extension Bai3ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        stringKey = searchText
+        searchKey = searchText
         viewModel.videosYouTube = []
-        loadAPI(pageToken: nextPageToken, searchKey: stringKey)
+        loadAPI(pageToken: nextPageToken, searchKey: searchKey)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { searchBar.text = ""
             return }
-        stringKey = text
+        searchKey = text
         viewModel.videosYouTube = []
-        loadAPI(pageToken: nextPageToken, searchKey: stringKey)
+        loadAPI(pageToken: nextPageToken, searchKey: searchKey)
         searchBar.resignFirstResponder()
     }
 }
