@@ -27,6 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         errorLabel.isHidden = true
         usernameTextField.delegate = self
         passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
     }
 
     @objc func doneAction() {
@@ -34,20 +35,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     func checkLogin() {
-        errorLabel.isHidden = false
         if usernameTextField.text == "" || passwordTextField.text == "" {
-            errorLabel.text = "Không được để trống username và password."
+            errorLabel.isHidden = false
+            errorLabel.text = "Không được để trống username hoặc password."
             errorLabel.textColor = .systemRed
-        } else if usernameTextField.text == "Admin" && passwordTextField.text == "Admin123" {
+            passwordTextField.text?.removeAll()
+
+            return
+        }
+        guard let username = usernameTextField.text, let password = passwordTextField.text else { return }
+        let check = InfoManagement.checkInfo(username: username, pass: password)
+        if check {
             let homeViewController = HomeViewController()
-            let editViewController = EditViewController ()
             guard let username = usernameTextField.text else { return }
             homeViewController.username = username
-            editViewController.username = username
+            homeViewController.delegate = self
             self.navigationController?.pushViewController(homeViewController, animated: true)
         } else {
-            errorLabel.text = "Nhập sai username và password."
+            errorLabel.isHidden = false
+            errorLabel.text = "Nhập sai username hoặc password."
             errorLabel.textColor = .systemRed
+            passwordTextField.text?.removeAll()
         }
         view.endEditing(true)
     }
@@ -70,5 +78,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+}
+
+extension LoginViewController: HomeViewControllerDelegate {
+    func controller(_ controller: HomeViewController, needsPerform action: HomeViewController.Action) {
+        switch action {
+        case .resetValue:
+            usernameTextField.text?.removeAll()
+            passwordTextField.text?.removeAll()
+            errorLabel.text?.removeAll()
+        }
     }
 }

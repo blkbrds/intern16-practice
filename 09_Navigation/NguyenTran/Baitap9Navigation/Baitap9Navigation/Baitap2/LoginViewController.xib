@@ -36,10 +36,10 @@
                         <constraint firstAttribute="width" constant="250" id="uMr-Ni-Gwa"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9B-7N-JEs" userLabel="errorLabel">
-                    <rect key="frame" x="184" y="366.5" width="46.5" height="23"/>
+                    <rect key="frame" x="20" y="366.5" width="374" height="23"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -50,8 +50,10 @@
                 <constraint firstItem="0XW-2N-e7N" firstAttribute="top" secondItem="j6I-H2-8uo" secondAttribute="bottom" constant="40" id="3K5-KO-jOs"/>
                 <constraint firstItem="B9B-7N-JEs" firstAttribute="top" secondItem="0XW-2N-e7N" secondAttribute="bottom" constant="50" id="6jG-Ri-DQJ"/>
                 <constraint firstItem="B9B-7N-JEs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NR3-SI-Acg"/>
+                <constraint firstItem="B9B-7N-JEs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Od3-lv-HD0"/>
                 <constraint firstItem="j6I-H2-8uo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1:2" id="Tvi-R8-soX"/>
                 <constraint firstItem="0XW-2N-e7N" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gVY-mv-Bsf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B9B-7N-JEs" secondAttribute="trailing" constant="20" id="vB5-js-IK3"/>
                 <constraint firstItem="j6I-H2-8uo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ycW-TL-Rkb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

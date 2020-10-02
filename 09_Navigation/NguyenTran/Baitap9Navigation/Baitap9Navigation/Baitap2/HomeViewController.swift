@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: class {
+    func controller(_ controller: HomeViewController, needsPerform action: HomeViewController.Action)
+}
+
 class HomeViewController: UIViewController {
     
     var username = ""
+    weak var delegate: HomeViewControllerDelegate?
 
     @IBOutlet weak var welcomeTextField: UILabel!
     
@@ -31,10 +36,18 @@ class HomeViewController: UIViewController {
     
     @objc func editAction() {
         let editViewController = EditViewController()
+        editViewController.username = username
         navigationController?.pushViewController(editViewController, animated: true)
         }
     
     @objc func logoutAction() {
+        delegate?.controller(self, needsPerform: .resetValue)
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension HomeViewController {
+    enum Action {
+        case resetValue
     }
 }

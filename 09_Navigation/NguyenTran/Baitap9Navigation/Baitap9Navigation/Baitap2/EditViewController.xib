@@ -37,7 +37,7 @@
                         <constraint firstAttribute="height" constant="35" id="mOx-1X-Ic3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="new-password"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-DV-XEQ">
                     <rect key="frame" x="82" y="357.5" width="250" height="35"/>
@@ -46,7 +46,7 @@
                         <constraint firstAttribute="height" constant="35" id="nwk-ly-9IW"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="new-password"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="new-password"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-7h-dKM">
                     <rect key="frame" x="183.5" y="442.5" width="47" height="23"/>
