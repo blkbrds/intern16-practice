@@ -47,52 +47,52 @@ class EditViewController: UIViewController, UITextFieldDelegate {
             errorLabel.text = "Hãy nhập tất cả các trường"
             errorLabel.textColor = .systemRed
         } else {
-            guard let username = usernameTextField.text, let newPassword = newPasswordTextField.text, let confirmPassword = confirmPasswordTextField.text else { return }
+            guard let newUsername = usernameTextField.text, let newPassword = newPasswordTextField.text, let confirmPassword = confirmPasswordTextField.text else { return }
             if newPassword != confirmPassword {
                 errorLabel.isHidden = false
                 errorLabel.text = "Hãy nhập password ở 2 trường giống nhau"
                 errorLabel.textColor = .systemRed
             } else {
-                delegate?.controller(self, needsPerform: .updateInfo(username: username, pass: newPassword))
+                InfoManagement.updateData(oldUsername: username, newUsername: newUsername, newPass: newPassword)
+                delegate?.controller(self, needsPerform: .updateInfo(with: newUsername))
+                }
             }
         }
 
-    }
+        @objc func doneAction() {
+            updateInfo()
+            navigationController?.popViewController(animated: true)
+        }
 
-    @objc func doneAction() {
-        updateInfo()
-        navigationController?.popViewController(animated: true)
-    }
+        @objc func cancelAction() {
+            navigationController?.popViewController(animated: true)
+        }
 
-    @objc func cancelAction() {
-        navigationController?.popViewController(animated: true)
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == usernameTextField {
-            textField.resignFirstResponder()
-            newPasswordTextField.becomeFirstResponder()
-        } else if textField == newPasswordTextField {
-            textField.resignFirstResponder()
-            confirmPasswordTextField.becomeFirstResponder()
-        } else if textField == confirmPasswordTextField {
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            if textField == usernameTextField {
+                textField.resignFirstResponder()
+                newPasswordTextField.becomeFirstResponder()
+            } else if textField == newPasswordTextField {
+                textField.resignFirstResponder()
+                confirmPasswordTextField.becomeFirstResponder()
+            } else if textField == confirmPasswordTextField {
 //            let homeViewController = HomeViewController()
 //            let editViewController = EditViewController ()
 //            guard let username = usernameTextField.text else { return false }
 //            homeViewController.username = username
 //            editViewController.username = username
-            navigationController?.popViewController(animated: true)
+                navigationController?.popViewController(animated: true)
+            }
+            return true
         }
-        return true
+
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            view.endEditing(true)
+        }
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+    extension EditViewController {
+        enum Action {
+            case updateInfo(with: String)
+        }
     }
-}
-
-extension EditViewController {
-    enum Action {
-        case updateInfo(username: String, pass: String)
-    }
-}

@@ -9,7 +9,7 @@
 import Foundation
 
 final class InfoManagement {
-    
+
     static func getData(key: String) -> Any? {
         if let path = Bundle.main.path(forResource: "UserInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: path) {
             for account in accountInfo {
@@ -21,7 +21,7 @@ final class InfoManagement {
         }
         return nil
     }
-    
+
     static func checkInfo(username: String, pass: String) -> Bool {
         guard let password = getData(key: username) else { return false }
         if pass == password as! String {
@@ -29,17 +29,13 @@ final class InfoManagement {
         }
         return false
     }
-    
+
     static func updateData(oldUsername: String, newUsername: String, newPass: String) {
-        if let path = Bundle.main.path(forResource: "UserInfo", ofType: "plist"), let accountInfo = NSDictionary(contentsOfFile: path) {
-            for account in accountInfo {
-                if account.key as! String == oldUsername {
-                    account.key = newUsername
-                    account.value = newPass
-                }
-            }
-            
+        if let path = Bundle.main.path(forResource: "UserInfo", ofType: "plist"), let accountInfo = NSMutableDictionary(contentsOfFile: path) {
+            accountInfo.setObject(newPass, forKey: newUsername as NSCopying)
+            accountInfo.removeObject(forKey: oldUsername)
         }
-        
     }
 }
+
+

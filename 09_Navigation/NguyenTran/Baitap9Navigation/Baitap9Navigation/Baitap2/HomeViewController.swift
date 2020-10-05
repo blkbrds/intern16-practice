@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
         let editViewController = EditViewController()
         editViewController.username = username
         navigationController?.pushViewController(editViewController, animated: true)
+        editViewController.delegate = self
         }
     
     @objc func logoutAction() {
@@ -49,5 +50,14 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     enum Action {
         case resetValue
+    }
+}
+
+extension HomeViewController: EditViewControllerDelegate {
+    func controller(_ controller: EditViewController, needsPerform action: EditViewController.Action) {
+        switch action {
+        case .updateInfo(with: let name):
+            welcomeTextField.text = name
+        }
     }
 }
