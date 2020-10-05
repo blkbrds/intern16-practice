@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2284B32F252B1C6F003492CB /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B32E252B1C6F003492CB /* UserView.swift */; };
+		2284B331252B1CA4003492CB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B330252B1CA4003492CB /* UserInfo.swift */; };
+		2284B334252B1CE0003492CB /* Baitap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B332252B1CE0003492CB /* Baitap3ViewController.swift */; };
+		2284B335252B1CE0003492CB /* Baitap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2284B333252B1CE0003492CB /* Baitap3ViewController.xib */; };
 		2288C9BD2526D0B8008BE2C5 /* InfoManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288C9BC2526D0B8008BE2C5 /* InfoManagement.swift */; };
 		22CD1D1D24FE2D75002501EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD1D1C24FE2D75002501EA /* AppDelegate.swift */; };
 		22CD1D1F24FE2D75002501EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD1D1E24FE2D75002501EA /* SceneDelegate.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2284B32E252B1C6F003492CB /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		2284B330252B1CA4003492CB /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2284B332252B1CE0003492CB /* Baitap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap3ViewController.swift; sourceTree = "<group>"; };
+		2284B333252B1CE0003492CB /* Baitap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap3ViewController.xib; sourceTree = "<group>"; };
 		2288C9BC2526D0B8008BE2C5 /* InfoManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManagement.swift; sourceTree = "<group>"; };
 		22CD1D1924FE2D75002501EA /* Baitap9Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitap9Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CD1D1C24FE2D75002501EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2284B32B252B1534003492CB /* Baitap3 */ = {
+			isa = PBXGroup;
+			children = (
+				2284B332252B1CE0003492CB /* Baitap3ViewController.swift */,
+				2284B333252B1CE0003492CB /* Baitap3ViewController.xib */,
+				2284B32E252B1C6F003492CB /* UserView.swift */,
+				2284B330252B1CA4003492CB /* UserInfo.swift */,
+			);
+			path = Baitap3;
+			sourceTree = "<group>";
+		};
 		22CD1D1024FE2D75002501EA = {
 			isa = PBXGroup;
 			children = (
@@ -90,8 +109,9 @@
 			children = (
 				22CD1D3C24FE9F02002501EA /* Baitap1 */,
 				22E7F07F25052E860013E391 /* Baitap2 */,
-				22CD1D1E24FE2D75002501EA /* SceneDelegate.swift */,
+				2284B32B252B1534003492CB /* Baitap3 */,
 				22CD1D1C24FE2D75002501EA /* AppDelegate.swift */,
+				22CD1D1E24FE2D75002501EA /* SceneDelegate.swift */,
 				22CD1D2524FE2D79002501EA /* Assets.xcassets */,
 				22CD1D2724FE2D79002501EA /* LaunchScreen.storyboard */,
 				22CD1D2A24FE2D79002501EA /* Info.plist */,
@@ -198,6 +218,7 @@
 				22CD1D5024FF4E11002501EA /* EViewController.xib in Resources */,
 				22CD1D4C24FF4E03002501EA /* DViewController.xib in Resources */,
 				22CD1D2924FE2D79002501EA /* LaunchScreen.storyboard in Resources */,
+				2284B335252B1CE0003492CB /* Baitap3ViewController.xib in Resources */,
 				22CD1D2624FE2D79002501EA /* Assets.xcassets in Resources */,
 				22E7F08725052EDA0013E391 /* HomeViewController.xib in Resources */,
 			);
@@ -213,10 +234,13 @@
 				22E7F08A25052EEC0013E391 /* EditViewController.swift in Sources */,
 				22CD1D1D24FE2D75002501EA /* AppDelegate.swift in Sources */,
 				22CD1D4B24FF4E03002501EA /* DViewController.swift in Sources */,
+				2284B334252B1CE0003492CB /* Baitap3ViewController.swift in Sources */,
 				22CD1D4324FEA147002501EA /* BViewController.swift in Sources */,
 				22CD1D4724FEB152002501EA /* CViewController.swift in Sources */,
 				22E7F08225052ECA0013E391 /* LoginViewController.swift in Sources */,
 				22E7F08625052EDA0013E391 /* HomeViewController.swift in Sources */,
+				2284B32F252B1C6F003492CB /* UserView.swift in Sources */,
+				2284B331252B1CA4003492CB /* UserInfo.swift in Sources */,
 				22CD1D3F24FE9FDF002501EA /* AViewController.swift in Sources */,
 				22CD1D1F24FE2D75002501EA /* SceneDelegate.swift in Sources */,
 				22CD1D4F24FF4E11002501EA /* EViewController.swift in Sources */,
