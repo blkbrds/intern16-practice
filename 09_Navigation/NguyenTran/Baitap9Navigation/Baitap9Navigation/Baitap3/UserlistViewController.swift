@@ -1,5 +1,5 @@
 //
-//  Baitap3ViewController.swift
+//  UserlistViewController.swift
 //  Baitap9Navigation
 //
 //  Created by MBA0245P on 10/5/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Baitap3ViewController: UIViewController {
+class UserlistViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
