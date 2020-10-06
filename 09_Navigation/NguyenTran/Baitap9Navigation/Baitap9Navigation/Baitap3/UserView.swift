@@ -69,13 +69,11 @@ class UserView: UIView {
 
     @objc func buttonDidClick(sender: UIButton) {
         delegate?.view(self, needsPerform: .didTapSendUsername(index: index))
-        delegate?.view(self, needsPerform: .didTapSendIndex(index: index))
     }
 }
 
 extension UserView {
     enum Action {
         case didTapSendUsername(index: Int)
-        case didTapSendIndex(index: Int)
     }
 }
