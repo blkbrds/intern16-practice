@@ -138,10 +138,10 @@
 		22CD1D1B24FE2D75002501EA /* Baitap9Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				228605E12534076B00A24AFB /* Baitap4 */,
 				22CD1D3C24FE9F02002501EA /* Baitap1 */,
 				22E7F07F25052E860013E391 /* Baitap2 */,
 				2284B32B252B1534003492CB /* Baitap3 */,
+				228605E12534076B00A24AFB /* Baitap4 */,
 				22CD1D1C24FE2D75002501EA /* AppDelegate.swift */,
 				22CD1D1E24FE2D75002501EA /* SceneDelegate.swift */,
 				22CD1D2524FE2D79002501EA /* Assets.xcassets */,

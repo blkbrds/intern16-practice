@@ -67,6 +67,7 @@ extension UserlistViewController: UserViewDelegate {
     func view(_ view: UserView, needsPerform action: UserView.Action) {
         switch action {
         case .didTapSendUsername(index: let index):
+            self.index = index
             let viewController = UserDetailsViewController()
             let username = userInfo[index].userNameIndex
             viewController.username = username
@@ -84,7 +85,7 @@ extension UserlistViewController: UserDetailsViewControllerDelegate {
             guard let index = index else { return }
             userInfo[index].userNameIndex = name
             for (index, view) in scrollView.subviews.enumerated() {
-                if let subview = view as? UserView, index == i, name == name {
+                if let subview = view as? UserView, index == i {
                     subview.updateUsername(newName: name)
                 }
             }

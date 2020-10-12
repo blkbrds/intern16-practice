@@ -15,9 +15,9 @@ protocol UserDetailsViewControllerDelegate: class {
 class UserDetailsViewController: UIViewController {
 
     var username = ""
-    var index : Int?
+    var index: Int?
     weak var delegate: UserDetailsViewControllerDelegate?
-    
+
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
 
@@ -38,8 +38,13 @@ class UserDetailsViewController: UIViewController {
             errorLabel.text = "Không được để trống username"
         } else {
             guard let newName = usernameTextField.text, let index = index else { return }
+            if newName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true {
+                errorLabel.isHidden = false
+                errorLabel.text = "Không được để trống username"
+            } else {
             delegate?.controller(self, needsPerform: .updateInfo(newUsername: newName, index: index))
             self.navigationController?.popViewController(animated: true)
+            }
         }
     }
 
