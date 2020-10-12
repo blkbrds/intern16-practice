@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "avatar.png",
+      "filename" : "icons8-user-menu-male-52.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "avatar-1.png",
+      "filename" : "icons8-user-menu-male-50.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "avatar-2.png",
+      "filename" : "icons8-user-menu-male-51.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

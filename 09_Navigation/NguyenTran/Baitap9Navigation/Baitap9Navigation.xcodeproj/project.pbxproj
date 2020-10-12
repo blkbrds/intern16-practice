@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2251CE322534360E00575FF7 /* Baitap4-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251CE312534360E00575FF7 /* Baitap4-1ViewController.swift */; };
+		2251CE3425343D4100575FF7 /* Baitap4-2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251CE3325343D4100575FF7 /* Baitap4-2ViewController.swift */; };
+		2251CE3625344FAB00575FF7 /* Baitap4-3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251CE3525344FAB00575FF7 /* Baitap4-3ViewController.swift */; };
+		2251CE3825345A0A00575FF7 /* Baitap4-4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251CE3725345A0A00575FF7 /* Baitap4-4ViewController.swift */; };
 		2284B32F252B1C6F003492CB /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B32E252B1C6F003492CB /* UserView.swift */; };
 		2284B331252B1CA4003492CB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B330252B1CA4003492CB /* UserInfo.swift */; };
 		2284B338252B1F43003492CB /* UserlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B336252B1F43003492CB /* UserlistViewController.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2251CE312534360E00575FF7 /* Baitap4-1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Baitap4-1ViewController.swift"; sourceTree = "<group>"; };
+		2251CE3325343D4100575FF7 /* Baitap4-2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Baitap4-2ViewController.swift"; sourceTree = "<group>"; };
+		2251CE3525344FAB00575FF7 /* Baitap4-3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Baitap4-3ViewController.swift"; sourceTree = "<group>"; };
+		2251CE3725345A0A00575FF7 /* Baitap4-4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Baitap4-4ViewController.swift"; sourceTree = "<group>"; };
 		2284B32E252B1C6F003492CB /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		2284B330252B1CA4003492CB /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2284B336252B1F43003492CB /* UserlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserlistViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +111,10 @@
 			children = (
 				228605E225340B1700A24AFB /* Baitap4ViewController.swift */,
 				228605E325340B1700A24AFB /* Baitap4ViewController.xib */,
+				2251CE312534360E00575FF7 /* Baitap4-1ViewController.swift */,
+				2251CE3325343D4100575FF7 /* Baitap4-2ViewController.swift */,
+				2251CE3525344FAB00575FF7 /* Baitap4-3ViewController.swift */,
+				2251CE3725345A0A00575FF7 /* Baitap4-4ViewController.swift */,
 			);
 			path = Baitap4;
 			sourceTree = "<group>";
@@ -258,6 +270,7 @@
 				22CD1D4B24FF4E03002501EA /* DViewController.swift in Sources */,
 				22CD1D4324FEA147002501EA /* BViewController.swift in Sources */,
 				22CD1D4724FEB152002501EA /* CViewController.swift in Sources */,
+				2251CE322534360E00575FF7 /* Baitap4-1ViewController.swift in Sources */,
 				2284B33C252B1F68003492CB /* UserDetailsViewController.swift in Sources */,
 				22E7F08225052ECA0013E391 /* LoginViewController.swift in Sources */,
 				22E7F08625052EDA0013E391 /* HomeViewController.swift in Sources */,
@@ -265,9 +278,12 @@
 				2284B331252B1CA4003492CB /* UserInfo.swift in Sources */,
 				228605E425340B1700A24AFB /* Baitap4ViewController.swift in Sources */,
 				2284B338252B1F43003492CB /* UserlistViewController.swift in Sources */,
+				2251CE3825345A0A00575FF7 /* Baitap4-4ViewController.swift in Sources */,
+				2251CE3425343D4100575FF7 /* Baitap4-2ViewController.swift in Sources */,
 				22CD1D3F24FE9FDF002501EA /* AViewController.swift in Sources */,
 				22CD1D1F24FE2D75002501EA /* SceneDelegate.swift in Sources */,
 				22CD1D4F24FF4E11002501EA /* EViewController.swift in Sources */,
+				2251CE3625344FAB00575FF7 /* Baitap4-3ViewController.swift in Sources */,
 				2288C9BD2526D0B8008BE2C5 /* InfoManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
