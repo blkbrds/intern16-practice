@@ -13,6 +13,8 @@
 		2284B339252B1F43003492CB /* UserlistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2284B337252B1F43003492CB /* UserlistViewController.xib */; };
 		2284B33C252B1F68003492CB /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284B33A252B1F68003492CB /* UserDetailsViewController.swift */; };
 		2284B33D252B1F68003492CB /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2284B33B252B1F68003492CB /* UserDetailsViewController.xib */; };
+		228605E425340B1700A24AFB /* Baitap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228605E225340B1700A24AFB /* Baitap4ViewController.swift */; };
+		228605E525340B1700A24AFB /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228605E325340B1700A24AFB /* Baitap4ViewController.xib */; };
 		2288C9BD2526D0B8008BE2C5 /* InfoManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288C9BC2526D0B8008BE2C5 /* InfoManagement.swift */; };
 		22CD1D1D24FE2D75002501EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD1D1C24FE2D75002501EA /* AppDelegate.swift */; };
 		22CD1D1F24FE2D75002501EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD1D1E24FE2D75002501EA /* SceneDelegate.swift */; };
@@ -44,6 +46,8 @@
 		2284B337252B1F43003492CB /* UserlistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserlistViewController.xib; sourceTree = "<group>"; };
 		2284B33A252B1F68003492CB /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		2284B33B252B1F68003492CB /* UserDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsViewController.xib; sourceTree = "<group>"; };
+		228605E225340B1700A24AFB /* Baitap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4ViewController.swift; sourceTree = "<group>"; };
+		228605E325340B1700A24AFB /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
 		2288C9BC2526D0B8008BE2C5 /* InfoManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManagement.swift; sourceTree = "<group>"; };
 		22CD1D1924FE2D75002501EA /* Baitap9Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitap9Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CD1D1C24FE2D75002501EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 			path = Baitap3;
 			sourceTree = "<group>";
 		};
+		228605E12534076B00A24AFB /* Baitap4 */ = {
+			isa = PBXGroup;
+			children = (
+				228605E225340B1700A24AFB /* Baitap4ViewController.swift */,
+				228605E325340B1700A24AFB /* Baitap4ViewController.xib */,
+			);
+			path = Baitap4;
+			sourceTree = "<group>";
+		};
 		22CD1D1024FE2D75002501EA = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 		22CD1D1B24FE2D75002501EA /* Baitap9Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				228605E12534076B00A24AFB /* Baitap4 */,
 				22CD1D3C24FE9F02002501EA /* Baitap1 */,
 				22E7F07F25052E860013E391 /* Baitap2 */,
 				2284B32B252B1534003492CB /* Baitap3 */,
@@ -223,6 +237,7 @@
 				22CD1D4024FE9FDF002501EA /* AViewController.xib in Resources */,
 				22CD1D4424FEA147002501EA /* BViewController.xib in Resources */,
 				22CD1D5024FF4E11002501EA /* EViewController.xib in Resources */,
+				228605E525340B1700A24AFB /* Baitap4ViewController.xib in Resources */,
 				22CD1D4C24FF4E03002501EA /* DViewController.xib in Resources */,
 				2284B33D252B1F68003492CB /* UserDetailsViewController.xib in Resources */,
 				22CD1D2924FE2D79002501EA /* LaunchScreen.storyboard in Resources */,
@@ -248,6 +263,7 @@
 				22E7F08625052EDA0013E391 /* HomeViewController.swift in Sources */,
 				2284B32F252B1C6F003492CB /* UserView.swift in Sources */,
 				2284B331252B1CA4003492CB /* UserInfo.swift in Sources */,
+				228605E425340B1700A24AFB /* Baitap4ViewController.swift in Sources */,
 				2284B338252B1F43003492CB /* UserlistViewController.swift in Sources */,
 				22CD1D3F24FE9FDF002501EA /* AViewController.swift in Sources */,
 				22CD1D1F24FE2D75002501EA /* SceneDelegate.swift in Sources */,

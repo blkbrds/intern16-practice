@@ -31,7 +31,6 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = editButton
         
         welcomeTextField.text = "Welcome\n\(username)"
-        
     }
     
     @objc func editAction() {

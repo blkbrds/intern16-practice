@@ -11,6 +11,7 @@ import UIKit
 class UserlistViewController: UIViewController {
 
     var userInfo: [UserInfo] = []
+    var index: Int?
 
     @IBOutlet weak var scrollView: UIScrollView!
 
@@ -66,11 +67,28 @@ extension UserlistViewController: UserViewDelegate {
     func view(_ view: UserView, needsPerform action: UserView.Action) {
         switch action {
         case .didTapSendUsername(index: let index):
-            print("name \(userInfo[index].userNameIndex)")
             let viewController = UserDetailsViewController()
             let username = userInfo[index].userNameIndex
             viewController.username = username
+            viewController.index = index
+            viewController.delegate = self
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
+
+extension UserlistViewController: UserDetailsViewControllerDelegate {
+    func controller(_ viewController: UserDetailsViewController, needsPerform action: UserDetailsViewController.Action) {
+        switch action {
+        case .updateInfo(newUsername: let name, index: let i):
+            guard let index = index else { return }
+            userInfo[index].userNameIndex = name
+            for (index, view) in scrollView.subviews.enumerated() {
+                if let subview = view as? UserView, index == i, name == name {
+                    subview.updateUsername(newName: name)
+                }
+            }
+        }
+    }
+}
+

@@ -66,6 +66,10 @@ class UserView: UIView {
         userButton.addTarget(self, action: #selector(buttonDidClick), for: .touchUpInside)
         addSubview(userButton)
     }
+    
+    func updateUsername(newName: String) {
+        userNameLabel.text = newName
+    }
 
     @objc func buttonDidClick(sender: UIButton) {
         delegate?.view(self, needsPerform: .didTapSendUsername(index: index))
