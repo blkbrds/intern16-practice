@@ -11,8 +11,15 @@
 		224646A625354616001012A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646A525354616001012A9 /* SceneDelegate.swift */; };
 		224646AD2535461E001012A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224646AC2535461E001012A9 /* Assets.xcassets */; };
 		224646B02535461E001012A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224646AE2535461E001012A9 /* LaunchScreen.storyboard */; };
-		224646BD2535473D001012A9 /* Baitap3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646BB2535473D001012A9 /* Baitap3ViewController.swift */; };
-		224646BE2535473D001012A9 /* Baitap3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646BC2535473D001012A9 /* Baitap3ViewController.xib */; };
+		224646C3253561ED001012A9 /* DiaDiemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646C1253561ED001012A9 /* DiaDiemViewController.swift */; };
+		224646C4253561ED001012A9 /* DiaDiemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646C2253561ED001012A9 /* DiaDiemViewController.xib */; };
+		224646C725356205001012A9 /* MienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646C525356205001012A9 /* MienViewController.swift */; };
+		224646C825356205001012A9 /* MienViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646C625356205001012A9 /* MienViewController.xib */; };
+		224646CB25356216001012A9 /* TinhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646C925356216001012A9 /* TinhViewController.swift */; };
+		224646CC25356216001012A9 /* TinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CA25356216001012A9 /* TinhViewController.xib */; };
+		224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646CD2535622B001012A9 /* HuyenViewController.swift */; };
+		224646D02535622B001012A9 /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CE2535622B001012A9 /* HuyenViewController.xib */; };
+		22816BAC25359E7200971441 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22816BAB25359E7200971441 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +29,16 @@
 		224646AC2535461E001012A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224646AF2535461E001012A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		224646B12535461E001012A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		224646BB2535473D001012A9 /* Baitap3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap3ViewController.swift; sourceTree = "<group>"; };
-		224646BC2535473D001012A9 /* Baitap3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap3ViewController.xib; sourceTree = "<group>"; };
 		224646C025355D19001012A9 /* Baitap1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Baitap1.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		224646C1253561ED001012A9 /* DiaDiemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaDiemViewController.swift; sourceTree = "<group>"; };
+		224646C2253561ED001012A9 /* DiaDiemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaDiemViewController.xib; sourceTree = "<group>"; };
+		224646C525356205001012A9 /* MienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MienViewController.swift; sourceTree = "<group>"; };
+		224646C625356205001012A9 /* MienViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MienViewController.xib; sourceTree = "<group>"; };
+		224646C925356216001012A9 /* TinhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhViewController.swift; sourceTree = "<group>"; };
+		224646CA25356216001012A9 /* TinhViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhViewController.xib; sourceTree = "<group>"; };
+		224646CD2535622B001012A9 /* HuyenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuyenViewController.swift; sourceTree = "<group>"; };
+		224646CE2535622B001012A9 /* HuyenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuyenViewController.xib; sourceTree = "<group>"; };
+		22816BAB25359E7200971441 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +93,15 @@
 		224646BA25354727001012A9 /* Baitap3 */ = {
 			isa = PBXGroup;
 			children = (
-				224646BB2535473D001012A9 /* Baitap3ViewController.swift */,
-				224646BC2535473D001012A9 /* Baitap3ViewController.xib */,
+				224646C1253561ED001012A9 /* DiaDiemViewController.swift */,
+				224646C2253561ED001012A9 /* DiaDiemViewController.xib */,
+				224646C525356205001012A9 /* MienViewController.swift */,
+				224646C625356205001012A9 /* MienViewController.xib */,
+				224646C925356216001012A9 /* TinhViewController.swift */,
+				224646CA25356216001012A9 /* TinhViewController.xib */,
+				224646CD2535622B001012A9 /* HuyenViewController.swift */,
+				224646CE2535622B001012A9 /* HuyenViewController.xib */,
+				22816BAB25359E7200971441 /* ButtonView.swift */,
 			);
 			path = Baitap3;
 			sourceTree = "<group>";
@@ -143,9 +164,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224646BE2535473D001012A9 /* Baitap3ViewController.xib in Resources */,
+				224646D02535622B001012A9 /* HuyenViewController.xib in Resources */,
 				224646B02535461E001012A9 /* LaunchScreen.storyboard in Resources */,
+				224646CC25356216001012A9 /* TinhViewController.xib in Resources */,
+				224646C4253561ED001012A9 /* DiaDiemViewController.xib in Resources */,
 				224646AD2535461E001012A9 /* Assets.xcassets in Resources */,
+				224646C825356205001012A9 /* MienViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,9 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224646C3253561ED001012A9 /* DiaDiemViewController.swift in Sources */,
 				224646A425354616001012A9 /* AppDelegate.swift in Sources */,
-				224646BD2535473D001012A9 /* Baitap3ViewController.swift in Sources */,
+				224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */,
+				224646CB25356216001012A9 /* TinhViewController.swift in Sources */,
 				224646A625354616001012A9 /* SceneDelegate.swift in Sources */,
+				224646C725356205001012A9 /* MienViewController.swift in Sources */,
+				22816BAC25359E7200971441 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

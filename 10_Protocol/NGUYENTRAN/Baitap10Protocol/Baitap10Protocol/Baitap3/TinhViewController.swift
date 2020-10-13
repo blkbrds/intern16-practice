@@ -1,5 +1,5 @@
 //
-//  Baitap3ViewController.swift
+//  TinhViewController.swift
 //  Baitap10Protocol
 //
 //  Created by MBA0245P on 10/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Baitap3ViewController: UIViewController {
+class TinhViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

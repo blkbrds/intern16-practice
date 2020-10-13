@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             guard let windowScene = (scene as? UIWindowScene) else { return }
             let window = UIWindow(windowScene: windowScene)
             self.window = window
-            window.rootViewController = Baitap3ViewController()
+            window.rootViewController = DiaDiemViewController()
             window.backgroundColor = .white
             window.makeKeyAndVisible()
         }
