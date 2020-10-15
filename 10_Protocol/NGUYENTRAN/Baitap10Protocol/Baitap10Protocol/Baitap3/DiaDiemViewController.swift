@@ -47,12 +47,7 @@ class DiaDiemViewController: UIViewController {
         tagArray[0] = mien
         tagArray[1] = tinh
         tagArray[2] = huyen
-        print(mien)
-        print(tagArray)
-        let data = ConfigData()
-        mienDetailLabel.text = data.getMien(tag: tagArray[0])
-        tinhDetailLabel.text = data.getTinh(tag: tagArray[1])
-        huyenDetailLabel.text = data.getHuyen(tag: tagArray[2])
+        setUpDefault()
     }
 }
 
