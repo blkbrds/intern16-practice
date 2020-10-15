@@ -20,7 +20,10 @@
 		224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646CD2535622B001012A9 /* HuyenViewController.swift */; };
 		224646D02535622B001012A9 /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CE2535622B001012A9 /* HuyenViewController.xib */; };
 		227F669125375307000FCDB4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F669025375307000FCDB4 /* Data.swift */; };
+		227F6695253826CF000FCDB4 /* Baitap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F6693253826CE000FCDB4 /* Baitap4ViewController.swift */; };
+		227F6696253826CF000FCDB4 /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */; };
 		22816BAC25359E7200971441 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22816BAB25359E7200971441 /* ButtonView.swift */; };
+		22EFBF2A2538358B001FC441 /* ProvinceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFBF292538358B001FC441 /* ProvinceList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +43,10 @@
 		224646CD2535622B001012A9 /* HuyenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuyenViewController.swift; sourceTree = "<group>"; };
 		224646CE2535622B001012A9 /* HuyenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuyenViewController.xib; sourceTree = "<group>"; };
 		227F669025375307000FCDB4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		227F6693253826CE000FCDB4 /* Baitap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4ViewController.swift; sourceTree = "<group>"; };
+		227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
 		22816BAB25359E7200971441 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		22EFBF292538358B001FC441 /* ProvinceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		224646A225354616001012A9 /* Baitap10Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				227F6692253824E7000FCDB4 /* Baitap4 */,
 				224646BA25354727001012A9 /* Baitap3 */,
 				224646B72535468C001012A9 /* Baitap1 */,
 				224646A325354616001012A9 /* AppDelegate.swift */,
@@ -107,6 +114,16 @@
 				227F669025375307000FCDB4 /* Data.swift */,
 			);
 			path = Baitap3;
+			sourceTree = "<group>";
+		};
+		227F6692253824E7000FCDB4 /* Baitap4 */ = {
+			isa = PBXGroup;
+			children = (
+				227F6693253826CE000FCDB4 /* Baitap4ViewController.swift */,
+				227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */,
+				22EFBF292538358B001FC441 /* ProvinceList.swift */,
+			);
+			path = Baitap4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				224646D02535622B001012A9 /* HuyenViewController.xib in Resources */,
+				227F6696253826CF000FCDB4 /* Baitap4ViewController.xib in Resources */,
 				224646B02535461E001012A9 /* LaunchScreen.storyboard in Resources */,
 				224646CC25356216001012A9 /* TinhViewController.xib in Resources */,
 				224646C4253561ED001012A9 /* DiaDiemViewController.xib in Resources */,
@@ -185,8 +203,10 @@
 			files = (
 				224646C3253561ED001012A9 /* DiaDiemViewController.swift in Sources */,
 				224646A425354616001012A9 /* AppDelegate.swift in Sources */,
+				227F6695253826CF000FCDB4 /* Baitap4ViewController.swift in Sources */,
 				224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */,
 				224646CB25356216001012A9 /* TinhViewController.swift in Sources */,
+				22EFBF2A2538358B001FC441 /* ProvinceList.swift in Sources */,
 				224646A625354616001012A9 /* SceneDelegate.swift in Sources */,
 				224646C725356205001012A9 /* MienViewController.swift in Sources */,
 				22816BAC25359E7200971441 /* ButtonView.swift in Sources */,

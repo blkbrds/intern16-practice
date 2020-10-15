@@ -15,10 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
             guard let windowScene = (scene as? UIWindowScene) else { return }
                 let window = UIWindow(windowScene: windowScene)
-                let viewController = DiaDiemViewController()
-                let navigationController = UINavigationController(rootViewController: viewController)
-                
-                window.rootViewController = navigationController
+//                let viewController = Baitap4ViewController()
+//                let navigationController = UINavigationController(rootViewController: viewController)
+//                
+//                window.rootViewController = navigationController
+             window.rootViewController = Baitap4ViewController()
                 self.window = window
                 window.makeKeyAndVisible()
         }
