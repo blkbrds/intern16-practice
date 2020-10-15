@@ -9,16 +9,16 @@
 import UIKit
 
 protocol HuyenViewControllerDelegate: class {
-    func controller(_ view: HuyenViewController, needsPerform action: HuyenViewController.Action )
+    func controller(_ view: HuyenViewController, needsPerform action: HuyenViewController.Action)
 }
 
 class HuyenViewController: UIViewController {
-    
-    var tagArray : [Int] = []
+
+    var tagArray: [Int] = []
     var selectedTag: Int = 0
     var willSelectTag: Int = 0
     weak var delegate: HuyenViewControllerDelegate?
-    
+
     @IBOutlet weak var huyen1Button: UIButton!
     @IBOutlet weak var huyen2Button: UIButton!
     @IBOutlet weak var huyen3Button: UIButton!
@@ -29,12 +29,12 @@ class HuyenViewController: UIViewController {
     @IBOutlet weak var huyen8Button: UIButton!
     @IBOutlet weak var huyen9Button: UIButton!
     @IBOutlet weak var huyen10Button: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Huyện"
-        
+
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneAction))
         navigationItem.rightBarButtonItem = doneButton
         selectedTag = tagArray[2]
@@ -54,7 +54,7 @@ class HuyenViewController: UIViewController {
         willSelectTag = tag
         sender.changeButtonState(isSelected: true, color: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))
     }
-    
+
     func defaultSelected(tag: Int) {
         let selectedButton = self.view.viewWithTag(tag) as? UIButton
         selectedButton?.changeButtonState(isSelected: true, color: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))

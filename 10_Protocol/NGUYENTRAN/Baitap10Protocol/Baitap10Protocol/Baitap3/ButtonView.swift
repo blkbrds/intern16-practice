@@ -39,7 +39,7 @@ extension UIButton {
             return UIColor(cgColor: color)
         }
     }
-    
+
     func changeButtonState(isSelected: Bool, color: UIColor?) {
         if isSelected == false {
             self.backgroundColor = .white

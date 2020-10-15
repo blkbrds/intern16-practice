@@ -9,16 +9,16 @@
 import UIKit
 
 protocol TinhViewControllerDelegate: class {
-    func controller(_ view: TinhViewController, needsPerform action: TinhViewController.Action )
+    func controller(_ view: TinhViewController, needsPerform action: TinhViewController.Action)
 }
 
 class TinhViewController: UIViewController {
-    
-    var tagArray : [Int] = []
+
+    var tagArray: [Int] = []
     var selectedTag: Int = 0
     var willSelectTag: Int = 0
     weak var delegate: TinhViewControllerDelegate?
-    
+
     @IBOutlet weak var tinh1Button: UIButton!
     @IBOutlet weak var tinh2Button: UIButton!
     @IBOutlet weak var tinh3Button: UIButton!
@@ -29,11 +29,11 @@ class TinhViewController: UIViewController {
     @IBOutlet weak var tinh8Button: UIButton!
     @IBOutlet weak var tinh9Button: UIButton!
     @IBOutlet weak var tinh10Button: UIButton!
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = "Tỉnh"
 
         let tinhButton = UIBarButtonItem(title: "Huyện", style: .plain, target: self, action: #selector(goToHuyen))
@@ -50,7 +50,7 @@ class TinhViewController: UIViewController {
         huyenViewController.delegate = self
         navigationController?.pushViewController(huyenViewController, animated: true)
     }
-    
+
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
         let selectedButton = self.view.viewWithTag(selectedTag) as? UIButton
         selectedButton?.changeButtonState(isSelected: false, color: .white)
@@ -59,7 +59,7 @@ class TinhViewController: UIViewController {
         willSelectTag = tag
         sender.changeButtonState(isSelected: true, color: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))
     }
-    
+
     func defaultSelected(tag: Int) {
         let selectedButton = self.view.viewWithTag(tag) as? UIButton
         selectedButton?.changeButtonState(isSelected: true, color: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))
@@ -81,7 +81,7 @@ extension TinhViewController: HuyenViewControllerDelegate {
     }
 }
 
-    
+
 
 
 
