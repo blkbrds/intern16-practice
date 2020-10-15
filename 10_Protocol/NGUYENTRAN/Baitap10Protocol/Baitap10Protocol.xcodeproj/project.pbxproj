@@ -19,6 +19,7 @@
 		224646CC25356216001012A9 /* TinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CA25356216001012A9 /* TinhViewController.xib */; };
 		224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646CD2535622B001012A9 /* HuyenViewController.swift */; };
 		224646D02535622B001012A9 /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CE2535622B001012A9 /* HuyenViewController.xib */; };
+		227F669125375307000FCDB4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F669025375307000FCDB4 /* Data.swift */; };
 		22816BAC25359E7200971441 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22816BAB25359E7200971441 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		224646CA25356216001012A9 /* TinhViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhViewController.xib; sourceTree = "<group>"; };
 		224646CD2535622B001012A9 /* HuyenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuyenViewController.swift; sourceTree = "<group>"; };
 		224646CE2535622B001012A9 /* HuyenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuyenViewController.xib; sourceTree = "<group>"; };
+		227F669025375307000FCDB4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		22816BAB25359E7200971441 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				224646CD2535622B001012A9 /* HuyenViewController.swift */,
 				224646CE2535622B001012A9 /* HuyenViewController.xib */,
 				22816BAB25359E7200971441 /* ButtonView.swift */,
+				227F669025375307000FCDB4 /* Data.swift */,
 			);
 			path = Baitap3;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				224646A625354616001012A9 /* SceneDelegate.swift in Sources */,
 				224646C725356205001012A9 /* MienViewController.swift in Sources */,
 				22816BAC25359E7200971441 /* ButtonView.swift in Sources */,
+				227F669125375307000FCDB4 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
