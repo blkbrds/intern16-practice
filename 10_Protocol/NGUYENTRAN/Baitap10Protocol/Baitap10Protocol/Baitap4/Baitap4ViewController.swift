@@ -45,7 +45,9 @@ extension Baitap4ViewController: UISearchBarDelegate {
         } else {
             var newData : [String] = []
             for province in data.provinceList {
-                if province.contains(searchText) {
+                let provinceLower = province.lowercased()
+                let searchValueLower = searchText.lowercased()
+                if provinceLower.contains(searchValueLower) {
                     newData.append(province)
                 }
             }

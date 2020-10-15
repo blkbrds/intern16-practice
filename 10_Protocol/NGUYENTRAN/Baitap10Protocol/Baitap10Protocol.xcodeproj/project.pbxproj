@@ -24,6 +24,12 @@
 		227F6696253826CF000FCDB4 /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */; };
 		22816BAC25359E7200971441 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22816BAB25359E7200971441 /* ButtonView.swift */; };
 		22EFBF2A2538358B001FC441 /* ProvinceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFBF292538358B001FC441 /* ProvinceList.swift */; };
+		22EFBF2D253842CD001FC441 /* Baitap5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFBF2B253842CD001FC441 /* Baitap5ViewController.swift */; };
+		22EFBF2E253842CD001FC441 /* Baitap5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EFBF2C253842CD001FC441 /* Baitap5ViewController.xib */; };
+		22EFBF3125384C1C001FC441 /* SubCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFBF3025384C1C001FC441 /* SubCalculator.swift */; };
+		22EFBF3325384C32001FC441 /* SubCalculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EFBF3225384C32001FC441 /* SubCalculator.xib */; };
+		22EFBF3525384D09001FC441 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFBF3425384D09001FC441 /* Calculator.swift */; };
+		22EFBF3725384D59001FC441 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFBF3625384D59001FC441 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,12 @@
 		227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
 		22816BAB25359E7200971441 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		22EFBF292538358B001FC441 /* ProvinceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceList.swift; sourceTree = "<group>"; };
+		22EFBF2B253842CD001FC441 /* Baitap5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap5ViewController.swift; sourceTree = "<group>"; };
+		22EFBF2C253842CD001FC441 /* Baitap5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap5ViewController.xib; sourceTree = "<group>"; };
+		22EFBF3025384C1C001FC441 /* SubCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCalculator.swift; sourceTree = "<group>"; };
+		22EFBF3225384C32001FC441 /* SubCalculator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCalculator.xib; sourceTree = "<group>"; };
+		22EFBF3425384D09001FC441 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		22EFBF3625384D59001FC441 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +91,10 @@
 		224646A225354616001012A9 /* Baitap10Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				227F6692253824E7000FCDB4 /* Baitap4 */,
-				224646BA25354727001012A9 /* Baitap3 */,
 				224646B72535468C001012A9 /* Baitap1 */,
+				224646BA25354727001012A9 /* Baitap3 */,
+				227F6692253824E7000FCDB4 /* Baitap4 */,
+				22EFBF2F253842DB001FC441 /* Baitap5 */,
 				224646A325354616001012A9 /* AppDelegate.swift */,
 				224646A525354616001012A9 /* SceneDelegate.swift */,
 				224646AC2535461E001012A9 /* Assets.xcassets */,
@@ -124,6 +137,19 @@
 				22EFBF292538358B001FC441 /* ProvinceList.swift */,
 			);
 			path = Baitap4;
+			sourceTree = "<group>";
+		};
+		22EFBF2F253842DB001FC441 /* Baitap5 */ = {
+			isa = PBXGroup;
+			children = (
+				22EFBF2B253842CD001FC441 /* Baitap5ViewController.swift */,
+				22EFBF2C253842CD001FC441 /* Baitap5ViewController.xib */,
+				22EFBF3025384C1C001FC441 /* SubCalculator.swift */,
+				22EFBF3225384C32001FC441 /* SubCalculator.xib */,
+				22EFBF3425384D09001FC441 /* Calculator.swift */,
+				22EFBF3625384D59001FC441 /* RoundButton.swift */,
+			);
+			path = Baitap5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +217,8 @@
 				224646C4253561ED001012A9 /* DiaDiemViewController.xib in Resources */,
 				224646AD2535461E001012A9 /* Assets.xcassets in Resources */,
 				224646C825356205001012A9 /* MienViewController.xib in Resources */,
+				22EFBF2E253842CD001FC441 /* Baitap5ViewController.xib in Resources */,
+				22EFBF3325384C32001FC441 /* SubCalculator.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,14 +231,18 @@
 			files = (
 				224646C3253561ED001012A9 /* DiaDiemViewController.swift in Sources */,
 				224646A425354616001012A9 /* AppDelegate.swift in Sources */,
+				22EFBF3725384D59001FC441 /* RoundButton.swift in Sources */,
+				22EFBF3125384C1C001FC441 /* SubCalculator.swift in Sources */,
 				227F6695253826CF000FCDB4 /* Baitap4ViewController.swift in Sources */,
 				224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */,
+				22EFBF3525384D09001FC441 /* Calculator.swift in Sources */,
 				224646CB25356216001012A9 /* TinhViewController.swift in Sources */,
 				22EFBF2A2538358B001FC441 /* ProvinceList.swift in Sources */,
 				224646A625354616001012A9 /* SceneDelegate.swift in Sources */,
 				224646C725356205001012A9 /* MienViewController.swift in Sources */,
 				22816BAC25359E7200971441 /* ButtonView.swift in Sources */,
 				227F669125375307000FCDB4 /* Data.swift in Sources */,
+				22EFBF2D253842CD001FC441 /* Baitap5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
