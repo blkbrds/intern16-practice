@@ -23,6 +23,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="pmM-6x-e25"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-MF-alP">
                             <rect key="frame" x="88" y="0.0" width="224" height="38"/>
@@ -37,6 +40,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="doneButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="a4H-dB-629"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -69,13 +75,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLW-rE-ohD" userLabel="resultValue">
-                    <rect key="frame" x="330" y="58" width="48" height="24"/>
+                    <rect key="frame" x="290" y="58" width="48" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18Q-tr-3q4" userLabel="result">
-                    <rect key="frame" x="248.5" y="58" width="71.5" height="24"/>
+                    <rect key="frame" x="208.5" y="58" width="71.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -102,6 +108,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="5B0-Wa-ZRM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-B7-2L6" userLabel="-" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
                             <rect key="frame" x="61" y="0.0" width="50" height="50"/>
@@ -122,6 +131,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="subtractButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="lWM-Wa-fxE"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aop-wR-ByR" userLabel="x" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
                             <rect key="frame" x="122" y="0.0" width="50" height="50"/>
@@ -142,6 +154,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="multiplyButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="w5p-Nf-rJZ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-55-90C" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
                             <rect key="frame" x="183" y="0.0" width="50" height="50"/>
@@ -162,6 +177,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="divideButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="yJr-k1-iXd"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -187,6 +205,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="percentButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="uec-Pv-cgv"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-wi-wwm" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
                             <rect key="frame" x="61" y="0.0" width="50" height="50"/>
@@ -207,6 +228,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="powerButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="la5-Um-SHi"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-pY-7lW" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
                             <rect key="frame" x="122" y="0.0" width="111" height="50"/>
@@ -228,6 +252,9 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clearButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="hRo-zT-KbX"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -248,7 +275,7 @@
                 <constraint firstItem="74X-OG-bmO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="cj3-e9-X1q"/>
                 <constraint firstItem="tWQ-vJ-jXv" firstAttribute="leading" secondItem="lcA-EY-8dn" secondAttribute="leading" id="eBZ-TW-qtJ"/>
                 <constraint firstItem="74X-OG-bmO" firstAttribute="top" secondItem="BrH-fm-nps" secondAttribute="bottom" constant="15" id="euJ-mS-tG9"/>
-                <constraint firstItem="18Q-tr-3q4" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-80" id="h5h-w3-Eyt"/>
+                <constraint firstItem="18Q-tr-3q4" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-120" id="h5h-w3-Eyt"/>
                 <constraint firstItem="BrH-fm-nps" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="h6A-3K-7v4"/>
                 <constraint firstItem="VLW-rE-ohD" firstAttribute="top" secondItem="lcA-EY-8dn" secondAttribute="top" id="o1v-Jr-QLG"/>
                 <constraint firstItem="BrH-fm-nps" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sFw-xa-4Gb"/>
@@ -256,7 +283,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="navigationStack" destination="BrH-fm-nps" id="glP-ge-xRi"/>
+                <outlet property="resultValueLabel" destination="VLW-rE-ohD" id="aqL-mh-DHx"/>
+                <outlet property="xValueLabel" destination="lcA-EY-8dn" id="12j-QJ-yKR"/>
+                <outlet property="yValueLabel" destination="tWQ-vJ-jXv" id="Nra-tS-U35"/>
             </connections>
             <point key="canvasLocation" x="127.53623188405798" y="-58.928571428571423"/>
         </view>

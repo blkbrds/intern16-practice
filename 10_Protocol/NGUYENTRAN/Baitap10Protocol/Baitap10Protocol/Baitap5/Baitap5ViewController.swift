@@ -11,15 +11,18 @@ import UIKit
 class Baitap5ViewController: UIViewController {
     
     var subCalculator = SubCalculator()
+    
     @IBOutlet weak var xTexTField: UITextField!
     @IBOutlet weak var yTextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configSubCalculatorView()
-
-
+        resultLabel.clipsToBounds = true
+        resultLabel.adjustsFontSizeToFitWidth = true
+        resultLabel.text = ""
     }
 
     func configSubCalculatorView() {
@@ -35,12 +38,13 @@ class Baitap5ViewController: UIViewController {
         border.backgroundColor = #colorLiteral(red: 0.09297447849, green: 0.3600888325, blue: 0.16213688, alpha: 1)
         border.frame = CGRect(x: 0, y: 43, width: UIScreen.main.bounds.width, height: 1.0)
         subCalculator.layer.addSublayer(border)
+        subCalculator.delegate = self
+        subCalculator.datasource = self
         view.addSubview(subCalculator)
         subCalculator.isHidden = true
     }
 
     @IBAction func toggleCalculatorButton(_ sender: UIButton) {
-        
         if subCalculator.isHidden {
             subCalculator.isHidden = false
             xTexTField.isEnabled = false
@@ -52,6 +56,54 @@ class Baitap5ViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+}
 
+extension Baitap5ViewController: SubCalculatorDelegate {
+    func send(_ view: SubCalculator, needsPerform action: SubCalculator.Action) {
+        switch action {
+        case .tapCancel:
+            subCalculator.isHidden = true
+            xTexTField.isEnabled = true
+            yTextField.isEnabled = true
+        case .tapClear:
+            subCalculator.isHidden = true
+            xTexTField.isEnabled = true
+            yTextField.isEnabled = true
+            xTexTField.text?.removeAll()
+            yTextField.text?.removeAll()
+        case .tapDone(result: let result):
+            subCalculator.isHidden = true
+            xTexTField.isEnabled = true
+            yTextField.isEnabled = true
+            resultLabel.text = result
+        }
+    }
+}
 
+extension Baitap5ViewController: SubCalculatorDataSource {
+    func getValue(_ view: SubCalculator) -> (String?, String?) {
+        guard let x = xTexTField.text, let y = yTextField.text else {
+            xTexTField.text?.removeAll()
+            yTextField.text?.removeAll()
+            resultLabel.text = "Không được để trống giá trị x, y"
+            resultLabel.textColor = .red
+            return ("","")
+        }
+        return (x,y)
+    }
+}
+
+extension Baitap5ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == xTexTField {
+            xTexTField.resignFirstResponder()
+            yTextField.becomeFirstResponder()
+        } else {
+            yTextField.resignFirstResponder()
+        }
+        return true
+    }
 }

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap5ViewController" customModule="Baitap10Protocol" customModuleProvider="target">
             <connections>
+                <outlet property="resultLabel" destination="sHj-kP-uvR" id="hD9-fJ-Tgf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="xTexTField" destination="rdN-Mj-vrD" id="UGt-ST-2CQ"/>
                 <outlet property="yTextField" destination="aJL-lx-4NN" id="cnd-n8-3ag"/>
@@ -25,7 +26,7 @@
                         <constraint firstAttribute="width" constant="100" id="jH8-lX-H3e"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                             <real key="value" value="1"/>
@@ -44,7 +45,7 @@
                         <constraint firstAttribute="width" constant="100" id="k9O-8k-Fko"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                             <real key="value" value="1"/>
@@ -81,14 +82,22 @@
                         <action selector="toggleCalculatorButton:" destination="-1" eventType="touchUpInside" id="lEd-2v-krh"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHj-kP-uvR">
+                    <rect key="frame" x="293" y="253.5" width="71" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.092974478489999998" green="0.36008883250000001" blue="0.16213688000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="sHj-kP-uvR" firstAttribute="top" secondItem="aJL-lx-4NN" secondAttribute="bottom" constant="70" id="Hsu-nI-ua8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aJL-lx-4NN" secondAttribute="trailing" constant="50" id="JHF-eg-0a4"/>
                 <constraint firstItem="PJR-XE-bU4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Sr7-Ve-Lg4"/>
                 <constraint firstItem="aJL-lx-4NN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="UFH-3J-9x5"/>
                 <constraint firstItem="rdN-Mj-vrD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="WXk-MQ-V3F"/>
                 <constraint firstItem="rdN-Mj-vrD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Ydd-um-flJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sHj-kP-uvR" secondAttribute="trailing" constant="50" id="nAc-vM-LqI"/>
                 <constraint firstItem="PJR-XE-bU4" firstAttribute="centerY" secondItem="rdN-Mj-vrD" secondAttribute="centerY" id="qU3-4C-XHT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

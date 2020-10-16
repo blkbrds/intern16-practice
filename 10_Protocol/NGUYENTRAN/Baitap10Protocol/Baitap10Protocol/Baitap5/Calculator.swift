@@ -13,26 +13,28 @@ enum Operation: String {
     case subtract = "-"
     case multiply = "*"
     case divide = "/"
+    case power = "%"
+    case percent = "x^y"
     case null = "null"
 }
 
 class Calculator {
-    
+
     func add(a: String, b: String) -> String {
         let result = a.floatValue + b.floatValue
         return String(result)
     }
-    
+
     func sub(a: String, b: String) -> String {
         let result = a.floatValue - b.floatValue
         return String(result)
     }
-    
+
     func mul(a: String, b: String) -> String {
         let result = a.floatValue * b.floatValue
         return String(result)
     }
-    
+
     func div(a: String, b: String) -> String {
         if b.floatValue == 0 {
             return "0"
@@ -40,6 +42,16 @@ class Calculator {
             let result = a.floatValue / b.floatValue
             return String(result)
         }
+    }
+
+    func power(a: String, b: String) -> String {
+        let result = powf(a.floatValue, b.floatValue)
+        return String(result)
+    }
+
+    func percent(a: String) -> String {
+        let result = a.floatValue / 100
+        return String(result)
     }
 }
 
