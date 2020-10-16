@@ -19,6 +19,7 @@
 		224646CC25356216001012A9 /* TinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CA25356216001012A9 /* TinhViewController.xib */; };
 		224646CF2535622B001012A9 /* HuyenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224646CD2535622B001012A9 /* HuyenViewController.swift */; };
 		224646D02535622B001012A9 /* HuyenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224646CE2535622B001012A9 /* HuyenViewController.xib */; };
+		2253E0872539360900D10398 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E0862539360900D10398 /* CustomTextField.swift */; };
 		227F669125375307000FCDB4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F669025375307000FCDB4 /* Data.swift */; };
 		227F6695253826CF000FCDB4 /* Baitap4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F6693253826CE000FCDB4 /* Baitap4ViewController.swift */; };
 		227F6696253826CF000FCDB4 /* Baitap4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */; };
@@ -48,6 +49,7 @@
 		224646CA25356216001012A9 /* TinhViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhViewController.xib; sourceTree = "<group>"; };
 		224646CD2535622B001012A9 /* HuyenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuyenViewController.swift; sourceTree = "<group>"; };
 		224646CE2535622B001012A9 /* HuyenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuyenViewController.xib; sourceTree = "<group>"; };
+		2253E0862539360900D10398 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		227F669025375307000FCDB4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		227F6693253826CE000FCDB4 /* Baitap4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4ViewController.swift; sourceTree = "<group>"; };
 		227F6694253826CF000FCDB4 /* Baitap4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap4ViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				22EFBF3225384C32001FC441 /* SubCalculator.xib */,
 				22EFBF3425384D09001FC441 /* Calculator.swift */,
 				22EFBF3625384D59001FC441 /* RoundButton.swift */,
+				2253E0862539360900D10398 /* CustomTextField.swift */,
 			);
 			path = Baitap5;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				22816BAC25359E7200971441 /* ButtonView.swift in Sources */,
 				227F669125375307000FCDB4 /* Data.swift in Sources */,
 				22EFBF2D253842CD001FC441 /* Baitap5ViewController.swift in Sources */,
+				2253E0872539360900D10398 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,82 +10,84 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="SubCalculator" customModule="Baitap10Protocol" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BrH-fm-nps">
-                    <rect key="frame" x="10" y="5" width="280" height="30"/>
+                    <rect key="frame" x="0.0" y="5" width="400" height="38"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzq-Np-ggY">
-                            <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="38"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="65" id="HIj-KL-3y1"/>
+                                <constraint firstAttribute="width" constant="80" id="HIj-KL-3y1"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <state key="normal" title="Cancel"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-MF-alP">
-                            <rect key="frame" x="73" y="0.0" width="134" height="30"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="88" y="0.0" width="224" height="38"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9M-ON-3zw">
-                            <rect key="frame" x="215" y="0.0" width="65" height="30"/>
+                            <rect key="frame" x="320" y="0.0" width="80" height="38"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="65" id="TOl-5j-Wgc"/>
+                                <constraint firstAttribute="width" constant="80" id="TOl-5j-Wgc"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Done"/>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="fzq-Np-ggY" firstAttribute="leading" secondItem="BrH-fm-nps" secondAttribute="leading" id="9oy-Gn-aLe"/>
-                        <constraint firstAttribute="trailing" secondItem="J9M-ON-3zw" secondAttribute="trailing" id="Yb3-FT-lWA"/>
+                        <constraint firstItem="fzq-Np-ggY" firstAttribute="leading" secondItem="BrH-fm-nps" secondAttribute="leading" id="Z5w-Sj-R2e"/>
+                        <constraint firstAttribute="trailing" secondItem="J9M-ON-3zw" secondAttribute="trailing" id="j4g-2Z-5l8"/>
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74X-OG-bmO" userLabel="x">
-                    <rect key="frame" x="30" y="45" width="26.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="30" y="58" width="30" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7h-nI-ir7" userLabel="y">
-                    <rect key="frame" x="30" y="70.5" width="26" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="30" y="97" width="30" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcA-EY-8dn" userLabel="xValue">
-                    <rect key="frame" x="66.5" y="45" width="42" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="70" y="58" width="48" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWQ-vJ-jXv" userLabel="yValue">
-                    <rect key="frame" x="66.5" y="70.5" width="42" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="70" y="97" width="48" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLW-rE-ohD" userLabel="resultValue">
-                    <rect key="frame" x="223" y="45" width="42" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="330" y="58" width="48" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18Q-tr-3q4" userLabel="result">
-                    <rect key="frame" x="150" y="45" width="63" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="248.5" y="58" width="71.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="r9C-Ug-1gv" userLabel="Stack1">
-                    <rect key="frame" x="50" y="101" width="193" height="40"/>
+                    <rect key="frame" x="83.5" y="135" width="233" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SX-Zl-0cY" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="jSf-zv-kIH"/>
-                                <constraint firstAttribute="height" constant="40" id="x6D-i5-XGz"/>
+                                <constraint firstAttribute="width" constant="50" id="2Wh-HP-1Md"/>
+                                <constraint firstAttribute="height" constant="50" id="ts0-W5-vsJ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="+">
@@ -102,10 +104,10 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-B7-2L6" userLabel="-" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="51" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="61" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="0VY-ka-Oa9"/>
-                                <constraint firstAttribute="width" constant="40" id="IQJ-cA-JUS"/>
+                                <constraint firstAttribute="height" constant="50" id="UTb-sf-UTW"/>
+                                <constraint firstAttribute="width" constant="50" id="cC4-dA-YBf"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="-">
@@ -122,10 +124,10 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aop-wR-ByR" userLabel="x" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="102" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="122" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="4tX-K3-r6V"/>
-                                <constraint firstAttribute="width" constant="40" id="gKa-dc-zeT"/>
+                                <constraint firstAttribute="width" constant="50" id="1S2-uD-rWT"/>
+                                <constraint firstAttribute="height" constant="50" id="pu0-O1-2rG"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="×">
@@ -142,10 +144,10 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-55-90C" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="153" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="183" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="0uU-K2-Xds"/>
-                                <constraint firstAttribute="height" constant="40" id="5cU-pb-lFq"/>
+                                <constraint firstAttribute="height" constant="50" id="9dV-ca-VvO"/>
+                                <constraint firstAttribute="width" constant="50" id="MN0-da-TcT"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="÷">
@@ -162,18 +164,15 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Xaa-VI-RYU"/>
-                    </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="J2q-NS-wiK" userLabel="Stack2">
-                    <rect key="frame" x="50" y="151" width="193" height="40"/>
+                    <rect key="frame" x="83.5" y="203" width="233" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Uj-U8-A56" userLabel="%" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="t3n-mz-rju"/>
-                                <constraint firstAttribute="width" constant="40" id="wdZ-hd-YPj"/>
+                                <constraint firstAttribute="height" constant="50" id="X5L-lx-wud"/>
+                                <constraint firstAttribute="width" constant="50" id="w8m-uK-6GO"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <state key="normal" title="%">
@@ -190,10 +189,10 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-wi-wwm" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="51" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="61" y="0.0" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="AlE-Az-nYX"/>
-                                <constraint firstAttribute="width" constant="40" id="gio-tn-noT"/>
+                                <constraint firstAttribute="width" constant="50" id="8vy-61-dcT"/>
+                                <constraint firstAttribute="height" constant="50" id="mry-8A-OPw"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="x^y">
@@ -210,11 +209,11 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-pY-7lW" customClass="RoundButton" customModule="Baitap10Protocol" customModuleProvider="target">
-                            <rect key="frame" x="102" y="0.0" width="91" height="40"/>
+                            <rect key="frame" x="122" y="0.0" width="111" height="50"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="EGd-JD-MhN"/>
-                                <constraint firstAttribute="width" constant="91" id="x55-TM-VGv"/>
+                                <constraint firstAttribute="width" constant="111" id="Toz-A7-adN"/>
+                                <constraint firstAttribute="height" constant="50" id="kgF-2D-gr2"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="Clear">
@@ -236,30 +235,30 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="lcA-EY-8dn" firstAttribute="top" secondItem="74X-OG-bmO" secondAttribute="top" id="0Oa-h5-aRv"/>
-                <constraint firstItem="tWQ-vJ-jXv" firstAttribute="top" secondItem="lcA-EY-8dn" secondAttribute="bottom" constant="5" id="9vN-22-0kL"/>
-                <constraint firstItem="r9C-Ug-1gv" firstAttribute="top" secondItem="D7h-nI-ir7" secondAttribute="bottom" constant="10" id="CUJ-M9-TQg"/>
+                <constraint firstItem="tWQ-vJ-jXv" firstAttribute="centerY" secondItem="D7h-nI-ir7" secondAttribute="centerY" id="0Yk-Ub-ctW"/>
+                <constraint firstItem="r9C-Ug-1gv" firstAttribute="top" secondItem="BrH-fm-nps" secondAttribute="top" constant="130" id="CUJ-M9-TQg"/>
                 <constraint firstItem="VLW-rE-ohD" firstAttribute="leading" secondItem="18Q-tr-3q4" secondAttribute="trailing" constant="10" id="DfR-E1-V6U"/>
+                <constraint firstItem="BrH-fm-nps" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="HTZ-zQ-0mj"/>
+                <constraint firstItem="r9C-Ug-1gv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MAF-fh-jyW"/>
                 <constraint firstItem="18Q-tr-3q4" firstAttribute="top" secondItem="74X-OG-bmO" secondAttribute="top" id="Mrg-An-4Xl"/>
-                <constraint firstItem="D7h-nI-ir7" firstAttribute="top" secondItem="74X-OG-bmO" secondAttribute="bottom" constant="5" id="QPK-Vv-hgg"/>
+                <constraint firstItem="D7h-nI-ir7" firstAttribute="top" secondItem="74X-OG-bmO" secondAttribute="bottom" constant="15" id="QPK-Vv-hgg"/>
                 <constraint firstItem="D7h-nI-ir7" firstAttribute="leading" secondItem="74X-OG-bmO" secondAttribute="leading" id="R2b-TJ-LKN"/>
                 <constraint firstItem="lcA-EY-8dn" firstAttribute="leading" secondItem="74X-OG-bmO" secondAttribute="trailing" constant="10" id="T5e-eH-wEV"/>
-                <constraint firstItem="BrH-fm-nps" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Zk9-tC-Jx2"/>
-                <constraint firstItem="J2q-NS-wiK" firstAttribute="top" secondItem="r9C-Ug-1gv" secondAttribute="bottom" constant="10" id="aJQ-PH-dk1"/>
-                <constraint firstAttribute="trailing" secondItem="BrH-fm-nps" secondAttribute="trailing" constant="10" id="b8Z-cU-dNV"/>
-                <constraint firstItem="J2q-NS-wiK" firstAttribute="leading" secondItem="r9C-Ug-1gv" secondAttribute="leading" id="cHN-ON-9Ty"/>
+                <constraint firstItem="J2q-NS-wiK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="a04-MO-pza"/>
                 <constraint firstItem="74X-OG-bmO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="cj3-e9-X1q"/>
                 <constraint firstItem="tWQ-vJ-jXv" firstAttribute="leading" secondItem="lcA-EY-8dn" secondAttribute="leading" id="eBZ-TW-qtJ"/>
-                <constraint firstItem="74X-OG-bmO" firstAttribute="top" secondItem="BrH-fm-nps" secondAttribute="bottom" constant="10" id="euJ-mS-tG9"/>
-                <constraint firstItem="18Q-tr-3q4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="150" id="h5h-w3-Eyt"/>
+                <constraint firstItem="74X-OG-bmO" firstAttribute="top" secondItem="BrH-fm-nps" secondAttribute="bottom" constant="15" id="euJ-mS-tG9"/>
+                <constraint firstItem="18Q-tr-3q4" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-80" id="h5h-w3-Eyt"/>
                 <constraint firstItem="BrH-fm-nps" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="h6A-3K-7v4"/>
                 <constraint firstItem="VLW-rE-ohD" firstAttribute="top" secondItem="lcA-EY-8dn" secondAttribute="top" id="o1v-Jr-QLG"/>
-                <constraint firstItem="r9C-Ug-1gv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="o98-iC-Y5J"/>
+                <constraint firstItem="BrH-fm-nps" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sFw-xa-4Gb"/>
+                <constraint firstItem="J2q-NS-wiK" firstAttribute="top" secondItem="BrH-fm-nps" secondAttribute="bottom" constant="160" id="veB-u4-PmZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="navigationStack" destination="BrH-fm-nps" id="glP-ge-xRi"/>
             </connections>
-            <point key="canvasLocation" x="55.072463768115945" y="-82.366071428571431"/>
+            <point key="canvasLocation" x="127.53623188405798" y="-58.928571428571423"/>
         </view>
     </objects>
 </document>
