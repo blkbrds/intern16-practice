@@ -12,10 +12,9 @@ class Baitap5ViewController: UIViewController {
     
     var subCalculator = SubCalculator()
     
-    @IBOutlet weak var xTexTField: UITextField!
+    @IBOutlet weak var xTextField: UITextField!
     @IBOutlet weak var yTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,33 +25,52 @@ class Baitap5ViewController: UIViewController {
     }
 
     func configSubCalculatorView() {
-        let window = UIApplication.shared.windows[0]
-        let bottomPadding = window.safeAreaInsets.bottom
-
-        guard let newsubCalculator = Bundle.main.loadNibNamed("SubCalculator", owner: self, options: nil)?.first as? SubCalculator else { return }
+       guard let newsubCalculator = Bundle.main.loadNibNamed("SubCalculator", owner: self, options: nil)?.first as? SubCalculator else { return }
+        newsubCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: self.view.frame.width, height: 500)
         subCalculator = newsubCalculator
-        subCalculator.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - bottomPadding - 270, width: UIScreen.main.bounds.width, height: 270)
-        subCalculator.layer.borderWidth = 1.0
-        subCalculator.layer.borderColor = #colorLiteral(red: 0.09297447849, green: 0.3600888325, blue: 0.16213688, alpha: 1)
-        let border = CALayer()
-        border.backgroundColor = #colorLiteral(red: 0.09297447849, green: 0.3600888325, blue: 0.16213688, alpha: 1)
-        border.frame = CGRect(x: 0, y: 43, width: UIScreen.main.bounds.width, height: 1.0)
-        subCalculator.layer.addSublayer(border)
         subCalculator.delegate = self
         subCalculator.datasource = self
         view.addSubview(subCalculator)
-        subCalculator.isHidden = true
+    }
+    
+    func toggleCustomView(isHidden: Bool) {
+        let window = UIApplication.shared.windows[0]
+        let bottomPadding = window.safeAreaInsets.bottom
+        if isHidden == false {
+            UIView.animate(withDuration: 1.0, delay: 0, options: .transitionCurlUp, animations: {
+                self.subCalculator.frame.origin.y = UIScreen.main.bounds.height - 350 - bottomPadding
+            }, completion: nil)
+            xTextField.isEnabled = false
+            yTextField.isEnabled = false
+            subCalculator.getXAndY()
+        } else {
+            UIView.animate(withDuration: 1.0, delay: 0, options: .transitionCurlDown, animations: {
+                self.subCalculator.frame.origin.y = UIScreen.main.bounds.height
+            }, completion: nil)
+            xTextField.isEnabled = true
+            yTextField.isEnabled = true
+        }
     }
 
     @IBAction func toggleCalculatorButton(_ sender: UIButton) {
-        if subCalculator.isHidden {
-            subCalculator.isHidden = false
-            xTexTField.isEnabled = false
-            yTextField.isEnabled = false
+        resultLabel.text?.removeAll()
+        if self.subCalculator.frame.origin.y == UIScreen.main.bounds.height {
+            if yTextField.text?.trimmingCharacters(in: .whitespaces) == "" || xTextField.text?.trimmingCharacters(in: .whitespaces) == "" {
+                xTextField.text?.removeAll()
+                yTextField.text?.removeAll()
+                resultLabel.text = "Không được để trống giá trị x, y"
+                resultLabel.textColor = .red
+                return
+            } else if xTextField.text?.isNumber == false || yTextField.text?.isNumber == false {
+                xTextField.text?.removeAll()
+                yTextField.text?.removeAll()
+                resultLabel.text = "Nhập số ở giá trị x, y"
+                resultLabel.textColor = .red
+                return
+            }
+            toggleCustomView(isHidden: false)
         } else {
-            subCalculator.isHidden = true
-            xTexTField.isEnabled = true
-            yTextField.isEnabled = true
+            toggleCustomView(isHidden: true)
         }
     }
     
@@ -65,45 +83,39 @@ extension Baitap5ViewController: SubCalculatorDelegate {
     func send(_ view: SubCalculator, needsPerform action: SubCalculator.Action) {
         switch action {
         case .tapCancel:
-            subCalculator.isHidden = true
-            xTexTField.isEnabled = true
-            yTextField.isEnabled = true
+            toggleCustomView(isHidden: true)
         case .tapClear:
-            subCalculator.isHidden = true
-            xTexTField.isEnabled = true
-            yTextField.isEnabled = true
-            xTexTField.text?.removeAll()
+            toggleCustomView(isHidden: true)
+            xTextField.text?.removeAll()
             yTextField.text?.removeAll()
         case .tapDone(result: let result):
-            subCalculator.isHidden = true
-            xTexTField.isEnabled = true
-            yTextField.isEnabled = true
+            toggleCustomView(isHidden: true)
             resultLabel.text = result
         }
     }
 }
 
 extension Baitap5ViewController: SubCalculatorDataSource {
-    func getValue(_ view: SubCalculator) -> (String?, String?) {
-        guard let x = xTexTField.text, let y = yTextField.text else {
-            xTexTField.text?.removeAll()
-            yTextField.text?.removeAll()
-            resultLabel.text = "Không được để trống giá trị x, y"
-            resultLabel.textColor = .red
-            return ("","")
-        }
-        return (x,y)
+    func getValue() -> (x: String, y: String)? {
+        guard let x = xTextField.text, let y = yTextField.text else { return nil }
+        return (x: x, y: y)
     }
 }
 
 extension Baitap5ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == xTexTField {
-            xTexTField.resignFirstResponder()
+        if textField == xTextField {
+            xTextField.resignFirstResponder()
             yTextField.becomeFirstResponder()
         } else {
             yTextField.resignFirstResponder()
         }
         return true
+    }
+}
+
+extension String  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
 }

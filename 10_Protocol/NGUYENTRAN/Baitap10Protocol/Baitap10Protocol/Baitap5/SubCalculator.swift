@@ -13,7 +13,7 @@ protocol SubCalculatorDelegate: class {
 }
 
 protocol SubCalculatorDataSource: class {
-    func getValue(_ view: SubCalculator) -> (String?, String?)
+    func getValue() -> (x: String, y: String)?
 }
 
 @IBDesignable
@@ -26,6 +26,8 @@ class SubCalculator: UIView {
     @IBOutlet weak var yValueLabel: UILabel!
     @IBOutlet weak var resultValueLabel: UILabel!
     
+    var selectedTag : Int = 0
+    var willSelectTag: Int = 0
     var calculator = Calculator()
     var operation: Operation = .null
     var result: String = "" {
@@ -38,60 +40,88 @@ class SubCalculator: UIView {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func getXAndY() {
+        guard let data = datasource?.getValue() else { return }
+        xValueLabel.text = data.x
+        yValueLabel.text = data.y
+    }
+    
+    func isSeleted(sender: UIButton) {
+        let selectedButton = self.viewWithTag(selectedTag) as? UIButton
+        selectedButton?.changeButtonState(isSelected: false, color: .white)
+        let tag = sender.tag
+        selectedTag = tag
+        willSelectTag = tag
+        sender.changeButtonState(isSelected: true, color: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
     }
     
     @IBAction func addButtonTouchUpInside(_ sender: RoundButton) {
         operation(operation: .add)
+        isSeleted(sender: sender)
     }
     
     @IBAction func subtractButtonTouchUpInside(_ sender: RoundButton) {
         operation(operation: .subtract)
+        isSeleted(sender: sender)
     }
     
     @IBAction func multiplyButtonTouchUpInside(_ sender: RoundButton) {
         operation(operation: .multiply)
+        isSeleted(sender: sender)
     }
     
     @IBAction func divideButtonTouchUpInside(_ sender: RoundButton) {
         operation(operation: .divide)
+        isSeleted(sender: sender)
     }
     
     @IBAction func percentButtonTouchUpInside(_ sender: RoundButton) {
         operation(operation: .percent)
+        isSeleted(sender: sender)
     }
     
 
     @IBAction func powerButtonTouchUpInside(_ sender: RoundButton) {
         operation(operation: .power)
+        isSeleted(sender: sender)
     }
     
-    @IBAction func clearButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction func clearButtonTouchUpInside(_ sender: RoundButton) {
+        let selectedButton = self.viewWithTag(selectedTag) as? UIButton
+        selectedButton?.changeButtonState(isSelected: false, color: .white)
+        xValueLabel.text?.removeAll()
+        yValueLabel.text?.removeAll()
+        resultValueLabel.text?.removeAll()
         delegate?.send(self, needsPerform: .tapClear)
     }
     
     @IBAction func cancelButtonTouchUpInside(_ sender: UIButton) {
+        xValueLabel.text?.removeAll()
+        yValueLabel.text?.removeAll()
+        resultValueLabel.text?.removeAll()
         delegate?.send(self, needsPerform: .tapCancel)
     }
     
     @IBAction func doneButtonTouchUpInside(_ sender: UIButton) {
+        xValueLabel.text?.removeAll()
+        yValueLabel.text?.removeAll()
+        resultValueLabel.text?.removeAll()
         delegate?.send(self, needsPerform: .tapDone(result: result))
     }
     
     func operation(operation: Operation) {
-        guard let x = xValueLabel.text, let y = yValueLabel.text  else { return }
+        guard let data = datasource?.getValue() else { return }
         switch operation {
         case .add:
-            result = calculator.add(a: x, b: y)
+            result = calculator.add(a: data.x, b: data.y)
         case .divide:
-            result = calculator.div(a: x, b: y)
+            result = calculator.div(a: data.x, b: data.y)
         case .multiply:
-            result = calculator.mul(a: x, b: y)
+            result = calculator.mul(a: data.x, b: data.y)
         case .subtract:
-            result = calculator.sub(a: x, b: y)
+            result = calculator.sub(a: data.x, b: data.y)
         case .power:
-            result = calculator.power(a: x, b: y)
+            result = calculator.power(a: data.x, b: data.y)
         case .percent:
             guard let z = resultValueLabel.text else {
                 result = "Can not operation"
@@ -101,15 +131,6 @@ class SubCalculator: UIView {
         case .null:
             return
         }
-        if (Float(result)!.truncatingRemainder(dividingBy: 1) == 0) {
-            result = "\(Int(Float(result)!))"
-        }
-    }
-    
-    func getXAndY() {
-        guard let x = datasource?.getValue(self).0, let y = datasource?.getValue(self).1 else { return  }
-        xValueLabel.text = x
-        yValueLabel.text = y
     }
 }
 
