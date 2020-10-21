@@ -1,5 +1,5 @@
 //
-//  Baitap3ViewController.swift
+//  Baitap4ViewController.swift
 //  Baitap11TableView
 //
 //  Created by MBA0245P on 10/21/20.
@@ -8,53 +8,53 @@
 
 import UIKit
 
-class Baitap3ViewController: UIViewController {
+class Baitap4ViewController: UIViewController {
 
-    var contacts: [String] = []
+    var sections: [[String]] = [[]]
 
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "HOME"
+        title = "SECTIONS"
         loadData()
         configTableView()
     }
 
     func loadData() {
-        guard let path = Bundle.main.url(forResource: "NameList", withExtension: ".plist") else { return }
-        guard let contactsData = NSArray(contentsOf: path) as? [String]
+        guard let path = Bundle.main.url(forResource: "SectionList", withExtension: ".plist") else { return }
+        guard let sectionList = NSArray(contentsOf: path) as? [[String]]
             else { return }
-        contacts = contactsData
+        sections = sectionList
     }
 
     func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
-        tableView.delegate = self
     }
 }
 
-extension Baitap3ViewController: UITableViewDataSource {
+extension Baitap4ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return sections[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = "\(contacts[indexPath.row])"
+        cell.textLabel?.text = "\(sections[indexPath.section][indexPath.row])"
         return cell
     }
-}
 
-extension Baitap3ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = DetailViewController()
-        detailViewController.contactName = contacts[indexPath.row]
-        navigationController?.pushViewController(detailViewController, animated: true)
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Section 0"
+        case 1: return "Section 1"
+        case 2: return "Section 2"
+        default: return "Section"
+        }
     }
 }

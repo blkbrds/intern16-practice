@@ -18,7 +18,4 @@ class DetailViewController: UIViewController {
         title = "DETAIL"
         nameLabel.text = contactName
     }
-
-
-
 }
