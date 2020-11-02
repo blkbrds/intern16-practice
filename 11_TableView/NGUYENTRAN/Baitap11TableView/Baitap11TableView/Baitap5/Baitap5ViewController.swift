@@ -34,6 +34,7 @@ class Baitap5ViewController: UIViewController {
     func configTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     func configSearchBar() {
@@ -73,6 +74,14 @@ extension Baitap5ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = "\(contacts[indexPath.row])"
         return cell
+    }
+}
+
+extension Baitap5ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        detailViewController.contactName = contacts[indexPath.row]
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

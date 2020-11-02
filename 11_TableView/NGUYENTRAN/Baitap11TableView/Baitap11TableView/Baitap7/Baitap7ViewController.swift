@@ -1,16 +1,17 @@
 //
-//  Baitap4ViewController.swift
+//  Baitap7ViewController.swift
 //  Baitap11TableView
 //
-//  Created by MBA0245P on 10/21/20.
+//  Created by MBA0245P on 11/2/20.
 //  Copyright © 2020 Tran Thao Nguyen. All rights reserved.
 //
 
 import UIKit
 
-class Baitap4ViewController: UIViewController {
+class Baitap7ViewController: UIViewController {
 
     var sections: [[String]] = []
+    var sectionIndex: [String] = []
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -26,6 +27,7 @@ class Baitap4ViewController: UIViewController {
         guard let sectionList = NSArray(contentsOf: path) as? [[String]]
             else { return }
         sections = sectionList
+        sectionIndex = ["F", "A", "T"]
     }
 
     func configTableView() {
@@ -34,9 +36,13 @@ class Baitap4ViewController: UIViewController {
     }
 }
 
-extension Baitap4ViewController: UITableViewDataSource {
+extension Baitap7ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sectionIndex
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,13 +54,17 @@ extension Baitap4ViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(sections[indexPath.section][indexPath.row])"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index
+    }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0: return "Section 0"
-        case 1: return "Section 1"
-        case 2: return "Section 2"
-        default: return "Section"
+        case 0: return "Foods"
+        case 1: return "Animals"
+        case 2: return "Things"
+        default: return "Others"
         }
     }
 }
