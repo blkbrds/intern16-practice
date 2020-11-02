@@ -6,6 +6,8 @@
 		<string>Mì</string>
 		<string>Cơm</string>
 		<string>Phở</string>
+		<string>Bún</string>
+		<string>Cháo</string>
 	</array>
 	<array>
 		<string>Heo</string>
@@ -20,6 +22,8 @@
 		<string>Tivi</string>
 		<string>Dao</string>
 		<string>Kéo</string>
+		<string>Búa</string>
+		<string>Bao</string>
 	</array>
 </array>
 </plist>
