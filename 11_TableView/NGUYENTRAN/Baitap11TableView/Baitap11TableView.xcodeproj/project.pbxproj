@@ -29,6 +29,10 @@
 		229DC43A254FFF32003AF18B /* Baitap7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229DC438254FFF32003AF18B /* Baitap7ViewController.xib */; };
 		229DC43D25500672003AF18B /* Baitap8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229DC43B25500672003AF18B /* Baitap8ViewController.swift */; };
 		229DC43E25500672003AF18B /* Baitap8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229DC43C25500672003AF18B /* Baitap8ViewController.xib */; };
+		229DC44225500B72003AF18B /* ContactTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229DC44125500B72003AF18B /* ContactTableCell.swift */; };
+		229DC44425500B86003AF18B /* ContactTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229DC44325500B86003AF18B /* ContactTableCell.xib */; };
+		229DC4472550120B003AF18B /* Baitap9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229DC4452550120B003AF18B /* Baitap9ViewController.swift */; };
+		229DC4482550120B003AF18B /* Baitap9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229DC4462550120B003AF18B /* Baitap9ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		229DC438254FFF32003AF18B /* Baitap7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap7ViewController.xib; sourceTree = "<group>"; };
 		229DC43B25500672003AF18B /* Baitap8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap8ViewController.swift; sourceTree = "<group>"; };
 		229DC43C25500672003AF18B /* Baitap8ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap8ViewController.xib; sourceTree = "<group>"; };
+		229DC44125500B72003AF18B /* ContactTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableCell.swift; sourceTree = "<group>"; };
+		229DC44325500B86003AF18B /* ContactTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableCell.xib; sourceTree = "<group>"; };
+		229DC4452550120B003AF18B /* Baitap9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap9ViewController.swift; sourceTree = "<group>"; };
+		229DC4462550120B003AF18B /* Baitap9ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap9ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 		224B5D1A253D9C5B00F7B45C /* Baitap11TableView */ = {
 			isa = PBXGroup;
 			children = (
+				229DC44025500A4B003AF18B /* Baitap9 */,
 				229DC43F25500679003AF18B /* Baitap8 */,
 				229DC436254FFF15003AF18B /* Baitap7 */,
 				2259C8B22548147F0006E4F3 /* Resource */,
@@ -179,6 +188,17 @@
 			path = Baitap8;
 			sourceTree = "<group>";
 		};
+		229DC44025500A4B003AF18B /* Baitap9 */ = {
+			isa = PBXGroup;
+			children = (
+				229DC44125500B72003AF18B /* ContactTableCell.swift */,
+				229DC44325500B86003AF18B /* ContactTableCell.xib */,
+				229DC4452550120B003AF18B /* Baitap9ViewController.swift */,
+				229DC4462550120B003AF18B /* Baitap9ViewController.xib */,
+			);
+			path = Baitap9;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229DC44425500B86003AF18B /* ContactTableCell.xib in Resources */,
 				224D88E3254013C500AA9798 /* NameList.plist in Resources */,
 				224D88E12540137600AA9798 /* Baitap2ViewController.xib in Resources */,
 				224D88EC25402BD800AA9798 /* DetailViewController.xib in Resources */,
@@ -249,6 +270,7 @@
 				224D88F12540320800AA9798 /* Baitap4ViewController.xib in Resources */,
 				229DC43E25500672003AF18B /* Baitap8ViewController.xib in Resources */,
 				224B5D32253D9CDD00F7B45C /* Baitap1ViewController.xib in Resources */,
+				229DC4482550120B003AF18B /* Baitap9ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +286,9 @@
 				229DC43D25500672003AF18B /* Baitap8ViewController.swift in Sources */,
 				224B5D1C253D9C5B00F7B45C /* AppDelegate.swift in Sources */,
 				2259C8B0254812C40006E4F3 /* Baitap5ViewController.swift in Sources */,
+				229DC44225500B72003AF18B /* ContactTableCell.swift in Sources */,
 				224D88E725402ABD00AA9798 /* Baitap3ViewController.swift in Sources */,
+				229DC4472550120B003AF18B /* Baitap9ViewController.swift in Sources */,
 				229DC439254FFF32003AF18B /* Baitap7ViewController.swift in Sources */,
 				224D88EB25402BD800AA9798 /* DetailViewController.swift in Sources */,
 				224B5D1E253D9C5B00F7B45C /* SceneDelegate.swift in Sources */,
