@@ -54,6 +54,9 @@ extension Baitap9ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableCell", for: indexPath) as! ContactTableCell
         cell.updateTableCell(avatar: "avatar", contactName: sections[indexPath.section][indexPath.row], subtitle: "subtitle")
+        cell.section = indexPath.section
+        cell.row = indexPath.row
+        cell.delegate = self
         return cell
     }
 
@@ -74,5 +77,18 @@ extension Baitap9ViewController: UITableViewDataSource {
 extension Baitap9ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+extension Baitap9ViewController: ContactTableCellDelegate {
+    func view(_ view: ContactTableCell, needsPerform action: ContactTableCell.Action) {
+        switch action {
+        case .tap(section: let section, row: let row):
+            var name = ""
+            if let name1 = view.contactNameLabel.text {
+                name = name1
+            }
+            print("\(name) - Section: \(section), row: \(row)")
+        }
     }
 }

@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Baitap9ViewController" customModule="Baitap11TableView" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="YU7-5s-adf" customClass="ContactTableCell" customModule="Baitap11TableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
@@ -41,7 +41,10 @@
                             <constraint firstAttribute="width" constant="60" id="a51-SY-Tdx"/>
                             <constraint firstAttribute="height" constant="30" id="aps-ur-gYq"/>
                         </constraints>
-                        <state key="normal" title="Select"/>
+                        <state key="normal" title="Tap"/>
+                        <connections>
+                            <action selector="tapButtonTouchUpInside:" destination="YU7-5s-adf" eventType="touchUpInside" id="qyZ-fI-mlu"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
