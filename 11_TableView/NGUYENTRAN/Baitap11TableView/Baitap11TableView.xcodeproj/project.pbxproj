@@ -28,6 +28,13 @@
 		22612CF8255113EF005C12FB /* Baitap10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22612CF6255113EF005C12FB /* Baitap10ViewController.swift */; };
 		22612CF9255113EF005C12FB /* Baitap10ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22612CF7255113EF005C12FB /* Baitap10ViewController.xib */; };
 		2269EB7A25513A1C00213A7E /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269EB7925513A1C00213A7E /* Contacts.swift */; };
+		2269EB7E2553E78400213A7E /* Baitap11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269EB7C2553E78400213A7E /* Baitap11ViewController.swift */; };
+		2269EB7F2553E78400213A7E /* Baitap11ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2269EB7D2553E78400213A7E /* Baitap11ViewController.xib */; };
+		2269EB822553EA1600213A7E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269EB802553EA1600213A7E /* CustomCell.swift */; };
+		2269EB832553EA1600213A7E /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2269EB812553EA1600213A7E /* CustomCell.xib */; };
+		2269EB852553EAB100213A7E /* MessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2269EB842553EAB100213A7E /* MessageList.plist */; };
+		2269EB882553F47900213A7E /* Baitap12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269EB862553F47900213A7E /* Baitap12ViewController.swift */; };
+		2269EB892553F47900213A7E /* Baitap12ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2269EB872553F47900213A7E /* Baitap12ViewController.xib */; };
 		229DC439254FFF32003AF18B /* Baitap7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229DC437254FFF32003AF18B /* Baitap7ViewController.swift */; };
 		229DC43A254FFF32003AF18B /* Baitap7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229DC438254FFF32003AF18B /* Baitap7ViewController.xib */; };
 		229DC43D25500672003AF18B /* Baitap8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229DC43B25500672003AF18B /* Baitap8ViewController.swift */; };
@@ -62,6 +69,13 @@
 		22612CF6255113EF005C12FB /* Baitap10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap10ViewController.swift; sourceTree = "<group>"; };
 		22612CF7255113EF005C12FB /* Baitap10ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap10ViewController.xib; sourceTree = "<group>"; };
 		2269EB7925513A1C00213A7E /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		2269EB7C2553E78400213A7E /* Baitap11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap11ViewController.swift; sourceTree = "<group>"; };
+		2269EB7D2553E78400213A7E /* Baitap11ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap11ViewController.xib; sourceTree = "<group>"; };
+		2269EB802553EA1600213A7E /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		2269EB812553EA1600213A7E /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		2269EB842553EAB100213A7E /* MessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MessageList.plist; sourceTree = "<group>"; };
+		2269EB862553F47900213A7E /* Baitap12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap12ViewController.swift; sourceTree = "<group>"; };
+		2269EB872553F47900213A7E /* Baitap12ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap12ViewController.xib; sourceTree = "<group>"; };
 		229DC437254FFF32003AF18B /* Baitap7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap7ViewController.swift; sourceTree = "<group>"; };
 		229DC438254FFF32003AF18B /* Baitap7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Baitap7ViewController.xib; sourceTree = "<group>"; };
 		229DC43B25500672003AF18B /* Baitap8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap8ViewController.swift; sourceTree = "<group>"; };
@@ -102,18 +116,20 @@
 		224B5D1A253D9C5B00F7B45C /* Baitap11TableView */ = {
 			isa = PBXGroup;
 			children = (
+				2269EB8A2553F48800213A7E /* Baitap12 */,
+				2269EB7B2553E75100213A7E /* Baitap11 */,
 				22612CFA255113F9005C12FB /* Baitap10 */,
 				229DC44025500A4B003AF18B /* Baitap9 */,
 				229DC43F25500679003AF18B /* Baitap8 */,
 				229DC436254FFF15003AF18B /* Baitap7 */,
-				2259C8B22548147F0006E4F3 /* Resource */,
 				2259C8AD2548112C0006E4F3 /* Baitap5 */,
 				224D88ED254031DA00AA9798 /* Baitap4 */,
 				224D88E425402A8D00AA9798 /* Baitap3 */,
 				224D88DD253FF32C00AA9798 /* Baitap2 */,
 				224D88DC253FF32200AA9798 /* Baitap1 */,
-				224B5D1B253D9C5B00F7B45C /* AppDelegate.swift */,
+				2259C8B22548147F0006E4F3 /* Resource */,
 				224B5D1D253D9C5B00F7B45C /* SceneDelegate.swift */,
+				224B5D1B253D9C5B00F7B45C /* AppDelegate.swift */,
 				224B5D24253D9C6200F7B45C /* Assets.xcassets */,
 				224B5D26253D9C6200F7B45C /* LaunchScreen.storyboard */,
 				224B5D29253D9C6200F7B45C /* Info.plist */,
@@ -173,6 +189,7 @@
 			children = (
 				224D88F2254032B200AA9798 /* SectionList.plist */,
 				224D88E2254013C500AA9798 /* NameList.plist */,
+				2269EB842553EAB100213A7E /* MessageList.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -185,6 +202,26 @@
 				2269EB7925513A1C00213A7E /* Contacts.swift */,
 			);
 			path = Baitap10;
+			sourceTree = "<group>";
+		};
+		2269EB7B2553E75100213A7E /* Baitap11 */ = {
+			isa = PBXGroup;
+			children = (
+				2269EB7C2553E78400213A7E /* Baitap11ViewController.swift */,
+				2269EB7D2553E78400213A7E /* Baitap11ViewController.xib */,
+				2269EB802553EA1600213A7E /* CustomCell.swift */,
+				2269EB812553EA1600213A7E /* CustomCell.xib */,
+			);
+			path = Baitap11;
+			sourceTree = "<group>";
+		};
+		2269EB8A2553F48800213A7E /* Baitap12 */ = {
+			isa = PBXGroup;
+			children = (
+				2269EB862553F47900213A7E /* Baitap12ViewController.swift */,
+				2269EB872553F47900213A7E /* Baitap12ViewController.xib */,
+			);
+			path = Baitap12;
 			sourceTree = "<group>";
 		};
 		229DC436254FFF15003AF18B /* Baitap7 */ = {
@@ -276,6 +313,7 @@
 			files = (
 				229DC44425500B86003AF18B /* ContactTableCell.xib in Resources */,
 				224D88E3254013C500AA9798 /* NameList.plist in Resources */,
+				2269EB852553EAB100213A7E /* MessageList.plist in Resources */,
 				224D88E12540137600AA9798 /* Baitap2ViewController.xib in Resources */,
 				224D88EC25402BD800AA9798 /* DetailViewController.xib in Resources */,
 				2259C8B1254812C40006E4F3 /* Baitap5ViewController.xib in Resources */,
@@ -283,10 +321,13 @@
 				224B5D28253D9C6200F7B45C /* LaunchScreen.storyboard in Resources */,
 				22612CF9255113EF005C12FB /* Baitap10ViewController.xib in Resources */,
 				224D88E825402ABD00AA9798 /* Baitap3ViewController.xib in Resources */,
+				2269EB892553F47900213A7E /* Baitap12ViewController.xib in Resources */,
+				2269EB832553EA1600213A7E /* CustomCell.xib in Resources */,
 				229DC43A254FFF32003AF18B /* Baitap7ViewController.xib in Resources */,
 				224B5D25253D9C6200F7B45C /* Assets.xcassets in Resources */,
 				224D88F12540320800AA9798 /* Baitap4ViewController.xib in Resources */,
 				229DC43E25500672003AF18B /* Baitap8ViewController.xib in Resources */,
+				2269EB7F2553E78400213A7E /* Baitap11ViewController.xib in Resources */,
 				224B5D32253D9CDD00F7B45C /* Baitap1ViewController.xib in Resources */,
 				229DC4482550120B003AF18B /* Baitap9ViewController.xib in Resources */,
 			);
@@ -301,9 +342,12 @@
 			files = (
 				224D88E02540137600AA9798 /* Baitap2ViewController.swift in Sources */,
 				224D88F02540320800AA9798 /* Baitap4ViewController.swift in Sources */,
+				2269EB7E2553E78400213A7E /* Baitap11ViewController.swift in Sources */,
+				2269EB882553F47900213A7E /* Baitap12ViewController.swift in Sources */,
 				229DC43D25500672003AF18B /* Baitap8ViewController.swift in Sources */,
 				224B5D1C253D9C5B00F7B45C /* AppDelegate.swift in Sources */,
 				2259C8B0254812C40006E4F3 /* Baitap5ViewController.swift in Sources */,
+				2269EB822553EA1600213A7E /* CustomCell.swift in Sources */,
 				229DC44225500B72003AF18B /* ContactTableCell.swift in Sources */,
 				2269EB7A25513A1C00213A7E /* Contacts.swift in Sources */,
 				224D88E725402ABD00AA9798 /* Baitap3ViewController.swift in Sources */,

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.backgroundColor = .white
         
-        let viewController = Baitap10ViewController()
+        let viewController = Baitap11ViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

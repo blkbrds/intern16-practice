@@ -19,7 +19,6 @@ class Baitap9ViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         configTableView()
-
     }
 
     func loadData() {
